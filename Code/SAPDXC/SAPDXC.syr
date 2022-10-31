@@ -1,0 +1,894 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: SAPDXC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SAPDXC.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SAPDXC"
+Output Format                      : NGC
+Target Device                      : xc3s50an-5-tqg144
+
+---- Source Options
+Top Module Name                    : SAPDXC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Code/ZsySPI_TxByte.v" in library work
+Compiling verilog file "Code/ZsyOledRegsData.v" in library work
+Module <ZsySPI_TxByte> compiled
+Compiling verilog file "Code/ZsyDotMatrix.v" in library work
+Module <ZsyOledRegsData> compiled
+Compiling verilog file "ZsyDCM.v" in library work
+Module <ZsyDotMatrix> compiled
+Compiling verilog file "Code/ZsySPI.v" in library work
+Module <ZsyDCM> compiled
+Compiling verilog file "SAPDXC.v" in library work
+Module <ZsySPI> compiled
+Module <SAPDXC> compiled
+No errors in compilation
+Analysis of file <"SAPDXC.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <SAPDXC> in library <work>.
+
+Analyzing hierarchy for module <ZsyDCM> in library <work>.
+
+Analyzing hierarchy for module <ZsySPI> in library <work> with parameters.
+	DC_CMD = "0"
+	DC_DATA = "1"
+
+Analyzing hierarchy for module <ZsyOledRegsData> in library <work> with parameters.
+	DC_CMD = "0"
+	DC_DATA = "1"
+
+Analyzing hierarchy for module <ZsySPI_TxByte> in library <work> with parameters.
+	DC_CMD = "0"
+	DC_DATA = "1"
+
+Analyzing hierarchy for module <ZsyDotMatrix> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <SAPDXC>.
+Module <SAPDXC> is correct for synthesis.
+ 
+Analyzing module <ZsyDCM> in library <work>.
+Module <ZsyDCM> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <ZsyDCM>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <ZsyDCM>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <ZsyDCM>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLKFX_DIVIDE =  20" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <ZsyDCM>.
+Analyzing module <ZsySPI> in library <work>.
+	DC_CMD = 1'b0
+	DC_DATA = 1'b1
+Module <ZsySPI> is correct for synthesis.
+ 
+Analyzing module <ZsyOledRegsData> in library <work>.
+	DC_CMD = 1'b0
+	DC_DATA = 1'b1
+Module <ZsyOledRegsData> is correct for synthesis.
+ 
+Analyzing module <ZsySPI_TxByte> in library <work>.
+	DC_CMD = 1'b0
+	DC_DATA = 1'b1
+Module <ZsySPI_TxByte> is correct for synthesis.
+ 
+Analyzing module <ZsyDotMatrix> in library <work>.
+Module <ZsyDotMatrix> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <dotMatrix_addr> in unit <ZsySPI> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <dc_flag> in unit <ZsyOledRegsData> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <ZsyOledRegsData>.
+    Related source file is "Code/ZsyOledRegsData.v".
+    Found 8-bit register for signal <data>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <ZsyOledRegsData> synthesized.
+
+
+Synthesizing Unit <ZsySPI_TxByte>.
+    Related source file is "Code/ZsySPI_TxByte.v".
+    Found 1-bit register for signal <cs_n>.
+    Found 1-bit register for signal <isDone>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <sdin>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit adder for signal <i$addsub0000>.
+    Found 8-bit register for signal <tmpTxByte>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ZsySPI_TxByte> synthesized.
+
+
+Synthesizing Unit <ZsyDotMatrix>.
+    Related source file is "Code/ZsyDotMatrix.v".
+    Found 128-bit register for signal <rdata_btm>.
+    Found 128-bit register for signal <rdata_top>.
+    Summary:
+	inferred 256 D-type flip-flop(s).
+Unit <ZsyDotMatrix> synthesized.
+
+
+Synthesizing Unit <ZsyDCM>.
+    Related source file is "ZsyDCM.v".
+Unit <ZsyDCM> synthesized.
+
+
+Synthesizing Unit <ZsySPI>.
+    Related source file is "Code/ZsySPI.v".
+    Found 5-bit register for signal <byte_cnt>.
+    Found 5-bit adder for signal <byte_cnt$share0000> created at line 114.
+    Found 8-bit up counter for signal <clkCounter>.
+    Found 1-bit register for signal <dc_reg>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit adder for signal <i$addsub0000> created at line 117.
+    Found 8-bit register for signal <iCol>.
+    Found 8-bit adder for signal <iCol$addsub0000> created at line 176.
+    Found 4-bit register for signal <iPage>.
+    Found 4-bit adder for signal <iPage$addsub0000> created at line 188.
+    Found 5-bit comparator greater for signal <oled_rst$cmp_gt0000> created at line 309.
+    Found 128-bit register for signal <rdotMatrix_data_btm>.
+    Found 128-bit register for signal <rdotMatrix_data_top>.
+    Found 8-bit register for signal <reg_addr>.
+    Found 8-bit adder for signal <reg_addr$addsub0000> created at line 127.
+    Found 1-bit register for signal <tx_en>.
+    Found 8-bit register for signal <txData>.
+    Found 8-bit adder for signal <txData$addsub0000> created at line 141.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 296 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <ZsySPI> synthesized.
+
+
+Synthesizing Unit <SAPDXC>.
+    Related source file is "SAPDXC.v".
+Unit <SAPDXC> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 3
+ 8-bit adder                                           : 3
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 19
+ 1-bit register                                        : 6
+ 128-bit register                                      : 4
+ 4-bit register                                        : 1
+ 5-bit register                                        : 3
+ 8-bit register                                        : 5
+# Comparators                                          : 1
+ 5-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <rdata_top_0> in Unit <inst_ZsyDotMatrix> is equivalent to the following 203 FFs/Latches, which will be removed : <rdata_top_1> <rdata_top_2> <rdata_top_3> <rdata_top_4> <rdata_top_5> <rdata_top_6> <rdata_top_7> <rdata_top_8> <rdata_top_9> <rdata_top_10> <rdata_top_11> <rdata_top_12> <rdata_top_13> <rdata_top_14> <rdata_top_15> <rdata_top_16> <rdata_top_17> <rdata_top_18> <rdata_top_19> <rdata_top_20> <rdata_top_21> <rdata_top_22> <rdata_top_23> <rdata_top_24> <rdata_top_25> <rdata_top_26> <rdata_top_27> <rdata_top_29> <rdata_top_30> <rdata_top_31> <rdata_top_32> <rdata_top_33> <rdata_top_34> <rdata_top_35> <rdata_top_38> <rdata_top_39> <rdata_top_40> <rdata_top_42> <rdata_top_43> <rdata_top_45> <rdata_top_48> <rdata_top_51> <rdata_top_53> <rdata_top_56> <rdata_top_57> <rdata_top_58> <rdata_top_61> <rdata_top_63> <rdata_top_64> <rdata_top_65> <rdata_top_66> <rdata_top_67> <rdata_top_72> <rdata_top_73> <rdata_top_77> <rdata_top_79> <rdata_top_80> <rdata_top_83> <rdata_top_85>
+   <rdata_top_86> <rdata_top_87> <rdata_top_88> <rdata_top_89> <rdata_top_90> <rdata_top_91> <rdata_top_96> <rdata_top_97> <rdata_top_98> <rdata_top_99> <rdata_top_100> <rdata_top_101> <rdata_top_102> <rdata_top_103> <rdata_top_104> <rdata_top_105> <rdata_top_106> <rdata_top_107> <rdata_top_108> <rdata_top_109> <rdata_top_110> <rdata_top_111> <rdata_top_112> <rdata_top_113> <rdata_top_114> <rdata_top_115> <rdata_top_116> <rdata_top_117> <rdata_top_118> <rdata_top_119> <rdata_top_120> <rdata_top_121> <rdata_top_122> <rdata_top_123> <rdata_top_124> <rdata_top_125> <rdata_top_126> <rdata_top_127> <rdata_btm_0> <rdata_btm_1> <rdata_btm_2> <rdata_btm_3> <rdata_btm_4> <rdata_btm_5> <rdata_btm_6> <rdata_btm_7> <rdata_btm_8> <rdata_btm_9> <rdata_btm_10> <rdata_btm_11> <rdata_btm_12> <rdata_btm_13> <rdata_btm_14> <rdata_btm_15> <rdata_btm_16> <rdata_btm_18> <rdata_btm_19> <rdata_btm_20> <rdata_btm_21> <rdata_btm_22> <rdata_btm_23> <rdata_btm_24> <rdata_btm_26> <rdata_btm_27> <rdata_btm_28> <rdata_btm_29>
+   <rdata_btm_30> <rdata_btm_31> <rdata_btm_32> <rdata_btm_34> <rdata_btm_35> <rdata_btm_36> <rdata_btm_37> <rdata_btm_38> <rdata_btm_39> <rdata_btm_40> <rdata_btm_42> <rdata_btm_43> <rdata_btm_44> <rdata_btm_45> <rdata_btm_46> <rdata_btm_47> <rdata_btm_48> <rdata_btm_49> <rdata_btm_51> <rdata_btm_52> <rdata_btm_53> <rdata_btm_54> <rdata_btm_55> <rdata_btm_57> <rdata_btm_59> <rdata_btm_60> <rdata_btm_61> <rdata_btm_62> <rdata_btm_63> <rdata_btm_71> <rdata_btm_73> <rdata_btm_75> <rdata_btm_76> <rdata_btm_77> <rdata_btm_78> <rdata_btm_79> <rdata_btm_81> <rdata_btm_83> <rdata_btm_84> <rdata_btm_85> <rdata_btm_86> <rdata_btm_87> <rdata_btm_88> <rdata_btm_89> <rdata_btm_91> <rdata_btm_92> <rdata_btm_93> <rdata_btm_94> <rdata_btm_95> <rdata_btm_96> <rdata_btm_97> <rdata_btm_99> <rdata_btm_100> <rdata_btm_101> <rdata_btm_102> <rdata_btm_103> <rdata_btm_104> <rdata_btm_105> <rdata_btm_107> <rdata_btm_108> <rdata_btm_109> <rdata_btm_110> <rdata_btm_111> <rdata_btm_112> <rdata_btm_113> <rdata_btm_115> <rdata_btm_116>
+   <rdata_btm_117> <rdata_btm_118> <rdata_btm_119> <rdata_btm_120> <rdata_btm_121> <rdata_btm_122> <rdata_btm_123> <rdata_btm_124> <rdata_btm_125> <rdata_btm_126> <rdata_btm_127> 
+INFO:Xst:2261 - The FF/Latch <rdata_top_28> in Unit <inst_ZsyDotMatrix> is equivalent to the following 51 FFs/Latches, which will be removed : <rdata_top_36> <rdata_top_37> <rdata_top_41> <rdata_top_44> <rdata_top_46> <rdata_top_47> <rdata_top_49> <rdata_top_50> <rdata_top_52> <rdata_top_54> <rdata_top_55> <rdata_top_59> <rdata_top_60> <rdata_top_62> <rdata_top_68> <rdata_top_69> <rdata_top_70> <rdata_top_71> <rdata_top_74> <rdata_top_75> <rdata_top_76> <rdata_top_78> <rdata_top_81> <rdata_top_82> <rdata_top_84> <rdata_top_92> <rdata_top_93> <rdata_top_94> <rdata_top_95> <rdata_btm_17> <rdata_btm_25> <rdata_btm_33> <rdata_btm_41> <rdata_btm_50> <rdata_btm_56> <rdata_btm_58> <rdata_btm_64> <rdata_btm_65> <rdata_btm_66> <rdata_btm_67> <rdata_btm_68> <rdata_btm_69> <rdata_btm_70> <rdata_btm_72> <rdata_btm_74> <rdata_btm_80> <rdata_btm_82> <rdata_btm_90> <rdata_btm_98> <rdata_btm_106> <rdata_btm_114> 
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_34> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_35> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_36> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_37> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_38> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_39> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_40> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_42> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_43> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_44> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_45> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_46> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_47> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_48> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_51> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_52> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_53> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_54> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_55> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_59> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_60> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_61> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_62> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_63> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_71> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_79> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_87> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_95> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_103> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_111> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_119> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_127> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdata_top_0> (without init value) has a constant value of 0 in block <inst_ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_0> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_1> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_2> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_3> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_4> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_5> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_6> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_7> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_8> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_9> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_10> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_11> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_12> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_13> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_14> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_15> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_16> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_18> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_19> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_20> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_21> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_22> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_23> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_24> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_26> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_27> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_28> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_29> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_30> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_31> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_32> (without init value) has a constant value of 0 in block <inst_ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <rdata_top<127:96>> (without init value) have a constant value of 0 in block <ZsyDotMatrix>.
+WARNING:Xst:2404 -  FFs/Latches <rdata_btm<127:115>> (without init value) have a constant value of 0 in block <ZsyDotMatrix>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 3
+ 8-bit adder                                           : 3
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 532
+ Flip-Flops                                            : 532
+# Comparators                                          : 1
+ 5-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <rdata_btm_37> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_38> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_39> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_40> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_42> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_43> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_44> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_45> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_46> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_47> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_48> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_49> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_51> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_52> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_53> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_54> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_55> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_57> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_59> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_14> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_15> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_16> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_18> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_19> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_20> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_21> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_22> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_23> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_24> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_26> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_27> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_28> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_29> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_30> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_31> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_32> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_34> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_35> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_36> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_92> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_93> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_94> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_95> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_96> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_97> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_99> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_100> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_101> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_102> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_103> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_104> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_105> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_107> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_108> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_109> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_110> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_111> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_112> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_113> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_60> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_61> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_62> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_63> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_71> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_73> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_75> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_76> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_77> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_78> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_79> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_81> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_83> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_84> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_85> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_86> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_87> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_88> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_89> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_91> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_20> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_21> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_22> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_23> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_24> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_25> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_26> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_27> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_29> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_30> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_31> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_32> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_33> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_34> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_35> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_38> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_39> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_40> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_42> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_43> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_0> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_1> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_2> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_3> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_4> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_5> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_6> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_7> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_8> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_9> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_10> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_11> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_12> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_13> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_14> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_15> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_16> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_17> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_18> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_19> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_86> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_87> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_88> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_89> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_90> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_91> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_0> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_1> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_2> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_3> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_4> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_5> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_6> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_7> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_8> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_9> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_10> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_11> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_12> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_btm_13> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_45> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_48> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_51> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_53> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_56> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_57> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_58> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_61> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_63> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_64> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_65> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_66> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_67> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_72> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_73> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_77> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_79> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_80> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_83> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdata_top_85> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <rdata_top_28> in Unit <ZsyDotMatrix> is equivalent to the following 51 FFs/Latches, which will be removed : <rdata_top_36> <rdata_top_37> <rdata_top_41> <rdata_top_44> <rdata_top_46> <rdata_top_47> <rdata_top_49> <rdata_top_50> <rdata_top_52> <rdata_top_54> <rdata_top_55> <rdata_top_59> <rdata_top_60> <rdata_top_62> <rdata_top_68> <rdata_top_69> <rdata_top_70> <rdata_top_71> <rdata_top_74> <rdata_top_75> <rdata_top_76> <rdata_top_78> <rdata_top_81> <rdata_top_82> <rdata_top_84> <rdata_top_92> <rdata_top_93> <rdata_top_94> <rdata_top_95> <rdata_btm_17> <rdata_btm_25> <rdata_btm_33> <rdata_btm_41> <rdata_btm_50> <rdata_btm_56> <rdata_btm_58> <rdata_btm_64> <rdata_btm_65> <rdata_btm_66> <rdata_btm_67> <rdata_btm_68> <rdata_btm_69> <rdata_btm_70> <rdata_btm_72> <rdata_btm_74> <rdata_btm_80> <rdata_btm_82> <rdata_btm_90> <rdata_btm_98> <rdata_btm_106> <rdata_btm_114> 
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_35> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_36> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_37> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_38> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_39> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_40> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_42> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_43> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_44> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_45> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_46> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_47> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_48> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_51> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_52> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_53> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_54> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_55> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_59> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_60> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_61> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_62> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_63> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_71> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_79> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_87> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_95> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_103> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_111> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_119> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_127> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_0> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_1> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_2> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_3> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_4> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_5> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_6> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_7> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_8> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_9> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_10> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_11> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_12> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_13> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_14> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_15> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_16> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_18> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_19> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_20> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_21> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_22> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_23> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_24> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_26> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_27> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_28> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_29> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_30> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_31> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_32> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_btm_34> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_26> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_27> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_29> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_30> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_31> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_32> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_33> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_34> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_35> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_38> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_39> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_40> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_42> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_43> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_48> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_51> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_56> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_64> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_72> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_80> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_88> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_96> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_104> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_112> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_120> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_0> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_1> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_2> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_3> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_4> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_5> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_6> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_7> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_8> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_9> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_10> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_11> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_12> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_13> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_14> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_15> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_16> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_17> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_18> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_19> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_20> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_21> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_22> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_23> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_24> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rdotMatrix_data_top_25> (without init value) has a constant value of 0 in block <ZsySPI>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <SAPDXC> ...
+
+Optimizing unit <ZsyOledRegsData> ...
+
+Optimizing unit <ZsySPI_TxByte> ...
+
+Optimizing unit <ZsySPI> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SAPDXC, actual ratio is 40.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 216
+ Flip-Flops                                            : 216
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SAPDXC.ngr
+Top Level Output File Name         : SAPDXC
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 562
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 7
+#      LUT2                        : 23
+#      LUT2_D                      : 5
+#      LUT2_L                      : 8
+#      LUT3                        : 67
+#      LUT3_D                      : 6
+#      LUT3_L                      : 31
+#      LUT4                        : 302
+#      LUT4_D                      : 20
+#      LUT4_L                      : 48
+#      MUXCY                       : 7
+#      MUXF5                       : 26
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 216
+#      FDC                         : 54
+#      FDCE                        : 2
+#      FDE                         : 159
+#      FDP                         : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 6
+#      IBUFG                       : 1
+#      OBUF                        : 5
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50antqg144-5 
+
+ Number of Slices:                      277  out of    704    39%  
+ Number of Slice Flip Flops:            216  out of   1408    15%  
+ Number of 4 input LUTs:                519  out of   1408    36%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    108     5%  
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------+---------------------------------------------+-------+
+Clock Signal                                                  | Clock buffer(FF name)                       | Load  |
+--------------------------------------------------------------+---------------------------------------------+-------+
+inst_ZsySPI/clk_100khz1(inst_ZsySPI/clkCounter_cmp_eq000021:O)| BUFG(*)(inst_ZsySPI/inst_ZsySPI_TxByte/cs_n)| 199   |
+clk                                                           | inst_ZsyDCM/DCM_SP_INST:CLKFX               | 17    |
+--------------------------------------------------------------+---------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------+-----------------------------+-------+
+Control Signal                                                                            | Buffer(FF name)             | Load  |
+------------------------------------------------------------------------------------------+-----------------------------+-------+
+inst_ZsySPI/inst_ZsyDotMatrix/rst_n_inv(inst_ZsySPI/inst_ZsySPI_TxByte/rst_n_inv1_INV_0:O)| NONE(inst_ZsySPI/byte_cnt_0)| 57    |
+------------------------------------------------------------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.706ns (Maximum Frequency: 149.113MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 8.114ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'inst_ZsySPI/clk_100khz1'
+  Clock period: 6.706ns (frequency: 149.113MHz)
+  Total number of paths / destination ports: 6612 / 209
+-------------------------------------------------------------------------
+Delay:               6.706ns (Levels of Logic = 5)
+  Source:            inst_ZsySPI/i_4 (FF)
+  Destination:       inst_ZsySPI/txData_2 (FF)
+  Source Clock:      inst_ZsySPI/clk_100khz1 rising
+  Destination Clock: inst_ZsySPI/clk_100khz1 rising
+
+  Data Path: inst_ZsySPI/i_4 to inst_ZsySPI/txData_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             53   0.495   1.187  inst_ZsySPI/i_4 (inst_ZsySPI/i_4)
+     LUT3:I0->O           17   0.561   0.916  inst_ZsySPI/i_mux0000<0>52 (inst_ZsySPI/rdotMatrix_data_btm_cmp_eq0001)
+     LUT3_D:I2->O          8   0.561   0.645  inst_ZsySPI/i_cmp_eq00221 (inst_ZsySPI/i_cmp_eq0022)
+     LUT4:I3->O            1   0.561   0.359  inst_ZsySPI/txData_mux0000<2>8 (inst_ZsySPI/txData_mux0000<2>8)
+     LUT4_L:I3->LO         1   0.561   0.102  inst_ZsySPI/txData_mux0000<2>28 (inst_ZsySPI/txData_mux0000<2>28)
+     LUT4:I3->O            1   0.561   0.000  inst_ZsySPI/txData_mux0000<2>36 (inst_ZsySPI/txData_mux0000<2>)
+     FDE:D                     0.197          inst_ZsySPI/txData_2
+    ----------------------------------------
+    Total                      6.706ns (3.497ns logic, 3.209ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 0.423ns (frequency: 2365.212MHz)
+  Total number of paths / destination ports: 108 / 16
+-------------------------------------------------------------------------
+Delay:               4.228ns (Levels of Logic = 9)
+  Source:            inst_ZsySPI/clkCounter_1 (FF)
+  Destination:       inst_ZsySPI/clkCounter_7 (FF)
+  Source Clock:      clk rising 0.1X
+  Destination Clock: clk rising 0.1X
+
+  Data Path: inst_ZsySPI/clkCounter_1 to inst_ZsySPI/clkCounter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.495   0.488  inst_ZsySPI/clkCounter_1 (inst_ZsySPI/clkCounter_1)
+     LUT1:I0->O            1   0.561   0.000  inst_ZsySPI/Mcount_clkCounter_cy<1>_rt (inst_ZsySPI/Mcount_clkCounter_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  inst_ZsySPI/Mcount_clkCounter_cy<1> (inst_ZsySPI/Mcount_clkCounter_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  inst_ZsySPI/Mcount_clkCounter_cy<2> (inst_ZsySPI/Mcount_clkCounter_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  inst_ZsySPI/Mcount_clkCounter_cy<3> (inst_ZsySPI/Mcount_clkCounter_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  inst_ZsySPI/Mcount_clkCounter_cy<4> (inst_ZsySPI/Mcount_clkCounter_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  inst_ZsySPI/Mcount_clkCounter_cy<5> (inst_ZsySPI/Mcount_clkCounter_cy<5>)
+     MUXCY:CI->O           0   0.065   0.000  inst_ZsySPI/Mcount_clkCounter_cy<6> (inst_ZsySPI/Mcount_clkCounter_cy<6>)
+     XORCY:CI->O           1   0.654   0.423  inst_ZsySPI/Mcount_clkCounter_xor<7> (inst_ZsySPI/Result<7>)
+     LUT3:I1->O            1   0.562   0.000  inst_ZsySPI/Mcount_clkCounter_eqn_71 (inst_ZsySPI/Mcount_clkCounter_eqn_7)
+     FDC:D                     0.197          inst_ZsySPI/clkCounter_7
+    ----------------------------------------
+    Total                      4.228ns (3.317ns logic, 0.911ns route)
+                                       (78.5% logic, 21.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'inst_ZsySPI/clk_100khz1'
+  Total number of paths / destination ports: 9 / 5
+-------------------------------------------------------------------------
+Offset:              8.114ns (Levels of Logic = 3)
+  Source:            inst_ZsySPI/i_3 (FF)
+  Destination:       oled_rst (PAD)
+  Source Clock:      inst_ZsySPI/clk_100khz1 rising
+
+  Data Path: inst_ZsySPI/i_3 to oled_rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             45   0.495   1.184  inst_ZsySPI/i_3 (inst_ZsySPI/i_3)
+     LUT4_D:I0->O          3   0.561   0.559  inst_ZsySPI/oled_rst1 (inst_ZsySPI/oled_rst1)
+     LUT2:I0->O            1   0.561   0.357  inst_ZsySPI/oled_rst11 (oled_rst_OBUF)
+     OBUF:I->O                 4.396          oled_rst_OBUF (oled_rst)
+    ----------------------------------------
+    Total                      8.114ns (6.013ns logic, 2.101ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.06 secs
+ 
+--> 
+
+Total memory usage is 4530016 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  339 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

@@ -1,0 +1,110 @@
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 
+xst -intstyle ise -ifn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.xst" -ofn "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc SAPDXC.ngd  
+map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o SAPDXC_map.ncd SAPDXC.ngd SAPDXC.pcf 
+par -w -intstyle ise -ol high -t 1 SAPDXC_map.ncd SAPDXC.ncd SAPDXC.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SAPDXC.twx SAPDXC.ncd -o SAPDXC.twr SAPDXC.pcf -ucf led.ucf 
+bitgen -intstyle ise -f SAPDXC.ut SAPDXC.ncd 

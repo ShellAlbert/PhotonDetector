@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Oct 28 11:24:40 2022
+# Process ID: 6148
+# Log file: D:/Work/GitHub/SAPDXC/SAPDXC/planAhead_run_2/planAhead.log
+# Journal file: D:/Work/GitHub/SAPDXC/SAPDXC/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Work/GitHub/SAPDXC/SAPDXC/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P105 [get_ports sclk]
+endgroup
+set_property package_pin "" [get_ports [list  sdin]]
+startgroup
+set_property package_pin P102 [get_ports sclk]
+endgroup
+startgroup
+set_property package_pin P105 [get_ports sdin]
+endgroup
+save_constraints

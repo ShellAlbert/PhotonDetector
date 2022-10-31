@@ -1,0 +1,43 @@
+D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module led
+
+Top level modules:
+	led
+
+} {} {}} D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsySPI_TxByte
+
+Top level modules:
+	ZsySPI_TxByte
+
+} {} {}} D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsyOledRegsData
+
+Top level modules:
+	ZsyOledRegsData
+
+} {} {}} D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsyDotMatrix
+
+Top level modules:
+	ZsyDotMatrix
+
+} {} {}} D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TB.v {1 {vlog -work work -vopt -stats=none {D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsySPI_TB
+
+Top level modules:
+	ZsySPI_TB
+
+} {} {}} D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsySPI_Reset
+
+Top level modules:
+	ZsySPI_Reset
+
+} {} {}}

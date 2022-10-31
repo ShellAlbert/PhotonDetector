@@ -1,0 +1,481 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Fri Oct 28 08:15:47 2022
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+Project: 'D:\Work\SPAPD\CODE\SAPDCounter\\auto_project.ipf' already exists.
+Original project has been renamed to'D:\Work\SPAPD\CODE\SAPDCounter\\auto_project_1.ipf'.
+Project: D:\Work\SPAPD\CODE\SAPDCounter\\auto_project.ipf created.
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xp2.sys found.
+ Driver version: src=2301, dest=2301.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2401.
+File version of D:/Software/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 10/28/2022 8:15:57 AM
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc3s50an, Version : 0
+INFO:iMPACT:1777 - 
+   Reading D:/Software/Xilinx/14.7/ISE_DS/ISE/spartan3a/data/xc3s50an.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3s50an successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit"
+'1': Loading file 'D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit' ...
+done.
+Found sync word in bitstream.
+UserID read from the bitstream file = 0xFFFFFFFF.
+INFO:iMPACT:501 - '1': Added Device xc3s50an successfully.
+----------------------------------------------------------------------
+INFO:iMPACT - Current time: 10/28/2022 8:16:15 AM
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:28:25 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+ERROR:Cse - A reference voltage has not been detected on the ribbon cable   interface to the target system ( pin 2 ).  Check that power is applied to the   target system and that the ribbon cable is properly seated at both ends.  The   status LED on Platform Cable USB will be GREEN if target voltage is in the   proper range and applied to the correct pin.
+INFO:iMPACT - Current time: 10/28/2022 10:29:32 AM
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:31:26 AM
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:31:44 AM
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:35:47 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:43:33 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:53:40 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 10/28/2022 10:56:18 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 10/28/2022 11:15:45 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 10/28/2022 11:15:57 AM
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 10/28/2022 11:24:19 AM
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+Found sync word in bitstream.
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+Updating config file D:/Work/GitHub/SAPDXC/SAPDXC/sapdxc.bit...
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                                                  :        0
+IDCODE not validated while writing FDRI                                    :        0
+DCM Locked                                                                 :        1
+status of GTS_CFG_B                                                        :        1
+status of GWE                                                              :        1
+status of GHIGH                                                            :        1
+value of VSEL pin 0                                                        :        1
+value of VSEL pin 1                                                        :        1
+value of VSEL pin 2                                                        :        1
+value of MODE pin M0                                                       :        1
+value of MODE pin M1                                                       :        1
+value of MODE pin M2                                                       :        0
+value of CFG_RDY (INIT_B)                                                  :        1
+DONEIN input from Done Pin                                                 :        1
+SYNC word not found                                                        :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.

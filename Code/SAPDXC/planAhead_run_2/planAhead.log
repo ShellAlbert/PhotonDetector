@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Oct 28 11:24:40 2022
+# Process ID: 6148
+# Log file: D:/Work/GitHub/SAPDXC/SAPDXC/planAhead_run_2/planAhead.log
+# Journal file: D:/Work/GitHub/SAPDXC/SAPDXC/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/Work/GitHub/SAPDXC/SAPDXC/pa.fromNetlist.tcl
+# create_project -name SAPDXC -dir "D:/Work/GitHub/SAPDXC/SAPDXC/planAhead_run_2" -part xc3s50antqg144-5
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/Work/GitHub/SAPDXC/SAPDXC} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "led.ucf" [current_fileset -constrset]
+Adding file 'D:/Work/GitHub/SAPDXC/SAPDXC/led.ucf' to fileset 'constrs_1'
+# add_files [list {led.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s50antqg144-5
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SAPDXC.ngc ...
+WARNING:NetListWriters:298 - No output is written to SAPDXC.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file SAPDXC.edif ...
+ngc2edif: Total memory usage is 4313456 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/SAPDXC.data/cache/SAPDXC_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/SAPDXC.data/cache/SAPDXC_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn
+Parsing EDIF File [D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Finished Parsing EDIF File [D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Loading clock regions from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/ClockRegion.xml
+Loading clock buffers from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/ClockBuffers.xml
+Loading package from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/tqg144/Package.xml
+Loading io standards from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50an/tqg144/SSORules.xml
+Loading list of drcs for the architecture : D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/drc.xml
+INFO: [Timing 38-77] Reading timing library D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-5.lib.
+INFO: [Timing 38-34] Done reading timing library D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-5.lib.
+Parsing UCF File [D:/Work/GitHub/SAPDXC/SAPDXC/led.ucf]
+Finished Parsing UCF File [D:/Work/GitHub/SAPDXC/SAPDXC/led.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 4183b5f9
+startgroup
+set_property package_pin P105 [get_ports sclk]
+endgroup
+set_property package_pin "" [get_ports [list  sdin]]
+startgroup
+set_property package_pin P102 [get_ports sclk]
+endgroup
+startgroup
+set_property package_pin P105 [get_ports sdin]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See D:/Work/GitHub/SAPDXC/SAPDXC\planAhead_pid6148.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Oct 28 11:26:11 2022...
+INFO: [Common 17-83] Releasing license: PlanAhead

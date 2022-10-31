@@ -1,0 +1,33 @@
+
+
+NET "clk" LOC = P59;
+NET "cs_n" LOC = P75;
+NET "dc" LOC = P79;
+
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "cs_n" IOSTANDARD = LVCMOS33;
+NET "dc" IOSTANDARD = LVCMOS33;
+NET "sclk" IOSTANDARD = LVCMOS33;
+NET "sdin" IOSTANDARD = LVCMOS33;
+
+
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "inst_ZsyDCM/DCM_SP_INST.CLKIN" CLOCK_DEDICATED_ROUTE = FALSE;
+
+
+NET "sclk" SLEW = FAST;
+
+
+NET "sclk" LOC = P102;
+
+
+NET "sdin" LOC = P105;
+
+# PlanAhead Generated physical constraints 
+
+NET "oled_rst" LOC = P96;
+
+# PlanAhead Generated IO constraints 
+
+NET "oled_rst" IOSTANDARD = LVCMOS33;

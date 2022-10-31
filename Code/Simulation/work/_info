@@ -1,0 +1,172 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Work/SPAPD/CODE/SAPDSimulation
+vled
+!s110 1667182887
+!i10b 1
+!s100 =iPn3f^WCcF]IcXo;jh<91
+IHNnFj6Jb>0Co3P2zobkl<3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/Work/GitHub/SAPDXC/Simulation
+w1666916431
+8D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v
+L0 1
+Z2 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1667182887.889000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vSAPDXC
+Z4 !s110 1667182888
+!i10b 1
+!s100 hAj2nA2W;KXBR@@J7Sm@33
+Io^S<o:T?Ad5ATI2Q7WQPS2
+R0
+R1
+w1666923629
+8D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1667182888.124000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v|
+!i113 0
+R3
+n@s@a@p@d@x@c
+vZsyDotMatrix
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 _]EZM[J;T15=6GM`c;Y0_0
+ITEm>EC5>ml:=;?6oGk0Nf2
+R1
+w1667180405
+8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v
+Z5 L0 21
+R2
+!s108 1667182888.214000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v|
+!i113 0
+R3
+n@zsy@dot@matrix
+vZsyOledRegsData
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 S?2<Cl[3QhYenK2l_62NA3
+IAoCmz6L567:3F>U^72TT41
+R1
+w1666939090
+8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v
+R5
+R2
+!s108 1667182887.933000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v|
+!i113 0
+R3
+n@zsy@oled@regs@data
+vZsySPI
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 bMGN3SQ504bJOI>QDcd1M1
+I:8SYfinD:;Vbefgzi5iem3
+R1
+w1667187018
+8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v
+R5
+R2
+!s108 1667187026.640000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v|
+!i113 0
+R3
+n@zsy@s@p@i
+vZsySPI_Reset
+R4
+!i10b 1
+!s100 blX4EY[kVU4eVz^lH??D80
+IeLnPOHCFDY@j9l0?3OAlk2
+R0
+R1
+w1666928795
+8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v
+R5
+R2
+r1
+!s85 0
+31
+!s108 1667182888.034000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v|
+!i113 0
+R3
+n@zsy@s@p@i_@reset
+vZsySPI_TB
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 VUYV19a[6cB_lT:6j`DTC3
+IZ<aEAU4keOU_Xzac<7lZQ3
+R1
+w1667183729
+8D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v
+FD:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v
+L0 25
+R2
+!s108 1667183734.502000
+!s107 D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v|
+!i113 0
+R3
+n@zsy@s@p@i_@t@b
+vZsySPI_TxByte
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Y;Y?H@lUOanE7^`?F;HNF1
+I6KHgjJQnBMOf0R]YYf8`K0
+R1
+w1666938494
+8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v
+FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v
+R5
+R2
+!s108 1667182888.081000
+!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v|
+!i113 0
+R3
+n@zsy@s@p@i_@tx@byte
