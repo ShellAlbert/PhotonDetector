@@ -1,2 +1,0 @@
-# Output products list for <ZsyDCM>
-ZsyDCM_flist.txt

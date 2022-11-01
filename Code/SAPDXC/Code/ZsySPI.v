@@ -181,7 +181,7 @@ else 	case(i)
 							dc_reg<=DC_DATA;
 						 end
 					end
-			5'd10:begin //repeat all 7 pages.
+			5'd10:begin //repeat all 7 pages to clear entire screen.
 					if(iPage==4'd7)
 						i<=i+1'b1;
 					else begin
@@ -189,7 +189,7 @@ else 	case(i)
 							i<=4'd6; //repeat.
 						 end
 					end
-			5'd11: //set Position(0,0)
+			5'd11: //set y Position(0,y) x=0~127, y=0~7.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									i<=i+1'b1;
@@ -200,7 +200,7 @@ else 	case(i)
 								txData<=8'hb0; //(,y). //y:0~7.
 								dc_reg<=DC_CMD;
 							end
-			5'd12: //set Position(0,0)
+			5'd12: //set high byte of x Position(x,0) x=0~127, y=0~7.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									i<=i+1'b1;
@@ -211,7 +211,7 @@ else 	case(i)
 								txData<=((0&8'hf0)>>4)|8'h10; //(x,) high byte of x.
 								dc_reg<=DC_CMD;
 							end
-			5'd13: //set position(0,0)
+			5'd13: //set low byte of x Position(x,0) x=0~127, y=0~7.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									i<=i+1'b1;
@@ -226,7 +226,7 @@ else 	case(i)
 								txData<=((0&8'h0f)|8'h0f); //(x,) low byte of x.
 								dc_reg<=DC_CMD;
 							end
-			5'd14://show char at(0,0). top half at (0,0). //128bit/8bit=16.
+			5'd14://tx Top Half data out, OLED will show it at (x,y). //128bit/8bit=16.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									if(byte_cnt==5'd16)	begin
@@ -245,7 +245,7 @@ else 	case(i)
 								dc_reg<=DC_DATA;
 								tx_en<=1'b1;
 							end
-			5'd15: //set y(page) Position(0,1), page 0~7.
+			5'd15: //set y Position(0,y) x=0~127, y=0~7.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									i<=i+1'b1;
@@ -256,7 +256,7 @@ else 	case(i)
 								txData<=8'hb0+1'b1; //(,y). //y:0~7.
 								dc_reg<=DC_CMD;
 							end
-			5'd16: //set x Position high byte(0,1)
+			5'd16: //set high byte of x Position(x,0) x=0~127, y=0~7.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									i<=i+1'b1;
@@ -267,7 +267,7 @@ else 	case(i)
 								txData<=((0&8'hf0)>>4)|8'h10; //(x,) high byte of x.
 								dc_reg<=DC_CMD;
 							end
-			5'd17: //set x position low byte(0,0)
+			5'd17: //set low byte of x Position(x,0) x=0~127, y=0~7.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									i<=i+1'b1;
@@ -282,7 +282,7 @@ else 	case(i)
 								txData<=((0&8'h0f)|8'h0f); //(x,) low byte of x.
 								dc_reg<=DC_CMD;
 							end
-			5'd18://show char at(0,1). bottom half at (0,1).
+			5'd18://tx Top Half data out, OLED will show it at (x,y). //128bit/8bit=16.
 					if(tx_done)	begin
 									tx_en<=1'b0;
 									if(byte_cnt==5'd16)	begin

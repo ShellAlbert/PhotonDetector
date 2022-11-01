@@ -40,16 +40,28 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+cs_n        |    7.336(R)|clk_10MHz         |   0.000|
+dc          |    7.454(R)|clk_10MHz         |   0.000|
+oled_rst    |   10.170(R)|clk_10MHz         |   0.000|
+sclk        |    6.370(R)|clk_10MHz         |   0.000|
+sdin        |    6.801(R)|clk_10MHz         |   0.000|
+------------+------------+------------------+--------+
+
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.635|         |         |         |
+clk            |    6.647|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Oct 31 14:44:06 2022 
+Analysis completed Tue Nov 01 11:11:10 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:

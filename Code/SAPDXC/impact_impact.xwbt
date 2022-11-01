@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\Work\GitHub\PhotonDetector\Code\SAPDXC\impact.xsl
+OUTFILE=D:\Work\GitHub\PhotonDetector\Code\SAPDXC\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=D:\Work\GitHub\PhotonDetector\Code\SAPDXC
+LICENSE=iMPACT
+USER_INFO=iMPACT

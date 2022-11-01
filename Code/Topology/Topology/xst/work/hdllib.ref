@@ -1,0 +1,4 @@
+MO ZsySPI_TxByte NULL ../../SAPDXC/Code/ZsySPI_TxByte.v vlg3D/_zsy_s_p_i___tx_byte.bin 1667267199
+MO ZsyDotMatrix NULL ../../SAPDXC/Code/ZsyDotMatrix.v vlg32/_zsy_dot_matrix.bin 1667267199
+MO Zsy_OLEDModule NULL ../../SAPDXC/Code/Zsy_OLEDModule.v vlg4F/_zsy___o_l_e_d_module.bin 1667267199
+MO ZsyOledRegsData NULL ../../SAPDXC/Code/ZsyOledRegsData.v vlg7D/_zsy_oled_regs_data.bin 1667267199

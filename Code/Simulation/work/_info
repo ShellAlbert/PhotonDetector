@@ -7,166 +7,247 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/Work/SPAPD/CODE/SAPDSimulation
+dD:/Software/ModelSim/examples
 vled
-!s110 1667182887
+Z0 !s110 1667266434
 !i10b 1
 !s100 =iPn3f^WCcF]IcXo;jh<91
-IHNnFj6Jb>0Co3P2zobkl<3
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 dD:/Work/GitHub/SAPDXC/Simulation
+I?MH@baDFD@^6YKj?Hd<0O1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Work/GitHub/PhotonDetector/Code/Simulation
 w1666916431
-8D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v
 L0 1
-Z2 OL;L;10.4;61
+Z3 OL;L;10.4;61
 r1
 !s85 0
 31
-!s108 1667182887.889000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/led.v|
+!s108 1667266434.145000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v|
 !i113 0
-Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vSAPDXC
-Z4 !s110 1667182888
-!i10b 1
-!s100 hAj2nA2W;KXBR@@J7Sm@33
-Io^S<o:T?Ad5ATI2Q7WQPS2
-R0
 R1
-w1666923629
-8D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v
+r1
+!s85 0
+31
+!i10b 1
+!s100 =??c5danoF65=nm^n?E=L3
+IfGjg2eoR:[>:JJl1NI9DJ2
+R2
+w1667265995
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v
 L0 28
-R2
-r1
-!s85 0
-31
-!s108 1667182888.124000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.v|
-!i113 0
 R3
+!s108 1667266434.101000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v|
+!i113 0
+R4
 n@s@a@p@d@x@c
-vZsyDotMatrix
-R0
+vSAPDXC_TB
+R1
 r1
 !s85 0
 31
 !i10b 1
-!s100 _]EZM[J;T15=6GM`c;Y0_0
-ITEm>EC5>ml:=;?6oGk0Nf2
-R1
-w1667180405
-8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v
-Z5 L0 21
+!s100 GVP>`md4?0YLc0ZWfP=4O2
+I3j39:SCCBD1i7ogk[?Dk72
 R2
-!s108 1667182888.214000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyDotMatrix.v|
-!i113 0
+w1667264811
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v
+Z5 L0 25
 R3
+!s108 1667266434.511000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v|
+!i113 0
+R4
+n@s@a@p@d@x@c_@t@b
+vZsy_DCM
+R0
+!i10b 1
+!s100 4XU?zEDHoMcXXi9YM=kS^1
+I]SBagR9JZdoQn7=7zo7dC2
+R1
+R2
+w1667206085
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Zsy_DCM.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Zsy_DCM.v
+R5
+R3
+r1
+!s85 0
+31
+!s108 1667266434.555000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Zsy_DCM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Zsy_DCM.v|
+!i113 0
+R4
+n@zsy_@d@c@m
+vZsy_OLEDModule
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 A0zmK<[8LH:Y0FSdjzRo@1
+IaLYjfRTCR9ZTggL:VHBJV0
+R2
+w1667266606
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_OLEDModule.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_OLEDModule.v
+Z6 L0 21
+R3
+!s108 1667267448.727000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_OLEDModule.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_OLEDModule.v|
+!i113 0
+R4
+n@zsy_@o@l@e@d@module
+vZsyDCM
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 zki1Ci2TCFY[Rdg2GO?2z3
+IYGB05XJX:m[Kd^cbgzfg61
+R2
+w1667199225
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/ZsyDCM.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/ZsyDCM.v
+R5
+R3
+!s108 1667205301.268000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/ZsyDCM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/ZsyDCM.v|
+!i113 0
+R4
+n@zsy@d@c@m
+vZsyDotMatrix
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 @:hiTS>lQ=PFLCL<V`5Jc1
+IKlR=0=P^J?V_TS;hiJ_<a3
+R2
+w1667207244
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v
+R6
+R3
+!s108 1667266434.250000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v|
+!i113 0
+R4
 n@zsy@dot@matrix
 vZsyOledRegsData
-R0
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 S?2<Cl[3QhYenK2l_62NA3
-IAoCmz6L567:3F>U^72TT41
-R1
-w1666939090
-8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v
-R5
+IoknN0W2ha_][QP^M9VYFd0
 R2
-!s108 1667182887.933000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsyOledRegsData.v|
-!i113 0
+w1666939090
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v
+R6
 R3
+!s108 1667266434.293000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v|
+!i113 0
+R4
 n@zsy@oled@regs@data
 vZsySPI
 R0
+!i10b 1
+!s100 o?X=_OEJDfIjX0b64EX9o2
+I4eKhglkgfHOYnWOFFA_PG0
+R1
+R2
+w1667199743
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v
+R6
+R3
 r1
 !s85 0
 31
-!i10b 1
-!s100 bMGN3SQ504bJOI>QDcd1M1
-I:8SYfinD:;Vbefgzi5iem3
-R1
-w1667187018
-8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v
-R5
-R2
-!s108 1667187026.640000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI.v|
+!s108 1667266434.336000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v|
 !i113 0
-R3
+R4
 n@zsy@s@p@i
 vZsySPI_Reset
-R4
+R0
 !i10b 1
 !s100 blX4EY[kVU4eVz^lH??D80
-IeLnPOHCFDY@j9l0?3OAlk2
-R0
+IQ>gHzknJSWCVXGe[4O_?I0
 R1
-w1666928795
-8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v
-R5
 R2
+w1666928795
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_Reset.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_Reset.v
+R6
+R3
 r1
 !s85 0
 31
-!s108 1667182888.034000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_Reset.v|
+!s108 1667266434.379000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_Reset.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_Reset.v|
 !i113 0
-R3
+R4
 n@zsy@s@p@i_@reset
 vZsySPI_TB
-R0
+R1
 r1
 !s85 0
 31
 !i10b 1
-!s100 VUYV19a[6cB_lT:6j`DTC3
-IZ<aEAU4keOU_Xzac<7lZQ3
-R1
-w1667183729
-8D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v
-FD:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v
-L0 25
+!s100 ]J@g8e`h[S]Y_Z81?A1UQ3
+I`gcPAA[aScIFdggWQ]7f]0
 R2
-!s108 1667183734.502000
-!s107 D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Work\GitHub\SAPDXC\SAPDXC\Code\ZsySPI_TB.v|
-!i113 0
+w1667272043
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v
+R5
 R3
+!s108 1667272049.216000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v|
+!i113 0
+R4
 n@zsy@s@p@i_@t@b
 vZsySPI_TxByte
-R0
+R1
 r1
 !s85 0
 31
 !i10b 1
-!s100 Y;Y?H@lUOanE7^`?F;HNF1
-I6KHgjJQnBMOf0R]YYf8`K0
-R1
-w1666938494
-8D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v
-FD:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v
-R5
+!s100 R^difo?e0egLJ@`<o5R;O1
+IZc;h96nMnGN9[8H7:7NG:2
 R2
-!s108 1667182888.081000
-!s107 D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/SAPDXC/SAPDXC/Code/ZsySPI_TxByte.v|
-!i113 0
+w1667271741
+8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v
+FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v
+R6
 R3
+!s108 1667271889.035000
+!s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v|
+!i113 0
+R4
 n@zsy@s@p@i_@tx@byte

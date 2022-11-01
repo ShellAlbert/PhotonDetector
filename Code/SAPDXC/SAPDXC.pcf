@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Oct 31 14:43:54 2022
+// Written by: Map P.20131013 on Tue Nov 01 11:10:57 2022
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,8 +11,5 @@ COMP "cs_n" LOCATE = SITE "P75" LEVEL 1;
 COMP "sclk" LOCATE = SITE "P102" LEVEL 1;
 COMP "sdin" LOCATE = SITE "P105" LEVEL 1;
 COMP "oled_rst" LOCATE = SITE "P96" LEVEL 1;
-PIN inst_ZsyDCM/DCM_SP_INST_pin<10> = BEL "inst_ZsyDCM/DCM_SP_INST" PINNAME
-        CLKIN;
-PIN "inst_ZsyDCM/DCM_SP_INST_pin<10>" CLOCK_DEDICATED_ROUTE = FALSE;
 SCHEMATIC END;
 

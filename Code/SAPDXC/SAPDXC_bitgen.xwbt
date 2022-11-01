@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=D:\Work\GitHub\SAPDXC\SAPDXC\SAPDXC.ncd
-OUTFILE=D:\Work\GitHub\SAPDXC\SAPDXC\SAPDXC.bit
+INFILE=D:\Work\GitHub\PhotonDetector\Code\SAPDXC\SAPDXC.ncd
+OUTFILE=D:\Work\GitHub\PhotonDetector\Code\SAPDXC\SAPDXC.bit
 FAMILY=Spartan3A and Spartan3AN
 PART=xc3s50an-5tqg144
-WORKINGDIR=D:\Work\GitHub\SAPDXC\SAPDXC
+WORKINGDIR=D:\Work\GitHub\PhotonDetector\Code\SAPDXC
 LICENSE=WebPack
 USER_INFO=__0_0_0

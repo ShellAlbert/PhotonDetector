@@ -22,6 +22,8 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="SAPDXC.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="Code/Zsy_DCM.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="Code/coregen.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="SAPDXC.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SAPDXC.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SAPDXC.lso"/>
@@ -57,8 +59,10 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="SAPDXC_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="SAPDXC_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SAPDXC_xst.xrpt"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ZsyDCM.v"/>
     <file xil_pn:fileType="FILE_UCF" xil_pn:name="ZsyDCM_arwz.ucf" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="Zsy_DCM.tfi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Zsy_DCM.v"/>
+    <file xil_pn:fileType="FILE_UCF" xil_pn:name="Zsy_DCM_arwz.ucf" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_CMD" xil_pn:name="_impact.cmd"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="_impact.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
@@ -68,11 +72,8 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/ZsyDCM.v" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="led_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_3"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="sapdxc.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="sapdxc.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="sapdxc.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -85,32 +86,32 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1666927386" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7978508903208140805" xil_pn:start_ts="1666927386">
+    <transform xil_pn:end_ts="1667205741" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7978508903208140805" xil_pn:start_ts="1667205741">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666927386" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="9148723582417966396" xil_pn:start_ts="1666927386">
+    <transform xil_pn:end_ts="1667205741" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="9148723582417966396" xil_pn:start_ts="1667205741">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666927386" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1666927386">
+    <transform xil_pn:end_ts="1667205741" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1667205741">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666927387" xil_pn:in_ck="-2675196558143273209" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="3112151657917349075" xil_pn:start_ts="1666927386">
+    <transform xil_pn:end_ts="1667206136" xil_pn:in_ck="-412059974344530719" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="3112151657917349075" xil_pn:start_ts="1667206136">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ZsyDCM.v"/>
+      <outfile xil_pn:name="Zsy_DCM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1666927387" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8398597996547286649" xil_pn:start_ts="1666927387">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1666927387" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-295259179339171578" xil_pn:start_ts="1666927387">
+    <transform xil_pn:end_ts="1667205741" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8398597996547286649" xil_pn:start_ts="1667205741">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1667198629" xil_pn:in_ck="8138102245267417122" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5552669924672422670" xil_pn:start_ts="1667198620">
+    <transform xil_pn:end_ts="1667205741" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-295259179339171578" xil_pn:start_ts="1667205741">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1667272250" xil_pn:in_ck="-7046340689974207234" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5552669924672422670" xil_pn:start_ts="1667272239">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -128,22 +129,20 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1667198061" xil_pn:in_ck="143551591329" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5069202360701944101" xil_pn:start_ts="1667198061">
+    <transform xil_pn:end_ts="1667205778" xil_pn:in_ck="143551591329" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5069202360701944101" xil_pn:start_ts="1667205778">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1667198632" xil_pn:in_ck="3663268518011494442" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1325212879925761687" xil_pn:start_ts="1667198629">
+    <transform xil_pn:end_ts="1667272254" xil_pn:in_ck="3663268518011494442" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1325212879925761687" xil_pn:start_ts="1667272250">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SAPDXC.bld"/>
       <outfile xil_pn:name="SAPDXC.ngd"/>
       <outfile xil_pn:name="SAPDXC_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1667198636" xil_pn:in_ck="3663268560629937419" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7298783698718769783" xil_pn:start_ts="1667198632">
+    <transform xil_pn:end_ts="1667272259" xil_pn:in_ck="3663268560629937419" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7298783698718769783" xil_pn:start_ts="1667272254">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -158,7 +157,7 @@
       <outfile xil_pn:name="SAPDXC_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1667198647" xil_pn:in_ck="-4725117435872636156" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="2291347242108231801" xil_pn:start_ts="1667198636">
+    <transform xil_pn:end_ts="1667272271" xil_pn:in_ck="-4725117435872636156" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="2291347242108231801" xil_pn:start_ts="1667272259">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -173,9 +172,11 @@
       <outfile xil_pn:name="SAPDXC_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1667198653" xil_pn:in_ck="3947070585955366" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="8242823369169169445" xil_pn:start_ts="1667198647">
+    <transform xil_pn:end_ts="1667272275" xil_pn:in_ck="3947070585955366" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="8242823369169169445" xil_pn:start_ts="1667272271">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SAPDXC.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="sapdxc.bgn"/>
@@ -185,7 +186,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1667198093" xil_pn:in_ck="5478649570021040" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-8531292846079007714" xil_pn:start_ts="1667198093">
+    <transform xil_pn:end_ts="1667272279" xil_pn:in_ck="5478649570021040" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-8531292846079007714" xil_pn:start_ts="1667272279">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_impact.cmd"/>
+      <outfile xil_pn:name="_impact.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1667269366" xil_pn:in_ck="5478649570021040" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5767926783713760761" xil_pn:start_ts="1667269364">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -193,7 +200,7 @@
       <outfile xil_pn:name="_impact.cmd"/>
       <outfile xil_pn:name="_impact.log"/>
     </transform>
-    <transform xil_pn:end_ts="1667198647" xil_pn:in_ck="3663262934995464455" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1667198645">
+    <transform xil_pn:end_ts="1667272271" xil_pn:in_ck="3663262934995464455" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1667272268">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="SAPDXC.twr"/>

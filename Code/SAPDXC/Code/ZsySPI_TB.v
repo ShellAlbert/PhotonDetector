@@ -33,18 +33,25 @@ module ZsySPI_TB;
 	wire sclk;
 	wire dc;
 	wire sdin;
-	wire oled_rst;
+	wire isDone;
 
+	reg en;
+	reg [7:0] txByte;
+	reg dc_flag;
 	// Instantiate the Unit Under Test (UUT)
-	ZsySPI uut (
+	ZsySPI_TxByte uut (
 		.clk(clk), 
 		.rst_n(rst_n), 
+		.en(en),
+		.txByte(txByte),
+		.dc_flag(dc_flag),
 		.cs_n(cs_n), 
 		.sclk(sclk), 
 		.dc(dc), 
 		.sdin(sdin), 
-		.oled_rst(oled_rst)
+		.isDone(isDone)
 	);
+
 
 initial begin
 	forever #50 clk=~clk;
@@ -67,9 +74,38 @@ end
 		
 		//don't use $finish(x) it will force ModelSim to quit.
 		//$finish(0);
-		$stop(0);
+		//$stop(0);
         
 	end
-      
+reg [2:0] i;
+always @ (posedge clk or negedge rst_n)
+if(!rst_n)	begin
+				i<=3'd0;
+				en<=1'b0;
+			end
+else	case(i)
+			3'd0:
+				if(isDone)	begin
+								en<=1'b0;
+								i<=i+1;
+							end
+				else	begin
+							en<=1'b1;
+							dc_flag<=1'b1;
+							txByte<=8'h55;
+						end
+			3'd1:
+				if(isDone)	begin
+								en<=1'b0;
+								i<=i+1;
+							end
+				else	begin
+							en<=1'b1;
+							dc_flag<=1'b1;
+							txByte<=8'haa;
+						end
+			default:
+				i<=i;
+		endcase
 endmodule
 

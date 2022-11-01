@@ -5,7 +5,7 @@ Command Line: D:\Software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc led.ucf -p xc3s50an-tqg144-5 SAPDXC.ngc
 SAPDXC.ngd
 
-Reading NGO file "D:/Work/GitHub/SAPDXC/SAPDXC/SAPDXC.ngc" ...
+Reading NGO file "D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4397632 kilobytes
+Total memory usage is 4397576 kilobytes
 
 Writing NGD file "SAPDXC.ngd" ...
-Total REAL time to NGDBUILD completion:  1 sec
+Total REAL time to NGDBUILD completion:  2 sec
 Total CPU time to NGDBUILD completion:   1 sec
 
 Writing NGDBUILD log file "SAPDXC.bld"...

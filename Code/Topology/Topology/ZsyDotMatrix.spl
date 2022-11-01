@@ -1,0 +1,11 @@
+[Inputs]
+clk
+rst_n
+=addr[3:0]=
+[Outputs]
+=data_top[127:0]=
+=data_btm[127:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ZsyDotMatrix
+
