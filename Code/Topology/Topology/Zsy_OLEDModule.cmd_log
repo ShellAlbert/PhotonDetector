@@ -1,5 +1,0 @@
-xst -intstyle ise -ifn "D:/Work/GitHub/PhotonDetector/Code/Topology/Topology/Zsy_OLEDModule.xst" -ofn "D:/Work/GitHub/PhotonDetector/Code/Topology/Topology/Zsy_OLEDModule.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50an-tqg144-5 Zsy_OLEDModule.ngc Zsy_OLEDModule.ngd  
-map -intstyle ise -p xc3s50an-tqg144-5 -cm area -ir off -pr off -c 100 -o Zsy_OLEDModule_map.ncd Zsy_OLEDModule.ngd Zsy_OLEDModule.pcf 
-par -w -intstyle ise -ol high -t 1 Zsy_OLEDModule_map.ncd Zsy_OLEDModule.ncd Zsy_OLEDModule.pcf 
-trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Zsy_OLEDModule.twx Zsy_OLEDModule.ncd -o Zsy_OLEDModule.twr Zsy_OLEDModule.pcf 

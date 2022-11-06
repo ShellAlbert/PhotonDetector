@@ -1,4 +1,0 @@
-verilog work "../../SAPDXC/Code/ZsySPI_TxByte.v"
-verilog work "../../SAPDXC/Code/ZsyOledRegsData.v"
-verilog work "../../SAPDXC/Code/ZsyDotMatrix.v"
-verilog work "../../SAPDXC/Code/Zsy_OLEDModule.v"

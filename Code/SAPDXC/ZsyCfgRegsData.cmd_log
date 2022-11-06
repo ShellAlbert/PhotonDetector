@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyCfgRegsData.v -lang verilog -prj SAPDXC -o ZsyCfgRegsData.spl -module ZsyCfgRegsData -template D:/Software/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a ZsyCfgRegsData.spl D:/Work/GitHub/PhotonDetector/Code/SAPDXC/ZsyCfgRegsData.sym 

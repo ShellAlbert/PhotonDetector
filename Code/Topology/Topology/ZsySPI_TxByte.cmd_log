@@ -1,2 +1,0 @@
-vhdtdtfi -lib work D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v -lang verilog -prj Topology -o ZsySPI_TxByte.spl -module ZsySPI_TxByte -template D:/Software/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a ZsySPI_TxByte.spl D:/Work/GitHub/PhotonDetector/Code/Topology/Topology/ZsySPI_TxByte.sym 

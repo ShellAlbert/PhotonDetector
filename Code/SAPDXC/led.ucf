@@ -23,10 +23,24 @@ NET "sclk" LOC = P102;
 
 NET "sdin" LOC = P105;
 
-# PlanAhead Generated physical constraints 
 
 NET "oled_rst" LOC = P96;
 
-# PlanAhead Generated IO constraints 
 
 NET "oled_rst" IOSTANDARD = LVCMOS33;
+
+
+NET "pulse" IOSTANDARD = LVCMOS33;
+
+
+NET "pulse" LOC = P72;
+
+
+NET "test_pulse" LOC = P69;
+
+
+NET "test_pulse" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated IO constraints 
+
+NET "test_pulse" SLEW = FAST;

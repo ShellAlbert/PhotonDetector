@@ -163,3 +163,137 @@ Processing design ...
 Writing EDIF netlist file SAPDXC.edif ...
 ngc2edif: Total memory usage is 4317552 kilobytes
 
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SAPDXC_cs.ngc ...
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_SRL16.U_GAND_SRL
+   16/sel[8 : 0] on block ila_pro_0 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_SRL16.U_GAND_SR
+   L16/sel[8 : 0] on block ila_pro_0 is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_SRL16.U_GAND_SR
+   L16/sel[8 : 0] on block ila_pro_0 is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly[2 : 0] on block ila_pro_0 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly[4 : 0] on block ila_pro_0 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_G
+   ANDX_SRL16/sel[7 : 0] on block ila_pro_0 is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus U0/U_ICON/iCORE_ID_SEL<15 : 0> on block
+   icon_pro is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus addr_rom0000<247 : 11> on block
+   ZsyDotMatrix is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_conf_reg_addr_addsub0000_cy<5 : 3>
+   on block Zsy_OLEDModule is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus dotMatrix_data_btm<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus dotMatrix_data_top<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_btm<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_btm_mux0000<127 : 11> on
+   block Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_top<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_top_mux0000<127 : 11> on
+   block Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file SAPDXC_cs.edif ...
+ngc2edif: Total memory usage is 4325744 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SAPDXC.ngc ...
+WARNING:NetListWriters:298 - No output is written to SAPDXC.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus addr_rom0000<247 : 11> on block
+   ZsyDotMatrix is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_conf_reg_addr_addsub0000_cy<5 : 3>
+   on block Zsy_OLEDModule is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus dotMatrix_data_btm<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus dotMatrix_data_top<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_btm<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_btm_mux0000<127 : 11> on
+   block Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_top<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_top_mux0000<127 : 11> on
+   block Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_cnt_1hz_cmp_ge0000_lut<9 : 1> on
+   block Zsy_PulseCounter is not reconstructed, because there are some missing
+   bus signals.
+  finished :Prep
+Writing EDIF netlist file SAPDXC.edif ...
+ngc2edif: Total memory usage is 4317552 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SAPDXC.ngc ...
+WARNING:NetListWriters:298 - No output is written to SAPDXC.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus addr_rom0000<247 : 11> on block
+   ZsyDotMatrix is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_conf_reg_addr_addsub0000_cy<5 : 3>
+   on block Zsy_OLEDModule is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus dotMatrix_data_btm<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus dotMatrix_data_top<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_btm<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_btm_mux0000<127 : 11> on
+   block Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_top<127 : 11> on block
+   Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rdotMatrix_data_top_mux0000<127 : 11> on
+   block Zsy_OLEDModule is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_cnt_1hz_cmp_ge0000_lut<9 : 1> on
+   block Zsy_PulseCounter is not reconstructed, because there are some missing
+   bus signals.
+  finished :Prep
+Writing EDIF netlist file SAPDXC.edif ...
+ngc2edif: Total memory usage is 4317552 kilobytes
+

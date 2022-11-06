@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            11/03/2022 - 08:26
+SOURCE          D:\Work\GitHub\PhotonDetector\Code\myisf.mcs
+DEVICE          256K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x0365EADD
+START_ADDRESS   0x00000000 END_ADDRESS 0x0000A7ED DIRECTION_UP   "D:/Work/GitHub/PhotonDetector/Code/SAPDXC/sapdxc.bit" 3s50antqg144

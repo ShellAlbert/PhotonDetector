@@ -5,6 +5,13 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	ZsySPI_Reset
 
+} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsyOledRegsData
+
+Top level modules:
+	ZsyOledRegsData
+
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module SAPDXC_TB
@@ -19,12 +26,12 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	ZsySPI_TxByte
 
-} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v
+} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module ZsyOledRegsData
+-- Compiling module ZsySPI
 
 Top level modules:
-	ZsyOledRegsData
+	ZsySPI
 
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -33,19 +40,12 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	led
 
-} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v
+} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module ZsySPI
+-- Compiling module Zsy_PulseCounter
 
 Top level modules:
-	ZsySPI
-
-} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v
-Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module ZsyDotMatrix
-
-Top level modules:
-	ZsyDotMatrix
+	Zsy_PulseCounter
 
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
@@ -54,18 +54,95 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	ZsySPI_TB
 
-} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Zsy_DCM.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Zsy_DCM.v
-Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module Zsy_DCM
-
-Top level modules:
-	Zsy_DCM
-
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_OLEDModule.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_OLEDModule.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module Zsy_OLEDModule
 
 Top level modules:
 	Zsy_OLEDModule
+
+} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v {0 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(21): Cannot find `include file "CodeZsy_OLEDCmdList.v" in directories:
+    D:/Software/ModelSim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, D:/Software/ModelSim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+-- Compiling module SAPDXC
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(202): (vlog-2163) Macro `CMD_INIT_REGS is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(202): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(212): (vlog-2163) Macro `CMD_CLS_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(212): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(223): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(223): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(236): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(236): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(249): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(249): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(262): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(262): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(275): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(275): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(292): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(292): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(326): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(326): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(339): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(339): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(352): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(352): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(365): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(365): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(378): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(378): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(391): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(391): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(404): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(404): near ";": syntax error, unexpected ';'.
+
+** Error: D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(417): (vlog-2163) Macro `CMD_WR_GRAM is undefined.
+
+** Error: (vlog-13069) D:/Work/GitHub/PhotonDetector/Code/SAPDXC/SAPDXC.v(417): near ";": syntax error, unexpected ';'.
+
+
+} {3.0 4.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0 60.0 61.0 62.0 63.0 64.0 65.0 66.0 67.0 68.0 69.0} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ZsyDotMatrix
+
+Top level modules:
+	ZsyDotMatrix
+
+} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter_TB.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter_TB.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module Zsy_PulseCounter_TB
+
+Top level modules:
+	Zsy_PulseCounter_TB
 
 } {} {}}

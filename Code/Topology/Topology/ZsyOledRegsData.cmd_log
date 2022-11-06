@@ -1,2 +1,0 @@
-vhdtdtfi -lib work D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v -lang verilog -prj Topology -o ZsyOledRegsData.spl -module ZsyOledRegsData -template D:/Software/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a ZsyOledRegsData.spl D:/Work/GitHub/PhotonDetector/Code/Topology/Topology/ZsyOledRegsData.sym 
