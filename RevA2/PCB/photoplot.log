@@ -1,0 +1,336 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : SAPD2.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Thu Nov 24 21:51:42 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+ ---- Photoplot outline rectangle not found; using drawing extents.
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          MM
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: Film contains objects with associated DRCs (308).
+           In the design editor view this film and enable visibility for the
+           associated DRC layer. Verify the DRCs are approved exceptions to your rules.
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.30000                                  DARK 
+  CIRCLE     0.40000                                  DARK 
+  CIRCLE     0.50000                                  DARK 
+  CIRCLE     0.60000                                  DARK 
+  CIRCLE     0.70000                                  DARK 
+  CIRCLE     0.80000                                  DARK 
+  CIRCLE     0.90000                                  DARK 
+  CIRCLE     1.00000                                  DARK 
+  CIRCLE     1.20000                                  DARK 
+  CIRCLE     1.70000                                  DARK 
+  CIRCLE     2.00000                                  DARK 
+  CIRCLE     3.00000                                  DARK 
+  CIRCLE     3.10000                                  DARK 
+  CIRCLE     5.00000                                  DARK 
+  RECTANGLE  0.30000     x 0.80000      90.000 NO     DARK 
+  RECTANGLE  0.50000     x 0.60000       0.000 NO     DARK 
+  RECTANGLE  0.50000     x 0.60000      90.000 NO     DARK 
+  RECTANGLE  0.50000     x 0.80000       0.000 NO     DARK 
+  RECTANGLE  0.50000     x 0.80000      90.000 NO     DARK 
+  RECTANGLE  0.50000     x 1.00000      90.000 NO     DARK 
+  RECTANGLE  0.51000     x 1.27000      90.000 NO     DARK 
+  RECTANGLE  0.60000     x 1.20000      90.000 NO     DARK 
+  RECTANGLE  0.65000     x 1.35000      90.000 NO     DARK 
+  RECTANGLE  0.95000     x 3.60000      90.000 NO     DARK 
+  RECTANGLE  1.00000     x 1.20000       0.000 NO     DARK 
+  RECTANGLE  1.00000     x 1.20000      90.000 NO     DARK 
+  RECTANGLE  1.00000     x 3.00000      45.000 NO     DARK 
+  RECTANGLE  1.14000     x 1.20000       0.000 NO     DARK 
+  RECTANGLE  1.14000     x 1.20000      90.000 NO     DARK 
+  RECTANGLE  1.25000     x 4.00000       0.000 NO     DARK 
+  RECTANGLE  1.30000     x 3.50000      90.000 NO     DARK 
+  RECTANGLE  1.67000     x 1.57500       0.000 NO     DARK 
+  RECTANGLE  1.67000     x 1.57500      90.000 NO     DARK 
+  RECTANGLE  2.16000     x 2.26000      90.000 NO     DARK 
+  RECTANGLE  3.00000     x 5.00000       0.000 NO     DARK 
+  RECTANGLE  3.00000     x 6.00000       0.000 NO     DARK 
+  RECTANGLE  3.70000     x 1.50000      90.000 NO     DARK 
+  RECTANGLE  6.00000     x 8.00000       0.000 NO     DARK 
+  RECTANGLE  9.00000     x 10.70000     90.000 NO     DARK 
+
+     TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: Film contains objects with associated DRCs (21).
+           In the design editor view this film and enable visibility for the
+           associated DRC layer. Verify the DRCs are approved exceptions to your rules.
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.30000                                  DARK 
+  CIRCLE     0.50000                                  DARK 
+  CIRCLE     0.60000                                  DARK 
+  CIRCLE     0.70000                                  DARK 
+  CIRCLE     0.80000                                  DARK 
+  CIRCLE     0.90000                                  DARK 
+  CIRCLE     1.00000                                  DARK 
+  CIRCLE     1.20000                                  DARK 
+  CIRCLE     1.70000                                  DARK 
+  CIRCLE     2.00000                                  DARK 
+  CIRCLE     3.00000                                  DARK 
+  CIRCLE     3.10000                                  DARK 
+  CIRCLE     5.00000                                  DARK 
+  RECTANGLE  1.00000     x 1.20000      90.000 NO     DARK 
+
+     BOTTOM created with warnings
+
+
+================================================================
+     PROCESSING FILM < SILKSCREEN_TOP >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/SILKSCREEN_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.05000                                  DARK 
+  CIRCLE     0.10000                                  DARK 
+  CIRCLE     0.20000                                  DARK 
+  CIRCLE     0.30000                                  DARK 
+
+     SILKSCREEN_TOP created.
+
+
+================================================================
+     PROCESSING FILM < SILKSCREEN_BOTTOM >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/SILKSCREEN_BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.20000                                  DARK 
+
+     SILKSCREEN_BOTTOM created.
+
+
+================================================================
+     PROCESSING FILM < SOLDERMASK_TOP >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/SOLDERMASK_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     1.00000                                  DARK 
+  CIRCLE     1.10000                                  DARK 
+  CIRCLE     1.30000                                  DARK 
+  CIRCLE     1.90000                                  DARK 
+  CIRCLE     2.00000                                  DARK 
+  CIRCLE     3.20000                                  DARK 
+  CIRCLE     5.10000                                  DARK 
+  RECTANGLE  0.40000     x 0.90000      90.000 NO     DARK 
+  RECTANGLE  0.60000     x 0.70000       0.000 NO     DARK 
+  RECTANGLE  0.60000     x 0.70000      90.000 NO     DARK 
+  RECTANGLE  0.60000     x 0.90000       0.000 NO     DARK 
+  RECTANGLE  0.60000     x 0.90000      90.000 NO     DARK 
+  RECTANGLE  0.60000     x 1.10000      90.000 NO     DARK 
+  RECTANGLE  0.61000     x 1.37000      90.000 NO     DARK 
+  RECTANGLE  0.70000     x 1.30000      90.000 NO     DARK 
+  RECTANGLE  0.75000     x 1.45000      90.000 NO     DARK 
+  RECTANGLE  1.00000     x 3.70000      90.000 NO     DARK 
+  RECTANGLE  1.10000     x 1.30000       0.000 NO     DARK 
+  RECTANGLE  1.10000     x 1.30000      90.000 NO     DARK 
+  RECTANGLE  1.10000     x 3.10000      45.000 NO     DARK 
+  RECTANGLE  1.24000     x 1.30000       0.000 NO     DARK 
+  RECTANGLE  1.24000     x 1.30000      90.000 NO     DARK 
+  RECTANGLE  1.35000     x 4.10000       0.000 NO     DARK 
+  RECTANGLE  1.40000     x 3.60000      90.000 NO     DARK 
+  RECTANGLE  1.77000     x 1.67500       0.000 NO     DARK 
+  RECTANGLE  1.77000     x 1.67500      90.000 NO     DARK 
+  RECTANGLE  2.26000     x 2.36000      90.000 NO     DARK 
+  RECTANGLE  3.10000     x 5.10000       0.000 NO     DARK 
+  RECTANGLE  3.10000     x 6.10000       0.000 NO     DARK 
+  RECTANGLE  3.80000     x 1.60000      90.000 NO     DARK 
+  RECTANGLE  6.10000     x 8.10000       0.000 NO     DARK 
+  RECTANGLE  10.00000    x 11.70000     90.000 NO     DARK 
+
+     SOLDERMASK_TOP created.
+
+
+================================================================
+     PROCESSING FILM < SOLDERMASK_BOTTOM >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/SOLDERMASK_BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     1.00000                                  DARK 
+  CIRCLE     1.10000                                  DARK 
+  CIRCLE     1.30000                                  DARK 
+  CIRCLE     1.90000                                  DARK 
+  RECTANGLE  1.10000     x 1.30000      90.000 NO     DARK 
+
+     SOLDERMASK_BOTTOM created.
+
+
+================================================================
+     PROCESSING FILM < DRILL_CHART >
+     TO FILE < D:/Work/GitHub/PhotonDetector/RevA2/PCB/DRILL_CHART.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.2000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: 0 width line found at (-2.5000 -60.0000)
+           ... using undefined line width of 0.2000
+
+    WARNING: text composed 0 width line found at (-11.6059 -30.7175)
+           ... using undefined line width of 0.2000
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 0.2000
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 0.2000
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.20000                                  DARK 
+
+     DRILL_CHART created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        TOP created with warnings
+        BOTTOM created with warnings
+        SILKSCREEN_TOP created.
+        SILKSCREEN_BOTTOM created.
+        SOLDERMASK_TOP created.
+        SOLDERMASK_BOTTOM created.
+        DRILL_CHART created with warnings
+
+ ARTWORK had warnings

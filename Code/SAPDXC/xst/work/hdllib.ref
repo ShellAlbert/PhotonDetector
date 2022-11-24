@@ -1,0 +1,8 @@
+MO Zsy_GetDotMatrixAddr NULL Code/Zsy_GetDotMatrixAddr.v vlg04/_zsy___get_dot_matrix_addr.bin 1667896566
+MO ZsySPI_TxByte NULL Code/ZsySPI_TxByte.v vlg3D/_zsy_s_p_i___tx_byte.bin 1667896566
+MO Zsy_PulseCounter NULL Code/Zsy_PulseCounter.v vlg76/_zsy___pulse_counter.bin 1667896566
+MO ZsyDotMatrix NULL Code/ZsyDotMatrix.v vlg32/_zsy_dot_matrix.bin 1667896566
+MO Zsy_DCM NULL Zsy_DCM.v vlg05/_zsy___d_c_m.bin 1667896566
+MO SAPDXC NULL SAPDXC.v vlg0F/_s_a_p_d_x_c.bin 1667896566
+MO ZsyCfgRegsData NULL Code/ZsyCfgRegsData.v vlg09/_zsy_cfg_regs_data.bin 1667896566
+MO Zsy_OLEDModule NULL Code/Zsy_OLEDModule.v vlg4F/_zsy___o_l_e_d_module.bin 1667896566

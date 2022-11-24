@@ -1,0 +1,8 @@
+verilog work "Code/ZsySPI_TxByte.v"
+verilog work "Code/ZsyDotMatrix.v"
+verilog work "Code/ZsyCfgRegsData.v"
+verilog work "Code/Zsy_PulseCounter.v"
+verilog work "Code/Zsy_OLEDModule.v"
+verilog work "Code/Zsy_GetDotMatrixAddr.v"
+verilog work "Zsy_DCM.v"
+verilog work "SAPDXC.v"

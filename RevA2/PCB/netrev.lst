@@ -1,0 +1,96 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Allegro Netrev Import Logic                                      )
+(                                                                     )
+(    Drawing          : SAPD2.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Thu Nov 24 21:51:25 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+------ Directives ------------
+
+Ripup etch:                  No
+Ripup delete first segment:  No
+Ripup retain bondwire:       No
+Ripup symbols:               Always
+Missing symbol has error:    No
+DRC update:                  Yes
+Schematic directory:         'D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist'
+Design Directory:            'D:/Work/GitHub/PhotonDetector/RevA2/PCB'
+Old design name:             'D:/Work/GitHub/PhotonDetector/RevA2/PCB/SAPD2.brd'
+New design name:             'D:/Work/GitHub/PhotonDetector/RevA2/PCB/SAPD2.brd'
+
+CmdLine: netrev -$ -i D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist -y 1 -h -q netrev_constraint_report.xml D:/Work/GitHub/PhotonDetector/RevA2/PCB/#Taaaaad06040.tmp
+
+------ Preparing to read pst files ------
+
+Starting to read D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist/pstchip.dat 
+   Finished reading D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist/pstchip.dat (00:00:00.04)
+Starting to read D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist/pstxprt.dat 
+   Finished reading D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist/pstxprt.dat (00:00:00.00)
+Starting to read D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist/pstxnet.dat 
+   Finished reading D:/Work/GitHub/PhotonDetector/RevA2/Schematic/Netlist/pstxnet.dat (00:00:00.00)
+
+------ Oversights/Warnings/Errors ------
+
+
+------ Library Paths ------
+MODULEPATH =  . 
+           c:/cadence/cadence_spb_17.4-2019/share/local/pcb/modules 
+
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           c:/cadence/cadence_spb_17.4-2019/share/local/pcb/symbols 
+           c:/cadence/cadence_spb_17.4-2019/share/pcb/pcb_lib/symbols 
+           c:/cadence/cadence_spb_17.4-2019/share/pcb/allegrolib/symbols 
+           D:/Privacy/FootprintLib/psm 
+           D:/Privacy/FootprintLib/mechanical 
+           D:/Privacy/FootprintLib/pad 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           c:/cadence/cadence_spb_17.4-2019/share/local/pcb/padstacks 
+           c:/cadence/cadence_spb_17.4-2019/share/pcb/pcb_lib/symbols 
+           c:/cadence/cadence_spb_17.4-2019/share/pcb/allegrolib/symbols 
+           D:/Privacy/FootprintLib/pad 
+           D:/Privacy/FootprintLib/via 
+           D:/Privacy/FootprintLib/mechanical 
+
+
+------ Summary Statistics ------
+
+
+netrev run on Nov 24 21:51:25 2022
+   DESIGN NAME : 'SAPDA2'
+   PACKAGING ON Apr 19 2021 16:22:31
+
+   COMPILE 'logic'
+   CHECK_PIN_NAMES OFF
+   CROSS_REFERENCE OFF
+   FEEDBACK OFF
+   INCREMENTAL OFF
+   INTERFACE_TYPE PHYSICAL
+   MAX_ERRORS 500
+   MERGE_MINIMUM 5
+   NET_NAME_CHARS '#%&()*+-./:=>?@[]^_`|'
+   NET_NAME_LENGTH 24
+   OVERSIGHTS ON
+   REPLACE_CHECK OFF
+   SINGLE_NODE_NETS ON
+   SPLIT_MINIMUM 0
+   SUPPRESS   20
+   WARNINGS ON
+
+ No error detected
+ No oversight detected
+ No warning detected
+
+cpu time      0:01:18
+elapsed time  0:00:00
+

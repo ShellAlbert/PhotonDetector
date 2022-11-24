@@ -1,13 +1,14 @@
 Storage Target: Non-Volatile Spartan3AN
 xc3s50an               [131072]
 FF
-myisf
+love
 D:\Work\GitHub\PhotonDetector\Code\
 
 MCS
 No
 1
 No
+
 o
 1
 No

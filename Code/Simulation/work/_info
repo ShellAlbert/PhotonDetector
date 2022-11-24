@@ -8,6 +8,14 @@ z2
 !i10f 100
 cModel Technology
 dD:/Software/ModelSim/examples
+T_opt
+!s110 1668413166
+V;ES;W``QHkVFKYNP2k[YH3
+04 12 4 work XC95144XL_TB fast 0
+=1-ceb03472d6ee-6371f6ed-3df-19fc
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.4;61
 vled
 Z0 !s110 1667266434
 !i10b 1
@@ -68,6 +76,48 @@ R3
 !i113 0
 R4
 n@s@a@p@d@x@c_@t@b
+vXC95144XL
+!s110 1668412906
+!i10b 1
+!s100 42jE_O4nj4DgMf:X=LaoN0
+InjoRED<82JXh=6<WS^lid2
+R1
+R2
+w1668412178
+8D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL.v
+FD:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL.v
+Z6 L0 21
+R3
+r1
+!s85 0
+31
+!s108 1668412906.630000
+!s107 D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL.v|
+!i113 0
+R4
+n@x@c95144@x@l
+vXC95144XL_TB
+!s110 1668413155
+!i10b 1
+!s100 4l5F^f5ciN^z_AHWRJL8B0
+In6:fidd_MKDc=[M1dO[791
+R1
+R2
+w1668413134
+8D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL_TB.v
+FD:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL_TB.v
+R6
+R3
+r1
+!s85 0
+31
+!s108 1668413155.546000
+!s107 D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL_TB.v|
+!i113 0
+R4
+n@x@c95144@x@l_@t@b
 vZsy_DCM
 R0
 !i10b 1
@@ -90,7 +140,7 @@ r1
 R4
 n@zsy_@d@c@m
 vZsy_OLEDModule
-Z6 !s110 1667376000
+Z7 !s110 1667376000
 !i10b 1
 !s100 ]hZ>oaEK`2b09=TPe::a80
 Ia?OT`iQ6aiN0QcALcHZQR3
@@ -122,7 +172,7 @@ R2
 w1667377461
 8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v
 FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v
-Z7 L0 21
+R6
 R3
 !s108 1667377468.118000
 !s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v|
@@ -171,7 +221,7 @@ R3
 R4
 n@zsy@d@c@m
 vZsyDotMatrix
-R6
+R7
 !i10b 1
 !s100 5OmLUSa8QLXS[Onf;`XG93
 IQdXjXU9k0[LYl17o:g?WI1
@@ -180,7 +230,7 @@ R2
 w1667289687
 8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v
 FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyDotMatrix.v
-R7
+R6
 R3
 r1
 !s85 0
@@ -203,7 +253,7 @@ R2
 w1666939090
 8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v
 FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v
-R7
+R6
 R3
 !s108 1667266434.293000
 !s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsyOledRegsData.v|
@@ -221,7 +271,7 @@ R2
 w1667199743
 8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v
 FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI.v
-R7
+R6
 R3
 r1
 !s85 0
@@ -242,7 +292,7 @@ R2
 w1666928795
 8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_Reset.v
 FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_Reset.v
-R7
+R6
 R3
 r1
 !s85 0
@@ -254,7 +304,7 @@ r1
 R4
 n@zsy@s@p@i_@reset
 vZsySPI_TB
-R6
+R7
 !i10b 1
 !s100 ]J@g8e`h[S]Y_Z81?A1UQ3
 I`gcPAA[aScIFdggWQ]7f]0
@@ -286,7 +336,7 @@ R2
 w1667271741
 8D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v
 FD:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v
-R7
+R6
 R3
 !s108 1667271889.035000
 !s107 D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TxByte.v|

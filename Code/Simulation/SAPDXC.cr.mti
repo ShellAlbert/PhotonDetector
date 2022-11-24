@@ -12,6 +12,13 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	ZsyOledRegsData
 
+} {} {}} D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL_TB.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL_TB.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module XC95144XL_TB
+
+Top level modules:
+	XC95144XL_TB
+
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/SAPDXC_TB.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module SAPDXC_TB
@@ -33,19 +40,19 @@ Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 Top level modules:
 	ZsySPI
 
+} {} {}} D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/XC95144/Code/XC95144XL.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module XC95144XL
+
+Top level modules:
+	XC95144XL
+
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/led.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 -- Compiling module led
 
 Top level modules:
 	led
-
-} {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/Zsy_PulseCounter.v
-Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
--- Compiling module Zsy_PulseCounter
-
-Top level modules:
-	Zsy_PulseCounter
 
 } {} {}} D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v {1 {vlog -work work -vopt -stats=none D:/Work/GitHub/PhotonDetector/Code/SAPDXC/Code/ZsySPI_TB.v
 Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014

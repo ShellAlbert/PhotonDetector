@@ -1,0 +1,68 @@
+\t (00:00:01) allegro 17.4 S017 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Thu Nov 24 21:51:20 2022
+\t (00:00:01)         Host=THINKPAD1 User=Administrator Pid=6040 CPUs=8
+\t (00:00:01) CmdLine= c:\cadence\cadence_spb_17.4-2019\tools\bin\allegro.exe D:\Work\GitHub\PhotonDetector\RevA2\PCB\SAPD2.brd
+\t (00:00:01) 
+   (00:00:01) Loading axlcore.cxt 
+\t (00:00:01) Opening existing design...
+\i (00:00:01) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged SAPD2
+\d (00:00:01) Design opened: D:/Work/GitHub/PhotonDetector/RevA2/PCB/SAPD2.brd
+\i (00:00:01) trapsize 10692
+\i (00:00:01) trapsize 11035
+\i (00:00:01) trapsize 8796
+\i (00:00:01) trapsize 9194
+\i (00:00:02) etchedit 
+\i (00:00:04) netin 
+\i (00:00:05) setwindow form.niparams
+\i (00:00:05) FORM niparams import  
+\t (00:00:05) Starting Cadence Logic Import...
+\t (00:00:06) Opening existing design...
+\i (00:00:06) setwindow pcb
+\i (00:00:06) trapsize 9194
+\i (00:00:07) etchedit 
+\i (00:00:08) save 
+\i (00:00:09) fillin yes 
+\i (00:00:09) zoom in 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom in 75.3343 -32.6759
+\i (00:00:09) trapsize 4597
+\i (00:00:09) etchedit 
+\i (00:00:09) zoom in 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom in 75.3344 -32.6759
+\i (00:00:09) trapsize 2299
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in 75.7481 -32.7219
+\i (00:00:10) trapsize 1149
+\i (00:00:10) zoom out 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom out 73.2887 -30.6072
+\i (00:00:10) trapsize 2299
+\i (00:00:10) zoom out 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom out 73.1968 -30.4234
+\i (00:00:10) trapsize 4597
+\i (00:00:11) zoom out 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom out 73.1967 -30.4234
+\i (00:00:11) trapsize 9194
+\i (00:00:11) zoom out 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom out 73.1968 -30.4234
+\i (00:00:11) trapsize 18388
+\i (00:00:11) zoom in 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom in 97.1015 -36.6754
+\i (00:00:11) trapsize 9194
+\i (00:00:20) artwork 
+\i (00:00:21) setwindow form.film_control
+\i (00:00:21) FORM film_control select_all  
+\i (00:00:22) FORM film_control create  
+\t (00:00:22) Checking db records
+\t (00:00:22)     checking for orphans...
+\t (00:00:22)     Checked 100 percent
+\t (00:00:22) Done dbdoctor.
+\t (00:00:22) Starting Create artwork films...
+\w (00:00:22) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:00:23) Artwork generated with warnings.

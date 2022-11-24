@@ -1,0 +1,782 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: SAPDXC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SAPDXC.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SAPDXC"
+Output Format                      : NGC
+Target Device                      : xc3s50an-5-tqg144
+
+---- Source Options
+Top Module Name                    : SAPDXC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Code/ZsySPI_TxByte.v" in library work
+Compiling verilog file "Code/ZsyDotMatrix.v" in library work
+Module <ZsySPI_TxByte> compiled
+Compiling verilog file "Code/ZsyCfgRegsData.v" in library work
+Module <ZsyDotMatrix> compiled
+Compiling verilog file "Code/Zsy_PulseCounter.v" in library work
+Module <ZsyCfgRegsData> compiled
+Compiling verilog file "Code/Zsy_OLEDModule.v" in library work
+Compiling verilog include file "Code/Zsy_OLEDCmdList.v"
+Module <Zsy_PulseCounter> compiled
+Compiling verilog file "Code/Zsy_GetDotMatrixAddr.v" in library work
+Module <Zsy_OLEDModule> compiled
+Compiling verilog file "Zsy_DCM.v" in library work
+Module <Zsy_GetDotMatrixAddr> compiled
+Compiling verilog file "SAPDXC.v" in library work
+Compiling verilog include file "Code\Zsy_OLEDCmdList.v"
+Module <Zsy_DCM> compiled
+Module <SAPDXC> compiled
+No errors in compilation
+Analysis of file <"SAPDXC.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <SAPDXC> in library <work>.
+
+Analyzing hierarchy for module <Zsy_DCM> in library <work>.
+
+Analyzing hierarchy for module <Zsy_OLEDModule> in library <work> with parameters.
+	DC_CMD = "0"
+	DC_DATA = "1"
+
+Analyzing hierarchy for module <Zsy_PulseCounter> in library <work>.
+
+Analyzing hierarchy for module <Zsy_GetDotMatrixAddr> in library <work>.
+
+Analyzing hierarchy for module <ZsyCfgRegsData> in library <work> with parameters.
+	DC_CMD = "0"
+	DC_DATA = "1"
+
+Analyzing hierarchy for module <ZsySPI_TxByte> in library <work> with parameters.
+	DC_CMD = "0"
+	DC_DATA = "1"
+
+Analyzing hierarchy for module <ZsyDotMatrix> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <SAPDXC>.
+Module <SAPDXC> is correct for synthesis.
+ 
+    Set property "syn_keep = 1" for signal <sig_1hz>.
+    Set property "syn_keep = 1" for signal <char_addr>.
+    Set property "syn_keep = 1" for signal <x>.
+    Set property "syn_keep = 1" for signal <y>.
+Analyzing module <Zsy_DCM> in library <work>.
+Module <Zsy_DCM> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <Zsy_DCM>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <Zsy_DCM>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <Zsy_DCM>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLKFX_DIVIDE =  20" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <Zsy_DCM>.
+Analyzing module <Zsy_OLEDModule> in library <work>.
+	DC_CMD = 1'b0
+	DC_DATA = 1'b1
+Module <Zsy_OLEDModule> is correct for synthesis.
+ 
+Analyzing module <ZsyCfgRegsData> in library <work>.
+	DC_CMD = 1'b0
+	DC_DATA = 1'b1
+Module <ZsyCfgRegsData> is correct for synthesis.
+ 
+Analyzing module <ZsySPI_TxByte> in library <work>.
+	DC_CMD = 1'b0
+	DC_DATA = 1'b1
+Module <ZsySPI_TxByte> is correct for synthesis.
+ 
+Analyzing module <ZsyDotMatrix> in library <work>.
+Module <ZsyDotMatrix> is correct for synthesis.
+ 
+Analyzing module <Zsy_PulseCounter> in library <work>.
+Module <Zsy_PulseCounter> is correct for synthesis.
+ 
+Analyzing module <Zsy_GetDotMatrixAddr> in library <work>.
+Module <Zsy_GetDotMatrixAddr> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <dc_flag> in unit <ZsyCfgRegsData> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <Zsy_PulseCounter>.
+    Related source file is "Code/Zsy_PulseCounter.v".
+WARNING:Xst:647 - Input <pulse> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 24-bit up counter for signal <cnt_1hz>.
+    Found 24-bit comparator greatequal for signal <cnt_1hz$cmp_ge0000> created at line 73.
+    Found 1-bit register for signal <pulse_f1>.
+    Found 1-bit register for signal <pulse_f2>.
+    Found 4-bit up counter for signal <rq0>.
+    Found 4-bit comparator greatequal for signal <rq0$cmp_ge0000> created at line 108.
+    Found 4-bit up counter for signal <rq1>.
+    Found 4-bit comparator greatequal for signal <rq1$cmp_ge0000> created at line 132.
+    Found 4-bit up counter for signal <rq2>.
+    Found 4-bit comparator greatequal for signal <rq2$cmp_ge0000> created at line 159.
+    Found 4-bit up counter for signal <rq3>.
+    Found 4-bit comparator greatequal for signal <rq3$cmp_ge0000> created at line 184.
+    Found 4-bit up counter for signal <rq4>.
+    Found 4-bit comparator greatequal for signal <rq4$cmp_ge0000> created at line 209.
+    Found 4-bit up counter for signal <rq5>.
+    Found 4-bit comparator greatequal for signal <rq5$cmp_ge0000> created at line 234.
+    Found 4-bit up counter for signal <rq6>.
+    Found 4-bit comparator greatequal for signal <rq6$cmp_ge0000> created at line 259.
+    Found 4-bit up counter for signal <rq7>.
+    Found 4-bit comparator greatequal for signal <rq7$cmp_ge0000> created at line 284.
+    Found 8-bit register for signal <rq_overflow>.
+    Summary:
+	inferred   9 Counter(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+Unit <Zsy_PulseCounter> synthesized.
+
+
+Synthesizing Unit <Zsy_GetDotMatrixAddr>.
+    Related source file is "Code/Zsy_GetDotMatrixAddr.v".
+    Found 16x4-bit ROM for signal <addr>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <Zsy_GetDotMatrixAddr> synthesized.
+
+
+Synthesizing Unit <ZsyCfgRegsData>.
+    Related source file is "Code/ZsyCfgRegsData.v".
+    Found 8-bit register for signal <data>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <ZsyCfgRegsData> synthesized.
+
+
+Synthesizing Unit <ZsySPI_TxByte>.
+    Related source file is "Code/ZsySPI_TxByte.v".
+    Found 1-bit register for signal <cs_n>.
+    Found 1-bit register for signal <isDone>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <sdin>.
+    Found 8-bit up counter for signal <cnt_clk>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit adder for signal <i$addsub0000>.
+    Found 8-bit register for signal <tmpTxByte>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ZsySPI_TxByte> synthesized.
+
+
+Synthesizing Unit <ZsyDotMatrix>.
+    Related source file is "Code/ZsyDotMatrix.v".
+    Found 16x256-bit ROM for signal <addr$rom0000>.
+    Found 128-bit register for signal <rdata_btm>.
+    Found 128-bit register for signal <rdata_top>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred 256 D-type flip-flop(s).
+Unit <ZsyDotMatrix> synthesized.
+
+
+Synthesizing Unit <Zsy_DCM>.
+    Related source file is "Zsy_DCM.v".
+Unit <Zsy_DCM> synthesized.
+
+
+Synthesizing Unit <Zsy_OLEDModule>.
+    Related source file is "Code/Zsy_OLEDModule.v".
+    Found 5-bit register for signal <cnt_byte>.
+    Found 5-bit adder for signal <cnt_byte$share0000> created at line 250.
+    Found 8-bit register for signal <conf_reg_addr>.
+    Found 8-bit adder for signal <conf_reg_addr$addsub0000> created at line 149.
+    Found 1-bit register for signal <dc_reg>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit adder for signal <i$addsub0000>.
+    Found 8-bit register for signal <iCol>.
+    Found 8-bit adder for signal <iCol$addsub0000> created at line 213.
+    Found 4-bit register for signal <iPage>.
+    Found 4-bit adder for signal <iPage$addsub0000> created at line 225.
+    Found 1-bit register for signal <rdone>.
+    Found 128-bit register for signal <rdotMatrix_data_btm>.
+    Found 128-bit register for signal <rdotMatrix_data_top>.
+    Found 1-bit register for signal <roled_rst>.
+    Found 8-bit register for signal <tx_data>.
+    Found 8-bit adder for signal <tx_data$share0000> created at line 129.
+    Found 1-bit register for signal <tx_en>.
+    Summary:
+	inferred 298 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+Unit <Zsy_OLEDModule> synthesized.
+
+
+Synthesizing Unit <SAPDXC>.
+    Related source file is "SAPDXC.v".
+WARNING:Xst:646 - Signal <sig_1hz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rOverflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <i>.
+    -----------------------------------------------------------------------
+    | States             | 17                                             |
+    | Transitions        | 33                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 16                                             |
+    | Clock              | clk_10MHz                 (rising_edge)        |
+    | Reset              | rst_n                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <char_addr>.
+    Found 4-bit register for signal <cmd>.
+    Found 26-bit up counter for signal <cnt_1hz>.
+    Found 9-bit up counter for signal <cnt_1khz>.
+    Found 1-bit register for signal <oled_en>.
+    Found 1-bit register for signal <rtest_pulse>.
+    Found 8-bit register for signal <x>.
+    Found 3-bit register for signal <y>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  21 D-type flip-flop(s).
+Unit <SAPDXC> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 9
+ 16x256-bit ROM                                        : 1
+ 16x4-bit ROM                                          : 8
+# Adders/Subtractors                                   : 7
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 3
+ 8-bit adder                                           : 3
+# Counters                                             : 12
+ 24-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+ 4-bit up counter                                      : 8
+ 8-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 37
+ 1-bit register                                        : 20
+ 128-bit register                                      : 4
+ 3-bit register                                        : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 3
+ 8-bit register                                        : 6
+# Comparators                                          : 9
+ 24-bit comparator greatequal                          : 1
+ 4-bit comparator greatequal                           : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <i/FSM> on signal <i[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 00001 | 00001
+ 00010 | 00010
+ 00011 | 00011
+ 00100 | 00100
+ 00101 | 00101
+ 00110 | 00110
+ 00111 | 00111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01101 | 01101
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 9
+ 16x256-bit ROM                                        : 1
+ 16x4-bit ROM                                          : 8
+# Adders/Subtractors                                   : 7
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 3
+ 8-bit adder                                           : 3
+# Counters                                             : 11
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 8
+ 8-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 610
+ Flip-Flops                                            : 610
+# Comparators                                          : 9
+ 24-bit comparator greatequal                          : 1
+ 4-bit comparator greatequal                           : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <addr_rom0000_129> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_130> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_131> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_132> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_133> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_134> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_135> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_136> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_137> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_138> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_140> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_141> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_144> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_152> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_165> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_184> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_186> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_188> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_200> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_208> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_229> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_232> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_240> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_242> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_248> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_249> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_250> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_251> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_253> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_0> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_1> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_2> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_3> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_4> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_5> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_6> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_7> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_8> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_9> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_10> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_16> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_17> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_18> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_27> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_32> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_37> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_42> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_43> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_58> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_59> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_61> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_62> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_94> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_118> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_120> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_122> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_125> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_126> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_rom0000_128> (without init value) has a constant value of 0 in block <ZsyDotMatrix>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_169> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_217> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_178> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_179> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_183> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_233> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_86> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_241> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_11> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_172> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_12> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_195> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_13> in Unit <ZsyDotMatrix> is equivalent to the following 7 FFs/Latches, which will be removed : <addr_rom0000_14> <addr_rom0000_30> <addr_rom0000_38> <addr_rom0000_46> <addr_rom0000_154> <addr_rom0000_192> <addr_rom0000_194> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_28> in Unit <ZsyDotMatrix> is equivalent to the following 2 FFs/Latches, which will be removed : <addr_rom0000_41> <addr_rom0000_44> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_64> in Unit <ZsyDotMatrix> is equivalent to the following 4 FFs/Latches, which will be removed : <addr_rom0000_65> <addr_rom0000_67> <addr_rom0000_68> <addr_rom0000_70> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_66> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_69> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_102> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_181> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_19> in Unit <ZsyDotMatrix> is equivalent to the following 17 FFs/Latches, which will be removed : <addr_rom0000_21> <addr_rom0000_23> <addr_rom0000_26> <addr_rom0000_31> <addr_rom0000_39> <addr_rom0000_47> <addr_rom0000_56> <addr_rom0000_78> <addr_rom0000_87> <addr_rom0000_95> <addr_rom0000_103> <addr_rom0000_111> <addr_rom0000_123> <addr_rom0000_145> <addr_rom0000_146> <addr_rom0000_164> <addr_rom0000_173> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_22> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_110> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_107> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_117> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_15> in Unit <ZsyDotMatrix> is equivalent to the following 13 FFs/Latches, which will be removed : <addr_rom0000_29> <addr_rom0000_35> <addr_rom0000_40> <addr_rom0000_45> <addr_rom0000_63> <addr_rom0000_121> <addr_rom0000_139> <addr_rom0000_149> <addr_rom0000_168> <addr_rom0000_170> <addr_rom0000_216> <addr_rom0000_218> <addr_rom0000_252> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_33> in Unit <ZsyDotMatrix> is equivalent to the following 9 FFs/Latches, which will be removed : <addr_rom0000_57> <addr_rom0000_60> <addr_rom0000_71> <addr_rom0000_124> <addr_rom0000_157> <addr_rom0000_160> <addr_rom0000_187> <addr_rom0000_210> <addr_rom0000_224> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_119> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_127> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_48> in Unit <ZsyDotMatrix> is equivalent to the following 5 FFs/Latches, which will be removed : <addr_rom0000_50> <addr_rom0000_51> <addr_rom0000_142> <addr_rom0000_226> <addr_rom0000_254> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_143> in Unit <ZsyDotMatrix> is equivalent to the following 5 FFs/Latches, which will be removed : <addr_rom0000_161> <addr_rom0000_167> <addr_rom0000_201> <addr_rom0000_209> <addr_rom0000_225> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_79> in Unit <ZsyDotMatrix> is equivalent to the following 4 FFs/Latches, which will be removed : <addr_rom0000_151> <addr_rom0000_175> <addr_rom0000_191> <addr_rom0000_255> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_34> in Unit <ZsyDotMatrix> is equivalent to the following 4 FFs/Latches, which will be removed : <addr_rom0000_147> <addr_rom0000_148> <addr_rom0000_202> <addr_rom0000_234> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_24> in Unit <ZsyDotMatrix> is equivalent to the following 3 FFs/Latches, which will be removed : <addr_rom0000_25> <addr_rom0000_155> <addr_rom0000_237> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_20> in Unit <ZsyDotMatrix> is equivalent to the following 2 FFs/Latches, which will be removed : <addr_rom0000_36> <addr_rom0000_156> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_162> in Unit <ZsyDotMatrix> is equivalent to the following 2 FFs/Latches, which will be removed : <addr_rom0000_185> <addr_rom0000_189> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_158> in Unit <ZsyDotMatrix> is equivalent to the following 3 FFs/Latches, which will be removed : <addr_rom0000_174> <addr_rom0000_190> <addr_rom0000_238> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_163> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_196> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_159> in Unit <ZsyDotMatrix> is equivalent to the following FF/Latch, which will be removed : <addr_rom0000_199> 
+INFO:Xst:2261 - The FF/Latch <addr_rom0000_49> in Unit <ZsyDotMatrix> is equivalent to the following 2 FFs/Latches, which will be removed : <addr_rom0000_52> <addr_rom0000_166> 
+
+Optimizing unit <SAPDXC> ...
+WARNING:Xst:1710 - FF/Latch <cmd_3> (without init value) has a constant value of 0 in block <SAPDXC>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Zsy_PulseCounter> ...
+
+Optimizing unit <Zsy_GetDotMatrixAddr> ...
+
+Optimizing unit <ZsyCfgRegsData> ...
+
+Optimizing unit <ZsySPI_TxByte> ...
+
+Optimizing unit <ZsyDotMatrix> ...
+
+Optimizing unit <Zsy_DCM> ...
+
+Optimizing unit <Zsy_OLEDModule> ...
+WARNING:Xst:1710 - FF/Latch <i_4> (without init value) has a constant value of 0 in block <Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_18> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_17> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_16> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_10> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_9> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_8> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_7> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_6> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_5> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_4> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_3> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_2> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_1> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_btm_0> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_24> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_16> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_13> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_12> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_10> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_9> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_8> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_7> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_6> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_5> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_4> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_3> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_2> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_1> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rdotMatrix_data_top_0> (without init value) has a constant value of 0 in block <u1_Zsy_OLEDModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <rq_overflow_7> of sequential type is unconnected in block <inst_Zsy_PulseCounter>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SAPDXC, actual ratio is 86.
+FlipFlop cmd_1 has been replicated 1 time(s)
+FlipFlop cmd_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 504
+ Flip-Flops                                            : 504
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SAPDXC.ngr
+Top Level Output File Name         : SAPDXC
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 1208
+#      GND                         : 4
+#      INV                         : 13
+#      LUT1                        : 19
+#      LUT2                        : 42
+#      LUT2_D                      : 8
+#      LUT2_L                      : 10
+#      LUT3                        : 234
+#      LUT3_D                      : 6
+#      LUT3_L                      : 7
+#      LUT4                        : 499
+#      LUT4_D                      : 22
+#      LUT4_L                      : 214
+#      MUXCY                       : 50
+#      MUXF5                       : 35
+#      VCC                         : 4
+#      XORCY                       : 41
+# FlipFlops/Latches                : 504
+#      FDC                         : 192
+#      FDCE                        : 67
+#      FDE                         : 244
+#      FDPE                        : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 7
+#      IBUFG                       : 1
+#      OBUF                        : 6
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50antqg144-5 
+
+ Number of Slices:                      560  out of    704    79%  
+ Number of Slice Flip Flops:            504  out of   1408    35%  
+ Number of 4 input LUTs:               1074  out of   1408    76%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   6  out of    108     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | DCM_SP_INST:CLKFX      | 504   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+Control Signal                                                                                           | Buffer(FF name)                                           | Load  |
+---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+u1_Zsy_OLEDModule/inst_ZsyDotMatrix/rst_n_inv(u1_Zsy_OLEDModule/inst_ZsyDotMatrix/rst_n_inv1_INV_0:O)    | NONE(u1_Zsy_OLEDModule/inst_ZsyDotMatrix/addr_rom0000_100)| 102   |
+inst_Zsy_PulseCounter/rst_n_inv(inst_Zsy_PulseCounter/rst_n_inv1_INV_0:O)                                | NONE(inst_Zsy_PulseCounter/cnt_1hz_0)                     | 65    |
+i_FSM_Acst_FSM_inv(i_FSM_Acst_FSM_inv1_INV_0:O)                                                          | NONE(char_addr_0)                                         | 36    |
+u1_Zsy_OLEDModule/rst_n_inv(u1_Zsy_OLEDModule/rst_n_inv1_INV_0:O)                                        | NONE(u1_Zsy_OLEDModule/cnt_byte_0)                        | 32    |
+u1_Zsy_OLEDModule/inst_ZsySPI_TxByte/rst_n_inv(u1_Zsy_OLEDModule/inst_ZsySPI_TxByte/rst_n_inv1_INV_0:O)  | NONE(u1_Zsy_OLEDModule/inst_ZsySPI_TxByte/cnt_clk_0)      | 17    |
+u1_Zsy_OLEDModule/inst_ZsyCfgRegsData/rst_n_inv(u1_Zsy_OLEDModule/inst_ZsyCfgRegsData/rst_n_inv1_INV_0:O)| NONE(u1_Zsy_OLEDModule/inst_ZsyCfgRegsData/data_0)        | 8     |
+---------------------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 0.770ns (Maximum Frequency: 1299.300MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.271ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 0.770ns (frequency: 1299.300MHz)
+  Total number of paths / destination ports: 16859 / 808
+-------------------------------------------------------------------------
+Delay:               7.696ns (Levels of Logic = 8)
+  Source:            cmd_2_1 (FF)
+  Destination:       u1_Zsy_OLEDModule/tx_data_0 (FF)
+  Source Clock:      clk rising 0.1X
+  Destination Clock: clk rising 0.1X
+
+  Data Path: cmd_2_1 to u1_Zsy_OLEDModule/tx_data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             36   0.495   1.182  cmd_2_1 (cmd_2_1)
+     begin scope: 'u1_Zsy_OLEDModule'
+     LUT2_D:I0->O         12   0.561   0.840  rdone_mux000054 (N69)
+     LUT4_D:I2->LO         1   0.561   0.208  tx_data_mux0001<0>1 (N716)
+     LUT4:I0->O            6   0.561   0.592  Madd_tx_data_share0000_lut<0>1 (Madd_tx_data_share0000_lut<0>)
+     LUT4:I2->O            1   0.561   0.000  tx_data_mux0000<7>115_F (N668)
+     MUXF5:I0->O           1   0.229   0.465  tx_data_mux0000<7>115 (tx_data_mux0000<7>115)
+     LUT3_L:I0->LO         1   0.561   0.123  tx_data_mux0000<7>157_SW0 (N640)
+     LUT4:I2->O            1   0.561   0.000  tx_data_mux0000<7>157 (tx_data_mux0000<7>)
+     FDE:D                     0.197          tx_data_0
+    ----------------------------------------
+    Total                      7.696ns (4.287ns logic, 3.409ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              5.271ns (Levels of Logic = 2)
+  Source:            u1_Zsy_OLEDModule/inst_ZsySPI_TxByte/cs_n (FF)
+  Destination:       cs_n (PAD)
+  Source Clock:      clk rising 0.1X
+
+  Data Path: u1_Zsy_OLEDModule/inst_ZsySPI_TxByte/cs_n to cs_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             2   0.495   0.380  cs_n (cs_n)
+     end scope: 'inst_ZsySPI_TxByte'
+     end scope: 'u1_Zsy_OLEDModule'
+     OBUF:I->O                 4.396          cs_n_OBUF (cs_n)
+    ----------------------------------------
+    Total                      5.271ns (4.891ns logic, 0.380ns route)
+                                       (92.8% logic, 7.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.22 secs
+ 
+--> 
+
+Total memory usage is 4547276 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   94 (   0 filtered)
+Number of infos    :   30 (   0 filtered)
+

@@ -1,0 +1,19 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    DRILL LEGEND                                                     )
+(                                                                     )
+(    Drawing          : SAPD2-1.brd                                   )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Thu Nov 24 21:23:19 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Begin processing of drill legend template file 'C:/Cadence/Cadence_SPB_17.4-2019/share/pcb/text/nclegend/default-mm.dlt' ...
+WARNING(SPMHSK-47): Column type 'HoleSize' does not exist.
+WARNING(SPMHSK-47): Column type 'PlateStatus' does not exist.
+End of drill legend template file processing.
+
+Begin processing drill holes.
+Warning : Hole 1.5000-0.0000-C-M0-P-0.0000-0.0000-0.0000-0.0000- uses multiple drill figures.
+End processing drill holes.

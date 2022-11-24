@@ -1,0 +1,93 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : SAPD2.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Wed Nov 23 09:31:14 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+         Placed symbol:  U4 / LT1172IS8_SO-8_LT1172CQ#PBF / SO-8 at (47.4800 7.4000)
+         Placed symbol:  Q11 / FH3400C_SOT-23_FH3400C / SOT-23 at (55.0700 3.0500)
+         Placed symbol:  R74 / RESISTOR VAR_VR-VER-2D54MM_5K / VR-VER-2D54MM at (60.8860 3.8480)
+         Placed symbol:  Q4 / IRF840ASPBF_D2PARK_IRF840ASPBF / D2PARK at (75.6230 11.6450)
+         Placed symbol:  C49 / CAP NP_R1210_DNP / R1210 at (83.9880 2.1240)
+         Placed symbol:  C45 / C_SMD_CAP_8X10D5_33UF/50V / SMD_CAP_8X10D5 at (91.1750 5.6680)
+         Placed symbol:  C43 / C_C0603_1UF / C0603 at (1.4000 18.8800)
+         Placed symbol:  C7 / C_C0603_1UF / C0603 at (4.8000 18.8800)
+         Placed symbol:  C32 / CAP NP_C0603_DNP / C0603 at (8.2000 18.8800)
+         Placed symbol:  C42 / CAP NP_R1210_DNP / R1210 at (13.4070 19.8040)
+         Placed symbol:  C46 / C_SMD_CAP_6D3X10D2_330UF/250V / SMD_CAP_6D3X10D2 at (18.4570 19.1270)
+         Placed symbol:  D20 / DIODE TAZ BI-DIR_DFN1006-2_PESD5V0G1BL / DFN1006-2 at (28.9140 19.2650)
+         Placed symbol:  D4 / DIODE_SOD523_BAS521 / SOD523 at (31.7800 19.2850)
+         Placed symbol:  D3 / DIODE SCHOTTKY13_0_DO-214AC_SS16 / DO-214AC at (37.9620 20.1750)
+         Placed symbol:  L3 / INDUCTOR_IND_SMD_7X7X4_33UH/1A / IND_SMD_7X7X4 at (43.2760 22.3760)
+         Placed symbol:  D11 / DIODE SCHOTTKY13_0_DO-214AC_SS16 / DO-214AC at (54.9920 20.1750)
+         Placed symbol:  D12 / DIODE ZENER_SOD123_BZT52C30 / SOD123 at (59.3070 18.7780)
+         Placed symbol:  R30 / R_R2512_300 / R2512 at (65.3280 20.8140)
+         Placed symbol:  R33 / R_R0603_1M / R0603 at (74.0430 18.8800)
+         Placed symbol:  R34 / R_R0603_49.9K / R0603 at (77.4430 18.8800)
+         Placed symbol:  R35 / R_R0603_100K / R0603 at (80.8430 18.8800)
+         Placed symbol:  D6 / DIODE_SOD523_BAS521 / SOD523 at (84.3890 19.2850)
+         Placed symbol:  R67 / R_R1210_DNP / R1210 at (89.6330 19.8040)
+         Placed symbol:  R77 / R_R1210_DNP / R1210 at (95.1420 19.8040)
+         Placed symbol:  R72 / R_R0603_1K / R0603 at (1.4000 27.3180)
+         Placed symbol:  R80 / R_R0603_1K / R0603 at (4.8000 27.3180)
+         Placed symbol:  C30 / C_C0603_10UF / C0603 at (8.2000 27.3180)
+         Placed symbol:  R38 / R_R0603_5.36K / R0603 at (11.6000 27.3180)
+         Placed symbol:  C29 / CAP NP_C0603_0.1UF / C0603 at (15.0000 27.3180)
+         Placed symbol:  R79 / R_R0603_10K / R0603 at (18.4000 27.3180)
+         Placed symbol:  C48 / CAP NP_C0805_10UF / C0805 at (21.9500 27.2180)
+         Placed symbol:  R63 / R_R0805_0 / R0805 at (26.2500 27.2680)
+         Placed symbol:  C44 / CAP NP_C0603_0.1UF / C0603 at (30.4000 27.3180)
+         Placed symbol:  C47 / CAP NP_C0603_0.1UF / C0603 at (33.8000 27.3180)
+         Placed symbol:  R78 / R_R0603_DNP / R0603 at (37.2000 27.3180)
+         Placed symbol:  R73 / R_R0603_DNP / R0603 at (40.6000 27.3180)
+         Placed symbol:  R37 / R_R0603_DNP / R0603 at (44.0000 27.3180)
+         Placed symbol:  TP13 / T POINT F_TP_THR_CIR_3D0_1D5_SIGNAL / TP_THR_CIR_3D0_1D5 at (48.8000 28.9180)
+         Placed symbol:  TP16 / T POINT F_TP_THR_CIR_3D0_1D5_VBIAS / TP_THR_CIR_3D0_1D5 at (53.4000 28.9180)
+         Placed symbol:  TP15 / T POINT F_TP_THR_CIR_3D0_1D5_GND / TP_THR_CIR_3D0_1D5 at (58.0000 28.9180)
+         Placed symbol:  TP17 / T POINT F_TP_THR_CIR_3D0_1D5_GND / TP_THR_CIR_3D0_1D5 at (62.6000 28.9180)
+         Placed symbol:  TP14 / T POINT F_TP_THR_CIR_3D0_1D5_VDDX / TP_THR_CIR_3D0_1D5 at (67.2000 28.9180)
+
+
+Placed 42 of 42 applicable (42 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+

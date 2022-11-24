@@ -1,0 +1,58 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : SAPD2.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Wed Nov 23 20:38:40 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (31 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+         Placed symbol:  U7 / MAX5026EUT-T_SOT23-6_MAX5026EUT-T / SOT23-6 at (81.6000 -14.7000)
+         Placed symbol:  Q13 / FH3400C_SOT-23_FH3400C / SOT-23 at (86.5900 -15.0500)
+         Placed symbol:  Q19 / FH3400C_SOT-23_FH3400C / SOT-23 at (91.3900 -15.0500)
+         Placed symbol:  Q18 / BSS84_SOT-23_FH3415C+ / SOT-23 at (96.1900 -15.0500)
+         Placed symbol:  Q14 / FH3400C_SOT-23_FH3400C / SOT-23 at (100.9900 -15.0500)
+         Placed symbol:  L4 / INDUCTOR_IND-11D5X10X5MM_47UH/1A / IND-11D5X10X5MM at (81.3100 -5.9550)
+         Placed symbol:  R102 / R_R0603_182K / R0603 at (94.6940 -11.1000)
+         Placed symbol:  C52 / CAP NP_C1210_10UF/50V / C1210 at (99.9010 -10.1760)
+         Placed symbol:  R88 / R_R0603_200 / R0603 at (103.6030 -11.1000)
+         Placed symbol:  R98 / R_R0805_5.8M / R0805 at (107.2530 -11.1500)
+         Placed symbol:  R85 / R_R0805_182K / R0805 at (80.2500 0.5200)
+         Placed symbol:  D25 / DIODE_SOD523_SAPD / SOD523 at (84.5460 0.9750)
+         Placed symbol:  C51 / CAP NP_R1210_10UF/50V / R1210 at (89.7900 1.4940)
+         Placed symbol:  R86 / R_R0805_4.7K / R0805 at (93.7420 0.5200)
+         Placed symbol:  D22 / DIODE_SOD523_BAS521 / SOD523 at (98.0380 0.9750)
+         Placed symbol:  D23 / DIODE_SOD523_BAS521 / SOD523 at (101.6210 0.9750)
+         Placed symbol:  D24 / DIODE_DO-214AA_ES2F / DO-214AA at (106.0660 2.5460)
+         Placed symbol:  R105 / R_R0603_DNP / R0603 at (80.0000 5.9060)
+         Placed symbol:  R106 / R_R0603_0 / R0603 at (83.4000 5.9060)
+         Placed symbol:  R101 / R_R0603_1K / R0603 at (86.8000 5.9060)
+         Placed symbol:  R91 / R_R0603_1K / R0603 at (90.2000 5.9060)
+         Placed symbol:  R99 / R_R0603_1K / R0603 at (93.6000 5.9060)
+         Placed symbol:  R89 / R_R0805_0 / R0805 at (97.2500 5.8560)
+         Placed symbol:  R100 / R_R0603_10K / R0603 at (101.4000 5.9060)
+         Placed symbol:  R104 / R_R0603_10K / R0603 at (104.8000 5.9060)
+         Placed symbol:  R90 / R_R0603_10K / R0603 at (108.2000 5.9060)
+         Placed symbol:  R103 / R_R0603_10K / R0603 at (111.6000 5.9060)
+         Placed symbol:  R87 / R_R0603_10K / R0603 at (80.0000 8.4060)
+         Placed symbol:  TP27 / T POINT F_TP_THR_CIR_3D0_1D5_5V~11V / TP_THR_CIR_3D0_1D5 at (84.8000 10.0060)
+         Placed symbol:  TP25 / T POINT F_TP_THR_CIR_3D0_1D5_15V / TP_THR_CIR_3D0_1D5 at (89.4000 10.0060)
+         Placed symbol:  TP24 / T POINT F_TP_THR_CIR_3D0_1D5_HVPS / TP_THR_CIR_3D0_1D5 at (94.0000 10.0060)
+
+
+Placed 31 of 31 applicable (31 total) symbols.
+
+-----------------------------------------------------------------------
+
