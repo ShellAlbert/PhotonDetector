@@ -1,0 +1,1367 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: XC95144XL                           Date:  2- 8-2023, 10:42AM
+Device Used: XC95144XL-5-TQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+34 /144 ( 24%) 353 /720  ( 49%) 110/432 ( 25%)   30 /144 ( 21%) 8  /81  ( 10%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1           4/18       25/54       81/90       1/11
+FB2           6/18       25/54       80/90       1/10
+FB3           6/18       25/54       53/90       4/10
+FB4           8/18       16/54       59/90       0/10
+FB5           0/18        0/54        0/90       0/10
+FB6          10/18       19/54       80/90       2/10
+FB7           0/18        0/54        0/90       0/10
+FB8           0/18        0/54        0/90       0/10
+             -----       -----       -----      -----    
+             34/144     110/432     353/720      8/81 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'clk' mapped onto global clock net GCK1.
+Global output enable net(s) unused.
+Signal 'rst_n' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    0           0    |  I/O              :     5      73
+Output        :    6           6    |  GCK/IO           :     2       3
+Bidirectional :    0           0    |  GTS/IO           :     0       4
+GCK           :    1           1    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total      8           8
+
+** Power Data **
+
+There are 34 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'XC95144XL.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'clk' based upon the LOC
+   constraint 'P22'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:936 - The output buffer 'geiger_mode_en_OBUF' is missing an input
+   and will be deleted.
+*************************  Summary of Mapped Logic  ************************
+
+** 6 Outputs **
+
+Signal              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                Pts   Inps          No.  Type    Use     Mode Rate State
+led<0>              0     0     FB3_8   27   GCK/I/O O       STD  FAST 
+led<1>              0     0     FB3_9   28   I/O     O       STD  FAST 
+led<2>              0     0     FB3_11  29   I/O     O       STD  FAST 
+led<3>              4     9     FB3_12  30   I/O     O       STD  FAST 
+reset               2     3     FB6_12  81   I/O     O       STD  FAST RESET
+quench              2     3     FB6_15  85   I/O     O       STD  FAST RESET
+
+** 28 Buried Nodes **
+
+Signal              Total Total Loc     Pwr  Reg Init
+Name                Pts   Inps          Mode State
+cnt_2Hz<5>          24    25    FB1_3   STD  RESET
+cnt_2Hz<6>          24    25    FB1_9   STD  RESET
+cnt_2Hz<7>          24    25    FB1_14  STD  RESET
+cnt_1KHz<14>        9     16    FB1_17  STD  RESET
+cnt_2Hz<1>          17    25    FB2_1   STD  RESET
+cnt_2Hz<0>          11    24    FB2_3   STD  RESET
+cnt_1KHz<15>        9     16    FB2_5   STD  RESET
+cnt_1KHz<12>        3     15    FB2_7   STD  RESET
+cnt_2Hz<2>          22    25    FB2_10  STD  RESET
+cnt_2Hz<8>          18    25    FB2_16  STD  RESET
+cnt_2Hz<3>          25    25    FB3_3   STD  RESET
+cnt_2Hz<4>          24    25    FB3_16  STD  RESET
+cnt_1KHz<1>         9     14    FB4_4   STD  RESET
+cnt_1KHz<7>         9     16    FB4_5   STD  RESET
+counter<0>          8     16    FB4_7   STD  RESET
+cnt_1KHz<0>         6     13    FB4_8   STD  RESET
+cnt_1KHz<10>        3     13    FB4_9   STD  RESET
+cnt_1KHz<11>        3     14    FB4_10  STD  RESET
+cnt_1KHz<4>         11    15    FB4_13  STD  RESET
+cnt_1KHz<2>         10    15    FB4_16  STD  RESET
+cnt_1KHz<6>         13    16    FB6_3   STD  RESET
+cnt_1KHz<13>        3     16    FB6_6   STD  RESET
+counter<2>          8     18    FB6_7   STD  RESET
+cnt_1KHz<9>         11    16    FB6_8   STD  RESET
+cnt_1KHz<8>         11    16    FB6_11  STD  RESET
+cnt_1KHz<5>         11    16    FB6_14  STD  RESET
+counter<1>          8     17    FB6_17  STD  RESET
+cnt_1KHz<3>         11    16    FB6_18  STD  RESET
+
+** 2 Inputs **
+
+Signal              Loc     Pin  Pin     Pin     
+Name                        No.  Type    Use     
+clk                 FB1_17  22   GCK/I/O GCK
+rst_n               FB2_2   99   GSR/I/O GSR
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               25/29
+Number of signals used by logic mapping into function block:  25
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   \/5   0     FB1_1         (b)     (b)
+(unused)              0       0   \/5   0     FB1_2   11    I/O     (b)
+cnt_2Hz<5>           24      19<-   0   0     FB1_3   12    I/O     (b)
+(unused)              0       0   /\5   0     FB1_4         (b)     (b)
+(unused)              0       0   /\4   1     FB1_5   13    I/O     (b)
+(unused)              0       0     0   5     FB1_6   14    I/O     
+(unused)              0       0   \/5   0     FB1_7         (b)     (b)
+(unused)              0       0   \/5   0     FB1_8   15    I/O     (b)
+cnt_2Hz<6>           24      19<-   0   0     FB1_9   16    I/O     (b)
+(unused)              0       0   /\5   0     FB1_10        (b)     (b)
+(unused)              0       0   /\4   1     FB1_11  17    I/O     (b)
+(unused)              0       0   \/5   0     FB1_12  18    I/O     (b)
+(unused)              0       0   \/5   0     FB1_13        (b)     (b)
+cnt_2Hz<7>           24      19<-   0   0     FB1_14  19    I/O     (b)
+(unused)              0       0   /\5   0     FB1_15  20    I/O     (b)
+(unused)              0       0   /\4   1     FB1_16        (b)     (b)
+cnt_1KHz<14>          9       4<-   0   0     FB1_17  22    GCK/I/O GCK
+(unused)              0       0   /\4   1     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: cnt_1KHz<0>       10: cnt_1KHz<3>       18: cnt_2Hz<1> 
+  2: cnt_1KHz<10>      11: cnt_1KHz<4>       19: cnt_2Hz<2> 
+  3: cnt_1KHz<11>      12: cnt_1KHz<5>       20: cnt_2Hz<3> 
+  4: cnt_1KHz<12>      13: cnt_1KHz<6>       21: cnt_2Hz<4> 
+  5: cnt_1KHz<13>      14: cnt_1KHz<7>       22: cnt_2Hz<5> 
+  6: cnt_1KHz<14>      15: cnt_1KHz<8>       23: cnt_2Hz<6> 
+  7: cnt_1KHz<15>      16: cnt_1KHz<9>       24: cnt_2Hz<7> 
+  8: cnt_1KHz<1>       17: cnt_2Hz<0>        25: cnt_2Hz<8> 
+  9: cnt_1KHz<2>      
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+cnt_2Hz<5>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+cnt_2Hz<6>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+cnt_2Hz<7>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+cnt_1KHz<14>         XXXXXXXXXXXXXXXX........................ 16
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               25/29
+Number of signals used by logic mapping into function block:  25
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+cnt_2Hz<1>           17      12<-   0   0     FB2_1         (b)     (b)
+(unused)              0       0   /\5   0     FB2_2   99    GSR/I/O GSR
+cnt_2Hz<0>           11       8<- /\2   0     FB2_3         (b)     (b)
+(unused)              0       0   /\5   0     FB2_4         (b)     (b)
+cnt_1KHz<15>          9       7<- /\3   0     FB2_5   1     GTS/I/O (b)
+(unused)              0       0   /\5   0     FB2_6   2     GTS/I/O (b)
+cnt_1KHz<12>          3       0   /\2   0     FB2_7         (b)     (b)
+(unused)              0       0   \/5   0     FB2_8   3     GTS/I/O (b)
+(unused)              0       0   \/5   0     FB2_9   4     GTS/I/O (b)
+cnt_2Hz<2>           22      17<-   0   0     FB2_10        (b)     (b)
+(unused)              0       0   /\5   0     FB2_11  6     I/O     (b)
+(unused)              0       0   /\2   3     FB2_12  7     I/O     (b)
+(unused)              0       0     0   5     FB2_13        (b)     
+(unused)              0       0   \/3   2     FB2_14  8     I/O     (b)
+(unused)              0       0   \/5   0     FB2_15  9     I/O     (b)
+cnt_2Hz<8>           18      13<-   0   0     FB2_16        (b)     (b)
+(unused)              0       0   /\5   0     FB2_17  10    I/O     (b)
+(unused)              0       0   \/5   0     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: cnt_1KHz<0>       10: cnt_1KHz<3>       18: cnt_2Hz<1> 
+  2: cnt_1KHz<10>      11: cnt_1KHz<4>       19: cnt_2Hz<2> 
+  3: cnt_1KHz<11>      12: cnt_1KHz<5>       20: cnt_2Hz<3> 
+  4: cnt_1KHz<12>      13: cnt_1KHz<6>       21: cnt_2Hz<4> 
+  5: cnt_1KHz<13>      14: cnt_1KHz<7>       22: cnt_2Hz<5> 
+  6: cnt_1KHz<14>      15: cnt_1KHz<8>       23: cnt_2Hz<6> 
+  7: cnt_1KHz<15>      16: cnt_1KHz<9>       24: cnt_2Hz<7> 
+  8: cnt_1KHz<1>       17: cnt_2Hz<0>        25: cnt_2Hz<8> 
+  9: cnt_1KHz<2>      
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+cnt_2Hz<1>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+cnt_2Hz<0>           XXXXXXXXXXXXXXXXX.XXXXXXX............... 24
+cnt_1KHz<15>         XXXXXXXXXXXXXXXX........................ 16
+cnt_1KHz<12>         XXXX.XXXXXXXXXXX........................ 15
+cnt_2Hz<2>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+cnt_2Hz<8>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               25/29
+Number of signals used by logic mapping into function block:  25
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   \/5   0     FB3_1         (b)     (b)
+(unused)              0       0   \/5   0     FB3_2   23    GCK/I/O (b)
+cnt_2Hz<3>           25      20<-   0   0     FB3_3         (b)     (b)
+(unused)              0       0   /\5   0     FB3_4         (b)     (b)
+(unused)              0       0   /\5   0     FB3_5   24    I/O     (b)
+(unused)              0       0     0   5     FB3_6   25    I/O     
+(unused)              0       0     0   5     FB3_7         (b)     
+led<0>                0       0     0   5     FB3_8   27    GCK/I/O O
+led<1>                0       0     0   5     FB3_9   28    I/O     O
+(unused)              0       0     0   5     FB3_10        (b)     
+led<2>                0       0     0   5     FB3_11  29    I/O     O
+led<3>                4       0     0   1     FB3_12  30    I/O     O
+(unused)              0       0     0   5     FB3_13        (b)     
+(unused)              0       0   \/4   1     FB3_14  32    I/O     (b)
+(unused)              0       0   \/5   0     FB3_15  33    I/O     (b)
+cnt_2Hz<4>           24      19<-   0   0     FB3_16        (b)     (b)
+(unused)              0       0   /\5   0     FB3_17  34    I/O     (b)
+(unused)              0       0   /\5   0     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: cnt_1KHz<0>       10: cnt_1KHz<3>       18: cnt_2Hz<1> 
+  2: cnt_1KHz<10>      11: cnt_1KHz<4>       19: cnt_2Hz<2> 
+  3: cnt_1KHz<11>      12: cnt_1KHz<5>       20: cnt_2Hz<3> 
+  4: cnt_1KHz<12>      13: cnt_1KHz<6>       21: cnt_2Hz<4> 
+  5: cnt_1KHz<13>      14: cnt_1KHz<7>       22: cnt_2Hz<5> 
+  6: cnt_1KHz<14>      15: cnt_1KHz<8>       23: cnt_2Hz<6> 
+  7: cnt_1KHz<15>      16: cnt_1KHz<9>       24: cnt_2Hz<7> 
+  8: cnt_1KHz<1>       17: cnt_2Hz<0>        25: cnt_2Hz<8> 
+  9: cnt_1KHz<2>      
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+cnt_2Hz<3>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+led<0>               ........................................ 0
+led<1>               ........................................ 0
+led<2>               ........................................ 0
+led<3>               ................XXXXXXXXX............... 9
+cnt_2Hz<4>           XXXXXXXXXXXXXXXXXXXXXXXXX............... 25
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               16/38
+Number of signals used by logic mapping into function block:  16
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB4_1         (b)     
+(unused)              0       0     0   5     FB4_2   87    I/O     
+(unused)              0       0   \/4   1     FB4_3         (b)     (b)
+cnt_1KHz<1>           9       4<-   0   0     FB4_4         (b)     (b)
+cnt_1KHz<7>           9       4<-   0   0     FB4_5   89    I/O     (b)
+(unused)              0       0   /\4   1     FB4_6   90    I/O     (b)
+counter<0>            8       3<-   0   0     FB4_7         (b)     (b)
+cnt_1KHz<0>           6       4<- /\3   0     FB4_8   91    I/O     (b)
+cnt_1KHz<10>          3       2<- /\4   0     FB4_9   92    I/O     (b)
+cnt_1KHz<11>          3       0   /\2   0     FB4_10        (b)     (b)
+(unused)              0       0     0   5     FB4_11  93    I/O     
+(unused)              0       0   \/1   4     FB4_12  94    I/O     (b)
+cnt_1KHz<4>          11       6<-   0   0     FB4_13        (b)     (b)
+(unused)              0       0   /\5   0     FB4_14  95    I/O     (b)
+(unused)              0       0   \/5   0     FB4_15  96    I/O     (b)
+cnt_1KHz<2>          10       5<-   0   0     FB4_16        (b)     (b)
+(unused)              0       0     0   5     FB4_17  97    I/O     
+(unused)              0       0     0   5     FB4_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: cnt_1KHz<0>        7: cnt_1KHz<15>      12: cnt_1KHz<5> 
+  2: cnt_1KHz<10>       8: cnt_1KHz<1>       13: cnt_1KHz<6> 
+  3: cnt_1KHz<11>       9: cnt_1KHz<2>       14: cnt_1KHz<7> 
+  4: cnt_1KHz<12>      10: cnt_1KHz<3>       15: cnt_1KHz<8> 
+  5: cnt_1KHz<13>      11: cnt_1KHz<4>       16: cnt_1KHz<9> 
+  6: cnt_1KHz<14>     
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+cnt_1KHz<1>          XXXXXXXX..XXXXXX........................ 14
+cnt_1KHz<7>          XXXXXXXXXXXXXXXX........................ 16
+counter<0>           XXXXXXXXXXXXXXXX........................ 16
+cnt_1KHz<0>          XXXXXXX...XXXXXX........................ 13
+cnt_1KHz<10>         XX...XXXXXXXXXXX........................ 13
+cnt_1KHz<11>         XXX..XXXXXXXXXXX........................ 14
+cnt_1KHz<4>          XXXXXXXXXXX.XXXX........................ 15
+cnt_1KHz<2>          XXXXXXXXX.XXXXXX........................ 15
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB5  ***********************************
+Number of function block inputs used/remaining:               0/54
+Number of signals used by logic mapping into function block:  0
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB5_1         (b)     
+(unused)              0       0     0   5     FB5_2   35    I/O     
+(unused)              0       0     0   5     FB5_3         (b)     
+(unused)              0       0     0   5     FB5_4         (b)     
+(unused)              0       0     0   5     FB5_5   36    I/O     
+(unused)              0       0     0   5     FB5_6   37    I/O     
+(unused)              0       0     0   5     FB5_7         (b)     
+(unused)              0       0     0   5     FB5_8   39    I/O     
+(unused)              0       0     0   5     FB5_9   40    I/O     
+(unused)              0       0     0   5     FB5_10        (b)     
+(unused)              0       0     0   5     FB5_11  41    I/O     
+(unused)              0       0     0   5     FB5_12  42    I/O     
+(unused)              0       0     0   5     FB5_13        (b)     
+(unused)              0       0     0   5     FB5_14  43    I/O     
+(unused)              0       0     0   5     FB5_15  46    I/O     
+(unused)              0       0     0   5     FB5_16        (b)     
+(unused)              0       0     0   5     FB5_17  49    I/O     
+(unused)              0       0     0   5     FB5_18        (b)     
+*********************************** FB6  ***********************************
+Number of function block inputs used/remaining:               19/35
+Number of signals used by logic mapping into function block:  19
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   /\5   0     FB6_1         (b)     (b)
+(unused)              0       0   \/5   0     FB6_2   74    I/O     (b)
+cnt_1KHz<6>          13       8<-   0   0     FB6_3         (b)     (b)
+(unused)              0       0   /\3   2     FB6_4         (b)     (b)
+(unused)              0       0   \/2   3     FB6_5   76    I/O     (b)
+cnt_1KHz<13>          3       2<- \/4   0     FB6_6   77    I/O     (b)
+counter<2>            8       4<- \/1   0     FB6_7         (b)     (b)
+cnt_1KHz<9>          11       6<-   0   0     FB6_8   78    I/O     (b)
+(unused)              0       0   /\5   0     FB6_9   79    I/O     (b)
+(unused)              0       0   \/5   0     FB6_10        (b)     (b)
+cnt_1KHz<8>          11       6<-   0   0     FB6_11  80    I/O     (b)
+reset                 2       0   /\1   2     FB6_12  81    I/O     O
+(unused)              0       0   \/5   0     FB6_13        (b)     (b)
+cnt_1KHz<5>          11       6<-   0   0     FB6_14  82    I/O     (b)
+quench                2       0   /\1   2     FB6_15  85    I/O     O
+(unused)              0       0   \/4   1     FB6_16        (b)     (b)
+counter<1>            8       4<- \/1   0     FB6_17  86    I/O     (b)
+cnt_1KHz<3>          11       6<-   0   0     FB6_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: cnt_1KHz<0>        8: cnt_1KHz<1>       14: cnt_1KHz<7> 
+  2: cnt_1KHz<10>       9: cnt_1KHz<2>       15: cnt_1KHz<8> 
+  3: cnt_1KHz<11>      10: cnt_1KHz<3>       16: cnt_1KHz<9> 
+  4: cnt_1KHz<12>      11: cnt_1KHz<4>       17: counter<0> 
+  5: cnt_1KHz<13>      12: cnt_1KHz<5>       18: counter<1> 
+  6: cnt_1KHz<14>      13: cnt_1KHz<6>       19: counter<2> 
+  7: cnt_1KHz<15>     
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+cnt_1KHz<6>          XXXXXXXXXXXXXXXX........................ 16
+cnt_1KHz<13>         XXXXXXXXXXXXXXXX........................ 16
+counter<2>           XXXXXXXXXXXXXXXXXX...................... 18
+cnt_1KHz<9>          XXXXXXXXXXXXXXXX........................ 16
+cnt_1KHz<8>          XXXXXXXXXXXXXXXX........................ 16
+reset                ................XXX..................... 3
+cnt_1KHz<5>          XXXXXXXXXXXXXXXX........................ 16
+quench               ................XXX..................... 3
+counter<1>           XXXXXXXXXXXXXXXXX....................... 17
+cnt_1KHz<3>          XXXXXXXXXXXXXXXX........................ 16
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB7  ***********************************
+Number of function block inputs used/remaining:               0/54
+Number of signals used by logic mapping into function block:  0
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB7_1         (b)     
+(unused)              0       0     0   5     FB7_2   50    I/O     
+(unused)              0       0     0   5     FB7_3         (b)     
+(unused)              0       0     0   5     FB7_4         (b)     
+(unused)              0       0     0   5     FB7_5   52    I/O     
+(unused)              0       0     0   5     FB7_6   53    I/O     
+(unused)              0       0     0   5     FB7_7         (b)     
+(unused)              0       0     0   5     FB7_8   54    I/O     
+(unused)              0       0     0   5     FB7_9   55    I/O     
+(unused)              0       0     0   5     FB7_10        (b)     
+(unused)              0       0     0   5     FB7_11  56    I/O     
+(unused)              0       0     0   5     FB7_12  58    I/O     
+(unused)              0       0     0   5     FB7_13        (b)     
+(unused)              0       0     0   5     FB7_14  59    I/O     
+(unused)              0       0     0   5     FB7_15  60    I/O     
+(unused)              0       0     0   5     FB7_16        (b)     
+(unused)              0       0     0   5     FB7_17  61    I/O     
+(unused)              0       0     0   5     FB7_18        (b)     
+*********************************** FB8  ***********************************
+Number of function block inputs used/remaining:               0/54
+Number of signals used by logic mapping into function block:  0
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB8_1         (b)     
+(unused)              0       0     0   5     FB8_2   63    I/O     
+(unused)              0       0     0   5     FB8_3         (b)     
+(unused)              0       0     0   5     FB8_4         (b)     
+(unused)              0       0     0   5     FB8_5   64    I/O     
+(unused)              0       0     0   5     FB8_6   65    I/O     
+(unused)              0       0     0   5     FB8_7         (b)     
+(unused)              0       0     0   5     FB8_8   66    I/O     
+(unused)              0       0     0   5     FB8_9   67    I/O     
+(unused)              0       0     0   5     FB8_10        (b)     
+(unused)              0       0     0   5     FB8_11  68    I/O     
+(unused)              0       0     0   5     FB8_12  70    I/O     
+(unused)              0       0     0   5     FB8_13        (b)     
+(unused)              0       0     0   5     FB8_14  71    I/O     
+(unused)              0       0     0   5     FB8_15  72    I/O     
+(unused)              0       0     0   5     FB8_16        (b)     
+(unused)              0       0     0   5     FB8_17  73    I/O     
+(unused)              0       0     0   5     FB8_18        (b)     
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FDCPE_cnt_1KHz0: FDCPE port map (cnt_1KHz(0),cnt_1KHz_D(0),clk,NOT rst_n,'0');
+cnt_1KHz_D(0) <= ((NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(8))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(9))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(14))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(15)));
+
+FDCPE_cnt_1KHz1: FDCPE port map (cnt_1KHz(1),cnt_1KHz_D(1),clk,NOT rst_n,'0');
+cnt_1KHz_D(1) <= ((cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(1))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15)));
+
+FDCPE_cnt_1KHz2: FDCPE port map (cnt_1KHz(2),cnt_1KHz_D(2),clk,NOT rst_n,'0');
+cnt_1KHz_D(2) <= ((cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(2))
+	OR (NOT cnt_1KHz(1) AND NOT cnt_1KHz(2))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15)));
+
+FDCPE_cnt_1KHz3: FDCPE port map (cnt_1KHz(3),cnt_1KHz_D(3),clk,NOT rst_n,'0');
+cnt_1KHz_D(3) <= ((cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(3))
+	OR (NOT cnt_1KHz(1) AND NOT cnt_1KHz(3))
+	OR (NOT cnt_1KHz(2) AND NOT cnt_1KHz(3))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15)));
+
+FDCPE_cnt_1KHz4: FDCPE port map (cnt_1KHz(4),cnt_1KHz_D(4),clk,NOT rst_n,'0');
+cnt_1KHz_D(4) <= ((cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4))
+	OR (cnt_1KHz(14) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(4))
+	OR (NOT cnt_1KHz(1) AND NOT cnt_1KHz(4))
+	OR (NOT cnt_1KHz(2) AND NOT cnt_1KHz(4))
+	OR (NOT cnt_1KHz(3) AND NOT cnt_1KHz(4))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz5: FTCPE port map (cnt_1KHz(5),cnt_1KHz_T(5),clk,NOT rst_n,'0');
+cnt_1KHz_T(5) <= ((cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND NOT cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(7) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND NOT cnt_1KHz(8))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND NOT cnt_1KHz(9))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(5) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(5) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(5) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(5) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4)));
+
+FTCPE_cnt_1KHz6: FTCPE port map (cnt_1KHz(6),cnt_1KHz_T(6),clk,NOT rst_n,'0');
+cnt_1KHz_T(6) <= ((cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(6) AND cnt_1KHz(7) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND NOT cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND NOT cnt_1KHz(7))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND NOT cnt_1KHz(8))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND NOT cnt_1KHz(9))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(6) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(6) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(6) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(6) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz7: FTCPE port map (cnt_1KHz(7),cnt_1KHz_T(7),clk,NOT rst_n,'0');
+cnt_1KHz_T(7) <= ((cnt_1KHz(0) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	NOT cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	NOT cnt_1KHz(8))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	NOT cnt_1KHz(9))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(7) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(7) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(7) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(7) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz8: FTCPE port map (cnt_1KHz(8),cnt_1KHz_T(8),clk,NOT rst_n,'0');
+cnt_1KHz_T(8) <= ((cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6) AND cnt_1KHz(7))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7) AND NOT cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(8) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(8) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(8) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(8) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz9: FTCPE port map (cnt_1KHz(9),cnt_1KHz_T(9),clk,NOT rst_n,'0');
+cnt_1KHz_T(9) <= ((cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6) AND cnt_1KHz(7) AND cnt_1KHz(8))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8) AND NOT cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz10: FTCPE port map (cnt_1KHz(10),cnt_1KHz_T(10),clk,NOT rst_n,'0');
+cnt_1KHz_T(10) <= ((cnt_1KHz(0) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6) AND cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9))
+	OR (cnt_1KHz(0) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9) AND NOT cnt_1KHz(15))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz11: FTCPE port map (cnt_1KHz(11),cnt_1KHz_T(11),clk,NOT rst_n,'0');
+cnt_1KHz_T(11) <= ((cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(10) AND NOT cnt_1KHz(14) AND 
+	cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND 
+	cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9))
+	OR (cnt_1KHz(0) AND cnt_1KHz(10) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6) AND cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	NOT cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz12: FTCPE port map (cnt_1KHz(12),cnt_1KHz_T(12),clk,NOT rst_n,'0');
+cnt_1KHz_T(12) <= ((cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(10) AND cnt_1KHz(11) AND 
+	NOT cnt_1KHz(14) AND cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND 
+	cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(7) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9))
+	OR (cnt_1KHz(0) AND cnt_1KHz(10) AND cnt_1KHz(11) AND 
+	cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(4) AND 
+	cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND NOT cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz13: FTCPE port map (cnt_1KHz(13),cnt_1KHz_T(13),clk,NOT rst_n,'0');
+cnt_1KHz_T(13) <= ((cnt_1KHz(0) AND cnt_1KHz(10) AND cnt_1KHz(11) AND 
+	cnt_1KHz(12) AND NOT cnt_1KHz(14) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9))
+	OR (cnt_1KHz(0) AND cnt_1KHz(10) AND cnt_1KHz(11) AND 
+	cnt_1KHz(12) AND cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND 
+	cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(7) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND NOT cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15)));
+
+FTCPE_cnt_1KHz14: FTCPE port map (cnt_1KHz(14),cnt_1KHz_T(14),clk,NOT rst_n,'0');
+cnt_1KHz_T(14) <= ((cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(10) AND cnt_1KHz(11) AND 
+	cnt_1KHz(12) AND cnt_1KHz(13) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(4) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9)));
+
+FDCPE_cnt_1KHz15: FDCPE port map (cnt_1KHz(15),cnt_1KHz_D(15),clk,NOT rst_n,'0');
+cnt_1KHz_D(15) <= ((cnt_1KHz(12).EXP)
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(1) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(2) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(8) AND cnt_1KHz(15)));
+
+FTCPE_cnt_2Hz0: FTCPE port map (cnt_2Hz(0),cnt_2Hz_T(0),clk,NOT rst_n,'0');
+cnt_2Hz_T(0) <= ((NOT cnt_1KHz(14))
+	OR (cnt_1KHz(15).EXP)
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(9))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(3) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(1) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(2) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7)));
+
+FTCPE_cnt_2Hz1: FTCPE port map (cnt_2Hz(1),cnt_2Hz_T(1),clk,NOT rst_n,'0');
+cnt_2Hz_T(1) <= ((cnt_2Hz(0).EXP)
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(6))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(7))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(9))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(4))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(5))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(2) AND NOT cnt_2Hz(3))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(3) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND NOT cnt_2Hz(1) AND cnt_2Hz(8))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND NOT cnt_2Hz(1) AND cnt_2Hz(8))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(1) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(2) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7)));
+
+FTCPE_cnt_2Hz2: FTCPE port map (cnt_2Hz(2),cnt_2Hz_T(2),clk,NOT rst_n,'0');
+cnt_2Hz_T(2) <= ((EXP26_.EXP)
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(4))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(5))
+	OR (NOT cnt_2Hz(4) AND NOT cnt_2Hz(1))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(9))
+	OR (EXP29_.EXP)
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(6))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(5) AND NOT cnt_2Hz(1))
+	OR (NOT cnt_2Hz(6) AND NOT cnt_2Hz(1))
+	OR (NOT cnt_2Hz(1) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(1) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(2) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(3) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7)));
+
+FTCPE_cnt_2Hz3: FTCPE port map (cnt_2Hz(3),cnt_2Hz_T(3),clk,NOT rst_n,'0');
+cnt_2Hz_T(3) <= ((EXP34_.EXP)
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(4))
+	OR (NOT cnt_2Hz(2) AND NOT cnt_2Hz(4))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(9))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (EXP37_.EXP)
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(5))
+	OR (NOT cnt_2Hz(2) AND NOT cnt_2Hz(5))
+	OR (NOT cnt_2Hz(2) AND NOT cnt_2Hz(6))
+	OR (NOT cnt_2Hz(4) AND NOT cnt_2Hz(1))
+	OR (NOT cnt_2Hz(5) AND NOT cnt_2Hz(1))
+	OR (NOT cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(1) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(2) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(3) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7)));
+
+FTCPE_cnt_2Hz4: FTCPE port map (cnt_2Hz(4),cnt_2Hz_T(4),clk,NOT rst_n,'0');
+cnt_2Hz_T(4) <= ((EXP38_.EXP)
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (EXP41_.EXP)
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(13) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(1) AND cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_2Hz5: FTCPE port map (cnt_2Hz(5),cnt_2Hz_T(5),clk,NOT rst_n,'0');
+cnt_2Hz_T(5) <= ((EXP10_.EXP)
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(11) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(12) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(13) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (EXP13_.EXP)
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(13) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(10) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(14) AND cnt_1KHz(7) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(14) AND cnt_1KHz(4) AND 
+	cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(14) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(1) AND cnt_1KHz(0) AND cnt_1KHz(14) AND 
+	cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_2Hz6: FTCPE port map (cnt_2Hz(6),cnt_2Hz_T(6),clk,NOT rst_n,'0');
+cnt_2Hz_T(6) <= ((EXP14_.EXP)
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(13) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (EXP17_.EXP)
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(13) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(14) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(14) AND 
+	cnt_1KHz(4) AND cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(14) AND 
+	cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(1) AND cnt_1KHz(0) AND 
+	cnt_1KHz(14) AND cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND 
+	cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_cnt_2Hz7: FTCPE port map (cnt_2Hz(7),cnt_2Hz_T(7),clk,NOT rst_n,'0');
+cnt_2Hz_T(7) <= ((EXP18_.EXP)
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (EXP21_.EXP)
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(2) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(13) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(3) AND cnt_2Hz(4) AND cnt_2Hz(5) AND 
+	cnt_2Hz(6) AND cnt_2Hz(7) AND cnt_2Hz(8) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_2Hz(0) AND cnt_2Hz(2) AND cnt_2Hz(3) AND 
+	cnt_2Hz(4) AND cnt_2Hz(5) AND cnt_2Hz(6) AND cnt_2Hz(1) AND 
+	cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND cnt_1KHz(2) AND 
+	cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15)));
+
+FTCPE_cnt_2Hz8: FTCPE port map (cnt_2Hz(8),cnt_2Hz_T(8),clk,NOT rst_n,'0');
+cnt_2Hz_T(8) <= ((NOT cnt_2Hz(4))
+	OR (NOT cnt_2Hz(5))
+	OR (NOT cnt_2Hz(6))
+	OR (NOT cnt_1KHz(14))
+	OR (NOT cnt_1KHz(15))
+	OR (NOT cnt_2Hz(7))
+	OR (EXP30_.EXP)
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(2) AND NOT cnt_2Hz(3))
+	OR (NOT cnt_2Hz(2) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(1) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(3) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(8))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(9))
+	OR (NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND NOT cnt_1KHz(12) AND 
+	NOT cnt_1KHz(13) AND NOT cnt_1KHz(6) AND NOT cnt_1KHz(7))
+	OR (NOT cnt_1KHz(0) AND NOT cnt_1KHz(10) AND NOT cnt_1KHz(11) AND 
+	NOT cnt_1KHz(12) AND NOT cnt_1KHz(13) AND NOT cnt_1KHz(4) AND NOT cnt_1KHz(5) AND 
+	NOT cnt_1KHz(7)));
+
+FTCPE_counter0: FTCPE port map (counter(0),counter_T(0),clk,NOT rst_n,'0');
+counter_T(0) <= ((cnt_1KHz(14) AND cnt_1KHz(4) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(5) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(0) AND cnt_1KHz(14) AND cnt_1KHz(1) AND 
+	cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (cnt_1KHz(10) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(11) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(12) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(13) AND cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (cnt_1KHz(14) AND cnt_1KHz(7) AND cnt_1KHz(8) AND 
+	cnt_1KHz(9) AND cnt_1KHz(15)));
+
+FTCPE_counter1: FTCPE port map (counter(1),counter_T(1),clk,NOT rst_n,'0');
+counter_T(1) <= ((counter(0) AND cnt_1KHz(14) AND cnt_1KHz(7) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(14) AND cnt_1KHz(4) AND 
+	cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(14) AND cnt_1KHz(5) AND 
+	cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(0) AND cnt_1KHz(14) AND 
+	cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND cnt_1KHz(6) AND 
+	cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(10) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(11) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(12) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15))
+	OR (counter(0) AND cnt_1KHz(13) AND cnt_1KHz(14) AND 
+	cnt_1KHz(15)));
+
+FTCPE_counter2: FTCPE port map (counter(2),counter_T(2),clk,NOT rst_n,'0');
+counter_T(2) <= ((counter(0) AND counter(1) AND cnt_1KHz(14) AND 
+	cnt_1KHz(7) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(14) AND 
+	cnt_1KHz(4) AND cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(14) AND 
+	cnt_1KHz(5) AND cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND 
+	cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(0) AND 
+	cnt_1KHz(14) AND cnt_1KHz(1) AND cnt_1KHz(2) AND cnt_1KHz(3) AND 
+	cnt_1KHz(6) AND cnt_1KHz(8) AND cnt_1KHz(9) AND cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(10) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(11) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(12) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15))
+	OR (counter(0) AND counter(1) AND cnt_1KHz(13) AND 
+	cnt_1KHz(14) AND cnt_1KHz(15)));
+
+
+led(0) <= '0';
+
+
+led(1) <= '0';
+
+
+led(2) <= '1';
+
+
+led(3) <= NOT (((NOT cnt_2Hz(6) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(7) AND NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(3) AND NOT cnt_2Hz(4) AND NOT cnt_2Hz(5) AND 
+	NOT cnt_2Hz(8))
+	OR (NOT cnt_2Hz(0) AND NOT cnt_2Hz(2) AND NOT cnt_2Hz(4) AND 
+	NOT cnt_2Hz(5) AND NOT cnt_2Hz(1) AND NOT cnt_2Hz(8))));
+
+FDCPE_quench: FDCPE port map (quench,quench_D,clk,NOT rst_n,'0');
+quench_D <= ((counter(0) AND NOT counter(1) AND NOT counter(2))
+	OR (NOT counter(0) AND counter(1) AND NOT counter(2)));
+
+FDCPE_reset: FDCPE port map (reset,reset_D,clk,NOT rst_n,'0');
+reset_D <= ((counter(0) AND NOT counter(1) AND counter(2))
+	OR (NOT counter(0) AND counter(1) AND counter(2)));
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC95144XL-5-TQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13               XC95144XL-5-TQ100              63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 KPR                              51 VCC                           
+  2 KPR                              52 KPR                           
+  3 KPR                              53 KPR                           
+  4 KPR                              54 KPR                           
+  5 VCC                              55 KPR                           
+  6 KPR                              56 KPR                           
+  7 KPR                              57 VCC                           
+  8 KPR                              58 KPR                           
+  9 KPR                              59 KPR                           
+ 10 KPR                              60 KPR                           
+ 11 KPR                              61 KPR                           
+ 12 KPR                              62 GND                           
+ 13 KPR                              63 KPR                           
+ 14 KPR                              64 KPR                           
+ 15 KPR                              65 KPR                           
+ 16 KPR                              66 KPR                           
+ 17 KPR                              67 KPR                           
+ 18 KPR                              68 KPR                           
+ 19 KPR                              69 GND                           
+ 20 KPR                              70 KPR                           
+ 21 GND                              71 KPR                           
+ 22 clk                              72 KPR                           
+ 23 KPR                              73 KPR                           
+ 24 KPR                              74 KPR                           
+ 25 KPR                              75 GND                           
+ 26 VCC                              76 KPR                           
+ 27 led<0>                           77 KPR                           
+ 28 led<1>                           78 KPR                           
+ 29 led<2>                           79 KPR                           
+ 30 led<3>                           80 KPR                           
+ 31 GND                              81 reset                         
+ 32 KPR                              82 KPR                           
+ 33 KPR                              83 TDO                           
+ 34 KPR                              84 GND                           
+ 35 KPR                              85 quench                        
+ 36 KPR                              86 KPR                           
+ 37 KPR                              87 KPR                           
+ 38 VCC                              88 VCC                           
+ 39 KPR                              89 KPR                           
+ 40 KPR                              90 KPR                           
+ 41 KPR                              91 KPR                           
+ 42 KPR                              92 KPR                           
+ 43 KPR                              93 KPR                           
+ 44 GND                              94 KPR                           
+ 45 TDI                              95 KPR                           
+ 46 KPR                              96 KPR                           
+ 47 TMS                              97 KPR                           
+ 48 TCK                              98 VCC                           
+ 49 KPR                              99 rst_n                         
+ 50 KPR                             100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc95144xl-5-TQ100
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25

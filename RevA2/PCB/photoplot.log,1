@@ -2,28 +2,43 @@
 (                                                                     )
 (    ARTWORK LOG                                                      )
 (                                                                     )
-(    Drawing          : SAPD2-1.brd                                   )
+(    Drawing          : SAPD2.brd                                     )
 (    Software Version : 17.4S017                                      )
-(    Date/Time        : Thu Nov 24 21:29:54 2022                      )
+(    Date/Time        : Fri Nov 25 13:01:13 2022                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
 
  ---- Photoplot outline rectangle not found; using drawing extents.
 
 
 
-Results from parameter file ...
-    DEVICE-TYPE           GERBER_RS274X
-    OUTPUT-UNITS          MM
-    FILM-SIZE             2400000 1600000
-    FORMAT                2.5
-    ABORT-ON-ERROR        NO
-    SCALE                 1
-    SUPPRESS-LEAD-ZEROES  YES
-    SUPPRESS-TRAIL-ZEROES NO
-    SUPPRESS-EQUAL        YES
-    UNDEF-APT-CONT        NO
+
+ Can't open parameter file ... using default values:
+     DEVICE-TYPE        GERBER6X00
+     G-CODES            NO
+     STATIONS-PER-WHEEL 24
+     FILM-SIZE          24000 16000
+     COORDINATES        ABSOLUTE
+     OUTPUT-UNITS       INCHES
+     FORMAT             5.3
+     ABORT-ON-ERROR     abort film & continue
+     SUPPRESS-LEAD-ZEROES     YES
+     SUPPRESS-TRAIL-ZEROES    NO
+     OPTIMIZE           YES
+     SUPPRESS-EQUAL     YES
+     SCALE              1.0
+
+
+
+ WARNING: Generating english output data from a metric database
+ may cause slight roundoff error of coordinates in output file.
+
 
 
 
@@ -34,7 +49,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -43,54 +58,55 @@ Results from parameter file ...
   Suppress unconnected internal pads  NO
   Draw holes only                     NO
 
-    WARNING: Film contains objects with associated DRCs (308).
+    WARNING: Film contains objects with associated DRCs (281).
            In the design editor view this film and enable visibility for the
            associated DRC layer. Verify the DRCs are approved exceptions to your rules.
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.30000                                  DARK 
-  CIRCLE     0.40000                                  DARK 
-  CIRCLE     0.50000                                  DARK 
-  CIRCLE     0.60000                                  DARK 
-  CIRCLE     0.70000                                  DARK 
-  CIRCLE     0.80000                                  DARK 
-  CIRCLE     0.90000                                  DARK 
-  CIRCLE     1.00000                                  DARK 
-  CIRCLE     1.20000                                  DARK 
-  CIRCLE     1.70000                                  DARK 
-  CIRCLE     2.00000                                  DARK 
-  CIRCLE     3.00000                                  DARK 
-  CIRCLE     3.10000                                  DARK 
-  CIRCLE     5.00000                                  DARK 
-  RECTANGLE  0.30000     x 0.80000      90.000 NO     DARK 
-  RECTANGLE  0.50000     x 0.60000       0.000 NO     DARK 
-  RECTANGLE  0.50000     x 0.60000      90.000 NO     DARK 
-  RECTANGLE  0.50000     x 0.80000       0.000 NO     DARK 
-  RECTANGLE  0.50000     x 0.80000      90.000 NO     DARK 
-  RECTANGLE  0.50000     x 1.00000      90.000 NO     DARK 
-  RECTANGLE  0.51000     x 1.27000      90.000 NO     DARK 
-  RECTANGLE  0.60000     x 1.20000      90.000 NO     DARK 
-  RECTANGLE  0.65000     x 1.35000      90.000 NO     DARK 
-  RECTANGLE  0.95000     x 3.60000      90.000 NO     DARK 
-  RECTANGLE  1.00000     x 1.20000       0.000 NO     DARK 
-  RECTANGLE  1.00000     x 1.20000      90.000 NO     DARK 
-  RECTANGLE  1.00000     x 3.00000      45.000 NO     DARK 
-  RECTANGLE  1.14000     x 1.20000       0.000 NO     DARK 
-  RECTANGLE  1.14000     x 1.20000      90.000 NO     DARK 
-  RECTANGLE  1.25000     x 4.00000       0.000 NO     DARK 
-  RECTANGLE  1.30000     x 3.50000      90.000 NO     DARK 
-  RECTANGLE  1.67000     x 1.57500       0.000 NO     DARK 
-  RECTANGLE  1.67000     x 1.57500      90.000 NO     DARK 
-  RECTANGLE  2.16000     x 2.26000      90.000 NO     DARK 
-  RECTANGLE  3.00000     x 5.00000       0.000 NO     DARK 
-  RECTANGLE  3.00000     x 6.00000       0.000 NO     DARK 
-  RECTANGLE  3.70000     x 1.50000      90.000 NO     DARK 
-  RECTANGLE  6.00000     x 8.00000       0.000 NO     DARK 
-  RECTANGLE  9.00000     x 10.70000     90.000 NO     DARK 
+  CIRCLE     0.01181                                  DARK 
+  CIRCLE     0.01575                                  DARK 
+  CIRCLE     0.01969                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.02756                                  DARK 
+  CIRCLE     0.03150                                  DARK 
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04724                                  DARK 
+  CIRCLE     0.06693                                  DARK 
+  CIRCLE     0.07087                                  DARK 
+  CIRCLE     0.11811                                  DARK 
+  CIRCLE     0.12205                                  DARK 
+  CIRCLE     0.19685                                  DARK 
+  RECTANGLE  0.01181     x 0.03150       0.000 NO     DARK 
+  RECTANGLE  0.01181     x 0.03150      90.000 NO     DARK 
+  RECTANGLE  0.01969     x 0.02362       0.000 NO     DARK 
+  RECTANGLE  0.01969     x 0.02362      90.000 NO     DARK 
+  RECTANGLE  0.01969     x 0.03150       0.000 NO     DARK 
+  RECTANGLE  0.01969     x 0.03150      90.000 NO     DARK 
+  RECTANGLE  0.01969     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.02008     x 0.05000      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.04724      90.000 NO     DARK 
+  RECTANGLE  0.02559     x 0.05315      90.000 NO     DARK 
+  RECTANGLE  0.03740     x 0.14173      90.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.04724       0.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.04724      90.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.11811      45.000 NO     DARK 
+  RECTANGLE  0.04488     x 0.04724       0.000 NO     DARK 
+  RECTANGLE  0.04488     x 0.04724      90.000 NO     DARK 
+  RECTANGLE  0.04921     x 0.15748       0.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.13780      90.000 NO     DARK 
+  RECTANGLE  0.06575     x 0.06201       0.000 NO     DARK 
+  RECTANGLE  0.06575     x 0.06201      90.000 NO     DARK 
+  RECTANGLE  0.08504     x 0.08898      90.000 NO     DARK 
+  RECTANGLE  0.11811     x 0.19685       0.000 NO     DARK 
+  RECTANGLE  0.11811     x 0.23622       0.000 NO     DARK 
+  RECTANGLE  0.14567     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.23622     x 0.31496       0.000 NO     DARK 
+  RECTANGLE  0.35433     x 0.42126      90.000 NO     DARK 
 
      TOP created with warnings
 
@@ -102,7 +118,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -116,24 +132,24 @@ Results from parameter file ...
            associated DRC layer. Verify the DRCs are approved exceptions to your rules.
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.30000                                  DARK 
-  CIRCLE     0.50000                                  DARK 
-  CIRCLE     0.60000                                  DARK 
-  CIRCLE     0.70000                                  DARK 
-  CIRCLE     0.80000                                  DARK 
-  CIRCLE     0.90000                                  DARK 
-  CIRCLE     1.00000                                  DARK 
-  CIRCLE     1.20000                                  DARK 
-  CIRCLE     1.70000                                  DARK 
-  CIRCLE     2.00000                                  DARK 
-  CIRCLE     3.00000                                  DARK 
-  CIRCLE     3.10000                                  DARK 
-  CIRCLE     5.00000                                  DARK 
-  RECTANGLE  1.00000     x 1.20000      90.000 NO     DARK 
+  CIRCLE     0.01181                                  DARK 
+  CIRCLE     0.01969                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.02756                                  DARK 
+  CIRCLE     0.03150                                  DARK 
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04724                                  DARK 
+  CIRCLE     0.06693                                  DARK 
+  CIRCLE     0.07087                                  DARK 
+  CIRCLE     0.11811                                  DARK 
+  CIRCLE     0.12205                                  DARK 
+  CIRCLE     0.19685                                  DARK 
+  RECTANGLE  0.03937     x 0.04724      90.000 NO     DARK 
 
      BOTTOM created with warnings
 
@@ -145,7 +161,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -156,16 +172,16 @@ Results from parameter file ...
 
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.05000                                  DARK 
-  CIRCLE     0.10000                                  DARK 
-  CIRCLE     0.20000                                  DARK 
-  CIRCLE     0.30000                                  DARK 
+  CIRCLE     0.00197                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.01181                                  DARK 
 
-     SILKSCREEN_TOP created.
+     SILKSCREEN_TOP created with warnings
 
 
 ================================================================
@@ -175,7 +191,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -186,13 +202,13 @@ Results from parameter file ...
 
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.20000                                  DARK 
+  CIRCLE     0.00787                                  DARK 
 
-     SILKSCREEN_BOTTOM created.
+     SILKSCREEN_BOTTOM created with warnings
 
 
 ================================================================
@@ -202,7 +218,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -213,44 +229,44 @@ Results from parameter file ...
 
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     1.00000                                  DARK 
-  CIRCLE     1.10000                                  DARK 
-  CIRCLE     1.30000                                  DARK 
-  CIRCLE     1.90000                                  DARK 
-  CIRCLE     2.00000                                  DARK 
-  CIRCLE     3.20000                                  DARK 
-  CIRCLE     5.10000                                  DARK 
-  RECTANGLE  0.40000     x 0.90000      90.000 NO     DARK 
-  RECTANGLE  0.60000     x 0.70000       0.000 NO     DARK 
-  RECTANGLE  0.60000     x 0.70000      90.000 NO     DARK 
-  RECTANGLE  0.60000     x 0.90000       0.000 NO     DARK 
-  RECTANGLE  0.60000     x 0.90000      90.000 NO     DARK 
-  RECTANGLE  0.60000     x 1.10000      90.000 NO     DARK 
-  RECTANGLE  0.61000     x 1.37000      90.000 NO     DARK 
-  RECTANGLE  0.70000     x 1.30000      90.000 NO     DARK 
-  RECTANGLE  0.75000     x 1.45000      90.000 NO     DARK 
-  RECTANGLE  1.00000     x 3.70000      90.000 NO     DARK 
-  RECTANGLE  1.10000     x 1.30000       0.000 NO     DARK 
-  RECTANGLE  1.10000     x 1.30000      90.000 NO     DARK 
-  RECTANGLE  1.10000     x 3.10000      45.000 NO     DARK 
-  RECTANGLE  1.24000     x 1.30000       0.000 NO     DARK 
-  RECTANGLE  1.24000     x 1.30000      90.000 NO     DARK 
-  RECTANGLE  1.35000     x 4.10000       0.000 NO     DARK 
-  RECTANGLE  1.40000     x 3.60000      90.000 NO     DARK 
-  RECTANGLE  1.77000     x 1.67500       0.000 NO     DARK 
-  RECTANGLE  1.77000     x 1.67500      90.000 NO     DARK 
-  RECTANGLE  2.26000     x 2.36000      90.000 NO     DARK 
-  RECTANGLE  3.10000     x 5.10000       0.000 NO     DARK 
-  RECTANGLE  3.10000     x 6.10000       0.000 NO     DARK 
-  RECTANGLE  3.80000     x 1.60000      90.000 NO     DARK 
-  RECTANGLE  6.10000     x 8.10000       0.000 NO     DARK 
-  RECTANGLE  10.00000    x 11.70000     90.000 NO     DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04331                                  DARK 
+  CIRCLE     0.05118                                  DARK 
+  CIRCLE     0.07480                                  DARK 
+  CIRCLE     0.12598                                  DARK 
+  CIRCLE     0.20079                                  DARK 
+  RECTANGLE  0.01575     x 0.03543       0.000 NO     DARK 
+  RECTANGLE  0.01575     x 0.03543      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.02756       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.02756      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.03543       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.03543      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.04331      90.000 NO     DARK 
+  RECTANGLE  0.02402     x 0.05394      90.000 NO     DARK 
+  RECTANGLE  0.02756     x 0.05118      90.000 NO     DARK 
+  RECTANGLE  0.02953     x 0.05709      90.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.14567      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.05118       0.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.05118      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.12205      45.000 NO     DARK 
+  RECTANGLE  0.04882     x 0.05118       0.000 NO     DARK 
+  RECTANGLE  0.04882     x 0.05118      90.000 NO     DARK 
+  RECTANGLE  0.05315     x 0.16142       0.000 NO     DARK 
+  RECTANGLE  0.05512     x 0.14173      90.000 NO     DARK 
+  RECTANGLE  0.06969     x 0.06594       0.000 NO     DARK 
+  RECTANGLE  0.06969     x 0.06594      90.000 NO     DARK 
+  RECTANGLE  0.08898     x 0.09291      90.000 NO     DARK 
+  RECTANGLE  0.12205     x 0.20079       0.000 NO     DARK 
+  RECTANGLE  0.12205     x 0.24016       0.000 NO     DARK 
+  RECTANGLE  0.14961     x 0.06299      90.000 NO     DARK 
+  RECTANGLE  0.24016     x 0.31890       0.000 NO     DARK 
+  RECTANGLE  0.39370     x 0.46063      90.000 NO     DARK 
 
-     SOLDERMASK_TOP created.
+     SOLDERMASK_TOP created with warnings
 
 
 ================================================================
@@ -260,7 +276,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -271,17 +287,17 @@ Results from parameter file ...
 
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     1.00000                                  DARK 
-  CIRCLE     1.10000                                  DARK 
-  CIRCLE     1.30000                                  DARK 
-  CIRCLE     1.90000                                  DARK 
-  RECTANGLE  1.10000     x 1.30000      90.000 NO     DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04331                                  DARK 
+  CIRCLE     0.05118                                  DARK 
+  CIRCLE     0.07480                                  DARK 
+  RECTANGLE  0.04331     x 0.05118      90.000 NO     DARK 
 
-     SOLDERMASK_BOTTOM created.
+     SOLDERMASK_BOTTOM created with warnings
 
 
 ================================================================
@@ -291,7 +307,7 @@ Results from parameter file ...
 
   FILM PARAMETERS :
   ---------------------------------------------------------
-  Undefined line width                0.2000
+  Undefined line width                0.2000 MM
   Mirror code                         NONE
   Rotate angle                        NONE
   Offset x:                           0.0000
@@ -300,25 +316,25 @@ Results from parameter file ...
   Suppress unconnected internal pads  NO
   Draw holes only                     NO
 
-    WARNING: 0 width line found at (-2.5000 -60.0000)
-           ... using undefined line width of 0.2000
+    WARNING: 0 width line found at (-2.5000 -60.0000) in MM
+           ... using undefined line width of 0.2000 MM
 
-    WARNING: text composed 0 width line found at (-11.6059 -30.7175)
-           ... using undefined line width of 0.2000
+    WARNING: text composed 0 width line found at (-11.6059 -30.7175) in MM
+           ... using undefined line width of 0.2000 MM
 
     WARNING: Multiple 0 width lines; all will be treated the same as the first.
-           ... using undefined line width of 0.2000
+           ... using undefined line width of 0.2000 MM
 
     WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
-           ... using undefined line width of 0.2000
+           ... using undefined line width of 0.2000 MM
 
 
 
-  APERTURES USED:
+  APERTURES USED (UNIT = IN):
   ---------------------------------------------------------
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
-  CIRCLE     0.20000                                  DARK 
+  CIRCLE     0.00787                                  DARK 
 
      DRILL_CHART created with warnings
 
@@ -327,10 +343,10 @@ Results from parameter file ...
  SUMMARY:
         TOP created with warnings
         BOTTOM created with warnings
-        SILKSCREEN_TOP created.
-        SILKSCREEN_BOTTOM created.
-        SOLDERMASK_TOP created.
-        SOLDERMASK_BOTTOM created.
+        SILKSCREEN_TOP created with warnings
+        SILKSCREEN_BOTTOM created with warnings
+        SOLDERMASK_TOP created with warnings
+        SOLDERMASK_BOTTOM created with warnings
         DRILL_CHART created with warnings
 
  ARTWORK had warnings

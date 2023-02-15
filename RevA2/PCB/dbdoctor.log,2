@@ -2,12 +2,14 @@
 (                                                                     )
 (    DBDOCTOR                                                         )
 (                                                                     )
-(    Drawing          : SAPD2-1.brd                                   )
+(    Drawing          : SAPD2.brd                                     )
 (    Software Version : 17.4S017                                      )
-(    Date/Time        : Thu Nov 24 21:47:31 2022                      )
+(    Date/Time        : Fri Nov 25 13:25:56 2022                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
 
-0 warnings, 0 errors detected, 0 errors could be fixed.
+WARNING:   WARNING(SPMHDB-42): Run batch DRC to regenerate DRC errs.
+
+1 warnings, 0 errors detected, 0 errors could be fixed.

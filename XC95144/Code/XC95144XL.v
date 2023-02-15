@@ -22,52 +22,79 @@ module XC95144XL(
     input clk,
     input rst_n,
     output [3:0] led,
-	output quench_en_n,
-	output quench_pwm,
-	output rst_en,
-	output rst_pwm
+	 output geiger_mode_en,
+	output quench,
+	output reset
     );
 
 reg [3:0] rled;
-
+reg rquench;
+reg rreset;
 
 //50MHz/1MHz/2=25
 //50MHz/2MHz/2=12.5
 //50MHz/10MHz/2=2.5 (2=>12.5MHz)
+//50MHz/1KHz=50,000
 //50MHz/10KHz/2=2500
 //50MHz/100KHz/2=250
-reg [7:0] cnt_1MHz;
+reg [15:0] cnt_1KHz;
 always @ (posedge clk or negedge rst_n)
 if(!rst_n)
-	cnt_1MHz<=8'd0;
-else if(cnt_1MHz>=8'd12-1)
-	cnt_1MHz<=8'd0;
+	cnt_1KHz<=16'd0;
+else if(cnt_1KHz>=16'd50_000-1)
+	cnt_1KHz<=16'd0;
 else
-	cnt_1MHz<=cnt_1MHz+1'b1;
+	cnt_1KHz<=cnt_1KHz+1'b1;
 
-//quench.
-reg rquench_pwm;
-
+//use counter to drive design.
+reg [2:0] counter;
 always @ (posedge clk or negedge rst_n)
 if(!rst_n)	begin
-					rled<=4'b1111; //all off.
-					rquench_pwm<=1'b0;
+					counter<=3'd0;
 				end
-else if(cnt_1MHz>=8'd12-1)	begin
-												rled<=rled+1'b1;
-												rquench_pwm<=~rquench_pwm;
-									end
+else if(cnt_1KHz>=16'd50_000-1)	begin
+												counter<=counter+1'b1;
+											end
+always @ (posedge clk or negedge rst_n)
+if(!rst_n)	begin
+					rreset<=1'b0;
+					rquench<=1'b0;
+				end
+else 	begin
+			case(counter)
+				3'd0:				begin	rquench<=1'b0; rreset<=1'b0; end
+				3'd1,3'd2: 		begin	rquench<=1'b1; rreset<=1'b0; end
+				3'd3,3'd4: 			begin	rquench<=1'b0; rreset<=1'b0; end
+				3'd5,3'd6: 		begin	rquench<=1'b0; rreset<=1'b1; end
+				default: 		begin	rquench<=1'b0; rreset<=1'b0; end
+			endcase
+		end
+//2Hz to drive LED.
+//1KHz/500=2Hz.
+reg [8:0] cnt_2Hz;
+always @ (posedge clk or negedge rst_n)
+if(!rst_n)	begin
+					cnt_2Hz<=9'd0; 
+				end
+else if(cnt_1KHz>=16'd50_000-1)	begin
+												if(cnt_2Hz>=9'd500)	begin
+																				cnt_2Hz<=9'd0;
+																			end
+												else	begin
+															cnt_2Hz<=cnt_2Hz+1'b1;
+														end
+											end
+//led4: sysclk.
+//led3: geiger_mode_en, always be 1.
+//led2: quench.
+//led1: reset.
+assign led[3]=(cnt_2Hz>9'd200)?1'b1:1'b0;
 //led.
-assign led=rled;
-
-assign quench_en_n=1'b0;
-assign quench_pwm=rquench_pwm;
-//assign quench_pwm=1'b0;
-
-//because the rst_pwm pin was shorted to GND due to soldering error.
-//so rst_pwm can't output 1.
-//output 1 will increase 100mA current, CPLD's temperature will raise.
-assign rst_en=1'b0;
-//assign rst_pwm=1'b0;
-assign rst_pwm=rquench_pwm;
+assign led[2:0]={1'b1,rled[1],rled[0]};
+//always Enable Geiger Mode.
+//assign geiger_mode_en=1'b1;
+assign reset=rreset;
+//assign reset=1'b0;
+assign quench=rquench;
+//assign quench=1'b0;
 endmodule

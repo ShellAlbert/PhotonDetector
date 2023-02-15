@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : SAPD2.brd                                     )
 (    Software Version : 17.4S017                                      )
-(    Date/Time        : Thu Nov 24 21:52:09 2022                      )
+(    Date/Time        : Fri Nov 25 13:27:40 2022                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -25,38 +25,59 @@
  SUPPRESS-LEAD-ZEROES	YES
  SUPPRESS-TRAIL-ZEROES	NO
  SUPPRESS-EQUAL		YES
- TOOL-SELECT		NO
+ TOOL-SELECT		YES
  HEADER			none
  LEADER			12
  CODE			ASCII
  SEPARATE		NO
  SEPARATE-ROUTING	NO
- OPTIMIZE_DRILLING	NO
+ OPTIMIZE_DRILLING	YES
  ENHANCED_EXCELLON	YES
  SCALE			1.000000
 
+ WARNING(SPMHMF-368): Cannot find NC Drill tool file 'nc_tools.txt'
+ WARNING(SPMHMF-369): ... will auto-generate tool file 'nc_tools_auto.txt'.
 
 
- Drill files being output to directory 'D:/Work/GitHub/PhotonDetector/RevA2/PCB' ...
+     Auto-generating tool file 'nc_tools_auto.txt' ...
+
+           Size  Plating  Tool        + Tolerance  - Tolerance
+
+         0.3000  P        T01            0.000000     0.000000
+         0.4500  P        T02            0.000000     0.000000
+         0.6000  P        T03            0.000000     0.000000
+         0.7000  P        T04            0.000000     0.000000
+         0.8000  P        T05            0.000000     0.000000
+         1.0000  P        T06            0.000000     0.000000
+         1.2000  P        T07            0.000000     0.000000
+         1.4000  P        T08            0.000000     0.000000
+         1.5000  P        T09            0.000000     0.000000
+         3.0000  P        T10            0.000000     0.000000
+         3.0000  N        T11            0.000000     0.000000
+
+
+Drill files being output to directory 'D:/Work/GitHub/PhotonDetector/RevA2/PCB' ...
 
 
 
      'SAPD2-1-2.drl' created for holes connecting TOP and BOTTOM
      -----------------------------------------------------------
 
-           Num     Size      +/- Tolerance     Plating   Quantity
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
 
-            1.   0.3000    0.0000/  0.0000      PLATED         91
-            2.   0.4500    0.0000/  0.0000      PLATED          2
-            3.   0.6000    0.0000/  0.0000      PLATED          2
-            4.   0.7000    0.0000/  0.0000      PLATED          8
-            5.   0.8000    0.0000/  0.0000      PLATED          2
-            6.   1.2000    0.0000/  0.0000      PLATED          4
-            7.   1.5000    0.0000/  0.0000      PLATED         26
-            8.   3.0000    0.0000/  0.0000      PLATED          2
-            9.   3.0000    0.0000/  0.0000  NON_PLATED          1
+     T01    1.   0.3000    0.0000/  0.0000      PLATED         91
+     T02    2.   0.4500    0.0000/  0.0000      PLATED          2
+     T03    3.   0.6000    0.0000/  0.0000      PLATED          2
+     T04    4.   0.7000    0.0000/  0.0000      PLATED          8
+     T05    5.   0.8000    0.0000/  0.0000      PLATED          2
+     T06    6.   1.0000    0.0000/  0.0000      PLATED          3
+     T07    7.   1.2000    0.0000/  0.0000      PLATED          4
+     T08    8.   1.4000    0.0000/  0.0000      PLATED          3
+     T09    9.   1.5000    0.0000/  0.0000      PLATED         20
+     T10   10.   3.0000    0.0000/  0.0000      PLATED          2
+     T11   11.   3.0000    0.0000/  0.0000  NON_PLATED          1
 
      ---- Total holes:                                        138
 
-     ---- Total head travel:              7.10 feet (2.17 meters)
+     ---- Total head travel:              4.87 feet (1.49 meters)
 

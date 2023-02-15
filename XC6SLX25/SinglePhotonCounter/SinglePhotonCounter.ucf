@@ -1,0 +1,34 @@
+
+
+NET "led" LOC = H4;
+
+
+NET "led" IOSTANDARD = LVCMOS33;
+NET "dc" IOSTANDARD = LVCMOS33;
+NET "cs_n" IOSTANDARD = LVCMOS33;
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "oled_rst" IOSTANDARD = LVCMOS33;
+NET "sclk" IOSTANDARD = LVCMOS33;
+NET "sdin" IOSTANDARD = LVCMOS33;
+
+
+NET "clk" LOC = H3;
+NET "cs_n" LOC = P5;
+NET "dc" LOC = T5;
+NET "oled_rst" LOC = T6;
+NET "signal_pulse" LOC = R1;
+NET "sclk" LOC = T8;
+NET "sdin" LOC = T7;
+
+
+NET "test_pulse" LOC = E1;
+
+
+NET "test_pulse" IOSTANDARD = LVCMOS33;
+
+
+
+
+# PlanAhead Generated IO constraints 
+
+NET "signal_pulse" IOSTANDARD = LVCMOS33;

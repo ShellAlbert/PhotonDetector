@@ -1,0 +1,2342 @@
+MDF Database:  version 1.0
+MDF_INFO | XC95144XL | XC95144XL-5-TQ100
+MACROCELL | 3 | 6 | counter<0>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 6 | 5 | 16 | 5 | 6 | 5 | 14 | 5 | 11 | 5 | 5 | 5 | 15
+INPUTS | 10 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<0>.EXP
+INPUTMC | 10 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 7
+IMPORTS | 1 | 3 | 7
+EQ | 16 | 
+   counter<0>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB4_8
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>;
+   counter<0>.CLK = clk;	// GCK
+   !counter<0>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 1 | 2 | cnt_2Hz<0>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 20 | 1 | 1 | 1 | 8 | 2 | 1 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 0 | 12 | 1 | 14 | 2 | 11 | 0 | 1 | 0 | 7 | 1 | 4 | 1 | 7 | 1 | 10 | 1 | 17 | 2 | 0 | 2 | 3 | 2 | 4 | 2 | 14
+INPUTS | 13 | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<14>  | cnt_1KHz<15>  | EXP24_.EXP
+INPUTMC | 13 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 3 | 3 | 15 | 0 | 16 | 1 | 4 | 1 | 3
+EXPORTS | 1 | 1 | 1
+IMPORTS | 1 | 1 | 3
+EQ | 30 | 
+   !cnt_2Hz<0>.T = !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB2_4
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB2_5
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+	# !cnt_2Hz<0> & cnt_2Hz<3> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>;
+   cnt_2Hz<0>.CLK = clk;	// GCK
+   !cnt_2Hz<0>.AR = rst_n;	// GSR
+    cnt_2Hz<0>.EXP  =  !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 1 | 9 | cnt_2Hz<2>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 30 | 0 | 15 | 1 | 7 | 2 | 1 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 0 | 1 | 14 | 2 | 11 | 0 | 0 | 0 | 1 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 4 | 1 | 11 | 1 | 17 | 2 | 0 | 2 | 3 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17
+INPUTS | 14 | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<6>  | EXP27_.EXP  | EXP28_.EXP
+INPUTMC | 14 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 3 | 3 | 15 | 5 | 17 | 5 | 2 | 1 | 8 | 1 | 10
+IMPORTS | 2 | 1 | 8 | 1 | 10
+EQ | 40 | 
+   !cnt_2Hz<2>.T = !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB2_9
+	# !cnt_2Hz<0> & !cnt_2Hz<4>
+	# !cnt_2Hz<0> & !cnt_2Hz<5>
+	# !cnt_2Hz<4> & !cnt_2Hz<1>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+;Imported pterms FB2_8
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & !cnt_2Hz<2>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<7> & !cnt_2Hz<1>
+;Imported pterms FB2_11
+	# !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<5> & !cnt_2Hz<1>
+	# !cnt_2Hz<6> & !cnt_2Hz<1>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>
+;Imported pterms FB2_12
+	# !cnt_2Hz<2> & !cnt_2Hz<1>
+	# !cnt_2Hz<2> & cnt_2Hz<3> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>;
+   cnt_2Hz<2>.CLK = clk;	// GCK
+   !cnt_2Hz<2>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 2 | 2 | cnt_2Hz<3>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 28 | 0 | 15 | 1 | 4 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 0 | 1 | 14 | 2 | 11 | 0 | 0 | 0 | 1 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 11 | 1 | 16 | 1 | 17 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17
+INPUTS | 19 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | EXP35_.EXP  | EXP36_.EXP
+INPUTMC | 19 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 3 | 3 | 15 | 5 | 17 | 2 | 1 | 2 | 3
+IMPORTS | 2 | 2 | 1 | 2 | 3
+EQ | 43 | 
+   !cnt_2Hz<3>.T = !cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB3_2
+	# !cnt_2Hz<0> & !cnt_2Hz<4>
+	# !cnt_2Hz<2> & !cnt_2Hz<4>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+;Imported pterms FB3_1
+	# !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<2> & !cnt_2Hz<7>
+	# !cnt_2Hz<2> & !cnt_2Hz<8>
+	# !cnt_2Hz<6> & !cnt_2Hz<1>
+;Imported pterms FB3_4
+	# !cnt_2Hz<0> & !cnt_2Hz<5>
+	# !cnt_2Hz<2> & !cnt_2Hz<5>
+	# !cnt_2Hz<2> & !cnt_2Hz<6>
+	# !cnt_2Hz<4> & !cnt_2Hz<1>
+	# !cnt_2Hz<5> & !cnt_2Hz<1>
+;Imported pterms FB3_5
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<7> & !cnt_2Hz<1>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>;
+   cnt_2Hz<3>.CLK = clk;	// GCK
+   !cnt_2Hz<3>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 2 | 15 | cnt_2Hz<4>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 29 | 0 | 15 | 1 | 8 | 2 | 2 | 2 | 14 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 0 | 1 | 15 | 2 | 11 | 0 | 0 | 0 | 1 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 4 | 1 | 11 | 1 | 17 | 2 | 1 | 2 | 3 | 2 | 13 | 2 | 16 | 2 | 17
+INPUTS | 19 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<1>  | cnt_1KHz<0>  | cnt_1KHz<14>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<10>  | EXP39_.EXP  | EXP40_.EXP
+INPUTMC | 19 | 1 | 2 | 1 | 9 | 2 | 2 | 1 | 0 | 3 | 7 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 8 | 2 | 14 | 2 | 16
+IMPORTS | 2 | 2 | 14 | 2 | 16
+EQ | 81 | 
+   cnt_2Hz<4>.T = cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB3_15
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB3_14
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+;Imported pterms FB3_17
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB3_18
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_2Hz<4>.CLK = clk;	// GCK
+   !cnt_2Hz<4>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 0 | 2 | cnt_2Hz<5>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 28 | 0 | 15 | 1 | 8 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 8 | 0 | 13 | 1 | 0 | 1 | 15 | 2 | 11 | 0 | 0 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 4 | 1 | 10 | 1 | 11 | 1 | 17 | 2 | 3 | 2 | 13 | 2 | 16 | 2 | 17
+INPUTS | 20 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<1>  | cnt_1KHz<0>  | cnt_1KHz<14>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<10>  | EXP11_.EXP  | EXP12_.EXP
+INPUTMC | 20 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 1 | 0 | 3 | 7 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 8 | 0 | 1 | 0 | 3
+IMPORTS | 2 | 0 | 1 | 0 | 3
+EQ | 85 | 
+   cnt_2Hz<5>.T = cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<10> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<14> & cnt_1KHz<4> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<0> & cnt_1KHz<14> & 
+	cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB1_2
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<11> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<12> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<13> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_1
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+;Imported pterms FB1_4
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_5
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_2Hz<5>.CLK = clk;	// GCK
+   !cnt_2Hz<5>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 0 | 8 | cnt_2Hz<6>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 27 | 1 | 1 | 1 | 4 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 7 | 0 | 13 | 1 | 0 | 1 | 15 | 2 | 11 | 0 | 0 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 0 | 15 | 1 | 10 | 1 | 11 | 2 | 0 | 2 | 3 | 2 | 13 | 2 | 16 | 2 | 17
+INPUTS | 21 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<1>  | cnt_1KHz<0>  | cnt_1KHz<14>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<10>  | EXP15_.EXP  | EXP16_.EXP
+INPUTMC | 21 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 1 | 0 | 3 | 7 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 8 | 0 | 7 | 0 | 9
+IMPORTS | 2 | 0 | 7 | 0 | 9
+EQ | 87 | 
+   cnt_2Hz<6>.T = cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB1_8
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_7
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+;Imported pterms FB1_10
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_11
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_2Hz<6>.CLK = clk;	// GCK
+   !cnt_2Hz<6>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 0 | 13 | cnt_2Hz<7>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 26 | 1 | 1 | 1 | 7 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 7 | 0 | 12 | 1 | 0 | 1 | 14 | 2 | 11 | 0 | 0 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 14 | 0 | 15 | 1 | 4 | 1 | 11 | 2 | 0 | 2 | 4 | 2 | 13 | 2 | 16 | 2 | 17
+INPUTS | 22 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<1>  | cnt_1KHz<0>  | cnt_1KHz<14>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<10>  | EXP19_.EXP  | EXP20_.EXP
+INPUTMC | 22 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 1 | 0 | 3 | 7 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 8 | 0 | 12 | 0 | 14
+IMPORTS | 2 | 0 | 12 | 0 | 14
+EQ | 89 | 
+   cnt_2Hz<7>.T = cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+;Imported pterms FB1_13
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_12
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+;Imported pterms FB1_15
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_16
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_2Hz<7>.CLK = clk;	// GCK
+   !cnt_2Hz<7>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 16 | counter<1>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 5 | 5 | 6 | 5 | 14 | 5 | 11 | 5 | 5 | 5 | 17
+INPUTS | 8 | counter<0>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | EXP54_.EXP
+INPUTMC | 8 | 3 | 6 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 15
+EXPORTS | 1 | 5 | 17
+IMPORTS | 1 | 5 | 15
+EQ | 21 | 
+   counter<1>.T = counter<0> & cnt_1KHz<10> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<11> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<12> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<13> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+;Imported pterms FB6_16
+	# counter<0> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<14> & cnt_1KHz<4> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<0> & cnt_1KHz<14> & 
+	cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   counter<1>.CLK = clk;	// GCK
+   !counter<1>.AR = rst_n;	// GSR
+    counter<1>.EXP  =  cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 1 | 0 | cnt_2Hz<1>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 18 | 1 | 8 | 2 | 0 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 0 | 1 | 14 | 2 | 11 | 0 | 1 | 0 | 7 | 0 | 12 | 1 | 7 | 1 | 10 | 1 | 11 | 2 | 3 | 2 | 4 | 2 | 14
+INPUTS | 20 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<1>  | cnt_2Hz<8>  | cnt_2Hz<3>  | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<1>  | cnt_1KHz<2>  | EXP23_.EXP  | EXP33_.EXP
+INPUTMC | 20 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 0 | 1 | 15 | 2 | 2 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 3 | 3 | 15 | 1 | 1 | 1 | 17
+IMPORTS | 2 | 1 | 1 | 1 | 17
+EQ | 35 | 
+   !cnt_2Hz<1>.T = cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & !cnt_2Hz<1> & cnt_2Hz<8>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & !cnt_2Hz<1> & cnt_2Hz<8>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB2_2
+	# !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+;Imported pterms FB2_3
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+;Imported pterms FB2_18
+	# !cnt_2Hz<0> & !cnt_2Hz<4>
+	# !cnt_2Hz<0> & !cnt_2Hz<5>
+	# !cnt_2Hz<0> & !cnt_2Hz<2> & !cnt_2Hz<3>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>;
+   cnt_2Hz<1>.CLK = clk;	// GCK
+   !cnt_2Hz<1>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 1 | 15 | cnt_2Hz<8>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 27 | 1 | 1 | 1 | 4 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 7 | 0 | 12 | 1 | 0 | 1 | 14 | 2 | 11 | 0 | 0 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 14 | 0 | 15 | 1 | 10 | 1 | 11 | 1 | 16 | 2 | 0 | 2 | 4 | 2 | 13 | 2 | 16 | 2 | 17
+INPUTS | 7 | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | EXP31_.EXP  | EXP32_.EXP
+INPUTMC | 7 | 0 | 16 | 1 | 4 | 2 | 15 | 0 | 2 | 0 | 8 | 1 | 14 | 1 | 16
+IMPORTS | 2 | 1 | 14 | 1 | 16
+EQ | 34 | 
+   !cnt_2Hz<8>.T = !cnt_2Hz<4>
+	# !cnt_2Hz<5>
+	# !cnt_2Hz<6>
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+;Imported pterms FB2_15
+	# !cnt_2Hz<7>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<2> & !cnt_2Hz<3>
+	# !cnt_2Hz<2> & !cnt_2Hz<8>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>
+;Imported pterms FB2_14
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB2_17
+	# !cnt_2Hz<3> & !cnt_2Hz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>;
+   cnt_2Hz<8>.CLK = clk;	// GCK
+   !cnt_2Hz<8>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 6 | counter<2>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 3 | 5 | 14 | 5 | 11 | 5 | 7
+INPUTS | 13 | counter<0>  | counter<1>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<13>.EXP
+INPUTMC | 13 | 3 | 6 | 5 | 16 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 5 | 5
+EXPORTS | 1 | 5 | 7
+IMPORTS | 1 | 5 | 5
+EQ | 24 | 
+   counter<2>.T = counter<0> & counter<1> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB6_6
+	# counter<0> & counter<1> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   counter<2>.CLK = clk;	// GCK
+   !counter<2>.AR = rst_n;	// GSR
+    counter<2>.EXP  =  cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 7 | cnt_1KHz<0>
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 39 | 3 | 5 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 1 | 0 | 1 | 5 | 5 | 5 | 3 | 7 | 1 | 16 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 1 | 2 | 17 | 5 | 9 | 5 | 3 | 0 | 17 | 0 | 4 | 0 | 10 | 0 | 15 | 3 | 8 | 3 | 13 | 5 | 0 | 5 | 8 | 5 | 11 | 5 | 12 | 5 | 14 | 3 | 6
+INPUTS | 12 | cnt_1KHz<0>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<5>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<10>.EXP
+INPUTMC | 12 | 3 | 7 | 0 | 16 | 1 | 4 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 5 | 13 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 8
+EXPORTS | 1 | 3 | 6
+IMPORTS | 1 | 3 | 8
+EQ | 21 | 
+   cnt_1KHz<0>.D = !cnt_1KHz<0> & !cnt_1KHz<14>
+	# !cnt_1KHz<0> & !cnt_1KHz<15>
+;Imported pterms FB4_9
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>;
+   cnt_1KHz<0>.CLK = clk;	// GCK
+   !cnt_1KHz<0>.AR = rst_n;	// GSR
+    cnt_1KHz<0>.EXP  =  cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 8 | cnt_1KHz<10>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 49 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 16 | 1 | 0 | 1 | 13 | 5 | 6 | 3 | 5 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 1 | 0 | 3 | 0 | 7 | 0 | 9 | 0 | 12 | 0 | 14 | 1 | 1 | 1 | 3 | 1 | 5 | 1 | 8 | 1 | 16 | 1 | 17 | 2 | 1 | 2 | 14 | 2 | 16 | 5 | 3 | 5 | 8 | 5 | 11 | 5 | 12 | 5 | 14 | 3 | 7
+INPUTS | 14 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<0>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<11>.EXP
+INPUTMC | 14 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 5 | 2 | 3 | 4 | 3 | 12 | 5 | 13 | 3 | 9
+EXPORTS | 1 | 3 | 7
+IMPORTS | 1 | 3 | 9
+EQ | 19 | 
+   cnt_1KHz<10>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB4_10
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & !cnt_1KHz<15>;
+   cnt_1KHz<10>.CLK = clk;	// GCK
+   !cnt_1KHz<10>.AR = rst_n;	// GSR
+    cnt_1KHz<10>.EXP  =  !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 9 | cnt_1KHz<11>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 44 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 7 | 0 | 12 | 5 | 16 | 1 | 0 | 1 | 13 | 5 | 6 | 3 | 5 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 11 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 3 | 0 | 9 | 0 | 14 | 1 | 1 | 1 | 3 | 1 | 5 | 1 | 8 | 1 | 16 | 1 | 17 | 2 | 1 | 2 | 16 | 3 | 8 | 5 | 3 | 5 | 8 | 5 | 11 | 5 | 12 | 5 | 14
+INPUTS | 14 | cnt_1KHz<11>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>
+INPUTMC | 14 | 3 | 9 | 0 | 16 | 1 | 4 | 3 | 7 | 3 | 8 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7
+EXPORTS | 1 | 3 | 8
+EQ | 17 | 
+   cnt_1KHz<11>.T = cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<10> & !cnt_1KHz<14> & 
+	cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	!cnt_1KHz<15>;
+   cnt_1KHz<11>.CLK = clk;	// GCK
+   !cnt_1KHz<11>.AR = rst_n;	// GSR
+    cnt_1KHz<11>.EXP  =  cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & !cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 1 | 6 | cnt_1KHz<12>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 42 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 7 | 0 | 12 | 5 | 16 | 1 | 0 | 1 | 13 | 5 | 6 | 3 | 5 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 3 | 3 | 14 | 5 | 14 | 3 | 8 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 3 | 0 | 9 | 0 | 14 | 1 | 1 | 1 | 3 | 1 | 5 | 1 | 8 | 1 | 16 | 1 | 17 | 2 | 1 | 2 | 16 | 3 | 13 | 5 | 3 | 5 | 8 | 5 | 11 | 5 | 12
+INPUTS | 16 | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<13>
+INPUTMC | 16 | 1 | 6 | 0 | 16 | 1 | 4 | 3 | 7 | 3 | 8 | 3 | 9 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 5 | 5
+EXPORTS | 1 | 1 | 5
+EQ | 19 | 
+   cnt_1KHz<12>.T = cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	!cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & !cnt_1KHz<15>;
+   cnt_1KHz<12>.CLK = clk;	// GCK
+   !cnt_1KHz<12>.AR = rst_n;	// GSR
+    cnt_1KHz<12>.EXP  =  !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	!cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 5 | cnt_1KHz<13>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 47 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 14 | 0 | 1 | 0 | 7 | 0 | 12 | 5 | 16 | 1 | 0 | 1 | 13 | 5 | 6 | 3 | 5 | 5 | 5 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 14 | 3 | 8 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 0 | 0 | 3 | 0 | 6 | 0 | 9 | 0 | 11 | 0 | 14 | 1 | 1 | 1 | 3 | 1 | 5 | 1 | 6 | 1 | 8 | 1 | 16 | 1 | 17 | 2 | 1 | 2 | 13 | 2 | 16 | 3 | 13 | 5 | 0 | 5 | 3 | 5 | 8 | 5 | 11 | 5 | 12
+INPUTS | 16 | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | counter<0>  | counter<1>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | EXP50_.EXP
+INPUTMC | 16 | 5 | 5 | 0 | 16 | 1 | 4 | 3 | 6 | 5 | 16 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 5 | 4
+EXPORTS | 1 | 5 | 6
+IMPORTS | 1 | 5 | 4
+EQ | 23 | 
+   cnt_1KHz<13>.T = cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB6_5
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & !cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & !cnt_1KHz<15>;
+   cnt_1KHz<13>.CLK = clk;	// GCK
+   !cnt_1KHz<13>.AR = rst_n;	// GSR
+    cnt_1KHz<13>.EXP  =  counter<0> & counter<1> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# counter<0> & counter<1> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 0 | 16 | cnt_1KHz<14>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 57 | 3 | 6 | 0 | 15 | 1 | 7 | 1 | 3 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 16 | 0 | 17 | 1 | 15 | 5 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 0 | 0 | 1 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 2 | 2 | 4 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 3 | 2 | 3 | 5 | 3 | 11 | 3 | 13 | 3 | 14 | 5 | 0 | 5 | 1 | 5 | 4 | 5 | 8 | 5 | 9 | 5 | 12 | 5 | 15
+INPUTS | 17 | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<14>  | cnt_1KHz<15>  | EXP22_.EXP
+INPUTMC | 17 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 0 | 16 | 1 | 4 | 0 | 17
+IMPORTS | 1 | 0 | 17
+EQ | 20 | 
+   cnt_1KHz<14>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9>
+;Imported pterms FB1_18
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_1KHz<14>.CLK = clk;	// GCK
+   !cnt_1KHz<14>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 3 | cnt_1KHz<1>
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 37 | 3 | 5 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 1 | 0 | 1 | 13 | 5 | 5 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 1 | 2 | 17 | 5 | 9 | 5 | 3 | 0 | 17 | 0 | 4 | 0 | 10 | 0 | 15 | 1 | 5 | 3 | 13 | 5 | 0 | 5 | 8 | 5 | 11 | 5 | 12 | 5 | 14
+INPUTS | 8 | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | EXP42_.EXP
+INPUTMC | 8 | 3 | 7 | 3 | 3 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 1 | 6 | 3 | 2
+IMPORTS | 1 | 3 | 2
+EQ | 15 | 
+   !cnt_1KHz<1>.D = cnt_1KHz<0> & cnt_1KHz<1>
+	# !cnt_1KHz<0> & !cnt_1KHz<1>
+	# cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB4_3
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_1KHz<1>.CLK = clk;	// GCK
+   !cnt_1KHz<1>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 15 | cnt_1KHz<2>
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 36 | 3 | 5 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 1 | 0 | 1 | 13 | 5 | 5 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 1 | 2 | 17 | 5 | 9 | 5 | 3 | 0 | 17 | 0 | 4 | 0 | 10 | 0 | 15 | 1 | 5 | 3 | 13 | 5 | 0 | 5 | 8 | 5 | 11 | 5 | 12 | 5 | 14
+INPUTS | 8 | cnt_1KHz<0>  | cnt_1KHz<2>  | cnt_1KHz<1>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | EXP46_.EXP
+INPUTMC | 8 | 3 | 7 | 3 | 15 | 3 | 3 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 3 | 14
+IMPORTS | 1 | 3 | 14
+EQ | 16 | 
+   !cnt_1KHz<2>.D = !cnt_1KHz<0> & !cnt_1KHz<2>
+	# !cnt_1KHz<1> & !cnt_1KHz<2>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2>
+	# cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB4_15
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_1KHz<2>.CLK = clk;	// GCK
+   !cnt_1KHz<2>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 17 | cnt_1KHz<3>
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 34 | 3 | 5 | 0 | 15 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 0 | 17 | 1 | 13 | 5 | 5 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 1 | 2 | 17 | 5 | 9 | 5 | 3 | 1 | 3 | 0 | 4 | 0 | 10 | 1 | 17 | 3 | 13 | 5 | 0 | 5 | 8 | 5 | 11 | 5 | 12 | 5 | 14
+INPUTS | 10 | cnt_1KHz<0>  | cnt_1KHz<3>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | EXP47_.EXP  | counter<1>.EXP
+INPUTMC | 10 | 3 | 7 | 5 | 17 | 3 | 3 | 3 | 15 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 5 | 0 | 5 | 16
+IMPORTS | 2 | 5 | 0 | 5 | 16
+EQ | 19 | 
+   !cnt_1KHz<3>.D = !cnt_1KHz<0> & !cnt_1KHz<3>
+	# !cnt_1KHz<1> & !cnt_1KHz<3>
+	# !cnt_1KHz<2> & !cnt_1KHz<3>
+	# cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB6_1
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB6_17
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>;
+   cnt_1KHz<3>.CLK = clk;	// GCK
+   !cnt_1KHz<3>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 12 | cnt_1KHz<4>
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 46 | 3 | 5 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 1 | 0 | 1 | 13 | 5 | 5 | 2 | 13 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 14 | 3 | 12 | 5 | 13 | 5 | 2 | 2 | 17 | 5 | 9 | 5 | 6 | 1 | 3 | 0 | 0 | 0 | 4 | 0 | 6 | 0 | 10 | 0 | 11 | 0 | 15 | 0 | 17 | 1 | 5 | 1 | 16 | 1 | 17 | 3 | 8 | 3 | 13 | 5 | 0 | 5 | 1 | 5 | 3 | 5 | 8 | 5 | 11 | 5 | 12
+INPUTS | 10 | cnt_1KHz<0>  | cnt_1KHz<4>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | EXP44_.EXP  | EXP45_.EXP
+INPUTMC | 10 | 3 | 7 | 3 | 12 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 11 | 3 | 13
+IMPORTS | 2 | 3 | 11 | 3 | 13
+EQ | 18 | 
+   !cnt_1KHz<4>.D = !cnt_1KHz<0> & !cnt_1KHz<4>
+	# !cnt_1KHz<1> & !cnt_1KHz<4>
+	# !cnt_1KHz<2> & !cnt_1KHz<4>
+	# !cnt_1KHz<3> & !cnt_1KHz<4>
+	# cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB4_12
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB4_14
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4>
+	# cnt_1KHz<14> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>;
+   cnt_1KHz<4>.CLK = clk;	// GCK
+   !cnt_1KHz<4>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 13 | cnt_1KHz<5>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 40 | 3 | 5 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 1 | 0 | 1 | 13 | 5 | 5 | 1 | 17 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 12 | 5 | 13 | 5 | 1 | 2 | 17 | 5 | 9 | 5 | 3 | 1 | 3 | 0 | 0 | 0 | 4 | 0 | 6 | 0 | 10 | 0 | 11 | 0 | 15 | 0 | 17 | 1 | 5 | 1 | 16 | 3 | 8 | 5 | 0 | 5 | 8 | 5 | 11
+INPUTS | 14 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<5>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | EXP53_.EXP  | rquench.EXP
+INPUTMC | 14 | 3 | 8 | 0 | 16 | 5 | 13 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 12 | 5 | 14
+IMPORTS | 2 | 5 | 12 | 5 | 14
+EQ | 29 | 
+   cnt_1KHz<5>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4>
+;Imported pterms FB6_13
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<8>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<9>
+;Imported pterms FB6_15
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<6> & !cnt_1KHz<7>;
+   cnt_1KHz<5>.CLK = clk;	// GCK
+   !cnt_1KHz<5>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 2 | cnt_1KHz<6>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 40 | 3 | 5 | 0 | 15 | 1 | 9 | 2 | 1 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 0 | 17 | 1 | 5 | 5 | 5 | 2 | 13 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 14 | 3 | 8 | 5 | 12 | 5 | 2 | 2 | 17 | 5 | 9 | 5 | 6 | 1 | 3 | 0 | 0 | 0 | 4 | 0 | 6 | 0 | 10 | 0 | 11 | 1 | 16 | 1 | 17 | 3 | 13 | 5 | 0 | 5 | 1 | 5 | 8 | 5 | 11
+INPUTS | 12 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<6>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<4>  | cnt_1KHz<8>  | cnt_1KHz<9>  | EXP48_.EXP  | EXP49_.EXP
+INPUTMC | 12 | 3 | 8 | 0 | 16 | 5 | 2 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 12 | 5 | 10 | 5 | 7 | 5 | 1 | 5 | 3
+IMPORTS | 2 | 5 | 1 | 5 | 3
+EQ | 34 | 
+   cnt_1KHz<6>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<6> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<6> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<6> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<6> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB6_2
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<6> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB6_4
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<7>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<8>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<9>;
+   cnt_1KHz<6>.CLK = clk;	// GCK
+   !cnt_1KHz<6>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 3 | 4 | cnt_1KHz<7>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 41 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 1 | 0 | 1 | 13 | 5 | 5 | 2 | 13 | 2 | 1 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 14 | 3 | 8 | 5 | 12 | 5 | 1 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 3 | 0 | 0 | 0 | 6 | 0 | 11 | 0 | 17 | 1 | 5 | 1 | 16 | 1 | 17 | 3 | 13 | 5 | 0 | 5 | 3 | 5 | 8 | 5 | 9 | 5 | 11
+INPUTS | 10 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<7>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | EXP43_.EXP
+INPUTMC | 10 | 3 | 8 | 0 | 16 | 3 | 4 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 3 | 5
+IMPORTS | 1 | 3 | 5
+EQ | 27 | 
+   cnt_1KHz<7>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB4_6
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	!cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	!cnt_1KHz<8>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	!cnt_1KHz<9>;
+   cnt_1KHz<7>.CLK = clk;	// GCK
+   !cnt_1KHz<7>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 10 | cnt_1KHz<8>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 43 | 3 | 6 | 1 | 1 | 1 | 8 | 2 | 1 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 0 | 17 | 1 | 3 | 5 | 5 | 3 | 5 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 9 | 3 | 8 | 5 | 12 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 0 | 0 | 4 | 0 | 6 | 0 | 10 | 0 | 11 | 0 | 15 | 1 | 16 | 2 | 13 | 2 | 17 | 3 | 13 | 5 | 0 | 5 | 1 | 5 | 3 | 5 | 6 | 5 | 8
+INPUTS | 11 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<8>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<7>  | cnt_1KHz<9>  | EXP52_.EXP  | rreset.EXP
+INPUTMC | 11 | 3 | 8 | 0 | 16 | 5 | 10 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 4 | 5 | 7 | 5 | 9 | 5 | 11
+IMPORTS | 2 | 5 | 9 | 5 | 11
+EQ | 31 | 
+   cnt_1KHz<8>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<8> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<8> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<8> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<8> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB6_10
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & !cnt_1KHz<15>
+;Imported pterms FB6_12
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7>;
+   cnt_1KHz<8>.CLK = clk;	// GCK
+   !cnt_1KHz<8>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 7 | cnt_1KHz<9>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 43 | 3 | 6 | 1 | 1 | 1 | 8 | 2 | 1 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 15 | 0 | 17 | 1 | 5 | 5 | 5 | 3 | 5 | 3 | 7 | 3 | 9 | 1 | 6 | 5 | 4 | 0 | 16 | 3 | 2 | 3 | 14 | 5 | 9 | 3 | 8 | 5 | 12 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 3 | 0 | 0 | 0 | 4 | 0 | 6 | 0 | 10 | 0 | 11 | 0 | 15 | 1 | 16 | 2 | 13 | 2 | 17 | 3 | 13 | 5 | 0 | 5 | 1 | 5 | 3 | 5 | 6 | 5 | 8
+INPUTS | 11 | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<7>  | cnt_1KHz<8>  | counter<2>.EXP  | EXP51_.EXP
+INPUTMC | 11 | 3 | 8 | 0 | 16 | 5 | 7 | 1 | 4 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 4 | 5 | 10 | 5 | 6 | 5 | 8
+IMPORTS | 2 | 5 | 6 | 5 | 8
+EQ | 31 | 
+   cnt_1KHz<9>.T = cnt_1KHz<10> & cnt_1KHz<14> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB6_7
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+;Imported pterms FB6_9
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & !cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8>;
+   cnt_1KHz<9>.CLK = clk;	// GCK
+   !cnt_1KHz<9>.AR = rst_n;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 1 | 4 | cnt_1KHz<15>
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 58 | 3 | 6 | 0 | 15 | 1 | 7 | 1 | 5 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 16 | 0 | 17 | 1 | 15 | 5 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 0 | 0 | 0 | 1 | 0 | 3 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 9 | 0 | 10 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 2 | 2 | 4 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 17 | 3 | 2 | 3 | 5 | 3 | 11 | 3 | 13 | 3 | 14 | 5 | 0 | 5 | 1 | 5 | 4 | 5 | 8 | 5 | 9 | 5 | 12 | 5 | 15 | 1 | 3
+INPUTS | 16 | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_2Hz<3>  | EXP25_.EXP
+INPUTMC | 16 | 0 | 16 | 1 | 4 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 1 | 2 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 2 | 2 | 1 | 5
+EXPORTS | 1 | 1 | 3
+IMPORTS | 1 | 1 | 5
+EQ | 33 | 
+   cnt_1KHz<15>.D = !cnt_1KHz<14> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8> & cnt_1KHz<15>
+;Imported pterms FB2_6
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7> & cnt_1KHz<15>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+;Imported pterms FB2_7
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	!cnt_1KHz<15>;
+   cnt_1KHz<15>.CLK = clk;	// GCK
+   !cnt_1KHz<15>.AR = rst_n;	// GSR
+    cnt_1KHz<15>.EXP  =  !cnt_1KHz<15>
+	# !cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+	# !cnt_2Hz<0> & cnt_2Hz<3> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 14 | rquench
+ATTRIBUTES | 8692482 | 0
+OUTPUTMC | 1 | 5 | 13
+INPUTS | 14 | counter<0>  | counter<1>  | counter<2>  | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<7>
+INPUTMC | 14 | 3 | 6 | 5 | 16 | 5 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 2 | 3 | 4
+EXPORTS | 1 | 5 | 13
+EQ | 7 | 
+   quench.D = counter<0> & !counter<1> & !counter<2>
+	# !counter<0> & counter<1> & !counter<2>;
+   quench.CLK = clk;	// GCK
+   !quench.AR = rst_n;	// GSR
+    rquench.EXP  =  cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<6> & !cnt_1KHz<7>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 5 | 11 | rreset
+ATTRIBUTES | 8692482 | 0
+OUTPUTMC | 1 | 5 | 10
+INPUTS | 15 | counter<0>  | counter<1>  | counter<2>  | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<7>
+INPUTMC | 15 | 3 | 6 | 5 | 16 | 5 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4
+EXPORTS | 1 | 5 | 10
+EQ | 8 | 
+   reset.D = counter<0> & !counter<1> & counter<2>
+	# !counter<0> & counter<1> & counter<2>;
+   reset.CLK = clk;	// GCK
+   !reset.AR = rst_n;	// GSR
+    rreset.EXP  =  cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7>
+GLOBALS | 2 | 2 | clk | 4 | rst_n
+
+MACROCELL | 2 | 11 | led_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 9 | cnt_2Hz<6>  | cnt_2Hz<8>  | cnt_2Hz<7>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<1>
+INPUTMC | 9 | 0 | 8 | 1 | 15 | 0 | 13 | 2 | 2 | 2 | 15 | 0 | 2 | 1 | 2 | 1 | 9 | 1 | 0
+EQ | 6 | 
+   !led<3> = !cnt_2Hz<6> & !cnt_2Hz<8>
+	# !cnt_2Hz<7> & !cnt_2Hz<8>
+	# !cnt_2Hz<3> & !cnt_2Hz<4> & !cnt_2Hz<5> & 
+	!cnt_2Hz<8>
+	# !cnt_2Hz<0> & !cnt_2Hz<2> & !cnt_2Hz<4> & 
+	!cnt_2Hz<5> & !cnt_2Hz<1> & !cnt_2Hz<8>;
+
+MACROCELL | 2 | 8 | led_0_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   led<1> = Gnd;
+
+MACROCELL | 2 | 7 | led_0_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   led<0> = Gnd;
+
+MACROCELL | 2 | 10 | led_2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   led<2> = Vcc;
+
+MACROCELL | 0 | 0 | EXP10_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 16 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<2>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>
+INPUTMC | 16 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 5 | 5 | 0 | 16 | 1 | 4 | 1 | 9 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13
+EXPORTS | 1 | 0 | 1
+EQ | 17 | 
+       EXP10_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 0 | 1 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 16 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<1>  | cnt_1KHz<11>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<10>  | EXP10_.EXP
+INPUTMC | 16 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 1 | 0 | 3 | 9 | 0 | 16 | 1 | 4 | 1 | 6 | 5 | 5 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 3 | 8 | 0 | 0
+EXPORTS | 1 | 0 | 2
+IMPORTS | 1 | 0 | 0
+EQ | 33 | 
+       EXP11_.EXP  =  cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<11> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<12> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<1> & cnt_1KHz<13> & cnt_1KHz<14> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_1
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 0 | 3 | EXP12_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 14 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<13>  | cnt_2Hz<3>  | cnt_1KHz<10>  | cnt_1KHz<11>  | EXP13_.EXP
+INPUTMC | 14 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 1 | 6 | 0 | 16 | 1 | 4 | 5 | 5 | 2 | 2 | 3 | 8 | 3 | 9 | 0 | 4
+EXPORTS | 1 | 0 | 2
+IMPORTS | 1 | 0 | 4
+EQ | 32 | 
+       EXP12_.EXP  =  cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_5
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 0 | 4 | EXP13_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 18 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<14>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<5>  | cnt_2Hz<2>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 18 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 0 | 16 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 5 | 13 | 1 | 9 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 0 | 3
+EQ | 16 | 
+       EXP13_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 0 | 6 | EXP14_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 7
+INPUTS | 16 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<2>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>
+INPUTMC | 16 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 5 | 5 | 0 | 16 | 1 | 4 | 1 | 9 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13
+EXPORTS | 1 | 0 | 7
+EQ | 17 | 
+       EXP14_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 0 | 7 | EXP15_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 8
+INPUTS | 16 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<1>  | cnt_1KHz<11>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<10>  | EXP14_.EXP
+INPUTMC | 16 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 1 | 0 | 3 | 9 | 0 | 16 | 1 | 4 | 1 | 6 | 5 | 5 | 0 | 8 | 0 | 13 | 1 | 15 | 3 | 8 | 0 | 6
+EXPORTS | 1 | 0 | 8
+IMPORTS | 1 | 0 | 6
+EQ | 33 | 
+       EXP15_.EXP  =  cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<1> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_7
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 0 | 9 | EXP16_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 8
+INPUTS | 14 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<13>  | cnt_2Hz<3>  | cnt_1KHz<10>  | cnt_1KHz<11>  | EXP17_.EXP
+INPUTMC | 14 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 1 | 6 | 0 | 16 | 1 | 4 | 5 | 5 | 2 | 2 | 3 | 8 | 3 | 9 | 0 | 10
+EXPORTS | 1 | 0 | 8
+IMPORTS | 1 | 0 | 10
+EQ | 32 | 
+       EXP16_.EXP  =  cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_11
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 0 | 10 | EXP17_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 9
+INPUTS | 18 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<14>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<5>  | cnt_2Hz<2>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 18 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 0 | 16 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 5 | 13 | 1 | 9 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 0 | 9
+EQ | 16 | 
+       EXP17_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 0 | 11 | EXP18_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 12
+INPUTS | 16 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<2>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>
+INPUTMC | 16 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 5 | 5 | 0 | 16 | 1 | 4 | 1 | 9 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13
+EXPORTS | 1 | 0 | 12
+EQ | 17 | 
+       EXP18_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 0 | 12 | EXP19_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 13
+INPUTS | 16 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<10>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<11>  | cnt_2Hz<0>  | cnt_2Hz<3>  | cnt_2Hz<1>  | cnt_1KHz<12>  | cnt_1KHz<13>  | EXP18_.EXP
+INPUTMC | 16 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 3 | 8 | 0 | 16 | 1 | 4 | 3 | 9 | 1 | 2 | 2 | 2 | 1 | 0 | 1 | 6 | 5 | 5 | 0 | 11
+EXPORTS | 1 | 0 | 13
+IMPORTS | 1 | 0 | 11
+EQ | 33 | 
+       EXP19_.EXP  =  cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<4> & cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<1> & 
+	cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_12
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 0 | 14 | EXP20_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 13
+INPUTS | 14 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<13>  | cnt_2Hz<3>  | cnt_1KHz<10>  | cnt_1KHz<11>  | EXP21_.EXP
+INPUTMC | 14 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 1 | 6 | 0 | 16 | 1 | 4 | 5 | 5 | 2 | 2 | 3 | 8 | 3 | 9 | 0 | 15
+EXPORTS | 1 | 0 | 13
+IMPORTS | 1 | 0 | 15
+EQ | 32 | 
+       EXP20_.EXP  =  cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB1_16
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 0 | 15 | EXP21_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 18 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<14>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<5>  | cnt_2Hz<2>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 18 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 0 | 16 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 5 | 13 | 1 | 9 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 0 | 14
+EQ | 16 | 
+       EXP21_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 0 | 17 | EXP22_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 12 | cnt_1KHz<14>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 12 | 0 | 16 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 12 | 5 | 2 | 5 | 13 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 0 | 16
+EQ | 9 | 
+       EXP22_.EXP  =  cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 1 | 1 | EXP23_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 11 | cnt_2Hz<0>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_2Hz<0>.EXP
+INPUTMC | 11 | 1 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 1 | 2
+EXPORTS | 1 | 1 | 0
+IMPORTS | 1 | 1 | 2
+EQ | 10 | 
+       EXP23_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+;Imported pterms FB2_3
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+
+MACROCELL | 1 | 3 | EXP24_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 2
+INPUTS | 13 | cnt_1KHz<14>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<15>.EXP
+INPUTMC | 13 | 0 | 16 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 5 | 2 | 3 | 4 | 5 | 17 | 3 | 12 | 5 | 13 | 1 | 4
+EXPORTS | 1 | 1 | 2
+IMPORTS | 1 | 1 | 4
+EQ | 16 | 
+       EXP24_.EXP  =  !cnt_1KHz<14>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+;Imported pterms FB2_5
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+	# !cnt_2Hz<0> & cnt_2Hz<3> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+
+MACROCELL | 1 | 5 | EXP25_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 14 | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<0>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<12>.EXP
+INPUTMC | 14 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 7 | 1 | 4 | 5 | 2 | 3 | 4 | 3 | 7 | 3 | 12 | 5 | 13 | 3 | 3 | 3 | 15 | 1 | 6
+EXPORTS | 1 | 1 | 4
+IMPORTS | 1 | 1 | 6
+EQ | 22 | 
+       EXP25_.EXP  =  !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7> & cnt_1KHz<15>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+;Imported pterms FB2_7
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	!cnt_1KHz<15>
+
+MACROCELL | 1 | 7 | EXP26_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 6 | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<7>  | cnt_2Hz<1>
+INPUTMC | 6 | 0 | 16 | 1 | 4 | 1 | 2 | 1 | 9 | 0 | 13 | 1 | 0
+EXPORTS | 1 | 1 | 8
+EQ | 5 | 
+       EXP26_.EXP  =  !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & !cnt_2Hz<2>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<7> & !cnt_2Hz<1>
+
+MACROCELL | 1 | 8 | EXP27_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 11 | cnt_2Hz<0>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<1>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | EXP26_.EXP
+INPUTMC | 11 | 1 | 2 | 2 | 15 | 0 | 2 | 1 | 0 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 1 | 7
+EXPORTS | 1 | 1 | 9
+IMPORTS | 1 | 1 | 7
+EQ | 13 | 
+       EXP27_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<4>
+	# !cnt_2Hz<0> & !cnt_2Hz<5>
+	# !cnt_2Hz<4> & !cnt_2Hz<1>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+;Imported pterms FB2_8
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & !cnt_2Hz<2>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<7> & !cnt_2Hz<1>
+
+MACROCELL | 1 | 10 | EXP28_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 6 | cnt_2Hz<0>  | cnt_2Hz<6>  | cnt_2Hz<8>  | cnt_2Hz<5>  | cnt_2Hz<1>  | EXP29_.EXP
+INPUTMC | 6 | 1 | 2 | 0 | 8 | 1 | 15 | 0 | 2 | 1 | 0 | 1 | 11
+EXPORTS | 1 | 1 | 9
+IMPORTS | 1 | 1 | 11
+EQ | 9 | 
+       EXP28_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<5> & !cnt_2Hz<1>
+	# !cnt_2Hz<6> & !cnt_2Hz<1>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>
+;Imported pterms FB2_12
+	# !cnt_2Hz<2> & !cnt_2Hz<1>
+	# !cnt_2Hz<2> & cnt_2Hz<3> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+
+MACROCELL | 1 | 11 | EXP29_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 10
+INPUTS | 8 | cnt_2Hz<2>  | cnt_2Hz<1>  | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>
+INPUTMC | 8 | 1 | 9 | 1 | 0 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15
+EXPORTS | 1 | 1 | 10
+EQ | 3 | 
+       EXP29_.EXP  =  !cnt_2Hz<2> & !cnt_2Hz<1>
+	# !cnt_2Hz<2> & cnt_2Hz<3> & cnt_2Hz<4> & 
+	cnt_2Hz<5> & cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8>
+
+MACROCELL | 1 | 13 | EXP30_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 10 | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<1>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 10 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 3 | 3 | 12 | 5 | 13 | 3 | 4 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 1 | 14
+EQ | 9 | 
+       EXP30_.EXP  =  !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+
+MACROCELL | 1 | 14 | EXP31_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 15
+INPUTS | 7 | cnt_2Hz<7>  | cnt_2Hz<0>  | cnt_2Hz<8>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<1>  | EXP30_.EXP
+INPUTMC | 7 | 0 | 13 | 1 | 2 | 1 | 15 | 1 | 9 | 2 | 2 | 1 | 0 | 1 | 13
+EXPORTS | 1 | 1 | 15
+IMPORTS | 1 | 1 | 13
+EQ | 15 | 
+       EXP31_.EXP  =  !cnt_2Hz<7>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<2> & !cnt_2Hz<3>
+	# !cnt_2Hz<2> & !cnt_2Hz<8>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>
+;Imported pterms FB2_14
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<1> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<2> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+
+MACROCELL | 1 | 16 | EXP32_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 15
+INPUTS | 13 | cnt_2Hz<3>  | cnt_2Hz<8>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<0>  | cnt_1KHz<4>  | cnt_1KHz<5>
+INPUTMC | 13 | 2 | 2 | 1 | 15 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 5 | 2 | 3 | 4 | 3 | 7 | 3 | 12 | 5 | 13
+EXPORTS | 1 | 1 | 15
+EQ | 10 | 
+       EXP32_.EXP  =  !cnt_2Hz<3> & !cnt_2Hz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+
+MACROCELL | 1 | 17 | EXP33_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 14 | cnt_2Hz<0>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>
+INPUTMC | 14 | 1 | 2 | 2 | 15 | 0 | 2 | 1 | 9 | 2 | 2 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 2 | 3 | 4 | 5 | 17 | 3 | 12 | 5 | 13
+EXPORTS | 1 | 1 | 0
+EQ | 8 | 
+       EXP33_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<4>
+	# !cnt_2Hz<0> & !cnt_2Hz<5>
+	# !cnt_2Hz<0> & !cnt_2Hz<2> & !cnt_2Hz<3>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<3> & !cnt_1KHz<4> & !cnt_1KHz<5> & 
+	!cnt_1KHz<7>
+
+MACROCELL | 2 | 0 | EXP34_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 6 | cnt_2Hz<0>  | cnt_2Hz<6>  | cnt_2Hz<8>  | cnt_2Hz<2>  | cnt_2Hz<7>  | cnt_2Hz<1>
+INPUTMC | 6 | 1 | 2 | 0 | 8 | 1 | 15 | 1 | 9 | 0 | 13 | 1 | 0
+EXPORTS | 1 | 2 | 1
+EQ | 5 | 
+       EXP34_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<2> & !cnt_2Hz<7>
+	# !cnt_2Hz<2> & !cnt_2Hz<8>
+	# !cnt_2Hz<6> & !cnt_2Hz<1>
+
+MACROCELL | 2 | 1 | EXP35_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 2
+INPUTS | 12 | cnt_2Hz<0>  | cnt_2Hz<4>  | cnt_2Hz<2>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<6>  | cnt_1KHz<7>  | EXP34_.EXP
+INPUTMC | 12 | 1 | 2 | 2 | 15 | 1 | 9 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7 | 5 | 2 | 3 | 4 | 2 | 0
+EXPORTS | 1 | 2 | 2
+IMPORTS | 1 | 2 | 0
+EQ | 14 | 
+       EXP35_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<4>
+	# !cnt_2Hz<2> & !cnt_2Hz<4>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<8>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<9>
+	# !cnt_1KHz<10> & !cnt_1KHz<11> & !cnt_1KHz<12> & 
+	!cnt_1KHz<13> & !cnt_1KHz<6> & !cnt_1KHz<7>
+;Imported pterms FB3_1
+	# !cnt_2Hz<0> & !cnt_2Hz<6>
+	# !cnt_2Hz<0> & !cnt_2Hz<8>
+	# !cnt_2Hz<2> & !cnt_2Hz<7>
+	# !cnt_2Hz<2> & !cnt_2Hz<8>
+	# !cnt_2Hz<6> & !cnt_2Hz<1>
+
+MACROCELL | 2 | 3 | EXP36_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 2
+INPUTS | 7 | cnt_2Hz<0>  | cnt_2Hz<5>  | cnt_2Hz<2>  | cnt_2Hz<6>  | cnt_2Hz<4>  | cnt_2Hz<1>  | EXP37_.EXP
+INPUTMC | 7 | 1 | 2 | 0 | 2 | 1 | 9 | 0 | 8 | 2 | 15 | 1 | 0 | 2 | 4
+EXPORTS | 1 | 2 | 2
+IMPORTS | 1 | 2 | 4
+EQ | 11 | 
+       EXP36_.EXP  =  !cnt_2Hz<0> & !cnt_2Hz<5>
+	# !cnt_2Hz<2> & !cnt_2Hz<5>
+	# !cnt_2Hz<2> & !cnt_2Hz<6>
+	# !cnt_2Hz<4> & !cnt_2Hz<1>
+	# !cnt_2Hz<5> & !cnt_2Hz<1>
+;Imported pterms FB3_5
+	# !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<7> & !cnt_2Hz<1>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>
+
+MACROCELL | 2 | 4 | EXP37_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 3
+INPUTS | 6 | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<0>  | cnt_2Hz<7>  | cnt_2Hz<1>  | cnt_2Hz<8>
+INPUTMC | 6 | 0 | 16 | 1 | 4 | 1 | 2 | 0 | 13 | 1 | 0 | 1 | 15
+EXPORTS | 1 | 2 | 3
+EQ | 5 | 
+       EXP37_.EXP  =  !cnt_1KHz<14>
+	# !cnt_1KHz<15>
+	# !cnt_2Hz<0> & !cnt_2Hz<7>
+	# !cnt_2Hz<7> & !cnt_2Hz<1>
+	# !cnt_2Hz<1> & !cnt_2Hz<8>
+
+MACROCELL | 2 | 13 | EXP38_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 15 | cnt_2Hz<3>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_2Hz<2>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>
+INPUTMC | 15 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 5 | 5 | 0 | 16 | 1 | 4 | 1 | 9 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2
+EXPORTS | 1 | 2 | 14
+EQ | 13 | 
+       EXP38_.EXP  =  cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 2 | 14 | EXP39_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 16 | cnt_2Hz<0>  | cnt_2Hz<2>  | cnt_2Hz<3>  | cnt_2Hz<1>  | cnt_1KHz<11>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<10>  | EXP38_.EXP
+INPUTMC | 16 | 1 | 2 | 1 | 9 | 2 | 2 | 1 | 0 | 3 | 9 | 0 | 16 | 1 | 4 | 1 | 6 | 5 | 5 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 3 | 8 | 2 | 13
+EXPORTS | 1 | 2 | 15
+IMPORTS | 1 | 2 | 13
+EQ | 26 | 
+       EXP39_.EXP  =  cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<0> & cnt_2Hz<2> & cnt_2Hz<3> & 
+	cnt_2Hz<1> & cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB3_14
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+
+MACROCELL | 2 | 16 | EXP40_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 14 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<13>  | cnt_2Hz<3>  | cnt_1KHz<10>  | cnt_1KHz<11>  | EXP41_.EXP
+INPUTMC | 14 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 1 | 6 | 0 | 16 | 1 | 4 | 5 | 5 | 2 | 2 | 3 | 8 | 3 | 9 | 2 | 17
+EXPORTS | 1 | 2 | 15
+IMPORTS | 1 | 2 | 17
+EQ | 36 | 
+       EXP40_.EXP  =  cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<13> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<10> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<11> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<12> & 
+	cnt_1KHz<14> & cnt_1KHz<15>
+;Imported pterms FB3_18
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 2 | 17 | EXP41_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 18 | cnt_2Hz<2>  | cnt_2Hz<4>  | cnt_2Hz<5>  | cnt_2Hz<6>  | cnt_2Hz<7>  | cnt_2Hz<8>  | cnt_1KHz<14>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_2Hz<3>  | cnt_1KHz<4>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 18 | 1 | 9 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 1 | 15 | 0 | 16 | 5 | 13 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 2 | 2 | 3 | 12 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 2 | 16
+EQ | 20 | 
+       EXP41_.EXP  =  cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<4> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<14> & 
+	cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & 
+	cnt_1KHz<15>
+	# cnt_2Hz<2> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_2Hz<3> & cnt_2Hz<4> & cnt_2Hz<5> & 
+	cnt_2Hz<6> & cnt_2Hz<7> & cnt_2Hz<8> & cnt_1KHz<0> & 
+	cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 3 | 2 | EXP42_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 3
+INPUTS | 9 | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>
+INPUTMC | 9 | 5 | 5 | 0 | 16 | 1 | 4 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13
+EXPORTS | 1 | 3 | 3
+EQ | 7 | 
+       EXP42_.EXP  =  cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 3 | 5 | EXP43_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 4
+INPUTS | 15 | cnt_1KHz<0>  | cnt_1KHz<14>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<15>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<8>  | cnt_1KHz<9>
+INPUTMC | 15 | 3 | 7 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 1 | 4 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 5 | 10 | 5 | 7
+EXPORTS | 1 | 3 | 4
+EQ | 14 | 
+       EXP43_.EXP  =  cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	!cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	!cnt_1KHz<8>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	!cnt_1KHz<9>
+
+MACROCELL | 3 | 11 | EXP44_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 3 | cnt_1KHz<11>  | cnt_1KHz<14>  | cnt_1KHz<15>
+INPUTMC | 3 | 3 | 9 | 0 | 16 | 1 | 4
+EXPORTS | 1 | 3 | 12
+EQ | 1 | 
+       EXP44_.EXP  =  cnt_1KHz<11> & cnt_1KHz<14> & cnt_1KHz<15>
+
+MACROCELL | 3 | 13 | EXP45_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 13 | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<13>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<7>
+INPUTMC | 13 | 1 | 6 | 0 | 16 | 1 | 4 | 5 | 5 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 3 | 4
+EXPORTS | 1 | 3 | 12
+EQ | 8 | 
+       EXP45_.EXP  =  cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4>
+	# cnt_1KHz<14> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 3 | 14 | EXP46_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 10 | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<13>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>
+INPUTMC | 10 | 1 | 6 | 0 | 16 | 1 | 4 | 5 | 5 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13
+EXPORTS | 1 | 3 | 15
+EQ | 8 | 
+       EXP46_.EXP  =  cnt_1KHz<12> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 5 | 0 | EXP47_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 17
+INPUTS | 13 | cnt_1KHz<13>  | cnt_1KHz<14>  | cnt_1KHz<15>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>
+INPUTMC | 13 | 5 | 5 | 0 | 16 | 1 | 4 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 4 | 5 | 10 | 5 | 7 | 3 | 12 | 5 | 2 | 5 | 13
+EXPORTS | 1 | 5 | 17
+EQ | 9 | 
+       EXP47_.EXP  =  cnt_1KHz<13> & cnt_1KHz<14> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3>
+	# cnt_1KHz<14> & cnt_1KHz<7> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 5 | 1 | EXP48_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 2
+INPUTS | 12 | cnt_1KHz<14>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<7>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>
+INPUTMC | 12 | 0 | 16 | 5 | 13 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 4 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12
+EXPORTS | 1 | 5 | 2
+EQ | 11 | 
+       EXP48_.EXP  =  cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<6> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+
+MACROCELL | 5 | 3 | EXP49_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 2
+INPUTS | 13 | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>
+INPUTMC | 13 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 3 | 4 | 5 | 10 | 5 | 7
+EXPORTS | 1 | 5 | 2
+EQ | 9 | 
+       EXP49_.EXP  =  cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<7>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<8>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & !cnt_1KHz<9>
+
+MACROCELL | 5 | 4 | EXP50_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 5
+INPUTS | 15 | cnt_1KHz<0>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<14>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>
+INPUTMC | 15 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4
+EXPORTS | 1 | 5 | 5
+EQ | 8 | 
+       EXP50_.EXP  =  cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & !cnt_1KHz<14> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & cnt_1KHz<9>
+	# cnt_1KHz<0> & cnt_1KHz<10> & cnt_1KHz<11> & 
+	cnt_1KHz<12> & cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & 
+	cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & !cnt_1KHz<15>
+
+MACROCELL | 5 | 8 | EXP51_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 7
+INPUTS | 16 | cnt_1KHz<14>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<7>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>
+INPUTMC | 16 | 0 | 16 | 5 | 13 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 3 | 4 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5
+EXPORTS | 1 | 5 | 7
+EQ | 15 | 
+       EXP51_.EXP  =  cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7> & cnt_1KHz<8>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8> & !cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & cnt_1KHz<8>
+
+MACROCELL | 5 | 9 | EXP52_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 10
+INPUTS | 12 | cnt_1KHz<14>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<5>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<7>
+INPUTMC | 12 | 0 | 16 | 3 | 12 | 5 | 2 | 5 | 10 | 5 | 7 | 1 | 4 | 5 | 13 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 4
+EXPORTS | 1 | 5 | 10
+EQ | 13 | 
+       EXP52_.EXP  =  cnt_1KHz<14> & cnt_1KHz<4> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & cnt_1KHz<8> & 
+	cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<14> & cnt_1KHz<1> & 
+	cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<7>
+	# cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<7> & !cnt_1KHz<15>
+
+MACROCELL | 5 | 12 | EXP53_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 13
+INPUTS | 16 | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>  | cnt_1KHz<4>  | cnt_1KHz<15>  | cnt_1KHz<14>  | cnt_1KHz<5>  | cnt_1KHz<6>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<7>  | cnt_1KHz<10>  | cnt_1KHz<11>  | cnt_1KHz<12>  | cnt_1KHz<13>
+INPUTMC | 16 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 1 | 4 | 0 | 16 | 5 | 13 | 5 | 2 | 5 | 10 | 5 | 7 | 3 | 4 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5
+EXPORTS | 1 | 5 | 13
+EQ | 12 | 
+       EXP53_.EXP  =  cnt_1KHz<0> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<14> & cnt_1KHz<5> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<8>
+	# cnt_1KHz<0> & !cnt_1KHz<10> & !cnt_1KHz<11> & 
+	!cnt_1KHz<12> & !cnt_1KHz<13> & cnt_1KHz<1> & cnt_1KHz<2> & 
+	cnt_1KHz<3> & cnt_1KHz<4> & !cnt_1KHz<9>
+
+MACROCELL | 5 | 15 | EXP54_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 16
+INPUTS | 13 | counter<0>  | cnt_1KHz<14>  | cnt_1KHz<7>  | cnt_1KHz<8>  | cnt_1KHz<9>  | cnt_1KHz<15>  | cnt_1KHz<4>  | cnt_1KHz<6>  | cnt_1KHz<5>  | cnt_1KHz<0>  | cnt_1KHz<1>  | cnt_1KHz<2>  | cnt_1KHz<3>
+INPUTMC | 13 | 3 | 6 | 0 | 16 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 3 | 12 | 5 | 2 | 5 | 13 | 3 | 7 | 3 | 3 | 3 | 15 | 5 | 17
+EXPORTS | 1 | 5 | 16
+EQ | 9 | 
+       EXP54_.EXP  =  counter<0> & cnt_1KHz<14> & cnt_1KHz<7> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<14> & cnt_1KHz<4> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<14> & cnt_1KHz<5> & 
+	cnt_1KHz<6> & cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+	# counter<0> & cnt_1KHz<0> & cnt_1KHz<14> & 
+	cnt_1KHz<1> & cnt_1KHz<2> & cnt_1KHz<3> & cnt_1KHz<6> & 
+	cnt_1KHz<8> & cnt_1KHz<9> & cnt_1KHz<15>
+
+PIN | rst_n | 65536 | 0 | N/A | 160 | 30 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 16 | 1 | 0 | 1 | 15 | 5 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 5 | 14 | 5 | 11
+PIN | clk | 4096 | 0 | N/A | 33 | 30 | 3 | 6 | 1 | 2 | 1 | 9 | 2 | 2 | 2 | 15 | 0 | 2 | 0 | 8 | 0 | 13 | 5 | 16 | 1 | 0 | 1 | 15 | 5 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 1 | 6 | 5 | 5 | 0 | 16 | 3 | 3 | 3 | 15 | 5 | 17 | 3 | 12 | 5 | 13 | 5 | 2 | 3 | 4 | 5 | 10 | 5 | 7 | 1 | 4 | 5 | 14 | 5 | 11
+PIN | quench | 536871040 | 0 | N/A | 139
+PIN | reset | 536871040 | 0 | N/A | 135
+PIN | led<3> | 536871040 | 0 | N/A | 49
+PIN | led<1> | 536871040 | 0 | N/A | 44
+PIN | led<0> | 536871040 | 0 | N/A | 42
+PIN | led<2> | 536871040 | 0 | N/A | 47

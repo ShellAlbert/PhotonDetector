@@ -1,0 +1,5 @@
+# begin LFP file D:\Work\GitHub\PhotonDetector\XC95144\XC95144XL.lfp
+designfile XC95144XL.v
+parttype xc95144xl-tq100-5
+bus_delimiter 0;
+set_busdelim_onsave 0;

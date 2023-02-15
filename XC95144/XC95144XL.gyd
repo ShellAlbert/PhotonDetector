@@ -1,0 +1,49 @@
+Pin Freeze File:  version P.20131013
+
+95144XL100 XC95144XL-5-TQ100
+clk S:PIN22
+rst_n S:PIN99
+led<1> S:PIN28
+led<0> S:PIN27
+led<2> S:PIN29
+led<3> S:PIN30
+quench S:PIN85
+reset S:PIN81
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 EXP10_ EXP11_ cnt_2Hz<5> EXP12_
+		 EXP13_
+PARTITION FB1_7 EXP14_ EXP15_ cnt_2Hz<6> EXP16_
+		 EXP17_ EXP18_ EXP19_ cnt_2Hz<7>
+		 EXP20_ EXP21_ cnt_1KHz<14> EXP22_
+		
+PARTITION FB2_1 cnt_2Hz<1> EXP23_ cnt_2Hz<0> EXP24_
+		 cnt_1KHz<15> EXP25_ cnt_1KHz<12> EXP26_
+		 EXP27_ cnt_2Hz<2> EXP28_ EXP29_
+		
+PARTITION FB2_14 EXP30_ EXP31_ cnt_2Hz<8> EXP32_
+		 EXP33_
+PARTITION FB3_1 EXP34_ EXP35_ cnt_2Hz<3> EXP36_
+		 EXP37_
+PARTITION FB3_8 led_0_OBUF$BUF0 led_0_OBUF
+PARTITION FB3_11 led_2_OBUF led_3_OBUF
+PARTITION FB3_14 EXP38_ EXP39_ cnt_2Hz<4> EXP40_
+		 EXP41_
+PARTITION FB4_3 EXP42_ cnt_1KHz<1> cnt_1KHz<7> EXP43_
+		 counter<0> cnt_1KHz<0> cnt_1KHz<10> cnt_1KHz<11>
+		
+PARTITION FB4_12 EXP44_ cnt_1KHz<4> EXP45_ EXP46_
+		 cnt_1KHz<2>
+
+
+PARTITION FB6_1 EXP47_ EXP48_ cnt_1KHz<6> EXP49_
+		 EXP50_ cnt_1KHz<13> counter<2> cnt_1KHz<9>
+		 EXP51_ EXP52_ cnt_1KHz<8> rreset
+		 EXP53_ cnt_1KHz<5> rquench EXP54_
+		 counter<1> cnt_1KHz<3>
+
+
+

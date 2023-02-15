@@ -11,5 +11,8 @@
 <msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">clk</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P22</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
 </msg>
 
+<msg type="warning" file="Cpld" num="936" delta="new" >The output buffer &apos;<arg fmt="%s" index="1">geiger_mode_en_OBUF</arg>&apos; is missing an input and will be deleted.
+</msg>
+
 </messages>
 
