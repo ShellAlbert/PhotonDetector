@@ -22,13 +22,34 @@ NET "sdin" LOC = T7;
 
 
 NET "test_pulse" LOC = E1;
-
-
 NET "test_pulse" IOSTANDARD = LVCMOS33;
 
-
-
-
-# PlanAhead Generated IO constraints 
-
 NET "signal_pulse" IOSTANDARD = LVCMOS33;
+
+
+NET "geiger_mode_en" LOC = F1;
+
+
+NET "geiger_mode_en" IOSTANDARD = LVCMOS33;
+
+
+NET "quench_voltage_down" LOC = E3;
+
+
+NET "quench_voltage_down" IOSTANDARD = LVCMOS33;
+
+
+NET "reset_discharge" LOC = F3;
+
+
+NET "reset_discharge" IOSTANDARD = LVCMOS33;
+
+
+NET "tx_pin" LOC = M12;
+NET "tx_pin" IOSTANDARD = LVCMOS33;
+
+NET "rx_pin" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "rx_pin" LOC = P8;

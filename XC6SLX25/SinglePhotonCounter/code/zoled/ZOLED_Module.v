@@ -5,7 +5,7 @@
 // 
 // Create Date:    15:07:26 10/31/2022 
 // Design Name: 
-// Module Name:    Zsy_OLEDModule 
+// Module Name:    ZOLED_Module 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,9 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-`include "Zsy_OLEDCmdList.v"
+`include "ZOLED_CmdList.v"
 
-module Zsy_OLEDModule(
+module ZOLED_Module(
     input clk, //input, 10MHz.
     input rst_n,
 	input en, //input, pull high during operation.

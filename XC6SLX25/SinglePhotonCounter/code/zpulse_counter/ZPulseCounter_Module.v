@@ -5,7 +5,7 @@
 // 
 // Create Date:    13:06:23 11/02/2022 
 // Design Name: 
-// Module Name:    Zsy_PulseCounter 
+// Module Name:    ZPulseCounter_Module
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Zsy_PulseCounter(
+module ZPulseCounter_Module(
     input clk,
     input rst_n,
     input en,
