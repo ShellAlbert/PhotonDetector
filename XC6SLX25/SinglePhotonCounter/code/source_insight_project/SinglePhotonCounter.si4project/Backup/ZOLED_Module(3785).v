@@ -31,7 +31,7 @@ module ZOLED_Module(
 	// cmd=3: clear the entire line-2. (16x16).
 	input [3:0] cmd, //input, command input.
 	
-	input [4:0] char_addr,//which char we want to display.
+	input [3:0] char_addr,//which char we want to display.
 	input [7:0] x,   //x coordinate, we use 16x16, so 128/16=8.
 	input [2:0] y, //y coordinate, we use 16x16, so 64/16=4.
 	

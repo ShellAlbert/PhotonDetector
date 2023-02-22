@@ -50,6 +50,13 @@ NET "tx_pin" IOSTANDARD = LVCMOS33;
 
 NET "rx_pin" IOSTANDARD = LVCMOS33;
 
-# PlanAhead Generated physical constraints 
 
 NET "rx_pin" LOC = P8;
+
+# PlanAhead Generated physical constraints 
+
+NET "key_pin" LOC = F10;
+
+# PlanAhead Generated IO constraints 
+
+NET "key_pin" IOSTANDARD = LVCMOS33;

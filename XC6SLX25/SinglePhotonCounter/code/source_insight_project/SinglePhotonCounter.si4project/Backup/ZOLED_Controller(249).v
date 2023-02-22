@@ -44,7 +44,7 @@ reg oled_en;
 reg [3:0] cmd;
 reg [7:0] x /* synthesis syn_keep = 1 */;
 reg [2:0] y /* synthesis syn_keep = 1 */;
-reg [4:0] char_addr /* synthesis syn_keep = 1 */;
+reg [3:0] char_addr /* synthesis syn_keep = 1 */;
 wire oled_done;
 ZOLED_Module u1(
 	.clk(clk),//input.
@@ -127,7 +127,7 @@ else	begin
 						else	begin
 									oled_en<=1'b1;
 									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd0;/*"å•"*/
+									char_addr<=4'd0;/*"µ¥",0*/
 									x<=8'd16;
 									y<=3'd0;
 								end
@@ -140,7 +140,7 @@ else	begin
 						else	begin
 									oled_en<=1'b1;
 									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd1;/*"å…‰"*/
+									char_addr<=4'd1;/*"¹â",0*/
 									x<=8'd32;
 									y<=3'd0;
 								end
@@ -153,7 +153,7 @@ else	begin
 						else	begin
 									oled_en<=1'b1;
 									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd2;/*"å­"*/
+									char_addr<=4'd2;/*"×Ó",0*/
 									x<=8'd48;
 									y<=3'd0;
 								end
@@ -166,7 +166,7 @@ else	begin
 						else	begin
 									oled_en<=1'b1;
 									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd3;/*"è®¡"*/
+									char_addr<=4'd3;/*"¼Æ",0*/
 									x<=8'd64;
 									y<=3'd0;
 								end
@@ -179,7 +179,7 @@ else	begin
 						else	begin
 									oled_en<=1'b1;
 									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd4;/*"æ•°"*/
+									char_addr<=4'd4;/*"Êı",0*/
 									x<=8'd80;
 									y<=3'd0;
 								end
@@ -196,7 +196,7 @@ else	begin
 						else	begin
 									oled_en<=1'b1;
 									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd5;/*"å™¨"*/
+									char_addr<=4'd5;/*"Æ÷",0*/
 									x<=8'd96;
 									y<=3'd0;
 								end
@@ -305,59 +305,7 @@ else	begin
 									char_addr<=rchar_addr0;
 								end
 					end
-				5'd16:begin
-						if(oled_done)	begin
-											oled_en<=1'b0;
-											i<=i+1'b1;
-										end
-						else	begin
-									oled_en<=1'b1;
-									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd16;/*"æ¸…"*/
-									x<=8'd0;
-									y<=3'd5;
-								end
-						end
-				5'd17:begin
-						if(oled_done)	begin
-											oled_en<=1'b0;
-											i<=i+1'b1;
-										end
-						else	begin
-									oled_en<=1'b1;
-									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd17;/*"é›¶"*/
-									x<=8'd16;
-									y<=3'd5;
-								end
-						end
-				5'd18:begin
-						if(oled_done)	begin
-											oled_en<=1'b0;
-											i<=i+1'b1;
-										end
-						else	begin
-									oled_en<=1'b1;
-									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd18;/*"çŠ¶"*/
-									x<=8'd96;
-									y<=3'd5;
-								end
-						end
-				5'd19:begin
-						if(oled_done)	begin
-											oled_en<=1'b0;
-											i<=i+1'b1;
-										end
-						else	begin
-									oled_en<=1'b1;
-									cmd<=`CMD_WR_GRAM;
-									char_addr<=5'd19;/*"æ€"*/
-									x<=8'd112;
-									y<=3'd5;
-								end
-						end
-				5'd20:
+				5'd16:
 					i<=5'd8;
 				default:
 					i<=i;

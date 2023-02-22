@@ -40,17 +40,34 @@ module SinglePhotonCounter(
 	output quench_voltage_down, //to pull down Two side voltage of SAPD.
 	output reset_discharge, //to discharge parasite of capacity of SAPD.
 	output tx_pin, //UART,tx pin.
-	input rx_pin, //UART, rx pin.
-	input key_pin //Key (Push Button Pin).
+	input rx_pin //UART, rx pin.
     );
 //////////////////////////////////////////////////////////////
 //generate reset signal.
 wire rst_n;
-ZReset_Module u0(
-    .clk(clk), //input.
-    .rst_n(rst_n) //output.
-    );
+reg [31:0] cnt_rst_n;
+always @ (posedge clk)
+if(cnt_rst_n>=32'hfffffff0)
+	cnt_rst_n<=cnt_rst_n;
+else
+	cnt_rst_n<=cnt_rst_n+1'b1;
+assign rst_n=(cnt_rst_n>=32'hffff)?1'b1:1'b0;
 
+//IP cores are not available in ModelSim.
+//50MHz/12MHz/2=2.
+wire clk_12MHz;
+reg [1:0] cnt_12MHz;
+always @ (posedge clk or negedge rst_n)
+if(!rst_n)
+	cnt_12MHz<=2'd0;
+else
+begin
+	if(cnt_12MHz==2'd2-1)
+		cnt_12MHz<=2'd0;
+	else
+		cnt_12MHz<=cnt_12MHz+1'b1;
+end
+assign clk_12MHz=(cnt_12MHz==2'd2-1)?1'b1:1'b0;
 /////////////////////////////////////////////////////////
 //Pulse Counter Module.
 wire [3:0] rq0;
@@ -62,11 +79,10 @@ wire [3:0] rq5;
 wire [3:0] rq6;
 wire [3:0] rq7;
 wire rOverflow;
-reg EnPulseCounter;
 ZPulseCounter_Module u1(
     .clk(clk), //input. 50MHz.
     .rst_n(rst_n), //input.
-    .en(EnPulseCounter), //input, Key down to reset Counter to zero.
+    .en(1'b1), //always enable.
     .pulse(signal_pulse),//external input signal pulse.
     .q0(rq0), //output, Ge wei.
     .q1(rq1), //output, Shi wei.
@@ -116,40 +132,6 @@ ZUART_Controller u3(
     .tx_pin(tx_pin), //output.
     .rx_pin(rx_pin) //input.
     );
-//////////////////////////////////////////////
-//Key (PushButton) Module.
-wire key_down;
-wire key_up;
-ZKey_Module u4(
-    .clk(clk), //input.
-    .rst_n(rst_n), //input.
-    .en(1'b1), //input, always Enabled.
-    .key_pin(key_pin), //input, physical key pin.
-    .key_down(key_down), //output, one pulse.
-    .key_up(key_up) //output, one pulse.
-    );
-//make connections between Key & Pulse_Counter.
-//key down to reset Counter to zero.
-//key up has nothing to do.
-always @(posedge clk or negedge rst_n)
-if(!rst_n)
-	EnPulseCounter<=1'b1;
-else if(key_down)
-		EnPulseCounter<=1'b0;
-	else
-		EnPulseCounter<=1'b1;
-////////////////////////////////////////////////////////////
-//sys clk led indicator.
-//50MHz/1Hz=50,000,000
-reg rled;
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)
-	rled<=1'b0;
-else if(key_down)
-		rled<=1'b1;
-else if(key_up)
-		rled<=1'b0;
-assign led=rled;
 /////////////////////////////////////////////////////////////
 //generate 1Hz signal.
 //12MHz/1Hz/2=6,000,000
@@ -164,22 +146,18 @@ else if(cnt_1hz==24'd6000000-1)
 		cnt_1hz<=cnt_1hz+1'b1;
 assign sig_1hz=(cnt_1hz==24'd6000000-1)?1'b1:1'b0;
 
-/////////////////////////////////////////////////////////////
-//IP cores are not available in ModelSim.
-//50MHz/12MHz/2=2.
-wire clk_12MHz;
-reg [1:0] cnt_12MHz;
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)
-	cnt_12MHz<=2'd0;
+
+////////////////////////////////////////////////////////////
+//sys clk led indicator.
+//50MHz/1Hz=50,000,000
+reg [27:0] cnt;
+always @ (posedge clk)
+if(cnt>=28'd50_000_000)
+	cnt<=28'd0;
 else
-begin
-	if(cnt_12MHz==2'd2-1)
-		cnt_12MHz<=2'd0;
-	else
-		cnt_12MHz<=cnt_12MHz+1'b1;
-end
-assign clk_12MHz=(cnt_12MHz==2'd2-1)?1'b1:1'b0;
+	cnt<=cnt+1'b1;
+assign led=(cnt>=28'd15_000_000)?1'b1:1'b0;
+/////////////////////////////////////////////////////////////
 //generate test pulse to work as the real SAPD output signal.
 //12MHz/1Hz/2=12,000,000
 //12MHz/10Hz/2=6,000,000
