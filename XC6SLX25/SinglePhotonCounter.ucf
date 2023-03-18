@@ -1,0 +1,62 @@
+
+
+NET "led" LOC = H4;
+
+
+NET "led" IOSTANDARD = LVCMOS33;
+NET "dc" IOSTANDARD = LVCMOS33;
+NET "cs_n" IOSTANDARD = LVCMOS33;
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "oled_rst" IOSTANDARD = LVCMOS33;
+NET "sclk" IOSTANDARD = LVCMOS33;
+NET "sdin" IOSTANDARD = LVCMOS33;
+
+
+NET "clk" LOC = H3;
+NET "cs_n" LOC = P5;
+NET "dc" LOC = T5;
+NET "oled_rst" LOC = T6;
+NET "signal_pulse" LOC = R1;
+NET "sclk" LOC = T8;
+NET "sdin" LOC = T7;
+
+
+NET "test_pulse" LOC = E1;
+NET "test_pulse" IOSTANDARD = LVCMOS33;
+
+NET "signal_pulse" IOSTANDARD = LVCMOS33;
+
+
+NET "geiger_mode_en" LOC = F1;
+
+
+NET "geiger_mode_en" IOSTANDARD = LVCMOS33;
+
+
+NET "quench_voltage_down" LOC = E3;
+
+
+NET "quench_voltage_down" IOSTANDARD = LVCMOS33;
+
+
+NET "reset_discharge" LOC = F3;
+
+
+NET "reset_discharge" IOSTANDARD = LVCMOS33;
+
+
+NET "tx_pin" LOC = M12;
+NET "tx_pin" IOSTANDARD = LVCMOS33;
+
+NET "rx_pin" IOSTANDARD = LVCMOS33;
+
+
+NET "rx_pin" LOC = P8;
+
+# PlanAhead Generated physical constraints 
+
+NET "key_pin" LOC = F10;
+
+# PlanAhead Generated IO constraints 
+
+NET "key_pin" IOSTANDARD = LVCMOS33;

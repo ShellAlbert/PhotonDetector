@@ -1,8 +1,12 @@
-Storage Target: Non-Volatile Spartan3AN
-xc3s50an               [131072]
+Storage Target: SPI Flash Single FPGA
+16M
 FF
-love
-D:\Work\GitHub\PhotonDetector\Code\
+Untitled
+C:/Users/Administrator/Desktop/Merge
+
+MCS
+No
+onDetector\Code\
 
 MCS
 No

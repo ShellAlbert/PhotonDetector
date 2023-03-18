@@ -315,7 +315,7 @@ else	begin
 									cmd<=`CMD_WR_GRAM;
 									char_addr<=5'd16;/*"清"*/
 									x<=8'd0;
-									y<=3'd5;
+									y<=3'd6;
 								end
 						end
 				5'd17:begin
@@ -328,7 +328,7 @@ else	begin
 									cmd<=`CMD_WR_GRAM;
 									char_addr<=5'd17;/*"零"*/
 									x<=8'd16;
-									y<=3'd5;
+									y<=3'd6;
 								end
 						end
 				5'd18:begin
@@ -341,7 +341,7 @@ else	begin
 									cmd<=`CMD_WR_GRAM;
 									char_addr<=5'd18;/*"状"*/
 									x<=8'd96;
-									y<=3'd5;
+									y<=3'd6;
 								end
 						end
 				5'd19:begin
@@ -354,7 +354,7 @@ else	begin
 									cmd<=`CMD_WR_GRAM;
 									char_addr<=5'd19;/*"态"*/
 									x<=8'd112;
-									y<=3'd5;
+									y<=3'd6;
 								end
 						end
 				5'd20:

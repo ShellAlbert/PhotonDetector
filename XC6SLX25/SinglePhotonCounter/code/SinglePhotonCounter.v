@@ -199,6 +199,7 @@ ZQuench_Module u1_ZQuenchModule(
 	.clk(clk), //input, 50MHz.
 	.rst_n(rst_n),//input, reset signal.
 	.geiger_mode_en(geiger_mode_en), //output.
+	.pulse(signal_pulse),//external input signal pulse.
 	.quench(quench_voltage_down), //output.
 	.reset(reset_discharge) //output.
     );

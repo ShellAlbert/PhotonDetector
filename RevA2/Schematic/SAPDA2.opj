@@ -215,62 +215,27 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "d:\work\github\photondetector\reva2\schematic\sapda2.dsn")
-      (Path "Design Resources"
-         "d:\work\github\photondetector\reva2\schematic\sapda2.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\sapda2.dsn")
+      (Path "Design Resources" ".\sapda2.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Design Resources" "Library"
          "D:\Work\GitHub\SAPD2\Schematic\LIBRARY1.OLB")
       (Path "Outputs")
-      (Path "Logs")
-      (Select "Design Resources"
-         "d:\work\github\photondetector\reva2\schematic\sapda2.dsn" "SCHEMATIC1"
-         "PAGE1"))
+      (Path "Logs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 924"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 947"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -1 -1 5 1523 26 967")
-        (Scroll "0 876")
+        (Scroll "205 0")
         (Zoom "154")
         (Occurrence "/"))
       (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA2\SCHEMATIC\SAPDA2.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1523 26 967")
-        (Scroll "-141 -8")
-        (Zoom "124")
-        (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA2\SCHEMATIC\SAPDA2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE2"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1523 26 967")
-        (Scroll "427 453")
-        (Zoom "248")
-        (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA2\SCHEMATIC\SAPDA2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "QUENCH_RESET"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1523 26 967")
-        (Scroll "-141 -8")
-        (Zoom "124")
-        (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA2\SCHEMATIC\SAPDA2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE3")))
+      (Page "PAGE1")))
   (ISPCBBASICLICENSE "false"))
