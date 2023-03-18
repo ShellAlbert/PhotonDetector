@@ -63,21 +63,21 @@ assign S_CLK=clk_out;
 
 parameter B115K2=11'd1157,TXFUNC=6'd16;
 reg [1:0] isCall;
-reg [23:0] D1; //Address.
-reg [15:0] D2; //Data.
-reg [15:0] DataTest;
+reg [23:0] addr_r; //SDRAM Address.
+reg [15:0] data_wr_to; //Data write to SDRAM.
+reg [15:0] data_rd_back; //Data read from SDRAM.
 reg rTXD;
 assign TXD=rTXD;
 
 wire [1:0] doneU2;
 wire [15:0] dataU2;
-reg [15:0] D3;
+
 ZSDRAM_Module_Base u2(
     .clk(clock1),
     .rst_n(rst_n),
 
-    .iAddr(D1), //input, Bank(2)+Row(13)+Column(9)=(24)
-    .iData(D2), //input data, write to SDRAM.
+    .iAddr(addr_r), //input, Bank(2)+Row(13)+Column(9)=(24)
+    .iData(data_wr_to), //input data, write to SDRAM.
     .oData(dataU2), //output, read back data from SDRAM.
 
     .iCall(isCall), //input, [1]=1:Write, [0]=1:Read.
@@ -103,41 +103,65 @@ reg [31:0] Cnt;
 always @(posedge clock1 or negedge rst_n)
 if(!rst_n)	begin
 				i<=6'd0;
-				D1<=24'd0;
-				D2<=16'd0;
-				D3<=16'd0;
+				addr_r<=24'd0;
+				data_wr_to<=16'd0;
+				data_rd_back<=16'd0;
 				isCall<=2'b00;
 				rTXD<=1'b1;
 				Go<=6'd0;
 				C1<=11'd0;
 				T<=11'd0;
-				DataTest<=16'd0;
 				Cnt<=32'd0;
 			end
 else	case(i)
 			6'd0: //Write 0xABCD to Address 0.
-				if(doneU2[1]) begin isCall[1]<=1'b0; i<=i+1'b1; D3<=16'd0; end
-				else begin isCall[1]<=1'b1; D1<=24'd0; D2<=DataTest; end
+				if(doneU2[1]) begin isCall[1]<=1'b0; i<=i+1'b1; end
+				else begin isCall[1]<=1'b1; end
 		
 			6'd1: //Read from Address 0 to D3.
-				if(doneU2[0]) begin D3<=dataU2; isCall[0]<=1'b0; i<=i+1'b1; end
-				else begin isCall[0]<=1'b1; D1<=24'd0; end
+				if(doneU2[0]) begin data_rd_back<=dataU2; isCall[0]<=1'b0; i<=i+1'b1; end
+				else begin isCall[0]<=1'b1; end
 			6'd2:
 				begin
-					T<={2'b11,D3[15:8],1'b0};
-					i<=TXFUNC;
-					Go<=i+1'b1;
+					if(data_rd_back==data_wr_to) begin
+						T<={2'b11,data_rd_back[15:8],1'b0};
+						i<=TXFUNC;
+						Go<=i+1'b1;
+						end
+					else begin
+						T<={2'b11,8'hEE,1'b0};
+						i<=6'd28;
+						end
 				end
 				
 			6'd3:
-				begin
-					T<={2'b11,D3[7:0],1'b0};
-					i<=TXFUNC;
-					Go<=i+1'b1;
+				begin
+					if(data_rd_back==data_wr_to) begin
+						T<={2'b11,data_rd_back[7:0],1'b0};
+						i<=TXFUNC;
+						Go<=i+1'b1;
+						end
+					else begin
+						T<={2'b11,8'hFF,1'b0};
+						i<=6'd28;
+						end
 				end
 				
 			6'd4: //1s delay. 32'd133333333 //500ms  32'd66,666,666
-				if(Cnt==32'd666666) begin Cnt<=32'd0; DataTest<=DataTest+1'b1; i<=6'd0;end
+				if(Cnt==32'd6666666) 	begin 
+											Cnt<=32'd0; i<=6'd0;
+
+				//OLED:128x64
+				//128/8=8, 64/16=4. => 8*4=32.
+											//increase address.
+											//1MB=1024*1024=1048576
+											if(addr_r==24'd1048576)
+												addr_r<=24'd0;
+											else
+												addr_r<=addr_r+1'b1;
+											//increase data.
+											data_wr_to<=data_wr_to+1'b1;
+										end
 				else begin Cnt<=Cnt+1'b1; end
 				
 			6'd16,6'd17,6'd18,6'd19,6'd20,6'd21,6'd22,6'd23,6'd24,6'd25,6'd26:
@@ -146,6 +170,9 @@ else	case(i)
 				
 			6'd27: 
 				i<=Go;
+			6'd28:
+				//error halt here.
+				i<=6'd28;
 		endcase
 
 reg rled;
