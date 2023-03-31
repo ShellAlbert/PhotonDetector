@@ -1,0 +1,14 @@
+
+run
+-ifmt VHDL
+-ent M9K_ZiMo3232_exdes 
+-p xc6slx25-ftg256-2
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn M9K_ZiMo3232_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

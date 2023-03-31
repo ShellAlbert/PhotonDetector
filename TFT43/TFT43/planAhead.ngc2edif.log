@@ -1,0 +1,24 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZTFT43_Module.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZTFT43_Module.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ic_Timing/rLCD_DATA<15 : 0> on block
+   ZTFT43_Module is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus cmd_Timing<15 : 0> on block
+   ZTFT43_Module is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Timing/rLCD_DATA[15]_GND_2_o_add_4_OUT<15 : 0> on block ZTFT43_Module is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Timing/iTrigger[1]_i[3]_wide_mux_60_OUT<15 : 0> on block ZTFT43_Module is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZTFT43_Module.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+

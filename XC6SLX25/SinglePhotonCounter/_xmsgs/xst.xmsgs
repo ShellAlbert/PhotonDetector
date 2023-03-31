@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="568" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Function.v" Line 219: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">13</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" Line 125: Assignment to <arg fmt="%s" index="1">clkout3_unused</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" Line 126: Assignment to <arg fmt="%s" index="1">clkout4_unused</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" Line 127: Assignment to <arg fmt="%s" index="1">clkout5_unused</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyROM.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">ZsyROM</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 106: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">5</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 107: Assignment to <arg fmt="%s" index="1">dotMatrix_data_top</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 108: Assignment to <arg fmt="%s" index="1">dotMatrix_data_btm</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 118: Assignment to <arg fmt="%s" index="1">cnt_byte</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 106: Net &lt;<arg fmt="%s" index="1">char_addr</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v</arg>&quot; line <arg fmt="%d" index="2">103</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">inst_ZsyDotMatrix</arg>&gt; of block &lt;<arg fmt="%s" index="4">ZsyDotMatrix</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ZOLED_Module2</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v</arg>&quot; line <arg fmt="%s" index="2">103</arg>: Output port &lt;<arg fmt="%s" index="3">data_top</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_ZsyDotMatrix</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v</arg>&quot; line <arg fmt="%s" index="2">103</arg>: Output port &lt;<arg fmt="%s" index="3">data_btm</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_ZsyDotMatrix</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">char_addr</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">oBitMask&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">y_pos_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">y_pos_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">y_pos</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">6</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">ZSDRAM_Module_Demo</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2146" delta="new" >In block &lt;<arg fmt="%s" index="1">ZSDRAM_Module_Demo</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">cnt_sin</arg>&gt; </msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">cmd_r_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Function</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cmd_r_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Function</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">cmd_OLED_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">T_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">u1/pll_base_inst</arg> in unit <arg fmt="%s" index="2">u1/pll_base_inst</arg> of type <arg fmt="%s" index="3">PLL_BASE</arg> has been replaced by <arg fmt="%s" index="4">PLL_ADV</arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">T_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ZSDRAM_Module_Demo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;T_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">cmd_OLED_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ZSDRAM_Module_Demo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cmd_OLED_2&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">i_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZOLED_Module2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_7</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_6</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_5</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_4</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_3</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_7</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_6</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_5</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_4</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_3</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">oBitMask_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">ZOLED_Module_MapY2Page</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Go_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Go_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Go_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">i_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">u2/u2/i_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ic_OLED/iPage_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ZSDRAM_Module_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ic_OLED/inst_ZsySPI_TxByte/cnt_clk_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ZSDRAM_Module_Demo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ic_OLED/inst_ZsySPI_TxByte/cnt_clk_7&gt; &lt;ic_OLED/inst_ZsySPI_TxByte/cnt_clk_6&gt; &lt;ic_OLED/inst_ZsySPI_TxByte/cnt_clk_5&gt; &lt;ic_OLED/inst_ZsySPI_TxByte/cnt_clk_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Go_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ZSDRAM_Module_Demo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Go_1&gt; </arg>
+</msg>
+
+</messages>
+

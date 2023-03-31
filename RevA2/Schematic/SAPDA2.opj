@@ -1,6 +1,6 @@
 (ExpressProject "SAPDA2"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S017 (3936576)  [4/19/2021]-[12/25/22]")
+  (SoftwareVersion "17.4-2019 S017 (3936576)  [4/19/2021]-[03/22/23]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -227,15 +227,5 @@
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -1 -1 0 200 0 947"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1523 26 967")
-        (Scroll "205 0")
-        (Zoom "154")
-        (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA2\SCHEMATIC\SAPDA2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1")))
+      (Tab 0)))
   (ISPCBBASICLICENSE "false"))

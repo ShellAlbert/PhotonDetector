@@ -87,6 +87,17 @@ NET "S_nRAS" IOSTANDARD = LVCMOS33;
 NET "S_nWE" IOSTANDARD = LVCMOS33;
 NET "TXD" IOSTANDARD = LVCMOS33;
 
+NET "oled_dc" IOSTANDARD = LVCMOS33;
+NET "oled_cs_n" IOSTANDARD = LVCMOS33;
+NET "oled_rst" IOSTANDARD = LVCMOS33;
+NET "oled_sclk" IOSTANDARD = LVCMOS33;
+NET "oled_sdin" IOSTANDARD = LVCMOS33;
+
+NET "oled_cs_n" LOC = P5;
+NET "oled_dc" LOC = T5;
+NET "oled_rst" LOC = T6;
+NET "oled_sclk" LOC = T8;
+NET "oled_sdin" LOC = T7;
 # PlanAhead Generated physical constraints 
 
 NET "LED" LOC = H4;

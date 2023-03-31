@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/ZSDRAM_Module_Demo.xst" -ofn "D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/ZSDRAM_Module_Demo.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ZSDRAM_Module_Demo.ucf -p xc6slx25-ftg256-2 ZSDRAM_Module_Demo.ngc ZSDRAM_Module_Demo.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ZSDRAM_Module_Demo_map.ncd ZSDRAM_Module_Demo.ngd ZSDRAM_Module_Demo.pcf 
+par -w -intstyle ise -ol high -mt off ZSDRAM_Module_Demo_map.ncd ZSDRAM_Module_Demo.ncd ZSDRAM_Module_Demo.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ZSDRAM_Module_Demo.twx ZSDRAM_Module_Demo.ncd -o ZSDRAM_Module_Demo.twr ZSDRAM_Module_Demo.pcf -ucf ZSDRAM_Module_Demo.ucf 
+bitgen -intstyle ise -f ZSDRAM_Module_Demo.ut ZSDRAM_Module_Demo.ncd 

@@ -1,0 +1,923 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.57 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.57 secs
+ 
+--> Reading design: ZSDRAM_Module_Demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ZSDRAM_Module_Demo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ZSDRAM_Module_Demo"
+Output Format                      : NGC
+Target Device                      : xc6slx25-2-ftg256
+
+---- Source Options
+Top Module Name                    : ZSDRAM_Module_Demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" into library work
+Parsing module <ZsyPLL>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\ZsySPI_TxByte.v" into library work
+Parsing module <ZsySPI_TxByte>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\ZsyDotMatrix.v" into library work
+Parsing module <ZsyDotMatrix>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\ZsyCfgRegsData.v" into library work
+Parsing module <ZsyCfgRegsData>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Function.v" into library work
+Parsing module <ZSDRAM_Module_Function>.
+WARNING:HDLCompiler:568 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Function.v" Line 219: Constant value is truncated to fit in <13> bits.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Ctrl.v" into library work
+Parsing module <ZSDRAM_Module_Ctrl>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyROM.v" into library work
+Parsing module <ZsyROM>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Base.v" into library work
+Parsing module <ZSDRAM_Module_Base>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zpulse_sync_fast2slow.v" into library work
+Parsing module <zpulse_sync_fast2slow>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module_MapY2Page.v" into library work
+Parsing module <ZOLED_Module_MapY2Page>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" into library work
+Parsing verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\/ZOLED_CmdList.v" included at line 21.
+Parsing module <ZOLED_Module2>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Demo.v" into library work
+Parsing verilog file "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\/../zoled/ZOLED_CmdList.v" included at line 21.
+Parsing module <ZSDRAM_Module_Demo>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ZSDRAM_Module_Demo>.
+
+Elaborating module <ZsyPLL>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=16,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=6,CLKOUT0_PHASE=210.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=6,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=80,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" Line 125: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" Line 126: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v" Line 127: Assignment to clkout5_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <ODDR2>.
+
+Elaborating module <ZSDRAM_Module_Base>.
+
+Elaborating module <ZSDRAM_Module_Ctrl>.
+
+Elaborating module <ZSDRAM_Module_Function>.
+
+Elaborating module <ZsyROM>.
+WARNING:HDLCompiler:1499 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyROM.v" Line 39: Empty module <ZsyROM> remains a black box.
+
+Elaborating module <ZOLED_Module2>.
+
+Elaborating module <ZsyCfgRegsData>.
+
+Elaborating module <ZsySPI_TxByte>.
+
+Elaborating module <ZsyDotMatrix>.
+WARNING:HDLCompiler:189 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 106: Size mismatch in connection of port <addr>. Formal port size is 5-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 107: Assignment to dotMatrix_data_top ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 108: Assignment to dotMatrix_data_btm ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 118: Assignment to cnt_byte ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" Line 106: Net <char_addr> does not have a driver.
+
+Elaborating module <ZOLED_Module_MapY2Page>.
+
+Elaborating module <zpulse_sync_fast2slow>.
+WARNING:Xst:2972 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" line 103. All outputs of instance <inst_ZsyDotMatrix> of block <ZsyDotMatrix> are unconnected in block <ZOLED_Module2>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ZSDRAM_Module_Demo>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Demo.v".
+        B115K2 = 11'b10010000101
+        TXFUNC = 6'b010000
+    Found 1-bit register for signal <TXD>.
+    Found 7-bit register for signal <cnt_sin>.
+    Found 7-bit register for signal <sin_addr>.
+    Found 6-bit register for signal <i>.
+    Found 6-bit register for signal <Go>.
+    Found 24-bit register for signal <sdram_addr>.
+    Found 16-bit register for signal <sdram_wr_data>.
+    Found 11-bit register for signal <C1>.
+    Found 11-bit register for signal <T>.
+    Found 32-bit register for signal <Cnt>.
+    Found 4-bit register for signal <iOLED>.
+    Found 1-bit register for signal <isCall<1>>.
+    Found 1-bit register for signal <isCall<0>>.
+    Found 1-bit register for signal <done_WrSDRAM>.
+    Found 1-bit register for signal <en_OLED>.
+    Found 8-bit register for signal <x_OLED>.
+    Found 4-bit register for signal <cmd_OLED>.
+    Found 8-bit register for signal <y_pos>.
+    Found 8-bit register for signal <data_OLED>.
+    Found 3-bit register for signal <y_OLED>.
+    Found 16-bit register for signal <sdram_rd_data>.
+    Found 4-bit adder for signal <iOLED[3]_GND_1_o_add_33_OUT> created at line 290.
+    Found 7-bit adder for signal <sin_addr[6]_GND_1_o_add_34_OUT> created at line 294.
+    Found 8-bit adder for signal <x_OLED[7]_GND_1_o_add_35_OUT> created at line 295.
+    Found 7-bit adder for signal <cnt_sin[6]_GND_1_o_add_36_OUT> created at line 296.
+    Found 6-bit adder for signal <i[5]_GND_1_o_add_74_OUT> created at line 330.
+    Found 24-bit adder for signal <sdram_addr[23]_GND_1_o_add_91_OUT> created at line 374.
+    Found 16-bit adder for signal <sdram_wr_data[15]_GND_1_o_add_94_OUT> created at line 376.
+    Found 32-bit adder for signal <Cnt[31]_GND_1_o_add_95_OUT> created at line 378.
+    Found 11-bit adder for signal <C1[10]_GND_1_o_add_104_OUT> created at line 382.
+    Found 1-bit 11-to-1 multiplexer for signal <GND_1_o_X_1_o_Mux_103_o> created at line 382.
+    Found 7-bit comparator greater for signal <n0016> created at line 289
+    Found 16-bit comparator equal for signal <sdram_rd_data[15]_sdram_wr_data[15]_equal_80_o> created at line 337
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred 176 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  30 Multiplexer(s).
+Unit <ZSDRAM_Module_Demo> synthesized.
+
+Synthesizing Unit <ZsyPLL>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\ipcore_dir\ZsyPLL.v".
+    Summary:
+	no macro.
+Unit <ZsyPLL> synthesized.
+
+Synthesizing Unit <ZSDRAM_Module_Base>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Base.v".
+    Summary:
+	no macro.
+Unit <ZSDRAM_Module_Base> synthesized.
+
+Synthesizing Unit <ZSDRAM_Module_Ctrl>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Ctrl.v".
+        IDLE = 4'b0000
+        WRITE = 4'b0001
+        READ = 4'b0100
+        REFRESH = 4'b0111
+        INITIAL = 4'b1000
+        TREF = 11'b10000010000
+    Found 11-bit register for signal <C1>.
+    Found 2-bit register for signal <oDone_r>.
+    Found 4-bit register for signal <i>.
+    Found 1-bit register for signal <oCall_r<3>>.
+    Found 1-bit register for signal <oCall_r<2>>.
+    Found 1-bit register for signal <oCall_r<1>>.
+    Found 1-bit register for signal <oCall_r<0>>.
+    Found finite state machine <FSM_0> for signal <oDone_r>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 23                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <i[3]_GND_8_o_add_26_OUT> created at line 92.
+    Found 11-bit adder for signal <C1[10]_GND_8_o_add_32_OUT> created at line 103.
+    Found 11-bit comparator greater for signal <n0003> created at line 61
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <ZSDRAM_Module_Ctrl> synthesized.
+
+Synthesizing Unit <ZSDRAM_Module_Function>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zsdram\ZSDRAM_Module_Function.v".
+        CMD_INIT = 5'b01111
+        CMD_NOP = 5'b10111
+        CMD_ACT = 5'b10011
+        CMD_WR = 5'b10100
+        CMD_RD = 5'b10101
+        CMD_BSTP = 5'b10110
+        CMD_PR = 5'b10010
+        CMD_AR = 5'b10001
+        CMD_LMR = 5'b10000
+        T100US = 14'b11001111110100
+        TRP = 14'b00000000000011
+        TRRC = 14'b00000000001001
+        TMRD = 14'b00000000000010
+        TRCD = 14'b00000000000011
+        TWR = 14'b00000000000010
+        CL = 14'b00000000000011
+    Found 1-bit register for signal <isOut>.
+    Found 2-bit register for signal <BA_r>.
+    Found 13-bit register for signal <ADDR_r>.
+    Found 14-bit register for signal <C1>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit register for signal <cmd_r>.
+    Found 1-bit register for signal <isDone>.
+    Found 16-bit register for signal <rdData_r>.
+    Found 5-bit adder for signal <i[4]_GND_10_o_add_124_OUT> created at line 212.
+    Found 14-bit adder for signal <C1[13]_GND_10_o_add_125_OUT> created at line 213.
+    Found 5-bit 8-to-1 multiplexer for signal <_n0349> created at line 97.
+    Found 5-bit 8-to-1 multiplexer for signal <_n0421> created at line 180.
+    Found 1-bit tristate buffer for signal <S_DQ<15>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<14>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<13>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<12>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<11>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<10>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<9>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<8>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<7>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<6>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<5>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<4>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<3>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<2>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<1>> created at line 55
+    Found 1-bit tristate buffer for signal <S_DQ<0>> created at line 55
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred  49 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <ZSDRAM_Module_Function> synthesized.
+
+Synthesizing Unit <ZOLED_Module2>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v".
+        DC_DATA = 1'b1
+        DC_CMD = 1'b0
+INFO:Xst:3210 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" line 103: Output port <data_top> of the instance <inst_ZsyDotMatrix> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module2.v" line 103: Output port <data_btm> of the instance <inst_ZsyDotMatrix> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <char_addr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <conf_reg_addr>.
+    Found 8-bit register for signal <iCol>.
+    Found 4-bit register for signal <iPage>.
+    Found 5-bit register for signal <i>.
+    Found 1-bit register for signal <tx_en>.
+    Found 1-bit register for signal <roled_rst>.
+    Found 1-bit register for signal <rdone>.
+    Found 8-bit register for signal <tx_data>.
+    Found 1-bit register for signal <dc_reg>.
+    Found 5-bit adder for signal <i[4]_GND_31_o_add_0_OUT> created at line 135.
+    Found 8-bit adder for signal <conf_reg_addr[7]_GND_31_o_add_4_OUT> created at line 153.
+    Found 8-bit adder for signal <PWR_11_o_GND_31_o_add_39_OUT> created at line 184.
+    Found 8-bit adder for signal <iCol[7]_GND_31_o_add_51_OUT> created at line 219.
+    Found 4-bit adder for signal <iPage[3]_GND_31_o_add_59_OUT> created at line 231.
+    Found 8-bit adder for signal <PWR_11_o_GND_31_o_add_82_OUT> created at line 262.
+    Found 5-bit 7-to-1 multiplexer for signal <_n0354> created at line 176.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+	inferred  50 Multiplexer(s).
+Unit <ZOLED_Module2> synthesized.
+
+Synthesizing Unit <ZsyCfgRegsData>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\ZsyCfgRegsData.v".
+        DC_DATA = 1'b1
+        DC_CMD = 1'b0
+    Found 8-bit register for signal <data>.
+    Found 1-bit register for signal <dc_flag>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <ZsyCfgRegsData> synthesized.
+
+Synthesizing Unit <ZsySPI_TxByte>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\ZsySPI_TxByte.v".
+        DC_DATA = 1'b1
+        DC_CMD = 1'b0
+    Found 1-bit register for signal <cs_n>.
+    Found 5-bit register for signal <i>.
+    Found 8-bit register for signal <cnt_clk>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <sdin>.
+    Found 1-bit register for signal <isDone>.
+    Found 8-bit register for signal <tmpTxByte>.
+    Found 8-bit adder for signal <cnt_clk[7]_GND_33_o_add_1_OUT> created at line 53.
+    Found 5-bit adder for signal <i[4]_GND_33_o_add_7_OUT> created at line 94.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <ZsySPI_TxByte> synthesized.
+
+Synthesizing Unit <ZOLED_Module_MapY2Page>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zoled\ZOLED_Module_MapY2Page.v".
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_3_OUT> created at line 30.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_16_OUT> created at line 43.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_29_OUT> created at line 56.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_42_OUT> created at line 69.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_55_OUT> created at line 82.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_68_OUT> created at line 95.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_81_OUT> created at line 108.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <oBitMask<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator lessequal for signal <n0000> created at line 28
+    Found 8-bit comparator lessequal for signal <n0002> created at line 28
+    Found 8-bit comparator lessequal for signal <n0017> created at line 41
+    Found 8-bit comparator lessequal for signal <n0019> created at line 41
+    Found 8-bit comparator lessequal for signal <n0034> created at line 54
+    Found 8-bit comparator lessequal for signal <n0036> created at line 54
+    Found 8-bit comparator lessequal for signal <n0051> created at line 67
+    Found 8-bit comparator lessequal for signal <n0053> created at line 67
+    Found 8-bit comparator lessequal for signal <n0068> created at line 80
+    Found 8-bit comparator lessequal for signal <n0070> created at line 80
+    Found 8-bit comparator lessequal for signal <n0085> created at line 93
+    Found 8-bit comparator lessequal for signal <n0087> created at line 93
+    Found 8-bit comparator lessequal for signal <n0102> created at line 106
+    Found 8-bit comparator lessequal for signal <n0104> created at line 106
+    Found 8-bit comparator greater for signal <iY[7]_INV_49_o> created at line 119
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Latch(s).
+	inferred  15 Comparator(s).
+	inferred  86 Multiplexer(s).
+Unit <ZOLED_Module_MapY2Page> synthesized.
+
+Synthesizing Unit <zpulse_sync_fast2slow>.
+    Related source file is "D:\Work\GitHub\PhotonDetector\XC6SLX25\SinglePhotonCounter\code\zpulse_sync_fast2slow.v".
+        PULSE_INIT = 1'b0
+    Found 2-bit register for signal <pulse_fast2s_r>.
+    Found 2-bit register for signal <pulse_slow2f_r>.
+    Found 1-bit register for signal <pulse_fast_r>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <zpulse_sync_fast2slow> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 27
+ 11-bit adder                                          : 2
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 3
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 5
+ 9-bit subtractor                                      : 7
+# Registers                                            : 55
+ 1-bit register                                        : 20
+ 11-bit register                                       : 3
+ 13-bit register                                       : 1
+ 14-bit register                                       : 1
+ 16-bit register                                       : 3
+ 2-bit register                                        : 3
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 4
+ 5-bit register                                        : 4
+ 6-bit register                                        : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 9
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 18
+ 11-bit comparator greater                             : 1
+ 16-bit comparator equal                               : 1
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 14
+# Multiplexers                                         : 257
+ 1-bit 11-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 96
+ 11-bit 2-to-1 multiplexer                             : 9
+ 13-bit 2-to-1 multiplexer                             : 5
+ 14-bit 2-to-1 multiplexer                             : 14
+ 2-bit 2-to-1 multiplexer                              : 5
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 10
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 10
+ 5-bit 2-to-1 multiplexer                              : 46
+ 5-bit 7-to-1 multiplexer                              : 1
+ 5-bit 8-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 9
+ 8-bit 2-to-1 multiplexer                              : 47
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ZsyROM.ngc>.
+Loading core <ZsyROM> for timing and area information for instance <u3>.
+WARNING:Xst:1710 - FF/Latch <y_pos_6> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <y_pos_7> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <y_pos<7:6>> (without init value) have a constant value of 0 in block <ZSDRAM_Module_Demo>.
+
+Synthesizing (advanced) Unit <ZOLED_Module2>.
+The following registers are absorbed into counter <conf_reg_addr>: 1 register on signal <conf_reg_addr>.
+The following registers are absorbed into counter <iCol>: 1 register on signal <iCol>.
+The following registers are absorbed into counter <iPage>: 1 register on signal <iPage>.
+Unit <ZOLED_Module2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ZSDRAM_Module_Demo>.
+The following registers are absorbed into counter <sdram_addr>: 1 register on signal <sdram_addr>.
+The following registers are absorbed into counter <sdram_wr_data>: 1 register on signal <sdram_wr_data>.
+The following registers are absorbed into counter <C1>: 1 register on signal <C1>.
+The following registers are absorbed into counter <Cnt>: 1 register on signal <Cnt>.
+The following registers are absorbed into counter <cnt_sin>: 1 register on signal <cnt_sin>.
+The following registers are absorbed into counter <iOLED>: 1 register on signal <iOLED>.
+The following registers are absorbed into counter <sin_addr>: 1 register on signal <sin_addr>.
+Unit <ZSDRAM_Module_Demo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ZsySPI_TxByte>.
+The following registers are absorbed into counter <cnt_clk>: 1 register on signal <cnt_clk>.
+Unit <ZsySPI_TxByte> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 11-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 9-bit subtractor                                      : 7
+# Counters                                             : 11
+ 11-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 7-bit up counter                                      : 2
+ 8-bit up counter                                      : 3
+# Registers                                            : 196
+ Flip-Flops                                            : 196
+# Comparators                                          : 18
+ 11-bit comparator greater                             : 1
+ 16-bit comparator equal                               : 1
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 14
+# Multiplexers                                         : 250
+ 1-bit 11-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 96
+ 11-bit 2-to-1 multiplexer                             : 8
+ 13-bit 2-to-1 multiplexer                             : 5
+ 14-bit 2-to-1 multiplexer                             : 14
+ 2-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 10
+ 4-bit 2-to-1 multiplexer                              : 9
+ 5-bit 2-to-1 multiplexer                              : 46
+ 5-bit 7-to-1 multiplexer                              : 1
+ 5-bit 8-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 9
+ 8-bit 2-to-1 multiplexer                              : 44
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <ZSDRAM_Module_Demo>, Counter <cnt_sin> <sin_addr> are equivalent, XST will keep only <cnt_sin>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u2/u1/FSM_0> on signal <oDone_r[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 10    | 10
+ 11    | 11
+ 01    | 01
+-------------------
+WARNING:Xst:1710 - FF/Latch <cmd_r_3> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Function>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_r_4> (without init value) has a constant value of 1 in block <ZSDRAM_Module_Function>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cmd_OLED_3> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <T_0> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance u1/pll_base_inst in unit u1/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <T_9> in Unit <ZSDRAM_Module_Demo> is equivalent to the following FF/Latch, which will be removed : <T_10> 
+INFO:Xst:2261 - The FF/Latch <cmd_OLED_1> in Unit <ZSDRAM_Module_Demo> is equivalent to the following FF/Latch, which will be removed : <cmd_OLED_2> 
+
+Optimizing unit <ZSDRAM_Module_Demo> ...
+
+Optimizing unit <ZSDRAM_Module_Ctrl> ...
+
+Optimizing unit <zpulse_sync_fast2slow> ...
+
+Optimizing unit <ZOLED_Module2> ...
+WARNING:Xst:1710 - FF/Latch <i_4> (without init value) has a constant value of 0 in block <ZOLED_Module2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ZsyCfgRegsData> ...
+
+Optimizing unit <ZsySPI_TxByte> ...
+
+Optimizing unit <ZOLED_Module_MapY2Page> ...
+WARNING:Xst:1294 - Latch <oBitMask_7> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_6> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_5> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_4> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_3> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_2> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_1> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_0> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_7> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_6> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_5> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_4> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_3> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_2> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_1> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1294 - Latch <oBitMask_0> is equivalent to a wire in block <ZOLED_Module_MapY2Page>.
+WARNING:Xst:1710 - FF/Latch <Go_3> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Go_4> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Go_5> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i_5> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u2/u2/i_4> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ic_OLED/iPage_3> (without init value) has a constant value of 0 in block <ZSDRAM_Module_Demo>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ic_OLED/inst_ZsySPI_TxByte/cnt_clk_4> in Unit <ZSDRAM_Module_Demo> is equivalent to the following 4 FFs/Latches, which will be removed : <ic_OLED/inst_ZsySPI_TxByte/cnt_clk_7> <ic_OLED/inst_ZsySPI_TxByte/cnt_clk_6> <ic_OLED/inst_ZsySPI_TxByte/cnt_clk_5> <ic_OLED/inst_ZsySPI_TxByte/cnt_clk_3> 
+INFO:Xst:2261 - The FF/Latch <Go_0> in Unit <ZSDRAM_Module_Demo> is equivalent to the following FF/Latch, which will be removed : <Go_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ZSDRAM_Module_Demo, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 302
+ Flip-Flops                                            : 302
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ZSDRAM_Module_Demo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 796
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 86
+#      LUT2                        : 70
+#      LUT3                        : 48
+#      LUT4                        : 76
+#      LUT5                        : 61
+#      LUT6                        : 188
+#      MUXCY                       : 123
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 125
+# FlipFlops/Latches                : 303
+#      FD                          : 2
+#      FDC                         : 26
+#      FDCE                        : 177
+#      FDE                         : 67
+#      FDP                         : 6
+#      FDPE                        : 16
+#      FDRE                        : 8
+#      ODDR2                       : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 47
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 30
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             303  out of  30064     1%  
+ Number of Slice LUTs:                  538  out of  15032     3%  
+    Number used as Logic:               538  out of  15032     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    575
+   Number with an unused Flip Flop:     272  out of    575    47%  
+   Number with an unused LUT:            37  out of    575     6%  
+   Number of fully used LUT-FF pairs:   266  out of    575    46%  
+   Number of unique control sets:        30
+
+IO Utilization: 
+ Number of IOs:                          47
+ Number of bonded IOBs:                  47  out of    186    25%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+u1/pll_base_inst/CLKOUT0           | BUFG                   | 197   |
+u1/pll_base_inst/CLKOUT2           | BUFG                   | 105   |
+u1/pll_base_inst/CLKOUT1           | BUFG                   | 2     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 7.388ns (Maximum Frequency: 135.355MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 5.598ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/pll_base_inst/CLKOUT0'
+  Clock period: 7.388ns (frequency: 135.355MHz)
+  Total number of paths / destination ports: 9534 / 356
+-------------------------------------------------------------------------
+Delay:               7.388ns (Levels of Logic = 5)
+  Source:            u2/u2/C1_9 (FF)
+  Destination:       u2/u2/i_3 (FF)
+  Source Clock:      u1/pll_base_inst/CLKOUT0 rising
+  Destination Clock: u1/pll_base_inst/CLKOUT0 rising
+
+  Data Path: u2/u2/C1_9 to u2/u2/i_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   1.221  u2/u2/C1_9 (u2/u2/C1_9)
+     LUT6:I0->O            2   0.254   0.726  u2/u2/GND_10_o_GND_10_o_equal_130_o<13>1_SW0 (N25)
+     LUT6:I5->O           14   0.254   1.127  u2/u2/GND_10_o_GND_10_o_equal_130_o<13>1 (u2/u2/GND_10_o_GND_10_o_equal_130_o<13>1)
+     LUT6:I5->O            2   0.254   0.726  u2/u2/_n0893_inv113 (u2/u2/_n0893_inv11)
+     LUT6:I5->O            2   0.254   0.726  u2/u2/_n0893_inv4 (u2/u2/_n0893_inv4)
+     LUT6:I5->O            3   0.254   0.765  u2/u2/_n0893_inv5 (u2/u2/_n0893_inv)
+     FDCE:CE                   0.302          u2/u2/i_0
+    ----------------------------------------
+    Total                      7.388ns (2.097ns logic, 5.291ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/pll_base_inst/CLKOUT2'
+  Clock period: 6.110ns (frequency: 163.666MHz)
+  Total number of paths / destination ports: 2386 / 202
+-------------------------------------------------------------------------
+Delay:               6.110ns (Levels of Logic = 4)
+  Source:            ic_OLED/conf_reg_addr_1 (FF)
+  Destination:       ic_OLED/conf_reg_addr_7 (FF)
+  Source Clock:      u1/pll_base_inst/CLKOUT2 rising
+  Destination Clock: u1/pll_base_inst/CLKOUT2 rising
+
+  Data Path: ic_OLED/conf_reg_addr_1 to ic_OLED/conf_reg_addr_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.525   1.297  ic_OLED/conf_reg_addr_1 (ic_OLED/conf_reg_addr_1)
+     LUT6:I3->O            1   0.235   0.682  ic_OLED/_n0506_inv1 (ic_OLED/_n0506_inv1)
+     LUT3:I2->O            1   0.254   0.682  ic_OLED/_n0506_inv2 (ic_OLED/_n0506_inv2)
+     LUT6:I5->O            1   0.254   0.682  ic_OLED/_n0506_inv3 (ic_OLED/_n0506_inv3)
+     LUT4:I3->O            8   0.254   0.943  ic_OLED/_n0506_inv4 (ic_OLED/_n0506_inv)
+     FDCE:CE                   0.302          ic_OLED/conf_reg_addr_0
+    ----------------------------------------
+    Total                      6.110ns (1.824ns logic, 4.286ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            S_DQ<15> (PAD)
+  Destination:       u2/u2/rdData_r_15 (FF)
+  Destination Clock: u1/pll_base_inst/CLKOUT0 rising
+
+  Data Path: S_DQ<15> to u2/u2/rdData_r_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.328   0.681  S_DQ_15_IOBUF (N71)
+     FDE:D                     0.074          u2/u2/rdData_r_15
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 51 / 35
+-------------------------------------------------------------------------
+Offset:              5.598ns (Levels of Logic = 2)
+  Source:            u2/u2/isOut (FF)
+  Destination:       S_DQ<15> (PAD)
+  Source Clock:      u1/pll_base_inst/CLKOUT0 rising
+
+  Data Path: u2/u2/isOut to S_DQ<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.525   0.725  u2/u2/isOut (u2/u2/isOut)
+     INV:I->O             16   0.255   1.181  u2/u2/isOut_inv1_INV_0 (u2/u2/isOut_inv)
+     IOBUF:T->IO               2.912          S_DQ_15_IOBUF (S_DQ<15>)
+    ----------------------------------------
+    Total                      5.598ns (3.692ns logic, 1.906ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.202ns (Levels of Logic = 1)
+  Source:            ic_OLED/roled_rst (FF)
+  Destination:       oled_rst (PAD)
+  Source Clock:      u1/pll_base_inst/CLKOUT2 rising
+
+  Data Path: ic_OLED/roled_rst to oled_rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.525   0.765  ic_OLED/roled_rst (ic_OLED/roled_rst)
+     OBUF:I->O                 2.912          oled_rst_OBUF (oled_rst)
+    ----------------------------------------
+    Total                      4.202ns (3.437ns logic, 0.765ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock u1/pll_base_inst/CLKOUT0
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+u1/pll_base_inst/CLKOUT0|    7.388|         |         |         |
+u1/pll_base_inst/CLKOUT2|    1.324|         |         |         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u1/pll_base_inst/CLKOUT2
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+u1/pll_base_inst/CLKOUT0|    1.324|         |         |         |
+u1/pll_base_inst/CLKOUT2|    6.110|         |         |         |
+------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.66 secs
+ 
+--> 
+
+Total memory usage is 4503656 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

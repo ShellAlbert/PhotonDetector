@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/SinglePhotonCounter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/SinglePhotonCounter.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_CmdList.v&apos; in file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/SinglePhotonCounter.v&quot; line 21
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/ZQuenchModule.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/ZUART_Controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/ZsyCfgRegsData.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/ZsyDotMatrix.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/ZsySPI.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/ZsySPI_TxByte.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/Zsy_GetDotMatrixAddr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zkey/ZKey_Module.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zkey/ZKey_Module_Delay.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zkey/ZKey_Module_Edge_Detector.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Controller.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_CmdList.v&apos; in file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Controller.v&quot; line 21
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_CmdList.v&apos; in file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module.v&quot; line 21
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module2.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_CmdList.v&apos; in file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module2.v&quot; line 21
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zoled/ZOLED_Module_MapY2Page.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zpulse_counter/ZPulseCounter_Module.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zpulse_sync_fast2slow.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zreset/ZReset_Module.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Base.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Cmd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Demo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Demo.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/../zoled/ZOLED_CmdList.v&apos; in file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Demo.v&quot; line 21
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zsdram/ZSDRAM_Module_Function.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zuart/ZUART_Module.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zuart/ZUART_Module_BPS_Generator.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zuart/ZUART_Module_RX.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/XC6SLX25/SinglePhotonCounter/code/zuart/ZUART_Module_TX.v&quot; into library work</arg>
+</msg>
+
+</messages>
+
