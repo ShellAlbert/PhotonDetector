@@ -99,6 +99,25 @@ reg [9:0] zimo_x_addr; //range:0~480-1
 reg [9:0] zimo_y_addr; //range:0~800-1
 
 
+//FIFO to save Pulse Counter.
+reg [7:0] data_in_FIFO;
+reg wr_en_FIFO;
+reg rd_en_FIFO;
+wire [7:0] data_out_FIFO;
+wire full_FIFO;
+wire empty_FIFO;
+
+reg [7:0] PulseCounter;
+ZFIFO_PulseCounter ic_FIFO_PulseCounter (
+  .clk(clk_20MHz), // input clk
+  .rst(rst_n), // input rst
+  .din(data_in_FIFO), // input [7 : 0] din
+  .wr_en(wr_en_FIFO), // input wr_en
+  .rd_en(rd_en_FIFO), // input rd_en
+  .dout(data_out_FIFO), // output [7 : 0] dout
+  .full(full_FIFO), // output full
+  .empty(empty_FIFO) // output empty
+);
 
 //make SIN wave looking bold.
 reg [2:0] x_bold;
@@ -625,230 +644,92 @@ else 	case(i)
 							end
 					end
 			8'd42: //8: End Area Write.
-				if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
+				if(done_TFT) begin 
+								en_TFT<=1'b0; 
+
+								//Initial y offset=10.
+								zimo_y_addr<=10'd10; 
+
+								//next step.
+								i<=i+1'b1; 
+							end
 				else begin 
 						en_TFT<=1'b1; 
 						trigger_TFT<=4'd8; //End Area Write.
 					end 
-			8'd43:
-				i<=i;  //5'd2; //goto 60Hz refresh.
+			//Read Pulse Counter from FIFO.
+			8'd43: //Read PulseCounter from FIFO.
+				if(empty_FIFO==1'b1) begin 
+										i<=i; 
+									end
+				else
+					begin 
+						rd_en_FIFO<=1'b1; 
+						PulseCounter<=data_out_FIFO;
+						i<=i+1'b1; 
+					end					
+			8'd44:
+				begin 
+					rd_en_FIFO<=1'b0; 
+					i<=i+1'b1; 
+				end
+			8'd45:
+				begin
+				//PulseCounter<=8'd20;//data_out_FIFO; //8'd10;
+				i<=i+1'b1;
+				end
+			8'd46: //Draw A HLine, iData1=(x1), iData2=(x2), iData3=(y), iData4=(Color).
+				if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
+				else begin 
+						en_TFT<=1'b1; 
+						trigger_TFT<=4'd4; //4: Draw A HLine. 
+						data1_TFT<=16'd0+10; //(x1). +10 offset.
+						data2_TFT<={8'h00,PulseCounter+10}; //(x2). +10 offset.
+						//data2_TFT<={8'h00,8'd100}; //(x2).
+						data3_TFT<={6'd0,zimo_y_addr}; //(y1).
+						data4_TFT<=16'hF800; //(Color).
+					end
+			8'd47:
+				if(zimo_y_addr==10'd700-1) begin 
+											zimo_y_addr<=10'd0; 
+											i<=i+1'b1; 
+										end
+				else begin 
+						zimo_y_addr<=zimo_y_addr+1'b1; 
+						i<=8'd43; //repeat.
+					end 
+			8'd48:
+				i<=i; //stop here.
 		endcase
 
-/*
+//Process to write data into FIFO.
+//driven by step i.
+reg [7:0] iFIFO;
 always @(posedge clk_20MHz or negedge rst_n)
 if(!rst_n)	begin
-				i<=4'd0;
-				en_TFT<=1'b0;
-				trigger_TFT<=4'd0;
-				addr_SIN<=8'd0;
-				y_addr<=16'd10; //y offset of first pixel.
-				cnt<=8'd0;
+				iFIFO<=8'd0;
+				data_in_FIFO<=8'd0;
+				wr_en_FIFO<=1'b0;
 			end
-else case(i)
-		5'd0: //Initial TFT.
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd0; //0.Initial LCD.
-				end
-		4'd2: //Fill A Rectangle(200,200) -> (240,600).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd4; //4.Fill A Rectangle.
-					data1_TFT<=16'd200; //(x1) 
-					data2_TFT<=16'd200; //(y1)
-					data3_TFT<=16'd240-1; //(x2)
-					data4_TFT<=16'd600-1; //(y2)
-					data5_TFT<=16'hFE00; //Color.
-				end
-
-		5'd1: //4. Fill A Rectangle, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2), iData5=(Color).
-
-			i<=i+1'b1;
-		5'd2: //2: Draw A Point, iData1=(x), iData2=(y), iData3=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd2; //2.Draw A Point.(10,10)
-					data1_TFT<=16'd10-1; 
-					data2_TFT<=16'd10-1; 
-					data3_TFT<=16'hFE00; //FE00:Yellow, F800:Red.
-				end
-		5'd3: //2: Draw A Point, iData1=(x), iData2=(y), iData3=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd2; //2.Draw A Point.(470,10)
-					data1_TFT<=16'd470-1; 
-					data2_TFT<=16'd10-1; 
-					data3_TFT<=16'hFE00; //FE00:Yellow, F800:Red.
-				end
-		5'd4: //2: Draw A Point, iData1=(x), iData2=(y), iData3=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd2; //2.Draw A Point. (10,790)
-					data1_TFT<=16'd10-1; 
-					data2_TFT<=16'd790-1; 
-					data3_TFT<=16'hFE00; //FE00:Yellow, F800:Red.
-				end
-		5'd5: //2: Draw A Point, iData1=(x), iData2=(y), iData3=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd2; //2.Draw A Point. (470,790)
-					data1_TFT<=16'd470-1; 
-					data2_TFT<=16'd790-1; 
-					data3_TFT<=16'hFE00; //FE00:Yellow, F800:Red.
-				end
-		5'd6: //3.Draw A Horizontal Line, iData1=(x), iData2=(y), iData3=(length), iData4=(not used), iData5=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd3; //3.Draw A Horizontal Line. (5,5),length=470.
-					data1_TFT<=16'd0; //(x)
-					data2_TFT<=16'd0; //(y)
-					data3_TFT<=16'd480; //(length)
-					data5_TFT<=16'h7E0; //(Color).
-				end
-		5'd7: //3.Draw A Horizontal Line, iData1=(x), iData2=(y), iData3=(length), iData4=(not used), iData5=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd3; //3.Draw A Horizontal Line. (5,795),length=460.
-					data1_TFT<=16'd0; //(x)
-					data2_TFT<=16'd800-1; //(y)
-					data3_TFT<=16'd480; //(length)
-					data5_TFT<=16'h7E0; //(Color).
-				end
-		5'd8: //4. Draw A Vertical Line, iData1=(x), iData2=(y), iData3=(length), iData4=(not used), iData5=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd4; //4.Draw A Vertical Line. (15,15),length=770.
-					data1_TFT<=16'd0; //(x)
-					data2_TFT<=16'd0; //(y)
-					data3_TFT<=16'd800-1; //(length)
-					data5_TFT<=16'h7E0; //(Color)
-				end
-		5'd9: //4. Draw A Vertical Line, iData1=(x), iData2=(y), iData3=(length), iData4=(not used), iData5=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd4; //4.Draw A Vertical Line. (465,15),length=770.
-					data1_TFT<=16'd480-1; //(x)
-					data2_TFT<=16'd0; //(y)
-					data3_TFT<=16'd800-1; //(length)
-					data5_TFT<=16'h7E0; //(Color)
-				end
-		5'd10: //4. Draw A Vertical Line, iData1=(x), iData2=(y), iData3=(length), iData4=(not used), iData5=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd4; //4.Draw A Vertical Line. (240,400),length=400.
-					data1_TFT<=16'd240-1; //(x)
-					data2_TFT<=16'd0; //(y)
-					data3_TFT<=16'd800-1; //(length)
-					data5_TFT<=16'h7E0; //(Color)
-				end
-		5'd11: //draw two periods SIN wave.
-			if(addr_SIN==8'd240)	begin 
-										addr_SIN<=8'd0;
-										y_addr<=16'd10; //y offset +10.
-										i<=i+1'b1;
-									end
-			else begin 
-					if(done_TFT)	begin 
-										en_TFT<=1'b0; 
-										addr_SIN<=addr_SIN+1'b1; 
-										y_addr<=y_addr+'d3; //next pixel +3 offset.
-									end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd2; //2.Draw A Point. (470,790)
-							data1_TFT<=data_SIN+16'd20; //(x,) +x offset.
-							data2_TFT<=y_addr; //(,y)
-							data3_TFT<=16'hFE00; //FE00:Yellow, F800:Red.
-						end
-				end
-		5'd12: //draw two periods SIN wave.
-			if(addr_SIN==8'd240)	begin 
-										addr_SIN<=8'd0; 
-										i<=i+1'b1;
-									end
-			else begin 
-					if(done_TFT)	begin 
-										en_TFT<=1'b0; 
-										addr_SIN<=addr_SIN+1'b1;
-										y_addr<=y_addr+'d3; //next pixel +3 offset.
-									end
-					else begin 
-							en_TFT<=1'b1;
-							trigger_TFT<=4'd2; //2.Draw A Point. (470,790)
-							data1_TFT<=data_SIN+16'd260; //(x,) +x offset.
-							data2_TFT<=y_addr; //(,y)
-							data3_TFT<=16'hFFFF; //FE00:Yellow, F800:Red.
-						end
-				end
-		5'd13: //Fill A Rect. (240,400) (260,600).
+else case(iFIFO)
+		8'd0,8'd1,8'd2,8'd3,8'd4,8'd5,8'd6,8'd7,8'd8,8'd9,8'd10:
+			iFIFO<=iFIFO+1'b1;
+		8'd11:
 			begin
-				cnt<=8'd0; //260-240=20.
-				i<=i+1'b1;
-			end
-		5'd14: //Fill A Rect. (240,400) (260,600).
-			if(cnt==8'd1) begin cnt<=8'd0; i<=i+1'b1; end
-			else begin 
-					if(done_TFT) begin en_TFT<=1'b0; cnt<=cnt+1'b1; end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd4; //4.Draw A Vertical Line. (465,15),length=770.
-							data1_TFT<=16'd100+cnt; //(x)
-							data2_TFT<=16'd200; //(y)
-							data3_TFT<=16'd400; //(length)
-							data5_TFT<=16'hFE00; //(Color)
-						end
-				end
-		5'd15: //Fill A Rect. (240,400) (260,600).
-			if(cnt==8'd20) begin cnt<=8'd0; i<=i+1'b1; end
-			else begin 
-					if(done_TFT) begin en_TFT<=1'b0; cnt<=cnt+1'b1; end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd4; //4.Draw A Vertical Line. (465,15),length=770.
-							data1_TFT<=16'd300+cnt; //(x)
-							data2_TFT<=16'd100; //(y)
-							data3_TFT<=16'd200; //(length)
-							data5_TFT<=16'hFE00; //(Color)
-						end
-				end
-		5'd16: //Fill A Rect. (240,400) (260,600).
-			if(cnt==8'd20) begin cnt<=8'd0; i<=i+1'b1; end
-			else begin 
-					if(done_TFT) begin en_TFT<=1'b0; cnt<=cnt+1'b1; end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd4; //4.Draw A Vertical Line. (465,15),length=770.
-							data1_TFT<=16'd450+cnt; //(x)
-							data2_TFT<=16'd400; //(y)
-							data3_TFT<=16'd300; //(length)
-							data5_TFT<=16'hF800; //(Color)
-						end
-				end
-		5'd20: //5. Draw A Line, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2), iData5=(Color).
-			if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-			else begin 
-					en_TFT<=1'b1; 
-					trigger_TFT<=4'd5; //5.Draw A Line.
-					data1_TFT<=16'd0; //(x1)
-					data2_TFT<=16'd0; //(y1)
-					data3_TFT<=16'd200-1; //(x2)
-					data4_TFT<=16'd200-1; //(y2)
-					data5_TFT<=16'h7E0; //(Color)
-				end
-		5'd17:
-			i<=i;
-	endcase
+				if(full_FIFO==1'b1) begin 
+										iFIFO<=iFIFO;
+									end
+				else begin 
+						wr_en_FIFO<=1'b1; 
+						iFIFO<=iFIFO+1'b1; 
+					end 
 
-*/
+				//data_in_FIFO<=8'd255; 8bits=0~255.
+				data_in_FIFO<=data_in_FIFO+1'b1; //generate RANDOM.
+			end
+		8'd12:
+			begin wr_en_FIFO<=1'b0; iFIFO<=iFIFO+1'b1; end
+		8'd13:
+			begin iFIFO<=8'd0; end
+	endcase
 endmodule
