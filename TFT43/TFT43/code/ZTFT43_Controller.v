@@ -32,6 +32,7 @@ module ZTFT43_Controller(
 	//6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
 	//7: Fill Data to Write Area, iData1=data, iData2=Color.
 	//8: End Area Write.
+	//9: Fast Clear Screen, iData1=(x1),iData2=(y1),iData3=(x2),iData4=(y2),iData5=(Background Color).
 	
 	//1: Set CASET/RASET, iData1=xStart,iData2=xEnd,iData3=yStart,iData4=yEnd.
 	//3. Draw A Horizontal Line, iData1=(x), iData2=(y), iData3=(length), iData4=(not used), iData5=(Color).
@@ -694,6 +695,89 @@ else if(en)	begin
 								begin oDone_r<=1'b1; i<=i+1'b1; end
 
 							5'd2: //Done Signal.
+								begin oDone_r<=1'b0; i<=5'd0; end
+						endcase
+					4'd9: //9: Fast Clear Screen, iData1=(x1),iData2=(y1),iData3=(x2),iData4=(y2),iData5=(Background Color).
+						case(i)
+							5'd0: //LCD_CS=0.
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd0; end
+								
+							5'd1: //CASET CMD.(0x2A00)=xStart[15:8]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A00; end
+							5'd2: //CASET DATA, 0x2A00=xStart[15:8],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData1[15:8]}; end
+								
+							5'd3: //CASET CMD.(0x2A01)=xStart[7:0]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A01; end
+							5'd4: //CASET DATA, 0x2A01=xStart[7:0],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData1[7:0]}; end
+								
+							5'd5: //CASET CMD.(0x2A02)=xEnd[15:8]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A02; end
+							5'd6: //CASET DATA, 0x2A02=xEnd[15:8],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData3[15:8]}; end
+								
+							5'd7: //CASET CMD.(0x2A03)=xEnd[7:0]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A03; end
+							5'd8: //CASET DATA, 0x2A03=xEnd[7:0],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData3[7:0]}; end
+
+							5'd9: //RASET CMD.(0x2B00)=yStart[15:8]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B00; end
+							5'd10: //RASET DATA, 0x2B00=yStart[15:8],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData2[15:8]}; end
+								
+							5'd11: //RASET CMD.(0x2B01)=yStart[7:0]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B01; end
+							5'd12: //RASET DATA, 0x2B01=yStart[7:0],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData2[7:0]}; end
+								
+							5'd13: //RASET CMD.(0x2B02)=yEnd[15:8]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B02; end
+							5'd14: //RASET DATA, 0x2B02=yEnd[15:8],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData4[15:8]}; end
+								
+							5'd15: //RASET CMD.(0x2B03)=yEnd[7:0]
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B03; end
+							5'd16: //RASET DATA, 0x2B03=yEnd[7:0],(480,800)=>(0x1DF,0x31F).
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData4[7:0]}; end
+
+							5'd17: //RAMWR.(2C00)
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2C00; end
+
+							5'd18: //Fill Data.
+								if(y_addr==(iData4-iData2+1-1)) begin y_addr<=16'd0; i<=i+1'b1; end
+								else if(x_addr==(iData3-iData1+1-1)) begin x_addr<=16'd0; y_addr<=y_addr+1'b1; end
+									else begin
+											if(done_TFT43) begin en_TFT43<=1'b0; x_addr<=x_addr+1'b1; end
+											else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<=iData5; end //Background Color.
+										end
+							5'd19: //LCD_CS=1.
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd1; end
+
+							5'd20: //Done Signal.
+								begin oDone_r<=1'b1; i<=i+1'b1; end
+
+							5'd21: //Done Signal.
 								begin oDone_r<=1'b0; i<=5'd0; end
 						endcase
 					/*

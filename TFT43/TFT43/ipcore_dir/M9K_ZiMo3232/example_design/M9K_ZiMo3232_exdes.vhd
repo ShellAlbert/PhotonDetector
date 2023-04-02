@@ -76,7 +76,7 @@ use unisim.vcomponents.all;
 entity M9K_ZiMo3232_exdes is
   PORT (
     SPO        : OUT STD_LOGIC_VECTOR(8-1 downto 0);
-    A          : IN  STD_LOGIC_VECTOR(10-1-(4*0*boolean'pos(10>4)) downto 0)
+    A          : IN  STD_LOGIC_VECTOR(11-1-(4*0*boolean'pos(11>4)) downto 0)
                  := (OTHERS => '0')
       );
 
@@ -91,7 +91,7 @@ architecture xilinx of M9K_ZiMo3232_exdes is
   PORT (
 
     SPO                     : OUT STD_LOGIC_VECTOR(8-1 downto 0);
-    A                       : IN  STD_LOGIC_VECTOR(10-1-(4*0*boolean'pos(10>4)) downto 0)
+    A                       : IN  STD_LOGIC_VECTOR(11-1-(4*0*boolean'pos(11>4)) downto 0)
                               := (OTHERS => '0')
 
 );

@@ -55,7 +55,7 @@
 // "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
-// CLK_OUT1____10.000______0.000______50.0_____2200.000____150.000
+// CLK_OUT1____20.000______0.000______50.0_____1200.000____150.000
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -95,8 +95,8 @@ module ZsyPLL
   wire clkfx;
 
   DCM_SP
-  #(.CLKDV_DIVIDE          (5.000),
-    .CLKFX_DIVIDE          (10),
+  #(.CLKDV_DIVIDE          (2.500),
+    .CLKFX_DIVIDE          (5),
     .CLKFX_MULTIPLY        (2),
     .CLKIN_DIVIDE_BY_2     ("FALSE"),
     .CLKIN_PERIOD          (20.0),
