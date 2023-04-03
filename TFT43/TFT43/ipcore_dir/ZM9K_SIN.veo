@@ -49,8 +49,8 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 ZM9K_SIN your_instance_name (
   .clka(clka), // input clka
-  .addra(addra), // input [7 : 0] addra
-  .douta(douta) // output [7 : 0] douta
+  .addra(addra), // input [9 : 0] addra
+  .douta(douta) // output [6 : 0] douta
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

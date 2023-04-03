@@ -22,14 +22,10 @@ module ZTFT43_Adapter(
     input clk,
     input rst_n,
     input en,
-
-    input ex_pulse, //external photon pulse input pin.
-    
     //0: Idle.
     //1: Draw fixed (not changed) parts.
     //2: Draw SIN WAVE.
     //3: Draw RTC.
-    //4. Draw PulseCounter.
     input [3:0] iTrigger,
     output done,
 
@@ -81,7 +77,6 @@ ZTFT43_Controller ic_TFT_Controller(
     .LCD_DATA(LCD_DATA) //output.
     );
 
-/*
 //60Hz Refresh Rate.
 //20MHz/60Hz=333333.333~=333334.
 reg [18:0] cnt_60Hz;
@@ -92,7 +87,6 @@ else if(cnt_60Hz==19'd333334-1)
 		cnt_60Hz<=19'd0;
 	else
 		cnt_60Hz<=cnt_60Hz+1'b1;
-*/
 
 //ZiMo 32x32.
 reg [10:0] addr_ZiMo3232;
@@ -148,59 +142,6 @@ reg [3:0] cnt_10bits;
 
 //20MHz/10Hz=2000,000
 reg [23:0] CNT_FPS;
-
-//External Photon Pulse Counter.
-wire [3:0] cnt_q0; //LSB.
-wire [3:0] cnt_q1;
-wire [3:0] cnt_q2;
-wire [3:0] cnt_q3;
-wire [3:0] cnt_q4;
-wire [3:0] cnt_q5;
-wire [3:0] cnt_q6;
-wire [3:0] cnt_q7; //MSB.
-wire cnt_overflow;
-ZPulseCounter_Module ic_PulseCounter(
-    .clk(clk_20MHz),
-    .rst_n(rst_n),
-    .en(1'b1), //always enable.
-    .pulse(ex_pulse), //external photon pulse.
-    .q0(cnt_q0), //LSB.
-    .q1(cnt_q1),
-    .q2(cnt_q2),
-    .q3(cnt_q3),
-    .q4(cnt_q4),
-    .q5(cnt_q5),
-    .q6(cnt_q6),
-    .q7(cnt_q7), //MSB.
-    .overflow(cnt_overflow)
-    );
-
-//PulseCounter 8bits Multiplex.
-reg [3:0] select_PulseCounter;
-wire [3:0] dout_PulseCounter;
-ZPulseCounter_Mux10to1 ic_PulseCounter_Mux(
-	//0: q0
-	//1: q1
-	//2: q2
-	//3: q3
-	//4: q4
-	//5: q5
-	//6: q6
-	//7: q7
-    .select(select_PulseCounter),
-    
-    .q0(cnt_q0),
-    .q1(cnt_q1),
-    .q2(cnt_q2),
-    .q3(cnt_q3),
-    .q4(cnt_q4),
-    .q5(cnt_q5),
-    .q6(cnt_q6),
-    .q7(cnt_q7),
-    
-    .dout(dout_PulseCounter)
-    );
-
 
 //make SIN wave looking bold.
 reg [2:0] x_bold;
@@ -666,9 +607,9 @@ else if(en)
 							if(done_TFT) begin en_TFT<=1'b0; x_bold<=x_bold-1'b1; end
 							else begin 
 									en_TFT<=1'b1; 
-									trigger_TFT<=4'd5; //5: Draw SIN Wave.
+									trigger_TFT<=4'd5; //4: Draw SIN Wave.
 									data1_TFT<=16'd250-1+x_bold; //xOffset. x shift + x_bold.
-									data2_TFT<=16'd100-1; //yOffset.
+									data2_TFT<=16'd50-1; //yOffset.
 									data3_TFT<=16'h7E0; //Color.
 								end
 						end
@@ -679,9 +620,9 @@ else if(en)
 							if(done_TFT) begin en_TFT<=1'b0; x_bold<=x_bold-1'b1; end
 							else begin 
 									en_TFT<=1'b1; 
-									trigger_TFT<=4'd5; //5: Draw SIN Wave.
+									trigger_TFT<=4'd5; //4: Draw SIN Wave.
 									data1_TFT<=16'd250-1-x_bold; //xOffset. x shift - x_bold.
-									data2_TFT<=16'd100-1; //yOffset.
+									data2_TFT<=16'd50-1; //yOffset.
 									data3_TFT<=16'h7E0; //Color.
 								end
 						end
@@ -693,7 +634,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd5; //4: Draw SIN Wave.
 									data1_TFT<=16'd250-1; //xOffset. 
-									data2_TFT<=16'd100-1+y_bold; //yOffset. y shift + y_bold.
+									data2_TFT<=16'd50-1+y_bold; //yOffset. y shift + y_bold.
 									data3_TFT<=16'h7E0; //Color.
 								end
 						end
@@ -715,7 +656,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd5; //4: Draw SIN Wave.
 									data1_TFT<=16'd250-1; //xOffset. 
-									data2_TFT<=16'd100-1-y_bold; //yOffset. y shift - y_bold.
+									data2_TFT<=16'd50-1-y_bold; //yOffset. y shift - y_bold.
 									data3_TFT<=16'h7E0; //Color.
 								end
 						end
@@ -816,8 +757,8 @@ else if(en)
 */
 				8'd3: //PreSet x & y position.
 					begin
-						zimo_x_addr<=10'd464-1; 
-						zimo_y_addr<=10'd680;
+						zimo_x_addr<=10'd460-1; 
+						zimo_y_addr<=10'd400;
 						
 						i<=i+1'b1;
 					end
@@ -1232,78 +1173,7 @@ else if(en)
 				8'd37:
 					begin done_r<=1'b0; i<=8'd0; end
 			endcase
-		4'd4: //4. Draw PulseCounter.
-			case(i)
-				8'd0: //PreSet x & y position.
-					begin
-						zimo_x_addr<=10'd240-1; 
-						zimo_y_addr<=10'd680;
-
-						select_PulseCounter<=4'd0;
-						i<=i+1'b1;
-					end
-				8'd1: //choose 0~9 ZiMo offset.
-					begin
-						case(dout_PulseCounter)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd2: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd3: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd4: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-				8'd5:
-					if(select_PulseCounter==4'd7) begin select_PulseCounter<=4'd0; i<=i+1'b1; end
-					else begin select_PulseCounter<=select_PulseCounter+1'b1; i<=8'd1; end
-				8'd6: 
-					begin done_r<=1'b1; i<=i+1'b1; end
-				8'd7:
-					begin done_r<=1'b0; i<=8'd0; end
-			endcase
-		4'd5: 
+		4'd4: 
 			i<=i;
 	endcase
 ////////////////////////

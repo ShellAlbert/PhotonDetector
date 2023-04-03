@@ -21,9 +21,6 @@
 module ZSinglePhotonCounter(
     input clk,
 
-	input ex_pulse, //external photon pulse input pin.
-	output test_pulse, //test pulse output, short connect to pulse.
-	
 	//physical pins connected to TFT 4.3'' screen.
     output LCD_RST,
     output BL_CTR, //BackLight Ctrl.
@@ -54,13 +51,11 @@ ZTFT43_Adapter ic_Adapter(
     .clk(clk_20MHz),
     .rst_n(rst_n),
     .en(en_Adapter),
-
-    .ex_pulse(ex_pulse), //external photon pulse input pin.
+    
     //0: Idle.
     //1: Draw fixed (not changed) parts.
     //2: Draw SIN WAVE.
     //3. Draw RTC.
-    //4. Draw PulseCounter.
     .iTrigger(trigger_Adapter),
     .done(done_Adapter),
 
@@ -74,19 +69,6 @@ ZTFT43_Adapter ic_Adapter(
     .LCD_DATA(LCD_DATA)
     );
 
-
-//generate 1Hz Test Pulse.
-//20MHz/1Hz=20,000,000
-reg [27:0] cnt_1Hz;
-always@(posedge clk_20MHz or negedge rst_n)
-if(!rst_n)
-	cnt_1Hz<=28'd0;
-else if(cnt_1Hz==28'd20_000_000) 
-		cnt_1Hz<=28'd0;
-	else
-		cnt_1Hz<=cnt_1Hz+1'b1;
-assign test_pulse=(cnt_1Hz==28'd20_000_000)?1'b1:1'b0;
- 
 //driven by step i.
 reg [3:0] i;
 always @(posedge clk_20MHz or negedge rst_n)
@@ -102,10 +84,7 @@ else case(i)
 		4'd2: //3. Draw RTC.
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
 			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd3; end
-		4'd3: //4. Draw PulseCounter.
-			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
-			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd4; end
-		4'd4:
+		4'd3:
 			i<=4'd2;
 	endcase
 endmodule

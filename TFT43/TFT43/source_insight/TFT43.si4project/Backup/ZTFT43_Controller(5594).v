@@ -91,12 +91,12 @@ ZTFT43_Module ic_TFT43(
 
 //M9K=9*1024bits=9216bits.
 //120 Samples*7-bits *2 periods =840bits *2 periods =1680 bits.
-reg [9:0] addr_SIN;
-wire [6:0] data_SIN;
+reg [7:0] addr_SIN;
+wire [7:0] data_SIN;
 ZM9K_SIN ic_M9K_SIN (
   .clka(clk), // input clka
-  .addra(addr_SIN), // input [9 : 0] addra
-  .douta(data_SIN) // output [6 : 0] douta
+  .addra(addr_SIN), // input [7 : 0] addra
+  .douta(data_SIN) // output [7 : 0] douta
 );
 
 reg [15:0] x_addr;
@@ -122,7 +122,7 @@ if(!rst_n)	begin
 				y_addr<=16'd0;
 				oDone_r<=1'b0;
 
-				addr_SIN<=10'd0;
+				addr_SIN<=8'd0;
 				cnt_bits<=4'd0;
 			end
 else if(en)	begin
@@ -573,10 +573,10 @@ else if(en)	begin
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd1; end
 
 							5'd21:
-								if(addr_SIN==10'd600-1) begin addr_SIN<=10'd0; i<=i+1'b1; end
+								if(addr_SIN==8'd240-1) begin addr_SIN<=8'd0; i<=i+1'b1; end
 								else begin 
 										addr_SIN<=addr_SIN+1'b1; //next index SIN data.
-										y_addr<=y_addr+'d1; //Next Pixel Gap is 3.
+										y_addr<=y_addr+'d3; //Next Pixel Gap is 3.
 										i<=5'd1; 
 									end
 							5'd22: //Done Signal.

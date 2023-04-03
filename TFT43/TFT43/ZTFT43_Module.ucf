@@ -1,9 +1,7 @@
 
-# PlanAhead Generated physical constraints 
 
 NET "LCD_RS" LOC = R9;
 
-# PlanAhead Generated IO constraints 
 
 NET "LCD_RS" IOSTANDARD = LVCMOS33;
 NET "LCD_DATA[15]" IOSTANDARD = LVCMOS33;
@@ -31,7 +29,6 @@ NET "LCD_RST" IOSTANDARD = LVCMOS33;
 NET "LCD_WR" IOSTANDARD = LVCMOS33;
 
 
-# PlanAhead Generated physical constraints 
 
 NET "LCD_CS" LOC = T9;
 NET "LCD_RD" LOC = R12;
@@ -55,3 +52,8 @@ NET "LCD_DATA[13]" LOC = R16;
 NET "BL_CTR" LOC = H13;
 NET "LCD_DATA[15]" LOC = H14;
 NET "clk" LOC = H3;
+
+# PlanAhead Generated physical constraints 
+
+NET "ex_pulse" LOC = E2;
+NET "test_pulse" LOC = E1;
