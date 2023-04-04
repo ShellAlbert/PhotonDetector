@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="ZsyPLL">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2023-4-1T7:30:24</timestamp>
+    <timestamp>2023-4-4T10:48:47</timestamp>
     <pin polarity="Input" x="0" y="80" name="clk_in1" />
     <pin polarity="Output" x="608" y="80" name="clk_out1" />
     <pin polarity="Output" x="608" y="976" name="locked" />

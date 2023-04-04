@@ -23,7 +23,6 @@ module ZSinglePhotonCounter(
 
 	input ex_pulse, //external photon pulse input pin.
 	output test_pulse, //test pulse output, short connect to pulse.
-	output reg time_cost, //used to check time cost.
 	
 	//physical pins connected to TFT 4.3'' screen.
     output LCD_RST,
@@ -76,7 +75,7 @@ ZTFT43_Adapter ic_Adapter(
     );
 
 
-//generate 1Hz Test Pulse, short connect to ex_pulse.
+//generate 1Hz Test Pulse.
 //20MHz/1Hz=20,000,000
 reg [27:0] cnt_1Hz;
 always@(posedge clk_20MHz or negedge rst_n)
@@ -90,13 +89,9 @@ assign test_pulse=(cnt_1Hz==28'd20_000_000)?1'b1:1'b0;
  
 //driven by step i.
 reg [3:0] i;
-reg [63:0] cnt;
 always @(posedge clk_20MHz or negedge rst_n)
-if(!rst_n)	begin
-				i<=4'd0;
-				time_cost<=1'b0;
-				cnt<=64'd0;
-			end
+if(!rst_n)
+	i<=4'd0;
 else case(i)
 		4'd0: //1: Draw fixed (not changed) parts.
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
@@ -111,14 +106,6 @@ else case(i)
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
 			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd4; end
 		4'd4:
-			begin
-				if(cnt==64'hFFFFFFF) begin
-									time_cost<=~time_cost;
-									i<=4'd1;
-									cnt<=0;
-								end
-				else 
-					cnt<=cnt+1'b1;
-			end
+			i<=4'd2;
 	endcase
 endmodule

@@ -53,7 +53,10 @@ NET "BL_CTR" LOC = H13;
 NET "LCD_DATA[15]" LOC = H14;
 NET "clk" LOC = H3;
 
-# PlanAhead Generated physical constraints 
 
 NET "ex_pulse" LOC = E2;
 NET "test_pulse" LOC = E1;
+
+# PlanAhead Generated physical constraints 
+
+NET "time_cost" LOC = F1;

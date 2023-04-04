@@ -18,6 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+`include "ColorTable/ZRGB565_ColorTable.v"
+
 module ZTFT43_Adapter(
     input clk,
     input rst_n,
@@ -122,6 +124,19 @@ ZRTC_Counter ic_RTC(
     .minute_1(minute_1),
     .second_10(second_10),
     .second_1(second_1));
+reg [3:0] select_RTCMux;
+wire [10:0] dout_RTC_ZiMo_Addr;
+ZRTC_Mux8to1 ic_RTC_Mux(
+    .select(select_RTCMux),
+    .hour_10(hour_10),
+    .hour_1(hour_1),
+    .minute_10(minute_10),
+    .minute_1(minute_1),
+    .second_10(second_10),
+    .second_1(second_1),
+    .dout(dout_RTC_ZiMo_Addr)
+    );
+
 
 //FIFO to save Pulse Counter.
 reg [7:0] data_in_FIFO;
@@ -160,7 +175,7 @@ wire [3:0] cnt_q6;
 wire [3:0] cnt_q7; //MSB.
 wire cnt_overflow;
 ZPulseCounter_Module ic_PulseCounter(
-    .clk(clk_20MHz),
+    .clk(clk),
     .rst_n(rst_n),
     .en(1'b1), //always enable.
     .pulse(ex_pulse), //external photon pulse.
@@ -227,6 +242,8 @@ if(!rst_n)	begin
 
 				CNT_FPS<=24'd0;
 				cnt_10bits<=4'd0;
+
+				select_RTCMux<=4'd0;
 			end
 else if(en)
 	case(iTrigger)
@@ -243,12 +260,16 @@ else if(en)
 							en_TFT<=1'b1; 
 							trigger_TFT<=4'd0; //0:Initial TFT.
 						end
-				8'd1: //1:Clear Screen with Color.
+				8'd1: //1:Clear Screen with Color.(0,0) (480-1, 800-1).
 					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT<=1'b1; 
 							trigger_TFT<=4'd1; //1:Clear Screen with Color.
-							data1_TFT<=16'h0000;
+							data1_TFT<=16'd0; //(x1)
+							data2_TFT<=16'd0; //(y1)
+							data3_TFT<=16'd480-1; //(x2)
+							data4_TFT<=16'd800-1; //(y2)
+							data5_TFT<=`Color_Black; //Color.
 						end
 				8'd2: //2:Draw A Point, iData1=(x), iData2=(y), iData3=(Color).
 					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
@@ -360,7 +381,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
 									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'h7E0; //Color.
+									data2_TFT<=`Color_Green; //Color.
 								end
 						end
 				8'd12: //8: End Area Write.
@@ -397,7 +418,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
 									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'h7E0; //Color.
+									data2_TFT<=`Color_Green; //Color.
 								end
 						end
 				8'd15: //8: End Area Write.
@@ -434,7 +455,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
 									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'h7E0; //Color.
+									data2_TFT<=`Color_Green; //Color.
 								end
 						end
 				8'd18: //8: End Area Write.
@@ -471,7 +492,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
 									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'h7E0; //Color.
+									data2_TFT<=`Color_Green; //Color.
 								end
 						end
 				8'd21: //8: End Area Write.
@@ -658,21 +679,32 @@ else if(en)
 					begin done_r<=1'b0; i<=8'd0; end
 			endcase
 		4'd2: //2: Draw SIN WAVE.
-			case(i)  //draw two times with a 1 pixel xoffset to make sin wave looks bold.
-				8'd0: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
-				//draw two times with a 1 pixel xoffset to make sin wave looks bold.
-					if(x_bold==3'd0) begin x_bold<=3'd3; i<=i+1'b1; end
-					else begin
-							if(done_TFT) begin en_TFT<=1'b0; x_bold<=x_bold-1'b1; end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd5; //5: Draw SIN Wave.
-									data1_TFT<=16'd250-1+x_bold; //xOffset. x shift + x_bold.
-									data2_TFT<=16'd100-1; //yOffset.
-									data3_TFT<=16'h7E0; //Color.
-								end
+			//Single Period SIN wave is 120 points, 7-bit, 2^7=128.
+			//If we want to draw 5 periods on screen, so 5*120=600.
+			//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
+			case(i) 
+				8'd0: 
+					//9: Fast Clear Screen,
+					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
+					else begin 
+							en_TFT<=1'b1; 
+							trigger_TFT<=4'd1; //9: Fast Clear Screen.
+							data1_TFT<=16'd250; //(x1)
+							data2_TFT<= 16'd100; //(y1)
+							data3_TFT<=16'd378-1; //(x2) 2^7=128, 244+128=372
+							data4_TFT<=16'd700-1; //(y2)
+							data5_TFT<=`Color_Black; //Color.
 						end
 				8'd1: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+				//draw two times with a 1 pixel xoffset to make sin wave looks bold.
+					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
+					else begin 
+							en_TFT<=1'b1; 
+							trigger_TFT<=4'd5; //5: Draw SIN Wave.
+							data3_TFT<=`Color_Green; //Color.
+						end
+/*
+				8'd2: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
 				//draw two times with a 1 pixel xoffset to make sin wave looks bold.
 					if(x_bold==3'd0) begin x_bold<=3'd3; i<=i+1'b1; end
 					else begin
@@ -682,23 +714,23 @@ else if(en)
 									trigger_TFT<=4'd5; //5: Draw SIN Wave.
 									data1_TFT<=16'd250-1-x_bold; //xOffset. x shift - x_bold.
 									data2_TFT<=16'd100-1; //yOffset.
-									data3_TFT<=16'h7E0; //Color.
+									data3_TFT<=`Color_Green; //Color.
 								end
 						end
-				8'd2: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+				8'd3: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
 					if(y_bold==3'd0) begin y_bold<=3'd3; i<=i+1'b1; end
 					else begin
 							if(done_TFT) begin en_TFT<=1'b0; y_bold<=y_bold-1'b1; end
 							else begin 
 									en_TFT<=1'b1; 
-									trigger_TFT<=4'd5; //4: Draw SIN Wave.
+									trigger_TFT<=4'd5; //5: Draw SIN Wave.
 									data1_TFT<=16'd250-1; //xOffset. 
 									data2_TFT<=16'd100-1+y_bold; //yOffset. y shift + y_bold.
-									data3_TFT<=16'h7E0; //Color.
+									data3_TFT<=`Color_Green; //Color.
 								end
 						end
 
-				8'd3: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+				8'd4: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
 					if(y_bold==3'd0) begin 
 										y_bold<=3'd3; 
 
@@ -713,13 +745,13 @@ else if(en)
 							if(done_TFT) begin en_TFT<=1'b0; y_bold<=y_bold-1'b1; end
 							else begin 
 									en_TFT<=1'b1; 
-									trigger_TFT<=4'd5; //4: Draw SIN Wave.
+									trigger_TFT<=4'd5; //5: Draw SIN Wave.
 									data1_TFT<=16'd250-1; //xOffset. 
 									data2_TFT<=16'd100-1-y_bold; //yOffset. y shift - y_bold.
-									data3_TFT<=16'h7E0; //Color.
+									data3_TFT<=`Color_Green; //Color.
 								end
 						end
-/*
+
 				8'd0: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
 					if(x_bold==3'd0) begin x_bold<=3'd0; i<=i+1'b1; end
 					else begin
@@ -769,92 +801,39 @@ else if(en)
 							end
 						end
 */
-				8'd4: 
+
+				8'd2: 
 					begin done_r<=1'b1; i<=i+1'b1; end
-				8'd5:
+				8'd3:
 					begin done_r<=1'b0; i<=8'd0; end
 			endcase
 		4'd3: //Draw RTC.
 			//23:59:59  Font Size: 24*12.
 			//Clear the area before writing.
-			//(x1,y1)=(460-24,400) (x2,y2)=(460,400+8*12)=(460,496).
+			//(x1,y1)=(464-24,680) (x2,y2)=(464,680+8*12)=(464,776).
+			//(440,680)-(464-1,776-1)
 			case(i)
-				8'd0:
-					i<=8'd3;
-			/*
 				8'd0: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin  en_TFT<=1'b0; i<=i+1'b1; end		
+					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end		
 					else begin 
 							en_TFT<=1'b1; 
 							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, 436}; //(x1)
-							data2_TFT<={6'd0, 400}; //(y1)
-							data3_TFT<={6'd0, 460-1};//(x2)
-							data4_TFT<={6'd0, 496-1};//(y2)
+							data1_TFT<=440; //(x1)
+							data2_TFT<=680; //(y1)
+							data3_TFT<=(464-1); //(x2)
+							data4_TFT<=(776-1); //(y2)
 						end
-				8'd1: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(zimo_y_addr>=(496-400)) begin zimo_y_addr<=0;  i<=i+1'b1; end
-					else if(zimo_x_addr>=(460-436)) begin 
-														zimo_x_addr<=0; 
-														zimo_y_addr<=zimo_y_addr+1'b1; 
-													end
-						else begin
-								if(done_TFT) begin 
-												en_TFT<=1'b0; 
-												zimo_x_addr<=zimo_x_addr+1'b1; 
-											end
-								else begin 
-										en_TFT<=1'b1; 
-										trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-										data1_TFT<=16'hFFFF;
-										data2_TFT<=16'hFE00; //Color.
-									end
-							end
-				8'd2: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-*/
-				8'd3: //PreSet x & y position.
-					begin
-						zimo_x_addr<=10'd464-1; 
-						zimo_y_addr<=10'd680;
+				8'd1: 
+					begin 
+						//choose 0~9 ZiMo offset.
+						addr_ZiMo3232<=dout_RTC_ZiMo_Addr;
 						
-						i<=i+1'b1;
-					end
-				8'd4: //choose 0~9 ZiMo offset.
-					begin
-						case(hour_10)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
+						//reset counter.
 						cnt_addr_ZiMo3232<=8'd0;
 						i<=i+1'b1;
 					end
-				8'd5: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd6: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
+				8'd2: //7: Fill Data to Write Area, iData1=data, iData2=Color.
+					if(cnt_addr_ZiMo3232==8'd36 ) begin 
 													cnt_addr_ZiMo3232<=8'd0; 
 													i<=i+1'b1; 
 												end
@@ -871,372 +850,26 @@ else if(en)
 									data2_TFT<=16'hF800; //Color.
 								end
 						end
-				8'd7: //8: End Area Write.
+				8'd3:
+					if(select_RTCMux==4'd7) begin select_RTCMux<=4'd0; i<=i+1'b1; end
+					else begin 
+							select_RTCMux<=select_RTCMux+1'b1; 
+							i<=8'd1; //Loop.
+						end
+				8'd4: //8: End Area Write.
 					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
 					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
 
-				8'd8: //choose 0~9 ZiMo offset.
-					begin
-						case(hour_1)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd9: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd10: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd11: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-					
-				8'd12: //choose 0~9 ZiMo offset.
-					begin
-						addr_ZiMo3232<='d1384; //:1384.
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd13: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd14: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd15: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-					
-				8'd16: //choose 0~9 ZiMo offset.
-					begin
-						case(minute_10)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd17: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd18: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd19: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-					
-				8'd20: //choose 0~9 ZiMo offset.
-					begin
-						case(minute_1)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd21: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd22: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd23: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-				8'd24: //choose 0~9 ZiMo offset.
-					begin
-						addr_ZiMo3232<='d1384; //:1384.
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd25: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd26: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd27: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-				8'd28: //choose 0~9 ZiMo offset.
-					begin
-						case(second_10)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd29: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd30: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd31: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-				8'd32: //choose 0~9 ZiMo offset.
-					begin
-						case(second_1)
-							4'd0: addr_ZiMo3232<='d1024; //0 start from 1024 offset.
-							4'd1: addr_ZiMo3232<='d1060; //1024+36=1060.
-							4'd2: addr_ZiMo3232<='d1096;
-							4'd3: addr_ZiMo3232<='d1132;
-							4'd4: addr_ZiMo3232<='d1168;
-							4'd5: addr_ZiMo3232<='d1204;
-							4'd6: addr_ZiMo3232<='d1240;
-							4'd7: addr_ZiMo3232<='d1276;
-							4'd8: addr_ZiMo3232<='d1312;
-							4'd9: addr_ZiMo3232<='d1348; //:1384.
-						endcase
-						cnt_addr_ZiMo3232<=8'd0;
-						i<=i+1'b1;
-					end
-				8'd33: //6: PreSet Write Area, iData1=(x1), iData2=(y1), iData3=(x2), iData4=(y2).
-					if(done_TFT) begin 
-									en_TFT<=1'b0; 
-									zimo_x_addr<=zimo_x_addr; //keep X.
-									zimo_y_addr<=zimo_y_addr+12; //update y.
-									i<=i+1'b1; 
-								end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd6; //6: PreSet Write Area.
-							data1_TFT<={6'd0, zimo_x_addr-24+1}; //(x1)
-							data2_TFT<={6'd0, zimo_y_addr}; //(y1)
-							data3_TFT<={6'd0, zimo_x_addr};//(x2)
-							data4_TFT<={6'd0, zimo_y_addr+12-1};//(y2)
-						end
-				8'd34: //7: Fill Data to Write Area, iData1=data, iData2=Color.
-					if(cnt_addr_ZiMo3232>=8'd36 ) begin 
-													cnt_addr_ZiMo3232<=8'd0; 
-													i<=i+1'b1; 
-												end
-					else begin
-							if(done_TFT) begin 
-											en_TFT<=1'b0; 
-											cnt_addr_ZiMo3232<=cnt_addr_ZiMo3232+1'b1; 
-											addr_ZiMo3232<=addr_ZiMo3232+1'b1;
-										end
-							else begin 
-									en_TFT<=1'b1; 
-									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
-									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=16'hF800; //Color.
-								end
-						end
-				8'd35: //8: End Area Write.
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin en_TFT<=1'b1; trigger_TFT<=4'd8; end //End Area Write. 
-				8'd36: 
+				8'd5: 
 					begin done_r<=1'b1; i<=i+1'b1; end
-				8'd37:
+				8'd6:
 					begin done_r<=1'b0; i<=8'd0; end
 			endcase
 		4'd4: //4. Draw PulseCounter.
 			case(i)
 				8'd0: //PreSet x & y position.
 					begin
-						zimo_x_addr<=10'd240-1; 
+						zimo_x_addr<=10'd220-1; 
 						zimo_y_addr<=10'd680;
 
 						select_PulseCounter<=4'd0;
