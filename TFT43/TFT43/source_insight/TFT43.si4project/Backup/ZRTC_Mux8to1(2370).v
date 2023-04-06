@@ -44,7 +44,6 @@ begin
 				4'd8: dout<='d1312; //8
 				4'd9: dout<='d1348; //9
 				4'd10: dout<='d1384; //: 
-				default: dout<='d1024;
 			endcase
 		4'd1:
 			case(hour_1)
@@ -59,7 +58,6 @@ begin
 				4'd8: dout<='d1312; //8
 				4'd9: dout<='d1348; //9
 				4'd10: dout<='d1384; //: 
-				default: dout<='d1024;
 			endcase
 		4'd2:
 			dout<='d1384; //:
@@ -76,7 +74,6 @@ begin
 				4'd8: dout<='d1312; //8
 				4'd9: dout<='d1348; //9
 				4'd10: dout<='d1384; //: 
-				default: dout<='d1024;
 			endcase
 		4'd4:
 			case(minute_1)
@@ -91,7 +88,6 @@ begin
 				4'd8: dout<='d1312; //8
 				4'd9: dout<='d1348; //9
 				4'd10: dout<='d1384; //: 
-				default: dout<='d1024;
 			endcase
 		4'd5:
 			dout<='d1384; //:
@@ -108,7 +104,6 @@ begin
 				4'd8: dout<='d1312; //8
 				4'd9: dout<='d1348; //9
 				4'd10: dout<='d1384; //: 
-				default: dout<='d1024;
 			endcase
 		4'd7:
 			case(second_1)
@@ -123,7 +118,6 @@ begin
 				4'd8: dout<='d1312; //8
 				4'd9: dout<='d1348; //9
 				4'd10: dout<='d1384; //: 
-				default: dout<='d1024;
 			endcase
 	endcase
 end

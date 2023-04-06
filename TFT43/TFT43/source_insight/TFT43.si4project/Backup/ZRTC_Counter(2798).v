@@ -30,13 +30,13 @@ module ZRTC_Counter(
     output reg [3:0] second_1
     );
 
-//80MHz/1Hz=80,000,000
+//20MHz/1Hz=20,000,000
 reg [27:0] cnt;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) 	begin
 				cnt<=28'd0;
 			end
-else if(cnt==28'd80_000_000)
+else if(cnt==28'd20_000_000)
 		cnt<=28'd0;
 	else
 		cnt<=cnt+1'b1;
@@ -49,7 +49,7 @@ if(!rst_n)	begin
 				second_1<=4'd0;
 				overflow_sec_1<=1'b0;
 			end
-else if(en && cnt==28'd80_000_000)	begin
+else if(en && cnt==28'd20_000_000)	begin
 										if(second_1==4'd9) 	begin 
 																second_1<=4'd0;
 																overflow_sec_1<=1'b1;

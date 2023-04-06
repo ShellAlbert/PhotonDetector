@@ -32,7 +32,6 @@ module ZTFT43_Adapter(
     //2: Draw SIN WAVE.
     //3: Draw RTC.
     //4. Draw PulseCounter.
-    //5. Draw PulseCounter Curve.
     input [3:0] iTrigger,
     output done,
 
@@ -139,7 +138,25 @@ ZRTC_Mux8to1 ic_RTC_Mux(
     );
 
 
+//FIFO to save Pulse Counter.
+reg [7:0] data_in_FIFO;
+reg wr_en_FIFO;
+reg rd_en_FIFO;
+wire [7:0] data_out_FIFO;
+wire full_FIFO;
+wire empty_FIFO;
 
+reg [7:0] PulseCounter;
+ZFIFO_PulseCounter ic_FIFO_PulseCounter (
+  .clk(clk), // input clk
+  .rst(rst_n), // input rst
+  .din(data_in_FIFO), // input [7 : 0] din
+  .wr_en(wr_en_FIFO), // input wr_en
+  .rd_en(rd_en_FIFO), // input rd_en
+  .dout(data_out_FIFO), // output [7 : 0] dout
+  .full(full_FIFO), // output full
+  .empty(empty_FIFO) // output empty
+);
 //xxxxxxxxxx=10bits.
 //0000000000~9999999999
 reg [3:0] cnt_10bits;
@@ -667,19 +684,127 @@ else if(en)
 			//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
 			case(i) 
 				8'd0: 
+					//9: Fast Clear Screen,
 					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT<=1'b1; 
-							trigger_TFT<=4'd9; //9: Fast draw SIN wave.
-							data1_TFT<=16'd250; //(x1): xOffset.
-							data2_TFT<= 16'd100; //(y1): yOffset.
+							trigger_TFT<=4'd1; //9: Fast Clear Screen.
+							data1_TFT<=16'd250; //(x1)
+							data2_TFT<= 16'd100; //(y1)
 							data3_TFT<=16'd378-1; //(x2) 2^7=128, 244+128=372
 							data4_TFT<=16'd700-1; //(y2)
 							data5_TFT<=`Color_Black; //Color.
 						end
-				8'd1: 
+				8'd1: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+				//draw two times with a 1 pixel xoffset to make sin wave looks bold.
+					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
+					else begin 
+							en_TFT<=1'b1; 
+							trigger_TFT<=4'd5; //5: Draw SIN Wave.
+							data3_TFT<=`Color_Green; //Color.
+						end
+/*
+				8'd2: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+				//draw two times with a 1 pixel xoffset to make sin wave looks bold.
+					if(x_bold==3'd0) begin x_bold<=3'd3; i<=i+1'b1; end
+					else begin
+							if(done_TFT) begin en_TFT<=1'b0; x_bold<=x_bold-1'b1; end
+							else begin 
+									en_TFT<=1'b1; 
+									trigger_TFT<=4'd5; //5: Draw SIN Wave.
+									data1_TFT<=16'd250-1-x_bold; //xOffset. x shift - x_bold.
+									data2_TFT<=16'd100-1; //yOffset.
+									data3_TFT<=`Color_Green; //Color.
+								end
+						end
+				8'd3: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+					if(y_bold==3'd0) begin y_bold<=3'd3; i<=i+1'b1; end
+					else begin
+							if(done_TFT) begin en_TFT<=1'b0; y_bold<=y_bold-1'b1; end
+							else begin 
+									en_TFT<=1'b1; 
+									trigger_TFT<=4'd5; //5: Draw SIN Wave.
+									data1_TFT<=16'd250-1; //xOffset. 
+									data2_TFT<=16'd100-1+y_bold; //yOffset. y shift + y_bold.
+									data3_TFT<=`Color_Green; //Color.
+								end
+						end
+
+				8'd4: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+					if(y_bold==3'd0) begin 
+										y_bold<=3'd3; 
+
+										//PreSet ZiMo x&y address.
+										zimo_x_addr<=10'd470-1;
+										zimo_y_addr<=10'd10;
+
+										//next step.
+										i<=i+1'b1;
+									end
+					else begin
+							if(done_TFT) begin en_TFT<=1'b0; y_bold<=y_bold-1'b1; end
+							else begin 
+									en_TFT<=1'b1; 
+									trigger_TFT<=4'd5; //5: Draw SIN Wave.
+									data1_TFT<=16'd250-1; //xOffset. 
+									data2_TFT<=16'd100-1-y_bold; //yOffset. y shift - y_bold.
+									data3_TFT<=`Color_Green; //Color.
+								end
+						end
+
+				8'd0: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+					if(x_bold==3'd0) begin x_bold<=3'd0; i<=i+1'b1; end
+					else begin
+						if(done_TFT) begin en_TFT<=1'b0; x_bold<=x_bold-1'b1; end
+						else begin 
+								en_TFT<=1'b1; 
+								trigger_TFT<=4'd5; //5: Draw SIN Wave.
+								data1_TFT<=16'd10-1+x_bold; //xOffset. x_shift + x_bold.
+								data2_TFT<=16'd10-1; //yOffset.
+								data3_TFT<=16'hF8B2; //Color.
+							end
+						end
+				8'd1: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+					if(x_bold==3'd0) begin x_bold<=3'd0; i<=i+1'b1; end
+					else begin
+						if(done_TFT) begin en_TFT<=1'b0; x_bold<=x_bold-1'b1; end
+						else begin 
+								en_TFT<=1'b1; 
+								trigger_TFT<=4'd5; //5: Draw SIN Wave.
+								data1_TFT<=16'd10-1-x_bold; //xOffset. x_shift - x_bold.
+								data2_TFT<=16'd10-1; //yOffset.
+								data3_TFT<=16'hF8B2; //Color.
+							end
+						end
+				8'd2: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+					if(y_bold==3'd0) begin y_bold<=3'd0; i<=i+1'b1; end
+					else begin
+						if(done_TFT) begin en_TFT<=1'b0; y_bold<=y_bold-1'b1; end
+						else begin 
+								en_TFT<=1'b1; 
+								trigger_TFT<=4'd5; //5: Draw SIN Wave.
+								data1_TFT<=16'd10-1; //xOffset. 
+								data2_TFT<=16'd10-1+y_bold; //yOffset. y_shift + y_bold.
+								data3_TFT<=16'hF8B2; //Color.
+							end
+						end
+				8'd3: //5: Draw SIN Wave, iData1=xOffset, iData2=yOffset, iData3=Color.
+					if(y_bold==3'd0) begin y_bold<=3'd0; i<=i+1'b1; end
+					else begin
+						if(done_TFT) begin en_TFT<=1'b0; y_bold<=y_bold-1'b1; end
+						else begin 
+								en_TFT<=1'b1; 
+								trigger_TFT<=4'd5; //5: Draw SIN Wave.
+								data1_TFT<=16'd10-1; //xOffset. 
+								data2_TFT<=16'd10-1-y_bold; //yOffset. y_shift - y_bold.
+								data3_TFT<=16'hF8B2; //Color.
+							end
+						end
+*/
+
+				8'd2: 
 					begin done_r<=1'b1; i<=i+1'b1; end
-				8'd2:
+				8'd3:
 					begin done_r<=1'b0; i<=8'd0; end
 			endcase
 		4'd3: //Draw RTC.
@@ -722,7 +847,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
 									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=`Color_Green; //Color.
+									data2_TFT<=16'hF800; //Color.
 								end
 						end
 				8'd3:
@@ -744,7 +869,7 @@ else if(en)
 			case(i)
 				8'd0: //PreSet x & y position.
 					begin
-						zimo_x_addr<=10'd230-1; 
+						zimo_x_addr<=10'd220-1; 
 						zimo_y_addr<=10'd680;
 
 						select_PulseCounter<=4'd0;
@@ -797,7 +922,7 @@ else if(en)
 									en_TFT<=1'b1; 
 									trigger_TFT<=4'd7; //7: Fill Data to Write Area.
 									data1_TFT<={8'h00,data_ZiMo3232};
-									data2_TFT<=`Color_Pink; //Color.
+									data2_TFT<=16'hF800; //Color.
 								end
 						end
 				8'd4: //8: End Area Write.
@@ -811,26 +936,7 @@ else if(en)
 				8'd7:
 					begin done_r<=1'b0; i<=8'd0; end
 			endcase
-		4'd5: //5: Draw PulseCounter Curve.
-			//Draw PulseCounter Curve in rectangle (10,100)-(10+190,100+600)=(200,700).
-			case(i) 
-				8'd0: 
-					if(done_TFT) begin en_TFT<=1'b0; i<=i+1'b1; end
-					else begin 
-							en_TFT<=1'b1; 
-							trigger_TFT<=4'd10; //10. Draw PulseCounter Curve.
-							data1_TFT<=16'd10; //(x1): xOffset.
-							data2_TFT<= 16'd100; //(y1): yOffset.
-							data3_TFT<=16'd200-1; //(x2) 
-							data4_TFT<=16'd700-1; //(y2)
-							data5_TFT<=`Color_Black; //Color.
-						end
-				8'd1: 
-					begin done_r<=1'b1; i<=i+1'b1; end
-				8'd2:
-					begin done_r<=1'b0; i<=8'd0; end
-			endcase
-		4'd6: 
+		4'd5: 
 			i<=i;
 	endcase
 ////////////////////////
@@ -957,4 +1063,34 @@ else 	case(i)
 		endcase
 */
 
+//Process to write data into FIFO.
+//driven by step i.
+reg [7:0] iFIFO;
+always @(posedge clk or negedge rst_n)
+if(!rst_n)	begin
+				iFIFO<=8'd0;
+				data_in_FIFO<=8'd0;
+				wr_en_FIFO<=1'b0;
+			end
+else case(iFIFO)
+		8'd0,8'd1,8'd2,8'd3,8'd4,8'd5,8'd6,8'd7,8'd8,8'd9,8'd10:
+			iFIFO<=iFIFO+1'b1;
+		8'd11:
+			begin
+				if(full_FIFO==1'b1) begin 
+										iFIFO<=iFIFO;
+									end
+				else begin 
+						wr_en_FIFO<=1'b1; 
+						iFIFO<=iFIFO+1'b1; 
+					end 
+
+				//data_in_FIFO<=8'd255; 8bits=0~255.
+				data_in_FIFO<=data_in_FIFO+1'b1; //generate RANDOM.
+			end
+		8'd12:
+			begin wr_en_FIFO<=1'b0; iFIFO<=iFIFO+1'b1; end
+		8'd13:
+			begin iFIFO<=8'd0; end
+	endcase
 endmodule

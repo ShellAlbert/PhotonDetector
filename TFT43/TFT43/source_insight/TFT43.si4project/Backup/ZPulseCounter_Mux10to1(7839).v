@@ -41,7 +41,7 @@ module ZPulseCounter_Mux10to1(
     output reg [3:0] dout
     );
 
-always @(*)	
+always @(select)	
 begin
 	case(select)
 		4'd0: dout<=q7;
@@ -52,7 +52,6 @@ begin
 		4'd5: dout<=q2;
 		4'd6: dout<=q1;
 		4'd7: dout<=q0;
-		default: dout<=q0;
 	endcase
 end
 endmodule

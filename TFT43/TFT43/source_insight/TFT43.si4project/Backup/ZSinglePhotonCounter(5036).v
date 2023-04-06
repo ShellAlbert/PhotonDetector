@@ -36,13 +36,13 @@ module ZSinglePhotonCounter(
     );
 
 //On-board Clock=50MHz.
-wire clk_80MHz;
+wire clk_20MHz;
 wire rst_n;
 ZsyPLL ic_PLL
 (// Clock in ports
 .CLK_IN1(clk),      // IN
 // Clock out ports
-.CLK_OUT1(clk_80MHz),     // OUT
+.CLK_OUT1(clk_20MHz),     // OUT
 // Status and control signals
 .LOCKED(rst_n));      // OUT
 
@@ -52,7 +52,7 @@ reg en_Adapter;
 reg [3:0] trigger_Adapter;
 wire done_Adapter;
 ZTFT43_Adapter ic_Adapter(
-    .clk(clk_80MHz),
+    .clk(clk_20MHz),
     .rst_n(rst_n),
     .en(en_Adapter),
 
@@ -77,61 +77,43 @@ ZTFT43_Adapter ic_Adapter(
 
 
 //generate 1Hz Test Pulse, short connect to ex_pulse.
-//80MHz/1Hz=80_000_000
+//20MHz/1Hz=20,000,000
 reg [27:0] cnt_1Hz;
-always@(posedge clk_80MHz or negedge rst_n)
+always@(posedge clk_20MHz or negedge rst_n)
 if(!rst_n)
 	cnt_1Hz<=28'd0;
-else if(cnt_1Hz==28'd80_000_000) 
+else if(cnt_1Hz==28'd20_000_000) 
 		cnt_1Hz<=28'd0;
 	else
 		cnt_1Hz<=cnt_1Hz+1'b1;
-assign test_pulse=(cnt_1Hz==28'd80_000_000)?1'b1:1'b0;
-
-
-//wire pulse_60Hz;
-//assign pulse_60Hz=(cnt_1Hz==28'd1_333_333)?1'b1:1'b0;		
-
-//60Hz Refresh Rate: 1s/60Hz=1000ms/60Hz=17ms.
-//80MHz/60Hz=1_333_333
-reg [19:0] CNT1;
-
+assign test_pulse=(cnt_1Hz==28'd20_000_000)?1'b1:1'b0;
+ 
 //driven by step i.
 reg [3:0] i;
-always @(posedge clk_80MHz or negedge rst_n)
+reg [63:0] cnt;
+always @(posedge clk_20MHz or negedge rst_n)
 if(!rst_n)	begin
 				i<=4'd0;
 				time_cost<=1'b0;
-				CNT1<=0;
+				cnt<=64'd0;
 			end
 else case(i)
-		'd0: //0: Draw fixed (not changed) parts.
+		4'd0: //1: Draw fixed (not changed) parts.
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
 			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd1; end
-		'd1: //1: Draw SIN WAVE.
+		4'd1: //2: Draw SIN WAVE.
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
 			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd2; end
-		'd2: //2. Draw RTC.
+		4'd2: //3. Draw RTC.
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
 			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd3; end
-		'd3: //3. Draw PulseCounter.
+		4'd3: //4. Draw PulseCounter.
 			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
 			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd4; end
-		'd4: //4. Draw PulseCounter Curve.
-			if(done_Adapter) begin en_Adapter<=1'b0; i<=i+1'b1; end
-			else begin en_Adapter<=1'b1; trigger_Adapter<=4'd5; end
-		'd5:
+		4'd4:
 			begin
 				time_cost<=~time_cost;
-				i<='d1;
+				i<=4'd1;
 			end
-		4'd6: 
-			if(CNT1==960_000) begin
-								CNT1<=0;
-								i<=4'd1;
-							end
-			else
-				CNT1<=CNT1+1'b1;
-			
 	endcase
 endmodule
