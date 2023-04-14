@@ -7,14 +7,14 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/ZSinglePhotonCounter D:|Work|GitHub|PhotonDetector|TFT43|TFT43|code|ZSinglePhotonCounter.v/ic_Adapter - ZTFT43_Adapter/ic_TFT_Controller - ZTFT43_Controller</ClosedNode>
+         <ClosedNode>/ZSinglePhotonCounter D:|Work|GitHub|PhotonDetector|TFT43|TFT43|code|ZSinglePhotonCounter.v/ic_Adapter - ZTFT43_Adapter/ic_TFT_Controller - ZTFT43_Controller/ic_TFT43 - ZTFT43_Module</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>ZSinglePhotonCounter (D:/Work/GitHub/PhotonDetector/TFT43/TFT43/code/ZSinglePhotonCounter.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000020d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000020d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000341000000020000000000000000000000000200000064ffffffff000000810000000300000002000003410000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>ZSinglePhotonCounter (D:/Work/GitHub/PhotonDetector/TFT43/TFT43/code/ZSinglePhotonCounter.v)</CurrentItem>
    </ItemView>
@@ -24,24 +24,26 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ff000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ff0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000002e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <SelectedItems>
+         <SelectedItem>D:\Work\GitHub\PhotonDetector\TFT43\TFT43\ipcore_dir\ZM9K_SIN.xise</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >18</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002d2000000040101000100000000000000000000000064ffffffff000000810000000000000004000001460000000100000000000000240000000100000000000000780000000100000000000000f00000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000346000000040101000100000000000000000000000064ffffffff000000810000000000000004000001ed00000001000000000000007d0000000100000000000000780000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ZPulseCounter.v</CurrentItem>
+      <CurrentItem>D:\Work\GitHub\PhotonDetector\TFT43\TFT43\ipcore_dir\ZM9K_SIN.xise</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -51,7 +53,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000121000000010001000100000000000000000000000064ffffffff000000810000000000000001000001210000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002e7000000010001000100000000000000000000000064ffffffff000000810000000000000001000002e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -66,15 +68,15 @@
          <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem>Design Summary/Reports</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >15</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ee000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ee0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002d6000000010000000100000000000000000000000064ffffffff000000810000000000000001000002d60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem>Design Summary/Reports</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000000db0000011701000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff00000000000000020000010e000000f701000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
@@ -85,7 +87,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ff000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ff0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000002e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>

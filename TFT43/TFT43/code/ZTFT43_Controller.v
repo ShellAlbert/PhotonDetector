@@ -42,6 +42,11 @@ module ZTFT43_Controller(
 	input [15:0] iData3,
 	input [15:0] iData4,
 	input [15:0] iData5,
+
+	//PulseCounter FIFO Reading.
+	input fifo_is_empty,
+	output reg rd_fifo,
+	input [31:0] fifo_data,
 	
 	output oDone,
 
@@ -894,7 +899,7 @@ else if(en)	begin
 						//keep same points as SIN wave, so it's 600.
 						//Draw PulseCounter Curve in rectangle (10,100)-(10+190,100+600)=(200,700).
 						case(i)
-							5'd0: //LCD_CS=0.
+							0: //LCD_CS=0.
 								begin
 									/*
 									iData1<=10; iData2<=100; 
@@ -906,108 +911,172 @@ else if(en)	begin
 									if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 									else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd0; end
 								end
-							5'd1: //CASET CMD.(0x2A00)=xStart[15:8]
+							1: //CASET CMD.(0x2A00)=xStart[15:8]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A00; end
-							5'd2: //CASET DATA, 0x2A00=xStart[15:8],(480,800)=>(0x1DF,0x31F).
+							2: //CASET DATA, 0x2A00=xStart[15:8],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData1[15:8]}; end
 								
-							5'd3: //CASET CMD.(0x2A01)=xStart[7:0]
+							3: //CASET CMD.(0x2A01)=xStart[7:0]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A01; end
-							5'd4: //CASET DATA, 0x2A01=xStart[7:0],(480,800)=>(0x1DF,0x31F).
+							4: //CASET DATA, 0x2A01=xStart[7:0],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData1[7:0]}; end
 								
-							5'd5: //CASET CMD.(0x2A02)=xEnd[15:8]
+							5: //CASET CMD.(0x2A02)=xEnd[15:8]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A02; end
-							5'd6: //CASET DATA, 0x2A02=xEnd[15:8],(480,800)=>(0x1DF,0x31F).
+							6: //CASET DATA, 0x2A02=xEnd[15:8],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData3[15:8]}; end
 								
-							5'd7: //CASET CMD.(0x2A03)=xEnd[7:0]
+							7: //CASET CMD.(0x2A03)=xEnd[7:0]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2A03; end
-							5'd8: //CASET DATA, 0x2A03=xEnd[7:0],(480,800)=>(0x1DF,0x31F).
+							8: //CASET DATA, 0x2A03=xEnd[7:0],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData3[7:0]}; end
 
-							5'd9: //RASET CMD.(0x2B00)=yStart[15:8]
+							9: //RASET CMD.(0x2B00)=yStart[15:8]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B00; end
-							5'd10: //RASET DATA, 0x2B00=yStart[15:8],(480,800)=>(0x1DF,0x31F).
+							10: //RASET DATA, 0x2B00=yStart[15:8],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData2[15:8]}; end
 								
-							5'd11: //RASET CMD.(0x2B01)=yStart[7:0]
+							11: //RASET CMD.(0x2B01)=yStart[7:0]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B01; end
-							5'd12: //RASET DATA, 0x2B01=yStart[7:0],(480,800)=>(0x1DF,0x31F).
+							12: //RASET DATA, 0x2B01=yStart[7:0],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData2[7:0]}; end
 								
-							5'd13: //RASET CMD.(0x2B02)=yEnd[15:8]
+							13: //RASET CMD.(0x2B02)=yEnd[15:8]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B02; end
-							5'd14: //RASET DATA, 0x2B02=yEnd[15:8],(480,800)=>(0x1DF,0x31F).
+							14: //RASET DATA, 0x2B02=yEnd[15:8],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData4[15:8]}; end
 								
-							5'd15: //RASET CMD.(0x2B03)=yEnd[7:0]
+							15: //RASET CMD.(0x2B03)=yEnd[7:0]
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2B03; end
-							5'd16: //RASET DATA, 0x2B03=yEnd[7:0],(480,800)=>(0x1DF,0x31F).
+							16: //RASET DATA, 0x2B03=yEnd[7:0],(480,800)=>(0x1DF,0x31F).
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<={8'h00,iData4[7:0]}; end
 
-							5'd17: //RAMWR.(2C00)
+							17: //RAMWR.(2C00)
 								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 								else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2C00; end
-
-							5'd18: //Fill Data.
-								if(y_addr==iData4+1) begin 
-													y_addr<=16'd0; 
+								
+							18: //Fetch one data from PulseCounter FIFO.
+								if(!fifo_is_empty) begin
+													rd_fifo<=1'b1;
+													i<=i+1'b1;
+												end
+							19: //Draw Pixel.
+								begin
+									rd_fifo<=1'b0;
+									
+									if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+									else begin 
+											en_TFT43<=1'b1; 
+											trigger_TFT43<=4'd3; 
+											
+											//if(x_addr<100)
+											//right shift 4 bits to avoid reach full-scale.
+											//500(Hex), right shift 4 bits, 50(Hex)=80(Dec)
+											if(x_addr<(fifo_data>>4))
+												data_TFT43<=`Color_Pink; //Foreground Color.
+											else
+												data_TFT43<=`Color_Black; //Background Color.
+										end 
+								end
+							20: //X Coordinate.
+								if(x_addr==iData3) begin 
+													x_addr<=iData1; //Reset X.
+													i<=i+1'b1;
+												end
+								else begin
+										x_addr<=x_addr+1'b1;
+										i<=19; //Loop to draw current PulseCounter.
+									end
+							21: //Y Coordinate.
+								if(y_addr==iData4) begin 
+													y_addr<=iData2; //Reset Y.
 													i<=i+1'b1; 
 												end
-								else if(x_addr==iData3+1) begin 
-														x_addr<=iData1; 
-														y_addr<=y_addr+1'b1; 
-
-														//read request when FIFO is not empty.
-														if(!empty_FIFO)
-															rd_en_FIFO<=1'b1;
+								else begin
+										y_addr<=y_addr+1'b1;
+										i<=18; //Loop to Next PulseCounter.
+									end
+/*
+							5'd18: //Fill Data.
+								begin
+									rd_fifo<=1'b0;
+									
+									if(y_addr==iData4+1) begin 
+														y_addr<=16'd0; 
+														i<=i+1'b1; 
 													end
-									else begin
-											if(done_TFT43) begin 
-															en_TFT43<=1'b0; 
-															x_addr<=x_addr+1'b1; 
-															rd_en_FIFO<=1'b0;
+									else if(x_addr==iData3+1) begin 
+															x_addr<=iData1; 
+															y_addr<=y_addr+1'b1; 
+
+															//read request when FIFO is not empty.
+															if(!empty_FIFO)
+																rd_en_FIFO<=1'b1;
 														end
-											else begin 
-													en_TFT43<=1'b1; 
-													trigger_TFT43<=4'd3; 
-													
-													//if(x_addr<100)
-													if(x_addr<data_out_FIFO)
-														data_TFT43<=`Color_Pink; //Foreground Color.
-													else
-														data_TFT43<=`Color_Black; //Background Color.
-												end 
-										end
-							5'd19: //LCD_CS=1.
+										else begin
+												if(done_TFT43) begin 
+																en_TFT43<=1'b0; 
+																x_addr<=x_addr+1'b1; 
+																rd_en_FIFO<=1'b0;
+															end
+												else begin 
+														en_TFT43<=1'b1; 
+														trigger_TFT43<=4'd3; 
+														
+														//if(x_addr<100)
+														if(x_addr<data_out_FIFO)
+															data_TFT43<=`Color_Pink; //Foreground Color.
+														else
+															data_TFT43<=`Color_Black; //Background Color.
+													end 
+											end
+								end
+*/
+							22: //LCD_CS=1.
 								begin
 									if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 									else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd1; end
 								end
 
-							5'd20: //Done Signal.
+							23: //Done Signal.
 								begin oDone_r<=1'b1; i<=i+1'b1; end
 
-							5'd21: //Done Signal.
+							24: //Done Signal.
 								begin oDone_r<=1'b0; i<=5'd0; end
 						endcase
+					4'd11: //Fast Fill Pixel Data, iData1=Color.
+						case(i)
+							0:
+								if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+								else begin 
+										en_TFT43<=1'b1; 
+										trigger_TFT43<=4'd3; 
+										data_TFT43<=iData1; //Pixel Color.
+									end 
+							1: //Done Signal.
+								begin oDone_r<=1'b1; i<=i+1'b1; end
+
+							2: //Done Signal.
+								begin oDone_r<=1'b0; i<=5'd0; end
+						endcase
+												
+								
 					4'd12:
 						//New iTrigger Process Here.
 						begin x_addr<=16'd0; y_addr<=16'd0; end

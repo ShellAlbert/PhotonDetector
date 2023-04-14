@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.xst" -ofn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.syr" 
+xst -intstyle ise -ifn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.xst" -ofn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.syr" 

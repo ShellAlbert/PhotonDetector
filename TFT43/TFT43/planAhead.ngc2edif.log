@@ -178,3 +178,367 @@ WARNING:NetListWriters:306 - Signal bus
 Writing EDIF netlist file ZFIFO_PulseCounter.edif ...
 ngc2edif: Total memory usage is 4317572 kilobytes
 
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZSinglePhotonCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZSinglePhotonCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1761[15 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1633[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data2_TFT[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data1_TFT[11 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/Madd_n0595[8:0]_cy[6 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/iTrigger[3]_data_TFT43[15]_wide_mux_908_OUT[15 :
+   1] on block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZSinglePhotonCounter.edif ...
+ngc2edif: Total memory usage is 4325764 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design M9K_ZiMo3232.ngc ...
+WARNING:NetListWriters:298 - No output is written to M9K_ZiMo3232.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file M9K_ZiMo3232.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZFIFO_PulseCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZFIFO_PulseCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg<2 :
+   0> on block ZFIFO_PulseCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZFIFO_PulseCounter.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZM9K_SIN.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZM9K_SIN.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ZM9K_SIN.edif ...
+ngc2edif: Total memory usage is 4313476 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZSinglePhotonCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZSinglePhotonCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1761[15 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1633[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data2_TFT[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data1_TFT[11 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/Madd_n0595[8:0]_cy[6 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/iTrigger[3]_data_TFT43[15]_wide_mux_908_OUT[15 :
+   1] on block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZSinglePhotonCounter.edif ...
+ngc2edif: Total memory usage is 4325764 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design M9K_ZiMo3232.ngc ...
+WARNING:NetListWriters:298 - No output is written to M9K_ZiMo3232.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file M9K_ZiMo3232.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZFIFO_PulseCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZFIFO_PulseCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg<2 :
+   0> on block ZFIFO_PulseCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZFIFO_PulseCounter.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZM9K_SIN.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZM9K_SIN.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ZM9K_SIN.edif ...
+ngc2edif: Total memory usage is 4313476 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZSinglePhotonCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZSinglePhotonCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Result[20 : 5] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1453[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n0530[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data2_TFT[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data1_TFT[11 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/i[10 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/Madd_n0595[8:0]_cy[6 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/iTrigger[3]_data_TFT43[15]_wide_mux_908_OUT[15 :
+   1] on block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/iTrigger[3]_x_addr[15]_wide_mux_902_OUT[8 : 0]
+   on block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZSinglePhotonCounter.edif ...
+ngc2edif: Total memory usage is 4325764 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design M9K_ZiMo3232.ngc ...
+WARNING:NetListWriters:298 - No output is written to M9K_ZiMo3232.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file M9K_ZiMo3232.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZFIFO_PulseCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZFIFO_PulseCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg<2 :
+   0> on block ZFIFO_PulseCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZFIFO_PulseCounter.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZM9K_SIN.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZM9K_SIN.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ZM9K_SIN.edif ...
+ngc2edif: Total memory usage is 4313476 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZPulseCounter_FIFO.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZPulseCounter_FIFO.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg<2 :
+   0> on block ZPulseCounter_FIFO is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZPulseCounter_FIFO.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZSinglePhotonCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZSinglePhotonCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1480[13 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n0884[15 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/_n1332[14 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/i[15]_GND_33_o_add_0_OUT[14 :
+   0] on block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/data2_TFT[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ic_Adapter/i[14 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/Madd_n0610[8:0]_cy[6 : 1] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/iTrigger[3]_data_TFT43[15]_wide_mux_905_OUT[15 :
+   0] on block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/iTrigger[3]_i[4]_wide_mux_902_OUT[4 : 0] on
+   block ZSinglePhotonCounter is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_TFT_Controller/ic_TFT43/regAddr[15 : 0] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q7[3]_PWR_14_o_wide_mux_0_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q6[3]_PWR_14_o_wide_mux_1_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q5[3]_PWR_14_o_wide_mux_2_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q4[3]_PWR_14_o_wide_mux_3_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q3[3]_PWR_14_o_wide_mux_4_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q2[3]_PWR_14_o_wide_mux_5_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q1[3]_PWR_14_o_wide_mux_6_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ic_Adapter/ic_PulseCounter_Mux/q0[3]_PWR_14_o_wide_mux_7_OUT[8 : 2] on block
+   ZSinglePhotonCounter is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file ZSinglePhotonCounter.edif ...
+ngc2edif: Total memory usage is 4325764 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZPulseCounter_FIFO.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZPulseCounter_FIFO.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ZPulseCounter_FIFO.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design M9K_ZiMo3232.ngc ...
+WARNING:NetListWriters:298 - No output is written to M9K_ZiMo3232.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file M9K_ZiMo3232.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZM9K_SIN.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZM9K_SIN.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ZM9K_SIN.edif ...
+ngc2edif: Total memory usage is 4313476 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ZFIFO_PulseCounter.ngc ...
+WARNING:NetListWriters:298 - No output is written to ZFIFO_PulseCounter.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg<2 :
+   0> on block ZFIFO_PulseCounter is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ZFIFO_PulseCounter.edif ...
+ngc2edif: Total memory usage is 4317572 kilobytes
+

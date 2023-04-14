@@ -1,0 +1,168 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: ZSinglePhotonDetector.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ZSinglePhotonDetector.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ZSinglePhotonDetector"
+Output Format                      : NGC
+Target Device                      : xc6slx25-2-ftg256
+
+---- Source Options
+Top Module Name                    : ZSinglePhotonDetector
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"code/ZPulse_Counter"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_CfgData.v" into library work
+Parsing module <ZTFT43_CfgData>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_TX.v" into library work
+Parsing module <ZUART_Module_TX>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" into library work
+Parsing module <ZUART_Module_RX>.
+WARNING:HDLCompiler:751 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" Line 30: Redeclaration of ansi port rx_data is not allowed
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_BPS_Generator.v" into library work
+Parsing module <ZUART_Module_BPS_Generator>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Module.v" into library work
+Parsing module <ZTFT43_Module>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module.v" into library work
+Parsing module <ZUART_Module>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_Mux10to1.v" into library work
+Parsing module <ZPulseCounter_Mux10to1>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter.v" into library work
+Parsing module <ZPulseCounter>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZEdge_Detect\ZEdgeDetect.v" into library work
+Parsing module <ZEdgeDetect>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\RTC\ZRTC_Mux8to1.v" into library work
+Parsing module <ZRTC_Mux8to1>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\RTC\ZRTC_Counter.v" into library work
+Parsing module <ZRTC_Counter>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Controller.v" into library work
+Parsing verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZEdge_Detect\/../ColorTable/ZRGB565_ColorTable.v" included at line 21.
+Parsing module <ZTFT43_Controller>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" into library work
+Parsing module <ZUART_Controller>.
+WARNING:HDLCompiler:568 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 106: Constant value is truncated to fit in <25> bits.
+WARNING:HDLCompiler:568 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 116: Constant value is truncated to fit in <25> bits.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZTest_Signal\ZTestSignal.v" into library work
+Parsing module <ZTestSignal>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_FIFO.v" into library work
+Parsing module <ZPulseCounter_FIFO>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_Adapter.v" into library work
+Parsing module <ZPulseCounter_Adapter>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Adapter.v" into library work
+Parsing verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\/ColorTable/ZRGB565_ColorTable.v" included at line 21.
+Parsing module <ZTFT43_Adapter>.
+Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" into library work
+Parsing module <ZSinglePhotonDetector>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ZSinglePhotonDetector>.
+ERROR:HDLCompiler:1654 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 48: Instantiating <ic_PLL> from unknown module <ZsyPLL>
+Module ZSinglePhotonDetector remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 21: Empty module <ZSinglePhotonDetector> remains a black box.
+--> 
+
+Total memory usage is 4449400 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

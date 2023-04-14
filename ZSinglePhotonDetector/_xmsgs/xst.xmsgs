@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" Line 30: Redeclaration of ansi port <arg fmt="%s" index="1">rx_data</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >"D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 106: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">25</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >"D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 116: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">25</arg>&gt; bits.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1654" delta="old" >"D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 48: Instantiating &lt;<arg fmt="%s" index="1">ic_PLL</arg>&gt; from unknown module &lt;<arg fmt="%s" index="2">ZsyPLL</arg>&gt;
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">ZSinglePhotonDetector</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+

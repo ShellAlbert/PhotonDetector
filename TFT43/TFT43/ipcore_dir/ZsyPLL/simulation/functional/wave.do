@@ -51,9 +51,9 @@ add wave -noupdate -format Literal -radix ascii /ZsyPLL_tb/test_phase
 add wave -noupdate -divider {Input clocks}
 add wave -noupdate -format Logic /ZsyPLL_tb/CLK_IN1
 add wave -noupdate -divider {Output clocks}
-add wave -noupdate -format Logic /ZsyPLL_tb/dut/clk
+add wave -noupdate -format Literal -expand /ZsyPLL_tb/dut/clk
 add wave -noupdate -divider Status/control
 add wave -noupdate -format Logic /ZsyPLL_tb/LOCKED
 add wave -noupdate -divider Counters
 add wave -noupdate -format Literal -radix hexadecimal /ZsyPLL_tb/COUNT
-add wave -noupdate -format Literal -radix hexadecimal /ZsyPLL_tb/dut/counter
+add wave -noupdate -format Literal -radix hexadecimal -expand /ZsyPLL_tb/dut/counter
