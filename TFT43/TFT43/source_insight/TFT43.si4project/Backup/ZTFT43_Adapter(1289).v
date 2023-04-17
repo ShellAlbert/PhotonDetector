@@ -99,7 +99,47 @@ ZPulseCounter_Mux10to1 ic_PulseCounter_Mux(
     );
  */
 ///////////////////////////////////////////////////////////////////
+//RTC Module.
+wire [3:0] hour_10;
+wire [3:0] hour_1;
+wire [3:0] minute_10;
+wire [3:0] minute_1;
+wire [3:0] second_10;
+wire [3:0] second_1;
+ZRTC_Counter ic_RTC(
+    .clk(clk),
+    .rst_n(rst_n),
+    .en(1'b1), //Always Enable.
+    .hour_10(hour_10),
+    .hour_1(hour_1),
+    .minute_10(minute_10),
+    .minute_1(minute_1),
+    .second_10(second_10),
+    .second_1(second_1));
+ 
+//RTC: xx:xx:xx ZiMo Address Mux.
+reg [3:0] select_RTCMux;
+wire [10:0] dout_RTC_ZiMo_Addr;
+ZRTC_Mux8to1 ic_RTC_Mux(
+    .select(select_RTCMux),
+    .hour_10(hour_10),
+    .hour_1(hour_1),
+    .minute_10(minute_10),
+    .minute_1(minute_1),
+    .second_10(second_10),
+    .second_1(second_1),
+    .dout(dout_RTC_ZiMo_Addr)
+    );
 
+ ////////////////////////////////////////////////////////
+ //ZiMo 32x32.
+reg [10:0] addr_ZiMo3232;
+wire [7:0] data_ZiMo3232;
+reg [7:0] cnt_addr_ZiMo3232;
+M9K_ZiMo3232 ic_M9K_ZiMo3232 (
+  .a(addr_ZiMo3232), // input [10 : 0] a
+  .spo(data_ZiMo3232) // output [7 : 0] spo
+);
 
 /////////////////////////////////
 /*

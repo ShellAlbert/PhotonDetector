@@ -116,15 +116,9 @@ else if(en) begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=3; //3: Draw SIN wave.
 						end
-				7: //Draw GongPinTongBu and GuangZiMaiChong.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
-					else begin 
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=4; //4: Draw GongPinTongBu.
-						end	
-				8: 
+				7: 
 					begin oDraw_Done<=1'b1; i<=i+1'b1; end
-				9:
+				8:
 					begin oDraw_Done<=1'b0; led<=1'b0; i<=4; end
 			endcase
 		end

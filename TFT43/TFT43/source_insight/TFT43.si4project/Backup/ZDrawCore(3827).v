@@ -28,7 +28,6 @@ module ZDrawCore(
 	//1: Draw Fixed Pixel Image.
 	//2: Draw RTC.
 	//3: Draw SIN wave.
-	//4: Draw GongPinTongBu and GuangZiMaiChong.
 	input [3:0] iCmd,
 	output reg oDraw_Done, //output, indicate draw done.
 
@@ -90,9 +89,7 @@ wire [7:0] data_ZiMo3232;
 reg [7:0] cnt_addr_ZiMo3232;
 reg [7:0] cnt_8bits;
 reg [7:0] cnt_3bytes; //Font Matrix, 24*12, 24bits/8bits=3bytes.
-reg [7:0] cnt_4bytes; //Font Matrix, 32*32, 32bits/8bits=4bytes.
-reg [7:0] cnt_bytes; //column 12 repeat times.
-reg [7:0] cnt_column;
+reg [7:0] cnt_12repeat; //column 12 repeat times.
 M9K_ZiMo3232 ic_M9K_ZiMo3232 (
   .a(addr_ZiMo3232), // input [10 : 0] a
   .spo(data_ZiMo3232) // output [7 : 0] spo
@@ -103,7 +100,6 @@ reg [15:0] i;
 reg [31:0] x_position;
 reg [31:0] y_position;
 reg [7:0] pixel_data;
-reg [7:0] which_dot_matrix;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
 			i<=0;
@@ -368,7 +364,7 @@ else if(en) begin
 								//reset counter.
 								cnt_8bits<=0;
 								cnt_3bytes<=0;
-								cnt_column<=0;
+								cnt_12repeat<=0;
 								i<=i+1'b1;
 							end
 						2: 
@@ -408,13 +404,13 @@ else if(en) begin
 									i<=2; //Loop to draw one complete column.
 								end
 						6: //repeat 12 times of 3 bytes = 12*3=36 bytes of one 24*12 digit.
-							if(cnt_column==12-1) begin 
-													cnt_column<=0; 
+							if(cnt_12repeat==12-1) begin 
+													cnt_12repeat<=0; 
 													oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+504; //Next Column.
 													i<=i+1'b1; 
 												end
 							else begin 
-									cnt_column<=cnt_column+1'b1; 
+									cnt_12repeat<=cnt_12repeat+1'b1; 
 									//adjust coordinate: new position: x+24 and y+480=480+24=504
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+504; //Next Column.
 									i<=2; //Loop to draw one complete digit.
@@ -476,145 +472,7 @@ else if(en) begin
 						5: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
-				4: //4: Draw GongPinTongBu and GuangZiMaiChong.
-					case(i)
-						0:
-							begin which_dot_matrix<=0; i<=i+1'b1; end
-						1:
-							begin
-								case(which_dot_matrix)
-									0: //Gong.
-										begin 
-											addr_ZiMo3232<=0; //offset of Gong.
-											//(468,12)
-											//468-32=436, 12+32=44. =>(436,44)
-											//addr=y*width+x=12*480+468=6228.
-											oSDRAM_Wr_Addr<=6228-1;
-										end
-									1: //Pin.
-										begin 
-											addr_ZiMo3232<=128; //offset of Pin.
-											//(468,44)
-											//468-32=436, 44+32=76. =>(436,76)
-											//addr=y*width+x=44*480+468=21588.
-											oSDRAM_Wr_Addr<=21588-1;
-										end
-									2: //Tong.
-										begin 
-											addr_ZiMo3232<=256; //offset of Gong.
-											//(468,76)
-											//468-32=436, 76+32=108. =>(436,108)
-											//addr=y*width+x=76*480+468=36948.
-											oSDRAM_Wr_Addr<=36948-1;
-										end
-									3: //Bu.
-										begin 
-											addr_ZiMo3232<=384; //offset of Gong.
-											//(468,108)
-											//468-32=436, 108+32=140. =>(436,140)
-											//addr=y*width+x=108*480+468=52308.
-											oSDRAM_Wr_Addr<=52308-1;
-										end
-									4: //Guang.
-										begin 
-											addr_ZiMo3232<=512; //offset of Guang.
-											//(238,12)
-											//238-32=206, 12+32=44. =>(206,44)
-											//addr=y*width+x=12*480+238=5998.
-											oSDRAM_Wr_Addr<=5998-1;
-										end
-									5: //Zi.
-										begin 
-											addr_ZiMo3232<=640; //offset of Zi.
-											//(238,44)
-											//238-32=206, 44+32=76. =>(206,76)
-											//addr=y*width+x=44*480+238=21358.
-											oSDRAM_Wr_Addr<=21358-1;
-										end
-									6: //Mai.
-										begin 
-											addr_ZiMo3232<=768; //offset of Mai.
-											//(238,76)
-											//238-32=206, 76+32=108. =>(238,108)
-											//addr=y*width+x=76*480+238=36718.
-											oSDRAM_Wr_Addr<=36718-1;
-										end
-									7: //Chong.
-										begin 
-											addr_ZiMo3232<=896; //offset of Chong.
-											//(238,108)
-											//238-32=206, 108+32=140. =>(238,140)
-											//addr=y*width+x=108*480+238=52078.
-											oSDRAM_Wr_Addr<=52078-1;
-										end
-								endcase
-								
-								//reset counter.
-								cnt_8bits<=0;
-								cnt_bytes<=0;
-								cnt_column<=0;
-								i<=i+1'b1;
-							end
-						2:
-							begin pixel_data<=data_ZiMo3232; i<=i+1'b1; end
-						3: //Loop to draw 8bits.
-							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			 
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color.
-									//Black: Background Color.
-									oSDRAM_Wr_Data<=(pixel_data&8'h01)?(`Color_Green):(`Color_Black);
-									//oSDRAM_Wr_Data<=`Color_Green;
-								end
-						4: 
-							if(cnt_8bits==8-1) begin 
-												cnt_8bits<=0; 
-												//Next SDRAM address. (Next Row/X).
-												oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;		
-												i<=i+1'b1; 
-											end							
-							else begin 
-									cnt_8bits<=cnt_8bits+1'b1; //Next bit.
-									pixel_data<=pixel_data>>1; //Right Shift 1bit.
-									//Next SDRAM address. (Next Row/X).
-									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;				
-									i<=3; //Loop to draw next point.
-								end
-						5: //32*32, 32bits/8bits=4bytes. 4 bytes of each column.
-							if(cnt_bytes==4-1) begin 
-												cnt_bytes<=0; 
-												addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
-												i<=i+1'b1; 
-											end				
-							else begin 
-									cnt_bytes<=cnt_bytes+1'b1; 
-									addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
-									i<=2; //Loop to draw one complete column.
-								end
-						6: //repeat 32 times of 4 bytes = 32*4=128 bytes of one 32*32 dot matrx.
-							if(cnt_column==32-1) begin 
-													cnt_column<=0; 
-													oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+512; //Next Column.
-													i<=i+1'b1; 
-												end
-							else begin 
-									cnt_column<=cnt_column+1'b1; 
-									//adjust coordinate: new position: x+32 and y+480=480+32=512
-									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+512; //Next Column.
-									i<=2; //Loop to draw one complete digit.
-								end
-						7:
-							if(which_dot_matrix==7) begin which_dot_matrix<=0;i<=i+1'b1; end
-							else begin 
-									which_dot_matrix<=which_dot_matrix+1'b1; 
-									i<=1; //Loop to draw Next dot matrix.
-								end
-						8: //Generate done Signal.
-							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						9: //Generate done Signal.
-							begin oDraw_Done<=1'b0; i<=0; end
-					endcase
-				5: //Other Commands.
+				4: //Other Commands.
 					i<=i;
 			endcase
 		 end

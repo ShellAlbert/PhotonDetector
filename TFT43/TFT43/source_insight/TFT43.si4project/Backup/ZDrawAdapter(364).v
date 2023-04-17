@@ -97,35 +97,64 @@ else if(en) begin
 						end
 				3: //Initial Ready.
 					begin oDrawInitReady<=1'b1; i<=i+1'b1; end
-					
-//////////////////////////////////////////////////////////////////////////////////
 				4: //Waiting for draw schedule.
 					if(iDraw_Schedule) begin
 										i<=i+1'b1;
 									end
-				5: //Draw RTC.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
-					else begin 
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=2; //2. Draw RTC.
-						end
-				
-				6: //Draw SIN wave.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
-					else begin 
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=3; //3: Draw SIN wave.
-						end
-				7: //Draw GongPinTongBu and GuangZiMaiChong.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
-					else begin 
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=4; //4: Draw GongPinTongBu.
-						end	
-				8: 
+				5: 
 					begin oDraw_Done<=1'b1; i<=i+1'b1; end
-				9:
+				6:
 					begin oDraw_Done<=1'b0; led<=1'b0; i<=4; end
+/*
+				0: //Reserve first clock to connect SDRAM_W_Addr to sdram_rw_addr.
+				//Very Significant Here!!!
+					begin
+						oSDRAM_Wr_Addr<=0;
+						i<=i+1'b1; 
+					end
+				1: //Clear Screen: write one pixel data each time.
+					if(iSDRAM_Wr_Done) begin 
+											oSDRAM_Wr_Req<=0; 
+											i<=i+1'b1; 
+										end
+					else begin 
+							oSDRAM_Wr_Req<=1; 
+							oSDRAM_Wr_Data<=`Color_Blue;
+							//oSDRAM_Wr_Data<=16'h1986;
+						end
+				2: //Clear Screen: 480*800=384000.
+					if(oSDRAM_Wr_Addr==384000-1) begin 
+													oSDRAM_Wr_Addr<=0; 
+													i<=i+1'b1; 
+												end
+					else begin 
+							oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+1'b1; 
+							i<=i-1'b1; //Loop to write next pixel.
+						end
+				3: //Initial Ready.
+					begin oDrawInitReady<=1'b1; i<=i+1'b1; end
+
+				
+				4: //Waiting for draw schedule.
+					if(iDraw_Schedule) begin
+										i<=i+1'b1;
+									end
+				5: 
+					begin oDraw_Done<=1'b1; i<=i+1'b1; end
+				6:
+					begin oDraw_Done<=1'b0; led<=1'b0; i<=4; end
+
+*/
+
+/*
+				5: //Draw SIN wave.
+					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
+					else begin 
+							en_ZDrawCore<=1'b1; 
+							Cmd_ZDrawCore<=2; //2: Draw SIN wave.
+						end
+	*/
+
 			endcase
 		end
 endmodule
