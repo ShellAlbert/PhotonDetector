@@ -31,7 +31,6 @@ module ZDrawCore(
 	//4: Draw GongPinTongBu and GuangZiMaiChong.
 	//5. Draw A New Photon Counter. iData1=New Photon Counter.
 	//6. Draw Random Histogram.
-	//7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
 	input [3:0] iCmd,
 	input [31:0] iData1,
 	output reg oDraw_Done, //output, indicate draw done.
@@ -590,29 +589,7 @@ else if(en) begin
 									oSDRAM_Wr_Req<=1; 
 									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
-						11: //y+2. 480*2=960.
-							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+960; i<=i+1'b1; end
-						12:
-							if(iSDRAM_Wr_Done) begin 
-													oSDRAM_Wr_Req<=0; 
-													i<=i+1'b1; 
-												end
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Yellow;
-								end
-						13: //y-2. 480*2=960.
-							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-960; i<=i+1'b1; end
-						14:
-							if(iSDRAM_Wr_Done) begin 
-													oSDRAM_Wr_Req<=0; 
-													i<=i+1'b1; 
-												end
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Yellow;
-								end
-						15: //120 points single period, 5 periods*120 points=600.
+						11: //120 points single period, 5 periods*120 points=600.
 							if(cnt_data_SIN==600-1) begin 
 													cnt_data_SIN<=0; 
 													addr_SIN<=0;
@@ -626,9 +603,9 @@ else if(en) begin
 									y_position<=y_position+480; //next y.
 									i<=1; //Loop to write next pixel.
 								end
-						16: //Generate done Signal.
+						12: //Generate done Signal.
 							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						17: //Generate done Signal.
+						13: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
 				4: //4: Draw GongPinTongBu and GuangZiMaiChong.
@@ -936,117 +913,7 @@ else if(en) begin
 						6: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
-				7: //7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
-					case(i)
-						0:
-							begin which_dot_matrix<=0; i<=i+1'b1; end
-						1:
-							begin
-								case(which_dot_matrix)
-									0: //Mode1 Icon.
-										begin 
-											addr_ZiMo3232<=1420; //offset of Gong.
-											//(404,660)
-											//404-32=372, 660+32=692. =>(372,692)
-											//addr=y*width+x=660*480+404=317204.
-											oSDRAM_Wr_Addr<=317204-1;
-										end
-									1: //Mode2 Icon.
-										begin 
-											addr_ZiMo3232<=1548; //offset of Pin.
-											//(404,692)
-											//404-32=372, 692+32=724. =>(372,724)
-											//addr=y*width+x=692*480+404=332564.
-											oSDRAM_Wr_Addr<=332564-1;
-										end
-									2: //Mode3 Icon.
-										begin 
-											addr_ZiMo3232<=1676; //offset of Gong.
-											//(404,724)
-											//404-32=372, 724+32=756. =>(372,756)
-											//addr=y*width+x=724*480+404=347924.
-											oSDRAM_Wr_Addr<=347924-1;
-										end
-									3: //Mode4 Icon.
-										begin 
-											addr_ZiMo3232<=1804; //offset of Gong.
-											//(404,756)
-											//404-32=372, 756+32=788. =>(372,788)
-											//addr=y*width+x=756*480+404=363284.
-											oSDRAM_Wr_Addr<=363284-1;
-										end
-								endcase
-								
-								//reset counter.
-								cnt_8bits<=0;
-								cnt_bytes<=0;
-								cnt_column<=0;
-								i<=i+1'b1;
-							end
-						2:
-							begin pixel_data<=data_ZiMo3232; i<=i+1'b1; end
-						3: //Loop to draw 8bits.
-							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			 
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color.
-									//Black: Background Color.
-									//oSDRAM_Wr_Data<=(pixel_data&8'h01)?(`Color_Black):(`Color_Green);
-									//oSDRAM_Wr_Data<=`Color_Green;
-									if(which_dot_matrix==iData1) //iData1=0,1,2,3. Active Mode.
-										oSDRAM_Wr_Data<=(pixel_data&8'h01)?(`Color_Black):(`Color_Orange);
-									else 
-										oSDRAM_Wr_Data<=(pixel_data&8'h01)?(`Color_Black):(`Color_Green);
-								end
-						4: 
-							if(cnt_8bits==8-1) begin 
-												cnt_8bits<=0; 
-												//Next SDRAM address. (Next Row/X).
-												oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;		
-												i<=i+1'b1; 
-											end							
-							else begin 
-									cnt_8bits<=cnt_8bits+1'b1; //Next bit.
-									pixel_data<=pixel_data>>1; //Right Shift 1bit.
-									//Next SDRAM address. (Next Row/X).
-									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;				
-									i<=3; //Loop to draw next point.
-								end
-						5: //32*32, 32bits/8bits=4bytes. 4 bytes each column.
-							if(cnt_bytes==4-1) begin 
-												cnt_bytes<=0; 
-												addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
-												i<=i+1'b1; 
-											end				
-							else begin 
-									cnt_bytes<=cnt_bytes+1'b1; 
-									addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
-									i<=2; //Loop to draw one complete column.
-								end
-						6: //repeat 32 times of 4 bytes = 32*4=128 bytes of one 32*32 dot matrx.
-							if(cnt_column==32-1) begin 
-													cnt_column<=0; 
-													oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+512; //Next Column.
-													i<=i+1'b1; 
-												end
-							else begin 
-									cnt_column<=cnt_column+1'b1; 
-									//adjust coordinate: new position: x+32 and y+480=480+32=512
-									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+512; //Next Column.
-									i<=2; //Loop to draw one complete digit.
-								end
-						7:
-							if(which_dot_matrix==3) begin which_dot_matrix<=0;i<=i+1'b1; end
-							else begin 
-									which_dot_matrix<=which_dot_matrix+1'b1; 
-									i<=1; //Loop to draw Next dot matrix.
-								end
-						8: //Generate done Signal.
-							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						9: //Generate done Signal.
-							begin oDraw_Done<=1'b0; i<=0; end
-					endcase
-				8: //Other Commands.
+				7: //Other Commands.
 					i<=i;
 			endcase
 		 end

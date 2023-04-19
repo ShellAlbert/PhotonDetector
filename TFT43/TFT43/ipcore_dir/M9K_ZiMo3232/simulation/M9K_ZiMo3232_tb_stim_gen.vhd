@@ -157,7 +157,7 @@ BEGIN
 
 SYNTH_COE:  IF(C_ROM_SYNTH =0 ) GENERATE
 
-type mem_type is array (1423 downto 0) of std_logic_vector(7 downto 0);
+type mem_type is array (1967 downto 0) of std_logic_vector(7 downto 0);
 
   FUNCTION bit_to_sl(input: BIT) RETURN STD_LOGIC IS
     VARIABLE temp_return : STD_LOGIC;
@@ -258,7 +258,7 @@ constant c_init : mem_type := init_memory(1,
 										            "M9K_ZiMo3232.mif",
                                           DEFAULT_DATA,
                                           8,
-                                          1424);
+                                          1968);
 
 
 constant rom : mem_type := c_init;
@@ -267,7 +267,7 @@ BEGIN
  EXPECTED_DATA <= rom(conv_integer(unsigned(check_read_addr)));
 
  CHECKER_RD_AGEN_INST:ENTITY work.M9K_ZiMo3232_TB_AGEN
-   GENERIC MAP( C_MAX_DEPTH =>1424 )
+   GENERIC MAP( C_MAX_DEPTH =>1968 )
 
    PORT MAP(
      CLK => CLK,
@@ -318,7 +318,7 @@ END GENERATE;
   CHECK_DATA(0) <= DO_READ;
 
   RD_AGEN_INST:ENTITY work.M9K_ZiMo3232_TB_AGEN
-    GENERIC MAP( C_MAX_DEPTH => 1424 )
+    GENERIC MAP( C_MAX_DEPTH => 1968 )
 
     PORT MAP(
       CLK => CLK,

@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/TFT43/TFT43/ipcore_dir/ZPulseCounter_Random.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/TFT43/TFT43/ipcore_dir/M9K_ZiMo3232.v&quot; into library work</arg>
 </msg>
 
 </messages>

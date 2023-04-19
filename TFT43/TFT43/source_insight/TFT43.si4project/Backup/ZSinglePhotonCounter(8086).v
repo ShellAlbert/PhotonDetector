@@ -535,10 +535,7 @@ ZDrawAdapter ic_DrawAdapter(
     .rst_n(rst_n),
     .en(1'b1),
 
-	//Mode1~Mode4 Icon.
-	.iMode(2'b01),
-	
-    //Draw New PulseCounter.
+     //Draw New PulseCounter.
     .iData_Update(data_update),
     .iPulse_Counter(PulseCounter_LCD),
     

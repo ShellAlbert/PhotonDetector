@@ -7,4 +7,3 @@
 `define Color_Gray 16'h8410
 `define Color_Yellow 16'hFFE0
 `define Color_Pink 16'hF8B2
-`define Color_Orange 16'hFA20

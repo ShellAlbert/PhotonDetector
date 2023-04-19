@@ -27,9 +27,6 @@ module ZDrawAdapter(
     input rst_n,
     input en,
 
-	//Mode1~Mode4 Icon.
-	input [1:0] iMode,
-	
 	//output reg oDrawInitReady, //output, draw initial ready.
     //input iDraw_Schedule, //input, schedule to draw.
     //Draw New PulseCounter.
@@ -60,12 +57,7 @@ ZDrawCore ic_DrawCore(
 
 	//0: Clear Screen.
 	//1: Draw Fixed Pixel Image.
-	//2: Draw RTC.
-	//3: Draw SIN wave.
-	//4: Draw GongPinTongBu and GuangZiMaiChong.
-	//5. Draw A New Photon Counter. iData1=New Photon Counter.
-	//6. Draw Random Histogram.
-	//7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
+	//2: Draw SIN wave.
 	.iCmd(Cmd_ZDrawCore),
 	.iData1(Data1_ZDrawCore),
 	.oDraw_Done(Done_ZDrawCore), //output, indicate draw done.
@@ -155,7 +147,7 @@ else if(en) begin
 					else begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=5; //5. Draw A New Photon Counter. iData1=New Photon Counter.
-							Data1_ZDrawCore<=iPulse_Counter;
+							Data1_ZDrawCore<=old_PulseCounter;
 						end
 				10: //Draw Random Histogram.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
@@ -163,14 +155,7 @@ else if(en) begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=6; //6: Draw Random Histogram.
 						end
-				11: //Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
-					else begin 
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=7; //7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
-							Data1_ZDrawCore<=iMode;
-						end
-				12:
+				11:
 					begin 
 						led<=1'b0; 
 						i<=5; 
