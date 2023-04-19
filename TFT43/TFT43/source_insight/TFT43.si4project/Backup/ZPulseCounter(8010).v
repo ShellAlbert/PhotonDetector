@@ -41,7 +41,7 @@ module ZPulseCounter(
    	output data_update,
 
 	//Accumulated PulseCounter. Never Reset to 0.
-   	output [31:0] oPulseCouter_LCD_Accumulated
+   	output reg [31:0] oPulseCouter_LCD_Accumulated
     );
 
 
@@ -67,7 +67,15 @@ assign q6_LCD=rq6;
 assign q7_LCD=rq7;
 assign overflow=rq_overflow[7];
 
-//assign oPulseCouter_LCD_Accumulated=32'h12345678;
+reg [3:0] rq0_acc;
+reg [3:0] rq1_acc;
+reg [3:0] rq2_acc;
+reg [3:0] rq3_acc;
+reg [3:0] rq4_acc;
+reg [3:0] rq5_acc;
+reg [3:0] rq6_acc;
+reg [3:0] rq7_acc;
+assign oPulseCouter_LCD_Accumulated={rq7_acc,rq6_acc,rq5_acc,rq4_acc,rq3_acc,rq2_acc,rq1_acc,rq0_acc};
 //Because One Period of SIN is 120 Points.
 //SIN frequency = 50Hz. (t=20mS)
 //So, 120 Points / 20mS = 6 Points / 1mS
@@ -104,27 +112,40 @@ always @ (posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				rq0<=4'd0;
 				rq_overflow[0]<=1'b0;
-				oPulseCounter_Single<=0;
+				oCounter<=0;
+				//Accumulated Pulse Counter.
+				rq0_acc<=0;
+				rq1_acc<=0;
+				rq2_acc<=0;
+				rq3_acc<=0;
+				rq4_acc<=0;
+				rq5_acc<=0;
+				rq6_acc<=0;
+				rq7_acc<=0;
 			end
 else	begin
 			if(en)	begin
 							if(data_update)	begin
 												rq0<=4'd0;
 												rq_overflow[0]<=1'b0;
-												oPulseCounter_Single<=0;
+												oCounter<=0;
 											end
 							else if(pulse)	begin
 												////////////////////////////////////
 												if(rq0>=4'd9)	begin
 																		rq0<=4'd0;
 																		rq_overflow[0]<=1'b1;
+
+																		rq0_acc<=0;
 																end
 												else	begin
 															rq0<=rq0+1'b1;
 															rq_overflow[0]<=1'b0;
+															
+															rq0_acc<=rq0_acc+1'b1;
 														end
 												////////////////////////////////////
-												oPulseCounter_Single<=oPulseCounter_Single+1'b1; 
+												oCounter<=oCounter+1'b1; 
 											end
 							else
 								rq_overflow[0]<=1'b0;
@@ -132,7 +153,7 @@ else	begin
 			else	begin
 						rq0<=4'd0;
 						rq_overflow[0]<=1'b0;
-						oPulseCounter_Single<=0;
+						oCounter<=0;
 					end
 		end
 	
@@ -151,10 +172,14 @@ else	if(en)	begin
 														if(rq1>=4'd9)	begin
 																			rq1<=4'd0;
 																			rq_overflow[1]<=1'b1;
+
+																			rq1_acc<=0;
 																		end
 														else	begin
 																	rq1<=rq1+1'b1;
 																	rq_overflow[1]<=1'b0;
+
+																	rq1_acc<=rq1_acc+1'b1;
 																end
 												end
 						else
@@ -180,10 +205,14 @@ else	if(en)	begin
 													if(rq2>=4'd9)	begin
 																		rq2<=4'd0;
 																		rq_overflow[2]<=1'b1;
+
+																		rq2_acc<=0;
 																	end
 													else	begin
 																rq2<=rq2+1'b1;
 																rq_overflow[2]<=1'b0;
+
+																rq2_acc<=rq2_acc+1'b1;
 															end
 												end
 						else
@@ -209,10 +238,14 @@ else	if(en)	begin
 													if(rq3>=4'd9)	begin
 																		rq3<=4'd0;
 																		rq_overflow[3]<=1'b1;
+
+																		rq3_acc<=0;
 																	end
 													else	begin
 																rq3<=rq3+1'b1;
 																rq_overflow[3]<=1'b0;
+
+																rq3_acc<=rq3_acc+1'b1;
 															end
 												end
 						else
@@ -238,10 +271,14 @@ else	if(en)	begin
 												if(rq4>=4'd9)	begin
 																	rq4<=4'd0;
 																	rq_overflow[4]<=1'b1;
+
+																	rq4_acc<=0;
 																end
 												else	begin
 															rq4<=rq4+1'b1;
 															rq_overflow[4]<=1'b0;
+
+															rq4_acc<=rq4_acc+1'b1;
 														end
 											end
 					else
@@ -255,9 +292,9 @@ else	if(en)	begin
 //rq5.
 always @ (posedge clk or negedge rst_n)
 if(!rst_n)	begin
-				rq5<=4'd0;
-				rq_overflow[5]<=1'b0;
-			end
+		rq5<=4'd0;
+		rq_overflow[5]<=1'b0;
+	end
 else	if(en)	begin
 					if(data_update)	begin
 										rq5<=4'd0;
@@ -267,10 +304,14 @@ else	if(en)	begin
 												if(rq5>=4'd9)	begin
 																	rq5<=4'd0;
 																	rq_overflow[5]<=1'b1;
+
+																	rq5_acc<=0;
 																end
 												else	begin
 															rq5<=rq5+1'b1;
 															rq_overflow[5]<=1'b0;
+
+															rq5_acc<=rq5_acc+1'b1;
 														end
 											end
 					else
@@ -296,10 +337,14 @@ else	if(en)	begin
 												if(rq6>=4'd9)	begin
 																	rq6<=4'd0;
 																	rq_overflow[6]<=1'b1;
+
+																	rq6_acc<=0;
 																end
 												else	begin
 															rq6<=rq6+1'b1;
 															rq_overflow[6]<=1'b0;
+
+															rq6_acc<=rq6_acc+1'b1;
 														end
 											end
 					else
@@ -325,10 +370,14 @@ else	if(en)	begin
 												if(rq7>=4'd9)	begin
 																	rq7<=4'd0;
 																	rq_overflow[7]<=1'b1;
+
+																	rq7_acc<=0;
 																end
 												else	begin
 															rq7<=rq7+1'b1;
 															rq_overflow[7]<=1'b0;
+
+															rq7_acc<=rq7_acc+1'b1;
 														end
 											end
 					else
@@ -337,221 +386,6 @@ else	if(en)	begin
 		else	begin
 					rq7<=4'd0;
 					rq_overflow[7]<=1'b0;
-				end
-//////////////////////////////////////////////////////////////////////////
-//Accumulated PulseCounter for drawing on LCD.
-reg [3:0] rq0_acc;
-reg [3:0] rq1_acc;
-reg [3:0] rq2_acc;
-reg [3:0] rq3_acc;
-reg [3:0] rq4_acc;
-reg [3:0] rq5_acc;
-reg [3:0] rq6_acc;
-reg [3:0] rq7_acc;
-reg rq_acc_overflow[7:0];
-assign oPulseCouter_LCD_Accumulated={rq7_acc,rq6_acc,rq5_acc,rq4_acc,rq3_acc,rq2_acc,rq1_acc,rq0_acc};
-
-//rq0_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq0_acc<=4'd0;
-				rq_acc_overflow[0]<=1'b0;
-			end
-else	begin
-			if(en)	begin
-							if(pulse)	begin
-											////////////////////////////////////
-											if(rq0_acc>=4'd9)	begin
-																	rq0_acc<=4'd0;
-																	rq_acc_overflow[0]<=1'b1;
-															end
-											else	begin
-														rq0_acc<=rq0_acc+1'b1;
-														rq_acc_overflow[0]<=1'b0;
-													end
-										end
-							else
-								rq_acc_overflow[0]<=1'b0;
-						end
-			else	begin
-						rq0_acc<=4'd0;
-						rq_acc_overflow[0]<=1'b0;
-					end
-		end
-	
-//rq1_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq1_acc<=4'd0;
-				rq_acc_overflow[1]<=1'b0;
-			end
-else	if(en)	begin
-						if(rq_acc_overflow[0])	begin
-														if(rq1_acc>=4'd9) begin
-																			rq1_acc<=4'd0;
-																			rq_acc_overflow[1]<=1'b1;
-																		end
-														else	begin
-																	rq1_acc<=rq1_acc+1'b1;
-																	rq_acc_overflow[1]<=1'b0;
-																end
-												end
-						else
-							rq_acc_overflow[1]<=1'b0;
-					end
-		else	begin
-					rq1_acc<=4'd0;
-					rq_acc_overflow[1]<=1'b0;
-				end
-
-//rq2_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq2_acc<=4'd0;
-				rq_acc_overflow[2]<=1'b0;
-			end
-else	if(en)	begin
-						if(rq_acc_overflow[1])	begin
-													if(rq2_acc>=4'd9) begin
-																		rq2_acc<=4'd0;
-																		rq_acc_overflow[2]<=1'b1;
-																	end
-													else	begin
-																rq2_acc<=rq2_acc+1'b1;
-																rq_acc_overflow[2]<=1'b0;
-															end
-												end
-						else
-							rq_acc_overflow[2]<=1'b0;
-					end
-		else	begin
-					rq2_acc<=4'd0;
-					rq_acc_overflow[2]<=1'b0;
-				end
-
-//rq3_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq3_acc<=4'd0;
-				rq_acc_overflow[3]<=1'b0;
-			end
-else	if(en)	begin
-						if(rq_acc_overflow[2])	begin
-													if(rq3_acc>=4'd9) begin
-																		rq3_acc<=4'd0;
-																		rq_acc_overflow[3]<=1'b1;
-																	end
-													else	begin
-																rq3_acc<=rq3_acc+1'b1;
-																rq_acc_overflow[3]<=1'b0;
-															end
-												end
-						else
-							rq_acc_overflow[3]<=1'b0;
-				end
-		else	begin
-					rq3_acc<=4'd0;
-					rq_acc_overflow[3]<=1'b0;
-				end
-			
-//rq4_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq4_acc<=4'd0;
-				rq_acc_overflow[4]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[3])	begin
-												if(rq4_acc>=4'd9) begin
-																	rq4_acc<=4'd0;
-																	rq_acc_overflow[4]<=1'b1;
-																end
-												else	begin
-															rq4_acc<=rq4_acc+1'b1;
-															rq_acc_overflow[4]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[4]<=1'b0;
-				end
-		else	begin
-					rq4_acc<=4'd0;
-					rq_acc_overflow[4]<=1'b0;
-				end
-	
-//rq5_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq5_acc<=4'd0;
-				rq_acc_overflow[5]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[4])	begin
-												if(rq5_acc>=4'd9) begin
-																rq5_acc<=4'd0;
-																rq_acc_overflow[5]<=1'b1;
-															end
-												else	begin
-															rq5_acc<=rq5_acc+1'b1;
-															rq_acc_overflow[5]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[5]<=1'b0;
-				end
-		else	begin
-					rq5_acc<=4'd0;
-					rq_acc_overflow[5]<=1'b0;
-				end
-			
-//rq6_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq6_acc<=4'd0;
-				rq_acc_overflow[6]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[5])	begin
-												if(rq6_acc>=4'd9) begin
-																	rq6_acc<=4'd0;
-																	rq_acc_overflow[6]<=1'b1;
-																end
-												else	begin
-															rq6_acc<=rq6_acc+1'b1;
-															rq_acc_overflow[6]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[6]<=1'b0;
-				end
-		else	begin
-					rq6_acc<=4'd0;
-					rq_acc_overflow[6]<=1'b0;
-				end
-			
-//rq7_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq7_acc<=4'd0;
-				rq_acc_overflow[7]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[6])	begin
-												if(rq7_acc>=4'd9) begin
-																	rq7_acc<=4'd0;
-																	rq_acc_overflow[7]<=1'b1;
-																end
-												else	begin
-															rq7_acc<=rq7_acc+1'b1;
-															rq_acc_overflow[7]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[7]<=1'b0;
-				end
-		else	begin
-					rq7_acc<=4'd0;
-					rq_acc_overflow[7]<=1'b0;
 				end
 
 endmodule

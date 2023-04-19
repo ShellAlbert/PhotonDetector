@@ -773,11 +773,12 @@ else if(en) begin
 					endcase
 				5: //5. Draw A New Photon Counter. iData1=New Photon Counter.
 				//99999999  Font Size: 24*12.
-				//(180,680) - (156-1,776-1)
+				//(x1,y1)=(234-24,680) (x2,y2)=(234,680+8*12)=(234,776).
+				//(234,680) - (210-1,776-1)
 					case(i)
-						0: //set start address.(180,680)=y*width+x=680*480+180=326580.
+						0: //set start address.(206,680)=y*width+x=680*480+206=326606.
 							begin
-								oSDRAM_Wr_Addr<=326580-1;
+								oSDRAM_Wr_Addr<=326606-1;
 								PulseCounter<=iData1;
 								select_PulseCounterMux<=4'd0; //99999999.
 								i<=i+1'b1;
@@ -1048,11 +1049,11 @@ else if(en) begin
 					endcase
 				8: //8: Draw Accumulated Counter, iData1=Counter.
 				//99999999  Font Size: 24*12.
-				//(206,680) - (182-1,776-1)
+				//(180,680) - (156-1,776-1)
 					case(i)
-						0: //set start address.(206,680)=y*width+x=680*480+206=326606.
+						0: //set start address.(180,680)=y*width+x=680*480+180=326580.
 							begin
-								oSDRAM_Wr_Addr<=326606-1;
+								oSDRAM_Wr_Addr<=326580-1;
 								PulseCounter<=iData1;
 								select_PulseCounterMux<=4'd0; //99999999.
 								i<=i+1'b1;

@@ -30,10 +30,7 @@ module ZPulseCounter_Adapter(
 	//Pulse Counter Output.
 	output oDataUpdate,
     output [31:0] oPulseCouter_LCD,
-    output [31:0] oPulseCouter_Single,
-
-    //Accumulated PulseCounter. Never Reset to 0.
-   	output [31:0] oPulseCouter_LCD_Accumulated
+    output [31:0] oPulseCouter_RAM
     );
 
 //Edge Detect.
@@ -55,19 +52,16 @@ ZPulseCounter ic_PulseCounter(
     .rst_n(rst_n),
     .en(en),
     .pulse(pulse_rising_edge),
-    .q0_LCD(oPulseCouter_LCD[3:0]),
-    .q1_LCD(oPulseCouter_LCD[7:4]),
-    .q2_LCD(oPulseCouter_LCD[11:8]),
-    .q3_LCD(oPulseCouter_LCD[15:12]),
-    .q4_LCD(oPulseCouter_LCD[19:16]),
-    .q5_LCD(oPulseCouter_LCD[23:20]),
-    .q6_LCD(oPulseCouter_LCD[27:24]),
-    .q7_LCD(oPulseCouter_LCD[31:28]),
+    .q0(oPulseCouter_LCD[3:0]),
+    .q1(oPulseCouter_LCD[7:4]),
+    .q2(oPulseCouter_LCD[11:8]),
+    .q3(oPulseCouter_LCD[15:12]),
+    .q4(oPulseCouter_LCD[19:16]),
+    .q5(oPulseCouter_LCD[23:20]),
+    .q6(oPulseCouter_LCD[27:24]),
+    .q7(oPulseCouter_LCD[31:28]),
     .overflow(overflow),
-    .oPulseCounter_Single(oPulseCouter_Single),
-   	.data_update(data_update),
-   	
-   	//Accumulated PulseCounter. Never Reset to 0.
-   	.oPulseCouter_LCD_Accumulated(oPulseCouter_LCD_Accumulated)
+    .oCounter(oPulseCouter_RAM),
+   	.data_update(data_update)
     );
 endmodule

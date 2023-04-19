@@ -32,7 +32,6 @@ module ZDrawCore(
 	//5. Draw A New Photon Counter. iData1=New Photon Counter.
 	//6. Draw Random Histogram.
 	//7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
-	//8: Draw Accumulated Counter, iData1=Counter.
 	input [3:0] iCmd,
 	input [31:0] iData1,
 	output reg oDraw_Done, //output, indicate draw done.
@@ -773,11 +772,12 @@ else if(en) begin
 					endcase
 				5: //5. Draw A New Photon Counter. iData1=New Photon Counter.
 				//99999999  Font Size: 24*12.
-				//(180,680) - (156-1,776-1)
+				//(x1,y1)=(234-24,680) (x2,y2)=(234,680+8*12)=(234,776).
+				//(234,680) - (210-1,776-1)
 					case(i)
-						0: //set start address.(180,680)=y*width+x=680*480+180=326580.
+						0: //set start address.(206,680)=y*width+x=680*480+206=326606.
 							begin
-								oSDRAM_Wr_Addr<=326580-1;
+								oSDRAM_Wr_Addr<=326606-1;
 								PulseCounter<=iData1;
 								select_PulseCounterMux<=4'd0; //99999999.
 								i<=i+1'b1;
@@ -1046,88 +1046,7 @@ else if(en) begin
 						9: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
-				8: //8: Draw Accumulated Counter, iData1=Counter.
-				//99999999  Font Size: 24*12.
-				//(206,680) - (182-1,776-1)
-					case(i)
-						0: //set start address.(206,680)=y*width+x=680*480+206=326606.
-							begin
-								oSDRAM_Wr_Addr<=326606-1;
-								PulseCounter<=iData1;
-								select_PulseCounterMux<=4'd0; //99999999.
-								i<=i+1'b1;
-							end
-						1: //Update ZiMo address for next digit.
-							begin 
-								//choose 0~9 ZiMo Offset Value.
-								addr_ZiMo3232<=dout_PulseCounter_ZiMo_Addr; //0~9.
-								
-								//reset counter.
-								cnt_8bits<=0;
-								cnt_3bytes<=0;
-								cnt_column<=0;
-								i<=i+1'b1;
-							end
-						2: 
-							begin pixel_data<=data_ZiMo3232; i<=i+1'b1; end
-						3: //Loop to draw 8bits.
-							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			 
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color.
-									//Black: Background Color.
-									oSDRAM_Wr_Data<=(pixel_data&8'h01)?(`Color_Green):(`Color_Black);
-									//oSDRAM_Wr_Data<=`Color_Green;
-								end
-						4: 
-							if(cnt_8bits==8-1) begin 
-												cnt_8bits<=0; 
-												//Next SDRAM address. (Next Row/X).
-												oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;		
-												i<=i+1'b1; 
-											end							
-							else begin 
-									cnt_8bits<=cnt_8bits+1'b1; //Next bit.
-									pixel_data<=pixel_data>>1; //Right Shift 1bit.
-									//Next SDRAM address. (Next Row/X).
-									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;				
-									i<=3; //Loop.
-								end
-						5: //24*12, 24bits/8bits=3bytes. 3 bytes of each column.
-							if(cnt_3bytes==3-1) begin 
-												cnt_3bytes<=0; 
-												addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
-												i<=i+1'b1; 
-											end				
-							else begin 
-									cnt_3bytes<=cnt_3bytes+1'b1; 
-									addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
-									i<=2; //Loop to draw one complete column.
-								end
-						6: //repeat 12 times of 3 bytes = 12*3=36 bytes of one 24*12 digit.
-							if(cnt_column==12-1) begin 
-													cnt_column<=0; 
-													oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+504; //Next Column.
-													i<=i+1'b1; 
-												end
-							else begin 
-									cnt_column<=cnt_column+1'b1; 
-									//adjust coordinate: new position: x+24 and y+480=480+24=504
-									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+504; //Next Column.
-									i<=2; //Loop to draw one complete digit.
-								end
-						7: //99999999, we have 8 digits to draw.
-							if(select_PulseCounterMux==4'd8-1) begin select_PulseCounterMux<=4'd0; i<=i+1'b1; end
-							else begin 
-									select_PulseCounterMux<=select_PulseCounterMux+1'b1; 
-									i<=1; //Loop to draw next digit.
-								end
-						8: //Generate done Signal.
-							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						9: //Generate done Signal.
-							begin oDraw_Done<=1'b0; i<=0; end
-					endcase
-				9: //Other Commands.
+				8: //Other Commands.
 					i<=i;
 			endcase
 		 end

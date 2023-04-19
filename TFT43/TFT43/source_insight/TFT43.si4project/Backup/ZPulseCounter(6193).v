@@ -27,21 +27,21 @@ module ZPulseCounter(
     input pulse,
 
     //output for drawing LCD to avoid divider.
-    output [3:0] q0_LCD,
-    output [3:0] q1_LCD,
-    output [3:0] q2_LCD,
-    output [3:0] q3_LCD,
-    output [3:0] q4_LCD,
-    output [3:0] q5_LCD,
-    output [3:0] q6_LCD,
-    output [3:0] q7_LCD,
+    output [3:0] q0,
+    output [3:0] q1,
+    output [3:0] q2,
+    output [3:0] q3,
+    output [3:0] q4,
+    output [3:0] q5,
+    output [3:0] q6,
+    output [3:0] q7,
     output overflow,
     //output for uploading data via Network.
-    output reg [31:0] oPulseCounter_Single, //maximum 9999,9999.
+    output reg [31:0] oCounter, //maximum 9999,9999.
    	output data_update,
 
 	//Accumulated PulseCounter. Never Reset to 0.
-   	output [31:0] oPulseCouter_LCD_Accumulated
+   	output reg [31:0] oAccumulated_Counter
     );
 
 
@@ -57,17 +57,16 @@ reg [3:0] rq7;
 reg rq_overflow[7:0];
 
 //output drive.
-assign q0_LCD=rq0;
-assign q1_LCD=rq1;
-assign q2_LCD=rq2;
-assign q3_LCD=rq3;
-assign q4_LCD=rq4;
-assign q5_LCD=rq5;
-assign q6_LCD=rq6;
-assign q7_LCD=rq7;
+assign q0=rq0;
+assign q1=rq1;
+assign q2=rq2;
+assign q3=rq3;
+assign q4=rq4;
+assign q5=rq5;
+assign q6=rq6;
+assign q7=rq7;
 assign overflow=rq_overflow[7];
 
-//assign oPulseCouter_LCD_Accumulated=32'h12345678;
 //Because One Period of SIN is 120 Points.
 //SIN frequency = 50Hz. (t=20mS)
 //So, 120 Points / 20mS = 6 Points / 1mS
@@ -104,14 +103,15 @@ always @ (posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				rq0<=4'd0;
 				rq_overflow[0]<=1'b0;
-				oPulseCounter_Single<=0;
+				oCounter<=0;
+				oAccumulated_Counter<=0;
 			end
 else	begin
 			if(en)	begin
 							if(data_update)	begin
 												rq0<=4'd0;
 												rq_overflow[0]<=1'b0;
-												oPulseCounter_Single<=0;
+												oCounter<=0;
 											end
 							else if(pulse)	begin
 												////////////////////////////////////
@@ -124,7 +124,9 @@ else	begin
 															rq_overflow[0]<=1'b0;
 														end
 												////////////////////////////////////
-												oPulseCounter_Single<=oPulseCounter_Single+1'b1; 
+												oCounter<=oCounter+1'b1; 
+												//Accumulated Pulse Counter+1.
+												oAccumulated_Counter<=oAccumulated_Counter+1'b1;
 											end
 							else
 								rq_overflow[0]<=1'b0;
@@ -132,7 +134,7 @@ else	begin
 			else	begin
 						rq0<=4'd0;
 						rq_overflow[0]<=1'b0;
-						oPulseCounter_Single<=0;
+						oCounter<=0;
 					end
 		end
 	
@@ -255,9 +257,9 @@ else	if(en)	begin
 //rq5.
 always @ (posedge clk or negedge rst_n)
 if(!rst_n)	begin
-				rq5<=4'd0;
-				rq_overflow[5]<=1'b0;
-			end
+		rq5<=4'd0;
+		rq_overflow[5]<=1'b0;
+	end
 else	if(en)	begin
 					if(data_update)	begin
 										rq5<=4'd0;
@@ -337,221 +339,6 @@ else	if(en)	begin
 		else	begin
 					rq7<=4'd0;
 					rq_overflow[7]<=1'b0;
-				end
-//////////////////////////////////////////////////////////////////////////
-//Accumulated PulseCounter for drawing on LCD.
-reg [3:0] rq0_acc;
-reg [3:0] rq1_acc;
-reg [3:0] rq2_acc;
-reg [3:0] rq3_acc;
-reg [3:0] rq4_acc;
-reg [3:0] rq5_acc;
-reg [3:0] rq6_acc;
-reg [3:0] rq7_acc;
-reg rq_acc_overflow[7:0];
-assign oPulseCouter_LCD_Accumulated={rq7_acc,rq6_acc,rq5_acc,rq4_acc,rq3_acc,rq2_acc,rq1_acc,rq0_acc};
-
-//rq0_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq0_acc<=4'd0;
-				rq_acc_overflow[0]<=1'b0;
-			end
-else	begin
-			if(en)	begin
-							if(pulse)	begin
-											////////////////////////////////////
-											if(rq0_acc>=4'd9)	begin
-																	rq0_acc<=4'd0;
-																	rq_acc_overflow[0]<=1'b1;
-															end
-											else	begin
-														rq0_acc<=rq0_acc+1'b1;
-														rq_acc_overflow[0]<=1'b0;
-													end
-										end
-							else
-								rq_acc_overflow[0]<=1'b0;
-						end
-			else	begin
-						rq0_acc<=4'd0;
-						rq_acc_overflow[0]<=1'b0;
-					end
-		end
-	
-//rq1_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq1_acc<=4'd0;
-				rq_acc_overflow[1]<=1'b0;
-			end
-else	if(en)	begin
-						if(rq_acc_overflow[0])	begin
-														if(rq1_acc>=4'd9) begin
-																			rq1_acc<=4'd0;
-																			rq_acc_overflow[1]<=1'b1;
-																		end
-														else	begin
-																	rq1_acc<=rq1_acc+1'b1;
-																	rq_acc_overflow[1]<=1'b0;
-																end
-												end
-						else
-							rq_acc_overflow[1]<=1'b0;
-					end
-		else	begin
-					rq1_acc<=4'd0;
-					rq_acc_overflow[1]<=1'b0;
-				end
-
-//rq2_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq2_acc<=4'd0;
-				rq_acc_overflow[2]<=1'b0;
-			end
-else	if(en)	begin
-						if(rq_acc_overflow[1])	begin
-													if(rq2_acc>=4'd9) begin
-																		rq2_acc<=4'd0;
-																		rq_acc_overflow[2]<=1'b1;
-																	end
-													else	begin
-																rq2_acc<=rq2_acc+1'b1;
-																rq_acc_overflow[2]<=1'b0;
-															end
-												end
-						else
-							rq_acc_overflow[2]<=1'b0;
-					end
-		else	begin
-					rq2_acc<=4'd0;
-					rq_acc_overflow[2]<=1'b0;
-				end
-
-//rq3_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq3_acc<=4'd0;
-				rq_acc_overflow[3]<=1'b0;
-			end
-else	if(en)	begin
-						if(rq_acc_overflow[2])	begin
-													if(rq3_acc>=4'd9) begin
-																		rq3_acc<=4'd0;
-																		rq_acc_overflow[3]<=1'b1;
-																	end
-													else	begin
-																rq3_acc<=rq3_acc+1'b1;
-																rq_acc_overflow[3]<=1'b0;
-															end
-												end
-						else
-							rq_acc_overflow[3]<=1'b0;
-				end
-		else	begin
-					rq3_acc<=4'd0;
-					rq_acc_overflow[3]<=1'b0;
-				end
-			
-//rq4_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq4_acc<=4'd0;
-				rq_acc_overflow[4]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[3])	begin
-												if(rq4_acc>=4'd9) begin
-																	rq4_acc<=4'd0;
-																	rq_acc_overflow[4]<=1'b1;
-																end
-												else	begin
-															rq4_acc<=rq4_acc+1'b1;
-															rq_acc_overflow[4]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[4]<=1'b0;
-				end
-		else	begin
-					rq4_acc<=4'd0;
-					rq_acc_overflow[4]<=1'b0;
-				end
-	
-//rq5_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq5_acc<=4'd0;
-				rq_acc_overflow[5]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[4])	begin
-												if(rq5_acc>=4'd9) begin
-																rq5_acc<=4'd0;
-																rq_acc_overflow[5]<=1'b1;
-															end
-												else	begin
-															rq5_acc<=rq5_acc+1'b1;
-															rq_acc_overflow[5]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[5]<=1'b0;
-				end
-		else	begin
-					rq5_acc<=4'd0;
-					rq_acc_overflow[5]<=1'b0;
-				end
-			
-//rq6_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq6_acc<=4'd0;
-				rq_acc_overflow[6]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[5])	begin
-												if(rq6_acc>=4'd9) begin
-																	rq6_acc<=4'd0;
-																	rq_acc_overflow[6]<=1'b1;
-																end
-												else	begin
-															rq6_acc<=rq6_acc+1'b1;
-															rq_acc_overflow[6]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[6]<=1'b0;
-				end
-		else	begin
-					rq6_acc<=4'd0;
-					rq_acc_overflow[6]<=1'b0;
-				end
-			
-//rq7_acc.
-always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq7_acc<=4'd0;
-				rq_acc_overflow[7]<=1'b0;
-			end
-else	if(en)	begin
-					if(rq_acc_overflow[6])	begin
-												if(rq7_acc>=4'd9) begin
-																	rq7_acc<=4'd0;
-																	rq_acc_overflow[7]<=1'b1;
-																end
-												else	begin
-															rq7_acc<=rq7_acc+1'b1;
-															rq_acc_overflow[7]<=1'b0;
-														end
-											end
-					else
-						rq_acc_overflow[7]<=1'b0;
-				end
-		else	begin
-					rq7_acc<=4'd0;
-					rq_acc_overflow[7]<=1'b0;
 				end
 
 endmodule

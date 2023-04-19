@@ -32,9 +32,6 @@ module ZDrawAdapter(
 	
 	//output reg oDrawInitReady, //output, draw initial ready.
     //input iDraw_Schedule, //input, schedule to draw.
-    //Accumulated PulseCounter.
-    input [31:0] iPulseCounter_Accumulated,
-
     //Draw New PulseCounter.
     input iData_Update,
     input [31:0] iPulse_Counter,
@@ -173,14 +170,7 @@ else if(en) begin
 							Cmd_ZDrawCore<=7; //7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
 							Data1_ZDrawCore<=iMode;
 						end
-				12: //Draw Accumulated Pulse Counter.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
-					else begin
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=8; //8: Draw Accumulated Counter, iData1=Counter.
-							Data1_ZDrawCore<=iPulseCounter_Accumulated;
-						end
-				13:
+				12:
 					begin 
 						led<=1'b0; 
 						i<=5; 

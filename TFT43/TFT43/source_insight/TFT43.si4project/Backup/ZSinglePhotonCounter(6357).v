@@ -386,7 +386,7 @@ ZTestSignal ic_TestSignal(
 /////////////////////////////////////////////////////////////
 wire data_update;
 wire [31:0] PulseCounter_LCD;
-wire [31:0] PulseCounter_Single;
+wire [31:0] PulseCounter_RAM;
 wire [31:0] PulseCounter_LCD_Accumulated;
 ZPulseCounter_Adapter ic_PulseCounter(
     .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
@@ -400,7 +400,7 @@ ZPulseCounter_Adapter ic_PulseCounter(
 	//Pulse Counter Output.
 	.oDataUpdate(data_update),
     .oPulseCouter_LCD(PulseCounter_LCD),
-    .oPulseCouter_Single(PulseCounter_Single),
+    .oPulseCouter_RAM(PulseCounter_RAM),
 
     //Accumulated PulseCounter. Never Reset to 0.
    	.oPulseCouter_LCD_Accumulated(PulseCounter_LCD_Accumulated)
@@ -491,6 +491,9 @@ ZPulseCounter_Adapter ic_PulseCounter_Adapter(
 
 ///////////////////////////////////////////////////////////
 //ZTFT43_Adapter: Read data from SDRAM and send to TFT4.3'' LCD.
+reg SDRAM_Refresh_Schedule;
+wire SDRAM_Refresh_Done;
+wire Refresh_Init_Ready;
 ZTFT43_Adapter ic_TFT43Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
@@ -498,6 +501,11 @@ ZTFT43_Adapter ic_TFT43Adapter(
 
 	//External 50Hz Sync Signal.
 	.sync_50Hz(1'b1), 
+
+    //.iRefresh_Schedule(SDRAM_Refresh_Schedule), //Input, request to Refresh.
+    //.oRefresh_Done(SDRAM_Refresh_Done), //output, indicate refresh done.
+
+    //.oInitReady(Refresh_Init_Ready), //Initial Ready Signal.
 
 	//SDRAM Glue Logic.
     .oSDRAM_Rd_Addr(rd_addr), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -523,7 +531,9 @@ ZTFT43_Adapter ic_TFT43Adapter(
   
 ///////////////////////////////////////////////////////////
 //ZDrawAdapter: Write data to SDRAM.
-reg en_ZDrawAdapter;
+reg SDRAM_Draw_Schedule;
+wire SDRAM_Draw_Done;
+wire Draw_Init_Ready;
 ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
@@ -531,9 +541,6 @@ ZDrawAdapter ic_DrawAdapter(
 
 	//Mode1~Mode4 Icon.
 	.iMode(2'b01),
-
-	//Accumulated PulseCounter.
-	.iPulseCounter_Accumulated(PulseCounter_LCD_Accumulated),
 	
     //Draw New PulseCounter.
     .iData_Update(data_update),
