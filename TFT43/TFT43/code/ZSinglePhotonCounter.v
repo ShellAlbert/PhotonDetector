@@ -290,6 +290,7 @@ ODDR2 oddr2_inst(
 assign S_CLK=clk_to_sdram;
 
 ////////////////////////////////////////////////
+/*
 wire [23:0] sdram_rw_addr; //SDRAM RW Address.
 wire [1:0] sdram_rw_req; //SDRAM RW Request.
 
@@ -330,6 +331,49 @@ ZMux2to1 ic_Mux(
 	.in2(SDRAM_W_Addr),
 	.out(sdram_rw_addr)
     );
+*/
+wire rd_req;
+wire [23:0] rd_addr;
+wire rd_done;
+wire [15:0] rd_data;
+
+wire wr_req;
+wire [23:0] wr_addr;
+wire [15:0] wr_data;
+wire wr_done;
+
+wire sdram_busy;
+ZSDRAM_RW_Arbit ic_RW_Arbit(
+    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .rst_n(rst_n),
+    .en(1'b1),
+
+	//Read Request.
+	.iRd_Req(rd_req),
+	.iRd_Addr(rd_addr),
+	.oRd_Done(rd_done),
+	.oRd_Data(rd_data),
+	
+	//Write Request.
+	.iWr_Req(wr_req),
+	.iWr_Addr(wr_addr),
+	.iWr_Data(wr_data),
+	.oWr_Done(wr_done),
+
+	//SDRAM operation busy.
+	.oBusy(sdram_busy),
+
+	//physical pins used to connect to SDRAM chip.
+    .S_CKE(S_CKE),
+    .S_nCS(S_nCS),
+    .S_nRAS(S_nRAS),
+    .S_nCAS(S_nCAS),
+    .S_nWE(S_nWE),
+    .S_BA(S_BA),
+    .S_A(S_A),
+    .S_DQM(S_DQM),
+    .S_DQ(S_DQ)
+    );
 //////////////////////////////////////////////////////
 //Test Signal.
 ZTestSignal ic_TestSignal(
@@ -338,6 +382,24 @@ ZTestSignal ic_TestSignal(
 
 	.photon_pulse_simulate(photon_pulse_simulate),
 	.sync_50Hz_simulate(sync_50Hz_simulate)
+    );
+/////////////////////////////////////////////////////////////
+wire data_update;
+wire [31:0] PulseCounter_LCD;
+wire [31:0] PulseCounter_RAM;
+ZPulseCounter_Adapter ic_PulseCounter(
+    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .rst_n(rst_n),
+    .en(1'b1),
+    //External Photon Pulse.
+    .photon_pulse(photon_pulse),
+    //50Hz sync.
+    .sync_50Hz(sync_50Hz),
+
+	//Pulse Counter Output.
+	.oDataUpdate(data_update),
+    .oPulseCouter_LCD(PulseCounter_LCD),
+    .oPulseCouter_RAM(PulseCounter_RAM)
     );
 
 //Conflict for SDRAM Reading and Writing.
@@ -436,17 +498,17 @@ ZTFT43_Adapter ic_TFT43Adapter(
 	//External 50Hz Sync Signal.
 	.sync_50Hz(1'b1), 
 
-    .iRefresh_Schedule(SDRAM_Refresh_Schedule), //Input, request to Refresh.
-    .oRefresh_Done(SDRAM_Refresh_Done), //output, indicate refresh done.
+    //.iRefresh_Schedule(SDRAM_Refresh_Schedule), //Input, request to Refresh.
+    //.oRefresh_Done(SDRAM_Refresh_Done), //output, indicate refresh done.
 
-    .oInitReady(Refresh_Init_Ready), //Initial Ready Signal.
+    //.oInitReady(Refresh_Init_Ready), //Initial Ready Signal.
 
 	//SDRAM Glue Logic.
-    .oSDRAM_Rd_Addr(SDRAM_R_Addr), //output, Bank(2)+Row(13)+Column(9)=(24)
-    .iSDRAM_Data(sdram_out_data), //input, read back data from SDRAM.
+    .oSDRAM_Rd_Addr(rd_addr), //output, Bank(2)+Row(13)+Column(9)=(24)
+    .iSDRAM_Data(rd_data), //input, read back data from SDRAM.
 
-    .oSDRAM_Rd_Req(sdram_rd_req), //output, [1]=1:Write, [0]=1:Read.
-    .iSDRAM_Rd_Done(sdram_rd_done), //input,[1]=1:write done, [0]=1:read done.
+    .oSDRAM_Rd_Req(rd_req), //output, [1]=1:Write, [0]=1:Read.
+    .iSDRAM_Rd_Done(rd_done), //input,[1]=1:write done, [0]=1:read done.
 
     
     //use an oscilloscope to check how many clks were used.
@@ -473,16 +535,15 @@ ZDrawAdapter ic_DrawAdapter(
     .rst_n(rst_n),
     .en(1'b1),
 
-	.oDrawInitReady(Draw_Init_Ready), //output, draw initial ready.
-    .iDraw_Schedule(SDRAM_Draw_Schedule), //input, schedule to draw.
+     //Draw New PulseCounter.
+    .iData_Update(data_update),
+    .iPulse_Counter(PulseCounter_LCD),
     
 	//SDRAM Glue Logic.
-    .oSDRAM_Wr_Addr(SDRAM_W_Addr), //output, Bank(2)+Row(13)+Column(9)=(24)
-    .oSDRAM_Wr_Data(sdram_in_data), //ouptut, write data to SDRAM.
-    .oSDRAM_Wr_Req(sdram_wr_req), //output, [1]=1:Write, [0]=1:Read.
-    .iSDRAM_Wr_Done(sdram_wr_done), //input, SDRAM write done signal.
-
-    .oDraw_Done(SDRAM_Draw_Done), //output, indicate draw done.
+    .oSDRAM_Wr_Addr(wr_addr), //output, Bank(2)+Row(13)+Column(9)=(24)
+    .oSDRAM_Wr_Data(wr_data), //ouptut, write data to SDRAM.
+    .oSDRAM_Wr_Req(wr_req), //output, [1]=1:Write, [0]=1:Read.
+    .iSDRAM_Wr_Done(wr_done), //input, SDRAM write done signal.
 
     .led(led)
     );
@@ -504,6 +565,7 @@ else begin
 */
 
 //driven by step i.
+/*
 reg [15:0] i;
 reg [31:0] CNT1;
 always @(posedge clk_133MHz_210 or negedge rst_n)
@@ -583,7 +645,7 @@ else begin
 				i<=7;
 		endcase
 	end
-
+*/
 endmodule
 /////////////////////////////////////////////////////
 `endif

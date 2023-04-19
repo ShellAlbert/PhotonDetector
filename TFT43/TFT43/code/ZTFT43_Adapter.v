@@ -31,10 +31,10 @@ module ZTFT43_Adapter(
 	//External Sync 50Hz Signal.
 	input sync_50Hz,
 
-	input iRefresh_Schedule, //Input, schedule to Refresh.
-    output reg oRefresh_Done, //output, indicate refresh done.
+	//input iRefresh_Schedule, //Input, schedule to Refresh.
+    //output reg oRefresh_Done, //output, indicate refresh done.
 
-    output reg oInitReady, //Initial Ready Signal.
+    //output reg oInitReady, //Initial Ready Signal.
 
 	//SDRAM Glue Logic.
     output reg [23:0] oSDRAM_Rd_Addr, //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -172,7 +172,19 @@ ZTFT43_Module ic_TFT43(
     .LCD_RD(LCD_RD), //output.
     .LCD_DATA(LCD_DATA) //output.
     );
-
+//60Hz Refresh Rate.
+//133MHz/60Hz=2_216_666/2=1108333
+reg [23:0] cnt_60Hz;
+always @(posedge clk or negedge rst_n)
+if(!rst_n)	begin
+				cnt_60Hz<=0;
+			end
+else begin
+		if(cnt_60Hz==2_216_666-1)
+			cnt_60Hz<=0;
+		else
+			cnt_60Hz<=cnt_60Hz+1;
+	end
 //Self Aux Logic driven by step i.
 reg [15:0] i;
 reg [15:0] pixel_data;
@@ -184,10 +196,10 @@ if(!rst_n)	begin
 				CNT1<=0;
 				oSDRAM_Rd_Addr<=0;
 				oSDRAM_Rd_Req<=1'b0; 
-				oRefresh_Done<=1'b0;
+				//oRefresh_Done<=1'b0;
 				clk_used<=1'b0;
 
-				oInitReady<=1'b0;
+				//oInitReady<=1'b0;
 			end
 else if(en) begin
 			case(i)
@@ -344,13 +356,16 @@ else if(en) begin
 					if(CNT1==160_000_000) begin CNT1<=0; i<=i+1'b1; end
 					else begin CNT1<=CNT1+1'b1; end
 				32:
-					begin oInitReady<=1'b1; i<=i+1'b1; end
+					begin 
+						//oInitReady<=1'b1; 
+						i<=i+1'b1; 
+					end
 				/////////////////////////////////////////////////
 				33: //waiting 60Hz trigger signal.
-					if(iRefresh_Schedule) begin
-											clk_used<=1'b1;
-											i<=i+1'b1;
-										end
+					if(cnt_60Hz==2_216_666-1) begin
+												clk_used<=1'b1;
+												i<=i+1'b1;
+											end
 				//////PreSet Write Area//////
 				34: //LCD_CS=0.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
@@ -452,12 +467,12 @@ else if(en) begin
 					else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd1; end
 				57: 
 					begin
-						oRefresh_Done<=1'b1;
+						//oRefresh_Done<=1'b1;
 						i<=i+1'b1;
 					end
 				58:
 					begin
-						oRefresh_Done<=1'b0;
+						//oRefresh_Done<=1'b0;
 						clk_used<=1'b0;
 						i<=33; //Loop to refresh.
 					end

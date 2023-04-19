@@ -1,0 +1,8 @@
+WARNING:coreutil:1006 - Xilinx repository path
+   'D:\Software\Xilinx\14.7\ISE_DS\ISE_XCN14003_patch\coregen' is not a valid
+   directory
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+Cancelled executing Tcl generator.
+Wrote CGP file for project 'ZPulseCounter_Random'.

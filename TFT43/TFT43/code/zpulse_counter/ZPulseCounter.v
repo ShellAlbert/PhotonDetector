@@ -25,6 +25,8 @@ module ZPulseCounter(
     //80MHz clock.
 	//Maxmimum frequency of input pulse is 40MHz.
     input pulse,
+
+    //output for drawing LCD to avoid divider.
     output [3:0] q0,
     output [3:0] q1,
     output [3:0] q2,
@@ -34,9 +36,10 @@ module ZPulseCounter(
     output [3:0] q6,
     output [3:0] q7,
     output overflow,
+    //output for uploading data via Network.
+    output reg [31:0] oCounter, //maximum 9999,9999.
    	output data_update
     );
-
 
 
 //xxxx,xxxx.  maximum value is 99999999.
@@ -97,14 +100,17 @@ always @ (posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				rq0<=4'd0;
 				rq_overflow[0]<=1'b0;
+				oCounter<=0;
 			end
 else	begin
 			if(en)	begin
 							if(data_update)	begin
 												rq0<=4'd0;
 												rq_overflow[0]<=1'b0;
+												oCounter<=0;
 											end
 							else if(pulse)	begin
+												////////////////////////////////////
 												if(rq0>=4'd9)	begin
 																		rq0<=4'd0;
 																		rq_overflow[0]<=1'b1;
@@ -113,13 +119,16 @@ else	begin
 															rq0<=rq0+1'b1;
 															rq_overflow[0]<=1'b0;
 														end
-												end
+												////////////////////////////////////
+												oCounter<=oCounter+1'b1; 
+											end
 							else
 								rq_overflow[0]<=1'b0;
 						end
 			else	begin
 						rq0<=4'd0;
 						rq_overflow[0]<=1'b0;
+						oCounter<=0;
 					end
 		end
 	

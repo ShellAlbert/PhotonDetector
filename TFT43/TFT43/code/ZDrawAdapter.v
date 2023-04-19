@@ -27,8 +27,11 @@ module ZDrawAdapter(
     input rst_n,
     input en,
 
-	output reg oDrawInitReady, //output, draw initial ready.
-    input iDraw_Schedule, //input, schedule to draw.
+	//output reg oDrawInitReady, //output, draw initial ready.
+    //input iDraw_Schedule, //input, schedule to draw.
+    //Draw New PulseCounter.
+    input iData_Update,
+    input [31:0] iPulse_Counter,
     
 	//SDRAM Glue Logic.
     output [23:0] oSDRAM_Wr_Addr, //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -37,7 +40,7 @@ module ZDrawAdapter(
     output oSDRAM_Wr_Req, //output, [1]=1:Write, [0]=1:Read.
     input iSDRAM_Wr_Done, //input, SDRAM write done signal.
     
-    output reg oDraw_Done, //output, indicate draw done.
+    //output reg oDraw_Done, //output, indicate draw done.
  	output reg led
     );
 
@@ -45,6 +48,7 @@ module ZDrawAdapter(
 //ZDrawCore.
 reg en_ZDrawCore;
 reg [3:0] Cmd_ZDrawCore;
+reg [31:0] Data1_ZDrawCore;
 wire Done_ZDrawCore;
 ZDrawCore ic_DrawCore(
     .clk(clk),
@@ -55,6 +59,7 @@ ZDrawCore ic_DrawCore(
 	//1: Draw Fixed Pixel Image.
 	//2: Draw SIN wave.
 	.iCmd(Cmd_ZDrawCore),
+	.iData1(Data1_ZDrawCore),
 	.oDraw_Done(Done_ZDrawCore), //output, indicate draw done.
 
 	//SDRAM Glue Logic.
@@ -64,19 +69,24 @@ ZDrawCore ic_DrawCore(
     .iSDRAM_Wr_Done(iSDRAM_Wr_Done) //input, SDRAM write done signal.
     );
 
-
+//Lockin New Pulse Counter.
+reg [31:0] new_PulseCounter;
+reg [31:0] old_PulseCounter;
+always @(posedge clk or negedge rst_n)
+if(!rst_n) begin
+			new_PulseCounter<=0;
+		end
+else begin
+		if(iData_Update)
+			new_PulseCounter<=iPulse_Counter;
+	end
 //driven by step i.
 reg [7:0] i;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				i<=0;
-				//oSDRAM_Wr_Addr<=0;
-				//oSDRAM_Wr_Data<=0;
-				//oSDRAM_Wr_Req<=1'b0;
-				oDraw_Done<=1'b0;
+				old_PulseCounter<=0;
 				led<=1'b0;
-
-				oDrawInitReady<=1'b0;
 			end
 else if(en) begin
 			case(i)
@@ -95,37 +105,61 @@ else if(en) begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=1; //1: Draw Fixed Pixel Image.
 						end
-				3: //Initial Ready.
-					begin oDrawInitReady<=1'b1; i<=i+1'b1; end
+				3: //Draw GongPinTongBu and GuangZiMaiChong.
+					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
+					else begin 
+							en_ZDrawCore<=1'b1; 
+							Cmd_ZDrawCore<=4; //4: Draw GongPinTongBu.
+						end	
+				4: //Initial Ready.
+					begin 
+						//oDrawInitReady<=1'b1; 
+						i<=i+1'b1; 
+					end
 					
 //////////////////////////////////////////////////////////////////////////////////
-				4: //Waiting for draw schedule.
-					if(iDraw_Schedule) begin
+				5: //Waiting for draw schedule.
+					if(1/*iDraw_Schedule*/) begin
 										i<=i+1'b1;
 									end
-				5: //Draw RTC.
+				6: //Draw RTC.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=2; //2. Draw RTC.
 						end
 				
-				6: //Draw SIN wave.
+				7: //Draw SIN wave.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=3; //3: Draw SIN wave.
 						end
-				7: //Draw GongPinTongBu and GuangZiMaiChong.
+				8: //Draw New Pulse Counter.
+					if(1/*old_PulseCounter!=new_PulseCounter*/) begin 
+														//update.
+														old_PulseCounter<=new_PulseCounter;
+														i<=i+1'b1; 
+														end
+					else begin i<=10; end
+				9: //Draw New PulseCounter.
+					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
+					else begin
+							en_ZDrawCore<=1'b1; 
+							Cmd_ZDrawCore<=5; //5. Draw A New Photon Counter. iData1=New Photon Counter.
+							Data1_ZDrawCore<=old_PulseCounter;
+						end
+				10: //Draw Random Histogram.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=4; //4: Draw GongPinTongBu.
-						end	
-				8: 
-					begin oDraw_Done<=1'b1; i<=i+1'b1; end
-				9:
-					begin oDraw_Done<=1'b0; led<=1'b0; i<=4; end
+							Cmd_ZDrawCore<=6; //6: Draw Random Histogram.
+						end
+				11:
+					begin 
+						led<=1'b0; 
+						i<=5; 
+					end
 			endcase
 		end
 endmodule

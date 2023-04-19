@@ -24,67 +24,122 @@ module ZSDRAM_RW_Arbit(
     input en,
 
 	//Read Request.
-	input rd_req,
-	input [23:0] rd_addr,
-	input rd_done,
+	input iRd_Req,
+	input [23:0] iRd_Addr,
+	output reg oRd_Done,
+	output reg [15:0] oRd_Data,
 	
 	//Write Request.
-	input wr_req,
-	input [23:0] wr_addr,
-	input wr_done,
-	
-	//Arbit Output.
-	output reg [1:0] rw_req,
-	output reg [23:0] rw_addr
+	input iWr_Req,
+	input [23:0] iWr_Addr,
+	input [15:0] iWr_Data,
+	output reg oWr_Done,
+
+	//SDRAM operation busy.
+	output reg oBusy,
+
+	//physical pins used to connect to SDRAM chip.
+    output S_CLK,
+    output S_CKE,
+    output S_nCS,
+    output S_nRAS,
+    output S_nCAS,
+    output S_nWE,
+    output [12:0] S_A,
+    output [1:0] S_BA,
+    output [1:0] S_DQM,
+    inout [15:0] S_DQ
     );
-reg [3:0] i;
+/////////////////////////////////////////////////////////
+reg [23:0] sdram_rw_addr; //SDRAM RW Address.
+reg [1:0] sdram_rw_req; //SDRAM RW Request.
+
+reg [15:0] sdram_in_data; //Data write to SDRAM.
+wire [15:0] sdram_out_data; //Data read from SDRAM.
+
+wire sdram_wr_done;
+wire sdram_rd_done;
+ZSDRAM_Module_Base ic_SDRAM(
+    .clk(clk), //133MHz,210 degree phase shift.
+    .rst_n(rst_n),
+
+    .iAddr(sdram_rw_addr), //input, Bank(2)+Row(13)+Column(9)=(24)
+    .iData(sdram_in_data), //input data, write to SDRAM.
+    .oData(sdram_out_data), //output, read back data from SDRAM.
+
+    .iCall(sdram_rw_req), //input, [1]=1:Write, [0]=1:Read.
+    .oDone({sdram_wr_done,sdram_rd_done}), //output,[1]=1:write done, [0]=1:read done.
+    
+    .S_CKE(S_CKE),
+    .S_nCS(S_nCS),
+    .S_nRAS(S_nRAS),
+    .S_nCAS(S_nCAS),
+    .S_nWE(S_nWE),
+    .S_BA(S_BA),
+    .S_A(S_A),
+    .S_DQM(S_DQM),
+    .S_DQ(S_DQ)
+    );    
+reg [7:0] i;
 always@(posedge clk or negedge rst_n)
 if(!rst_n)	begin
-				rw_req<=2'b00;
-				rw_addr<=24'd0;
+				i<=0;
+				oBusy<=1'b0;
+				sdram_rw_req<=2'b00;
 			end
 else if(en) begin
 			case(i)
 				0: //read priority first.
-					if(rd_req) begin 
-								rw_req<=2'b01;
-								rw_addr<=rd_addr;
-								i<=i+1'b1;
-							end
-					else
-						i<=2; 
-				1: //waiting for read done.
-					begin
-						rw_addr<=rd_addr;
-						
-						if(rd_done) begin
-									rw_req<=2'b00;
-									i<=i+1'b1;
-								end
+					if(iRd_Req) begin oBusy<=1'b1; i<=i+1'b1; end		
+					else begin 
+							i<=4; //no read request, go to check write request.
+						end
+				1: //do read until done.
+					if(sdram_rd_done) begin 
+										sdram_rw_req<=2'b00;
+										oRd_Data<=sdram_out_data;
+										i<=i+1'b1; 
+									end		
+					else begin
+							sdram_rw_req<=2'b01;
+							sdram_rw_addr<=iRd_Addr;
+						end
+				2: //generate read done signal.
+					begin oRd_Done<=1'b1; i<=i+1'b1; end
+				3: //generate read done sginal.
+					begin 
+						oRd_Done<=1'b0; 
+						oBusy<=1'b0; 
+						i<=i+1'b1; 
 					end
-				2: //write priority second.
-					if(wr_req) begin 
-								rw_req<=2'b10;
-								rw_addr<=wr_addr;
-								i<=i+1'b1;
-							end
-					else
-						i<=4; 	
-				3: //waiting for write done.
+				
+				4: //write priority second.
+					if(iWr_Req) begin oBusy<=1'b1; i<=i+1'b1; end
+					else begin 
+							i<=0; //no write reqeust, go to check read request.
+						end
+				5: //do write until done.
+					if(sdram_wr_done) begin 
+										sdram_rw_req<=2'b00;
+										i<=i+1'b1; 
+									end
+					else begin
+							sdram_rw_req<=2'b10;
+							sdram_rw_addr<=iWr_Addr;
+							sdram_in_data<=iWr_Data;
+						end
+				6: //generate write done signal.
+					begin oWr_Done<=1'b1; i<=i+1'b1; end
+				7: //generate write done signal.
 					begin
-						rw_addr<=wr_addr;
-						
-						if(wr_done) begin
-									rw_req<=2'b00;
-									i<=i+1'b1;
-								end
+						oWr_Done<=1'b0;
+						oBusy<=1'b0;
+						i<=0;
 					end
-				4: //loop.
-					i<=0;
 			endcase
 		 end
 	else begin
-			rw_req<=2'b00;
-			rw_addr<=24'd0;
+			oBusy<=1'b0;
+			sdram_rw_req<=2'b00;
 		end
 endmodule

@@ -97,11 +97,11 @@ reg [9:0] addr_SIN;
 wire [6:0] data_SIN;
 reg [9:0] cnt_data_SIN;
 reg [9:0] cnt_SIN_Shift;
-ZM9K_SIN ic_M9K_SIN (
-  .clka(clk), // input clka
-  .addra(addr_SIN), // input [9 : 0] addra
-  .douta(data_SIN) // output [6 : 0] douta
-);
+//ZM9K_SIN ic_M9K_SIN (
+//  .clka(clk), // input clka
+//  .addra(addr_SIN), // input [9 : 0] addra
+//  .douta(data_SIN) // output [6 : 0] douta
+//);
 
 
 //FIFO to save Pulse Counter.

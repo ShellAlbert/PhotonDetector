@@ -29,7 +29,10 @@ module ZDrawCore(
 	//2: Draw RTC.
 	//3: Draw SIN wave.
 	//4: Draw GongPinTongBu and GuangZiMaiChong.
+	//5. Draw A New Photon Counter. iData1=New Photon Counter.
+	//6. Draw Random Histogram.
 	input [3:0] iCmd,
+	input [31:0] iData1,
 	output reg oDraw_Done, //output, indicate draw done.
 
 	//SDRAM Glue Logic.
@@ -38,18 +41,34 @@ module ZDrawCore(
     output reg oSDRAM_Wr_Req, //output, SDRAM write request.
     input iSDRAM_Wr_Done //input, SDRAM write done signal.
     );
- 
+
+//https://www.daycounter.com/Calculators/Sine-Generator-Calculator.phtml
+//Sine Look Up Table Generator
+//Number of Points: 120
+//Max Amplitude: 220
+//Numbers Per Row: 8
 //M9K=9*1024bits=9216bits.
-//120 Samples*7-bits *2 periods =840bits *2 periods =1680 bits.
+//120 Samples*8-bits *5 periods =950bits *5 periods =4800 bits.
 reg [9:0] addr_SIN;
-wire [6:0] data_SIN;
+wire [7:0] data_SIN;
 reg [9:0] cnt_data_SIN;
 reg [9:0] cnt_SIN_Shift;
-ZM9K_SIN ic_M9K_SIN_Wave (
+ZSIN_ROM_M9K ic_SIN_ROM(
   .clka(clk), // input clka
   .addra(addr_SIN), // input [9 : 0] addra
-  .douta(data_SIN) // output [6 : 0] douta
+  .douta(data_SIN) // output [7 : 0] douta
 );
+
+//https://www.calculator.net/random-number-generator.html
+//Comprehensive Version: 0~220, Generate 600 numbers.
+reg [9:0] addr_Random;
+wire [7:0] data_Random;
+ZPulseCounter_Random ic_PulseCounter_Random (
+  .clka(clk), // input clka
+  .addra(addr_Random), // input [9 : 0] addra
+  .douta(data_Random) // output [7 : 0] douta
+);
+
 ////////////////////////////////////////////////////////////
 //RTC Module.
 wire [3:0] hour_10;
@@ -82,7 +101,32 @@ ZRTC_Mux8to1 ic_RTC_Mux(
     .second_1(second_1),
     .dout(dout_RTC_ZiMo_Addr)
     );
-
+////////////////////////////////////////////////////////
+reg [3:0] select_PulseCounterMux;
+reg [31:0] PulseCounter;
+wire [10:0] dout_PulseCounter_ZiMo_Addr;
+ZPulseCounter_Mux10to1 ic_PulseCounter_Mux(
+	//0: q7
+	//1: q6
+	//2: q5
+	//3: q4
+	//4: q3
+	//5: q2
+	//6: q1
+	//7: q0
+    .select(select_PulseCounterMux),
+    
+    .q0(PulseCounter[3:0]), //input.
+    .q1(PulseCounter[7:4]),
+    .q2(PulseCounter[11:8]),
+    .q3(PulseCounter[15:12]),
+    .q4(PulseCounter[19:16]),
+    .q5(PulseCounter[23:20]),
+    .q6(PulseCounter[27:24]),
+    .q7(PulseCounter[31:28]),
+    
+    .dout(dout_PulseCounter_ZiMo_Addr) //output.
+    );
 ////////////////////////////////////////////////////////
 //ZiMo 32x32.
 reg [10:0] addr_ZiMo3232;
@@ -104,6 +148,8 @@ reg [31:0] x_position;
 reg [31:0] y_position;
 reg [7:0] pixel_data;
 reg [7:0] which_dot_matrix;
+reg [23:0] addr_photon_counter;
+reg [7:0] CNT1;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
 			i<=0;
@@ -117,10 +163,19 @@ if(!rst_n) begin
 			cnt_data_SIN<=0;
 			cnt_SIN_Shift<=0;
 
+			//Random Histogram.
+			addr_Random<=0;
+
 			//ZiMo 32x32.
 			addr_ZiMo3232<=0;
 			cnt_addr_ZiMo3232<=0;
 			select_RTCMux<=0;
+			
+			//SDRAM Space Assignment
+			//0~383999: (480*800-1): LCD GRAM. 
+			//384000~384599: (384000+600-1): Photon Counter.
+			addr_photon_counter<=384000;
+			
 		end
 else if(en) begin
 			case(iCmd)
@@ -142,7 +197,7 @@ else if(en) begin
 									//oSDRAM_Wr_Data<=16'h1986;
 								end
 						2: //Clear Screen: 480*800=384000.
-							if(oSDRAM_Wr_Addr==384000-1) begin 
+							if(oSDRAM_Wr_Addr>=384000-1) begin 
 															oSDRAM_Wr_Addr<=0; 
 															i<=i+1'b1; 
 														end
@@ -172,7 +227,7 @@ else if(en) begin
 									oSDRAM_Wr_Data<=`Color_Green;
 								end
 						2: //(470,10)=y*width+x=10*480+470=5270.
-							if(oSDRAM_Wr_Addr==5270-1) begin i<=i+1; end
+							if(oSDRAM_Wr_Addr>=5270-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+1'b1; 
 									i<=i-1'b1; //Loop to write next pixel.
@@ -192,7 +247,7 @@ else if(en) begin
 									oSDRAM_Wr_Data<=`Color_Green;
 								end
 						5: //(470,790)=y*width+x=790*480+470=379670.
-							if(oSDRAM_Wr_Addr==379670-1) begin i<=i+1; end
+							if(oSDRAM_Wr_Addr>=379670-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+1'b1; 
 									i<=i-1'b1; //Loop to write next pixel.
@@ -212,7 +267,7 @@ else if(en) begin
 									oSDRAM_Wr_Data<=`Color_Green;
 								end
 						8: //(10,790)=y*width+x=790*480+10=379210.
-							if(oSDRAM_Wr_Addr==379210-1) begin i<=i+1; end
+							if(oSDRAM_Wr_Addr>=379210-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; 
 									i<=i-1'b1; //Loop to write next pixel.
@@ -232,7 +287,7 @@ else if(en) begin
 									oSDRAM_Wr_Data<=`Color_Green;
 								end
 						11: //(470,790)=y*width+x=790*480+470=379670.
-							if(oSDRAM_Wr_Addr==379670-1) begin i<=i+1; end
+							if(oSDRAM_Wr_Addr>=379670-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; 
 									i<=i-1'b1; //Loop to write next pixel.
@@ -252,16 +307,17 @@ else if(en) begin
 									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
 						14: //(240,790)=y*width+x=790*480+240=379440.
-							if(oSDRAM_Wr_Addr==379440-1) begin i<=i+1; end
+							if(oSDRAM_Wr_Addr>=379440-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; 
 									i<=i-1'b1; //Loop to write next pixel.
 								end
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-						//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
-						15: //Draw A Line from (250,100) to (250,700).
+						//Draw SIN wave in rectangle (250,20)-(250+128,20+600)=(378,620).
+						/*
+						15: //Draw A Line from (250,20) to (250,620).
 							begin 
-								oSDRAM_Wr_Addr<=48250-1; //(250,100)=y*width+x=100*480+250=48250.
+								oSDRAM_Wr_Addr<=9850-1; //(250,20)=y*width+x=20*480+250=9850.
 								i<=i+1'b1; 
 							end
 						16:
@@ -271,18 +327,18 @@ else if(en) begin
 												end
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Pink;
+									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
-						17: //(250,700)=y*width+x=700*480+250=336250.
-							if(oSDRAM_Wr_Addr>=336250-1) begin i<=i+1; end
+						17: //(250,620)=y*width+x=620*480+250=297850.
+							if(oSDRAM_Wr_Addr>=297850-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; 
 									i<=i-1'b1; //Loop to write next pixel.
 								end
-						//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
-						18: //Draw A Line from (378,100) to (378,700).
+						//Draw SIN wave in rectangle (250,20)-(250+128,20+600)=(378,620).
+						18: //Draw A Line from (378,20) to (378,620).
 							begin 
-								oSDRAM_Wr_Addr<=48378-1; //(250,100)=y*width+x=100*480+378=48378.
+								oSDRAM_Wr_Addr<=9978-1; //(378,20)=y*width+x=20*480+378=9978.
 								i<=i+1'b1; 
 							end
 						19:
@@ -292,18 +348,18 @@ else if(en) begin
 												end
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Pink;
+									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
-						20: //(378,700)=y*width+x=700*480+378=336378.
-							if(oSDRAM_Wr_Addr>=336378-1) begin i<=i+1; end
+						20: //(378,620)=y*width+x=620*480+378=297978.
+							if(oSDRAM_Wr_Addr>=297978-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; 
 									i<=i-1'b1; //Loop to write next pixel.
 								end
 						//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
-						21: //Draw A Line from (250,100) to (378,100).
+						21: //Draw A Line from (250,20) to (378,20).
 							begin 
-								oSDRAM_Wr_Addr<=48250-1; //(250,100)=y*width+x=100*480+250=48250.
+								oSDRAM_Wr_Addr<=9850-1; //(250,20)=y*width+x=20*480+250=9850.
 								i<=i+1'b1; 
 							end
 						22:
@@ -313,18 +369,18 @@ else if(en) begin
 												end
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Pink;
+									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
-						23: //(378,100)=y*width+x=100*480+378=48378.
-							if(oSDRAM_Wr_Addr>=48378-1) begin i<=i+1; end
+						23: //(378,20)=y*width+x=20*480+378=9978.
+							if(oSDRAM_Wr_Addr>=9978-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+1; 
 									i<=i-1'b1; //Loop to write next pixel.
 								end
-						//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
-						24: //Draw A Line from (250,700) to (378,700).
+						//Draw SIN wave in rectangle (250,20)-(250+128,20+600)=(378,620).
+						24: //Draw A Line from (250,620) to (378,620).
 							begin 
-								oSDRAM_Wr_Addr<=336250-1; //(250,700)=y*width+x=700*480+250=336250.
+								oSDRAM_Wr_Addr<=297850-1; //(250,620)=y*width+x=620*480+250=297850.
 								i<=i+1'b1; 
 							end
 						25:
@@ -334,18 +390,44 @@ else if(en) begin
 												end
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Pink;
+									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
-						26: //(378,700)=y*width+x=700*480+378=336378.
-							if(oSDRAM_Wr_Addr>=336378-1) begin i<=i+1; end
+						26: //(378,620)=y*width+x=620*480+378=297978.
+							if(oSDRAM_Wr_Addr>=297978-1) begin i<=i+1; end
 							else begin 
 									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+1; 
 									i<=i-1'b1; //Loop to write next pixel.
 								end
+						*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-						27: //Generate done Signal.
+						//Draw Histogram Rectangle.
+						//(16,20)-(16+204,20+600)=(220,620).
+						/*
+						27: //Draw A Line from (16,20) to (16,620).
+							begin 
+								oSDRAM_Wr_Addr<=9616-1; //(16,20)=y*width+x=20*480+16=9616.
+								i<=i+1'b1; 
+							end
+						28:
+							if(iSDRAM_Wr_Done) begin 
+													oSDRAM_Wr_Req<=0; 
+													i<=i+1'b1; 
+												end
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Data<=`Color_Yellow;
+								end
+						29: //(16,620)=y*width+x=620*480+16=297616.
+							if(oSDRAM_Wr_Addr>=297616-1) begin i<=i+1; end
+							else begin 
+									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; 
+									i<=i-1'b1; //Loop to write next pixel.
+								end
+						*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+						15: //Generate done Signal.
 							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						28: //Generate done Signal.
+						16: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
 				2: //2. Draw RTC.
@@ -354,9 +436,9 @@ else if(en) begin
 				//(x1,y1)=(464-24,680) (x2,y2)=(464,680+8*12)=(464,776).
 				//(464,680) - (440-1,776-1)
 					case(i)
-						0: //set start address.(464,680)=y*width+x=680*480+464=326864.
+						0: //set start address.(434,680)=y*width+x=680*480+434=326834.
 							begin
-								oSDRAM_Wr_Addr<=326864-1;
+								oSDRAM_Wr_Addr<=326834-1;
 								select_RTCMux<=4'd0; //xx:xx:xx
 								i<=i+1'b1;
 							end
@@ -431,19 +513,25 @@ else if(en) begin
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
 				3: //3. Draw SIN wave.
-				//Single Period SIN wave is 120 points, 7-bit, 2^7=128.
+				//https://www.daycounter.com/Calculators/Sine-Generator-Calculator.phtml
+				//Sine Look Up Table Generator
+				//Number of Points: 120
+				//Max Amplitude: 220
+				//Numbers Per Row: 8
+				//Single Period SIN wave is 120 points, 0~220.
+				//The upper limit is 470, the bottom limit is 250, so the available drawing space is 470-250=220.
 				//If we want to draw 5 periods on screen, so 5*120=600.
-				//Draw SIN wave in rectangle (250,100)-(250+128,100+600)=(378,700).
+				//Draw SIN wave in rectangle (208,20)-(208+256,20+600)=(464,620).
 					case(i)
 						0: //Calculate SDRAM plain address.
 							begin 
-								//Plain xOffset=250.
-								//Plain yOffset=100*480=48000.
-								x_position<=250+data_SIN; //+xOffset.
-								y_position<=48000;
+								//Plain xOffset=208.
+								//Plain yOffset=20*480=9600.
+								x_position<=250-5+data_SIN; //+xOffset.
+								y_position<=9600;
 								i<=i+1'b1; 
 							end
-						1: 
+						1: //Original.
 							begin 
 								oSDRAM_Wr_Addr<=y_position+x_position-1;
 								i<=i+1'b1; 
@@ -455,9 +543,53 @@ else if(en) begin
 												end
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									oSDRAM_Wr_Data<=`Color_Pink;
+									oSDRAM_Wr_Data<=`Color_Yellow;
 								end
-						3: //120 points single period, 5 periods*120 points=600.
+						3: //draw x+1 to make it looks bold.
+							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+1; i<=i+1'b1; end
+						4: 
+							if(iSDRAM_Wr_Done) begin 
+													oSDRAM_Wr_Req<=0; 
+													i<=i+1'b1; 
+												end
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Data<=`Color_Yellow;
+								end
+						5: //x-1.
+							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1; i<=i+1'b1; end
+						6: 
+							if(iSDRAM_Wr_Done) begin 
+													oSDRAM_Wr_Req<=0; 
+													i<=i+1'b1; 
+												end
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Data<=`Color_Yellow;
+								end
+						7: //y+1.
+							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480; i<=i+1'b1; end
+						8:
+							if(iSDRAM_Wr_Done) begin 
+													oSDRAM_Wr_Req<=0; 
+													i<=i+1'b1; 
+												end
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Data<=`Color_Yellow;
+								end
+						9: //y-1.
+							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-480; i<=i+1'b1; end
+						10:
+							if(iSDRAM_Wr_Done) begin 
+													oSDRAM_Wr_Req<=0; 
+													i<=i+1'b1; 
+												end
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Data<=`Color_Yellow;
+								end
+						11: //120 points single period, 5 periods*120 points=600.
 							if(cnt_data_SIN==600-1) begin 
 													cnt_data_SIN<=0; 
 													addr_SIN<=0;
@@ -467,13 +599,13 @@ else if(en) begin
 									cnt_data_SIN<=cnt_data_SIN+1'b1;
 									addr_SIN<=addr_SIN+1'b1; 
 									
-									x_position<=250+data_SIN; //+xOffset.
+									x_position<=250-5+data_SIN; //+xOffset.
 									y_position<=y_position+480; //next y.
 									i<=1; //Loop to write next pixel.
 								end
-						4: //Generate done Signal.
+						12: //Generate done Signal.
 							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						5: //Generate done Signal.
+						13: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
 				4: //4: Draw GongPinTongBu and GuangZiMaiChong.
@@ -486,66 +618,67 @@ else if(en) begin
 									0: //Gong.
 										begin 
 											addr_ZiMo3232<=0; //offset of Gong.
-											//(468,12)
-											//468-32=436, 12+32=44. =>(436,44)
-											//addr=y*width+x=12*480+468=6228.
-											oSDRAM_Wr_Addr<=6228-1;
+											//(468,660)
+											//468-32=436, 660+32=692. =>(436,692)
+											//addr=y*width+x=660*480+468=317268.
+											oSDRAM_Wr_Addr<=317268-1;
 										end
 									1: //Pin.
 										begin 
 											addr_ZiMo3232<=128; //offset of Pin.
-											//(468,44)
-											//468-32=436, 44+32=76. =>(436,76)
-											//addr=y*width+x=44*480+468=21588.
-											oSDRAM_Wr_Addr<=21588-1;
+											//(468,692)
+											//468-32=436, 692+32=724. =>(436,724)
+											//addr=y*width+x=692*480+468=332628.
+											oSDRAM_Wr_Addr<=332628-1;
 										end
 									2: //Tong.
 										begin 
 											addr_ZiMo3232<=256; //offset of Gong.
-											//(468,76)
-											//468-32=436, 76+32=108. =>(436,108)
-											//addr=y*width+x=76*480+468=36948.
-											oSDRAM_Wr_Addr<=36948-1;
+											//(468,724)
+											//468-32=436, 724+32=756. =>(436,756)
+											//addr=y*width+x=724*480+468=347988.
+											oSDRAM_Wr_Addr<=347988-1;
 										end
 									3: //Bu.
 										begin 
 											addr_ZiMo3232<=384; //offset of Gong.
-											//(468,108)
-											//468-32=436, 108+32=140. =>(436,140)
-											//addr=y*width+x=108*480+468=52308.
-											oSDRAM_Wr_Addr<=52308-1;
+											//(468,756)
+											//468-32=436, 756+32=788. =>(436,788)
+											//addr=y*width+x=756*480+468=363348.
+											oSDRAM_Wr_Addr<=363348-1;
 										end
 									4: //Guang.
 										begin 
 											addr_ZiMo3232<=512; //offset of Guang.
-											//(238,12)
-											//238-32=206, 12+32=44. =>(206,44)
-											//addr=y*width+x=12*480+238=5998.
-											oSDRAM_Wr_Addr<=5998-1;
+											//(238,660)
+											//238-32=206, 660+32=692. =>(206,692)
+											//addr=y*width+x=660*480+238=317038.
+											oSDRAM_Wr_Addr<=317038-1;
 										end
 									5: //Zi.
 										begin 
 											addr_ZiMo3232<=640; //offset of Zi.
-											//(238,44)
-											//238-32=206, 44+32=76. =>(206,76)
-											//addr=y*width+x=44*480+238=21358.
-											oSDRAM_Wr_Addr<=21358-1;
+											//(238,692)
+											//238-32=206, 692+32=724. =>(206,724)
+											//addr=y*width+x=692*480+238=332398.
+											oSDRAM_Wr_Addr<=332398-1;
 										end
 									6: //Mai.
 										begin 
 											addr_ZiMo3232<=768; //offset of Mai.
-											//(238,76)
-											//238-32=206, 76+32=108. =>(238,108)
-											//addr=y*width+x=76*480+238=36718.
-											oSDRAM_Wr_Addr<=36718-1;
+											//(238,724)
+											//238-32=206, 724+32=756. =>(238,756)
+											//addr=y*width+x=724*480+238=347758.
+											oSDRAM_Wr_Addr<=347758-1;
 										end
 									7: //Chong.
 										begin 
 											addr_ZiMo3232<=896; //offset of Chong.
-											//(238,108)
-											//238-32=206, 108+32=140. =>(238,140)
-											//addr=y*width+x=108*480+238=52078.
-											oSDRAM_Wr_Addr<=52078-1;
+											//addr_ZiMo3232<=768; 
+											//(238,756)
+											//238-32=206, 756+32=788. =>(238,788)
+											//addr=y*width+x=756*480+238=363118.
+											oSDRAM_Wr_Addr<=363118-1;
 										end
 								endcase
 								
@@ -614,7 +747,173 @@ else if(en) begin
 						9: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
-				5: //Other Commands.
+				5: //5. Draw A New Photon Counter. iData1=New Photon Counter.
+				//99999999  Font Size: 24*12.
+				//(x1,y1)=(234-24,680) (x2,y2)=(234,680+8*12)=(234,776).
+				//(234,680) - (210-1,776-1)
+					case(i)
+						0: //set start address.(206,680)=y*width+x=680*480+206=326606.
+							begin
+								oSDRAM_Wr_Addr<=326606-1;
+								PulseCounter<=iData1;
+								select_PulseCounterMux<=4'd0; //99999999.
+								i<=i+1'b1;
+							end
+						1: //Update ZiMo address for next digit.
+							begin 
+								//choose 0~9 ZiMo Offset Value.
+								addr_ZiMo3232<=dout_PulseCounter_ZiMo_Addr; //0~9.
+								
+								//reset counter.
+								cnt_8bits<=0;
+								cnt_3bytes<=0;
+								cnt_column<=0;
+								i<=i+1'b1;
+							end
+						2: 
+							begin pixel_data<=data_ZiMo3232; i<=i+1'b1; end
+						3: //Loop to draw 8bits.
+							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			 
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									//Pink: Foreground Color.
+									//Black: Background Color.
+									oSDRAM_Wr_Data<=(pixel_data&8'h01)?(`Color_Green):(`Color_Black);
+									//oSDRAM_Wr_Data<=`Color_Green;
+								end
+						4: 
+							if(cnt_8bits==8-1) begin 
+												cnt_8bits<=0; 
+												//Next SDRAM address. (Next Row/X).
+												oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;		
+												i<=i+1'b1; 
+											end							
+							else begin 
+									cnt_8bits<=cnt_8bits+1'b1; //Next bit.
+									pixel_data<=pixel_data>>1; //Right Shift 1bit.
+									//Next SDRAM address. (Next Row/X).
+									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1;				
+									i<=3; //Loop.
+								end
+						5: //24*12, 24bits/8bits=3bytes. 3 bytes of each column.
+							if(cnt_3bytes==3-1) begin 
+												cnt_3bytes<=0; 
+												addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
+												i<=i+1'b1; 
+											end				
+							else begin 
+									cnt_3bytes<=cnt_3bytes+1'b1; 
+									addr_ZiMo3232<=addr_ZiMo3232+1'b1; 
+									i<=2; //Loop to draw one complete column.
+								end
+						6: //repeat 12 times of 3 bytes = 12*3=36 bytes of one 24*12 digit.
+							if(cnt_column==12-1) begin 
+													cnt_column<=0; 
+													oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+504; //Next Column.
+													i<=i+1'b1; 
+												end
+							else begin 
+									cnt_column<=cnt_column+1'b1; 
+									//adjust coordinate: new position: x+24 and y+480=480+24=504
+									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+504; //Next Column.
+									i<=2; //Loop to draw one complete digit.
+								end
+						7: //99999999, we have 8 digits to draw.
+							if(select_PulseCounterMux==4'd8-1) begin select_PulseCounterMux<=4'd0; i<=i+1'b1; end
+							else begin 
+									select_PulseCounterMux<=select_PulseCounterMux+1'b1; 
+									i<=1; //Loop to draw next digit.
+								end
+						8: //Generate done Signal.
+							begin oDraw_Done<=1'b1; i<=i+1'b1; end
+						9: //Generate done Signal.
+							begin oDraw_Done<=1'b0; i<=0; end
+					endcase
+				/*
+				//Single Period SIN wave is 120 points. 5Period*120=600 points.
+				//SDRAM Space Assignment
+				//0~383999: (480*800-1): LCD GRAM. 
+				//384000~384599: (384000+600-1): Photon Counter.
+					case(i)
+						0: //write new photon counter to SDRAM.
+							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			 
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Addr<=addr_photon_counter; 
+									oSDRAM_Wr_Data<=iData1; //New Photon Counter.
+								end
+						1: //Loop to write.
+							begin
+								if(addr_photon_counter>=(384000+600-1)) 
+									addr_photon_counter<=384000;
+								else 
+									addr_photon_counter<=addr_photon_counter+1'b1;
+								/////////////////////////////////
+								i<=i+1'b1;
+							end
+						2: //Generate done Signal.
+							begin oDraw_Done<=1'b1; i<=i+1'b1; end
+						3: //Generate done Signal.
+							begin oDraw_Done<=1'b0; i<=0; end
+					endcase
+				*/
+				6: //Draw Random Histogram.
+				//Single Period SIN wave is 120 points,.
+				//If we want to draw 5 periods on screen, so 5*120=600.
+				//Draw Random Histogram in rectangle (15,20)-(15+220,20+600)=(235,620).
+					case(i)
+						0: //Calculate SDRAM plain address.
+							begin 
+								//Plain xOffset=208.
+								//Plain yOffset=20*480=9600.
+								x_position<=10+data_Random; //+xOffset.
+								y_position<=9600;
+								CNT1<=data_Random; 
+								i<=i+1'b1; 
+							end
+						1: //Original.
+							begin 
+								oSDRAM_Wr_Addr<=y_position+x_position-1;
+								i<=i+1'b1; 
+							end
+						2:
+							if(iSDRAM_Wr_Done) begin 
+													oSDRAM_Wr_Req<=0; 
+													i<=i+1'b1; 
+												end
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Data<=`Color_Pink;
+								end
+						3: //Loop to draw from top to bottom to generate histogram.
+							if(CNT1==0) begin i<=i+1'b1; end
+							else begin 
+									CNT1<=CNT1-1'b1; 
+									oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-1'b1; 
+									i<=2; 
+								end
+						
+						4: //120 points single period, 5 periods*120 points=600.
+							if(cnt_data_SIN==600-1) begin 
+													cnt_data_SIN<=0; 
+													addr_Random<=0;
+													i<=i+1'b1;
+												end
+							else begin 
+									cnt_data_SIN<=cnt_data_SIN+1'b1;
+									addr_Random<=addr_Random+1'b1; 
+									
+									x_position<=10+data_Random; //+xOffset.
+									y_position<=y_position+480; //next y.
+									CNT1<=data_Random;
+									i<=1; //Loop to write next pixel.
+								end
+						5: //Generate done Signal.
+							begin oDraw_Done<=1'b1; i<=i+1'b1; end
+						6: //Generate done Signal.
+							begin oDraw_Done<=1'b0; i<=0; end
+					endcase
+				7: //Other Commands.
 					i<=i;
 			endcase
 		 end
