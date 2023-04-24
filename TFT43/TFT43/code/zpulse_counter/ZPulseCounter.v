@@ -37,8 +37,8 @@ module ZPulseCounter(
     output [3:0] q7_LCD,
     output overflow,
     //output for uploading data via Network.
-    output reg [31:0] oPulseCounter_Single, //maximum 9999,9999.
-   	output data_update,
+    output reg [15:0] oPulseCounter_Single, //maximum 9999,9999.
+   	output oDataUpdate,
 
 	//Accumulated PulseCounter. Never Reset to 0.
    	output [31:0] oPulseCouter_LCD_Accumulated
@@ -97,102 +97,108 @@ else if(en)	begin
 			end
 	else
 		CNT<='d0;
-assign data_update=(CNT=='d80_000-1)?1'b1:1'b0;
+///////////////////////////////////////////
+//output data update signal before 1 clk to avoid to be reset to zero.
+assign oDataUpdate=(CNT=='d80_000-2)?1'b1:1'b0;
+//////////////////////////////////////////
+wire zero_signal;
+assign zero_signal=(CNT=='d80_000-1)?1'b1:1'b0;
 
 //rq0.
 always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq0<=4'd0;
-				rq_overflow[0]<=1'b0;
-				oPulseCounter_Single<=0;
-			end
-else	begin
-			if(en)	begin
-							if(data_update)	begin
-												rq0<=4'd0;
-												rq_overflow[0]<=1'b0;
-												oPulseCounter_Single<=0;
-											end
-							else if(pulse)	begin
-												////////////////////////////////////
-												if(rq0>=4'd9)	begin
-																		rq0<=4'd0;
-																		rq_overflow[0]<=1'b1;
-																end
-												else	begin
-															rq0<=rq0+1'b1;
-															rq_overflow[0]<=1'b0;
-														end
-												////////////////////////////////////
-												oPulseCounter_Single<=oPulseCounter_Single+1'b1; 
-											end
-							else
-								rq_overflow[0]<=1'b0;
-						end
-			else	begin
-						rq0<=4'd0;
-						rq_overflow[0]<=1'b0;
-						oPulseCounter_Single<=0;
-					end
+if(!rst_n) begin
+			rq0<=4'd0;
+			rq_overflow[0]<=1'b0;
+			
+			oPulseCounter_Single<=0;
 		end
-	
+else if(en) begin
+			if(zero_signal) begin
+							rq0<=4'd0;
+							rq_overflow[0]<=1'b0;
+							oPulseCounter_Single<=0;
+						 end
+			else if(pulse) begin
+							if(rq0>=4'd9) begin
+											rq0<=4'd0;
+											rq_overflow[0]<=1'b1;
+										end
+							else begin
+									rq0<=rq0+1'b1;
+									rq_overflow[0]<=1'b0;
+								end
+								////////////////////////////////////
+								oPulseCounter_Single<=oPulseCounter_Single+1'b1; 
+						end
+			else begin
+					rq_overflow[0]<=1'b0;
+				end
+		 end
+	else begin
+			rq0<=4'd0;
+			rq_overflow[0]<=1'b0;
+			oPulseCounter_Single<=0;
+		end
+
 //rq1.
 always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq1<=4'd0;
-				rq_overflow[1]<=1'b0;
-			end
-else	if(en)	begin
-						if(data_update)	begin
-											rq1<=4'd0;
+if(!rst_n) begin
+			rq1<=4'd0;
+			rq_overflow[1]<=1'b0;
+		end
+else if(en) begin
+			if(zero_signal) begin
+							rq1<=4'd0;
+							rq_overflow[1]<=1'b0;
+						 end
+			else if(rq_overflow[0]) begin
+									if(rq1>=4'd9) begin
+													rq1<=4'd0;
+													rq_overflow[1]<=1'b1;
+												end
+									else begin
+											rq1<=rq1+1'b1;
 											rq_overflow[1]<=1'b0;
 										end
-						else if(rq_overflow[0])	begin
-														if(rq1>=4'd9)	begin
-																			rq1<=4'd0;
-																			rq_overflow[1]<=1'b1;
-																		end
-														else	begin
-																	rq1<=rq1+1'b1;
-																	rq_overflow[1]<=1'b0;
-																end
-												end
-						else
-							rq_overflow[1]<=1'b0;
-					end
-		else	begin
-					rq1<=4'd0;
+								end
+			else begin
 					rq_overflow[1]<=1'b0;
 				end
+		 end
+	else begin
+			rq1<=4'd0;
+			rq_overflow[1]<=1'b0;
+		end
 
 //rq2.
 always @ (posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				rq2<=4'd0;
-				rq_overflow[2]<=1'b0;
-			end
-else	if(en)	begin
-						if(data_update)	begin
-											rq2<=4'd0;
+if(!rst_n) begin
+			rq2<=4'd0;
+			rq_overflow[2]<=1'b0;
+		end
+else if(en) begin
+			if(zero_signal) begin
+							rq2<=4'd0;
+							rq_overflow[2]<=1'b0;
+						 end
+			else if(rq_overflow[1]) begin
+									if(rq2>=4'd9) begin
+													rq2<=4'd0;
+													rq_overflow[2]<=1'b1;
+												end
+									else begin
+											rq2<=rq2+1'b1;
 											rq_overflow[2]<=1'b0;
 										end
-						else if(rq_overflow[1])	begin
-													if(rq2>=4'd9)	begin
-																		rq2<=4'd0;
-																		rq_overflow[2]<=1'b1;
-																	end
-													else	begin
-																rq2<=rq2+1'b1;
-																rq_overflow[2]<=1'b0;
-															end
-												end
-						else
-							rq_overflow[2]<=1'b0;
-					end
-		else	begin
-					rq2<=4'd0;
+								end
+			else begin
 					rq_overflow[2]<=1'b0;
 				end
+			end
+	else begin
+			rq2<=4'd0;
+			rq_overflow[2]<=1'b0;
+		end
 
 //rq3.
 always @ (posedge clk or negedge rst_n)
@@ -201,7 +207,7 @@ if(!rst_n)	begin
 				rq_overflow[3]<=1'b0;
 			end
 else	if(en)	begin
-						if(data_update)	begin
+						if(zero_signal)	begin
 											rq3<=4'd0;
 											rq_overflow[3]<=1'b0;
 										end
@@ -230,7 +236,7 @@ if(!rst_n)	begin
 				rq_overflow[4]<=1'b0;
 			end
 else	if(en)	begin
-					if(data_update)	begin
+					if(zero_signal)	begin
 										rq4<=4'd0;
 										rq_overflow[4]<=1'b0;
 									end
@@ -259,7 +265,7 @@ if(!rst_n)	begin
 				rq_overflow[5]<=1'b0;
 			end
 else	if(en)	begin
-					if(data_update)	begin
+					if(zero_signal)	begin
 										rq5<=4'd0;
 										rq_overflow[5]<=1'b0;
 									end
@@ -288,7 +294,7 @@ if(!rst_n)	begin
 				rq_overflow[6]<=1'b0;
 			end
 else	if(en)	begin
-					if(data_update)	begin
+					if(zero_signal)	begin
 										rq6<=4'd0;
 										rq_overflow[6]<=1'b0;
 									end
@@ -317,7 +323,7 @@ if(!rst_n)	begin
 				rq_overflow[7]<=1'b0;
 			end
 else	if(en)	begin
-					if(data_update)	begin
+					if(zero_signal)	begin
 										rq7<=4'd0;
 										rq_overflow[7]<=1'b0;
 									end

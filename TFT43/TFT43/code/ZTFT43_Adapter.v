@@ -31,14 +31,13 @@ module ZTFT43_Adapter(
 	//External Sync 50Hz Signal.
 	input sync_50Hz,
 
-	//input iRefresh_Schedule, //Input, schedule to Refresh.
-    //output reg oRefresh_Done, //output, indicate refresh done.
-
-    //output reg oInitReady, //Initial Ready Signal.
 
 	//SDRAM Glue Logic.
     output reg [23:0] oSDRAM_Rd_Addr, //output, Bank(2)+Row(13)+Column(9)=(24)
-    input [15:0] iSDRAM_Data, //input, read back data from SDRAM.
+    input [15:0] iSDRAM_Data1, //input, read back data1 from SDRAM.
+    input [15:0] iSDRAM_Data2, //input, read back data2 from SDRAM.
+    input [15:0] iSDRAM_Data3, //input, read back data3 from SDRAM.
+    input [15:0] iSDRAM_Data4, //input, read back data4 from SDRAM.
 
     output reg oSDRAM_Rd_Req, //output, [1]=1:Write, [0]=1:Read.
     input iSDRAM_Rd_Done, //input,[1]=1:write done, [0]=1:read done.
@@ -180,14 +179,17 @@ if(!rst_n)	begin
 				cnt_60Hz<=0;
 			end
 else begin
-		if(cnt_60Hz==2_216_666-1)
+		if(cnt_60Hz==3_216_666-1)
 			cnt_60Hz<=0;
 		else
 			cnt_60Hz<=cnt_60Hz+1;
 	end
 //Self Aux Logic driven by step i.
 reg [15:0] i;
-reg [15:0] pixel_data;
+reg [15:0] pixel_data1;
+reg [15:0] pixel_data2;
+reg [15:0] pixel_data3;
+reg [15:0] pixel_data4;
 //480*800=384000.
 reg [31:0] CNT1;
 always @(posedge clk or negedge rst_n)
@@ -196,10 +198,9 @@ if(!rst_n)	begin
 				CNT1<=0;
 				oSDRAM_Rd_Addr<=0;
 				oSDRAM_Rd_Req<=1'b0; 
-				//oRefresh_Done<=1'b0;
-				clk_used<=1'b0;
 
-				//oInitReady<=1'b0;
+				//to count how many clk of one refresh period cost.
+				clk_used<=1'b0;
 			end
 else if(en) begin
 			case(i)
@@ -362,10 +363,15 @@ else if(en) begin
 					end
 				/////////////////////////////////////////////////
 				33: //waiting 60Hz trigger signal.
-					if(cnt_60Hz==2_216_666-1) begin
+					//if the value is too short, the LCD will shadow.
+					/*
+					if(cnt_60Hz==3_216_666-1) begin
 												clk_used<=1'b1;
 												i<=i+1'b1;
 											end
+					*/
+					if(CNT1==160_000) begin CNT1<=0; clk_used<=1'b1; i<=i+1'b1; end
+					else begin CNT1<=CNT1+1'b1; end
 				//////PreSet Write Area//////
 				34: //LCD_CS=0.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
@@ -428,14 +434,20 @@ else if(en) begin
 					else begin en_TFT43<=1'b1; trigger_TFT43<=4'd3; data_TFT43<=16'h1F; end
 
 				51: //RAMWR.(2C00)
-					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
+					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end	
 					else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2C00; end
 					
-				52: //Read One Pixel from SDRAM.
+				52: //Read 4 Words (Pixels) from SDRAM.
 					if(iSDRAM_Rd_Done) begin 
 										oSDRAM_Rd_Req<=1'b0; 
-										pixel_data<=iSDRAM_Data;
-										//pixel_data<=`Color_Pink;
+										pixel_data1<=iSDRAM_Data1;
+										pixel_data2<=iSDRAM_Data2;
+										pixel_data3<=iSDRAM_Data3;
+										pixel_data4<=iSDRAM_Data4;
+										//pixel_data1<=`Color_Pink;
+										//pixel_data2<=`Color_Pink;
+										//pixel_data3<=`Color_Pink;
+										//pixel_data4<=`Color_Pink;
 										i<=i+1'b1; 
 									end
 					else begin 
@@ -444,7 +456,7 @@ else if(en) begin
 				53: //Dump to UART to check if data read from SDRAM are right.
 					/*
 					if(done_Dump2UART) begin en_Dump2UART<=1'b0; i<=i+1'b1; end
-					else begin en_Dump2UART<=1'b1; data_Dump2UART<=pixel_data; end
+					else begin en_Dump2UART<=1'b1; data_Dump2UART<=pixel_data1; end
 					*/
 					i<=i+1'b1;
 
@@ -453,26 +465,43 @@ else if(en) begin
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; //3: Write data, iData=data.
-							data_TFT43<=pixel_data;
+							data_TFT43<=pixel_data1; //1st.
 						end 
-						
-				55: //480*800=384000
-					if(oSDRAM_Rd_Addr==384000-1) begin oSDRAM_Rd_Addr<=0; i<=i+1'b1; end				
+				55: //Fast Fill Pixel Data, iData2=Color.
+					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
+					else begin 
+							en_TFT43<=1'b1; 
+							trigger_TFT43<=4'd3; //3: Write data, iData=data.
+							data_TFT43<=pixel_data2; //2st.
+						end 
+				56: //Fast Fill Pixel Data, iData3=Color.
+					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
+					else begin 
+							en_TFT43<=1'b1; 
+							trigger_TFT43<=4'd3; //3: Write data, iData=data.
+							data_TFT43<=pixel_data3; //3st.
+						end 
+				57: //Fast Fill Pixel Data, iData4=Color.
+					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
+					else begin 
+							en_TFT43<=1'b1; 
+							trigger_TFT43<=4'd3; //3: Write data, iData=data.
+							data_TFT43<=pixel_data4; //4st.
+						end 
+			
+				58: //480*800=384000.  (0~384000-1)   
+					//Since we operate 4 words each time so the last one is 383996, 383997, 383998,383999.
+					if(oSDRAM_Rd_Addr>=383996) begin oSDRAM_Rd_Addr<=0; i<=i+1'b1; end				
 					else begin
-							oSDRAM_Rd_Addr<=oSDRAM_Rd_Addr+1'b1;
+							//0,1,2,3......4,5,6,7.....8,9,10,11....... we read 4 words each time.
+							oSDRAM_Rd_Addr<=oSDRAM_Rd_Addr+4;
 							i<=52; //Loop to draw next pixel.
 						end
-				56: //LCD_CS=1.
+				59: //LCD_CS=1.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd1; end
-				57: 
-					begin
-						//oRefresh_Done<=1'b1;
-						i<=i+1'b1;
-					end
-				58:
-					begin
-						//oRefresh_Done<=1'b0;
+				60: 
+					begin 
 						clk_used<=1'b0;
 						i<=33; //Loop to refresh.
 					end

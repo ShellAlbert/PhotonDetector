@@ -29,9 +29,7 @@ module ZDrawAdapter(
 
 	//Mode1~Mode4 Icon.
 	input [1:0] iMode,
-	
-	//output reg oDrawInitReady, //output, draw initial ready.
-    //input iDraw_Schedule, //input, schedule to draw.
+
     //Accumulated PulseCounter.
     input [31:0] iPulseCounter_Accumulated,
 
@@ -41,12 +39,14 @@ module ZDrawAdapter(
     
 	//SDRAM Glue Logic.
     output [23:0] oSDRAM_Wr_Addr, //output, Bank(2)+Row(13)+Column(9)=(24)
-    output [15:0] oSDRAM_Wr_Data, //ouptut, write data to SDRAM.
+    output [15:0] oSDRAM_Wr_Data1, //ouptut, write data1 to SDRAM.
+    output [15:0] oSDRAM_Wr_Data2, //ouptut, write data2 to SDRAM.
+    output [15:0] oSDRAM_Wr_Data3, //ouptut, write data3 to SDRAM.
+    output [15:0] oSDRAM_Wr_Data4, //ouptut, write data4 to SDRAM.
 
     output oSDRAM_Wr_Req, //output, [1]=1:Write, [0]=1:Read.
     input iSDRAM_Wr_Done, //input, SDRAM write done signal.
     
-    //output reg oDraw_Done, //output, indicate draw done.
  	output reg led
     );
 
@@ -75,28 +75,29 @@ ZDrawCore ic_DrawCore(
 
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(oSDRAM_Wr_Addr), //output, Bank(2)+Row(13)+Column(9)=(24)
-    .oSDRAM_Wr_Data(oSDRAM_Wr_Data), //ouptut, write data to SDRAM.
+    .oSDRAM_Wr_Data1(oSDRAM_Wr_Data1), //ouptut, write data1 to SDRAM.
+    .oSDRAM_Wr_Data2(oSDRAM_Wr_Data2), //ouptut, write data2 to SDRAM.
+    .oSDRAM_Wr_Data3(oSDRAM_Wr_Data3), //ouptut, write data3 to SDRAM.
+    .oSDRAM_Wr_Data4(oSDRAM_Wr_Data4), //ouptut, write data4 to SDRAM.
     .oSDRAM_Wr_Req(oSDRAM_Wr_Req), //output, SDRAM write request.
     .iSDRAM_Wr_Done(iSDRAM_Wr_Done) //input, SDRAM write done signal.
     );
 
 //Lockin New Pulse Counter.
-reg [31:0] new_PulseCounter;
-reg [31:0] old_PulseCounter;
+reg [31:0] lockInPulseCounter;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
-			new_PulseCounter<=0;
+			lockInPulseCounter<=0;
 		end
 else begin
 		if(iData_Update)
-			new_PulseCounter<=iPulse_Counter;
+			lockInPulseCounter<=iPulse_Counter;
 	end
 //driven by step i.
 reg [7:0] i;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				i<=0;
-				old_PulseCounter<=0;
 				led<=1'b0;
 			end
 else if(en) begin
@@ -109,6 +110,8 @@ else if(en) begin
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=0; //0: Clear Screen.
+							Data1_ZDrawCore<=`Screen_Color_Background;
+							//Data1_ZDrawCore<=16'h1986;
 						end
 				2: //Draw Fixed Pixel Image.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
@@ -121,51 +124,42 @@ else if(en) begin
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=4; //4: Draw GongPinTongBu.
-						end	
-				4: //Initial Ready.
-					begin 
-						//oDrawInitReady<=1'b1; 
-						i<=i+1'b1; 
-					end
-					
+						end
+				4: 
+					begin i<=i+1'b1; end
+				5: 
+					begin i<=i+1'b1; end
 //////////////////////////////////////////////////////////////////////////////////
-				5: //Waiting for draw schedule.
-					if(1/*iDraw_Schedule*/) begin
-										i<=i+1'b1;
-									end
-				6: //Draw RTC.
+				6: //Waiting for draw schedule.
+					i<=i+1'b1; 
+				7: //Draw RTC.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=2; //2. Draw RTC.
 						end
-				
-				7: //Draw SIN wave.
+				8: //Draw SIN wave.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=3; //3: Draw SIN wave.
 						end
-				8: //Draw New Pulse Counter.
-					if(1/*old_PulseCounter!=new_PulseCounter*/) begin 
-														//update.
-														old_PulseCounter<=new_PulseCounter;
-														i<=i+1'b1; 
-														end
-					else begin i<=10; end
 				9: //Draw New PulseCounter.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
 					else begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=5; //5. Draw A New Photon Counter. iData1=New Photon Counter.
-							Data1_ZDrawCore<=iPulse_Counter;
+							Data1_ZDrawCore<=lockInPulseCounter;
 						end
 				10: //Draw Random Histogram.
+					/*
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=6; //6: Draw Random Histogram.
 						end
+					*/
+					i<=i+1'b1; 
 				11: //Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
@@ -183,7 +177,11 @@ else if(en) begin
 				13:
 					begin 
 						led<=1'b0; 
-						i<=5; 
+						i<=i+1'b1; 
+					end
+				14:
+					begin
+						i<=6; 
 					end
 			endcase
 		end

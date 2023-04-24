@@ -30,7 +30,7 @@ module ZPulseCounter_Adapter(
 	//Pulse Counter Output.
 	output oDataUpdate,
     output [31:0] oPulseCouter_LCD,
-    output [31:0] oPulseCouter_Single,
+    output [15:0] oPulseCouter_Single,
 
     //Accumulated PulseCounter. Never Reset to 0.
    	output [31:0] oPulseCouter_LCD_Accumulated
@@ -65,7 +65,7 @@ ZPulseCounter ic_PulseCounter(
     .q7_LCD(oPulseCouter_LCD[31:28]),
     .overflow(overflow),
     .oPulseCounter_Single(oPulseCouter_Single),
-   	.data_update(data_update),
+   	.oDataUpdate(oDataUpdate),
    	
    	//Accumulated PulseCounter. Never Reset to 0.
    	.oPulseCouter_LCD_Accumulated(oPulseCouter_LCD_Accumulated)
