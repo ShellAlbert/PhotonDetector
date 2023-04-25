@@ -772,7 +772,7 @@ else if(en) begin
 						//326556/4=81639.
 							begin
 								oSDRAM_Wr_Addr<=326556;
-								PulseCounter<=iData1;
+								PulseCounter<=16'h2356;//iData1;
 								select_PulseCounterMux<=0; //99999999.
 								i<=i+1'b1;
 							end
@@ -1013,30 +1013,46 @@ else if(en) begin
 								endcase
 								i<=i+1'b1;
 							end
-						11: //Loop to draw the byte - low 4 bits.
+						11: //Loop to draw 4st byte - low 4 bits.
 							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end					 
 							else begin 
 									oSDRAM_Wr_Req<=1; 
 									//Pink: Foreground Color.
 									//Black: Background Color.
-									oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Yellow);
+									if(which_dot_matrix==iData1) begin //iData1=0,1,2,3. Active Mode.
+											oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Pink);
+											oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Pink);
+											oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Pink);
+											oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Pink);
+										end
+									else begin
+											oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Yellow);
+											oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Yellow);
+											oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Yellow);
+											oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Yellow);
+										end
 									//oSDRAM_Wr_Data1<=`Color_Green;
 								end
 						12: 
 							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+4; i<=i+1'b1; end
-						13: //Loop to draw the byte - high 4 bits.
+						13: //Loop to draw 4st byte - high 4 bits.
 							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end				 
 							else begin 
 									oSDRAM_Wr_Req<=1; 
 									//Pink: Foreground Color.
 									//Black: Background Color.
-									oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Yellow);
+									if(which_dot_matrix==iData1) begin //iData1=0,1,2,3. Active Mode.
+											oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Pink);
+											oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Pink);
+											oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Pink);
+											oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Pink);
+										end
+									else begin
+											oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Yellow);
+											oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Yellow);
+											oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Yellow);
+											oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Yellow);
+										end
 									//oSDRAM_Wr_Data1<=`Color_Green;
 								end
 						14: 

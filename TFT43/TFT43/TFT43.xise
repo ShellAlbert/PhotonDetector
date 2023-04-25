@@ -162,6 +162,10 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="131"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
+    <file xil_pn:name="code/zpush_button/zpush_button.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="134"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="134"/>
+    </file>
     <file xil_pn:name="ipcore_dir/ZsyPLL.xise" xil_pn:type="FILE_COREGENISE">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
