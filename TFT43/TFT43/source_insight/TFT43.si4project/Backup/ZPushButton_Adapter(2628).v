@@ -29,10 +29,7 @@ module ZPushButton_Adapter(
     output reg[3:0] oCursor_Index,
     //How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
-    output reg [2:0] oActive_Periods_Num,
-
-    //PulseCounter Gain Divider.
-    output reg [1:0] oPulseCounter_Gain_Divider
+    output reg [2:0] oActive_Periods_Num
     );
 
 ////////////////////////////
@@ -65,7 +62,6 @@ else if(en) begin
 				else
 					oCursor_Index<=0;
 								end
-			//////////////////////////////////////////////////////////////////
 			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_PERIOD1) begin
 					oActive_Periods_Num<=0;
 																		end
@@ -81,23 +77,9 @@ else if(en) begin
 			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_PERIOD5) begin
 					oActive_Periods_Num<=4;
 																		end
-			//////////////////////////////////////////////////////////////////
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV1) begin
-					oPulseCounter_Gain_Divider<=0;
-																	end
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV2) begin
-					oPulseCounter_Gain_Divider<=1;
-																	end
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV4) begin
-					oPulseCounter_Gain_Divider<=2;
-																	end
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV8) begin
-					oPulseCounter_Gain_Divider<=3;
-																	end
 		 end
 	else begin
 			oCursor_Index<=0;
 			oActive_Periods_Num<=0;
-			oPulseCounter_Gain_Divider<=0;
 		end
 endmodule

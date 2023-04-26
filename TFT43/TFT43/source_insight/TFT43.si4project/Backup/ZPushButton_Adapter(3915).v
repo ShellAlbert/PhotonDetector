@@ -82,7 +82,7 @@ else if(en) begin
 					oActive_Periods_Num<=4;
 																		end
 			//////////////////////////////////////////////////////////////////
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV1) begin
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV0) begin
 					oPulseCounter_Gain_Divider<=0;
 																	end
 			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV2) begin

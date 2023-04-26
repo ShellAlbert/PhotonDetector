@@ -189,12 +189,11 @@ else if(en) begin
 							Cmd_ZDrawCore<=8; //8: Draw Accumulated Counter, iData1=Counter.
 							Data1_ZDrawCore<=iPulseCounter_Accumulated;
 						end
-				13: //Draw Pulse Counter Gain Divider.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
-					else begin
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=9; //9:Draw Pulse Counter Gain Divider.
-						end
+				13:
+					begin 
+						led<=1'b0; 
+						i<=i+1'b1; 
+					end
 				14:
 					begin
 						i<=6; 

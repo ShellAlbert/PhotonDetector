@@ -34,9 +34,6 @@ module ZDrawAdapter(
     //Period1,Period2,Period3,Period4,Period5.
     input [2:0] iActive_Periods_Num,
 
-    //PulseCounter Gain Divider.
-    input [1:0] iPulseCounter_Gain_Divider,
-    
     //Accumulated PulseCounter.
     input [31:0] iPulseCounter_Accumulated,
 
@@ -85,9 +82,6 @@ ZDrawCore ic_DrawCore(
 	//How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
     .iActive_Periods_Num(iActive_Periods_Num),
-
-    //PulseCounter Gain Divider.
-    .iPulseCounter_Gain_Divider(iPulseCounter_Gain_Divider),
 	
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(oSDRAM_Wr_Addr), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -189,12 +183,11 @@ else if(en) begin
 							Cmd_ZDrawCore<=8; //8: Draw Accumulated Counter, iData1=Counter.
 							Data1_ZDrawCore<=iPulseCounter_Accumulated;
 						end
-				13: //Draw Pulse Counter Gain Divider.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
-					else begin
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=9; //9:Draw Pulse Counter Gain Divider.
-						end
+				13:
+					begin 
+						led<=1'b0; 
+						i<=i+1'b1; 
+					end
 				14:
 					begin
 						i<=6; 

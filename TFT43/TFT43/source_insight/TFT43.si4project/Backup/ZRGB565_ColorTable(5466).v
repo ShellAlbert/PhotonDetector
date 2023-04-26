@@ -27,9 +27,3 @@
 `define ZCURSOR_INDEX_PERIOD3 	2 //Period3.
 `define ZCURSOR_INDEX_PERIOD4 	3 //Period4.
 `define ZCURSOR_INDEX_PERIOD5 	4 //Period5.
-
-//Gain divider selection.
-`define ZCURSOR_INDEX_DIV1 		5 //Right shift 0bit.
-`define ZCURSOR_INDEX_DIV2 		6 //Right shift 1bit.
-`define ZCURSOR_INDEX_DIV4 		7 //Right shift 2bit.
-`define ZCURSOR_INDEX_DIV8 		8 //Right shift 3bit.

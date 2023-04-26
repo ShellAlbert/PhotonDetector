@@ -409,7 +409,6 @@ assign S_CLK=clk_to_sdram;
 /////////////////////////////////////////////////////////////
 wire [3:0] Cursor_Index;
 wire [2:0] Active_Periods_Num;
-wire [1:0] PulseCounter_Gain_Divider;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
@@ -420,10 +419,7 @@ ZPushButton_Adapter ic_PushButton_Adapter(
     .oCursor_Index(Cursor_Index),
     //How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
-    .oActive_Periods_Num(Active_Periods_Num),
-
-    //PulseCounter Gain Divider.
-    .oPulseCounter_Gain_Divider(PulseCounter_Gain_Divider)
+    .oActive_Periods_Num(Active_Periods_Num)
     );
 ////////////////////////////////////////////////////////
 wire data_update;
@@ -508,9 +504,6 @@ ZDrawAdapter ic_DrawAdapter(
     //How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
     .iActive_Periods_Num(Active_Periods_Num),
-
-    //PulseCounter Gain Divider.
-    .iPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
 	
 	//Accumulated PulseCounter.
 	.iPulseCounter_Accumulated(PulseCounter_LCD_Accumulated),
