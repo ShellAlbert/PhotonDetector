@@ -18,3 +18,12 @@
 `define SIN_Color_Background 16'h0001
 //Histogram Background Color.
 `define BAR_Color_Background 16'h0001
+
+
+//Cursor Index Definition.
+//How many SIN periods we draw on LCD.
+`define ZCURSOR_INDEX_PERIOD1	0 //Period1.
+`define ZCURSOR_INDEX_PERIOD2 	1 //Period2.
+`define ZCURSOR_INDEX_PERIOD3 	2 //Period3.
+`define ZCURSOR_INDEX_PERIOD4 	3 //Period4.
+`define ZCURSOR_INDEX_PERIOD5 	4 //Period5.

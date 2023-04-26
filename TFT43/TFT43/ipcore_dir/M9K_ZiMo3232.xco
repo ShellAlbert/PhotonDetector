@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Mon Apr 24 09:27:39 2023
+# Date: Wed Apr 26 07:47:34 2023
 #
 ##############################################################
 #
@@ -47,7 +47,7 @@ CSET component_name=M9K_ZiMo3232
 CSET data_width=8
 CSET default_data=0
 CSET default_data_radix=16
-CSET depth=1968
+CSET depth=2320
 CSET dual_port_address=non_registered
 CSET dual_port_output_clock_enable=false
 CSET input_clock_enable=false
@@ -70,4 +70,4 @@ CSET sync_reset_qspo=false
 MISC pkg_timestamp=2012-11-21T20:07:40Z
 # END Extra information
 GENERATE
-# CRC: e74ae738
+# CRC: 67e584a3

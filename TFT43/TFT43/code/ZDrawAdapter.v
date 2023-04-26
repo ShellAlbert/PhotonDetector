@@ -27,8 +27,12 @@ module ZDrawAdapter(
     input rst_n,
     input en,
 
-	//Mode1~Mode4 Icon.
-	input [1:0] iMode,
+	//Cursor Index.
+	input [3:0] iCursor_Index,
+	
+    //How many SIN periods we draw on LCD.
+    //Period1,Period2,Period3,Period4,Period5.
+    input [2:0] iActive_Periods_Num,
 
     //Accumulated PulseCounter.
     input [31:0] iPulseCounter_Accumulated,
@@ -73,6 +77,12 @@ ZDrawCore ic_DrawCore(
 	.iData1(Data1_ZDrawCore),
 	.oDraw_Done(Done_ZDrawCore), //output, indicate draw done.
 
+	//Cursor Index.
+	.iCursor_Index(iCursor_Index),
+	//How many SIN periods we draw on LCD.
+    //Period1,Period2,Period3,Period4,Period5.
+    .iActive_Periods_Num(iActive_Periods_Num),
+	
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(oSDRAM_Wr_Addr), //output, Bank(2)+Row(13)+Column(9)=(24)
     .oSDRAM_Wr_Data1(oSDRAM_Wr_Data1), //ouptut, write data1 to SDRAM.
@@ -160,12 +170,11 @@ else if(en) begin
 						end
 					*/
 					i<=i+1'b1; 
-				11: //Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
+				11: //Draw Period1~Period4, iData1=0,1,2,3,4. Active Mode.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=7; //7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
-							Data1_ZDrawCore<=iMode;
+							Cmd_ZDrawCore<=7; //7: Draw Period1~Period4, iData1=0,1,2,3,4. Active Mode.
 						end
 				12: //Draw Accumulated Pulse Counter.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		

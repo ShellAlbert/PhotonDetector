@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 `include "../ColorTable/ZRGB565_ColorTable.v"
+
 module ZDrawCore(
     input clk,
     input rst_n,
@@ -37,6 +38,12 @@ module ZDrawCore(
 	input [31:0] iData1,
 	output reg oDraw_Done, //output, indicate draw done.
 
+	//Cursor Index.
+	input [3:0] iCursor_Index,
+	//How many SIN periods we draw on LCD.
+    //Period1,Period2,Period3,Period4,Period5.
+    input [2:0] iActive_Periods_Num,
+	
 	//SDRAM Glue Logic.
     output reg [23:0] oSDRAM_Wr_Addr, //output, Bank(2)+Row(13)+Column(9)=(24)
     output reg [15:0] oSDRAM_Wr_Data1, //ouptut, write data1 to SDRAM.
@@ -134,7 +141,7 @@ ZPulseCounter_Mux10to1 ic_PulseCounter_Mux(
     );
 ////////////////////////////////////////////////////////
 //ZiMo 32x32.
-reg [10:0] addr_ZiMo3232;
+reg [11:0] addr_ZiMo3232;
 wire [7:0] data_ZiMo3232;
 reg [7:0] cnt_addr_ZiMo3232;
 reg [7:0] cnt_8bits;
@@ -143,7 +150,7 @@ reg [7:0] cnt_4bytes; //Font Matrix, 32*32, 32bits/8bits=4bytes.
 reg [7:0] cnt_bytes; //column 12 repeat times.
 reg [7:0] cnt_column;
 M9K_ZiMo3232 ic_M9K_ZiMo3232 (
-  .a(addr_ZiMo3232), // input [10 : 0] a
+  .a(addr_ZiMo3232), // input [11 : 0] a
   .spo(data_ZiMo3232) // output [7 : 0] spo
 );
 ////////////////////////////////////////////////////////
@@ -165,6 +172,10 @@ reg [7:0] pixel_data1;
 reg [7:0] pixel_data2;
 reg [7:0] pixel_data3;
 reg [7:0] pixel_data4;
+//draw cursor flag.
+reg flag_draw_cursor;
+reg [31:0] addr_draw_cursor;
+reg [7:0] length_draw_cursor;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
 			i<=0;
@@ -193,6 +204,11 @@ if(!rst_n) begin
 			//0~383999: (480*800-1): LCD GRAM. 
 			//384000~384599: (384000+600-1): Photon Counter.
 			addr_photon_counter<=384000;
+
+			//draw cursor flag.
+			flag_draw_cursor<=1'b0;
+			addr_draw_cursor<=0;
+			length_draw_cursor<=0;
 		end
 else if(en) begin
 			case(iCmd)
@@ -582,7 +598,18 @@ else if(en) begin
 						1:
 							begin //Since SDRAM address increase 4 each time, so here we draw from bottom to top.
 								case(which_dot_matrix)
-									0: //Gong.
+									0: //Rising Edge Symbol.
+										begin
+											addr_ZiMo3232<=2060; //offset of Rising Edge Symbol.
+											//(436,628)
+											//436+32=468, 628+32=660. =>(468,660)
+											//addr=y*width+x=628*480+436=301876.
+											//SDRAM Read/Write Address must be aligned by 4 words.
+											//0,4,8,12,16,20,24,28,32,36,40.......
+											//301876/4=75469.
+											oSDRAM_Wr_Addr<=301876;
+										end
+									1: //Gong.
 										begin 
 											addr_ZiMo3232<=0; //offset of Gong.
 											//(436,660)
@@ -593,7 +620,7 @@ else if(en) begin
 											//3172836/4=79309.
 											oSDRAM_Wr_Addr<=317236;
 										end
-									1: //Pin.
+									2: //Pin.
 										begin 
 											addr_ZiMo3232<=128; //offset of Pin.
 											//(436,692)
@@ -604,7 +631,7 @@ else if(en) begin
 											//332596/4=83149.
 											oSDRAM_Wr_Addr<=332596;
 										end
-									2: //Tong.
+									3: //Tong.
 										begin 
 											addr_ZiMo3232<=256; //offset of Gong.
 											//(436,724)
@@ -615,7 +642,7 @@ else if(en) begin
 											//347956/4=86989.
 											oSDRAM_Wr_Addr<=347956;
 										end
-									3: //Bu.
+									4: //Bu.
 										begin 
 											addr_ZiMo3232<=384; //offset of Gong.
 											//(436,756)
@@ -626,7 +653,18 @@ else if(en) begin
 											//363316/4=90829.
 											oSDRAM_Wr_Addr<=363316;
 										end
-									4: //Guang.
+									5: //Pulse Symbol.
+										begin 
+											addr_ZiMo3232<=2188; //offset of Guang.
+											//(206,628)
+											//206+32=238, 628+32=660. =>(238,660)
+											//addr=y*width+x=628*480+206=301646.
+											//SDRAM Read/Write Address must be aligned by 4 words.
+											//0,4,8,12,16,20,24,28,32,36,40.......
+											//301646/4=75411.5.
+											oSDRAM_Wr_Addr<=301644;
+										end
+									6: //Guang.
 										begin 
 											addr_ZiMo3232<=512; //offset of Guang.
 											//(206,660)
@@ -637,7 +675,7 @@ else if(en) begin
 											//317004/4=79251.
 											oSDRAM_Wr_Addr<=317004;
 										end
-									5: //Zi.
+									7: //Zi.
 										begin 
 											addr_ZiMo3232<=640; //offset of Zi.
 											//(206,692)
@@ -648,7 +686,7 @@ else if(en) begin
 											//332364/4=83091.
 											oSDRAM_Wr_Addr<=332364;
 										end
-									6: //Mai.
+									8: //Mai.
 										begin 
 											addr_ZiMo3232<=768; //offset of Mai.
 											//(206,724)
@@ -659,7 +697,7 @@ else if(en) begin
 											//347724/4=86931.
 											oSDRAM_Wr_Addr<=347724;
 										end
-									7: //Chong.
+									9: //Chong.
 										begin 
 											addr_ZiMo3232<=896; //offset of Chong.
 											//(206,756)
@@ -752,8 +790,8 @@ else if(en) begin
 								//adjust coordinate: new position: x-32 and y+480.
 								oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-32+480; //Next Column.
 							end
-						17: //we have 8 chars to be drawn.
-							if(which_dot_matrix==8-1) begin which_dot_matrix<=0;i<=i+1'b1; end
+						17: //we have 10 chars to be drawn.
+							if(which_dot_matrix==10-1) begin which_dot_matrix<=0;i<=i+1'b1; end
 							else begin 
 									which_dot_matrix<=which_dot_matrix+1'b1; 
 									i<=1; //Loop to draw Next dot matrix.
@@ -932,52 +970,137 @@ else if(en) begin
 						6: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
-				7: //7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
+				7: //7: Draw Period1~Period5, iData1=0,1,2,3,4. How many SIN periods we draw.
 					case(i)
 						0:
 							begin which_dot_matrix<=0; i<=i+1'b1; end
 						1:
 							begin
 								case(which_dot_matrix)
-									0: //Mode1 Icon.
-										begin 
+									0: //Period 1 Icon.
+										begin
 											addr_ZiMo3232<=1420; //offset of Icon1.
+											//(372,628)
+											//372+32=404, 628+32=660. =>(372,660)
+											//addr=y*width+x=628*480+372=301812.
+											//SDRAM Read/Write Address must be aligned by 4 words.
+											//301808/4=75452.
+											if(iActive_Periods_Num==which_dot_matrix) begin //Active Mode, address+4 to highlight.
+													oSDRAM_Wr_Addr<=301808+4;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=301808-4+4; 
+																					end
+											else begin //Non-Active Mode.
+													oSDRAM_Wr_Addr<=301808;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=301808-4; 
+												end
+											//All Icons are 32*32 size, so we draw a 32 width line below Icons.
+											length_draw_cursor<=32;											
+											if(iCursor_Index==`ZCURSOR_INDEX_PERIOD1) 
+												flag_draw_cursor<=1'b1;
+											else 
+												flag_draw_cursor<=1'b0; 
+										end
+									1: //Period 2 Icon.
+										begin 
+											addr_ZiMo3232<=1548; //offset of Icon2.
 											//(372,660)
 											//372+32=404, 660+32=692. =>(372,692)
 											//addr=y*width+x=660*480+372=317172.
 											//SDRAM Read/Write Address must be aligned by 4 words.
 											//317168/4=79292.
-											oSDRAM_Wr_Addr<=317168;
+											if(iActive_Periods_Num==which_dot_matrix) begin //Active Mode, address+4 to highlight.
+													oSDRAM_Wr_Addr<=317168+4;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=317168-4+4; 
+																					end
+											else begin //Non-Active Mode.
+													oSDRAM_Wr_Addr<=317168;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=317168-4; 
+											end
+											//All Icons are 32*32 size, so we draw a 32 width line below Icons.
+											length_draw_cursor<=32;											
+											if(iCursor_Index==`ZCURSOR_INDEX_PERIOD2) 
+												flag_draw_cursor<=1'b1;
+											else 
+												flag_draw_cursor<=1'b0; 
 										end
-									1: //Mode2 Icon.
+									2: //Period 3 Icon.
 										begin 
-											addr_ZiMo3232<=1548; //offset of Icon2.
+											addr_ZiMo3232<=1676; //offset of Icon3.
 											//(372,692)
 											//372+32=404, 692+32=724. =>(372,724)
 											//addr=y*width+x=692*480+372=332532.
 											//SDRAM Read/Write Address must be aligned by 4 words.
 											//332528/4=83132.
-											oSDRAM_Wr_Addr<=332528;
+											if(iActive_Periods_Num==which_dot_matrix) begin //Active Mode, address+4 to highlight.
+													oSDRAM_Wr_Addr<=332528+4;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=332528-4+4; 
+																					end
+											else begin //Non-Active Mode.
+													oSDRAM_Wr_Addr<=332528;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=332528-4; 
+											end
+											//All Icons are 32*32 size, so we draw a 32 width line below Icons.
+											length_draw_cursor<=32;
+											if(iCursor_Index==`ZCURSOR_INDEX_PERIOD3) 
+												flag_draw_cursor<=1'b1;
+											else 
+												flag_draw_cursor<=1'b0; 
 										end
-									2: //Mode3 Icon.
+									3: //Period 4 Icon.
 										begin 
-											addr_ZiMo3232<=1676; //offset of Icon3.
+											addr_ZiMo3232<=1804; //offset of Icon4.
 											//(372,724)
 											//372+32=404, 724+32=756. =>(372,756)
 											//addr=y*width+x=724*480+372=347892.
 											//SDRAM Read/Write Address must be aligned by 4 words.
 											//347888/4=86972.
-											oSDRAM_Wr_Addr<=347888;
+											if(iActive_Periods_Num==which_dot_matrix) begin //Active Mode, address+4 to highlight.
+													oSDRAM_Wr_Addr<=347888+4;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=347888-4+4; 
+																					end
+											else begin //Non-Active Mode.
+													oSDRAM_Wr_Addr<=347888;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=347888-4; 
+											end
+											//All Icons are 32*32 size, so we draw a 32 width line below Icons.
+											length_draw_cursor<=32;
+											if(iCursor_Index==`ZCURSOR_INDEX_PERIOD4) 
+												flag_draw_cursor<=1'b1;
+											else 
+												flag_draw_cursor<=1'b0; 
 										end
-									3: //Mode4 Icon.
+									4: //Period 5 Icon.
 										begin 
-											addr_ZiMo3232<=1804; //offset of Icon4.
+											addr_ZiMo3232<=1932; //offset of Icon5.
 											//(372,756)
 											//372+32=404, 756+32=788. =>(372,788)
 											//addr=y*width+x=756*480+372=363252.
 											//SDRAM Read/Write Address must be aligned by 4 words.
 											//363248/4=90812.
-											oSDRAM_Wr_Addr<=363248;
+											if(iActive_Periods_Num==which_dot_matrix) begin //Active Mode, address+4 to highlight.
+													oSDRAM_Wr_Addr<=363248+4;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=363248-4+4; 
+																					end
+											else begin //Non-Active Mode.
+													oSDRAM_Wr_Addr<=363248;
+													//draw cursor indicate line below the Icon.
+													addr_draw_cursor<=363248-4; 
+											end
+											//All Icons are 32*32 size, so we draw a 32 width line below Icons.
+											length_draw_cursor<=32;
+											if(iCursor_Index==`ZCURSOR_INDEX_PERIOD5) 
+												flag_draw_cursor<=1'b1;		
+											else 
+												flag_draw_cursor<=1'b0; 
 										end
 								endcase
 								
@@ -1017,13 +1140,20 @@ else if(en) begin
 							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end					 
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color.
-									//Black: Background Color.
-									oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Yellow);
-									//oSDRAM_Wr_Data1<=`Color_Green;
+									//Pink: Foreground Color. //Black: Background Color.
+									if(iActive_Periods_Num==which_dot_matrix) begin
+										oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Color_Yellow):(`Screen_Color_Background);
+										oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Color_Yellow):(`Screen_Color_Background);
+										oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Color_Yellow):(`Screen_Color_Background);
+										oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Color_Yellow):(`Screen_Color_Background);
+																			end
+									else begin
+										oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Color_White):(`Screen_Color_Background);
+										oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Color_White):(`Screen_Color_Background);
+										oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Color_White):(`Screen_Color_Background);
+										oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Color_White):(`Screen_Color_Background);
+										//oSDRAM_Wr_Data1<=`Color_Green;
+										end
 								end
 						12: 
 							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+4; i<=i+1'b1; end
@@ -1031,13 +1161,20 @@ else if(en) begin
 							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end				 
 							else begin 
 									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color.
-									//Black: Background Color.
-									oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Screen_Color_Background):(`Color_Yellow);
-									oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Screen_Color_Background):(`Color_Yellow);
-									//oSDRAM_Wr_Data1<=`Color_Green;
+									//Pink: Foreground Color. //Black: Background Color.
+									if(iActive_Periods_Num==which_dot_matrix) begin
+										oSDRAM_Wr_Data1<=(pixel_data&8'h10)?(`Color_Yellow):(`Screen_Color_Background);
+										oSDRAM_Wr_Data2<=(pixel_data&8'h20)?(`Color_Yellow):(`Screen_Color_Background);
+										oSDRAM_Wr_Data3<=(pixel_data&8'h40)?(`Color_Yellow):(`Screen_Color_Background);
+										oSDRAM_Wr_Data4<=(pixel_data&8'h80)?(`Color_Yellow):(`Screen_Color_Background);
+																			end
+									else begin
+										oSDRAM_Wr_Data1<=(pixel_data&8'h10)?(`Color_White):(`Screen_Color_Background);
+										oSDRAM_Wr_Data2<=(pixel_data&8'h20)?(`Color_White):(`Screen_Color_Background);
+										oSDRAM_Wr_Data3<=(pixel_data&8'h40)?(`Color_White):(`Screen_Color_Background);
+										oSDRAM_Wr_Data4<=(pixel_data&8'h80)?(`Color_White):(`Screen_Color_Background);
+										//oSDRAM_Wr_Data1<=`Color_Green;
+										end
 								end
 						14: 
 							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+4; i<=i+1'b1; end
@@ -1062,15 +1199,41 @@ else if(en) begin
 								//adjust coordinate: new position: x-32 and y+480.
 								oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-32+480; //Next Column.
 							end
-						17: //we have 4 Icons to be drawn.
-							if(which_dot_matrix==4-1) begin which_dot_matrix<=0;i<=i+1'b1; end
+						17: 
+							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end				 
+							else begin 
+									oSDRAM_Wr_Req<=1; 
+									oSDRAM_Wr_Addr<=addr_draw_cursor;
+									//Pink: Foreground Color. Black: Background Color.
+									if(flag_draw_cursor) begin
+														oSDRAM_Wr_Data1<=`Color_Yellow;
+														oSDRAM_Wr_Data2<=`Color_Yellow;
+														oSDRAM_Wr_Data3<=`Color_Yellow;
+														oSDRAM_Wr_Data4<=`Color_Yellow;
+														end
+									else begin
+														oSDRAM_Wr_Data1<=`Screen_Color_Background;
+														oSDRAM_Wr_Data2<=`Screen_Color_Background;
+														oSDRAM_Wr_Data3<=`Screen_Color_Background;
+														oSDRAM_Wr_Data4<=`Screen_Color_Background;
+										end
+								end
+						18:
+							if(length_draw_cursor==0) begin i<=i+1'b1; end
+							else begin 
+									length_draw_cursor<=length_draw_cursor-1'b1; 
+									addr_draw_cursor<=addr_draw_cursor+480;
+									i<=i-1'b1; //Loop to draw next pixel.
+								end
+						19: //we have 5 Icons to be drawn.
+							if(which_dot_matrix==5-1) begin which_dot_matrix<=0;i<=i+1'b1; end
 							else begin 
 									which_dot_matrix<=which_dot_matrix+1'b1; 
 									i<=1; //Loop to draw Next dot matrix.
 								end
-						18: //Generate done Signal.
+						20: //Generate done Signal.
 							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						19: //Generate done Signal.
+						21: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
 				8: //8: Draw Accumulated Counter, iData1=Counter.

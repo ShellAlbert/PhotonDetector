@@ -41,15 +41,15 @@ module M9K_ZiMo3232(
   spo
 );
 
-input [10 : 0] a;
+input [11 : 0] a;
 output [7 : 0] spo;
 
 // synthesis translate_off
 
   DIST_MEM_GEN_V7_2 #(
-    .C_ADDR_WIDTH(11),
+    .C_ADDR_WIDTH(12),
     .C_DEFAULT_DATA("0"),
-    .C_DEPTH(1968),
+    .C_DEPTH(2320),
     .C_FAMILY("spartan6"),
     .C_HAS_CLK(0),
     .C_HAS_D(0),

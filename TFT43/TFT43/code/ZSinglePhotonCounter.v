@@ -372,9 +372,15 @@ module ZSinglePhotonCounter(
     inout [15:0] S_DQ,
 
     //led.
-    output led
-    );
+    output led,
 
+    //4 Push Buttons.
+    //iButton[3]=A12, iButton[2]=B12, iButton[1]=A13, iButton[0]=C13.
+    input [3:0] iButton
+    //4 LEDs.
+    //output [3:0] oLED
+    );
+//assign oLED<=4'b1111;
 ///////////////////////////////////////////////////////
 //On-board Clock=50MHz.
 wire clk_133MHz_210;
@@ -401,6 +407,21 @@ ODDR2 oddr2_inst(
 .Q(clk_to_sdram));
 assign S_CLK=clk_to_sdram;
 /////////////////////////////////////////////////////////////
+wire [3:0] Cursor_Index;
+wire [2:0] Active_Periods_Num;
+ZPushButton_Adapter ic_PushButton_Adapter(
+    .clk(clk_133MHz_210),
+    .rst_n(rst_n),
+    .en(1'b1),
+
+    //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
+    .iButton(iButton),
+    .oCursor_Index(Cursor_Index),
+    //How many SIN periods we draw on LCD.
+    //Period1,Period2,Period3,Period4,Period5.
+    .oActive_Periods_Num(Active_Periods_Num)
+    );
+////////////////////////////////////////////////////////
 wire data_update;
 wire [31:0] PulseCounter_LCD;
 wire [15:0] PulseCounter_Single;
@@ -477,8 +498,12 @@ ZDrawAdapter ic_DrawAdapter(
     .rst_n(rst_n),
     .en(1'b1),
 
-	//Mode1~Mode4 Icon.
-	.iMode(2'b01),
+	//Cursor Index.
+	.iCursor_Index(Cursor_Index),
+	
+    //How many SIN periods we draw on LCD.
+    //Period1,Period2,Period3,Period4,Period5.
+    .iActive_Periods_Num(Active_Periods_Num),
 	
 	//Accumulated PulseCounter.
 	.iPulseCounter_Accumulated(PulseCounter_LCD_Accumulated),
@@ -769,8 +794,6 @@ ZPulseCounter_Adapter ic_PulseCounter_Adapter(
     .dout(din_FIFO)
     );
 */
-
-
 
  /*
 //60Hz Refresh Rate.

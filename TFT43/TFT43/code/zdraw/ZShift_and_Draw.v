@@ -245,30 +245,12 @@ else if(en) begin
 					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			
 					else begin 
 							oSDRAM_Wr_Req<=1;
-							if((oSDRAM_Wr_Addr+0)==GRAM_Pixel_Addr) begin
+							if((oSDRAM_Wr_Addr+3)<=GRAM_Pixel_Addr) begin
 								oSDRAM_Wr_Data1<=`Color_Pink;
 								oSDRAM_Wr_Data2<=`Color_Pink;
 								oSDRAM_Wr_Data3<=`Color_Pink;
 								oSDRAM_Wr_Data4<=`Color_Pink;
 																	end
-							else if((oSDRAM_Wr_Addr+1)==GRAM_Pixel_Addr) begin
-								oSDRAM_Wr_Data1<=`Color_Pink;
-								oSDRAM_Wr_Data2<=`Color_Pink;
-								oSDRAM_Wr_Data3<=`Color_Pink;
-								oSDRAM_Wr_Data4<=`Color_Pink;
-																		end
-							else if((oSDRAM_Wr_Addr+2)==GRAM_Pixel_Addr) begin
-								oSDRAM_Wr_Data1<=`Color_Pink;
-								oSDRAM_Wr_Data2<=`Color_Pink;
-								oSDRAM_Wr_Data3<=`Color_Pink;
-								oSDRAM_Wr_Data4<=`Color_Pink;
-																		end
-							else if((oSDRAM_Wr_Addr+3)==GRAM_Pixel_Addr) begin
-								oSDRAM_Wr_Data1<=`Color_Pink;
-								oSDRAM_Wr_Data2<=`Color_Pink;
-								oSDRAM_Wr_Data3<=`Color_Pink;
-								oSDRAM_Wr_Data4<=`Color_Pink;
-																		end
 							else begin
 								oSDRAM_Wr_Data1<=`BAR_Color_Background;
 								oSDRAM_Wr_Data2<=`BAR_Color_Background;

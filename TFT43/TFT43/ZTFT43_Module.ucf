@@ -54,15 +54,12 @@ NET "LCD_DATA[15]" LOC = H14;
 NET "clk" LOC = H3;
 
 
-NET "clk_used" LOC = E3;
+NET "clk_used" LOC = R11;
 NET "uart_txd" LOC = E4;
 
-NET "photon_pulse" LOC = E2;
-NET "photon_pulse_simulate" LOC = E1;
-NET "sync_50Hz" LOC = F2;
-NET "sync_50Hz_simulate" LOC = F1;
+NET "photon_pulse_simulate" LOC = E2;
+NET "sync_50Hz_simulate" LOC = F2;
 
-# PlanAhead Generated IO constraints 
 
 NET "photon_pulse" IOSTANDARD = LVCMOS33;
 NET "photon_pulse_simulate" IOSTANDARD = LVCMOS33;
@@ -155,3 +152,25 @@ NET "S_A[10]" LOC = A11;
 NET "S_A[11]" LOC = F7;
 
 
+
+
+NET "iButton[3]" PULLUP;
+NET "iButton[2]" PULLUP;
+NET "iButton[1]" PULLUP;
+NET "iButton[0]" PULLUP;
+
+
+NET "iButton[3]" LOC = A12;
+NET "iButton[2]" LOC = B12;
+NET "iButton[1]" LOC = A13;
+NET "iButton[0]" LOC = C13;
+
+
+NET "iButton[3]" IOSTANDARD = LVCMOS33;
+NET "iButton[2]" IOSTANDARD = LVCMOS33;
+NET "iButton[1]" IOSTANDARD = LVCMOS33;
+NET "iButton[0]" IOSTANDARD = LVCMOS33;
+
+
+NET "photon_pulse" LOC = E1;
+NET "sync_50Hz" LOC = F1;
