@@ -26,13 +26,16 @@ module ZPushButton_Adapter(
 
     //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
     input [3:0] iButton,
-    output reg[3:0] oCursor_Index,
+    output reg[7:0] oCursor_Index,
     //How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
-    output reg [2:0] oActive_Periods_Num,
+    output reg [7:0] oActive_Periods_Num,
 
     //PulseCounter Gain Divider.
-    output reg [1:0] oPulseCounter_Gain_Divider
+    output reg [7:0] oPulseCounter_Gain_Divider,
+
+    //Time Interval Selection.
+    output reg [7:0] oTime_Interval_Selection
     );
 
 ////////////////////////////
@@ -46,11 +49,17 @@ ZPush_Button ic_PushButton(
     .oButton(button_state)
     );
 ////////////////////////////
-parameter MAX_CURSOR_INDEX=10;
+parameter MAX_CURSOR_INDEX=14; //0~14.
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
 			oCursor_Index<=0;
 			oActive_Periods_Num<=0;
+			//because 0 is the divider symbol, no need to active it.
+			//so the default value is 1.
+			oPulseCounter_Gain_Divider<=1;
+			//because 5 is the Time symbol, no need to active it.
+			//so the default value is 6.
+			oTime_Interval_Selection<=6;
 		end
 else if(en) begin
 			if(button_state[0]) begin
@@ -82,22 +91,46 @@ else if(en) begin
 					oActive_Periods_Num<=4;
 																		end
 			//////////////////////////////////////////////////////////////////
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV1) begin
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV0) begin
 					oPulseCounter_Gain_Divider<=0;
 																	end
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV2) begin
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV1) begin
 					oPulseCounter_Gain_Divider<=1;
 																	end
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV4) begin
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV2) begin
 					oPulseCounter_Gain_Divider<=2;
 																	end
-			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV8) begin
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV4) begin
 					oPulseCounter_Gain_Divider<=3;
+																	end
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_DIV8) begin
+					oPulseCounter_Gain_Divider<=4;
+																	end
+			//////////////////////////////////////////////////////////////////
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_TIME) begin
+					oTime_Interval_Selection<=5;
+																	end
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_TIME1) begin
+					oTime_Interval_Selection<=6;
+																	end
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_TIME2) begin
+					oTime_Interval_Selection<=7;
+																	end
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_TIME3) begin
+					oTime_Interval_Selection<=8;
+																	end
+			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_TIME4) begin
+					oTime_Interval_Selection<=9;
 																	end
 		 end
 	else begin
 			oCursor_Index<=0;
 			oActive_Periods_Num<=0;
-			oPulseCounter_Gain_Divider<=0;
+			//because 0 is the divider symbol, no need to active it.
+			//so the default value is 1.
+			oPulseCounter_Gain_Divider<=1;
+			//because 5 is the Time symbol, no need to active it.
+			//so the default value is 6.
+			oTime_Interval_Selection<=6;
 		end
 endmodule

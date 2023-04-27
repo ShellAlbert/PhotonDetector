@@ -27,6 +27,10 @@ module ZShift_and_Draw(
 	//New PulseCounter comes.
 	input iDataUpdate,
 	input [15:0] iPulseCounter,
+	input [31:0] iPulseCouter_LCD,
+
+    //PulseCounter Gain Divider.
+    input [7:0] iPulseCounter_Gain_Divider,
     
 	//SDRAM Read Glue Logic.
     output reg [23:0] oSDRAM_Rd_Addr, //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -46,7 +50,11 @@ module ZShift_and_Draw(
     output reg [15:0] oSDRAM_Wr_Data4, //ouptut, write data4 to SDRAM.
 
     output reg oSDRAM_Wr_Req, //output, [1]=1:Write, [0]=1:Read.
-    input iSDRAM_Wr_Done //input, SDRAM write done signal.
+    input iSDRAM_Wr_Done, //input, SDRAM write done signal.
+
+	//the Maximum & Minimum Pulse Counter with 600 points.
+	output reg [31:0] oMaxPulseCounter,
+	output reg [31:0] oMinPulseCounter
     );
 
 //SDRAM Space Assignment
@@ -66,13 +74,16 @@ module ZShift_and_Draw(
 //(386399-38400+1)/4=600.
 //Lock in new pulse counter.
 reg [15:0] lockInPulseCounter;
+reg [31:0] PulseCouter_LCD;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				lockInPulseCounter<=0;
 			end
 else if(iDataUpdate)	begin
 							lockInPulseCounter<=iPulseCounter;
+							PulseCouter_LCD<=iPulseCouter_LCD;
 						end
+
 //Do shift movement.
 //Eliminate the oldest value and add the new pulse counter.
 //Left Shift Effect.
@@ -91,6 +102,7 @@ reg [31:0] cnt_Shift_PulseCounter;
 reg [31:0] clear_X;
 reg [31:0] clear_Y;
 reg [7:0] mdy_byte;
+reg [31:0] HistoryPulseCounter_LCD;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				i<=0;
@@ -114,6 +126,10 @@ if(!rst_n)	begin
 				ringbuffer_wr_addr<=384000;
 				ringbuffer_rd_addr<=384000;
 				cnt_Shift_PulseCounter<=0;
+
+				//Find out the Maxium & Minimum Pulse Counter within 600 points.
+				oMaxPulseCounter<=0;
+				oMinPulseCounter<=32'hFFFFFFFF;
 			end
 else if(en) begin
 			case(i)
@@ -212,23 +228,53 @@ else if(en) begin
 							oSDRAM_Wr_Addr<=ringbuffer_wr_addr;
 							//oSDRAM_Wr_Data1<=200; //fixed value for debugging.
 							oSDRAM_Wr_Data1<=lockInPulseCounter;
-							oSDRAM_Wr_Data2<=0;
-							oSDRAM_Wr_Data3<=0;
-							oSDRAM_Wr_Data4<=0;
+							oSDRAM_Wr_Data2<=PulseCouter_LCD[23:16];
+							oSDRAM_Wr_Data3<=PulseCouter_LCD[15:8];
+							oSDRAM_Wr_Data4<=PulseCouter_LCD[7:0];
 						end
 				10: //Read History 600 Pulse Counter from ring buffer.
 					if(iSDRAM_Rd_Done) begin 
 										oSDRAM_Rd_Req<=1'b0; 
 										//GRAM X, offset=12.
 										//Truncate to avoid reaching full scale.
-										//Or scale it.
-										// /2 => iSDRAM_Data>>1
-										// /4 => iSDRAM_Data>>2 
-										if((12+iSDRAM_Data1)>=228) 
-											GRAM_Pixel_Addr<=GRAM_Y+228;
-											
-										else 
-											GRAM_Pixel_Addr<=GRAM_Y+12+iSDRAM_Data1; //+xOffset.
+										//Histogram divided by 1,2,4,8 to avoid reach full scale.
+										case(iPulseCounter_Gain_Divider)
+											2: //DIV2=Right shift 1 bit. 2^1=2.
+												begin
+													if((12+iSDRAM_Data1>>1)>=228) 
+														GRAM_Pixel_Addr<=GRAM_Y+228;
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>1); //+xOffset.
+												end
+											3: //DIV4=Right shift 2 bits. 2^2=4.
+												begin
+													if((12+iSDRAM_Data1>>2)>=228) 
+														GRAM_Pixel_Addr<=GRAM_Y+228;
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>2); //+xOffset.
+												end
+											4: //DIV8=Right shift 3 bits. 2^3=8.
+												begin
+													if((12+iSDRAM_Data1>>3)>=228) 
+														GRAM_Pixel_Addr<=GRAM_Y+228;
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>3); //+xOffset.
+												end
+											default: //0, DIV1. 2^0=1.
+												begin
+													if((12+iSDRAM_Data1)>=228) 
+														GRAM_Pixel_Addr<=GRAM_Y+228;
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+iSDRAM_Data1; //+xOffset.
+												end
+										endcase
+										////////////////////////////////////////////////
+										//Update the Maximum value.
+										if({iSDRAM_Data2,iSDRAM_Data3,iSDRAM_Data4}>oMaxPulseCounter)
+											oMaxPulseCounter<={4'd0,iSDRAM_Data2,iSDRAM_Data3,iSDRAM_Data4};
+										//Update the Minimum value.
+										if({iSDRAM_Data2,iSDRAM_Data3,iSDRAM_Data4}<oMinPulseCounter)
+											oMinPulseCounter<={4'd0,iSDRAM_Data2,iSDRAM_Data3,iSDRAM_Data4};
 										////////////////////////////////////////////////
 										i<=i+1'b1; 
 									end
@@ -246,16 +292,16 @@ else if(en) begin
 					else begin 
 							oSDRAM_Wr_Req<=1;
 							if((oSDRAM_Wr_Addr+3)<=GRAM_Pixel_Addr) begin
-								oSDRAM_Wr_Data1<=`Color_Pink;
-								oSDRAM_Wr_Data2<=`Color_Pink;
-								oSDRAM_Wr_Data3<=`Color_Pink;
-								oSDRAM_Wr_Data4<=`Color_Pink;
-																	end
+									oSDRAM_Wr_Data1<=`Color_Pink;
+									oSDRAM_Wr_Data2<=`Color_Pink;
+									oSDRAM_Wr_Data3<=`Color_Pink;
+									oSDRAM_Wr_Data4<=`Color_Pink;
+																end
 							else begin
-								oSDRAM_Wr_Data1<=`BAR_Color_Background;
-								oSDRAM_Wr_Data2<=`BAR_Color_Background;
-								oSDRAM_Wr_Data3<=`BAR_Color_Background;
-								oSDRAM_Wr_Data4<=`BAR_Color_Background;
+									oSDRAM_Wr_Data1<=`BAR_Color_Background;
+									oSDRAM_Wr_Data2<=`BAR_Color_Background;
+									oSDRAM_Wr_Data3<=`BAR_Color_Background;
+									oSDRAM_Wr_Data4<=`BAR_Color_Background;
 								end
 						end
 				13: //Loop to write X.

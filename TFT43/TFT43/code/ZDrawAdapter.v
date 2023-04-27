@@ -28,14 +28,17 @@ module ZDrawAdapter(
     input en,
 
 	//Cursor Index.
-	input [3:0] iCursor_Index,
+	input [7:0] iCursor_Index,
 	
     //How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
-    input [2:0] iActive_Periods_Num,
+    input [7:0] iActive_Periods_Num,
 
     //PulseCounter Gain Divider.
-    input [1:0] iPulseCounter_Gain_Divider,
+    input [7:0] iPulseCounter_Gain_Divider,
+
+    //Time Interval Selection.
+    input [7:0] iTime_Interval_Selection,
     
     //Accumulated PulseCounter.
     input [31:0] iPulseCounter_Accumulated,
@@ -53,7 +56,11 @@ module ZDrawAdapter(
 
     output oSDRAM_Wr_Req, //output, [1]=1:Write, [0]=1:Read.
     input iSDRAM_Wr_Done, //input, SDRAM write done signal.
-    
+
+    //the Maximum & Minimum Pulse Counter with 600 points.
+	input [15:0] iMaxPulseCounter,
+	input [15:0] iMinPulseCounter,
+	
  	output reg led
     );
 
@@ -62,6 +69,7 @@ module ZDrawAdapter(
 reg en_ZDrawCore;
 reg [3:0] Cmd_ZDrawCore;
 reg [31:0] Data1_ZDrawCore;
+reg [31:0] Data2_ZDrawCore;
 wire Done_ZDrawCore;
 ZDrawCore ic_DrawCore(
     .clk(clk),
@@ -78,6 +86,7 @@ ZDrawCore ic_DrawCore(
 	//7: Draw Mode1~Mode4, iData1=0,1,2,3. Active Mode.
 	.iCmd(Cmd_ZDrawCore),
 	.iData1(Data1_ZDrawCore),
+	.iData2(Data2_ZDrawCore),
 	.oDraw_Done(Done_ZDrawCore), //output, indicate draw done.
 
 	//Cursor Index.
@@ -86,9 +95,6 @@ ZDrawCore ic_DrawCore(
     //Period1,Period2,Period3,Period4,Period5.
     .iActive_Periods_Num(iActive_Periods_Num),
 
-    //PulseCounter Gain Divider.
-    .iPulseCounter_Gain_Divider(iPulseCounter_Gain_Divider),
-	
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(oSDRAM_Wr_Addr), //output, Bank(2)+Row(13)+Column(9)=(24)
     .oSDRAM_Wr_Data1(oSDRAM_Wr_Data1), //ouptut, write data1 to SDRAM.
@@ -109,6 +115,8 @@ else begin
 		if(iData_Update)
 			lockInPulseCounter<=iPulse_Counter;
 	end
+
+
 //driven by step i.
 reg [7:0] i;
 always @(posedge clk or negedge rst_n)
@@ -189,13 +197,24 @@ else if(en) begin
 							Cmd_ZDrawCore<=8; //8: Draw Accumulated Counter, iData1=Counter.
 							Data1_ZDrawCore<=iPulseCounter_Accumulated;
 						end
-				13: //Draw Pulse Counter Gain Divider.
+				13: //Draw Pulse Counter Gain Divider & Time Interval Icons.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
 					else begin
 							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=9; //9:Draw Pulse Counter Gain Divider.
+							Cmd_ZDrawCore<=9; //9:Draw Pulse Counter Gain Divider & Time Interval Icons.
+							Data1_ZDrawCore<=iPulseCounter_Gain_Divider;
+							Data2_ZDrawCore<=iTime_Interval_Selection;
 						end
-				14:
+				14: //Draw Maximum and Minimum PulseCounter with 600 points.
+				//iData1=Maximum Value, iData2=Minimum Value.
+					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
+					else begin
+							en_ZDrawCore<=1'b1; 
+							Cmd_ZDrawCore<=10; //10: Draw Maximum and Minimum PulseCounter with 600 points.
+							Data1_ZDrawCore<=iMaxPulseCounter;
+							Data2_ZDrawCore<=iMinPulseCounter;
+						end
+				15:
 					begin
 						i<=6; 
 					end

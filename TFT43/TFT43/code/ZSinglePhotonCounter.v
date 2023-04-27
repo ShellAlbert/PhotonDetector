@@ -407,9 +407,10 @@ ODDR2 oddr2_inst(
 .Q(clk_to_sdram));
 assign S_CLK=clk_to_sdram;
 /////////////////////////////////////////////////////////////
-wire [3:0] Cursor_Index;
-wire [2:0] Active_Periods_Num;
-wire [1:0] PulseCounter_Gain_Divider;
+wire [7:0] Cursor_Index;
+wire [7:0] Active_Periods_Num;
+wire [7:0] PulseCounter_Gain_Divider;
+wire [7:0] Time_Interval_Selection;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
@@ -423,7 +424,10 @@ ZPushButton_Adapter ic_PushButton_Adapter(
     .oActive_Periods_Num(Active_Periods_Num),
 
     //PulseCounter Gain Divider.
-    .oPulseCounter_Gain_Divider(PulseCounter_Gain_Divider)
+    .oPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
+
+    //Time Interval Selection.
+    .oTime_Interval_Selection(Time_Interval_Selection)
     );
 ////////////////////////////////////////////////////////
 wire data_update;
@@ -497,6 +501,8 @@ wire [15:0] Wr_Data2_ZDraw;
 wire [15:0] Wr_Data3_ZDraw;
 wire [15:0] Wr_Data4_ZDraw;
 wire Wr_Done_ZDraw;
+wire [15:0] MaxPulseCounter;
+wire [15:0] MinPulseCounter;
 ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
@@ -511,6 +517,9 @@ ZDrawAdapter ic_DrawAdapter(
 
     //PulseCounter Gain Divider.
     .iPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
+
+    //Time Interval Selection.
+    .iTime_Interval_Selection(Time_Interval_Selection),
 	
 	//Accumulated PulseCounter.
 	.iPulseCounter_Accumulated(PulseCounter_LCD_Accumulated),
@@ -556,6 +565,10 @@ ZShift_and_Draw ic_Shift_and_Draw(
 	//New PulseCounter comes.
 	.iDataUpdate(data_update),
 	.iPulseCounter(PulseCounter_Single),
+	.iPulseCouter_LCD(PulseCounter_LCD),
+
+    //PulseCounter Gain Divider.
+    .iPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
     
 	//SDRAM Read Glue Logic.
     .oSDRAM_Rd_Addr(Rd_Addr_ShiftDraw), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -575,7 +588,11 @@ ZShift_and_Draw ic_Shift_and_Draw(
     .oSDRAM_Wr_Data4(Wr_Data4_ShiftDraw), //ouptut, write data4 to SDRAM.
 
     .oSDRAM_Wr_Req(Wr_Req_ShiftDraw), //output, [1]=1:Write, [0]=1:Read.
-    .iSDRAM_Wr_Done(Wr_Done_ShiftDraw) //input, SDRAM write done signal.
+    .iSDRAM_Wr_Done(Wr_Done_ShiftDraw), //input, SDRAM write done signal.
+
+    //the Maximum & Minimum Pulse Counter with 600 points.
+	.oMaxPulseCounter(MaxPulseCounter),
+	.oMinPulseCounter(MinPulseCounter)
     );
 ////////////////////////////////////////////////
 /*
