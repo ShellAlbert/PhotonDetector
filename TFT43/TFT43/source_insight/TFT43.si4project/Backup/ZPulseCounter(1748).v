@@ -26,9 +26,6 @@ module ZPulseCounter(
 	//Maxmimum frequency of input pulse is 40MHz.
     input pulse,
 
-    //Time Interval Selection.
-    input [7:0] iTime_Interval_Selection,
-    
     //output for drawing LCD to avoid divider.
     output [3:0] q0_LCD,
     output [3:0] q1_LCD,
@@ -87,55 +84,25 @@ assign overflow=rq_overflow[7];
 //1000uS/0.0125uS=80_000
 //80MHz/80,000=1000Hz.
 //t=1/1000Hz(s)=0.001s=1ms.
-reg [31:0] CNT_Deadline;
+reg [27:0] CNT;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
-				//1000mS/0.0125uS=80_000_000.
-				CNT_Deadline<=80_000_000;
+				CNT<='d0;
 			end
 else if(en)	begin
-				case(iTime_Interval_Selection)
-					6: //100uS.
-					//100uS/0.0125uS=8_000.
-						CNT_Deadline<=8_000;
-					7: //10mS.
-					//10mS/0.0125uS=800_000.
-						CNT_Deadline<=800_000;
-					8: //100mS.
-					//100mS/0.0125uS=8_000_000.
-						CNT_Deadline<=8_000_000;
-					9: //1000mS.
-					//1000mS/0.0125uS=80_000_000.
-						CNT_Deadline<=80_000_000;
-					default: //1000mS.
-					//1000mS/0.0125uS=80_000_000.
-						CNT_Deadline<=80_000_000;
-				endcase
-			end
-	else begin
-			//1000mS/0.0125uS=80_000_000.
-			CNT_Deadline<=80_000_000;
-		end
-////////////////////////////////////////////
-reg [31:0] CNT;
-always @(posedge clk or negedge rst_n)
-if(!rst_n)	begin
-				CNT<=0;
-			end
-else if(en)	begin
-				if(CNT>=CNT_Deadline-1)
-					CNT<=0;
+				if(CNT=='d80_000-1)
+					CNT<='d0;
 				else
 					CNT<=CNT+1'b1;
 			end
 	else
-		CNT<=0;
+		CNT<='d0;
 ///////////////////////////////////////////
 //output data update signal before 1 clk to avoid to be reset to zero.
-assign oDataUpdate=(CNT==CNT_Deadline-2)?1'b1:1'b0;
+assign oDataUpdate=(CNT=='d80_000-2)?1'b1:1'b0;
 //////////////////////////////////////////
 wire zero_signal;
-assign zero_signal=(CNT==CNT_Deadline-1)?1'b1:1'b0;
+assign zero_signal=(CNT=='d80_000-1)?1'b1:1'b0;
 
 //rq0.
 always @ (posedge clk or negedge rst_n)

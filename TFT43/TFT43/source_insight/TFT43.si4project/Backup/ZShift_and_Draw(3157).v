@@ -103,10 +103,6 @@ reg [31:0] clear_X;
 reg [31:0] clear_Y;
 reg [7:0] mdy_byte;
 reg [31:0] HistoryPulseCounter_LCD;
-
-//maximum pulse counter tracking.
-reg [31:0] MaxPulseCounter_X;
-reg [31:0] MaxPulseCounter_Y;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				i<=0;
@@ -134,10 +130,6 @@ if(!rst_n)	begin
 				//Find out the Maxium & Minimum Pulse Counter within 600 points.
 				oMaxPulseCounter<=0;
 				oMinPulseCounter<=32'hFFFFFFFF;
-
-				//maximum pulse counter tracking.
-				MaxPulseCounter_X<=0;
-				MaxPulseCounter_Y<=0;
 			end
 else if(en) begin
 			case(i)
@@ -213,7 +205,6 @@ else if(en) begin
 						//GRAM Plain yOffset=15*480=7200.
 						GRAM_Y<=7200; //+yOffset.
 						GRAM_X<=12; //+xOffset.
-
 						i<=i+1'b1;
 					end
 				8: //calculating the write address of new PulseCounter.
@@ -250,63 +241,31 @@ else if(en) begin
 										case(iPulseCounter_Gain_Divider)
 											2: //DIV2=Right shift 1 bit. 2^1=2.
 												begin
-													if((12+iSDRAM_Data1>>1)>=228) begin
+													if((12+iSDRAM_Data1>>1)>=228) 
 														GRAM_Pixel_Addr<=GRAM_Y+228;
-														//Full-scale reached, no need to draw MaxPulse Indicator.
-														MaxPulseCounter_X<=0;
-														MaxPulseCounter_Y<=0;
-																				end
-													else begin
-															GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>1); //+xOffset.
-															//maximum pulse counter tracking.
-															MaxPulseCounter_X<=12+(iSDRAM_Data1>>1);
-															MaxPulseCounter_Y<=GRAM_Y;
-														end
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>1); //+xOffset.
 												end
 											3: //DIV4=Right shift 2 bits. 2^2=4.
 												begin
-													if((12+iSDRAM_Data1>>2)>=228) begin
+													if((12+iSDRAM_Data1>>2)>=228) 
 														GRAM_Pixel_Addr<=GRAM_Y+228;
-														//Full-scale reached, no need to draw MaxPulse Indicator.
-														MaxPulseCounter_X<=0;
-														MaxPulseCounter_Y<=0;
-																				end
-													else begin
-															GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>2); //+xOffset.
-															//maximum pulse counter tracking.
-															MaxPulseCounter_X<=12+(iSDRAM_Data1>>2);
-															MaxPulseCounter_Y<=GRAM_Y;
-														end
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>2); //+xOffset.
 												end
 											4: //DIV8=Right shift 3 bits. 2^3=8.
 												begin
-													if((12+iSDRAM_Data1>>3)>=228) begin
+													if((12+iSDRAM_Data1>>3)>=228) 
 														GRAM_Pixel_Addr<=GRAM_Y+228;
-														//Full-scale reached, no need to draw MaxPulse Indicator.
-														MaxPulseCounter_X<=0;
-														MaxPulseCounter_Y<=0;
-																				end
-													else begin
-															GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>3); //+xOffset.
-															//maximum pulse counter tracking.
-															MaxPulseCounter_X<=12+(iSDRAM_Data1>>3);
-															MaxPulseCounter_Y<=GRAM_Y;
-														end
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+(iSDRAM_Data1>>3); //+xOffset.
 												end
 											default: //0, DIV1. 2^0=1.
 												begin
-													if((12+iSDRAM_Data1)>=228) begin
+													if((12+iSDRAM_Data1)>=228) 
 														GRAM_Pixel_Addr<=GRAM_Y+228;
-														//Full-scale reached, no need to draw MaxPulse Indicator.
-														MaxPulseCounter_X<=0;
-														MaxPulseCounter_Y<=0;
-																			end
-													else begin
-															GRAM_Pixel_Addr<=GRAM_Y+12+iSDRAM_Data1; //+xOffset.
-															//maximum pulse counter tracking.
-															MaxPulseCounter_X<=12+iSDRAM_Data1; 
-															MaxPulseCounter_Y<=GRAM_Y;
-														end
+													else 
+														GRAM_Pixel_Addr<=GRAM_Y+12+iSDRAM_Data1; //+xOffset.
 												end
 										endcase
 										////////////////////////////////////////////////
@@ -364,32 +323,7 @@ else if(en) begin
 							GRAM_Y<=GRAM_Y+480; 
 							i<=10; //Loop to read next pulse counter.
 						end
-				15: //Draw MaxPulseCounter Indicate Line.
-					if(MaxPulseCounter_X!=0 && MaxPulseCounter_Y!=0) begin
-						//StartY: +yOffset=15*480=7200.
-						oSDRAM_Wr_Addr<=MaxPulseCounter_X+7200;
-						i<=i+1'b1;
-												end
-					else begin
-							//Full-scale reached, no need to draw MaxPulseCounter Indicator.
-							i<=18; //bypass drawing MaxPulseCounter Indicate Line.
-						end
-				16: //Draw Line.
-					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			
-					else begin 
-							oSDRAM_Wr_Req<=1;
-							oSDRAM_Wr_Data1<=`Color_Green;
-							oSDRAM_Wr_Data2<=`BAR_Color_Background;
-							oSDRAM_Wr_Data3<=`BAR_Color_Background;
-							oSDRAM_Wr_Data4<=`BAR_Color_Background;
-						end
-				17: //EndY.
-					if(oSDRAM_Wr_Addr>=MaxPulseCounter_X+MaxPulseCounter_Y) begin i<=i+1'b1; end
-					else begin
-							oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480;
-							i<=i-1'b1; //Loop to draw next point.
-						end
-				18: 
+				15: 
 					begin i<=7; end
 			endcase
 		 end

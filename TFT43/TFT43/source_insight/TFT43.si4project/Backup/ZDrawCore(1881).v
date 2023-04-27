@@ -166,10 +166,11 @@ reg [15:0] i;
 reg [31:0] x_position;
 reg [31:0] y_position;
 reg [7:0] pixel_data;
-reg [7:0] flag_bg_line;
 reg [7:0] which_dot_matrix;
 reg [23:0] addr_photon_counter;
 reg [7:0] CNT1;
+reg [31:0] clear_X;
+reg [31:0] clear_Y;
 reg [31:0] fill_pixel_addr;
 reg [31:0] clean_X;
 reg [31:0] clean_Y;
@@ -202,7 +203,6 @@ if(!rst_n) begin
 			addr_SIN<=0;
 			cnt_data_SIN<=0;
 			cnt_SIN_Shift<=0;
-			flag_bg_line<=0;
 
 			//Random Histogram.
 			addr_Random<=0;
@@ -509,7 +509,7 @@ else if(en) begin
 							begin 
 								//Plain xOffset=244. because the middle line is 480/2=240.
 								//Plain yOffset=15*480=7200.
-								x_position<=244+data_SIN; //+xOffset.
+								x_position<=244-1+data_SIN; //+xOffset.
 								y_position<=7200;
 								i<=i+1'b1; 
 							end
@@ -520,7 +520,7 @@ else if(en) begin
 							end
 						2: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
 							begin
-								clean_X<=244;
+								clean_X<=244-1;
 								clean_Y=y_position;
 								i<=i+1'b1;
 							end
@@ -560,12 +560,6 @@ else if(en) begin
 																		oSDRAM_Wr_Data3<=`Color_Yellow;
 																		oSDRAM_Wr_Data4<=`Color_Yellow;
 																		end
-									else if(clean_X==352 && flag_bg_line==4) begin
-															oSDRAM_Wr_Data1<=`Color_White;
-															oSDRAM_Wr_Data2<=`SIN_Color_Background;
-															oSDRAM_Wr_Data3<=`SIN_Color_Background;
-															oSDRAM_Wr_Data4<=`SIN_Color_Background;
-														end
 									else begin
 											oSDRAM_Wr_Data1<=`SIN_Color_Background;
 											oSDRAM_Wr_Data2<=`SIN_Color_Background;
@@ -574,7 +568,7 @@ else if(en) begin
 										end
 								end
 						5: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
-							if(clean_X>=464) begin i<=i+1'b1; end
+							if(clean_X>=464-1) begin i<=i+1'b1; end
 							else begin 
 									clean_X<=clean_X+4; 
 									i<=3; //loop to clean this column.
@@ -591,13 +585,8 @@ else if(en) begin
 									if(addr_SIN==10'd600-1 ) begin addr_SIN<=10'd0; end				
 									else begin addr_SIN<=addr_SIN+1'b1; end	
 									
-									x_position<=244+data_SIN; //+xOffset.
+									x_position<=244-1+data_SIN; //+xOffset.
 									y_position<=y_position+480; //next y.
-
-									//skip 4 column of each background line.
-									if(flag_bg_line==4) begin flag_bg_line<=0; end
-									else begin flag_bg_line<=flag_bg_line+1'b1; end
-									
 									i<=1; //Loop to write next pixel.
 								end
 						7: //Generate done Signal.

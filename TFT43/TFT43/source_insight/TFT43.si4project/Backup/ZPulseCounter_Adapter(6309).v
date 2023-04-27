@@ -27,9 +27,6 @@ module ZPulseCounter_Adapter(
     //50Hz sync.
     input sync_50Hz,
 
-    //Time Interval Selection.
-    input [7:0] iTime_Interval_Selection,
-    
 	//Pulse Counter Output.
 	output oDataUpdate,
     output [31:0] oPulseCouter_LCD,
@@ -58,10 +55,6 @@ ZPulseCounter ic_PulseCounter(
     .rst_n(rst_n),
     .en(en),
     .pulse(pulse_rising_edge),
-    
-     //Time Interval Selection.
-    .iTime_Interval_Selection(iTime_Interval_Selection),
-    
     .q0_LCD(oPulseCouter_LCD[3:0]),
     .q1_LCD(oPulseCouter_LCD[7:4]),
     .q2_LCD(oPulseCouter_LCD[11:8]),

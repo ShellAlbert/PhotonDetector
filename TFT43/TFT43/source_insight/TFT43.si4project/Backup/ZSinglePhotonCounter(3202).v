@@ -443,9 +443,6 @@ ZPulseCounter_Adapter ic_PulseCounter(
     //50Hz sync.
     .sync_50Hz(sync_50Hz),
 
-	//Time Interval Selection.
-	.iTime_Interval_Selection(Time_Interval_Selection),
-	
 	//Pulse Counter Output.
 	.oDataUpdate(data_update),
     .oPulseCouter_LCD(PulseCounter_LCD),
