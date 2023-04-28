@@ -676,6 +676,8 @@ ZSDRAM_RW_Multiplex ic_SDRAM_RW_Multiplex(
     );
 */
 ///////////////////////////////////////////////
+//Only connect ZPage_ExtSyncLost SDRAM RW to SDRAM when ExtSyncLost occurd.
+//Otherwise connect ZDrawAdapter and ZShift_and_Draw to SDRAM.
 ZSDRAM_RW_Arbit ic_RW_Arbit(
     .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),

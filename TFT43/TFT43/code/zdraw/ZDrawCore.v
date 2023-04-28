@@ -166,7 +166,9 @@ reg [15:0] i;
 reg [31:0] x_position;
 reg [31:0] y_position;
 reg [7:0] pixel_data;
-reg [7:0] flag_bg_line;
+//background line flag.
+reg [7:0] flag_bg_line_x;
+reg [7:0] flag_bg_line_y;
 reg [7:0] which_dot_matrix;
 reg [23:0] addr_photon_counter;
 reg [7:0] CNT1;
@@ -202,7 +204,8 @@ if(!rst_n) begin
 			addr_SIN<=0;
 			cnt_data_SIN<=0;
 			cnt_SIN_Shift<=0;
-			flag_bg_line<=0;
+			flag_bg_line_x<=0;
+			flag_bg_line_y<=0;
 
 			//Random Histogram.
 			addr_Random<=0;
@@ -511,6 +514,8 @@ else if(en) begin
 								//Plain yOffset=15*480=7200.
 								x_position<=244+data_SIN; //+xOffset.
 								y_position<=7200;
+								flag_bg_line_x<=0;
+								CNT1<=0;
 								i<=i+1'b1; 
 							end
 						1: //calculate the pixel address that need to be set.
@@ -522,6 +527,7 @@ else if(en) begin
 							begin
 								clean_X<=244;
 								clean_Y=y_position;
+								flag_bg_line_y<=0;
 								i<=i+1'b1;
 							end
 						3: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
@@ -547,24 +553,48 @@ else if(en) begin
 																		oSDRAM_Wr_Data2<=`Color_Yellow;
 																		oSDRAM_Wr_Data3<=`Color_Yellow;
 																		oSDRAM_Wr_Data4<=`Color_Yellow;
-																		end
+																			end
 									else if((oSDRAM_Wr_Addr+2)==fill_pixel_addr) begin
 																		oSDRAM_Wr_Data1<=`Color_Yellow;
 																		oSDRAM_Wr_Data2<=`Color_Yellow;
 																		oSDRAM_Wr_Data3<=`Color_Yellow;
 																		oSDRAM_Wr_Data4<=`Color_Yellow;
-																		end
+																			end
 									else if((oSDRAM_Wr_Addr+3)==fill_pixel_addr) begin
 																		oSDRAM_Wr_Data1<=`Color_Yellow;
 																		oSDRAM_Wr_Data2<=`Color_Yellow;
 																		oSDRAM_Wr_Data3<=`Color_Yellow;
 																		oSDRAM_Wr_Data4<=`Color_Yellow;
-																		end
-									else if(clean_X==352 && flag_bg_line==4) begin
-															oSDRAM_Wr_Data1<=`Color_White;
-															oSDRAM_Wr_Data2<=`SIN_Color_Background;
-															oSDRAM_Wr_Data3<=`SIN_Color_Background;
-															oSDRAM_Wr_Data4<=`SIN_Color_Background;
+																			end
+									//480/2=240, 240+240/2=360, 360/4=90.
+									//+/-32. //shift 4 pixel to make it looks better.
+									else if(flag_bg_line_x<10 && clean_X==356) begin 
+											oSDRAM_Wr_Data1<=16'h2945;
+											oSDRAM_Wr_Data2<=16'h2945;
+											oSDRAM_Wr_Data3<=16'h2945;
+											oSDRAM_Wr_Data4<=16'h2945;
+											end
+									else if(flag_bg_line_x<10 && (clean_X==388||clean_X==420||clean_X==452||clean_X==324||clean_X==292||clean_X==260)) begin
+											oSDRAM_Wr_Data1<=16'h2945;
+											oSDRAM_Wr_Data2<=`SIN_Color_Background;
+											oSDRAM_Wr_Data3<=`SIN_Color_Background;
+											oSDRAM_Wr_Data4<=`SIN_Color_Background;							
+											end
+									//Y width: 600. 600/2=300.
+									//+/-32.
+									else if(flag_bg_line_y<3 && (cnt_data_SIN==308||cnt_data_SIN==309||cnt_data_SIN==310||cnt_data_SIN==311)) begin
+											oSDRAM_Wr_Data1<=16'h2945;
+											oSDRAM_Wr_Data2<=16'h2945;
+											oSDRAM_Wr_Data3<=16'h2945;
+											oSDRAM_Wr_Data4<=16'h2945;
+														end
+									//300-28=272, 272-28=244,244-28=216,216-28=188,188-28=160,160-28=132.
+									//311+24=335, 335+24=359, 359+24=383, 383+24=407.
+									else if(flag_bg_line_y<3 && CNT1==28) begin
+											oSDRAM_Wr_Data1<=16'h2945;
+											oSDRAM_Wr_Data2<=16'h2945;
+											oSDRAM_Wr_Data3<=16'h2945;
+											oSDRAM_Wr_Data4<=16'h2945;
 														end
 									else begin
 											oSDRAM_Wr_Data1<=`SIN_Color_Background;
@@ -577,6 +607,11 @@ else if(en) begin
 							if(clean_X>=464) begin i<=i+1'b1; end
 							else begin 
 									clean_X<=clean_X+4; 
+									
+ 									//skip 4 rows of each background line.
+ 									if(flag_bg_line_y==28) begin flag_bg_line_y<=0; end
+ 									else begin flag_bg_line_y<=flag_bg_line_y+1'b1; end
+ 									
 									i<=3; //loop to clean this column.
 								end
 						6: //120 points single period, 5 periods*120 points=600.
@@ -594,10 +629,13 @@ else if(en) begin
 									x_position<=244+data_SIN; //+xOffset.
 									y_position<=y_position+480; //next y.
 
-									//skip 4 column of each background line.
-									if(flag_bg_line==4) begin flag_bg_line<=0; end
-									else begin flag_bg_line<=flag_bg_line+1'b1; end
-									
+ 									//skip 4 column of each background line.
+ 									if(flag_bg_line_x==20) begin flag_bg_line_x<=0; end
+ 									else begin flag_bg_line_x<=flag_bg_line_x+1'b1; end
+
+ 									if(CNT1==28) begin CNT1<=0; end
+ 									else begin CNT1<=CNT1+1'b1; end
+ 									
 									i<=1; //Loop to write next pixel.
 								end
 						7: //Generate done Signal.

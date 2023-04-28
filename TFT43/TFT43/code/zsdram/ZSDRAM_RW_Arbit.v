@@ -18,6 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+//Only connect ZPage_ExtSyncLost SDRAM RW to SDRAM when ExtSyncLost occurd.
+//Otherwise connect ZDrawAdapter and ZShift_and_Draw to SDRAM.
 module ZSDRAM_RW_Arbit(
     input clk,
     input rst_n,
