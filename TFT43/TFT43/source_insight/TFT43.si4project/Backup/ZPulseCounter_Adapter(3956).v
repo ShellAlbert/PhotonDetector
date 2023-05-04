@@ -26,7 +26,6 @@ module ZPulseCounter_Adapter(
     input photon_pulse,
     //50Hz sync.
     input sync_50Hz,
-    output reg oExtSyncLost,
 
     //Time Interval Selection.
     input [7:0] iTime_Interval_Selection,
@@ -38,18 +37,6 @@ module ZPulseCounter_Adapter(
 
     //Accumulated PulseCounter. Never Reset to 0.
    	output [31:0] oPulseCouter_LCD_Accumulated
-    );
-
-//Ext AC50Hz Edge Detect.
-wire Ext50Hz_rising_edge;
-wire Ext50Hz_falling_edge;
-ZEdgeDetect ic_Ext50HzEdgeDetect(
-    .clk(clk),
-    .rst_n(rst_n),
-    .en(en),
-    .sig_in(sync_50Hz), //External AC50Hz Sync Signal Input.
-    .rising_edge(Ext50Hz_rising_edge),
-    .falling_edge(Ext50Hz_falling_edge)
     );
 
 //Edge Detect.
@@ -90,41 +77,4 @@ ZPulseCounter ic_PulseCounter(
    	//Accumulated PulseCounter. Never Reset to 0.
    	.oPulseCouter_LCD_Accumulated(oPulseCouter_LCD_Accumulated)
     );
-
-//if no Ext AC50Hz Input within 1 seconds,
-//it means it losts External Sync Signal.
-//80MHz/1Hz=80_000_000
-reg [31:0] cnt_1Hz;
-reg [7:0] cnt_50Hz;
-always @(posedge clk or negedge rst_n)
-if(!rst_n) begin
-			oExtSyncLost<=1'b0;
-			cnt_1Hz<=0;
-			cnt_50Hz<=0;
-		end
-else if(en) begin
-			if(cnt_1Hz>=80_000_000) begin
-									cnt_1Hz<=0;
-									//////////////////////////////
-									//if the count equals 0 within 1 seconds,
-									//it means we lost Ext AC50Hz Sync Signal.
-									if(cnt_50Hz==0)
-										oExtSyncLost<=1'b1; //Lost.
-									else
-										oExtSyncLost<=1'b0; 
-									////////////////////////////
-									cnt_50Hz<=0;
-								 end
-			else begin
-					cnt_1Hz<=cnt_1Hz+1'b1;
-					///////////////////////////////
-					if(Ext50Hz_rising_edge)
-						cnt_50Hz<=cnt_50Hz+1'b1;
-				end
-		 end
-	else begin //if(en)
-			oExtSyncLost<=1'b0;
-			cnt_1Hz<=0;
-			cnt_50Hz<=0;
-		end
 endmodule

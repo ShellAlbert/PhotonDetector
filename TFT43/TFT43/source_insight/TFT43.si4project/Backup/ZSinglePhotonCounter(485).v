@@ -407,44 +407,10 @@ ODDR2 oddr2_inst(
 .Q(clk_to_sdram));
 assign S_CLK=clk_to_sdram;
 /////////////////////////////////////////////////////////////
-wire ExtSyncLost;
-/////////////////////////////////////////////////////////////
-wire en_Page_ExtSyncLost;
-assign en_Page_ExtSyncLost=ExtSyncLost;
-////////////////////////////////////////////////////////////
-wire en_Page_Main;
-assign en_Page_Main=~ExtSyncLost;
-/////////////////////////////////////////////////////////////
-wire data_update;
-wire [31:0] PulseCounter_LCD;
-wire [15:0] PulseCounter_Single;
-wire [31:0] PulseCounter_LCD_Accumulated;
-wire [7:0] Time_Interval_Selection;
-ZPulseCounter_Adapter ic_PulseCounter(
-    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
-    .rst_n(rst_n),
-    .en(1'b1),
-    //External Photon Pulse.
-    .photon_pulse(photon_pulse),
-    //50Hz sync.
-    .sync_50Hz(sync_50Hz),
-    .oExtSyncLost(ExtSyncLost),
-
-	//Time Interval Selection.
-	.iTime_Interval_Selection(Time_Interval_Selection),
-	
-	//Pulse Counter Output.
-	.oDataUpdate(data_update),
-    .oPulseCouter_LCD(PulseCounter_LCD),
-    .oPulseCouter_Single(PulseCounter_Single),
-
-    //Accumulated PulseCounter. Never Reset to 0.
-   	.oPulseCouter_LCD_Accumulated(PulseCounter_LCD_Accumulated)
-    );
-///////////////////////////////////////////////////////////////////
 wire [7:0] Cursor_Index;
 wire [7:0] Active_Periods_Num;
 wire [7:0] PulseCounter_Gain_Divider;
+wire [7:0] Time_Interval_Selection;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
@@ -463,7 +429,31 @@ ZPushButton_Adapter ic_PushButton_Adapter(
     //Time Interval Selection.
     .oTime_Interval_Selection(Time_Interval_Selection)
     );
+////////////////////////////////////////////////////////
+wire data_update;
+wire [31:0] PulseCounter_LCD;
+wire [15:0] PulseCounter_Single;
+wire [31:0] PulseCounter_LCD_Accumulated;
+ZPulseCounter_Adapter ic_PulseCounter(
+    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .rst_n(rst_n),
+    .en(1'b1),
+    //External Photon Pulse.
+    .photon_pulse(photon_pulse),
+    //50Hz sync.
+    .sync_50Hz(sync_50Hz),
 
+	//Time Interval Selection.
+	.iTime_Interval_Selection(Time_Interval_Selection),
+	
+	//Pulse Counter Output.
+	.oDataUpdate(data_update),
+    .oPulseCouter_LCD(PulseCounter_LCD),
+    .oPulseCouter_Single(PulseCounter_Single),
+
+    //Accumulated PulseCounter. Never Reset to 0.
+   	.oPulseCouter_LCD_Accumulated(PulseCounter_LCD_Accumulated)
+    );
 ///////////////////////////////////////////////////////////
 //ZTFT43_Adapter: Read data from SDRAM and send to TFT4.3'' LCD.
 wire Rd_Done_ZTFT43;
@@ -477,6 +467,9 @@ ZTFT43_Adapter ic_TFT43Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
     .en(1'b1),
+
+	//External 50Hz Sync Signal.
+	.sync_50Hz(1'b1), 
 
 	//SDRAM Glue Logic.
     .oSDRAM_Rd_Addr(Rd_Addr_ZTFT43), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -516,7 +509,7 @@ wire [15:0] MinPulseCounter;
 ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
-    .en(en_Page_Main),
+    .en(1'b1),
 
 	//Cursor Index.
 	.iCursor_Index(Cursor_Index),
@@ -615,8 +608,8 @@ wire Wr_Done_ExtSyncLost;
 ZPage_ExtSyncLost ic_ExtSyncLost(
     .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
-    .en(en_Page_ExtSyncLost),
-
+    .en(1'b1),
+    
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(Wr_Addr_ExtSyncLost), //output, Bank(2)+Row(13)+Column(9)=(24)
     .oSDRAM_Wr_Data1(Wr_Data1_ExtSyncLost), //ouptut, write data1 to SDRAM.
@@ -635,9 +628,6 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
     .rst_n(rst_n),
     .en(1'b1),
 
-	//Global Flag.
-	.iFlag_ExtSyncLost(en_Page_ExtSyncLost),
-	
     //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
     .iRd_Req1(Rd_Req_ZTFT43),
     .iRd_Addr1(Rd_Addr_ZTFT43),
@@ -703,6 +693,49 @@ ZTestSignal ic_TestSignal(
 	.photon_pulse_simulate(photon_pulse_simulate),
 	.sync_50Hz_simulate(sync_50Hz_simulate)
     );
+
+
+//Conflict for SDRAM Reading and Writing.
+/*
+wire Rd_Req;
+wire Wr_Req;
+
+wire SDRAM_Refresh_Done;
+wire SDRAM_Draw_Done;
+ZSDRAM_RW_Arbit ic_Arbit(
+    .clk(clk_133MHz_210),
+    .rst_n(rst_n),
+    .en(1'b1),
+
+	//Read Request.
+	.rd_req(Rd_Req),
+	.rd_addr(SDRAM_R_Addr),
+	.rd_done(SDRAM_Refresh_Done),
+	
+	//Write Request.
+	.wr_req(Wr_Req),
+	.wr_addr(SDRAM_W_Addr),
+	.wr_done(SDRAM_Draw_Done),
+	
+	//Arbit Output.
+	.rw_req(sdram_rw_req),
+	.rw_addr(sdram_rw_addr)
+    );
+*/
+
+/*
+//Sync 50Hz.
+wire sync_50Hz_rising;
+wire sync_50Hz_falling;
+ZEdgeDetect ic_sync_50Hz(
+    .clk(clk_133MHz_210),
+    .rst_n(rst_n),
+    .en(1'b1),
+    .sig_in(sync_50Hz),
+    .rising_edge(sync_50Hz_rising),
+    .falling_edge(sync_50Hz_falling)
+    );
+ */
 
  /*(
 //FIFO for PulseCounter.

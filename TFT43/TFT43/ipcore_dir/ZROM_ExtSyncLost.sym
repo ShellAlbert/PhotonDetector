@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="ZROM_ExtSyncLost">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2023-4-28T8:57:44</timestamp>
+    <timestamp>2023-5-4T4:37:1</timestamp>
     <pin polarity="Input" x="0" y="80" name="addra[15:0]" />
     <pin polarity="Input" x="0" y="272" name="clka" />
     <pin polarity="Output" x="576" y="80" name="douta[7:0]" />

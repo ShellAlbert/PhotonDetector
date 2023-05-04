@@ -408,13 +408,6 @@ ODDR2 oddr2_inst(
 assign S_CLK=clk_to_sdram;
 /////////////////////////////////////////////////////////////
 wire ExtSyncLost;
-/////////////////////////////////////////////////////////////
-wire en_Page_ExtSyncLost;
-assign en_Page_ExtSyncLost=ExtSyncLost;
-////////////////////////////////////////////////////////////
-wire en_Page_Main;
-assign en_Page_Main=~ExtSyncLost;
-/////////////////////////////////////////////////////////////
 wire data_update;
 wire [31:0] PulseCounter_LCD;
 wire [15:0] PulseCounter_Single;
@@ -448,7 +441,7 @@ wire [7:0] PulseCounter_Gain_Divider;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
-    .en(1'b1),
+    .en(~ExtSyncLost),
 
     //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
     .iButton(iButton),
@@ -516,7 +509,7 @@ wire [15:0] MinPulseCounter;
 ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
-    .en(en_Page_Main),
+    .en(1'b1),
 
 	//Cursor Index.
 	.iCursor_Index(Cursor_Index),
@@ -615,8 +608,8 @@ wire Wr_Done_ExtSyncLost;
 ZPage_ExtSyncLost ic_ExtSyncLost(
     .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
-    .en(en_Page_ExtSyncLost),
-
+    .en(1'b1),
+    
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(Wr_Addr_ExtSyncLost), //output, Bank(2)+Row(13)+Column(9)=(24)
     .oSDRAM_Wr_Data1(Wr_Data1_ExtSyncLost), //ouptut, write data1 to SDRAM.
@@ -636,7 +629,7 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
     .en(1'b1),
 
 	//Global Flag.
-	.iFlag_ExtSyncLost(en_Page_ExtSyncLost),
+	.iFlag_ExtSyncLost(ExtSyncLost),
 	
     //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
     .iRd_Req1(Rd_Req_ZTFT43),

@@ -409,12 +409,6 @@ assign S_CLK=clk_to_sdram;
 /////////////////////////////////////////////////////////////
 wire ExtSyncLost;
 /////////////////////////////////////////////////////////////
-wire en_Page_ExtSyncLost;
-assign en_Page_ExtSyncLost=ExtSyncLost;
-////////////////////////////////////////////////////////////
-wire en_Page_Main;
-assign en_Page_Main=~ExtSyncLost;
-/////////////////////////////////////////////////////////////
 wire data_update;
 wire [31:0] PulseCounter_LCD;
 wire [15:0] PulseCounter_Single;
@@ -516,7 +510,7 @@ wire [15:0] MinPulseCounter;
 ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
-    .en(en_Page_Main),
+    .en(1'b1),
 
 	//Cursor Index.
 	.iCursor_Index(Cursor_Index),
@@ -615,7 +609,7 @@ wire Wr_Done_ExtSyncLost;
 ZPage_ExtSyncLost ic_ExtSyncLost(
     .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
-    .en(en_Page_ExtSyncLost),
+    .en(ExtSyncLost),
 
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(Wr_Addr_ExtSyncLost), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -636,7 +630,7 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
     .en(1'b1),
 
 	//Global Flag.
-	.iFlag_ExtSyncLost(en_Page_ExtSyncLost),
+	.iFlag_ExtSyncLost(ExtSyncLost),
 	
     //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
     .iRd_Req1(Rd_Req_ZTFT43),

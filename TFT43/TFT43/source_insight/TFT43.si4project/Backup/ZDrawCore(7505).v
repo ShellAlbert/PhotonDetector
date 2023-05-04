@@ -510,34 +510,32 @@ else if(en) begin
 					case(i)
 						0: //Calculate SDRAM plain address.
 							begin 
-								y_position<=7200; //Plain yOffset=15*480=7200.
-								i<=i+1'b1; 
-							end
-						1: //Plain xOffset=244. because the middle line is 480/2=240.
-							begin
+								//Plain xOffset=244. because the middle line is 480/2=240.
+								//Plain yOffset=15*480=7200.
 								x_position<=244+data_SIN; //+xOffset.
+								y_position<=7200;
 								flag_bg_line_x<=0;
 								CNT1<=0;
 								i<=i+1'b1; 
 							end
-						2: //calculate the pixel address that need to be set.
+						1: //calculate the pixel address that need to be set.
 							begin 
 								fill_pixel_addr<=y_position+x_position;
 								i<=i+1'b1; 
 							end
-						3: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
+						2: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
 							begin
 								clean_X<=244;
 								clean_Y=y_position;
 								flag_bg_line_y<=0;
 								i<=i+1'b1;
 							end
-						4: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
+						3: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
 							begin 
 								oSDRAM_Wr_Addr<=clean_Y+clean_X;
 								i<=i+1'b1; 
 							end
-						5: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
+						4: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
 							if(iSDRAM_Wr_Done) begin 
 													oSDRAM_Wr_Req<=0; 
 													i<=i+1'b1; 
@@ -605,7 +603,7 @@ else if(en) begin
 											oSDRAM_Wr_Data4<=`SIN_Color_Background;
 										end
 								end
-						6: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
+						5: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
 							if(clean_X>=464) begin i<=i+1'b1; end
 							else begin 
 									clean_X<=clean_X+4; 
@@ -614,17 +612,21 @@ else if(en) begin
  									if(flag_bg_line_y==28) begin flag_bg_line_y<=0; end
  									else begin flag_bg_line_y<=flag_bg_line_y+1'b1; end
  									
-									i<=4; //loop to clean this column.
+									i<=3; //loop to clean this column.
 								end
-						7: //120 points single period, 5 periods*120 points=600.
-							if(cnt_data_SIN>=600-1) begin cnt_data_SIN<=0; i<=i+1'b1; end				
+						6: //120 points single period, 5 periods*120 points=600.
+							if(cnt_data_SIN==600-1) begin 
+													cnt_data_SIN<=0; 
+													i<=i+1'b1;
+												end
 							else begin 
 									cnt_data_SIN<=cnt_data_SIN+1'b1;
 									
 									//Loop addr of SIN data.
-									if(addr_SIN>=600-1 ) begin addr_SIN<=0; end				
+									if(addr_SIN==10'd600-1 ) begin addr_SIN<=10'd0; end				
 									else begin addr_SIN<=addr_SIN+1'b1; end	
 									
+									x_position<=244+data_SIN; //+xOffset.
 									y_position<=y_position+480; //next y.
 
  									//skip 4 column of each background line.
@@ -636,16 +638,16 @@ else if(en) begin
  									
 									i<=1; //Loop to write next pixel.
 								end
-						8: //Generate done Signal.
+						7: //Generate done Signal.
 							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						9: //Generate done Signal.
+						8: //Generate done Signal.
 							begin 
 								oDraw_Done<=1'b0; 
 								i<=0; 
 								
 								//SIN shift accumulation here.
-								if(cnt_SIN_Shift>=120-1)
-									cnt_SIN_Shift<=0;
+								if(cnt_SIN_Shift==10'd120-1)
+									cnt_SIN_Shift<=10'd0;
 								else
 									cnt_SIN_Shift<=cnt_SIN_Shift+1'b1; 
 								///////////////////////////////////

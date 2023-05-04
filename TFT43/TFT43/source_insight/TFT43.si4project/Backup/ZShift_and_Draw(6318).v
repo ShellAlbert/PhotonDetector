@@ -365,7 +365,6 @@ else if(en) begin
 							i<=10; //Loop to read next pulse counter.
 						end
 				15: //Draw MaxPulseCounter Indicate Line.
-					/*
 					if(MaxPulseCounter_X!=0 && MaxPulseCounter_Y!=0) begin
 						//StartY: +yOffset=15*480=7200.
 						oSDRAM_Wr_Addr<=MaxPulseCounter_X+7200;
@@ -375,8 +374,6 @@ else if(en) begin
 							//Full-scale reached, no need to draw MaxPulseCounter Indicator.
 							i<=18; //bypass drawing MaxPulseCounter Indicate Line.
 						end
-					*/
-						i<=7;
 				16: //Draw Line.
 					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			
 					else begin 
@@ -396,35 +393,4 @@ else if(en) begin
 					begin i<=7; end
 			endcase
 		 end
-	else begin //if(en)
-			i<=0;
-			CNT1<=0;
-			CNT2<=0;
-			
-			//SDRAM Read.
-			oSDRAM_Rd_Req<=0;
-			oSDRAM_Rd_Addr<=0;
-
-			//SDRAM Write.
-			oSDRAM_Wr_Req<=0;
-			oSDRAM_Wr_Addr<=0;
-			oSDRAM_Wr_Data1<=0;
-			oSDRAM_Wr_Data2<=0;
-			oSDRAM_Wr_Data3<=0;
-			oSDRAM_Wr_Data4<=0;
-			
-			//SDRAM Read/Write Address must be aligned by 4 words.
-			//384000/4=96000.
-			ringbuffer_wr_addr<=384000;
-			ringbuffer_rd_addr<=384000;
-			cnt_Shift_PulseCounter<=0;
-
-			//Find out the Maxium & Minimum Pulse Counter within 600 points.
-			oMaxPulseCounter<=0;
-			oMinPulseCounter<=32'hFFFFFFFF;
-
-			//maximum pulse counter tracking.
-			MaxPulseCounter_X<=0;
-			MaxPulseCounter_Y<=0;
-		end
 endmodule

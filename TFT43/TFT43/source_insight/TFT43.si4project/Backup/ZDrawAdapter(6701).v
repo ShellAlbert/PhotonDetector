@@ -115,27 +115,19 @@ else if(en) begin
 			if(iData_Update)
 				lockInPulseCounter<=iPulse_Counter;
 		 end
-	else begin
-			lockInPulseCounter<=0;
-		end
 
 //driven by step i.
 reg [7:0] i;
-reg [31:0] cnt;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				i<=0;
-				en_ZDrawCore<=1'b0; 
 				led<=1'b0;
-				cnt<=0;
 			end
 else if(en) begin
 			case(i)
 				0: //Reserve first clock to connect SDRAM_W_Addr to sdram_rw_addr.
 				//Very Significant Here!!!
-				//delay a short time to wait en signal convert stable.
-					if(cnt>=800_000_000) begin cnt<=0; i<=i+1'b1; end
-					else begin cnt<=cnt+1'b1; end
+					i<=i+1'b1;
 				1: //0: Clear Screen.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
@@ -229,7 +221,5 @@ else if(en) begin
 		end
 	else begin //if(en)
 			i<=0;
-			en_ZDrawCore<=1'b0; 
-			cnt<=0;
 		end
 endmodule

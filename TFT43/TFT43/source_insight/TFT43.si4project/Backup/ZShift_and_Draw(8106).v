@@ -398,33 +398,5 @@ else if(en) begin
 		 end
 	else begin //if(en)
 			i<=0;
-			CNT1<=0;
-			CNT2<=0;
-			
-			//SDRAM Read.
-			oSDRAM_Rd_Req<=0;
-			oSDRAM_Rd_Addr<=0;
-
-			//SDRAM Write.
-			oSDRAM_Wr_Req<=0;
-			oSDRAM_Wr_Addr<=0;
-			oSDRAM_Wr_Data1<=0;
-			oSDRAM_Wr_Data2<=0;
-			oSDRAM_Wr_Data3<=0;
-			oSDRAM_Wr_Data4<=0;
-			
-			//SDRAM Read/Write Address must be aligned by 4 words.
-			//384000/4=96000.
-			ringbuffer_wr_addr<=384000;
-			ringbuffer_rd_addr<=384000;
-			cnt_Shift_PulseCounter<=0;
-
-			//Find out the Maxium & Minimum Pulse Counter within 600 points.
-			oMaxPulseCounter<=0;
-			oMinPulseCounter<=32'hFFFFFFFF;
-
-			//maximum pulse counter tracking.
-			MaxPulseCounter_X<=0;
-			MaxPulseCounter_Y<=0;
 		end
 endmodule
