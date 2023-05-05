@@ -453,7 +453,7 @@ wire [7:0] PulseCounter_Gain_Divider;
 wire Pause;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
-    .rst_n(rst_Page_Main),
+    .rst_n(rst_n),
     .en(1'b1),
 
     //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
@@ -527,7 +527,7 @@ ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_Page_Main),
     .en(1'b1),
-
+    
 	//Pause or Run.
 	//1=Pause, 0=Run.
 	.iPause(Pause),

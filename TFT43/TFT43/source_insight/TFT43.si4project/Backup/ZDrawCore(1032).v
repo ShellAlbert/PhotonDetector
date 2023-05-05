@@ -169,8 +169,8 @@ reg [31:0] x_position;
 reg [31:0] y_position;
 reg [7:0] pixel_data;
 //background line flag.
-reg [15:0] gap_horizontal;
-reg [15:0] gap_vertical;
+reg [7:0] flag_bg_line_x;
+reg [7:0] flag_bg_line_y;
 reg [7:0] which_dot_matrix;
 reg [23:0] addr_photon_counter;
 reg [7:0] CNT1;
@@ -206,8 +206,8 @@ if(!rst_n) begin
 			addr_SIN<=0;
 			cnt_data_SIN<=0;
 			cnt_SIN_Shift<=0;
-			gap_horizontal<=0;
-			gap_vertical<=0;
+			flag_bg_line_x<=0;
+			flag_bg_line_y<=0;
 
 			//Random Histogram.
 			addr_Random<=0;
@@ -513,12 +513,13 @@ else if(en) begin
 						0: //Calculate SDRAM plain address.
 							begin 
 								y_position<=7200; //Plain yOffset=15*480=7200.
-								gap_horizontal<=0;
 								i<=i+1'b1; 
 							end
 						1: //Plain xOffset=244. because the middle line is 480/2=240.
 							begin
 								x_position<=244+data_SIN; //+xOffset.
+								flag_bg_line_x<=0;
+								CNT1<=0;
 								i<=i+1'b1; 
 							end
 						2: //calculate the pixel address that need to be set.
@@ -530,7 +531,7 @@ else if(en) begin
 							begin
 								clean_X<=244;
 								clean_Y=y_position;
-								gap_vertical<=2; //beginning offset.
+								flag_bg_line_y<=0;
 								i<=i+1'b1;
 							end
 						4: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
@@ -571,23 +572,21 @@ else if(en) begin
 																			end
 									//480/2=240, 240+240/2=360, 360/4=90.
 									//+/-32. //shift 4 pixel to make it looks better.
-									else if(gap_horizontal<10 && clean_X==356) begin 
-											oSDRAM_Wr_Data1<=16'h2945; //Fat Line of Horizontal.
+									else if(flag_bg_line_x<10 && clean_X==356) begin 
+											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=16'h2945;
 											oSDRAM_Wr_Data3<=16'h2945;
 											oSDRAM_Wr_Data4<=16'h2945;
 											end
-									else if(gap_horizontal<10 && ///<
-									(clean_X==388||clean_X==420||clean_X==452||clean_X==324||clean_X==292||clean_X==260)) begin
-											oSDRAM_Wr_Data1<=16'h2945; //Thin Lines of Horizontal.
+									else if(flag_bg_line_x<10 && (clean_X==388||clean_X==420||clean_X==452||clean_X==324||clean_X==292||clean_X==260)) begin
+											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=`SIN_Color_Background;
 											oSDRAM_Wr_Data3<=`SIN_Color_Background;
 											oSDRAM_Wr_Data4<=`SIN_Color_Background;							
 											end
 									//Y width: 600. 600/2=300.
 									//+/-32.
-									else if(gap_vertical<4 && ///< Fat Line of Vertical.
-									(cnt_data_SIN==308||cnt_data_SIN==309||cnt_data_SIN==310||cnt_data_SIN==311)) begin
+									else if(flag_bg_line_y<3 && (cnt_data_SIN==308||cnt_data_SIN==309||cnt_data_SIN==310||cnt_data_SIN==311)) begin
 											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=16'h2945;
 											oSDRAM_Wr_Data3<=16'h2945;
@@ -595,15 +594,7 @@ else if(en) begin
 														end
 									//300-28=272, 272-28=244,244-28=216,216-28=188,188-28=160,160-28=132.
 									//311+24=335, 335+24=359, 359+24=383, 383+24=407.
-									else if(gap_vertical<4 && ///< Thin Lines of Vertical.
-									(cnt_data_SIN==277||cnt_data_SIN==257||cnt_data_SIN==237||cnt_data_SIN==217|| ///<
-									cnt_data_SIN==197||cnt_data_SIN==177||cnt_data_SIN==157||cnt_data_SIN==137||
-									cnt_data_SIN==117||cnt_data_SIN==97||cnt_data_SIN==77||cnt_data_SIN==57||
-									cnt_data_SIN==37||cnt_data_SIN==17 ||
-									cnt_data_SIN==331||cnt_data_SIN==351||cnt_data_SIN==371||cnt_data_SIN==391||
-									cnt_data_SIN==411||cnt_data_SIN==431||cnt_data_SIN==451||cnt_data_SIN==471||
-									cnt_data_SIN==491||cnt_data_SIN==511||cnt_data_SIN==531||cnt_data_SIN==551||
-									cnt_data_SIN==571||cnt_data_SIN==591)) begin
+									else if(flag_bg_line_y<3 && CNT1==28) begin
 											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=16'h2945;
 											oSDRAM_Wr_Data3<=16'h2945;
@@ -622,8 +613,8 @@ else if(en) begin
 									clean_X<=clean_X+4; 
 									
  									//skip 4 rows of each background line.
- 									if(gap_vertical>=7) begin gap_vertical<=0; end
- 									else begin gap_vertical<=gap_vertical+1'b1; end
+ 									if(flag_bg_line_y==28) begin flag_bg_line_y<=0; end
+ 									else begin flag_bg_line_y<=flag_bg_line_y+1'b1; end
  									
 									i<=4; //loop to clean this column.
 								end
@@ -637,10 +628,13 @@ else if(en) begin
 									else begin addr_SIN<=addr_SIN+1'b1; end	
 									
 									y_position<=y_position+480; //next y.
-									
- 									//Gap Horizontal.
- 									if(gap_horizontal>=20) begin gap_horizontal<=0; end
- 									else begin gap_horizontal<=gap_horizontal+1'b1; end
+
+ 									//skip 4 column of each background line.
+ 									if(flag_bg_line_x==20) begin flag_bg_line_x<=0; end
+ 									else begin flag_bg_line_x<=flag_bg_line_x+1'b1; end
+
+ 									if(CNT1==28) begin CNT1<=0; end
+ 									else begin CNT1<=CNT1+1'b1; end
  									
 									i<=1; //Loop to write next pixel.
 								end
@@ -1956,26 +1950,6 @@ else if(en) begin
 									0: //PAUSE-P.
 										begin
 											addr_ZiMo3232<=3596; //offset of P.
-											//(248,660)
-											//248+32=280, 660+16=676. =>(280,676)
-											//addr=y*width+x=660*480+248=317048.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//317048/4=79262.
-											oSDRAM_Wr_Addr<=317048;
-										end
-									1: //PAUSE-A.
-										begin 
-											addr_ZiMo3232<=3660; //offset of A.
-											//(248,676)
-											//248+32=280, 676+16=692. =>(280,692)
-											//addr=y*width+x=676*480+248=324728.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//324728/4=81182.
-											oSDRAM_Wr_Addr<=324728;
-										end
-									2: //PAUSE-U.
-										begin 
-											addr_ZiMo3232<=3724; //offset of U.
 											//(248,692)
 											//248+32=280, 692+16=708. =>(280,708)
 											//addr=y*width+x=692*480+248=332408.
@@ -1983,9 +1957,9 @@ else if(en) begin
 											//332408/4=83102.
 											oSDRAM_Wr_Addr<=332408;
 										end
-									3: //PAUSE-S.
+									1: //PAUSE-A.
 										begin 
-											addr_ZiMo3232<=3788; //offset of S.
+											addr_ZiMo3232<=3660; //offset of A.
 											//(248,708)
 											//248+32=280, 708+16=724. =>(280,724)
 											//addr=y*width+x=708*480+248=340088.
@@ -1993,15 +1967,35 @@ else if(en) begin
 											//340088/4=85022.
 											oSDRAM_Wr_Addr<=340088;
 										end
-									4: //PAUSE-E.
+									2: //PAUSE-U.
 										begin 
-											addr_ZiMo3232<=3852; //offset of E.
-											//(248,724)
+											addr_ZiMo3232<=3724; //offset of U.
+											//(248,692)
 											//248+32=280, 724+16=740. =>(280,740)
 											//addr=y*width+x=724*480+248=347768.
 											//SDRAM Read/Write Address must be aligned by 4 words.
 											//347768/4=86942.
 											oSDRAM_Wr_Addr<=347768;
+										end
+									3: //PAUSE-S.
+										begin 
+											addr_ZiMo3232<=3788; //offset of S.
+											//(248,676)
+											//248+32=280, 740+16=756. =>(280,756)
+											//addr=y*width+x=740*480+248=355448.
+											//SDRAM Read/Write Address must be aligned by 4 words.
+											//355448/4=88862.
+											oSDRAM_Wr_Addr<=355448;
+										end
+									4: //PAUSE-E.
+										begin 
+											addr_ZiMo3232<=3852; //offset of E.
+											//(248,692)
+											//248+32=280, 756+16=772. =>(280,772)
+											//addr=y*width+x=756*480+248=363128.
+											//SDRAM Read/Write Address must be aligned by 4 words.
+											//363128/4=90782.
+											oSDRAM_Wr_Addr<=363128;
 										end
 								endcase
 								
@@ -2043,10 +2037,10 @@ else if(en) begin
 									oSDRAM_Wr_Req<=1; 
 									//Pink: Foreground Color. //Black: Background Color.
 									if(iData1) begin
-												oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Color_Yellow):(`Screen_Color_Background);
+												oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Color_White):(`Screen_Color_Background);
+												oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Color_White):(`Screen_Color_Background);
+												oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Color_White):(`Screen_Color_Background);
+												oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Color_White):(`Screen_Color_Background);
 											end
 									else begin
 											oSDRAM_Wr_Data1<=(`Screen_Color_Background);
@@ -2063,10 +2057,10 @@ else if(en) begin
 									oSDRAM_Wr_Req<=1; 
 									//Pink: Foreground Color. //Black: Background Color.
 									if(iData1) begin
-												oSDRAM_Wr_Data1<=(pixel_data&8'h10)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data2<=(pixel_data&8'h20)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data3<=(pixel_data&8'h40)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data4<=(pixel_data&8'h80)?(`Color_Yellow):(`Screen_Color_Background);
+												oSDRAM_Wr_Data1<=(pixel_data&8'h10)?(`Color_White):(`Screen_Color_Background);
+												oSDRAM_Wr_Data2<=(pixel_data&8'h20)?(`Color_White):(`Screen_Color_Background);
+												oSDRAM_Wr_Data3<=(pixel_data&8'h40)?(`Color_White):(`Screen_Color_Background);
+												oSDRAM_Wr_Data4<=(pixel_data&8'h80)?(`Color_White):(`Screen_Color_Background);
 											end
 									else begin
 											oSDRAM_Wr_Data1<=(`Screen_Color_Background);

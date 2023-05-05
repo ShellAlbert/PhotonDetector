@@ -93,45 +93,38 @@ ZPulseCounter ic_PulseCounter(
 
 //if no Ext AC50Hz Input within 1 seconds,
 //it means it losts External Sync Signal.
-//80MHz/1Hz/2=40_000_000
+//80MHz/1Hz=80_000_000
 reg [31:0] cnt_1Hz;
-reg [31:0] cnt_50Hz;
+reg [7:0] cnt_50Hz;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
 			oExtSyncLost<=1'b0;
 			cnt_1Hz<=0;
+			cnt_50Hz<=0;
 		end
 else if(en) begin
-			if(cnt_1Hz>=40_000_000) begin
+			if(cnt_1Hz>=80_000_000) begin
 									cnt_1Hz<=0;
 									//////////////////////////////
-									//if the count less than 50Hz/2=25Hz within 1 seconds,
+									//if the count equals 0 within 1 seconds,
 									//it means we lost Ext AC50Hz Sync Signal.
-									if(cnt_50Hz<25) //50/2=25.
+									if(cnt_50Hz==0)
 										oExtSyncLost<=1'b1; //Lost.
 									else
 										oExtSyncLost<=1'b0; 
+									////////////////////////////
+									cnt_50Hz<=0;
 								 end
 			else begin
 					cnt_1Hz<=cnt_1Hz+1'b1;
+					///////////////////////////////
+					if(Ext50Hz_rising_edge)
+						cnt_50Hz<=cnt_50Hz+1'b1;
 				end
 		 end
 	else begin //if(en)
 			oExtSyncLost<=1'b0;
 			cnt_1Hz<=0;
-		end
-////////////////////////////////////////////////////////////////////////////////
-always @(posedge clk or negedge rst_n)
-if(!rst_n) begin
 			cnt_50Hz<=0;
-		end
-else if(en) begin
-			if(Ext50Hz_rising_edge)
-				cnt_50Hz<=cnt_50Hz+1'b1;
-			else if(cnt_1Hz>=40_000_000)
-				cnt_50Hz<=0;
-		 end
-	else begin
-			cnt_50Hz<=0;	
 		end
 endmodule

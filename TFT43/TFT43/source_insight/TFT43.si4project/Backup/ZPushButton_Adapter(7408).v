@@ -35,11 +35,7 @@ module ZPushButton_Adapter(
     output reg [7:0] oPulseCounter_Gain_Divider,
 
     //Time Interval Selection.
-    output reg [7:0] oTime_Interval_Selection,
-
-    //Pause or Run.
-    //1=Pause, 0=Run.
-    output reg oPause
+    output reg [7:0] oTime_Interval_Selection
     );
 
 ////////////////////////////
@@ -64,10 +60,6 @@ if(!rst_n) begin
 			//because 5 is the Time symbol, no need to active it.
 			//so the default value is 6.
 			oTime_Interval_Selection<=6;
-			
-		    //Pause or Run.
-		    //1=Pause, 0=Run.
-		    oPause<=1'b0;
 		end
 else if(en) begin
 			if(button_state[0]) begin
@@ -130,10 +122,6 @@ else if(en) begin
 			else if(button_state[2] && oCursor_Index==`ZCURSOR_INDEX_TIME4) begin
 					oTime_Interval_Selection<=9;
 																	end
-			/////////////////////////////////////////////////////////////////
-			else if(button_state[3]) begin
-									oPause<=~oPause;
-								end
 		 end
 	else begin
 			oCursor_Index<=0;
@@ -144,9 +132,5 @@ else if(en) begin
 			//because 5 is the Time symbol, no need to active it.
 			//so the default value is 6.
 			oTime_Interval_Selection<=6;
-
-		    //Pause or Run.
-		    //1=Pause, 0=Run.
-		    oPause<=1'b0;
 		end
 endmodule

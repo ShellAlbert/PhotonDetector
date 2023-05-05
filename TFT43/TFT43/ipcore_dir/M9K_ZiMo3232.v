@@ -49,7 +49,7 @@ output [7 : 0] spo;
   DIST_MEM_GEN_V7_2 #(
     .C_ADDR_WIDTH(12),
     .C_DEFAULT_DATA("0"),
-    .C_DEPTH(3600),
+    .C_DEPTH(3920),
     .C_FAMILY("spartan6"),
     .C_HAS_CLK(0),
     .C_HAS_D(0),

@@ -27,10 +27,6 @@ module ZSDRAM_RW_Arbit(
 
 	//Global Flag.
 	input iFlag_ExtSyncLost,
-	//to reset Page Main.
-	output reg oRstPageMain,
-	//to reset Page ExtSyncLost.
-	output reg oRstPageExtSyncLost,
 
     //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
     input iRd_Req1,
@@ -146,23 +142,14 @@ if(!rst_n)	begin
 				oWr_Done1<=1'b0;
 				oWr_Done2<=1'b0;
 				oWr_Done_ExtSyncLost<=1'b0;
-				oRstPageMain<=1'b0;
-				oRstPageExtSyncLost<=1'b0;
 			end
 else if(en) begin
 			case(i)
 				0: //ExtSyncLost? 
-					if(iFlag_ExtSyncLost) begin
-											oRstPageExtSyncLost<=1'b1; //Normal.
-											oRstPageMain<=1'b0; //Reset.
-											i<=i+1'b1; 
-										end
+					if(iFlag_ExtSyncLost) begin i<=i+1'b1; end
 					else begin
-							oRstPageExtSyncLost<=1'b0; //Reset.
-							oRstPageMain<=1'b1; //Normal.
 							i<=9; //Ext AC50Hz Sync Normal.
 						end
-//////////////////////////////////////////////////////////////////////////////
 				1: //Write Port-3. (ZPage_ExtSyncLost, Write.)
 					if(iWr_Req_ExtSyncLost) begin i<=i+1'b1; end
 					else begin 
@@ -303,5 +290,11 @@ else if(en) begin
 		 end
 	else begin
 			i<=0;
+			sdram_rw_req<=2'b00;
+			oRd_Done1<=1'b0;
+			oRd_Done2<=1'b0;
+			oWr_Done1<=1'b0;
+			oWr_Done2<=1'b0;
+			oWr_Done_ExtSyncLost<=1'b0;
 		end
 endmodule

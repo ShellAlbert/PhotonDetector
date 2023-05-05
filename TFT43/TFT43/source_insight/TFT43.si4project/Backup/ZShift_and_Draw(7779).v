@@ -380,9 +380,8 @@ else if(en) begin
 							i<=18; //bypass drawing MaxPulseCounter Indicate Line.
 						end
 					*/
-						i<=i+1'b1;
+						i<=7;
 				16: //Draw Line.
-					/*
 					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			
 					else begin 
 							oSDRAM_Wr_Req<=1;
@@ -391,17 +390,12 @@ else if(en) begin
 							oSDRAM_Wr_Data3<=`BAR_Color_Background;
 							oSDRAM_Wr_Data4<=`BAR_Color_Background;
 						end
-					*/
-					i<=i+1'b1;
 				17: //EndY.
-				/*
 					if(oSDRAM_Wr_Addr>=MaxPulseCounter_X+MaxPulseCounter_Y) begin i<=i+1'b1; end
 					else begin
 							oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480;
 							i<=i-1'b1; //Loop to draw next point.
 						end
-				*/
-					i<=i+1'b1;
 				18: 
 					//Pause or Run.
 					//1=Pause, 0=Run.

@@ -415,11 +415,6 @@ assign en_Page_ExtSyncLost=ExtSyncLost;
 wire en_Page_Main;
 assign en_Page_Main=~ExtSyncLost;
 /////////////////////////////////////////////////////////////
-//reset signal for Page Main.
-wire rst_Page_Main;
-//reset signal for Page ExtSyncLost.
-wire rst_Page_ExtSyncLost;
-/////////////////////////////////////////////////////////////
 wire data_update;
 wire [31:0] PulseCounter_LCD;
 wire [15:0] PulseCounter_Single;
@@ -450,10 +445,9 @@ ZPulseCounter_Adapter ic_PulseCounter(
 wire [7:0] Cursor_Index;
 wire [7:0] Active_Periods_Num;
 wire [7:0] PulseCounter_Gain_Divider;
-wire Pause;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
-    .rst_n(rst_Page_Main),
+    .rst_n(rst_n),
     .en(1'b1),
 
     //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
@@ -467,11 +461,7 @@ ZPushButton_Adapter ic_PushButton_Adapter(
     .oPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
 
     //Time Interval Selection.
-    .oTime_Interval_Selection(Time_Interval_Selection),
-
-    //Pause or Run.
-    //1=Pause, 0=Run.
-    .oPause(Pause)
+    .oTime_Interval_Selection(Time_Interval_Selection)
     );
 
 ///////////////////////////////////////////////////////////
@@ -513,7 +503,7 @@ ZTFT43_Adapter ic_TFT43Adapter(
     );
   
 ///////////////////////////////////////////////////////////
-//Page Main: ZDrawAdapter: Write data to SDRAM.
+//ZDrawAdapter: Write data to SDRAM.
 wire Wr_Req_ZDraw;
 wire [23:0] Wr_Addr_ZDraw;
 wire [15:0] Wr_Data1_ZDraw;
@@ -525,13 +515,9 @@ wire [15:0] MaxPulseCounter;
 wire [15:0] MinPulseCounter;
 ZDrawAdapter ic_DrawAdapter(
     .clk(clk_133MHz_210),
-    .rst_n(rst_Page_Main),
-    .en(1'b1),
+    .rst_n(rst_n),
+    .en(en_Page_Main),
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
-	.iPause(Pause),
-	
 	//Cursor Index.
 	.iCursor_Index(Cursor_Index),
 	
@@ -564,7 +550,7 @@ ZDrawAdapter ic_DrawAdapter(
     .led(led)
     );
 ////////////////////////////////////////////////////////
-//Page Main: ZShift_and_Draw: Left shift movement old history pulse counter and add new data to the tail.
+//ZShift_and_Draw: Left shift movement old history pulse counter and add new data to the tail.
 wire Rd_Done_ShiftDraw;
 wire [15:0] Rd_Data1_ShiftDraw;
 wire [15:0] Rd_Data2_ShiftDraw;
@@ -583,13 +569,9 @@ wire Wr_Done_ShiftDraw;
 ///////////////////////////////////////
 ZShift_and_Draw ic_Shift_and_Draw(
     .clk(clk_133MHz_210),
-    .rst_n(rst_Page_Main),
+    .rst_n(rst_n),
     .en(1'b1),
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
-	.iPause(Pause),
-	
 	//New PulseCounter comes.
 	.iDataUpdate(data_update),
 	.iPulseCounter(PulseCounter_Single),
@@ -655,11 +637,6 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
 
 	//Global Flag.
 	.iFlag_ExtSyncLost(en_Page_ExtSyncLost),
-	
-	//to reset Page Main.
-	.oRstPageMain(rst_Page_Main),
-	//to reset Page ExtSyncLost.
-	.oRstPageExtSyncLost(rst_Page_ExtSyncLost),
 	
     //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
     .iRd_Req1(Rd_Req_ZTFT43),

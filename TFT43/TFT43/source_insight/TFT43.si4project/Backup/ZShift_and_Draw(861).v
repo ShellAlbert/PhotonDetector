@@ -24,10 +24,6 @@ module ZShift_and_Draw(
     input rst_n,
     input en,
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
-	input iPause,
-	
 	//New PulseCounter comes.
 	input iDataUpdate,
 	input [15:0] iPulseCounter,
@@ -83,10 +79,10 @@ always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				lockInPulseCounter<=0;
 			end
-else if(iDataUpdate && !iPause)	begin //1=Pause, 0=Run.
-									lockInPulseCounter<=iPulseCounter;
-									PulseCouter_LCD<=iPulseCouter_LCD;
-								end
+else if(iDataUpdate)	begin
+							lockInPulseCounter<=iPulseCounter;
+							PulseCouter_LCD<=iPulseCouter_LCD;
+						end
 
 //Do shift movement.
 //Eliminate the oldest value and add the new pulse counter.
@@ -380,9 +376,8 @@ else if(en) begin
 							i<=18; //bypass drawing MaxPulseCounter Indicate Line.
 						end
 					*/
-						i<=i+1'b1;
+						i<=7;
 				16: //Draw Line.
-					/*
 					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end			
 					else begin 
 							oSDRAM_Wr_Req<=1;
@@ -391,21 +386,14 @@ else if(en) begin
 							oSDRAM_Wr_Data3<=`BAR_Color_Background;
 							oSDRAM_Wr_Data4<=`BAR_Color_Background;
 						end
-					*/
-					i<=i+1'b1;
 				17: //EndY.
-				/*
 					if(oSDRAM_Wr_Addr>=MaxPulseCounter_X+MaxPulseCounter_Y) begin i<=i+1'b1; end
 					else begin
 							oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+480;
 							i<=i-1'b1; //Loop to draw next point.
 						end
-				*/
-					i<=i+1'b1;
 				18: 
-					//Pause or Run.
-					//1=Pause, 0=Run.
-					if(!iPause) begin i<=7; end
+					begin i<=7; end
 			endcase
 		 end
 	else begin //if(en)

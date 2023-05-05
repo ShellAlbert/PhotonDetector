@@ -39,7 +39,7 @@ module ZPushButton_Adapter(
 
     //Pause or Run.
     //1=Pause, 0=Run.
-    output reg oPause
+    output reg oPause;
     );
 
 ////////////////////////////

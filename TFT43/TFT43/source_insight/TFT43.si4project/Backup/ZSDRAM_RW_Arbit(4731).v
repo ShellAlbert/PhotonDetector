@@ -162,7 +162,6 @@ else if(en) begin
 							oRstPageMain<=1'b1; //Normal.
 							i<=9; //Ext AC50Hz Sync Normal.
 						end
-//////////////////////////////////////////////////////////////////////////////
 				1: //Write Port-3. (ZPage_ExtSyncLost, Write.)
 					if(iWr_Req_ExtSyncLost) begin i<=i+1'b1; end
 					else begin 
@@ -303,5 +302,12 @@ else if(en) begin
 		 end
 	else begin
 			i<=0;
+			sdram_rw_req<=2'b00;
+			oRd_Done1<=1'b0;
+			oRd_Done2<=1'b0;
+			oWr_Done1<=1'b0;
+			oWr_Done2<=1'b0;
+			oWr_Done_ExtSyncLost<=1'b0;
+			oExtSyncLostDone<=1'b0;
 		end
 endmodule

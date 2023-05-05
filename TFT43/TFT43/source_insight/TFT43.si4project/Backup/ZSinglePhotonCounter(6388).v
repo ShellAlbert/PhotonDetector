@@ -450,10 +450,9 @@ ZPulseCounter_Adapter ic_PulseCounter(
 wire [7:0] Cursor_Index;
 wire [7:0] Active_Periods_Num;
 wire [7:0] PulseCounter_Gain_Divider;
-wire Pause;
 ZPushButton_Adapter ic_PushButton_Adapter(
     .clk(clk_133MHz_210),
-    .rst_n(rst_Page_Main),
+    .rst_n(rst_n),
     .en(1'b1),
 
     //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
@@ -467,11 +466,7 @@ ZPushButton_Adapter ic_PushButton_Adapter(
     .oPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
 
     //Time Interval Selection.
-    .oTime_Interval_Selection(Time_Interval_Selection),
-
-    //Pause or Run.
-    //1=Pause, 0=Run.
-    .oPause(Pause)
+    .oTime_Interval_Selection(Time_Interval_Selection)
     );
 
 ///////////////////////////////////////////////////////////
@@ -528,10 +523,6 @@ ZDrawAdapter ic_DrawAdapter(
     .rst_n(rst_Page_Main),
     .en(1'b1),
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
-	.iPause(Pause),
-	
 	//Cursor Index.
 	.iCursor_Index(Cursor_Index),
 	
@@ -586,10 +577,6 @@ ZShift_and_Draw ic_Shift_and_Draw(
     .rst_n(rst_Page_Main),
     .en(1'b1),
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
-	.iPause(Pause),
-	
 	//New PulseCounter comes.
 	.iDataUpdate(data_update),
 	.iPulseCounter(PulseCounter_Single),

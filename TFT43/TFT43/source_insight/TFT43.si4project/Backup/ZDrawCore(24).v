@@ -1956,16 +1956,6 @@ else if(en) begin
 									0: //PAUSE-P.
 										begin
 											addr_ZiMo3232<=3596; //offset of P.
-											//(248,660)
-											//248+32=280, 660+16=676. =>(280,676)
-											//addr=y*width+x=660*480+248=317048.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//317048/4=79262.
-											oSDRAM_Wr_Addr<=317048;
-										end
-									1: //PAUSE-A.
-										begin 
-											addr_ZiMo3232<=3660; //offset of A.
 											//(248,676)
 											//248+32=280, 676+16=692. =>(280,692)
 											//addr=y*width+x=676*480+248=324728.
@@ -1973,9 +1963,9 @@ else if(en) begin
 											//324728/4=81182.
 											oSDRAM_Wr_Addr<=324728;
 										end
-									2: //PAUSE-U.
+									1: //PAUSE-A.
 										begin 
-											addr_ZiMo3232<=3724; //offset of U.
+											addr_ZiMo3232<=3660; //offset of A.
 											//(248,692)
 											//248+32=280, 692+16=708. =>(280,708)
 											//addr=y*width+x=692*480+248=332408.
@@ -1983,9 +1973,9 @@ else if(en) begin
 											//332408/4=83102.
 											oSDRAM_Wr_Addr<=332408;
 										end
-									3: //PAUSE-S.
+									2: //PAUSE-U.
 										begin 
-											addr_ZiMo3232<=3788; //offset of S.
+											addr_ZiMo3232<=3724; //offset of U.
 											//(248,708)
 											//248+32=280, 708+16=724. =>(280,724)
 											//addr=y*width+x=708*480+248=340088.
@@ -1993,15 +1983,25 @@ else if(en) begin
 											//340088/4=85022.
 											oSDRAM_Wr_Addr<=340088;
 										end
-									4: //PAUSE-E.
+									3: //PAUSE-S.
 										begin 
-											addr_ZiMo3232<=3852; //offset of E.
+											addr_ZiMo3232<=3788; //offset of S.
 											//(248,724)
 											//248+32=280, 724+16=740. =>(280,740)
 											//addr=y*width+x=724*480+248=347768.
 											//SDRAM Read/Write Address must be aligned by 4 words.
 											//347768/4=86942.
 											oSDRAM_Wr_Addr<=347768;
+										end
+									4: //PAUSE-E.
+										begin 
+											addr_ZiMo3232<=3852; //offset of E.
+											//(248,740)
+											//248+32=280, 740+16=756. =>(280,756)
+											//addr=y*width+x=740*480+248=355448.
+											//SDRAM Read/Write Address must be aligned by 4 words.
+											//355448/4=88862.
+											oSDRAM_Wr_Addr<=355448;
 										end
 								endcase
 								

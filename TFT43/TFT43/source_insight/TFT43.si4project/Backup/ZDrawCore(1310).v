@@ -37,11 +37,9 @@ module ZDrawCore(
 	////9:Draw Pulse Counter Gain Divider & Time Interval Icons.
 	//		iData1=PulseCounter Gain Divider.
 	//		iData2=Time Interval Icons.
-	//10: Draw Maximum and Minimum PulseCounter with 600 points and Time Interal Icons.
+	//10: Draw Maximum and Minimum PulseCounter with 600 points.
 	//		iData1=Maximum Value, iData2=Minimum Value.
-	//		iData1=Current Time Interval.
-	//11: Draw Pause Text.
-	//		iData1=1, Show Text. iData1=0, Hide Text.
+	//11: Draw Time Interal Icons. iData1=Current Time Interval.
 	input [3:0] iCmd,
 	input [31:0] iData1,
 	input [31:0] iData2,
@@ -169,8 +167,8 @@ reg [31:0] x_position;
 reg [31:0] y_position;
 reg [7:0] pixel_data;
 //background line flag.
-reg [15:0] gap_horizontal;
-reg [15:0] gap_vertical;
+reg [7:0] flag_bg_line_x;
+reg [7:0] flag_bg_line_y;
 reg [7:0] which_dot_matrix;
 reg [23:0] addr_photon_counter;
 reg [7:0] CNT1;
@@ -206,8 +204,8 @@ if(!rst_n) begin
 			addr_SIN<=0;
 			cnt_data_SIN<=0;
 			cnt_SIN_Shift<=0;
-			gap_horizontal<=0;
-			gap_vertical<=0;
+			flag_bg_line_x<=0;
+			flag_bg_line_y<=0;
 
 			//Random Histogram.
 			addr_Random<=0;
@@ -513,12 +511,13 @@ else if(en) begin
 						0: //Calculate SDRAM plain address.
 							begin 
 								y_position<=7200; //Plain yOffset=15*480=7200.
-								gap_horizontal<=0;
 								i<=i+1'b1; 
 							end
 						1: //Plain xOffset=244. because the middle line is 480/2=240.
 							begin
 								x_position<=244+data_SIN; //+xOffset.
+								flag_bg_line_x<=0;
+								CNT1<=0;
 								i<=i+1'b1; 
 							end
 						2: //calculate the pixel address that need to be set.
@@ -530,7 +529,7 @@ else if(en) begin
 							begin
 								clean_X<=244;
 								clean_Y=y_position;
-								gap_vertical<=2; //beginning offset.
+								flag_bg_line_y<=0;
 								i<=i+1'b1;
 							end
 						4: //clean all pixels in this column before drawing. (X:244~464, 244+220=464)
@@ -571,23 +570,21 @@ else if(en) begin
 																			end
 									//480/2=240, 240+240/2=360, 360/4=90.
 									//+/-32. //shift 4 pixel to make it looks better.
-									else if(gap_horizontal<10 && clean_X==356) begin 
-											oSDRAM_Wr_Data1<=16'h2945; //Fat Line of Horizontal.
+									else if(flag_bg_line_x<10 && clean_X==356) begin 
+											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=16'h2945;
 											oSDRAM_Wr_Data3<=16'h2945;
 											oSDRAM_Wr_Data4<=16'h2945;
 											end
-									else if(gap_horizontal<10 && ///<
-									(clean_X==388||clean_X==420||clean_X==452||clean_X==324||clean_X==292||clean_X==260)) begin
-											oSDRAM_Wr_Data1<=16'h2945; //Thin Lines of Horizontal.
+									else if(flag_bg_line_x<10 && (clean_X==388||clean_X==420||clean_X==452||clean_X==324||clean_X==292||clean_X==260)) begin
+											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=`SIN_Color_Background;
 											oSDRAM_Wr_Data3<=`SIN_Color_Background;
 											oSDRAM_Wr_Data4<=`SIN_Color_Background;							
 											end
 									//Y width: 600. 600/2=300.
 									//+/-32.
-									else if(gap_vertical<4 && ///< Fat Line of Vertical.
-									(cnt_data_SIN==308||cnt_data_SIN==309||cnt_data_SIN==310||cnt_data_SIN==311)) begin
+									else if(flag_bg_line_y<3 && (cnt_data_SIN==308||cnt_data_SIN==309||cnt_data_SIN==310||cnt_data_SIN==311)) begin
 											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=16'h2945;
 											oSDRAM_Wr_Data3<=16'h2945;
@@ -595,15 +592,7 @@ else if(en) begin
 														end
 									//300-28=272, 272-28=244,244-28=216,216-28=188,188-28=160,160-28=132.
 									//311+24=335, 335+24=359, 359+24=383, 383+24=407.
-									else if(gap_vertical<4 && ///< Thin Lines of Vertical.
-									(cnt_data_SIN==277||cnt_data_SIN==257||cnt_data_SIN==237||cnt_data_SIN==217|| ///<
-									cnt_data_SIN==197||cnt_data_SIN==177||cnt_data_SIN==157||cnt_data_SIN==137||
-									cnt_data_SIN==117||cnt_data_SIN==97||cnt_data_SIN==77||cnt_data_SIN==57||
-									cnt_data_SIN==37||cnt_data_SIN==17 ||
-									cnt_data_SIN==331||cnt_data_SIN==351||cnt_data_SIN==371||cnt_data_SIN==391||
-									cnt_data_SIN==411||cnt_data_SIN==431||cnt_data_SIN==451||cnt_data_SIN==471||
-									cnt_data_SIN==491||cnt_data_SIN==511||cnt_data_SIN==531||cnt_data_SIN==551||
-									cnt_data_SIN==571||cnt_data_SIN==591)) begin
+									else if(flag_bg_line_y<3 && CNT1==28) begin
 											oSDRAM_Wr_Data1<=16'h2945;
 											oSDRAM_Wr_Data2<=16'h2945;
 											oSDRAM_Wr_Data3<=16'h2945;
@@ -622,8 +611,8 @@ else if(en) begin
 									clean_X<=clean_X+4; 
 									
  									//skip 4 rows of each background line.
- 									if(gap_vertical>=7) begin gap_vertical<=0; end
- 									else begin gap_vertical<=gap_vertical+1'b1; end
+ 									if(flag_bg_line_y==28) begin flag_bg_line_y<=0; end
+ 									else begin flag_bg_line_y<=flag_bg_line_y+1'b1; end
  									
 									i<=4; //loop to clean this column.
 								end
@@ -637,10 +626,13 @@ else if(en) begin
 									else begin addr_SIN<=addr_SIN+1'b1; end	
 									
 									y_position<=y_position+480; //next y.
-									
- 									//Gap Horizontal.
- 									if(gap_horizontal>=20) begin gap_horizontal<=0; end
- 									else begin gap_horizontal<=gap_horizontal+1'b1; end
+
+ 									//skip 4 column of each background line.
+ 									if(flag_bg_line_x==20) begin flag_bg_line_x<=0; end
+ 									else begin flag_bg_line_x<=flag_bg_line_x+1'b1; end
+
+ 									if(CNT1==28) begin CNT1<=0; end
+ 									else begin CNT1<=CNT1+1'b1; end
  									
 									i<=1; //Loop to write next pixel.
 								end
@@ -1944,172 +1936,7 @@ else if(en) begin
 						18: //Generate done Signal.
 							begin oDraw_Done<=1'b0; i<=0; end
 					endcase
-				11: //11: Draw Pause Text.  iData1=1, Show Text. iData1=0, Hide Text.
-				//240+32=272 -> extend 280, 280-32=248.
-				//Font size: 16x32.
-					case(i)
-						0:
-							begin which_dot_matrix<=0; i<=i+1'b1; end
-						1:
-							begin
-								case(which_dot_matrix)
-									0: //PAUSE-P.
-										begin
-											addr_ZiMo3232<=3596; //offset of P.
-											//(248,660)
-											//248+32=280, 660+16=676. =>(280,676)
-											//addr=y*width+x=660*480+248=317048.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//317048/4=79262.
-											oSDRAM_Wr_Addr<=317048;
-										end
-									1: //PAUSE-A.
-										begin 
-											addr_ZiMo3232<=3660; //offset of A.
-											//(248,676)
-											//248+32=280, 676+16=692. =>(280,692)
-											//addr=y*width+x=676*480+248=324728.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//324728/4=81182.
-											oSDRAM_Wr_Addr<=324728;
-										end
-									2: //PAUSE-U.
-										begin 
-											addr_ZiMo3232<=3724; //offset of U.
-											//(248,692)
-											//248+32=280, 692+16=708. =>(280,708)
-											//addr=y*width+x=692*480+248=332408.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//332408/4=83102.
-											oSDRAM_Wr_Addr<=332408;
-										end
-									3: //PAUSE-S.
-										begin 
-											addr_ZiMo3232<=3788; //offset of S.
-											//(248,708)
-											//248+32=280, 708+16=724. =>(280,724)
-											//addr=y*width+x=708*480+248=340088.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//340088/4=85022.
-											oSDRAM_Wr_Addr<=340088;
-										end
-									4: //PAUSE-E.
-										begin 
-											addr_ZiMo3232<=3852; //offset of E.
-											//(248,724)
-											//248+32=280, 724+16=740. =>(280,740)
-											//addr=y*width+x=724*480+248=347768.
-											//SDRAM Read/Write Address must be aligned by 4 words.
-											//347768/4=86942.
-											oSDRAM_Wr_Addr<=347768;
-										end
-								endcase
-								
-								//reset counter.
-								cnt_bytes<=0;
-								cnt_column<=0;
-								i<=i+1'b1;
-							end
-						2: //pre-fetch 1st byte.
-							begin pixel_data1<=data_ZiMo3232; i<=i+1'b1;end
-						3:
-							begin addr_ZiMo3232<=addr_ZiMo3232+1'b1; i<=i+1'b1;end
-						4: //pre-fetch 2st byte.
-							begin pixel_data2<=data_ZiMo3232; i<=i+1'b1; end
-						5:
-							begin addr_ZiMo3232<=addr_ZiMo3232+1'b1; i<=i+1'b1;end
-						6: //pre-fetch 3st byte.
-							begin pixel_data3<=data_ZiMo3232; i<=i+1'b1; end
-						7:
-							begin addr_ZiMo3232<=addr_ZiMo3232+1'b1; i<=i+1'b1;end
-						8: //pre-fetch 4st byte.
-							begin pixel_data4<=data_ZiMo3232; i<=i+1'b1; end
-						9:
-							begin addr_ZiMo3232<=addr_ZiMo3232+1'b1; i<=i+1'b1;end
-						10: //ZiMo software scan data from top to bottom.
-						//but SDRAM address increases from bottom to top, so reverse the whole column here.
-							begin
-								case(cnt_bytes)
-									0: pixel_data<=pixel_data4;
-									1: pixel_data<=pixel_data3;
-									2: pixel_data<=pixel_data2;
-									3: pixel_data<=pixel_data1;
-								endcase
-								i<=i+1'b1;
-							end
-						11: //Loop to draw the byte - low 4 bits.
-							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end					 
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color. //Black: Background Color.
-									if(iData1) begin
-												oSDRAM_Wr_Data1<=(pixel_data&8'h01)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data2<=(pixel_data&8'h02)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data3<=(pixel_data&8'h04)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data4<=(pixel_data&8'h08)?(`Color_Yellow):(`Screen_Color_Background);
-											end
-									else begin
-											oSDRAM_Wr_Data1<=(`Screen_Color_Background);
-											oSDRAM_Wr_Data2<=(`Screen_Color_Background);
-											oSDRAM_Wr_Data3<=(`Screen_Color_Background);
-											oSDRAM_Wr_Data4<=(`Screen_Color_Background);
-										end
-								end
-						12: 
-							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+4; i<=i+1'b1; end
-						13: //Loop to draw the byte - high 4 bits.
-							if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end				 
-							else begin 
-									oSDRAM_Wr_Req<=1; 
-									//Pink: Foreground Color. //Black: Background Color.
-									if(iData1) begin
-												oSDRAM_Wr_Data1<=(pixel_data&8'h10)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data2<=(pixel_data&8'h20)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data3<=(pixel_data&8'h40)?(`Color_Yellow):(`Screen_Color_Background);
-												oSDRAM_Wr_Data4<=(pixel_data&8'h80)?(`Color_Yellow):(`Screen_Color_Background);
-											end
-									else begin
-											oSDRAM_Wr_Data1<=(`Screen_Color_Background);
-											oSDRAM_Wr_Data2<=(`Screen_Color_Background);
-											oSDRAM_Wr_Data3<=(`Screen_Color_Background);
-											oSDRAM_Wr_Data4<=(`Screen_Color_Background);
-										end
-								end
-						14: 
-							begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+4; i<=i+1'b1; end
-						15: //16*32, 32bits/8bits=4bytes. 4 bytes of each column.
-							begin 
-								if(cnt_bytes==4-1) begin cnt_bytes<=0; i<=i+1'b1; end							
-								else begin 
-										cnt_bytes<=cnt_bytes+1'b1; 
-										i<=10; //Loop to draw other bytes of this column.
-									end
-							end
-						16: //repeat 16 times of 4 bytes = 16*4=64 bytes of one 16*32 dot matrx.
-							begin
-								if(cnt_column==16-1) begin cnt_column<=0; i<=i+1'b1; end		
-								else begin 
-										cnt_column<=cnt_column+1'b1; 
-										i<=2; //Loop to draw one complete digit.
-									end
-								//since we operate SDRAM four words each time.
-								//so the address direction is increasing. 
-								//then we should -32 in next column.
-								//adjust coordinate: new position: x-32 and y+480.
-								oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr-32+480; //Next Column.
-							end
-						17: //we have 5 characters to be drawn.
-							if(which_dot_matrix==5-1) begin which_dot_matrix<=0;i<=i+1'b1; end
-							else begin 
-									which_dot_matrix<=which_dot_matrix+1'b1; 
-									i<=1; //Loop to draw Next dot matrix.
-								end
-						18: //Generate done Signal.
-							begin oDraw_Done<=1'b1; i<=i+1'b1; end
-						19: //Generate done Signal.
-							begin oDraw_Done<=1'b0; i<=0; end
-					endcase
-				12: //Other Commands.
+				11: //Other Commands.
 					i<=i;
 			endcase
 		 end

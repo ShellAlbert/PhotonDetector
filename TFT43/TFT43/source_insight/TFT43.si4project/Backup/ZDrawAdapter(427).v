@@ -27,10 +27,6 @@ module ZDrawAdapter(
     input rst_n,
     input en,
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
-	input iPause,
-	
 	//Cursor Index.
 	input [7:0] iCursor_Index,
 	
@@ -115,25 +111,21 @@ always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
 			lockInPulseCounter<=0;
 		end
-else if(en && !iPause) begin //1=Pause, 0=Run.
-						if(iData_Update)
-							lockInPulseCounter<=iPulse_Counter;
-		 			end
+else if(en) begin
+			if(iData_Update)
+				lockInPulseCounter<=iPulse_Counter;
+		 end
 	else begin
 			lockInPulseCounter<=0;
 		end
 
 //driven by step i.
 reg [7:0] i;
-//80MHz/1Hz/2=40_000_000.
-reg [31:0] cnt;
-reg flag_PauseFlash;
 always @(posedge clk or negedge rst_n)
 if(!rst_n)	begin
 				i<=0;
 				en_ZDrawCore<=1'b0; 
 				led<=1'b0;
-				flag_PauseFlash<=1'b0;
 			end
 else if(en) begin
 			case(i)
@@ -165,48 +157,27 @@ else if(en) begin
 					begin i<=i+1'b1; end
 //////////////////////////////////////////////////////////////////////////////////
 				6: //Waiting for draw schedule.
-					//1=Pause, 0=Run.
-					if(!iPause) begin 
-								i<=i+3; //go to Draw RTC.
-							 end
-					else begin i<=i+1'b1; end
-				7:
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end	 		
-					else begin
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=11; //11: Draw Pause Text.
-							Data1_ZDrawCore<=flag_PauseFlash;
-						end
-				8:
-					if(cnt>=20_000_000) begin cnt<=0; flag_PauseFlash<=~flag_PauseFlash; i<=i-2; end
-					else begin cnt<=cnt+1'b1; end
-				9: //Hide PAUSE Text.
-					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end	 		
-					else begin
-							en_ZDrawCore<=1'b1; 
-							Cmd_ZDrawCore<=11; //11: Draw Pause Text.
-							Data1_ZDrawCore<=0; //Hide PAUSE Text.
-						end
-				10: //Draw RTC.
+					begin i<=i+1'b1; end
+				7: //Draw RTC.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=2; //2. Draw RTC.
 						end
-				11: //Draw SIN wave.
+				8: //Draw SIN wave.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=3; //3: Draw SIN wave.
 						end
-				12: //Draw New PulseCounter.
+				9: //Draw New PulseCounter.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
 					else begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=5; //5. Draw A New Photon Counter. iData1=New Photon Counter.
 							Data1_ZDrawCore<=lockInPulseCounter;
 						end
-				13: //Draw Random Histogram.
+				10: //Draw Random Histogram.
 					/*
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
@@ -215,20 +186,20 @@ else if(en) begin
 						end
 					*/
 					i<=i+1'b1; 
-				14: //Draw Period1~Period4, iData1=0,1,2,3,4. Active Mode.
+				11: //Draw Period1~Period4, iData1=0,1,2,3,4. Active Mode.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=7; //7: Draw Period1~Period4, iData1=0,1,2,3,4. Active Mode.
 						end
-				15: //Draw Accumulated Pulse Counter.
+				12: //Draw Accumulated Pulse Counter.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
 					else begin
 							en_ZDrawCore<=1'b1; 
 							Cmd_ZDrawCore<=8; //8: Draw Accumulated Counter, iData1=Counter.
 							Data1_ZDrawCore<=iPulseCounter_Accumulated;
 						end
-				16: //Draw Pulse Counter Gain Divider & Time Interval Icons.
+				13: //Draw Pulse Counter Gain Divider & Time Interval Icons.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
 					else begin
 							en_ZDrawCore<=1'b1; 
@@ -236,7 +207,7 @@ else if(en) begin
 							Data1_ZDrawCore<=iPulseCounter_Gain_Divider;
 							Data2_ZDrawCore<=iTime_Interval_Selection;
 						end
-				17: //Draw Maximum and Minimum PulseCounter with 600 points.
+				14: //Draw Maximum and Minimum PulseCounter with 600 points.
 				//iData1=Maximum Value, iData2=Minimum Value.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end		
 					else begin
@@ -245,7 +216,7 @@ else if(en) begin
 							Data1_ZDrawCore<=iMaxPulseCounter;
 							Data2_ZDrawCore<=iMinPulseCounter;
 						end
-				18:
+				15:
 					begin
 						i<=6; 
 					end
@@ -254,6 +225,5 @@ else if(en) begin
 	else begin //if(en)
 			i<=0;
 			en_ZDrawCore<=1'b0; 
-			flag_PauseFlash<=1'b0;
 		end
 endmodule
