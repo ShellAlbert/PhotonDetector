@@ -76,6 +76,25 @@ module ZSDRAM_RW_Arbit(
     input [15:0] iWr_Data3_ExtSyncLost,
     input [15:0] iWr_Data4_ExtSyncLost,
     output reg oWr_Done_ExtSyncLost,
+
+	//PowerOnSelfTest Done Signal.
+	input iPOSTDone,
+    //Write Port. (ZPage_PowerOnSelfTest, Write.)
+    input iWr_Req_POST,
+    input [23:0] iWr_Addr_POST,
+    input [15:0] iWr_Data1_POST,
+    input [15:0] iWr_Data2_POST,
+    input [15:0] iWr_Data3_POST,
+    input [15:0] iWr_Data4_POST,
+    output reg oWr_Done_POST,
+    //Read Port. (ZPage_PowerOnSelfTest, Read.)
+    input iRd_Req_POST,
+    input [23:0] iRd_Addr_POST,
+    output reg oRd_Done_POST,
+    output reg [15:0] oRd_Data1_POST,
+    output reg [15:0] oRd_Data2_POST,
+    output reg [15:0] oRd_Data3_POST,
+    output reg [15:0] oRd_Data4_POST,
     
 	//physical pins used to connect to SDRAM chip.
     output S_CLK,
@@ -151,20 +170,13 @@ if(!rst_n)	begin
 			end
 else if(en) begin
 			case(i)
-				0: //ExtSyncLost? 
-					if(iFlag_ExtSyncLost) begin
-											oRstPageExtSyncLost<=1'b1; //Normal.
-											oRstPageMain<=1'b0; //Reset.
-											i<=i+1'b1; 
-										end
-					else begin
-							oRstPageExtSyncLost<=1'b0; //Reset.
-							oRstPageMain<=1'b1; //Normal.
-							i<=9; //Ext AC50Hz Sync Normal.
-						end
-//////////////////////////////////////////////////////////////////////////////
-				1: //Write Port-3. (ZPage_ExtSyncLost, Write.)
-					if(iWr_Req_ExtSyncLost) begin i<=i+1'b1; end
+				0: //PowerOnSelfTest.
+					if(iPOSTDone) begin 
+									i<=13; //PowerOnSelfTest done.
+								end
+					else begin i<=i+1'b1; end
+				1: //Write Port. (ZPage_PowerOnSelfTest, Write.)
+					if(iWr_Req_POST) begin i<=i+1'b1; end
 					else begin 
 							i<=5; //no write request, go to check other request.
 						end
@@ -175,43 +187,44 @@ else if(en) begin
 									end
 					else begin
 							sdram_rw_req<=2'b10;
-							sdram_rw_addr<=iWr_Addr_ExtSyncLost;
-							sdram_in_data1<=iWr_Data1_ExtSyncLost;
-							sdram_in_data2<=iWr_Data2_ExtSyncLost;
-							sdram_in_data3<=iWr_Data3_ExtSyncLost;
-							sdram_in_data4<=iWr_Data4_ExtSyncLost;
+							sdram_rw_addr<=iWr_Addr_POST;
+							sdram_in_data1<=iWr_Data1_POST;
+							sdram_in_data2<=iWr_Data2_POST;
+							sdram_in_data3<=iWr_Data3_POST;
+							sdram_in_data4<=iWr_Data4_POST;
 						end
 				3: //generate write done signal.
-					begin oWr_Done_ExtSyncLost<=1'b1; i<=i+1'b1; end
+					begin oWr_Done_POST<=1'b1; i<=i+1'b1; end
 				4: //generate write done signal.
-					begin oWr_Done_ExtSyncLost<=1'b0; i<=i+1'b1; end
-				5: //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
-					if(iRd_Req1) begin i<=i+1'b1; end		
+					begin oWr_Done_POST<=1'b0; i<=i+1'b1; end
+
+				5: //Read Port. (ZPage_PowerOnSelfTest Read.)
+					if(iRd_Req_POST) begin i<=i+1'b1; end		
 					else begin 
-							i<=0; //no read request, go to check other request.
+							i<=9; //no read request, go to check other request.
 						end
 				6: //do read until done.
 					if(sdram_rd_done) begin 
 										sdram_rw_req<=2'b00;
-										oRd_Data11<=sdram_out_data1;
-										oRd_Data12<=sdram_out_data2;
-										oRd_Data13<=sdram_out_data3;
-										oRd_Data14<=sdram_out_data4;
+										oRd_Data1_POST<=sdram_out_data1;
+										oRd_Data2_POST<=sdram_out_data2;
+										oRd_Data3_POST<=sdram_out_data3;
+										oRd_Data4_POST<=sdram_out_data4;
 										i<=i+1'b1; 
 									end		
 					else begin
 							sdram_rw_req<=2'b01;
-							sdram_rw_addr<=iRd_Addr1;
+							sdram_rw_addr<=iRd_Addr_POST;
 						end
 				7: //generate read done signal.
-					begin oRd_Done1<=1'b1; i<=i+1'b1; end
+					begin oRd_Done_POST<=1'b1; i<=i+1'b1; end
 				8: //generate read done sginal.
-					begin oRd_Done1<=1'b0; i<=0; end
-	//////////////////////////////////////////////////////////////////////////////////
-				9: //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
+					begin oRd_Done_POST<=1'b0; i<=i+1'b1; end
+					
+				9: //Read Port. (ZTFT43_Adapter SDRAM Read.)
 					if(iRd_Req1) begin i<=i+1'b1; end		
 					else begin 
-							i<=13; //no read request, go to check other request.
+							i<=0; //no read request, go to check other request.
 						end
 				10: //do read until done.
 					if(sdram_rd_done) begin 
@@ -229,14 +242,95 @@ else if(en) begin
 				11: //generate read done signal.
 					begin oRd_Done1<=1'b1; i<=i+1'b1; end
 				12: //generate read done sginal.
+					begin oRd_Done1<=1'b0; i<=0; end
+//////////////////////////////////////////////////////////////////////////////
+				13: //ExtSyncLost? 
+					if(iFlag_ExtSyncLost) begin
+											oRstPageExtSyncLost<=1'b1; //Normal.
+											oRstPageMain<=1'b0; //Reset.
+											i<=i+1'b1; 
+										end
+					else begin
+							oRstPageExtSyncLost<=1'b0; //Reset.
+							oRstPageMain<=1'b1; //Normal.
+							i<=22; //Ext AC50Hz Sync Normal.
+						end
+//////////////////////////////////////////////////////////////////////////////
+				14: //Write Port-3. (ZPage_ExtSyncLost, Write.)
+					if(iWr_Req_ExtSyncLost) begin i<=i+1'b1; end
+					else begin 
+							i<=18; //no write request, go to check other request.
+						end
+				15: //do write until done.
+					if(sdram_wr_done) begin 
+										sdram_rw_req<=2'b00;
+										i<=i+1'b1; 
+									end
+					else begin
+							sdram_rw_req<=2'b10;
+							sdram_rw_addr<=iWr_Addr_ExtSyncLost;
+							sdram_in_data1<=iWr_Data1_ExtSyncLost;
+							sdram_in_data2<=iWr_Data2_ExtSyncLost;
+							sdram_in_data3<=iWr_Data3_ExtSyncLost;
+							sdram_in_data4<=iWr_Data4_ExtSyncLost;
+						end
+				16: //generate write done signal.
+					begin oWr_Done_ExtSyncLost<=1'b1; i<=i+1'b1; end
+				17: //generate write done signal.
+					begin oWr_Done_ExtSyncLost<=1'b0; i<=i+1'b1; end
+					
+				18: //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
+					if(iRd_Req1) begin i<=i+1'b1; end		
+					else begin 
+							i<=13; //no read request, go to check other request.
+						end
+				19: //do read until done.
+					if(sdram_rd_done) begin 
+										sdram_rw_req<=2'b00;
+										oRd_Data11<=sdram_out_data1;
+										oRd_Data12<=sdram_out_data2;
+										oRd_Data13<=sdram_out_data3;
+										oRd_Data14<=sdram_out_data4;
+										i<=i+1'b1; 
+									end		
+					else begin
+							sdram_rw_req<=2'b01;
+							sdram_rw_addr<=iRd_Addr1;
+						end
+				20: //generate read done signal.
+					begin oRd_Done1<=1'b1; i<=i+1'b1; end
+				21: //generate read done sginal.
+					begin oRd_Done1<=1'b0; i<=13; end
+	//////////////////////////////////////////////////////////////////////////////////
+				22: //Read Port-1. (ZTFT43_Adapter SDRAM Read.)
+					if(iRd_Req1) begin i<=i+1'b1; end		
+					else begin 
+							i<=26; //no read request, go to check other request.
+						end
+				23: //do read until done.
+					if(sdram_rd_done) begin 
+										sdram_rw_req<=2'b00;
+										oRd_Data11<=sdram_out_data1;
+										oRd_Data12<=sdram_out_data2;
+										oRd_Data13<=sdram_out_data3;
+										oRd_Data14<=sdram_out_data4;
+										i<=i+1'b1; 
+									end		
+					else begin
+							sdram_rw_req<=2'b01;
+							sdram_rw_addr<=iRd_Addr1;
+						end
+				24: //generate read done signal.
+					begin oRd_Done1<=1'b1; i<=i+1'b1; end
+				25: //generate read done sginal.
 					begin oRd_Done1<=1'b0; i<=i+1'b1; end
 	//////////////////////////////////////////////////////////////////////////////////
-				13: //Read Port-2. (ZShift_and_Draw, Read.)
+				26: //Read Port-2. (ZShift_and_Draw, Read.)
 					if(iRd_Req2) begin i<=i+1'b1; end		
 					else begin 
-							i<=17; //no read request, go to check other request.
+							i<=30; //no read request, go to check other request.
 						end
-				14: //do read until done.
+				27: //do read until done.
 					if(sdram_rd_done) begin 
 										sdram_rw_req<=2'b00;
 										oRd_Data21<=sdram_out_data1;
@@ -249,17 +343,17 @@ else if(en) begin
 							sdram_rw_req<=2'b01;
 							sdram_rw_addr<=iRd_Addr2;
 						end
-				15: //generate read done signal.
+				28: //generate read done signal.
 					begin oRd_Done2<=1'b1; i<=i+1'b1; end
-				16: //generate read done sginal.
+				29: //generate read done sginal.
 					begin oRd_Done2<=1'b0; i<=i+1'b1; end
 	//////////////////////////////////////////////////////////////////////////////////
-				17: //Write Port-1.  (ZDraw_Adapter, Write.)
+				30: //Write Port-1.  (ZDraw_Adapter, Write.)
 					if(iWr_Req1) begin i<=i+1'b1; end
 					else begin 
-							i<=21; //no write reqeust, go to other request.
+							i<=34; //no write reqeust, go to other request.
 						end
-				18: //do write until done.
+				31: //do write until done.
 					if(sdram_wr_done) begin 
 										sdram_rw_req<=2'b00;
 										i<=i+1'b1; 
@@ -272,17 +366,17 @@ else if(en) begin
 							sdram_in_data3<=iWr_Data13;
 							sdram_in_data4<=iWr_Data14;
 						end
-				19: //generate write done signal.
+				32: //generate write done signal.
 					begin oWr_Done1<=1'b1; i<=i+1'b1; end
-				20: //generate write done signal.
+				33: //generate write done signal.
 					begin oWr_Done1<=1'b0; i<=i+1'b1; end
 	//////////////////////////////////////////////////////////////////////////////////
-				21: //Write Port-2. (ZShift_and_Draw, Write.)
+				34: //Write Port-2. (ZShift_and_Draw, Write.)
 					if(iWr_Req2) begin i<=i+1'b1; end
 					else begin 
-							i<=0; //no write reqeust, go to check other request.
+							i<=13; //no write reqeust, go to check other request.
 						end
-				22: //do write until done.
+				35: //do write until done.
 					if(sdram_wr_done) begin 
 										sdram_rw_req<=2'b00;
 										i<=i+1'b1; 
@@ -295,10 +389,10 @@ else if(en) begin
 							sdram_in_data3<=iWr_Data23;
 							sdram_in_data4<=iWr_Data24;
 						end
-				23: //generate write done signal.
+				36: //generate write done signal.
 					begin oWr_Done2<=1'b1; i<=i+1'b1; end
-				24: //generate write done signal.
-					begin oWr_Done2<=1'b0; i<=0; end
+				37: //generate write done signal.
+					begin oWr_Done2<=1'b0; i<=13; end
 			endcase
 		 end
 	else begin

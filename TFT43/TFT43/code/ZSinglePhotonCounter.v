@@ -420,6 +420,59 @@ wire rst_Page_Main;
 //reset signal for Page ExtSyncLost.
 wire rst_Page_ExtSyncLost;
 /////////////////////////////////////////////////////////////
+wire [11:0] SDRAM_Bar_Value;
+wire SDRAM_Testing_Done;
+/////////////////////////////////////////////////////////////
+wire Rd_Done_POST;
+wire [15:0] Rd_Data1_POST;
+wire [15:0] Rd_Data2_POST;
+wire [15:0] Rd_Data3_POST;
+wire [15:0] Rd_Data4_POST;
+wire Rd_Req_POST;
+wire [23:0] Rd_Addr_POST;
+///////////////////////////////////
+wire Wr_Req_POST;
+wire [23:0] Wr_Addr_POST;
+wire [15:0] Wr_Data1_POST;
+wire [15:0] Wr_Data2_POST;
+wire [15:0] Wr_Data3_POST;
+wire [15:0] Wr_Data4_POST;
+wire Wr_Done_POST;
+//////////////////////////////////////
+wire PowerOnSelfTestDone;
+ZPage_PowerOnSelfTest ic_PowerOnSelfTest(
+    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .rst_n(rst_n),
+    .en(1'b1),
+
+	//to help ZTFT43_Adapter update progress bar during SDRAM Testing.
+	.oSDRAM_Bar_Value(SDRAM_Bar_Value),
+	.oSDRAM_Testing_Done(SDRAM_Testing_Done),
+	
+	//SDRAM Read Glue Logic.
+    .oSDRAM_Rd_Addr(Rd_Addr_POST), //output, Bank(2)+Row(13)+Column(9)=(24)
+    .iSDRAM_Data1(Rd_Data1_POST), //input, read back data1 from SDRAM.
+    .iSDRAM_Data2(Rd_Data2_POST), //input, read back data2 from SDRAM.
+    .iSDRAM_Data3(Rd_Data3_POST), //input, read back data3 from SDRAM.
+    .iSDRAM_Data4(Rd_Data4_POST), //input, read back data4 from SDRAM.
+
+    .oSDRAM_Rd_Req(Rd_Req_POST), //output, [1]=1:Write, [0]=1:Read.
+    .iSDRAM_Rd_Done(Rd_Done_POST), //input,[1]=1:write done, [0]=1:read done.
+
+	//SDRAM Write Glue Logic.
+    .oSDRAM_Wr_Addr(Wr_Addr_POST), //output, Bank(2)+Row(13)+Column(9)=(24)
+    .oSDRAM_Wr_Data1(Wr_Data1_POST), //ouptut, write data1 to SDRAM.
+    .oSDRAM_Wr_Data2(Wr_Data2_POST), //ouptut, write data2 to SDRAM.
+    .oSDRAM_Wr_Data3(Wr_Data3_POST), //ouptut, write data3 to SDRAM.
+    .oSDRAM_Wr_Data4(Wr_Data4_POST), //ouptut, write data4 to SDRAM.
+
+    .oSDRAM_Wr_Req(Wr_Req_POST), //output, [1]=1:Write, [0]=1:Read.
+    .iSDRAM_Wr_Done(Wr_Done_POST), //input, SDRAM write done signal.
+    
+	//Test done successfully.
+    .oTestDone(PowerOnSelfTestDone)
+    );
+/////////////////////////////////////////////////////////////
 wire data_update;
 wire [31:0] PulseCounter_LCD;
 wire [15:0] PulseCounter_Single;
@@ -487,6 +540,10 @@ ZTFT43_Adapter ic_TFT43Adapter(
     .clk(clk_133MHz_210),
     .rst_n(rst_n),
     .en(1'b1),
+
+	//to help ZTFT43_Adapter update progress bar during SDRAM Testing.
+	.iSDRAM_Bar_Value(SDRAM_Bar_Value),
+	.iSDRAM_Testing_Done(SDRAM_Testing_Done),
 
 	//SDRAM Glue Logic.
     .oSDRAM_Rd_Addr(Rd_Addr_ZTFT43), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -705,6 +762,25 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
     .iWr_Data3_ExtSyncLost(Wr_Data3_ExtSyncLost),
     .iWr_Data4_ExtSyncLost(Wr_Data4_ExtSyncLost),
     .oWr_Done_ExtSyncLost(Wr_Done_ExtSyncLost),
+
+	//PowerOnSelfTest Done Signal.
+	.iPOSTDone(PowerOnSelfTestDone),
+    //Write Port. (ZPage_PowerOnSelfTest, Write.)
+    .iWr_Req_POST(Wr_Req_POST),
+    .iWr_Addr_POST(Wr_Addr_POST),
+    .iWr_Data1_POST(Wr_Data1_POST),
+    .iWr_Data2_POST(Wr_Data2_POST),
+    .iWr_Data3_POST(Wr_Data3_POST),
+    .iWr_Data4_POST(Wr_Data4_POST),
+    .oWr_Done_POST(Wr_Done_POST),
+    //Read Port. (ZPage_PowerOnSelfTest, Read.)
+    .iRd_Req_POST(Rd_Req_POST),
+    .iRd_Addr_POST(Rd_Addr_POST),
+    .oRd_Done_POST(Rd_Done_POST),
+    .oRd_Data1_POST(Rd_Data1_POST),
+    .oRd_Data2_POST(Rd_Data2_POST),
+    .oRd_Data3_POST(Rd_Data3_POST),
+    .oRd_Data4_POST(Rd_Data4_POST),
 
 	//physical pins used to connect to SDRAM chip.
     .S_CKE(S_CKE),
