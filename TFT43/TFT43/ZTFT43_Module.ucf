@@ -55,7 +55,6 @@ NET "clk" LOC = H3;
 
 
 NET "clk_used" LOC = R11;
-NET "uart_txd" LOC = E4;
 
 NET "photon_pulse_simulate" LOC = E2;
 NET "sync_50Hz_simulate" LOC = F2;
@@ -174,3 +173,15 @@ NET "iButton[0]" IOSTANDARD = LVCMOS33;
 
 NET "photon_pulse" LOC = E1;
 NET "sync_50Hz" LOC = F1;
+
+
+
+
+NET "uart_rxd" IOSTANDARD = LVCMOS33;
+
+
+NET "uart_rxd" LOC = F16;
+
+# PlanAhead Generated physical constraints 
+
+NET "uart_txd" LOC = E16;

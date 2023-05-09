@@ -22,7 +22,8 @@ module ZDataDump2UART(
     input clk,
     input rst_n,
     input en,
-    
+
+    input data_update,
     input [15:0] data,
     output tx_pin,
     output reg done
@@ -49,7 +50,23 @@ ZUART_Module u1(
     .rx_data(rx_data), //output.
     .rx_done(rx_done) //output.  
     );
-//55 AA 01 02 03 04 05 06 07 08 XX (Checksum)
+
+//lock data in.
+reg [15:0] new_pulse_counter;
+always @(posedge clk or negedge rst_n)
+if(!rst_n) 
+	new_pulse_counter<=0;
+else if(en&data_update)
+		new_pulse_counter<=data;
+
+//Sync Head: 2 bytes, 55 AA.
+//Packet Length: 2 bytes.
+//AC50Hz Phase Difference: 2 bytes.
+//Accumulated Photons Count: 2 bytes.
+//Total Gaps No. : 2 bytes.
+//Sub Gap No. : 2 bytes.
+//Time Interval: 1 byte.
+//Checksum: 1 byte.
 reg [3:0] i;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
@@ -58,26 +75,104 @@ if(!rst_n) begin
 		end
 else if(en)	begin
 				case(i)
-					0: //sync head 1.
+					0: //Sync Head: 55.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end		
 						else begin 
 								uart_en<=1'b1; 
-								//tx_data<=8'h19; 
-								//tx_data<=8'h03;
-								tx_data<=data[15:8];
+								tx_data<=8'h55; 
 							end
 						
-					1: //sync head 2.
+					1: //Sync Head: AA.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								//tx_data<=8'h87; 
-								//tx_data<=8'h23;
-								tx_data<=data[7:0];
+								tx_data<=8'hAA; 
 							end
-					2: 
+////////////////////////////////////////////////////////////////////
+					2: //Packet Length, high 8 bits.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=0;
+							end
+					3: //Packet Length: low 8 bits.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=10;
+							end
+////////////////////////////////////////////////////////////////////
+					4: //AC50Hz Phase Difference: high byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=0;
+							end
+					5: //AC50Hz Phase Difference: low byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=15;
+							end
+////////////////////////////////////////////////////////////////////
+					6: //Accumulated Photons Count: high byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=new_pulse_counter[15:8];
+							end
+					7: //Accumulated Photons Count: low byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=new_pulse_counter[7:0];
+							end
+////////////////////////////////////////////////////////////////////
+					8: //Total Gaps No. : high byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=0;
+							end
+					9: //Total Gaps No. : low byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=1;
+							end
+////////////////////////////////////////////////////////////////////
+					10: //Sub Gap No. : high byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=8'h41;
+							end
+					11: //Sub Gap No. : low byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=8'h42;
+							end
+////////////////////////////////////////////////////////////////////
+					12: //Time Interval: 1 byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=8'h43;
+							end
+					13: //Checksum: 1byte.
+						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						else begin 
+								uart_en<=1'b1; 
+								tx_data<=8'h44;
+							end
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+					14: 
 						begin done<=1'b1; i<=i+1; end
-					3:
+					15:
 						begin done<=1'b0; i<=0; end
 				endcase
 			end

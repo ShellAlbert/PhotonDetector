@@ -1,8 +1,12 @@
 Storage Target: SPI Flash Single FPGA
 16M
 FF
-Untitled
-C:/Users/Administrator/Desktop/Merge
+spd
+C:/Users/Administrator/Desktop
+
+MCS
+No
+ge
 
 MCS
 No

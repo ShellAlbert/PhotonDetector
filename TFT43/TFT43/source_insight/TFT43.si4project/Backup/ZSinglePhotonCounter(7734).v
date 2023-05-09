@@ -500,19 +500,6 @@ ZPulseCounter_Adapter ic_PulseCounter(
     //Accumulated PulseCounter. Never Reset to 0.
    	.oPulseCouter_LCD_Accumulated(PulseCounter_LCD_Accumulated)
     );
-//////////////////////////////////////////////////////////////
-//upload pulse counter via UART.
-wire upload_done;
-ZDataDump2UART ic_upload(
-    .clk(clk_133MHz_210),
-    .rst_n(rst_Page_Main),
-    .en(1'b1),
-
-    .data_update(data_update),
-    .data(PulseCounter_Single),
-    .tx_pin(uart_txd),
-    .done(upload_done)
-    );
 ///////////////////////////////////////////////////////////////////
 wire [7:0] Cursor_Index;
 wire [7:0] Active_Periods_Num;
@@ -571,7 +558,7 @@ ZTFT43_Adapter ic_TFT43Adapter(
 
     //use an oscilloscope to check how many clks were used.
     .clk_used(clk_used), 
-    //.uart_txd(uart_txd),
+    .uart_txd(uart_txd),
     
 	//physical pins connected to TFT 4.3'' screen.
     .LCD_RST(LCD_RST),
