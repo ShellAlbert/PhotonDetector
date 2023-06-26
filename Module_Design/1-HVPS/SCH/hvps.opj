@@ -1,0 +1,234 @@
+(ExpressProject "SAPDA2"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 S017 (3936576)  [4/19/2021]-[06/15/23]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")
+        (DisplayName ".\library1.olb")))
+    ("Allegro Netlist Directory"
+       "D:\Work\GitHub\PhotonDetector\Module_Design\1-HVPS\SCH\netlist")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\hvps.dsn"
+      (Type "Schematic Design")
+      (DisplayName ".\hvps.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File "D:\Work\GitHub\SAPD2\Schematic\SAPD2.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}\t{JLC}")
+    (BOM_Header "Item\tQuantity\tReference\tPart\tPCBFootprint\tJLC")
+    (BOM_Include_File
+       "D:\WORK\GITHUB\PHOTONDETECTOR\REVA2\SCHEMATIC\SAPDA2.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" ".\allegro\sapda2.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "255")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Display_Online_DRC_Results "FALSE")
+    ("Allegro Backannotation Run Genfeed" "TRUE")
+    ("Allegro Backannotation Board File"
+       "D:\Work\GitHub\PhotonDetector\Module_Design\1-HVPS\PCB\hvps.brd")
+    ("Allegro Backannotation Netlist Directory"
+       "D:\Work\GitHub\PhotonDetector\Module_Design\1-HVPS\SCH\netlist")
+    ("Allegro Backannotation Output File" "allegro\SAPDA2.swp")
+    ("Allegro Backannotation Update Schematic" "TRUE")
+    ("Allegro Backannotation View Output" "FALSE")
+    ("Allegro Setup Output Warnings" "FALSE")
+    (Backannotation_TAB "0"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File "d:\work\github\sapd2\schematic\sapd2.bom"
+      (Type "Report")
+      (DisplayName "..\..\..\..\sapd2\schematic\sapd2.bom"))
+    (File ".\netlist\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\netlist\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\netlist\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\netlist\pinview.dat"
+      (Type "Report")
+      (DisplayName "pinView.dat"))
+    (File ".\netlist\netview.dat"
+      (Type "Report")
+      (DisplayName "netView.dat"))
+    (File ".\netlist\funcview.dat"
+      (Type "Report")
+      (DisplayName "funcView.dat"))
+    (File ".\netlist\compview.dat"
+      (Type "Report")
+      (DisplayName "compView.dat"))
+    (File ".\allegro\sapda2.swp"
+      (Type "Report")
+      (DisplayName "SAPDA2.swp")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs"
+    (File ".\netlist\swp.log"
+      (Type "Log File")
+      (LogFile
+         "D:\Work\GitHub\PhotonDetector\Module_Design\1-HVPS\SCH\netlist\swp.log")))
+  (PartMRUSelector
+    (VCC_BAR
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-R
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OPA357AIDBVR
+      (FullPartName "OPA357AIDBVR.Normal")
+      (LibraryName
+         "D:\WORK\GITHUB\PHOTONDETECTOR\MODULE_DESIGN\1-HVPS\SCH\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TXS0108EPW
+      (FullPartName "TXS0108EPW.Normal")
+      (LibraryName
+         "D:\WORK\GITHUB\PHOTONDETECTOR\MODULE_DESIGN\1-HVPS\SCH\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("T POINT F"
+      (FullPartName "T POINT F.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (Header1x4
+      (FullPartName "Header1x4.Normal")
+      (LibraryName
+         "D:\WORK\GITHUB\PHOTONDETECTOR\MODULE_DESIGN\1-HVPS\SCH\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (AMS1117-3.3
+      (FullPartName "AMS1117-3.3.Normal")
+      (LibraryName "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (RS0102YH8
+      (FullPartName "RS0102YH8.Normal")
+      (LibraryName "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (Header-12x2
+      (FullPartName "Header-12x2.Normal")
+      (LibraryName "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (VR-5K
+      (FullPartName "VR-5K.Normal")
+      (LibraryName "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (Header-17x2
+      (FullPartName "Header-17x2.Normal")
+      (LibraryName "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (Header30x2
+      (FullPartName "Header30x2.Normal")
+      (LibraryName "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (BSP316P
+      (FullPartName "BSP316P.Normal")
+      (LibraryName "D:\WORK\GITHUB\SAPD2\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("DIODE ZENER"
+      (FullPartName "DIODE ZENER.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (OPA847
+      (FullPartName "OPA847.Normal")
+      (LibraryName "D:\WORK\GITHUB\SAPD2\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (GND_SIGNAL
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (MAX5026EUT-T
+      (FullPartName "MAX5026EUT-T.Normal")
+      (LibraryName "D:\WORK\GITHUB\SAPD2\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (2N6510
+      (FullPartName "2N6510.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (DIODE
+      (FullPartName "DIODE.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("GND_FIELD SIGNAL"
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (LT1172CQ#PBF
+      (FullPartName "LT1172CQ#PBF.Normal")
+      (LibraryName "D:\WORK\GITHUB\SAPD2\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (2N4920
+      (FullPartName "2N4920.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\PSPICE\PWRBJT.OLB")
+      (DeviceIndex "0"))
+    (2N3716
+      (FullPartName "2N3716.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\PSPICE\PWRBJT.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "Administrator")
+  (LastUsedLibraryBrowseDirectory
+     "C:\Cadence\Cadence_SPB_17.4-2019\tools\capture\library")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "d:\work\github\photondetector\module_design\1-hvps\sch\hvps.dsn")
+      (Path "Design Resources"
+         "d:\work\github\photondetector\module_design\1-hvps\sch\hvps.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "d:\work\github\photondetector\module_design\1-hvps\sch\library1.olb")
+      (Path "Outputs")
+      (Path "Logs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 506"))
+      (Tab 0)))
+  (ISPCBBASICLICENSE "false"))

@@ -221,11 +221,13 @@
       (Path "Design Resources" "Library"
          "D:\Work\GitHub\SAPD2\Schematic\LIBRARY1.OLB")
       (Path "Outputs")
-      (Path "Logs"))
+      (Path "Logs")
+      (Select "Design Resources" "Library"
+         "D:\Work\GitHub\SAPD2\Schematic\LIBRARY1.OLB"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 947"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 624 0 691"))
       (Tab 0)))
   (ISPCBBASICLICENSE "false"))

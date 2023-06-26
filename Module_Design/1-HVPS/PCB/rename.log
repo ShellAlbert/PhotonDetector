@@ -1,0 +1,45 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    RENAME REFDES                                                    )
+(                                                                     )
+(    Drawing          : hvps.brd                                      )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Wed Jun 14 14:47:58 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Renaming components on BOTH_SIDES on entire BOARD
+    Extents: (-300.0000,-300.0000) (700.0000,700.0000)
+
+Sequencing the reference designators SEQUENTIALLY
+Row processing direction : to the RIGHT, from the top down.
+
+OLD TP6    NEW TP1
+OLD D1    NEW D1
+OLD TP5    NEW TP2
+OLD L1    NEW L1
+OLD Q2    NEW Q1
+OLD C8    NEW C1
+OLD C7    NEW C2
+OLD C1    NEW C3
+OLD R25    NEW R1
+OLD U3    NEW U1
+OLD R49    NEW R2
+OLD R19    NEW R3
+OLD R48    NEW R4
+OLD R15    NEW R5
+OLD R21    NEW R6
+OLD R23    NEW R7
+OLD R17    NEW R8
+OLD C4    NEW C4
+OLD C9    NEW C5
+OLD C25    NEW C6
+OLD R24    NEW R9
+OLD TP1    NEW TP3
+OLD TP4    NEW TP4
+OLD TP2    NEW TP5
+OLD TP3    NEW TP6
+Sequencing the reference designators SEQUENTIALLY
+Row processing direction : to the LEFT, from the top down.
+

@@ -1,0 +1,25 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Shape Dynamic Status Report                                      )
+(                                                                     )
+(    Drawing          : XS6-9.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Mon Jun 26 09:23:53 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+  Dynamic shapes out of date: 3 out of 58
+  Current fill mode         : DISABLED
+
+
+  <<<  ETCH  >>>
+
+    Layer = L2_GND
+       State: Out of date  Point on shape: (30.0001 32.0000)  Net: GND
+
+    Layer = L3_P
+       State: Out of date  Point on shape: (-59.5280 22.0180)  Net: VDD33
+
+    Layer = BOTTOM
+       State: Out of date  Point on shape: (-15.0000 60.0000)  Net: GND

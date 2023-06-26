@@ -1,0 +1,19 @@
+\t (00:00:01) allegro 17.4 S017 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Fri Jun 16 09:25:24 2023
+\t (00:00:01)         Host=TIANTIAN User=Administrator Pid=9896 CPUs=8
+\t (00:00:01) CmdLine= C:\Cadence\Cadence_SPB_17.4-2019\tools\bin\allegro.exe
+\t (00:00:01) 
+   (00:00:01) Loading axlcore.cxt 
+\t (00:00:01) Starting new design...
+\i (00:00:01) trapsize 116667
+\i (00:00:02) placementedit 
+\i (00:00:04) open 
+\e (00:00:04) Do you want to save the changes you made to unnamed.brd?
+\i (00:00:05) fillin no 
+\i (00:00:13) fillin "D:/Work/GitHub/PhotonDetector/Module_Design/1-HVPS/PCB/hvps-2.brd"
+\i (00:00:13) cd "D:/Work/GitHub/PhotonDetector/Module_Design/1-HVPS/PCB"
+\i (00:00:13) trapsize 685
+\i (00:00:13) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged unnamed
+\t (00:00:13) Opening existing design...
+\i (00:00:13) trapsize 4736
+\t (00:00:13)     Journal end - Fri Jun 16 09:25:36 2023

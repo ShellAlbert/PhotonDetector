@@ -1,0 +1,53 @@
+A!NET_NAME!REFDES!PIN_NUMBER!FUNC_LOGICAL_PATH!COMP_DEVICE_TYPE!FUNC_SCH_SIZE!FUNC_HAS_FIXED_SIZE!FUNC_DES!PIN_NET_SHORT!PIN_NO_SWAP_PIN!PIN_NO_PIN_ESCAPE!PIN_CDS_PINID!PIN_XNET_PINS!PIN_PIN_ESCAPE!PIN_PIN_SIGNAL_MODEL!PIN_NO_DRC!PIN_NO_SHAPE_CONNECT!
+J!D:/Work/GitHub/PhotonDetector/Module_Design/1-HVPS/PCB/hvps.brd!Wed Jun 14 14:49:01 2023!-300.0000!-300.0000!700.0000!700.0000!0.0001!millimeters!HVPS!10.400000 mil!2!UP TO DATE!
+S!PWR_IN!C3!1!@hvps.schematic1(sch_1):ins281@discrete.\c.normal\(chips)!C_CAP-SMD-D8D0-L8D3-W8D3-P7D5_220UF/35V!!!F24!!!!!!!!!!
+S!GND!C3!2!@hvps.schematic1(sch_1):ins281@discrete.\c.normal\(chips)!C_CAP-SMD-D8D0-L8D3-W8D3-P7D5_220UF/35V!!!F24!!!!!!!!!!
+S!N01266!C6!1!@hvps.schematic1(sch_1):ins333777@discrete.\c.normal\(chips)!C_CAP-THR-L11D4-W3D8-P10D0-D0D8_0.1UF/400V!!!F23!!!!!!!!!!
+S!N281531!C6!2!@hvps.schematic1(sch_1):ins333777@discrete.\c.normal\(chips)!C_CAP-THR-L11D4-W3D8-P10D0-D0D8_0.1UF/400V!!!F23!!!!!!!!!!
+S!PWR_IC!C4!1!@hvps.schematic1(sch_1):ins468@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF/35V!!!F22!!!!!!!!!!
+S!GND!C4!2!@hvps.schematic1(sch_1):ins468@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF/35V!!!F22!!!!!!!!!!
+S!PWR_IC!C2!1!@hvps.schematic1(sch_1):ins506@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/35V!!!F21!!!!!!!!!!
+S!GND!C2!2!@hvps.schematic1(sch_1):ins506@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/35V!!!F21!!!!!!!!!!
+S!N00671!C5!1!@hvps.schematic1(sch_1):ins655@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/35V!!!F20!!!!!!!!!!
+S!GND!C5!2!@hvps.schematic1(sch_1):ins655@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/35V!!!F20!!!!!!!!!!
+S!N01266!C1!1!@hvps.schematic1(sch_1):ins5716@discrete.\c.normal\(chips)!C_CAP-SMD-D8D0-L10D3-B8D3_4.7UF/400V!!!F19!!!!!!!!!!
+S!GND!C1!2!@hvps.schematic1(sch_1):ins5716@discrete.\c.normal\(chips)!C_CAP-SMD-D8D0-L10D3-B8D3_4.7UF/400V!!!F19!!!!!!!!!!
+S!N00224!D1!2!@hvps.schematic1(sch_1):ins990@discrete.\diode.normal\(chips)!DIODE_SOD-123FL_E1G!!!F18!!!!!!!!!!
+S!N01266!D1!1!@hvps.schematic1(sch_1):ins990@discrete.\diode.normal\(chips)!DIODE_SOD-123FL_E1G!!!F18!!!!!!!!!!
+S!PWR_IN!L1!1!@hvps.schematic1(sch_1):ins208@discrete.\inductor.normal\(chips)!INDUCTOR_IND-SMD-L11D5-W10D0-P10D4_100UH/2A!!!F17!!!!!!!!!!
+S!N00224!L1!2!@hvps.schematic1(sch_1):ins208@discrete.\inductor.normal\(chips)!INDUCTOR_IND-SMD-L11D5-W10D0-P10D4_100UH/2A!!!F17!!!!!!!!!!
+S!N00224!Q1!2!@hvps.schematic1(sch_1):ins123@library1.\irf644pbf.normal\(chips)!IRF644PBF_TO-252-2-DPAK_AOD458!!!F16!!!!!!!!!!
+S!N00177!Q1!1!@hvps.schematic1(sch_1):ins123@library1.\irf644pbf.normal\(chips)!IRF644PBF_TO-252-2-DPAK_AOD458!!!F16!!!!!!!!!!
+S!N00181!Q1!3!@hvps.schematic1(sch_1):ins123@library1.\irf644pbf.normal\(chips)!IRF644PBF_TO-252-2-DPAK_AOD458!!!F16!!!!!!!!!!
+S!N01266!R5!1!@hvps.schematic1(sch_1):ins1401@discrete.\r.normal\(chips)!R_R0603_1.5M!!!F15!!!!!!!!!!
+S!N281531!R5!2!@hvps.schematic1(sch_1):ins1401@discrete.\r.normal\(chips)!R_R0603_1.5M!!!F15!!!!!!!!!!
+S!PWR_IN!R8!1!@hvps.schematic1(sch_1):ins347@discrete.\r.normal\(chips)!R_R0603_DNP!!!F14!!!!!!!!!!
+S!PWR_IC!R8!2!@hvps.schematic1(sch_1):ins347@discrete.\r.normal\(chips)!R_R0603_DNP!!!F14!!!!!!!!!!
+S!PWR_IC!R6!1!@hvps.schematic1(sch_1):ins3000@discrete.\r.normal\(chips)!R_R0603_DNP!!!F13!!!!!!!!!!
+S!N03183!R6!2!@hvps.schematic1(sch_1):ins3000@discrete.\r.normal\(chips)!R_R0603_DNP!!!F13!!!!!!!!!!
+S!EN!R9!1!@hvps.schematic1(sch_1):ins4151@discrete.\r.normal\(chips)!R_R0603_DNP!!!F12!!!!!!!!!!
+S!N03183!R9!2!@hvps.schematic1(sch_1):ins4151@discrete.\r.normal\(chips)!R_R0603_DNP!!!F12!!!!!!!!!!
+S!N361468!R2!1!@hvps.schematic1(sch_1):ins361518@discrete.\r.normal\(chips)!R_R0603_DNP!!!F11!!!!!!!!!!
+S!GND!R2!2!@hvps.schematic1(sch_1):ins361518@discrete.\r.normal\(chips)!R_R0603_DNP!!!F11!!!!!!!!!!
+S!N361468!R3!1!@hvps.schematic1(sch_1):ins1453@discrete.\r.normal\(chips)!R_R0603_10K!!!F10!!!!!!!!!!
+S!GND!R3!2!@hvps.schematic1(sch_1):ins1453@discrete.\r.normal\(chips)!R_R0603_10K!!!F10!!!!!!!!!!
+S!GND!R7!1!@hvps.schematic1(sch_1):ins3026@discrete.\r.normal\(chips)!R_R0603_0!!!F9!!!!!!!!!!
+S!N03183!R7!2!@hvps.schematic1(sch_1):ins3026@discrete.\r.normal\(chips)!R_R0603_0!!!F9!!!!!!!!!!
+S!N281531!R4!1!@hvps.schematic1(sch_1):ins361452@discrete.\r.normal\(chips)!R_R0603_0!!!F8!!!!!!!!!!
+S!N361468!R4!2!@hvps.schematic1(sch_1):ins361452@discrete.\r.normal\(chips)!R_R0603_0!!!F8!!!!!!!!!!
+S!N00181!R1!1!@hvps.schematic1(sch_1):ins826@discrete.\r.normal\(chips)!R_R1206_50MR!!!F7!!!!!!!!!!
+S!GND!R1!2!@hvps.schematic1(sch_1):ins826@discrete.\r.normal\(chips)!R_R1206_50MR!!!F7!!!!!!!!!!
+S!PWR_IN!TP3!1!@hvps.schematic1(sch_1):ins361779@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!!!F6!!!!!!!!!!
+S!PWR_IC!TP5!1!@hvps.schematic1(sch_1):ins361799@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!!!F5!!!!!!!!!!
+S!EN!TP6!1!@hvps.schematic1(sch_1):ins361817@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!!!F4!!!!!!!!!!
+S!GND!TP4!1!@hvps.schematic1(sch_1):ins361835@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!!!F3!!!!!!!!!!
+S!N01266!TP2!1!@hvps.schematic1(sch_1):ins363623@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!!!F2!!!!!!!!!!
+S!GND!TP1!1!@hvps.schematic1(sch_1):ins363635@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!!!F1!!!!!!!!!!
+S!GND!U1!6!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!N00181!U1!8!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!N00177!U1!1!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!N281531!U1!3!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!GND!U1!7!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!N00671!U1!5!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!N03183!U1!4!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!
+S!PWR_IC!U1!2!@hvps.schematic1(sch_1):ins38@library1.\max1771esa+.normal\(chips)!MAX1771ESA+_SO-8_MAX1771ESA+!!!F0!!!!!!!!!!

@@ -1,0 +1,128 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : hvps.brd                                      )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Thu Jun 15 15:30:43 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+         Placed symbol:  U9 / TXS0108EPW_TSSOP-20-L6D5-W4D4-PD0D65-CD6D5-MM_TXS0108EPW / TSSOP-20-L6D5-W4D4-PD0D65-CD6D5-MM at (1.8300 6.8800)
+         Placed symbol:  U2 / TLV3501AIDBVR_SOT-23-6-L2D9-W1D6-PD0D95-CD2D8-MM_TLV3501AIDBVR / SOT-23-6-L2D9-W1D6-PD0D95-CD2D8-MM at (10.4400 2.9100)
+         Placed symbol:  U10 / OPA357AIDBVR_SOT-23-6-L2D9-W1D6-PD0D95-CD2D8-MM_OPA357AIDBVR / SOT-23-6-L2D9-W1D6-PD0D95-CD2D8-MM at (15.3400 2.9100)
+         Placed symbol:  U5 / MAX5026EUT-T_SOT23-6_MAX5026EUT-T / SOT23-6 at (21.3400 2.7000)
+         Placed symbol:  U8 / TL431/TI_SOT-23-3-TL431_TL431 / SOT-23-3-TL431 at (24.0160 0.6190)
+         Placed symbol:  Q3 / FH3400C_SOT-23-3-L2D9-W1D3-P1D9-MM_FH3400C / SOT-23-3-L2D9-W1D3-P1D9-MM at (30.9490 3.0000)
+         Placed symbol:  Q9 / BSP316P_0_SOT-23-3-L2D9-W1D3-P1D9-MM_AO3401A / SOT-23-3-L2D9-W1D3-P1D9-MM at (3.8000 10.6700)
+         Placed symbol:  Q5 / FH3400C_SOT-23-3-L2D9-W1D3-P1D9-MM_FH3400C / SOT-23-3-L2D9-W1D3-P1D9-MM at (8.6000 10.6700)
+         Placed symbol:  C43 / CAP NP_C0603_0.1UF/16V / C0603 at (10.6000 8.6700)
+         Placed symbol:  C44 / CAP NP_C0603_0.1UF/16V / C0603 at (13.9000 8.6700)
+         Placed symbol:  C45 / CAP NP_C0603_0.1UF/16V / C0603 at (17.2000 8.6700)
+         Placed symbol:  C34 / CAP NP_C0603_10UF/16V / C0603 at (20.5000 8.6700)
+         Placed symbol:  C46 / CAP NP_C0603_0.1UF/16V / C0603 at (23.8000 8.6700)
+         Placed symbol:  C42 / CAP NP_C0603_0.1UF/16V / C0603 at (27.1000 8.6700)
+         Placed symbol:  C41 / CAP NP_C0603_10UF/16V / C0603 at (30.4000 8.6700)
+         Placed symbol:  D7 / DIODE_SOD-523-L1D2-W0D8-P1D6-MM_BAS521-7 / SOD-523-L1D2-W0D8-P1D6-MM at (1.0140 12.2960)
+         Placed symbol:  D2 / DIODE SCHOTTKY_SOD323-L1D8-W1D3-P2D4-MM_PTVSLC3D3V3B / SOD323-L1D8-W1D3-P2D4-MM at (4.5270 12.4700)
+         Placed symbol:  D4 / DIODE_SAPD-THR-2P_SAPD / SAPD-THR-2P at (11.9358 15.5988)
+         Placed symbol:  L4 / INDUCTOR_IND-SMD-L5D0-W5D0-P4D6-MM_47UH/1A / IND-SMD-L5D0-W5D0-P4D6-MM at (17.7646 14.9700)
+         Placed symbol:  D11 / DIODE ZENER_SOD-123-L2D8-W1D8-P3D5-MM_MMSZ12T1G / SOD-123-L2D8-W1D8-P3D5-MM at (26.0410 12.8300)
+         Placed symbol:  C40 / CAP NP_C0603_0.1UF/16V / C0603 at (31.6210 12.4700)
+         Placed symbol:  D12 / DIODE_SOD-523-L1D2-W0D8-P1D6-MM_BAS521-7 / SOD-523-L1D2-W0D8-P1D6-MM at (1.0140 20.2536)
+         Placed symbol:  C30 / CAP NP_C0603_0.1UF/16V / C0603 at (4.3470 20.4276)
+         Placed symbol:  C39 / CAP NP_C0603_0.1UF/16V / C0603 at (7.6470 20.4276)
+         Placed symbol:  R18 / R_R0603_1M / R0603 at (10.9470 20.4276)
+         Placed symbol:  R22 / R_R0603_1K / R0603 at (14.2470 20.4276)
+         Placed symbol:  R26 / R_R0603_1K / R0603 at (17.5470 20.4276)
+         Placed symbol:  R43 / R_R0603_1K / R0603 at (20.8470 20.4276)
+         Placed symbol:  R63 / R_R0603_1K / R0603 at (24.1470 20.4276)
+         Placed symbol:  R28 / R_R0603_100 / R0603 at (27.4470 20.4276)
+         Placed symbol:  R42 / R_R0603_100 / R0603 at (30.7470 20.4276)
+         Placed symbol:  R33 / R_R0603_182K / R0603 at (1.0000 22.1276)
+         Placed symbol:  R41 / R_R0805_100K / R0805 at (4.4500 22.2776)
+         Placed symbol:  R56 / R_R0603_100K / R0603 at (8.3500 22.1276)
+         Placed symbol:  R10 / R_R0603_682 / R0603 at (11.6500 22.1276)
+         Placed symbol:  R69 / R_R0603_100K / R0603 at (14.9500 22.1276)
+         Placed symbol:  R70 / R_R0603_100K / R0603 at (18.2500 22.1276)
+         Placed symbol:  R57 / R_R0603_4.99K / R0603 at (21.5500 22.1276)
+         Placed symbol:  R65 / R_R0603_4.99K / R0603 at (24.8500 22.1276)
+         Placed symbol:  R66 / R_R0603_4.99K / R0603 at (28.1500 22.1276)
+         Placed symbol:  R68 / R_R0603_4.99K / R0603 at (31.4500 22.1276)
+         Placed symbol:  R60 / R_R0603_499 / R0603 at (1.0000 24.1276)
+         Placed symbol:  C35 / CAP NP_C0603_0.1UF/16V / C0603 at (4.3000 24.1276)
+         Placed symbol:  C36 / CAP NP_C0603_0.1UF/16V / C0603 at (7.6000 24.1276)
+         Placed symbol:  R11 / R_R0805_332K / R0805 at (11.0500 24.2776)
+         Placed symbol:  C15 / C_CAP-SMD-L6D6-W6D6-P5D5-MM_100UF/35V / CAP-SMD-L6D6-W6D6-P5D5-MM at (16.4500 26.8276)
+         Placed symbol:  R67 / R_R0603_100K / R0603 at (25.1500 24.1276)
+         Placed symbol:  R40 / R_R0603_10K / R0603 at (28.4500 24.1276)
+         Placed symbol:  R58 / R_R0603_DNP / R0603 at (31.7500 24.1276)
+         Placed symbol:  R16 / R_R0603_10K / R0603 at (1.0000 31.2276)
+         Placed symbol:  R35 / R_R0603_10K / R0603 at (4.3000 31.2276)
+         Placed symbol:  R61 / R_R0603_0 / R0603 at (7.6000 31.2276)
+         Placed symbol:  C37 / CAP NP_C0805_10UF/35V / C0805 at (11.0280 31.4256)
+         Placed symbol:  C38 / CAP NP_C0805_10UF/35V / C0805 at (14.9840 31.4256)
+         Placed symbol:  R36 / R_R0603_DNP / R0603 at (18.8120 31.2276)
+         Placed symbol:  R64 / R_R0603_0 / R0603 at (22.1120 31.2276)
+         Placed symbol:  R62 / R_R0603_10K / R0603 at (25.4120 31.2276)
+         Placed symbol:  R12 / R_R0603_0 / R0603 at (28.7120 31.2276)
+         Placed symbol:  R59 / R_R0603_0 / R0603 at (32.0120 31.2276)
+         Placed symbol:  R55 / R_R0603_0 / R0603 at (1.0000 33.3376)
+         Placed symbol:  TP16 / T POINT F_TP_THR_CIR_1D0_1D5_QUENCH / TP_THR_CIR_1D0_1D5 at (4.6500 33.6876)
+         Placed symbol:  TP25 / T POINT F_TP_THR_CIR_3D0_1D5_RESET / TP_THR_CIR_3D0_1D5 at (7.8000 34.4376)
+         Placed symbol:  TP15 / T POINT F_TP_THR_CIR_3D0_1D5_HVPS / TP_THR_CIR_3D0_1D5 at (11.7000 34.4376)
+         Placed symbol:  TP13 / T POINT F_TP_THR_CIR_3D0_1D5_VQUENCH / TP_THR_CIR_3D0_1D5 at (15.6000 34.4376)
+         Placed symbol:  TP26 / T POINT F_TP_THR_CIR_3D0_1D5_VDD5X / TP_THR_CIR_3D0_1D5 at (19.5000 34.4376)
+         Placed symbol:  TP32 / T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F / STAMP_HOLE_1D5X3D0_1D4 at (22.6000 34.4376)
+         Placed symbol:  TP33 / T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F / STAMP_HOLE_1D5X3D0_1D4 at (24.9000 34.4376)
+         Placed symbol:  TP34 / T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F / STAMP_HOLE_1D5X3D0_1D4 at (27.2000 34.4376)
+         Placed symbol:  TP35 / T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F / STAMP_HOLE_1D5X3D0_1D4 at (29.5000 34.4376)
+
+
+Placed 69 of 69 applicable (69 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+
+
+Placed 0 of 0 applicable (0 total) symbols.
+
+-----------------------------------------------------------------------
+

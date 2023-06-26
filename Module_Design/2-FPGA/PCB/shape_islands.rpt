@@ -1,0 +1,18 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Shape Island Report                                              )
+(                                                                     )
+(    Drawing          : XS6-8.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Sun Jun 25 16:29:02 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+  Total islands on design: 1
+
+
+  <<<  ETCH  >>>
+
+    Layer = TOP
+	Point on shape: (-38.6949 6.2484)  Net: GND

@@ -1,0 +1,19 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Shape Dynamic Status Report                                      )
+(                                                                     )
+(    Drawing          : XS6-9.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Mon Jun 26 09:07:45 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+  Dynamic shapes out of date: 1 out of 58
+  Current fill mode         : DISABLED
+
+
+  <<<  ETCH  >>>
+
+    Layer = TOP
+       State: Out of date  Point on shape: (-31.8376 -0.0229)  Net: +3.3V
