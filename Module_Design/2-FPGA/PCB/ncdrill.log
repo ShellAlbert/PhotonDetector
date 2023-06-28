@@ -1,0 +1,87 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    NC DRILL Log                                                     )
+(                                                                     )
+(    Drawing          : XS6-9.brd                                     )
+(    Software Version : 17.4S017                                      )
+(    Date/Time        : Tue Jun 27 11:18:15 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file 'nc_param.txt' ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		2.5
+ MACHINE-OFFSET		x:0.00000	y:0.00000   (mm)
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		METRIC
+ TOOL-ORDER		INCREASING
+ REPEAT-CODES		NO
+ SUPPRESS-LEAD-ZEROES	YES
+ SUPPRESS-TRAIL-ZEROES	NO
+ SUPPRESS-EQUAL		YES
+ TOOL-SELECT		YES
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		NO
+ SEPARATE-ROUTING	NO
+ OPTIMIZE_DRILLING	YES
+ ENHANCED_EXCELLON	YES
+ SCALE			1.000000
+
+ WARNING(SPMHMF-365): This design contains 5 slot holes that cannot be drilled.
+ WARNING(SPMHMF-366): They can be processed by NC routing instead.
+ WARNING(SPMHMF-368): Cannot find NC Drill tool file 'nc_tools.txt'
+ WARNING(SPMHMF-369): ... will auto-generate tool file 'nc_tools_auto.txt'.
+
+
+     Auto-generating tool file 'nc_tools_auto.txt' ...
+
+           Size  Plating  Tool        + Tolerance  - Tolerance
+
+         0.2540  P        T01            0.000000     0.000000
+         0.3048  P        T02            0.000000     0.000000
+         0.4064  P        T03            0.000000     0.000000
+         0.8000  P        T04            0.000000     0.000000
+         0.8900  P        T05            0.000000     0.000000
+         1.0000  P        T06            0.000000     0.000000
+         1.0211  P        T07            0.000000     0.000000
+         1.4000  P        T08            0.000000     0.000000
+         1.5000  P        T09            0.000000     0.000000
+         0.5000  N        T10            0.000000     0.000000
+         0.8999  N        T11            0.050000     0.050000
+         3.0000  N        T12            0.000000     0.000000
+
+
+Drill files being output to directory 'D:/Work/GitHub/PhotonDetector/Module_Design/2-FPGA/PCB' ...
+
+
+
+     'XS6-9-1-4.drl' created for holes connecting TOP and BOTTOM
+     -----------------------------------------------------------
+
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
+
+     T01    1.   0.2540    0.0000/  0.0000      PLATED        325
+     T02    2.   0.3048    0.0000/  0.0000      PLATED          4
+     T03    3.   0.4064    0.0000/  0.0000      PLATED        229
+     T04    4.   0.8000    0.0000/  0.0000      PLATED          2
+     T05    5.   0.8900    0.0000/  0.0000      PLATED          4
+     T06    6.   1.0000    0.0000/  0.0000      PLATED         36
+     T07    7.   1.0211    0.0000/  0.0000      PLATED        134
+     T08    8.   1.4000    0.0000/  0.0000      PLATED         28
+     T09    9.   1.5000    0.0000/  0.0000      PLATED          7
+     T10   10.   0.5000    0.0000/  0.0000  NON_PLATED        120
+     T11   11.   0.8999    0.0500/  0.0500  NON_PLATED          2
+     T12   12.   3.0000    0.0000/  0.0000  NON_PLATED          4
+
+     ---- Total holes:                                        895
+
+     ---- Total head travel:              15.02 feet (4.58 meters)
+

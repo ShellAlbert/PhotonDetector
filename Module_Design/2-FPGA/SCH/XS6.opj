@@ -130,13 +130,26 @@
       (Path "Design Resources" "Library"
          "d:\work\github\photondetector\module_design\1-hvps\sch\library1.olb")
       (Path "Outputs")
-      (Path "Logs"))
+      (Path "Logs")
+      (Select "Design Resources"
+         "d:\work\github\photondetector\module_design\2-fpga\sch\xs6.dsn"
+         "SCHEMATIC1" "3-QUENCH"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 519 0 767"))
-      (Tab 0)))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 767"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1515 26 787")
+        (Scroll "-154 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\MODULE_DESIGN\2-FPGA\SCH\XS6.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "3-QUENCH")))
   (MPSSessionName "Administrator")
   (LastUsedLibraryBrowseDirectory
      "C:\Cadence\Cadence_SPB_17.4-2019\tools\capture\library"))

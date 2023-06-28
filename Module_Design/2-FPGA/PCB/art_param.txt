@@ -1,6 +1,6 @@
 DEVICE-TYPE           GERBER_RS274X
 OUTPUT-UNITS          MM
-FILM-SIZE             2400000 1600000
+FILM-SIZE             10000000 8000000
 FORMAT                2.5
 ABORT-ON-ERROR        NO
 SCALE                 1

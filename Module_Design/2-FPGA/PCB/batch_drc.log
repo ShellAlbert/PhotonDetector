@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : XS6-9.brd                                     )
 (    Software Version : 17.4S017                                      )
-(    Date/Time        : Mon Jun 26 09:30:16 2023                      )
+(    Date/Time        : Tue Jun 27 10:25:33 2023                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -20,7 +20,7 @@
  ========= check standalone text              0:00:00
  ========= check standalone rectangles        0:00:00
 
- ..... Total number of DRC errors  508
+ ..... Total number of DRC errors  507
 
  ..... DRC update completed, total CPU time   0:00:01
  *************************************************************************
