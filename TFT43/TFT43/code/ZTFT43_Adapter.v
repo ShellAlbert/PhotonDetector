@@ -390,8 +390,12 @@ else if(en) begin
 												i<=i+1'b1;
 											end
 					*/
+
+					/*
 					if(CNT1==80_000) begin CNT1<=0; clk_used<=1'b1; i<=i+1'b1; end
 					else begin CNT1<=CNT1+1'b1; end
+					*/
+					i<=i+1'b1;
 				//////PreSet Write Area//////
 				41: //LCD_CS=0.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
@@ -473,35 +477,34 @@ else if(en) begin
 					else begin 
 							oSDRAM_Rd_Req<=1'b1; 
 						end
+				/*
 				60: //Dump to UART to check if data read from SDRAM are right.
-					/*
 					if(done_Dump2UART) begin en_Dump2UART<=1'b0; i<=i+1'b1; end
 					else begin en_Dump2UART<=1'b1; data_Dump2UART<=pixel_data1; end
-					*/
-					i<=i+1'b1;
+				*/
 
-				61: //Fast Fill Pixel Data, iData1=Color.
+				60: //Fast Fill Pixel Data, iData1=Color.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; //3: Write data, iData=data.
 							data_TFT43<=pixel_data1; //1st.
 						end 
-				62: //Fast Fill Pixel Data, iData2=Color.
+				61: //Fast Fill Pixel Data, iData2=Color.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; //3: Write data, iData=data.
 							data_TFT43<=pixel_data2; //2st.
 						end 
-				63: //Fast Fill Pixel Data, iData3=Color.
+				62: //Fast Fill Pixel Data, iData3=Color.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; //3: Write data, iData=data.
 							data_TFT43<=pixel_data3; //3st.
 						end 
-				64: //Fast Fill Pixel Data, iData4=Color.
+				63: //Fast Fill Pixel Data, iData4=Color.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end		
 					else begin 
 							en_TFT43<=1'b1; 
@@ -509,7 +512,7 @@ else if(en) begin
 							data_TFT43<=pixel_data4; //4st.
 						end 
 			
-				65: //480*800=384000.  (0~384000-1)   
+				64: //480*800=384000.  (0~384000-1)   
 					//Since we operate 4 words each time so the last one is 383996, 383997, 383998,383999.
 					if(oSDRAM_Rd_Addr>=383996) begin oSDRAM_Rd_Addr<=0; i<=i+1'b1; end				
 					else begin
@@ -517,10 +520,10 @@ else if(en) begin
 							oSDRAM_Rd_Addr<=oSDRAM_Rd_Addr+4;
 							i<=59; //Loop to draw next pixel.
 						end
-				66: //LCD_CS=1.
+				65: //LCD_CS=1.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin en_TFT43<=1'b1; trigger_TFT43<=4'd2; data_TFT43<=16'd1; end
-				67: 
+				66: 
 					begin 
 						clk_used<=1'b0;
 						i<=40; //Loop to refresh.

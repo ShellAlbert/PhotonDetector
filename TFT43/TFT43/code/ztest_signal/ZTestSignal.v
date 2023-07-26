@@ -184,14 +184,15 @@ else case(i_delay)
 
 //generate 50Hz sync_50Hz_simulate.
 //80MHz/50Hz/2=1_600_000=800_000
+//if(cnt_50Hz=='d800_000-1)
 reg [23:0] cnt_50Hz;
 always@(posedge clk or negedge rst_n)
 if(!rst_n)	begin
-				cnt_50Hz<='d0;
+				cnt_50Hz<=24'd0;
 				sync_50Hz_simulate<=1'b0;
 			end
-else if(cnt_50Hz=='d800_000-1) begin
-								cnt_50Hz<='d0;
+else if(cnt_50Hz>=24'd800_000-1) begin
+								cnt_50Hz<=24'd0;
 								sync_50Hz_simulate<=~sync_50Hz_simulate;
 							end
 	else begin

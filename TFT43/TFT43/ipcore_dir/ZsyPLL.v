@@ -55,8 +55,8 @@
 // "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
-// CLK_OUT1____80.000____211.500______50.0______228.899____187.995
-// CLK_OUT2____80.000______0.000______50.0______228.899____187.995
+// CLK_OUT1____87.500____208.125______50.0______233.525____199.399
+// CLK_OUT2____87.500______0.000______50.0______233.525____199.399
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -102,12 +102,12 @@ module ZsyPLL
     .CLK_FEEDBACK           ("CLKFBOUT"),
     .COMPENSATION           ("SYSTEM_SYNCHRONOUS"),
     .DIVCLK_DIVIDE          (1),
-    .CLKFBOUT_MULT          (16),
+    .CLKFBOUT_MULT          (14),
     .CLKFBOUT_PHASE         (0.000),
-    .CLKOUT0_DIVIDE         (10),
-    .CLKOUT0_PHASE          (211.500),
+    .CLKOUT0_DIVIDE         (8),
+    .CLKOUT0_PHASE          (208.125),
     .CLKOUT0_DUTY_CYCLE     (0.500),
-    .CLKOUT1_DIVIDE         (10),
+    .CLKOUT1_DIVIDE         (8),
     .CLKOUT1_PHASE          (0.000),
     .CLKOUT1_DUTY_CYCLE     (0.500),
     .CLKIN_PERIOD           (20.000),

@@ -209,7 +209,7 @@
       (FullPartName "IRF644PbF.Normal")
       (LibraryName "D:\WORK\GITHUB\SAPD2\SCHEMATIC\LIBRARY1.OLB")
       (DeviceIndex "0")))
-  (MPSSessionName "Administrator")
+  (MPSSessionName "STATUE")
   (LastUsedLibraryBrowseDirectory
      "C:\Cadence\Cadence_SPB_17.4-2019\tools\capture\library")
   (GlobalState
@@ -218,16 +218,13 @@
       (Path "Design Resources" ".\sapda2.dsn")
       (Path "Design Resources" ".\sapda2.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library"
-         "D:\Work\GitHub\SAPD2\Schematic\LIBRARY1.OLB")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" "Library"
-         "D:\Work\GitHub\SAPD2\Schematic\LIBRARY1.OLB"))
+      (Select "Design Resources" ".\sapda2.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 624 0 691"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 755"))
       (Tab 0)))
   (ISPCBBASICLICENSE "false"))

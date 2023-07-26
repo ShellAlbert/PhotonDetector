@@ -336,20 +336,31 @@ else	case(i)
 endmodule
 ///////////////////////////////////////////////////////////
 `else
-////////////////////////////////////////////////////////
-module ZSinglePhotonCounter(
-    input clk,
+///////////////////////////////////////////////////////////
+// Please enable this paragraph when distributes it.
+///////////////////////////////////////////////////////////
+ module ZSinglePhotonCounter(
+    input clk, //PCB on-board oscillator, 50MHz.
 
-	input photon_pulse, //E2, external photon pulse input pin.
-	input sync_50Hz, //F2, External 50Hz Sync Signal.
+	input photon_pulse, //External photon pulse input pin.
+	input sync_50Hz, //External 50Hz Sync Signal.
 	
-	output photon_pulse_simulate, //E1, simulate signal to work as photon_pulse for testing.
-	output sync_50Hz_simulate, //F1, simulate signal to work as sync_50Hz for testing.
-	//use an oscilloscope to check how many clks were used.
-    output clk_used, //E3, used to check time cost. 
+	//simulate signal to work as photon_pulse for testing.
+	output photon_pulse_simulate, 
 
-	output uart_txd, //
-	input uart_rxd, //
+	//simulate signal to work as sync_50Hz for testing.
+	//if lacking external 50Hz signal,
+	//short-connect this pin to Ext50Hz input.
+	output sync_50Hz_simulate, 
+
+	//use an oscilloscope to check how many clks were used.
+	//A convenient way to check performance.
+    output clk_used, //used to check time cost. 
+
+	//Upload photon counter via UART.
+	//Here also, we can take actions by different UART commands.
+	output uart_txd, 
+	input uart_rxd,
 	
 	//physical pins connected to TFT 4.3'' screen.
     output LCD_RST,
@@ -372,26 +383,31 @@ module ZSinglePhotonCounter(
     output [1:0] S_DQM,
     inout [15:0] S_DQ,
 
-    //led.
+    //debug led.
+	//The LED was located in S604 FPGA Board.
     output led,
 
-    //4 Push Buttons.
-    //iButton[3]=A12, iButton[2]=B12, iButton[1]=A13, iButton[0]=C13.
+	//We use these 4 buttons to navigate cursor on LCD.
     input [3:0] iButton
-    //4 LEDs.
+
+	//Each Buttons has one LED built-in.
+	//but actually we're not use them.
     //output [3:0] oLED
     );
 //assign oLED<=4'b1111;
+
 ///////////////////////////////////////////////////////
 //On-board Clock=50MHz.
-wire clk_133MHz_210;
-wire clk_133MHz_0;
+//PLL 50MHz -> 80MHz.
+///////////////////////////////////////////////////////
+wire clk_80MHz_210;
+wire clk_80MHz_0;
 wire rst_n;
 ZsyPLL ic_PLL (// Clock in ports
     .CLK_IN1(clk),      // IN
     // Clock out ports
-    .clk_133MHz_210(clk_133MHz_210),     // OUT
-    .clk_133MHz_0(clk_133MHz_0),     // OUT
+    .clk_133MHz_210(clk_80MHz_210),     // OUT
+    .clk_133MHz_0(clk_80MHz_0),     // OUT
     // Status and control signals
     .LOCKED(rst_n));      // OUT
 ////////////////////////////////////////////////////////
@@ -401,8 +417,8 @@ ODDR2 oddr2_inst(
 .D0(1'b1),
 .D1(1'b0),
 .CE(1'b1),
-.C0(clk_133MHz_0),
-.C1(!clk_133MHz_0),
+.C0(clk_80MHz_0),
+.C1(!clk_80MHz_0),
 .R(1'b0),
 .S(1'b0),
 .Q(clk_to_sdram));
@@ -440,9 +456,13 @@ wire [15:0] Wr_Data3_POST;
 wire [15:0] Wr_Data4_POST;
 wire Wr_Done_POST;
 //////////////////////////////////////
+//-----------------------------------------------------
+//  Page: PowerOnSelfTest.
+//  This page is used to draw a progress bar while testing external SDRAM reading & writing.
+//-----------------------------------------------------
 wire PowerOnSelfTestDone;
 ZPage_PowerOnSelfTest ic_PowerOnSelfTest(
-    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .clk(clk_80MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
     .en(1'b1),
 
@@ -473,26 +493,31 @@ ZPage_PowerOnSelfTest ic_PowerOnSelfTest(
 	//Test done successfully.
     .oTestDone(PowerOnSelfTestDone)
     );
-/////////////////////////////////////////////////////////////
+
+//-----------------------------------------------------
+//  Module: ZPulseCounter_Adapter.
+//  This modules is used to count external photon pulses and output couter within the specified time interval.
+//-----------------------------------------------------
 wire data_update;
 wire [31:0] PulseCounter_LCD;
 wire [15:0] PulseCounter_Single;
 wire [31:0] PulseCounter_LCD_Accumulated;
 wire [7:0] Time_Interval_Selection;
 ZPulseCounter_Adapter ic_PulseCounter(
-    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .clk(clk_80MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
-    .en(1'b1),
-    //External Photon Pulse.
-    .photon_pulse(photon_pulse),
+    .en(1'b1),  //Always enabled.
+    
+    .photon_pulse(photon_pulse), //External Photon Pulse.
     //50Hz sync.
     .sync_50Hz(sync_50Hz),
     .oExtSyncLost(ExtSyncLost),
 
 	//Time Interval Selection.
+	//100uS, 10mS, 100mS, 1000mS.
 	.iTime_Interval_Selection(Time_Interval_Selection),
 	
-	//Pulse Counter Output.
+	//New Pulse Counter is valid at rising edge of oDataUpate.
 	.oDataUpdate(data_update),
     .oPulseCouter_LCD(PulseCounter_LCD),
     .oPulseCouter_Single(PulseCounter_Single),
@@ -501,10 +526,13 @@ ZPulseCounter_Adapter ic_PulseCounter(
    	.oPulseCouter_LCD_Accumulated(PulseCounter_LCD_Accumulated)
     );
 //////////////////////////////////////////////////////////////
-//upload pulse counter via UART.
+//-----------------------------------------------------
+//  Module: ZDataDump2UART.
+//  This modules is used to transmit Photon Counter via UART.
+//-----------------------------------------------------
 wire upload_done;
 ZDataDump2UART ic_upload(
-    .clk(clk_133MHz_210),
+    .clk(clk_80MHz_210),
     .rst_n(rst_Page_Main),
     .en(1'b1),
 
@@ -513,36 +541,48 @@ ZDataDump2UART ic_upload(
     .tx_pin(uart_txd),
     .done(upload_done)
     );
-///////////////////////////////////////////////////////////////////
+//-----------------------------------------------------
+//  Module: ZPushButton_Adapter.
+//  This modules is used to interact with external 4 push buttons.
+//-----------------------------------------------------
 wire [7:0] Cursor_Index;
 wire [7:0] Active_Periods_Num;
 wire [7:0] PulseCounter_Gain_Divider;
 wire Pause;
 ZPushButton_Adapter ic_PushButton_Adapter(
-    .clk(clk_133MHz_210),
+    .clk(clk_80MHz_210),
     .rst_n(rst_Page_Main),
     .en(1'b1),
 
-    //[0]: Previous,[1]:Next,[2]:Okay,[3]:Cancel.
+    //[0]: Previous,[1]:Next,[2]:Okay,[3]:Pause.
     .iButton(iButton),
     .oCursor_Index(Cursor_Index),
+
     //How many SIN periods we draw on LCD.
     //Period1,Period2,Period3,Period4,Period5.
+	//output parameter to other modules.
     .oActive_Periods_Num(Active_Periods_Num),
 
     //PulseCounter Gain Divider.
+	//output parameter to other modules.
     .oPulseCounter_Gain_Divider(PulseCounter_Gain_Divider),
 
     //Time Interval Selection.
+	//output parameter to other modules.
     .oTime_Interval_Selection(Time_Interval_Selection),
 
-    //Pause or Run.
-    //1=Pause, 0=Run.
+    //Pause or Run, 1=Pause, 0=Run.
+	//output parameter to other modules.
     .oPause(Pause)
     );
 
-///////////////////////////////////////////////////////////
-//ZTFT43_Adapter: Read data from SDRAM and send to TFT4.3'' LCD.
+//-----------------------------------------------------
+//  Module: ZTFT43_Adapter.
+//  This modules is used to read data from SDRAM and send to TFT4.3'' LCD.
+//  We use a size of 800*480 memory in SDRAM to work as a framebuffer.
+//  This modules works as a refresher, other modules will update SDRAM.
+//  The benefits to decoupling refresh LCD and write framebuffer logic.
+//-----------------------------------------------------
 wire Rd_Done_ZTFT43;
 wire [15:0] Rd_Data1_ZTFT43;
 wire [15:0] Rd_Data2_ZTFT43;
@@ -551,7 +591,7 @@ wire [15:0] Rd_Data4_ZTFT43;
 wire Rd_Req_ZTFT43;
 wire [23:0] Rd_Addr_ZTFT43;
 ZTFT43_Adapter ic_TFT43Adapter(
-    .clk(clk_133MHz_210),
+    .clk(clk_80MHz_210),
     .rst_n(rst_n),
     .en(1'b1),
 
@@ -595,12 +635,11 @@ wire Wr_Done_ZDraw;
 wire [15:0] MaxPulseCounter;
 wire [15:0] MinPulseCounter;
 ZDrawAdapter ic_DrawAdapter(
-    .clk(clk_133MHz_210),
+    .clk(clk_80MHz_210),
     .rst_n(rst_Page_Main),
     .en(1'b1),
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
+	//Pause or Run, 1=Pause, 0=Run.
 	.iPause(Pause),
 	
 	//Cursor Index.
@@ -635,7 +674,12 @@ ZDrawAdapter ic_DrawAdapter(
     .led(led)
     );
 ////////////////////////////////////////////////////////
-//Page Main: ZShift_and_Draw: Left shift movement old history pulse counter and add new data to the tail.
+//-----------------------------------------------------
+//  Module: ZShift_and_Draw.
+//  This module is used to add NewPhotonCounter to the tail of the ringbuffer in SDRAM.
+//  And then draw Histogram with these 600 PhotonCounter in the framebuffer.
+//  Since each time we do ReadPointer+1 to generate a left-shift effect.
+//-----------------------------------------------------
 wire Rd_Done_ShiftDraw;
 wire [15:0] Rd_Data1_ShiftDraw;
 wire [15:0] Rd_Data2_ShiftDraw;
@@ -653,12 +697,11 @@ wire [15:0] Wr_Data4_ShiftDraw;
 wire Wr_Done_ShiftDraw;
 ///////////////////////////////////////
 ZShift_and_Draw ic_Shift_and_Draw(
-    .clk(clk_133MHz_210),
+    .clk(clk_80MHz_210),
     .rst_n(rst_Page_Main),
     .en(1'b1),
 
-	//Pause or Run.
-	//1=Pause, 0=Run.
+	//Pause or Run, 1=Pause, 0=Run.
 	.iPause(Pause),
 	
 	//New PulseCounter comes.
@@ -693,7 +736,11 @@ ZShift_and_Draw ic_Shift_and_Draw(
 	.oMaxPulseCounter(MaxPulseCounter),
 	.oMinPulseCounter(MinPulseCounter)
     );
-////////////////////////////////////////////////
+
+//-----------------------------------------------------
+//  Module: ZPage_ExtSyncLost.
+//  when Ext50HzSync lost, draw this page to SDRAM, then Refresh Module will draw it on TFT4.3'' LCD.
+//-----------------------------------------------------
 wire Wr_Req_ExtSyncLost;
 wire [23:0] Wr_Addr_ExtSyncLost;
 wire [15:0] Wr_Data1_ExtSyncLost;
@@ -702,9 +749,10 @@ wire [15:0] Wr_Data3_ExtSyncLost;
 wire [15:0] Wr_Data4_ExtSyncLost;
 wire Wr_Done_ExtSyncLost;
 ZPage_ExtSyncLost ic_ExtSyncLost(
-    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .clk(clk_80MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
-    .en(en_Page_ExtSyncLost),
+
+    .en(en_Page_ExtSyncLost), //Was Ext50Sync signal lost? 
 
 	//SDRAM Glue Logic.
     .oSDRAM_Wr_Addr(Wr_Addr_ExtSyncLost), //output, Bank(2)+Row(13)+Column(9)=(24)
@@ -716,11 +764,24 @@ ZPage_ExtSyncLost ic_ExtSyncLost(
     .oSDRAM_Wr_Req(Wr_Req_ExtSyncLost), //output, [1]=1:Write, [0]=1:Read.
     .iSDRAM_Wr_Done(Wr_Done_ExtSyncLost) //input, SDRAM write done signal.
     );
-///////////////////////////////////////////////
-//Only connect ZPage_ExtSyncLost SDRAM RW to SDRAM when ExtSyncLost occurd.
-//Otherwise connect ZDrawAdapter and ZShift_and_Draw to SDRAM.
+
+//-----------------------------------------------------
+//  Module: ZSDRAM_RW_Arbit.
+//  This modules is used to dynamic connect modules to physical SDRAM chip only one at a moment.
+//  
+//  Only connect ZPage_ExtSyncLost SDRAM RW to SDRAM when ExtSyncLost occurd.
+//  Otherwise connect ZDrawAdapter and ZShift_and_Draw to SDRAM.
+//
+//  SDRAM Read:  ZTFT43_Adapter
+//  SDRAM Read:  ZShift_and_Draw
+//  SDRAM Read:  ZPage_PowerOnSelfTest
+//  SDRAM Write: ZDraw_Adapter
+//  SDRAM Write: ZShift_and_Draw
+//  SDRAM Write: ZPage_ExtSyncLost
+//  SDRAM Write: ZPage_PowerOnSelfTest
+//-----------------------------------------------------
 ZSDRAM_RW_Arbit ic_RW_Arbit(
-    .clk(clk_133MHz_210), //133MHz,210 degree phase shift.
+    .clk(clk_80MHz_210), //133MHz,210 degree phase shift.
     .rst_n(rst_n),
     .en(1'b1),
 
@@ -787,6 +848,7 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
     .iWr_Data3_POST(Wr_Data3_POST),
     .iWr_Data4_POST(Wr_Data4_POST),
     .oWr_Done_POST(Wr_Done_POST),
+
     //Read Port. (ZPage_PowerOnSelfTest, Read.)
     .iRd_Req_POST(Rd_Req_POST),
     .iRd_Addr_POST(Rd_Addr_POST),
@@ -807,10 +869,14 @@ ZSDRAM_RW_Arbit ic_RW_Arbit(
     .S_DQM(S_DQM),
     .S_DQ(S_DQ)
     );
-//////////////////////////////////////////////////////
-//Test Signal.
+
+//-----------------------------------------------------
+//  Module: ZTestSignal.
+//  This modules is used to generate fixed test signal while there's no external signals applied in.
+//  Especially Ext50Hz sync signal.
+//-----------------------------------------------------
 ZTestSignal ic_TestSignal(
-    .clk(clk_133MHz_210),
+    .clk(clk_80MHz_210),
     .rst_n(rst_n),
 
 	.photon_pulse_simulate(photon_pulse_simulate),

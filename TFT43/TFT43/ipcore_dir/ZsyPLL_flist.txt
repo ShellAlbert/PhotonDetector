@@ -52,4 +52,3 @@ ZsyPLL\simulation\timing\vcs_session.tcl
 ZsyPLL\simulation\timing\wave.do
 ZsyPLL_flist.txt
 ZsyPLL_xmdf.tcl
-_xmsgs\pn_parser.xmsgs

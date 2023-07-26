@@ -1,59 +1,5558 @@
-\t (00:00:02) allegro 17.4 S017 Windows SPB 64-bit Edition
-\t (00:00:02)     Journal start - Tue Jun 27 11:20:51 2023
-\t (00:00:02)         Host=ET68OKD User=Administrator Pid=7712 CPUs=8
-\t (00:00:02) CmdLine= C:\Cadence\Cadence_SPB_17.4-2019\tools\bin\allegro.exe
-\t (00:00:02) 
-   (00:00:02) Loading axlcore.cxt 
-\t (00:00:05) Opening existing design...
-\i (00:00:05) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged "XS6-9"
-\d (00:00:05) Design opened: D:/Work/GitHub/PhotonDetector/Module_Design/2-FPGA/PCB/XS6-9.brd
-\i (00:00:06) trapsize 10873
-\i (00:00:06) trapsize 11211
-\i (00:00:06) trapsize 9185
-\i (00:00:06) trapsize 9498
-\i (00:00:06) etchedit 
-\i (00:00:09) zoom in 1 
+\t (00:00:06) allegro 17.4 S017 Windows SPB 64-bit Edition
+\t (00:00:06)     Journal start - Thu Jul 20 08:51:14 2023
+\t (00:00:06)         Host=DESKTOP-2RHQ5U7 User=STATUE Pid=11212 CPUs=8
+\t (00:00:06) CmdLine= D:\MySoftware\CadenceSPB174\Cadence\Cadence_SPB_17.4-2019\tools\bin\allegro.exe
+\t (00:00:06) 
+   (00:00:06) Loading axlcore.cxt 
+\t (00:00:07) Opening existing design...
+\i (00:00:07) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged "XS6-9"
+\d (00:00:07) Design opened: D:/MyTemporary/PhotonDetector/Module_Design/2-FPGA/PCB/XS6-9.brd
+\i (00:00:07) trapsize 556
+\i (00:00:07) trapsize 574
+\i (00:00:07) trapsize 579
+\i (00:00:07) trapsize 444
+\i (00:00:07) trapsize 456
+\i (00:00:08) generaledit 
+\i (00:00:08) zoom out 1 
+\i (00:00:08) setwindow pcb
+\i (00:00:08) zoom out -450.5409 -282.9628
+\i (00:00:08) trapsize 911
+\i (00:00:09) zoom out 1 
 \i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -530.4966 -310.2006
-\i (00:00:09) trapsize 4749
-\i (00:00:09) zoom in 1 
+\i (00:00:09) zoom out -450.2128 -282.8170
+\i (00:00:09) trapsize 1823
+\i (00:00:09) zoom out 1 
 \i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -530.4966 -310.2006
-\i (00:00:09) trapsize 2375
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -537.7629 -309.0133
-\i (00:00:09) trapsize 1187
-\i (00:00:09) zoom in 1 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) zoom in -537.7628 -309.0133
-\i (00:00:09) trapsize 594
+\i (00:00:09) zoom out -449.6295 -284.0565
+\i (00:00:09) trapsize 3645
 \i (00:00:10) zoom in 1 
 \i (00:00:10) setwindow pcb
-\i (00:00:10) zoom in -537.7628 -309.0133
-\i (00:00:10) trapsize 297
-\i (00:00:13) move 
-\t (00:00:13) Select element(s) to move.
-\i (00:00:15) setwindow form.find
-\i (00:00:15) FORM find all_on  
-\i (00:00:17) setwindow pcb
-\i (00:00:17) prepopup -536.6289 -308.9598
-\i (00:00:17) done 
-\i (00:00:17) etchedit 
-\i (00:00:19) show element 
-\i (00:00:21) setwindow form.find
-\i (00:00:21) FORM find all_on  
-\i (00:00:25) setwindow pcb
-\i (00:00:25) pick grid -537.5550 -309.4407
-\t (00:00:25) last pick:  -537.6000 -309.4000
-\i (00:00:31) open 
-\e (00:00:31) Do you want to save the changes you made to XS6-9.brd?
-\i (00:00:32) fillin no 
-\i (00:00:49) fillin "D:/Privacy/FootprintLib/psm/TP_OBL1_4X0_6.dra"
-\i (00:00:49) cd "D:/Privacy/FootprintLib/psm"
-\t (00:00:49) Opening existing design...
-\i (00:00:49) trapsize 400
-\i (00:00:49) trapsize 410
-\i (00:00:49) trapsize 400
-\i (00:00:49) trapsize 956
-\t (00:00:49)     Journal end - Tue Jun 27 11:21:38 2023
+\i (00:00:10) zoom in -453.9311 -299.1486
+\i (00:00:10) trapsize 1823
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in -453.9676 -299.1486
+\i (00:00:10) trapsize 911
+\i (00:10:20) layer down 
+\w (00:10:20) Layer select mode not active. Active layer unchanged.
+\i (00:10:20) generaledit 
+\i (00:18:36) help 
+\i (00:41:27) xrefdes U4 
+\i (00:41:27) xname_flush 
+\i (00:41:27) trapsize 591
+\i (00:41:29) zoom out 1 
+\i (00:41:29) setwindow pcb
+\i (00:41:29) zoom out -485.4079 -256.3516
+\i (00:41:29) trapsize 1183
+\i (00:41:29) zoom out 1 
+\i (00:41:29) setwindow pcb
+\i (00:41:29) zoom out -485.1951 -256.3753
+\i (00:41:29) trapsize 2365
+\i (00:41:30) zoom in 1 
+\i (00:41:30) setwindow pcb
+\i (00:41:30) zoom in -487.3239 -257.1322
+\i (00:41:30) trapsize 1183
+\i (00:43:27) xrefdes '!' U4 
+\i (00:43:27) xname_flush '!' 
+\i (00:43:27) xrefdes D4 
+\i (00:43:27) xname_flush 
+\i (00:43:27) trapsize 470
+\i (00:43:29) zoom out 1 
+\i (00:43:29) setwindow pcb
+\i (00:43:29) zoom out -480.7725 -246.1061
+\i (00:43:29) trapsize 941
+\i (00:43:29) zoom out 1 
+\i (00:43:29) setwindow pcb
+\i (00:43:29) zoom out -480.7726 -246.1625
+\i (00:43:29) trapsize 1881
+\i (00:43:30) zoom in 1 
+\i (00:43:30) setwindow pcb
+\i (00:43:30) zoom in -479.8320 -247.2912
+\i (00:43:30) trapsize 941
+\i (00:43:57) xrefdes '!' D4 
+\i (00:43:57) xname_flush '!' 
+\i (00:43:57) xrefdes Q4 
+\i (00:43:57) xname_flush 
+\i (00:43:57) trapsize 756
+\i (00:44:00) zoom out 1 
+\i (00:44:00) setwindow pcb
+\i (00:44:00) zoom out -475.0724 -245.3297
+\i (00:44:00) trapsize 1512
+\i (00:44:01) zoom out 1 
+\i (00:44:01) setwindow pcb
+\i (00:44:01) zoom out -474.2861 -246.4788
+\i (00:44:01) trapsize 3024
+\i (00:44:01) zoom in 1 
+\i (00:44:01) setwindow pcb
+\i (00:44:01) zoom in -474.1651 -248.7167
+\i (00:44:01) trapsize 1512
+\i (00:45:27) xrefdes '!' Q4 
+\i (00:45:27) xname_flush '!' 
+\i (00:45:27) xrefdes Q2 
+\i (00:45:27) xname_flush 
+\i (00:45:27) trapsize 484
+\i (00:45:32) zoom out 1 
+\i (00:45:32) setwindow pcb
+\i (00:45:32) zoom out -491.4526 -246.0377
+\i (00:45:32) trapsize 969
+\i (00:45:32) zoom out 1 
+\i (00:45:32) setwindow pcb
+\i (00:45:32) zoom out -491.3752 -246.0571
+\i (00:45:32) trapsize 1937
+\i (00:45:32) zoom out 1 
+\i (00:45:32) setwindow pcb
+\i (00:45:32) zoom out -491.1039 -246.5219
+\i (00:45:32) trapsize 3874
+\i (00:45:32) zoom in 1 
+\i (00:45:32) setwindow pcb
+\i (00:45:32) zoom in -486.3772 -249.0015
+\i (00:45:32) trapsize 1937
+\i (00:48:29) xrefdes '!' Q2 
+\i (00:48:29) xname_flush '!' 
+\i (00:48:29) xrefdes Q1 
+\i (00:48:29) xname_flush 
+\i (00:48:29) trapsize 573
+\i (00:48:32) zoom out 1 
+\i (00:48:32) setwindow pcb
+\i (00:48:32) zoom out -485.2274 -241.0896
+\i (00:48:32) trapsize 1145
+\i (00:48:32) zoom out 1 
+\i (00:48:32) setwindow pcb
+\i (00:48:32) zoom out -485.2274 -241.0667
+\i (00:48:32) trapsize 2291
+\i (00:48:32) zoom out 1 
+\i (00:48:32) setwindow pcb
+\i (00:48:32) zoom out -485.2274 -241.0668
+\i (00:48:32) trapsize 4581
+\i (00:48:33) zoom in 1 
+\i (00:48:33) setwindow pcb
+\i (00:48:33) zoom in -482.5703 -245.3731
+\i (00:48:33) trapsize 2291
+\i (00:48:33) zoom in 1 
+\i (00:48:33) setwindow pcb
+\i (00:48:33) zoom in -482.5244 -245.3731
+\i (00:48:33) trapsize 1145
+\i (01:03:14) zoom out 
+\i (01:03:14) setwindow pcb
+\i (01:03:14) zoom out -479.8444 -246.7016
+\i (01:03:14) trapsize 2291
+\i (01:14:10) xrefdes R64 
+\i (01:14:10) xname_flush 
+\i (01:14:10) trapsize 375
+\i (01:14:12) zoom out 1 
+\i (01:14:12) setwindow pcb
+\i (01:14:12) zoom out -455.8300 -321.5604
+\i (01:14:12) trapsize 751
+\i (01:14:12) zoom out 1 
+\i (01:14:12) setwindow pcb
+\i (01:14:12) zoom out -455.8299 -321.4402
+\i (01:14:12) trapsize 1502
+\i (01:14:12) zoom out 1 
+\i (01:14:12) setwindow pcb
+\i (01:14:12) zoom out -455.8299 -321.4103
+\i (01:14:12) trapsize 3004
+\i (01:14:12) zoom in 1 
+\i (01:14:12) setwindow pcb
+\i (01:14:12) zoom in -457.6322 -325.8559
+\i (01:14:12) trapsize 1502
+\i (01:21:00) oops 
+\i (01:21:00) next 
+\i (01:22:01) oops 
+\i (04:41:00) trapsize 2073
+\i (04:41:01) trapsize 2062
+\i (04:41:02) trapsize 1502
+\i (04:43:34) xrefdes R2 
+\i (04:43:34) xname_flush 
+\i (04:43:34) trapsize 388
+\i (04:43:36) zoom out 1 
+\i (04:43:36) setwindow pcb
+\i (04:43:36) zoom out -500.2881 -240.8408
+\i (04:43:36) trapsize 776
+\i (04:43:36) zoom out 1 
+\i (04:43:36) setwindow pcb
+\i (04:43:36) zoom out -499.9464 -240.8252
+\i (04:43:36) trapsize 1553
+\i (04:43:36) zoom in 1 
+\i (04:43:36) setwindow pcb
+\i (04:43:36) zoom in -499.9464 -242.7197
+\i (04:43:36) trapsize 776
+\i (04:44:42) xrefdes '!' R2 
+\i (04:44:42) xname_flush '!' 
+\i (04:44:42) xrefdes R4 
+\i (04:44:42) xname_flush 
+\i (04:44:42) trapsize 419
+\i (04:44:45) zoom out 1 
+\i (04:44:45) setwindow pcb
+\i (04:44:45) zoom out -492.7695 -242.0889
+\i (04:44:45) trapsize 837
+\i (04:46:17) zoom out 1 
+\i (04:46:17) setwindow pcb
+\i (04:46:17) zoom out -492.5182 -239.3253
+\i (04:46:17) trapsize 1675
+\i (04:46:28) xrefdes '!' R4 
+\i (04:46:28) xname_flush '!' 
+\i (04:46:28) xrefdes R5 
+\i (04:46:28) xname_flush 
+\i (04:46:28) trapsize 419
+\i (04:46:31) zoom out 1 
+\i (04:46:31) setwindow pcb
+\i (04:46:31) zoom out -479.0450 -241.5520
+\i (04:46:31) trapsize 837
+\i (04:48:16) xrefdes '!' R5 
+\i (04:48:16) xname_flush '!' 
+\i (04:48:16) xrefdes R9 
+\i (04:48:16) xname_flush 
+\i (04:48:16) trapsize 429
+\i (04:48:18) zoom out 1 
+\i (04:48:18) setwindow pcb
+\i (04:48:18) zoom out -485.4558 -244.5266
+\i (04:48:18) trapsize 859
+\i (04:49:33) zoom out 1 
+\i (04:49:33) setwindow pcb
+\i (04:49:33) zoom out -486.8641 -245.5742
+\i (04:49:33) trapsize 1718
+\i (04:49:33) zoom in 1 
+\i (04:49:33) setwindow pcb
+\i (04:49:33) zoom in -477.7614 -249.1467
+\i (04:49:33) trapsize 859
+\i (04:49:39) xrefdes '!' R9 
+\i (04:49:39) xname_flush '!' 
+\i (04:49:39) xrefdes R16 
+\i (04:49:39) xname_flush 
+\i (04:49:39) trapsize 387
+\i (04:49:46) zoom out 1 
+\i (04:49:46) setwindow pcb
+\i (04:49:46) zoom out -476.9023 -250.5272
+\i (04:49:46) trapsize 774
+\i (04:50:51) roam y -96 
+\i (04:50:51) roam y -96
+\i (04:50:58) xrefdes '!' R16 
+\i (04:50:58) xname_flush '!' 
+\i (04:51:00) xrefdes R12 
+\i (04:51:00) xname_flush 
+\i (04:51:00) trapsize 774
+\i (04:51:03) zoom out 1 
+\i (04:51:03) setwindow pcb
+\i (04:51:03) zoom out -480.5775 -249.5445
+\i (04:51:03) trapsize 1549
+\i (04:52:51) xrefdes '!' R12 
+\i (04:52:51) xname_flush '!' 
+\i (04:52:51) xrefdes D2 
+\i (04:52:51) xname_flush 
+\i (04:52:51) trapsize 336
+\i (04:57:05) xrefdes '!' D2 
+\i (04:57:05) xname_flush '!' 
+\i (04:57:05) xrefdes D6 
+\i (04:57:05) xname_flush 
+\i (04:57:05) trapsize 581
+\i (04:57:07) zoom out 1 
+\i (04:57:07) setwindow pcb
+\i (04:57:07) zoom out -493.6611 -247.9039
+\i (04:57:07) trapsize 1161
+\i (04:59:22) xrefdes '!' D6 
+\i (04:59:22) xname_flush '!' 
+\i (04:59:22) xrefdes R15 
+\i (04:59:22) xname_flush 
+\i (04:59:22) trapsize 344
+\i (04:59:25) zoom out 1 
+\i (04:59:25) setwindow pcb
+\i (04:59:25) zoom out -488.0845 -249.3293
+\i (04:59:25) trapsize 688
+\i (04:59:26) zoom out 1 
+\i (04:59:26) setwindow pcb
+\i (04:59:26) zoom out -488.0294 -249.3430
+\i (04:59:26) trapsize 1375
+\i (04:59:41) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:42) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:43) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:44) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:45) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:46) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:47) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:48) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:49) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:50) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:51) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:52) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:53) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:54) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:55) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:56) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:57) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:58) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (04:59:59) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:00) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:01) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:02) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:03) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:04) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:05) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:06) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:07) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:08) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:09) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:10) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:11) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:12) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:13) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:14) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:15) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:16) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:17) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:18) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:19) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:20) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:21) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:22) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:23) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:24) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:25) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:26) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:27) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:28) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:29) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:30) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:31) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:32) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:33) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:34) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:35) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:36) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:37) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:38) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:39) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:40) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:41) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:42) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:43) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:44) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:45) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:46) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:47) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:48) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:49) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:50) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:51) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:52) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:53) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:54) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:55) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:56) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:57) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:58) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:00:59) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:00) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:01) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:02) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:03) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:04) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:05) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:06) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:07) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:08) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:09) redraw 
+\i (05:01:11) xrefdes '!' R15 
+\i (05:01:11) xname_flush '!' 
+\i (05:01:11) xrefdes C5 
+\i (05:01:11) xname_flush 
+\i (05:01:11) trapsize 331
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) zoom out 1 
+\i (05:01:13) setwindow pcb
+\i (05:01:13) zoom out -488.0980 -250.6727
+\i (05:01:13) trapsize 662
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:13) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:14) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:15) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:16) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:17) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:18) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:19) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:20) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:21) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:22) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:23) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:24) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:25) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:26) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:27) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:28) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:29) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:30) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:31) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:32) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:33) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:34) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:35) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:36) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:37) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:38) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:39) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:40) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:41) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:42) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:43) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:44) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:45) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:46) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:47) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:48) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:49) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:50) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:51) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:52) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:53) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:54) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:55) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:56) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:57) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:58) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:01:59) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:00) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:01) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:02) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:03) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:04) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:05) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:06) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:07) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:08) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:09) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:10) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:11) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:12) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:13) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:14) redraw 
+\i (05:02:20) xrefdes '!' C5 
+\i (05:02:20) xname_flush '!' 
+\i (05:02:20) xrefdes C16 
+\i (05:02:20) xname_flush 
+\i (05:02:20) trapsize 387
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) redraw 
+\i (05:02:21) zoom out 1 
+\i (05:02:21) setwindow pcb
+\i (05:02:21) zoom out -477.9623 -258.3668
+\i (05:02:21) trapsize 775
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) zoom out 1 
+\i (05:02:22) setwindow pcb
+\i (05:02:22) zoom out -477.5751 -258.9865
+\i (05:02:22) trapsize 1549
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:22) zoom in 1 
+\i (05:02:22) setwindow pcb
+\i (05:02:22) zoom in -480.4875 -257.4063
+\i (05:02:22) trapsize 775
+\i (05:02:22) redraw 
+\i (05:02:22) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:23) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:24) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:25) redraw 
+\i (05:02:26) redraw 
+\i (05:02:26) redraw 
+\i (05:02:26) redraw 
+\i (05:02:30) xrefdes '!' C16 
+\i (05:02:30) xname_flush '!' 
+\i (05:02:30) xrefdes C9 
+\i (05:02:30) xname_flush 
+\i (05:02:30) trapsize 331
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) zoom out 1 
+\i (05:02:32) setwindow pcb
+\i (05:02:32) zoom out -486.9852 -253.8251
+\i (05:02:32) trapsize 662
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) zoom out 1 
+\i (05:02:32) setwindow pcb
+\i (05:02:32) zoom out -486.9719 -253.8251
+\i (05:02:32) trapsize 1325
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:32) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:33) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:34) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:35) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:36) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:37) redraw 
+\i (05:02:46) xrefdes '!' C9 
+\i (05:02:46) xname_flush '!' 
+\i (05:04:28) xrefdes R33 
+\i (05:04:28) xname_flush 
+\i (05:04:28) trapsize 394
+\i (05:04:31) zoom out 1 
+\i (05:04:31) setwindow pcb
+\i (05:04:31) zoom out -477.4368 -257.2232
+\i (05:04:31) trapsize 789
+\i (05:04:31) zoom out 1 
+\i (05:04:31) setwindow pcb
+\i (05:04:31) zoom out -477.0581 -257.5072
+\i (05:04:31) trapsize 1578
+\i (05:06:06) xrefdes '!' R33 
+\i (05:06:06) xname_flush '!' 
+\i (05:06:06) xrefdes R38 
+\i (05:06:06) xname_flush 
+\i (05:06:06) trapsize 387
+\i (05:06:08) zoom out 1 
+\i (05:06:08) setwindow pcb
+\i (05:06:08) zoom out -483.0332 -260.0879
+\i (05:06:08) trapsize 774
+\i (05:06:08) zoom out 1 
+\i (05:06:08) setwindow pcb
+\i (05:06:08) zoom out -482.9713 -260.2581
+\i (05:06:08) trapsize 1549
+\i (05:09:01) xrefdes '!' R38 
+\i (05:09:01) xname_flush '!' 
+\i (05:09:01) xrefdes R20 
+\i (05:09:01) xname_flush 
+\i (05:09:01) trapsize 693
+\i (05:11:16) xrefdes '!' R20 
+\i (05:11:16) xname_flush '!' 
+\i (05:11:16) xrefdes C16 
+\i (05:11:16) xname_flush 
+\i (05:11:16) trapsize 387
+\i (05:11:17) xrefdes '!' C16 
+\i (05:11:17) xname_flush '!' 
+\i (05:11:19) xrefdes C5.1 
+\i (05:11:19) xname_flush 
+\i (05:11:19) trapsize 140
+\i (05:11:22) xrefdes '!' C5.1 
+\i (05:11:22) xname_flush '!' 
+\i (05:11:23) xrefdes C16 
+\i (05:11:23) xname_flush 
+\i (05:11:23) trapsize 387
+\i (05:11:36) xrefdes '!' C16 
+\i (05:11:36) xname_flush '!' 
+\i (05:11:36) xrefdes C5 
+\i (05:11:36) xname_flush 
+\i (05:11:36) trapsize 331
+\i (05:11:42) xrefdes '!' C5 
+\i (05:11:42) xname_flush '!' 
+\i (05:11:43) xrefdes C5 
+\i (05:11:43) xname_flush 
+\i (05:11:43) trapsize 331
+\i (05:11:43) xrefdes '!' C5 
+\i (05:11:43) xname_flush '!' 
+\i (05:11:44) xrefdes C5 
+\i (05:11:44) xname_flush 
+\i (05:11:44) trapsize 331
+\i (05:11:45) xrefdes '!' C5 
+\i (05:11:45) xname_flush '!' 
+\i (05:12:03) xrefdes C9.2 
+\i (05:12:03) xname_flush 
+\i (05:12:03) trapsize 140
+\i (05:12:04) xrefdes '!' C9.2 
+\i (05:12:04) xname_flush '!' 
+\i (05:12:04) xrefdes C9 
+\i (05:12:04) xname_flush 
+\i (05:12:04) trapsize 331
+\i (05:12:06) xrefdes '!' C9 
+\i (05:12:06) xname_flush '!' 
+\i (05:12:06) xNet N379806 
+\i (05:12:06) xname_flush 
+\i (05:12:06) trapsize 173
+\i (05:12:07) xNet '!' N379806 
+\i (05:12:07) xname_flush '!' 
+\i (05:12:11) xrefdes C9 
+\i (05:12:11) xname_flush 
+\i (05:12:11) trapsize 331
+\i (05:12:55) xrefdes '!' C9 
+\i (05:12:55) xname_flush '!' 
+\i (05:12:55) xrefdes C5 
+\i (05:12:55) xname_flush 
+\i (05:12:55) trapsize 331
+\i (05:12:56) xrefdes '!' C5 
+\i (05:12:56) xname_flush '!' 
+\i (05:16:30) xrefdes R18 
+\i (05:16:30) xname_flush 
+\i (05:16:30) trapsize 394
+\i (05:16:32) zoom out 1 
+\i (05:16:32) setwindow pcb
+\i (05:16:32) zoom out -485.2275 -252.0742
+\i (05:16:32) trapsize 789
+\i (05:16:32) zoom out 1 
+\i (05:16:32) setwindow pcb
+\i (05:16:32) zoom out -485.1644 -252.2792
+\i (05:16:32) trapsize 1578
+\i (05:16:33) zoom in 1 
+\i (05:16:33) setwindow pcb
+\i (05:16:33) zoom in -486.6159 -252.2162
+\i (05:16:33) trapsize 789
+\i (05:19:55) xrefdes '!' R18 
+\i (05:19:55) xname_flush '!' 
+\i (05:19:57) xrefdes C14 
+\i (05:19:57) xname_flush 
+\i (05:19:57) trapsize 382
+\i (05:19:59) zoom out 1 
+\i (05:19:59) setwindow pcb
+\i (05:19:59) zoom out -489.4405 -259.7453
+\i (05:19:59) trapsize 764
+\i (05:20:00) zoom out 1 
+\i (05:20:00) setwindow pcb
+\i (05:20:00) zoom out -489.4099 -259.7147
+\i (05:20:00) trapsize 1529
+\i (05:20:00) zoom in 1 
+\i (05:20:00) setwindow pcb
+\i (05:20:00) zoom in -489.4404 -260.7237
+\i (05:20:00) trapsize 764
+\i (05:22:25) xrefdes '!' C14 
+\i (05:22:25) xname_flush '!' 
+\i (05:22:25) xrefdes R32 
+\i (05:22:25) xname_flush 
+\i (05:22:25) trapsize 323
+\i (05:22:27) zoom out 1 
+\i (05:22:27) setwindow pcb
+\i (05:22:27) zoom out -489.5145 -256.3979
+\i (05:22:27) trapsize 645
+\i (05:24:20) xrefdes '!' R32 
+\i (05:24:20) xname_flush '!' 
+\i (05:24:20) xrefdes R31 
+\i (05:24:20) xname_flush 
+\i (05:24:20) trapsize 373
+\i (05:24:23) zoom out 1 
+\i (05:24:23) setwindow pcb
+\i (05:24:23) zoom out -492.2471 -257.6264
+\i (05:24:23) trapsize 746
+\i (05:24:23) zoom out 1 
+\i (05:24:23) setwindow pcb
+\i (05:24:23) zoom out -492.1277 -257.6114
+\i (05:24:23) trapsize 1493
+\i (05:24:23) zoom out 1 
+\i (05:24:23) setwindow pcb
+\i (05:24:23) zoom out -492.1277 -257.6114
+\i (05:24:23) trapsize 2985
+\i (05:24:23) zoom in 1 
+\i (05:24:23) setwindow pcb
+\i (05:24:23) zoom in -489.6796 -259.6416
+\i (05:24:23) trapsize 1493
+\i (05:27:23) zoom in 1 
+\i (05:27:23) setwindow pcb
+\i (05:27:23) zoom in -491.8291 -257.8204
+\i (05:27:23) trapsize 746
+\i (05:27:23) zoom in 1 
+\i (05:27:23) setwindow pcb
+\i (05:27:23) zoom in -491.8888 -257.5666
+\i (05:27:23) trapsize 373
+\i (05:27:24) pick grid -493.1949 -255.8350
+\t (05:27:24) last pick:  -493.2000 -255.8000
+\i (05:27:24) zoom out 1 
+\i (05:27:24) setwindow pcb
+\i (05:27:24) zoom out -492.4858 -256.8053
+\i (05:27:24) trapsize 746
+\i (05:27:24) zoom out 1 
+\i (05:27:24) setwindow pcb
+\i (05:27:24) zoom out -492.4859 -256.9546
+\i (05:27:24) trapsize 1493
+\i (05:27:25) zoom in 1 
+\i (05:27:25) setwindow pcb
+\i (05:27:25) zoom in -497.4118 -252.4465
+\i (05:27:25) trapsize 746
+\i (05:27:26) move 
+\t (05:27:26) Select element(s) to move.
+\i (05:27:37) xrefdes R23 
+\i (05:27:37) xname_flush 
+\i (05:27:37) trapsize 323
+\t (05:27:37) last pick:  -496.3000 -255.0000
+\t (05:27:37) Moving R23 / R_R0603_1K / R0603.
+\t (05:27:37) Pick new location for the element(s).
+\i (05:29:20) xname_flush '!' 
+\i (05:29:20) xrefdes R26 
+\i (05:29:20) xname_flush 
+\i (05:29:22) zoom out 1 
+\i (05:29:22) setwindow pcb
+\i (05:29:22) zoom out -496.7226 -255.4206
+\i (05:29:22) trapsize 645
+\i (05:29:22) prepopup -497.1485 -255.2140
+\i (05:29:24) cancel 
+\i (05:29:24) generaledit 
+\i (05:29:25) zoom out 1 
+\i (05:29:25) setwindow pcb
+\i (05:29:25) zoom out -497.3937 -257.4337
+\i (05:29:25) trapsize 1290
+\i (05:29:25) zoom out 1 
+\i (05:29:25) setwindow pcb
+\i (05:29:25) zoom out -503.0719 -250.8779
+\i (05:29:25) trapsize 2581
+\i (05:29:29) xrefdes '!' R26 
+\i (05:29:29) xname_flush '!' 
+\i (05:29:29) xrefdes R40 
+\i (05:29:29) xname_flush 
+\i (05:29:29) trapsize 387
+\i (05:29:31) zoom out 1 
+\i (05:29:31) setwindow pcb
+\i (05:29:31) zoom out -497.2997 -262.9464
+\i (05:29:31) trapsize 775
+\i (05:29:31) zoom out 1 
+\i (05:29:31) setwindow pcb
+\i (05:29:31) zoom out -497.2996 -262.9463
+\i (05:29:31) trapsize 1549
+\i (05:29:31) zoom out 1 
+\i (05:29:31) setwindow pcb
+\i (05:29:31) zoom out -497.2997 -262.9463
+\i (05:29:31) trapsize 3098
+\i (05:30:31) xrefdes '!' R40 
+\i (05:30:31) xname_flush '!' 
+\i (05:30:59) xrefdes R17 
+\i (05:30:59) xname_flush 
+\i (05:30:59) trapsize 404
+\i (05:31:01) zoom out 1 
+\i (05:31:01) setwindow pcb
+\i (05:31:01) zoom out -504.6063 -251.2829
+\i (05:31:01) trapsize 809
+\i (05:31:19) xrefdes '!' R17 
+\i (05:31:19) xname_flush '!' 
+\i (05:32:38) xNet Vquench_Pwr 
+\i (05:32:38) xNet N365581 
+\i (05:32:38) xrefdes R35 
+\i (05:32:38) xrefdes C28 
+\i (05:32:38) xNet Gnd 
+\i (05:32:38) xNet A12_L62n_0 
+\i (05:32:38) xNet N419105 
+\i (05:32:38) xNet N383561 
+\i (05:32:38) xNet +5V 
+\i (05:32:38) xrefdes C42 
+\i (05:32:38) xNet B12_L62p_0 
+\i (05:32:38) xNet N365385 
+\i (05:32:38) xNet Gnd_Quench 
+\i (05:32:38) xrefdes Tp16 
+\i (05:32:38) xNet N419097 
+\i (05:32:38) xNet N415863 
+\i (05:32:38) xrefdes U10 
+\i (05:32:38) xrefdes T1 
+\i (05:32:38) xNet N415925 
+\i (05:32:38) xNet N417823 
+\i (05:32:38) xNet +3.3V 
+\i (05:32:38) xNet N417813 
+\i (05:32:38) xrefdes C17 
+\i (05:32:38) xNet N365573 
+\i (05:32:38) xNet N415867 
+\i (05:32:38) xrefdes C6 
+\i (05:32:38) xrefdes U8 
+\i (05:32:38) xrefdes R56 
+\i (05:32:38) xrefdes R54 
+\i (05:32:38) xNet En_Aux_Pwr 
+\i (05:32:38) xrefdes R11 
+\i (05:32:38) xrefdes Tp15 
+\i (05:32:38) xNet N415847 
+\i (05:32:38) xNet Zero_Cross 
+\i (05:32:38) xNet N365393 
+\i (05:32:38) xrefdes R53 
+\i (05:32:38) xrefdes D7 
+\i (05:32:38) xrefdes C36 
+\i (05:32:38) xrefdes C4 
+\i (05:32:38) xrefdes R44 
+\i (05:32:38) xrefdes Tp28 
+\i (05:32:38) xrefdes R55 
+\i (05:32:38) xrefdes R22 
+\i (05:32:38) xrefdes Tp18 
+\i (05:32:38) xrefdes R36 
+\i (05:32:38) xrefdes C1 
+\i (05:32:38) xrefdes U1 
+\i (05:32:38) xrefdes C25 
+\i (05:32:38) xrefdes R47 
+\i (05:32:38) xrefdes Tp27 
+\i (05:32:38) xrefdes R46 
+\i (05:32:38) xrefdes R61 
+\i (05:32:38) xrefdes C27 
+\i (05:32:38) xrefdes R8 
+\i (05:32:38) xrefdes U17 
+\i (05:32:38) xrefdes L1 
+\i (05:32:38) xrefdes D10 
+\i (05:32:38) xNet Aux_Pwr_En 
+\i (05:32:38) xrefdes Tp17 
+\i (05:32:38) xrefdes D3 
+\i (05:32:38) xrefdes R52 
+\i (05:32:38) xrefdes R48 
+\i (05:32:38) xrefdes C33 
+\i (05:32:38) xrefdes C34 
+\i (05:32:38) xrefdes Tp5 
+\i (05:32:38) xrefdes Tp4 
+\i (05:32:38) xname_flush 
+\i (05:32:38) xNet '!' Vquench_Pwr 
+\i (05:32:38) xNet '!' N365581 
+\i (05:32:38) xrefdes '!' R35 
+\i (05:32:38) xrefdes '!' C28 
+\i (05:32:38) xNet '!' Gnd 
+\i (05:32:38) xNet '!' A12_L62n_0 
+\i (05:32:38) xNet '!' N419105 
+\i (05:32:38) xNet '!' N383561 
+\i (05:32:38) xNet '!' +5V 
+\i (05:32:38) xrefdes '!' C42 
+\i (05:32:38) xNet '!' B12_L62p_0 
+\i (05:32:38) xNet '!' N365385 
+\i (05:32:38) xNet '!' Gnd_Quench 
+\i (05:32:38) xrefdes '!' Tp16 
+\i (05:32:38) xNet '!' N419097 
+\i (05:32:38) xNet '!' N415863 
+\i (05:32:38) xrefdes '!' U10 
+\i (05:32:38) xrefdes '!' T1 
+\i (05:32:38) xNet '!' N415925 
+\i (05:32:38) xNet '!' N417823 
+\i (05:32:38) xNet '!' +3.3V 
+\i (05:32:38) xNet '!' N417813 
+\i (05:32:38) xrefdes '!' C17 
+\i (05:32:38) xNet '!' N365573 
+\i (05:32:38) xNet '!' N415867 
+\i (05:32:38) xrefdes '!' C6 
+\i (05:32:38) xrefdes '!' U8 
+\i (05:32:38) xrefdes '!' R56 
+\i (05:32:38) xrefdes '!' R54 
+\i (05:32:38) xNet '!' En_Aux_Pwr 
+\i (05:32:38) xrefdes '!' R11 
+\i (05:32:38) xrefdes '!' Tp15 
+\i (05:32:38) xNet '!' N415847 
+\i (05:32:38) xNet '!' Zero_Cross 
+\i (05:32:38) xNet '!' N365393 
+\i (05:32:38) xrefdes '!' R53 
+\i (05:32:38) xrefdes '!' D7 
+\i (05:32:38) xrefdes '!' C36 
+\i (05:32:38) xrefdes '!' C4 
+\i (05:32:38) xrefdes '!' R44 
+\i (05:32:38) xrefdes '!' Tp28 
+\i (05:32:38) xrefdes '!' R55 
+\i (05:32:38) xrefdes '!' R22 
+\i (05:32:38) xrefdes '!' Tp18 
+\i (05:32:38) xrefdes '!' R36 
+\i (05:32:38) xrefdes '!' C1 
+\i (05:32:38) xrefdes '!' U1 
+\i (05:32:38) xrefdes '!' C25 
+\i (05:32:38) xrefdes '!' R47 
+\i (05:32:38) xrefdes '!' Tp27 
+\i (05:32:38) xrefdes '!' R46 
+\i (05:32:38) xrefdes '!' R61 
+\i (05:32:38) xrefdes '!' C27 
+\i (05:32:38) xrefdes '!' R8 
+\i (05:32:38) xrefdes '!' U17 
+\i (05:32:38) xrefdes '!' L1 
+\i (05:32:38) xrefdes '!' D10 
+\i (05:32:38) xNet '!' Aux_Pwr_En 
+\i (05:32:38) xrefdes '!' Tp17 
+\i (05:32:38) xrefdes '!' D3 
+\i (05:32:38) xrefdes '!' R52 
+\i (05:32:38) xrefdes '!' R48 
+\i (05:32:38) xrefdes '!' C33 
+\i (05:32:38) xrefdes '!' C34 
+\i (05:32:38) xrefdes '!' Tp5 
+\i (05:32:38) xrefdes '!' Tp4 
+\i (05:32:38) xname_flush '!' 
+\i (05:35:43) xrefdes R54 
+\i (05:35:43) xname_flush 
+\i (05:35:43) trapsize 376
+\i (05:35:45) zoom out 1 
+\i (05:35:45) setwindow pcb
+\i (05:35:45) zoom out -456.7591 -291.6257
+\i (05:35:45) trapsize 752
+\i (05:35:45) zoom out 1 
+\i (05:35:45) setwindow pcb
+\i (05:35:45) zoom out -457.3005 -291.7611
+\i (05:35:45) trapsize 1504
+\i (05:35:45) zoom out 1 
+\i (05:35:45) setwindow pcb
+\i (05:35:45) zoom out -457.7216 -292.2424
+\i (05:35:45) trapsize 3008
+\i (05:35:45) zoom in 1 
+\i (05:35:45) setwindow pcb
+\i (05:35:45) zoom in -455.5559 -292.7237
+\i (05:35:45) trapsize 1504
+\i (05:36:44) xrefdes '!' R54 
+\i (05:36:44) xname_flush '!' 
+\i (05:36:45) xrefdes R52 
+\i (05:36:45) xname_flush 
+\i (05:36:45) trapsize 493
+\i (05:36:47) zoom out 1 
+\i (05:36:47) setwindow pcb
+\i (05:36:47) zoom out -453.8880 -289.7505
+\i (05:36:47) trapsize 987
+\i (05:37:53) xrefdes '!' R52 
+\i (05:37:53) xname_flush '!' 
+\i (05:37:53) xrefdes C28 
+\i (05:37:53) xname_flush 
+\i (05:37:53) trapsize 987
+\i (05:37:56) zoom out 1 
+\i (05:37:56) setwindow pcb
+\i (05:37:56) zoom out -455.0666 -287.2936
+\i (05:37:56) trapsize 1974
+\i (05:39:04) xrefdes '!' C28 
+\i (05:39:04) xname_flush '!' 
+\i (05:39:04) xrefdes R53 
+\i (05:39:04) xname_flush 
+\i (05:39:04) trapsize 508
+\i (05:39:06) zoom out 1 
+\i (05:39:06) setwindow pcb
+\i (05:39:06) zoom out -448.7680 -292.1981
+\i (05:39:06) trapsize 1017
+\i (05:39:06) zoom out 1 
+\i (05:39:06) setwindow pcb
+\i (05:39:06) zoom out -448.3205 -292.9708
+\i (05:39:06) trapsize 2034
+\i (05:39:07) zoom in 1 
+\i (05:39:07) setwindow pcb
+\i (05:39:07) zoom in -451.9406 -292.8488
+\i (05:39:07) trapsize 1017
+\i (05:40:30) xrefdes '!' R53 
+\i (05:40:30) xname_flush '!' 
+\i (05:40:30) xrefdes D10 
+\i (05:40:30) xname_flush 
+\i (05:40:30) trapsize 624
+\i (05:40:32) zoom out 1 
+\i (05:40:32) setwindow pcb
+\i (05:40:32) zoom out -448.6145 -290.4093
+\i (05:40:32) trapsize 1247
+\i (05:41:14) help 
+\i (05:43:25) xrefdes '!' D10 
+\i (05:43:25) xname_flush '!' 
+\i (05:43:42) xrefdes R56 
+\i (05:43:42) xname_flush 
+\i (05:43:42) trapsize 330
+\i (07:33:05) xrefdes '!' R56 
+\i (07:33:05) xname_flush '!' 
+\i (07:33:08) exit 
+\e (07:33:08) Do you want to save the changes you made to XS6-9.brd?
+\i (07:33:09) fillin no 
+\t (07:33:10)     Journal end - Thu Jul 20 16:24:19 2023

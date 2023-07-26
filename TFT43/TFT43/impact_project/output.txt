@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+16M
+FF
+20230725
+C:/Users/STATUE/Desktop/photon_detector_v01
+
+MCS
+No

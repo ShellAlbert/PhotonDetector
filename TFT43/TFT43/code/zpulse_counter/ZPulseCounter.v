@@ -123,13 +123,14 @@ if(!rst_n)	begin
 				CNT<=0;
 			end
 else if(en)	begin
-				if(CNT>=CNT_Deadline-1)
-					CNT<=0;
+				if(CNT>=CNT_Deadline)
+					CNT<=0;				
 				else
 					CNT<=CNT+1'b1;
 			end
 	else
 		CNT<=0;
+
 ///////////////////////////////////////////
 //output data update signal before 1 clk to avoid to be reset to zero.
 assign oDataUpdate=(CNT==CNT_Deadline-2)?1'b1:1'b0;
@@ -137,6 +138,7 @@ assign oDataUpdate=(CNT==CNT_Deadline-2)?1'b1:1'b0;
 wire zero_signal;
 assign zero_signal=(CNT==CNT_Deadline-1)?1'b1:1'b0;
 
+////////////////////////////////////////////////////////////////////////
 //rq0.
 always @ (posedge clk or negedge rst_n)
 if(!rst_n) begin
@@ -147,10 +149,10 @@ if(!rst_n) begin
 		end
 else if(en) begin
 			if(zero_signal) begin
-							rq0<=4'd0;
-							rq_overflow[0]<=1'b0;
-							oPulseCounter_Single<=0;
-						 end
+								rq0<=4'd0;
+								rq_overflow[0]<=1'b0;
+								oPulseCounter_Single<=0;
+							end
 			else if(pulse) begin
 							if(rq0>=4'd9) begin
 											rq0<=4'd0;
@@ -160,8 +162,9 @@ else if(en) begin
 									rq0<=rq0+1'b1;
 									rq_overflow[0]<=1'b0;
 								end
-								////////////////////////////////////
-								oPulseCounter_Single<=oPulseCounter_Single+1'b1; 
+							////////////////////////////////////
+							oPulseCounter_Single<=oPulseCounter_Single+1'b1; 
+							//oPulseCounter_Single<=230; //Fixed Value for Debugging.
 						end
 			else begin
 					rq_overflow[0]<=1'b0;
