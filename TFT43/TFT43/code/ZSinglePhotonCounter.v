@@ -538,6 +538,9 @@ ZDataDump2UART ic_upload(
 
     .data_update(data_update),
     .data(PulseCounter_Single),
+
+	.iTime_Interval_Selection(Time_Interval_Selection),
+
     .tx_pin(uart_txd),
     .done(upload_done)
     );

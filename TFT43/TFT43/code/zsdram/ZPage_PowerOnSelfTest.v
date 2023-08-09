@@ -144,6 +144,9 @@ else if(en) begin
 					begin
 						oSDRAM_Testing_Done<=1'b1;
 						i<=i+1'b1;
+
+						//-------------  Stop Here for Debugging  -----------------
+						//i<=i;
 					end
 				6: //Other peripherals Testing could be added here in the future.
 					begin

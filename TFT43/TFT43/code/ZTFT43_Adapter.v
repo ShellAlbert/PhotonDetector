@@ -142,6 +142,8 @@ if(!rst_n)	begin
 				oSDRAM_Rd_Req<=1'b0; 
 
 				addr_ROM<=0; 
+				offset_x<=0;
+				offset_y<=0;
 				//to count how many clk of one refresh period cost.
 				clk_used<=1'b0;
 			end
@@ -276,12 +278,15 @@ else if(en) begin
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin en_TFT43<=1'b1; trigger_TFT43<=4'd4; data_TFT43<=16'h2C00; end
 
-				//Bitmap Image: 800*480.  /8bits=48000bytes.
+				//Bitmap Image: (800)*(480)=384000
+				//we need draw pixels count=800*480=384000 bits /8bits=48000 bytes.
+
 				//Image2Lcd v3.2
 				//Output data type: C Language Array(*.c)
 				//Scan Mode: Vertical Scan.
 				//Output Gray: Single.
-				//Max width&height: 800x480.
+				//Max width&height: 800*480.
+				//Pixel Data Order Reverse with one byte.
 				//scan from bottom to top.
 				28: //Fill Data-1.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
@@ -295,57 +300,64 @@ else if(en) begin
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h02)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h02)?(`Color_Red):(`Color_Green);
 						end 
 				30: //Fill Data-3.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h04)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h04)?(`Color_Red):(`Color_Green);
 						end 
 				31: //Fill Data-4.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h08)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h08)?(`Color_Red):(`Color_Green);
 						end 
 				32: //Fill Data-5.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h10)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h10)?(`Color_Red):(`Color_Green);
 						end 
 				33: //Fill Data-6.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h20)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h20)?(`Color_Red):(`Color_Green);
 						end 
 				34: //Fill Data-7.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h40)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h40)?(`Color_Red):(`Color_Green);
 						end 
 				35: //Fill Data-8.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end
 					else begin 
 							en_TFT43<=1'b1; 
 							trigger_TFT43<=4'd3; 
-							data_TFT43<=(data_ROM&8'h80)?(`Color_Red):(`Color_Green);
+							data_TFT43<=(data_ROM & 8'h80)?(`Color_Red):(`Color_Green);
 						end 
 				36: //Loop.
-					if(CNT1>=384000-1) begin CNT1<=0; i<=i+1'b1; end
+					if(CNT1>=384000) begin CNT1<=0; i<=i+1'b1; end
 					else begin 
-							CNT1<=CNT1+8; 
-							addr_ROM<=addr_ROM+1'b1; 
-							i<=28; 
-						end
+							if(offset_x>='hF) begin
+														CNT1<=CNT1+8; 
+														addr_ROM<=addr_ROM+1'b1; 
+														i<=28; 
+
+														offset_x<=0;
+													end
+							else begin
+									offset_x<=offset_x+1'b1;
+								 end
+						 end
 				37: //LCD_CS=1.
 					if(done_TFT43) begin en_TFT43<=1'b0; i<=i+1'b1; end	
 					else begin 
@@ -477,7 +489,7 @@ else if(en) begin
 					else begin 
 							oSDRAM_Rd_Req<=1'b1; 
 						end
-				/*
+				/* -------------------------------------------------------------------
 				60: //Dump to UART to check if data read from SDRAM are right.
 					if(done_Dump2UART) begin en_Dump2UART<=1'b0; i<=i+1'b1; end
 					else begin en_Dump2UART<=1'b1; data_Dump2UART<=pixel_data1; end

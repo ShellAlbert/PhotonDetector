@@ -178,8 +178,10 @@ else if(en) begin
 							Data1_ZDrawCore<=flag_PauseFlash;
 						end
 				8:
+					//Flash Screen 2 seconds when Pause mode was enabled.
 					if(cnt>=20_000_000) begin cnt<=0; flag_PauseFlash<=~flag_PauseFlash; i<=i-2; end
 					else begin cnt<=cnt+1'b1; end
+
 				9: //Hide PAUSE Text.
 					if(Done_ZDrawCore) begin en_ZDrawCore<=1'b0; i<=i+1'b1; end	 		
 					else begin

@@ -25,6 +25,10 @@ module ZDataDump2UART(
 
     input data_update,
     input [15:0] data,
+
+	//Time Interval Selection.
+    input [7:0] iTime_Interval_Selection,
+
     output tx_pin,
     output reg done
     );
@@ -59,22 +63,27 @@ if(!rst_n)
 else if(en&data_update)
 		new_pulse_counter<=data;
 
-//Sync Head: 2 bytes, 55 AA.
-//Packet Length: 2 bytes.
-//AC50Hz Phase Difference: 2 bytes.
-//Accumulated Photons Count: 2 bytes.
-//Total Gaps No. : 2 bytes.
-//Sub Gap No. : 2 bytes.
-//Time Interval: 1 byte.
-//Checksum: 1 byte.
+
+//----------------------------------------------------------------------
+//External 50Hz Sync Signal.
+//f=50Hz, t=1/f=20mS
+//we split 20mS into 10 pieces, so each piece is 20mS/10=2mS.
+//So convert into phase differnece, it's 360 degree/10=36 degree.
+//----------------------------------------------------------------------
+reg [15:0] phase_diff; 
+reg [7:0] current_gap_no;
+
 reg [3:0] i;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
-			i<=0;
-			done<=1'b0;
-		end
+				i<=0;
+				done<=1'b0;
+				current_gap_no<=1;
+				phase_diff<=36;
+			end
 else if(en)	begin
 				case(i)
+//------------------------------- Sync Head: 2 bytes, 0x55, 0xAA -----------------------------
 					0: //Sync Head: 55.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end		
 						else begin 
@@ -88,31 +97,44 @@ else if(en)	begin
 								uart_en<=1'b1; 
 								tx_data<=8'hAA; 
 							end
-////////////////////////////////////////////////////////////////////
-					2: //Packet Length, high 8 bits.
+//------------------------------- Packet Length: 2 bytes -----------------------------
+//Packet Length=
+//AC 50Hz Phase Difference(2 Bytes)
+//+Accmulated Photons Count(2 Bytes)
+//+Total Gaps No.(2 Bytes)
+//+Sub Gaps No.(2 Bytes)
+//+Timer Interval(1 Byte)
+//+Checksum (1 Byte)
+//=10 Bytes
+					2: //Packet Length, high byte=0.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=0;
+								tx_data<=0; 
 							end
-					3: //Packet Length: low 8 bits.
+					3: //Packet Length: low byte=10.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=10;
+								tx_data<=10;  //10 bytes in total.
 							end
-////////////////////////////////////////////////////////////////////
+//------------------------------- AC50Hz Phase Difference: 2 bytes -----------------------------
+//External 50Hz Sync Signal.
+//f=50Hz, t=1/f=20mS
+//we split 20mS into 10 pieces, so each piece is 20mS/10=2mS.
+//So convert into phase differnece, it's 360 degree/10=36 degree.
+//-----------------------------------------------------------------------------------------------
 					4: //AC50Hz Phase Difference: high byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=0;
+								tx_data<=phase_diff[15:8];
 							end
 					5: //AC50Hz Phase Difference: low byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=15;
+								tx_data<=phase_diff[7:0];
 							end
 ////////////////////////////////////////////////////////////////////
 					6: //Accumulated Photons Count: high byte.
@@ -137,41 +159,73 @@ else if(en)	begin
 					9: //Total Gaps No. : low byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
-								uart_en<=1'b1; 
-								tx_data<=1;
+								uart_en<=1'b1;
+
+								//20mS/10=2mS.
+								//360 degree/10=36 degree.
+								tx_data<=10;
 							end
 ////////////////////////////////////////////////////////////////////
 					10: //Sub Gap No. : high byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=8'h41;
+								tx_data<=0;
 							end
 					11: //Sub Gap No. : low byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=8'h42;
+								tx_data<=current_gap_no;
 							end
 ////////////////////////////////////////////////////////////////////
 					12: //Time Interval: 1 byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
-								uart_en<=1'b1; 
-								tx_data<=8'h43;
-							end
+								uart_en<=1'b1;
+								case(iTime_Interval_Selection)
+									6: tx_data<=1; //2mS.
+									7: tx_data<=2; //10mS.
+									8: tx_data<=3; //100mS.
+									9: tx_data<=4; //500mS.
+									default: tx_data<=1; 
+								endcase
+							 end
 					13: //Checksum: 1byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=8'h44;
+								tx_data<=8'hFF;
 							end
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 					14: 
-						begin done<=1'b1; i<=i+1; end
+						begin
+							if(current_gap_no>=10)
+								current_gap_no<=0;
+							else 
+								current_gap_no<=current_gap_no+1;
+
+							//update phase difference.
+							case(current_gap_no)
+								1: phase_diff<=36;
+								2: phase_diff<=72;
+								3: phase_diff<=108;
+								4: phase_diff<=144;
+								5: phase_diff<=180;
+								6: phase_diff<=216;
+								7: phase_diff<=252;
+								8: phase_diff<=288;
+								9: phase_diff<=324;
+								10: phase_diff<=360;
+							endcase
+
+							//generate done signal.
+							done<=1'b1; 
+							i<=i+1; 
+						end
 					15:
 						begin done<=1'b0; i<=0; end
 				endcase

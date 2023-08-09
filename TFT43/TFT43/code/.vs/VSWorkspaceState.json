@@ -4,12 +4,12 @@
     "\\RTC",
     "\\zdraw",
     "\\zedge_detect",
-    "\\zexternal_sync",
     "\\zpage_no",
     "\\zpulse_counter",
     "\\zpush_button",
     "\\zsdram",
-    "\\ztest_signal"
+    "\\ztest_signal",
+    "\\zuart"
   ],
   "PreviewInSolutionExplorer": false
 }

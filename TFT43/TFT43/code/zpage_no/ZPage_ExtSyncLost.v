@@ -96,6 +96,8 @@ else if(en) begin
 							i<=i-1'b1; //Loop to write next pixel.
 						end
 				3: //Bitmap Image: 800*350.  /8bits=35000bytes.
+				//because 350/4=87.5, so PCtoLCD forced it to 352.
+				//so 800*352/8=35200.
 				//but the PCtoLCD software outputs 35200bytes.
 				//so the real size is 800*352=281600bits/8=35200bytes.
 				//Image2Lcd v3.2
@@ -132,7 +134,7 @@ else if(en) begin
 				6: 
 					begin oSDRAM_Wr_Addr<=oSDRAM_Wr_Addr+4; i<=i+1'b1; end
 				7: //High 4 bits.
-					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end				 
+					if(iSDRAM_Wr_Done) begin oSDRAM_Wr_Req<=0; i<=i+1'b1; end		 
 					else begin 
 							oSDRAM_Wr_Req<=1; 
 							oSDRAM_Wr_Data1<=(data_ROM&8'h10)?(`Color_White):(`Color_Red);
