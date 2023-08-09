@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=D:\MyTemporary\PhotonDetector\TFT43\TFT43\ZSinglePhotonCounter.ncd
-OUTFILE=D:\MyTemporary\PhotonDetector\TFT43\TFT43\ZSinglePhotonCounter.bit
-FAMILY=Spartan6
-PART=xc6slx25-2ftg256
-WORKINGDIR=D:\MyTemporary\PhotonDetector\TFT43\TFT43
-LICENSE=WebPack
-USER_INFO=__0_0_0

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\MyTemporary\Github\PhotonDetector\Ultimate_Integration\ISEProject\ZSinglePhotonCounter.ncd
+OUTFILE=F:\MyTemporary\Github\PhotonDetector\Ultimate_Integration\ISEProject\ZSinglePhotonCounter.bit
+FAMILY=Spartan6
+PART=xc6slx25-2ftg256
+WORKINGDIR=F:\MyTemporary\Github\PhotonDetector\Ultimate_Integration\ISEProject
+LICENSE=WebPack
+USER_INFO=__0_0_0
