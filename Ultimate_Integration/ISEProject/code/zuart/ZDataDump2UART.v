@@ -72,7 +72,9 @@ else if(en&data_update)
 //----------------------------------------------------------------------
 reg [15:0] phase_diff; 
 reg [7:0] current_gap_no;
-
+reg [15:0] locked_pulse_counter;
+reg [7:0] check_sum;
+reg [7:0] time_interval;
 reg [3:0] i;
 always @(posedge clk or negedge rst_n)
 if(!rst_n) begin
@@ -80,6 +82,8 @@ if(!rst_n) begin
 				done<=1'b0;
 				current_gap_no<=1;
 				phase_diff<=36;
+				check_sum<=0;
+				time_interval<=1;
 			end
 else if(en)	begin
 				case(i)
@@ -89,6 +93,7 @@ else if(en)	begin
 						else begin 
 								uart_en<=1'b1; 
 								tx_data<=8'h55; 
+								locked_pulse_counter<=new_pulse_counter;
 							end
 						
 					1: //Sync Head: AA.
@@ -141,13 +146,13 @@ else if(en)	begin
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=new_pulse_counter[15:8];
+								tx_data<=locked_pulse_counter[15:8];
 							end
 					7: //Accumulated Photons Count: low byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=new_pulse_counter[7:0];
+								tx_data<=locked_pulse_counter[7:0];
 							end
 ////////////////////////////////////////////////////////////////////
 					8: //Total Gaps No. : high byte.
@@ -157,7 +162,25 @@ else if(en)	begin
 								tx_data<=0;
 							end
 					9: //Total Gaps No. : low byte.
-						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
+						if(tx_done) begin 
+											uart_en<=1'b0; 
+											i<=i+1'b1; 
+											
+											//update phase difference.
+											case(current_gap_no)
+												1: phase_diff<=36;
+												2: phase_diff<=72;
+												3: phase_diff<=108;
+												4: phase_diff<=144;
+												5: phase_diff<=180;
+												6: phase_diff<=216;
+												7: phase_diff<=252;
+												8: phase_diff<=288;
+												9: phase_diff<=324;
+												10: phase_diff<=360;
+												default: phase_diff<=36;
+											endcase
+										end	
 						else begin 
 								uart_en<=1'b1;
 
@@ -184,49 +207,45 @@ else if(en)	begin
 						else begin 
 								uart_en<=1'b1;
 								case(iTime_Interval_Selection)
-									6: tx_data<=1; //2mS.
-									7: tx_data<=2; //10mS.
-									8: tx_data<=3; //100mS.
-									9: tx_data<=4; //500mS.
-									default: tx_data<=1; 
+									6: begin tx_data<=1; time_interval<=1; end //2mS.
+									7: begin tx_data<=2; time_interval<=2; end//10mS.
+									8: begin tx_data<=3; time_interval<=3; end//100mS.
+									9: begin tx_data<=4; time_interval<=4; end//500mS.
+									default:  begin tx_data<=1; time_interval<=1; end  
 								endcase
 							 end
-					13: //Checksum: 1byte.
+					13:
+						begin
+							check_sum<=8'h55+8'hAA+ //SyncHead.
+								0+10+ //Packet Length.
+								phase_diff[15:8]+phase_diff[7:0]+ //AC50Hz Phase Difference.
+								locked_pulse_counter[15:8]+locked_pulse_counter[7:0]+ //Accumulated Photons Count.
+								0+10+ //Total Gaps No.
+								0+current_gap_no+ //Sub Gap No. 
+								time_interval; //Time Interval.
+							i<=i+1'b1;
+						end
+					14: //Checksum: 1byte.
 						if(tx_done) begin uart_en<=1'b0; i<=i+1'b1; end	
 						else begin 
 								uart_en<=1'b1; 
-								tx_data<=8'hFF;
+								tx_data<=check_sum;
 							end
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-					14: 
+					15: 
 						begin
 							if(current_gap_no>=10)
-								current_gap_no<=0;
+								current_gap_no<=1;
 							else 
 								current_gap_no<=current_gap_no+1;
-
-							//update phase difference.
-							case(current_gap_no)
-								1: phase_diff<=36;
-								2: phase_diff<=72;
-								3: phase_diff<=108;
-								4: phase_diff<=144;
-								5: phase_diff<=180;
-								6: phase_diff<=216;
-								7: phase_diff<=252;
-								8: phase_diff<=288;
-								9: phase_diff<=324;
-								10: phase_diff<=360;
-							endcase
-
 							//generate done signal.
 							done<=1'b1; 
 							i<=i+1; 
 						end
-					15:
+					16:
 						begin done<=1'b0; i<=0; end
 				endcase
 			end

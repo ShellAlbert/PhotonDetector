@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+16M
+FF
+88m_115200
+C:/Users/SNIPER/Desktop/photo_detector
+
+MCS
+No

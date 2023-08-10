@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=D:\MyTemporary\PhotonDetector\TFT43\TFT43\impact.xsl
-OUTFILE=D:\MyTemporary\PhotonDetector\TFT43\TFT43\impact.xsl
+INFILE=F:\MyTemporary\Github\PhotonDetector\Ultimate_Integration\ISEProject\impact.xsl
+OUTFILE=F:\MyTemporary\Github\PhotonDetector\Ultimate_Integration\ISEProject\impact.xsl
 FAMILY=Single
 PART=Single
-WORKINGDIR=D:\MyTemporary\PhotonDetector\TFT43\TFT43
+WORKINGDIR=F:\MyTemporary\Github\PhotonDetector\Ultimate_Integration\ISEProject
 LICENSE=iMPACT
 USER_INFO=iMPACT
