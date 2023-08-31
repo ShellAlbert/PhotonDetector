@@ -1,93 +1,67 @@
-\t (00:00:06) allegro 17.4 S017 Windows SPB 64-bit Edition
-\t (00:00:06)     Journal start - Fri Jul 21 10:42:57 2023
-\t (00:00:06)         Host=DESKTOP-2RHQ5U7 User=STATUE Pid=15024 CPUs=8
-\t (00:00:06) CmdLine= D:\MySoftware\CadenceSPB174\Cadence\Cadence_SPB_17.4-2019\tools\bin\allegro.exe
-\t (00:00:06) 
-   (00:00:06) Loading axlcore.cxt 
-\t (00:00:07) Opening existing design...
-\i (00:00:07) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged "XS6-9"
-\d (00:00:07) Design opened: D:/MyTemporary/PhotonDetector/Module_Design/2-FPGA/PCB/XS6-9.brd
-\i (00:00:07) trapsize 556
-\i (00:00:07) trapsize 574
-\i (00:00:07) trapsize 579
-\i (00:00:07) trapsize 444
-\i (00:00:07) trapsize 456
-\i (00:00:08) generaledit 
-\i (00:00:51) zoom out 1 
-\i (00:00:51) setwindow pcb
-\i (00:00:51) zoom out -448.7546 -280.5933
-\i (00:00:51) trapsize 911
-\i (00:00:51) zoom out 1 
-\i (00:00:51) setwindow pcb
-\i (00:00:51) zoom out -448.4448 -280.9760
-\i (00:00:51) trapsize 1823
-\i (00:00:51) zoom out 1 
-\i (00:00:51) setwindow pcb
-\i (00:00:51) zoom out -448.1531 -281.5228
-\i (00:00:51) trapsize 3645
-\i (00:00:51) zoom out 1 
-\i (00:00:51) setwindow pcb
-\i (00:00:51) zoom out -445.4554 -285.0225
-\i (00:00:51) trapsize 7291
-\i (00:00:51) zoom out 1 
-\i (00:00:51) setwindow pcb
-\i (00:00:51) zoom out -452.3088 -320.7479
-\i (00:00:51) trapsize 14582
-\i (00:00:52) zoom in 1 
-\i (00:00:52) setwindow pcb
-\i (00:00:52) zoom in -503.9285 -261.5456
-\i (00:00:52) trapsize 7291
-\i (00:00:52) zoom in 1 
-\i (00:00:52) setwindow pcb
-\i (00:00:52) zoom in -504.3660 -261.3998
-\i (00:00:52) trapsize 3645
-\i (00:00:53) zoom out 1 
-\i (00:00:53) setwindow pcb
-\i (00:00:53) zoom out -518.6561 -259.8686
-\i (00:00:53) trapsize 7291
-\i (00:00:54) zoom in 1 
-\i (00:00:54) setwindow pcb
-\i (00:00:54) zoom in -490.5132 -248.0574
-\i (00:00:54) trapsize 3645
-\i (00:00:54) zoom in 1 
-\i (00:00:54) setwindow pcb
-\i (00:00:54) zoom in -490.5132 -248.0574
-\i (00:00:54) trapsize 1823
-\i (00:00:54) zoom in 1 
-\i (00:00:54) setwindow pcb
-\i (00:00:54) zoom in -498.9342 -254.1089
-\i (00:00:54) trapsize 911
-\i (00:00:55) zoom out 1 
-\i (00:00:55) setwindow pcb
-\i (00:00:55) zoom out -498.8431 -254.7104
-\i (00:00:55) trapsize 1823
-\i (00:00:56) zoom in 1 
-\i (00:00:56) setwindow pcb
-\i (00:00:56) zoom in -504.4570 -253.5803
-\i (00:00:56) trapsize 911
-\i (00:07:23) zoom out 1 
-\i (00:07:23) setwindow pcb
-\i (00:07:23) zoom out -503.4727 -254.4369
-\i (00:07:23) trapsize 1823
-\i (00:07:31) zoom in 1 
-\i (00:07:31) setwindow pcb
-\i (00:07:31) zoom in -496.0360 -256.5878
-\i (00:07:31) trapsize 911
-\i (00:07:32) zoom in 1 
-\i (00:07:32) setwindow pcb
-\i (00:07:32) zoom in -492.9191 -257.4444
-\i (00:07:32) trapsize 456
-\i (00:07:32) zoom in 1 
-\i (00:07:32) setwindow pcb
-\i (00:07:32) zoom in -492.9190 -257.4444
-\i (00:07:32) trapsize 228
-\i (00:07:33) zoom out 1 
-\i (00:07:33) setwindow pcb
-\i (00:07:33) zoom out -492.7094 -256.9978
-\i (00:07:33) trapsize 456
-\i (00:07:33) zoom out 1 
-\i (00:07:33) setwindow pcb
-\i (00:07:33) zoom out -492.7094 -256.9977
-\i (00:07:33) trapsize 911
-\i (00:29:07) exit 
-\t (00:29:11)     Journal end - Fri Jul 21 11:12:03 2023
+\t (00:09:23) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:09:23)     Journal start - Mon Aug 28 14:23:41 2023
+\t (00:09:23)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=10564 CPUs=12
+\t (00:09:23) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (00:09:23) 
+\d (00:09:23) Design opened: F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/PCB/XS6-9.brd
+\i (00:09:23) generaledit 
+\i (00:09:23) zoom out 1 
+\i (00:09:23) setwindow pcb
+\i (00:09:23) zoom out -451.3831 -282.8516
+\i (00:09:23) trapsize 1155
+\i (00:09:23) zoom out 1 
+\i (00:09:23) setwindow pcb
+\i (00:09:23) zoom out -451.3831 -283.1058
+\i (00:09:23) trapsize 2310
+\i (00:09:23) zoom out 1 
+\i (00:09:24) setwindow pcb
+\i (00:09:24) zoom out -451.3832 -283.5216
+\i (00:09:24) trapsize 4620
+\i (00:09:24) zoom out 1 
+\i (00:09:24) setwindow pcb
+\i (00:09:24) zoom out -451.1059 -285.3697
+\i (00:09:24) trapsize 9241
+\i (00:09:24) zoom out 1 
+\i (00:09:24) setwindow pcb
+\i (00:09:24) zoom out -451.1060 -288.3267
+\i (00:09:24) trapsize 18481
+\i (00:09:24) zoom out 1 
+\i (00:09:24) setwindow pcb
+\i (00:09:24) zoom out -451.1059 -289.4356
+\i (00:09:24) trapsize 36962
+\i (00:09:24) zoom in 1 
+\i (00:09:24) setwindow pcb
+\i (00:09:24) zoom in -519.8561 -285.7393
+\i (00:09:24) trapsize 18481
+\i (00:09:24) zoom in 1 
+\i (00:09:24) setwindow pcb
+\i (00:09:24) zoom in -519.8560 -285.7392
+\i (00:09:24) trapsize 9241
+\i (00:09:34) dlib 
+\i (00:09:39) setwindow form.dlib
+\i (00:09:39) FORM dlib browse_export  
+\i (00:10:11) fillin "F:/MyTemporary/Libs_Footprint"
+\i (00:10:12) FORM dlib execute  
+\t (00:10:12) Starting Cadence export libraries...
+\i (00:11:51) FORM dlib cancel  
+\i (00:11:51) setwindow pcb
+\i (00:11:51) generaledit 
+\i (00:11:59) enved 
+\i (00:11:59) setwindow form.prfedit
+\i (00:11:59) FORM prfedit treelist  My_favorites 
+\i (00:11:59) setwindow pcb
+\i (00:11:59) generaledit 
+\i (00:12:12) setwindow form.prfedit
+\i (00:12:12) FORM prfedit treelist  Paths 
+\i (00:12:14) FORM prfedit treelist  Library Paths 
+\i (00:12:16) FORM prfedit padpath  
+\i (00:12:24) fillin "F:/MyTemporary/Libs_Footprint"
+\i (00:12:31) FORM prfedit psmpath  
+\i (00:12:37) fillin "F:/MyTemporary/Libs_Footprint"
+\i (00:12:40) FORM prfedit apply  
+\i (00:12:42) FORM prfedit done  
+\i (00:12:46) setwindow pcb
+\i (00:12:46) opencd F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB/Sensor_RevA.brd 
+\t (00:12:46) Opening existing design...
+\i (00:12:46) trapsize 10130
+\t (00:12:46)     Journal end - Mon Aug 28 14:27:04 2023

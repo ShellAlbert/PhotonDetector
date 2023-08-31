@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/ISEProject/ZSinglePhotonCounter.xst" -ofn "F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/ISEProject/ZSinglePhotonCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd code/zpulse_counter -nt timestamp -uc ZTFT43_Module.ucf -p xc6slx25-ftg256-2 ZSinglePhotonCounter.ngc ZSinglePhotonCounter.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -convert_bram8 -lc off -power off -o ZSinglePhotonCounter_map.ncd ZSinglePhotonCounter.ngd ZSinglePhotonCounter.pcf 
+par -w -intstyle ise -ol high -mt off ZSinglePhotonCounter_map.ncd ZSinglePhotonCounter.ncd ZSinglePhotonCounter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ZSinglePhotonCounter.twx ZSinglePhotonCounter.ncd -o ZSinglePhotonCounter.twr ZSinglePhotonCounter.pcf -ucf ZTFT43_Module.ucf 
+bitgen -intstyle ise -f ZSinglePhotonCounter.ut ZSinglePhotonCounter.ncd 
+xst -intstyle ise -ifn "F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/ISEProject/ZSinglePhotonCounter.xst" -ofn "F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/ISEProject/ZSinglePhotonCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd code/zpulse_counter -nt timestamp -uc ZTFT43_Module.ucf -p xc6slx25-ftg256-2 ZSinglePhotonCounter.ngc ZSinglePhotonCounter.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -convert_bram8 -lc off -power off -o ZSinglePhotonCounter_map.ncd ZSinglePhotonCounter.ngd ZSinglePhotonCounter.pcf 
+par -w -intstyle ise -ol high -mt off ZSinglePhotonCounter_map.ncd ZSinglePhotonCounter.ncd ZSinglePhotonCounter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ZSinglePhotonCounter.twx ZSinglePhotonCounter.ncd -o ZSinglePhotonCounter.twr ZSinglePhotonCounter.pcf -ucf ZTFT43_Module.ucf 
+bitgen -intstyle ise -f ZSinglePhotonCounter.ut ZSinglePhotonCounter.ncd 
+xst -intstyle ise -ifn "F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/ISEProject/ZSinglePhotonCounter.xst" -ofn "F:/MyTemporary/Github/PhotonDetector/Ultimate_Integration/ISEProject/ZSinglePhotonCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd code/zpulse_counter -nt timestamp -uc ZTFT43_Module.ucf -p xc6slx25-ftg256-2 ZSinglePhotonCounter.ngc ZSinglePhotonCounter.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -convert_bram8 -lc off -power off -o ZSinglePhotonCounter_map.ncd ZSinglePhotonCounter.ngd ZSinglePhotonCounter.pcf 
+par -w -intstyle ise -ol high -mt off ZSinglePhotonCounter_map.ncd ZSinglePhotonCounter.ncd ZSinglePhotonCounter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ZSinglePhotonCounter.twx ZSinglePhotonCounter.ncd -o ZSinglePhotonCounter.twr ZSinglePhotonCounter.pcf -ucf ZTFT43_Module.ucf 
+bitgen -intstyle ise -f ZSinglePhotonCounter.ut ZSinglePhotonCounter.ncd 

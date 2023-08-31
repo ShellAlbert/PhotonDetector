@@ -1,0 +1,150 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+F:\MySoftware\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s
+2 -n 3 -fastpaths -xml ZSinglePhotonCounter.twx ZSinglePhotonCounter.ncd -o
+ZSinglePhotonCounter.twr ZSinglePhotonCounter.pcf -ucf ZTFT43_Module.ucf
+
+Design file:              ZSinglePhotonCounter.ncd
+Physical constraint file: ZSinglePhotonCounter.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+S_DQ<0>     |    6.103(R)|      SLOW  |   -2.363(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<1>     |    5.500(R)|      SLOW  |   -2.177(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<2>     |    5.645(R)|      SLOW  |   -2.463(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<3>     |    5.822(R)|      SLOW  |   -2.516(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<4>     |    5.426(R)|      SLOW  |   -2.192(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<5>     |    5.549(R)|      SLOW  |   -2.240(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<6>     |    5.238(R)|      SLOW  |   -2.376(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<7>     |    5.386(R)|      SLOW  |   -2.193(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<8>     |    5.660(R)|      SLOW  |   -2.593(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<9>     |    3.789(R)|      SLOW  |   -1.476(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<10>    |    3.807(R)|      SLOW  |   -1.545(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<11>    |    3.797(R)|      SLOW  |   -1.581(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<12>    |    3.813(R)|      SLOW  |   -1.587(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<13>    |    4.394(R)|      SLOW  |   -1.635(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<14>    |    4.944(R)|      SLOW  |   -2.062(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<15>    |    5.469(R)|      SLOW  |   -2.232(R)|      FAST  |clk_80MHz_210     |   0.000|
+iButton<0>  |    4.550(R)|      SLOW  |   -1.598(R)|      FAST  |clk_80MHz_210     |   0.000|
+iButton<1>  |    4.366(R)|      SLOW  |   -1.694(R)|      FAST  |clk_80MHz_210     |   0.000|
+iButton<2>  |    4.336(R)|      SLOW  |   -1.975(R)|      FAST  |clk_80MHz_210     |   0.000|
+iButton<3>  |    4.508(R)|      SLOW  |   -1.730(R)|      FAST  |clk_80MHz_210     |   0.000|
+photon_pulse|    5.825(R)|      SLOW  |   -2.907(R)|      FAST  |clk_80MHz_210     |   0.000|
+sync_50Hz   |    5.548(R)|      SLOW  |   -2.725(R)|      FAST  |clk_80MHz_210     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+---------------------+-----------------+------------+-----------------+------------+------------------+--------+
+                     |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination          |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+---------------------+-----------------+------------+-----------------+------------+------------------+--------+
+BL_CTR               |         7.410(R)|      SLOW  |         4.038(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_CS               |         6.783(R)|      SLOW  |         3.687(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<0>          |         6.480(R)|      SLOW  |         3.513(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<1>          |         6.770(R)|      SLOW  |         3.628(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<2>          |         6.585(R)|      SLOW  |         3.494(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<3>          |         6.978(R)|      SLOW  |         3.775(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<4>          |         6.527(R)|      SLOW  |         3.515(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<5>          |         6.575(R)|      SLOW  |         3.474(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<6>          |         7.028(R)|      SLOW  |         3.916(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<7>          |         7.590(R)|      SLOW  |         4.101(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<8>          |         7.625(R)|      SLOW  |         4.137(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<9>          |         7.577(R)|      SLOW  |         4.144(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<10>         |         7.779(R)|      SLOW  |         4.232(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<11>         |         6.921(R)|      SLOW  |         3.749(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<12>         |         6.773(R)|      SLOW  |         3.687(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<13>         |         7.760(R)|      SLOW  |         4.214(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<14>         |         7.579(R)|      SLOW  |         4.102(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_DATA<15>         |         7.636(R)|      SLOW  |         4.147(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_RS               |         6.580(R)|      SLOW  |         3.552(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_RST              |         6.270(R)|      SLOW  |         3.351(R)|      FAST  |clk_80MHz_210     |   0.000|
+LCD_WR               |         6.817(R)|      SLOW  |         3.667(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<0>               |         7.852(R)|      SLOW  |         4.268(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<1>               |         7.940(R)|      SLOW  |         4.301(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<2>               |         8.494(R)|      SLOW  |         4.577(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<3>               |         9.036(R)|      SLOW  |         4.910(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<4>               |         7.656(R)|      SLOW  |         4.160(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<5>               |         7.421(R)|      SLOW  |         4.011(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<6>               |         8.262(R)|      SLOW  |         4.455(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<7>               |         7.673(R)|      SLOW  |         4.155(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<8>               |         7.417(R)|      SLOW  |         3.985(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<9>               |         7.399(R)|      SLOW  |         3.982(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<10>              |         7.398(R)|      SLOW  |         3.973(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<11>              |         8.274(R)|      SLOW  |         4.163(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_A<12>              |         8.313(R)|      SLOW  |         4.178(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_BA<0>              |         7.386(R)|      SLOW  |         4.072(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_BA<1>              |         7.119(R)|      SLOW  |         3.766(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_CLK                |         5.492(R)|      SLOW  |         2.872(R)|      FAST  |clk_80MHz_0       |   0.000|
+                     |         5.492(F)|      SLOW  |         2.878(F)|      FAST  |clk_80MHz_0       |   0.000|
+S_DQ<0>              |         8.156(R)|      SLOW  |         3.692(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<1>              |         7.799(R)|      SLOW  |         3.686(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<2>              |         8.020(R)|      SLOW  |         4.016(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<3>              |         7.965(R)|      SLOW  |         3.965(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<4>              |         7.761(R)|      SLOW  |         3.965(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<5>              |         8.054(R)|      SLOW  |         4.277(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<6>              |         8.160(R)|      SLOW  |         4.277(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<7>              |         8.193(R)|      SLOW  |         4.351(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<8>              |         8.626(R)|      SLOW  |         4.038(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<9>              |         7.674(R)|      SLOW  |         3.420(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<10>             |         7.674(R)|      SLOW  |         3.571(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<11>             |         7.484(R)|      SLOW  |         3.486(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<12>             |         7.265(R)|      SLOW  |         3.380(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<13>             |         7.265(R)|      SLOW  |         3.555(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<14>             |         6.573(R)|      SLOW  |         3.376(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_DQ<15>             |         6.557(R)|      SLOW  |         3.376(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_nCAS               |        11.773(R)|      SLOW  |         6.473(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_nRAS               |        12.983(R)|      SLOW  |         7.474(R)|      FAST  |clk_80MHz_210     |   0.000|
+S_nWE                |        12.175(R)|      SLOW  |         6.644(R)|      FAST  |clk_80MHz_210     |   0.000|
+photon_pulse_simulate|         5.826(R)|      SLOW  |         3.074(R)|      FAST  |clk_80MHz_210     |   0.000|
+sync_50Hz_simulate   |         8.066(R)|      SLOW  |         4.351(R)|      FAST  |clk_80MHz_210     |   0.000|
+uart_txd             |         6.485(R)|      SLOW  |         3.453(R)|      FAST  |clk_80MHz_210     |   0.000|
+---------------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.833|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Aug 11 14:04:12 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4713 MB
+
+
+

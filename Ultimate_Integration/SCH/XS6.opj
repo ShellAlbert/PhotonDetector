@@ -1,6 +1,6 @@
 (ExpressProject ""
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S017 (3936576)  [4/19/2021]-[07/20/23]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[07/20/23]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -138,6 +138,6 @@
       (Frame
         (Placement "44 0 1 -1 -1 -1 -1 0 200 0 755"))
       (Tab 0)))
-  (MPSSessionName "STATUE")
+  (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory
      "C:\Cadence\Cadence_SPB_17.4-2019\tools\capture\library"))

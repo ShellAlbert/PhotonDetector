@@ -22,16 +22,190 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TFT43.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ZSinglePhotonCounter.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ZSinglePhotonCounter.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ZSinglePhotonCounter.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ZSinglePhotonCounter.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ZSinglePhotonCounter.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ZSinglePhotonCounter.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ZSinglePhotonCounter.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ZSinglePhotonCounter.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="ZSinglePhotonCounter.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="ZSinglePhotonCounter.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ZSinglePhotonCounter.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="ZSinglePhotonCounter.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ZSinglePhotonCounter.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ZSinglePhotonCounter.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="ZSinglePhotonCounter.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="ZSinglePhotonCounter.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ZSinglePhotonCounter.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="ZSinglePhotonCounter.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="ZSinglePhotonCounter.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ZSinglePhotonCounter.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ZSinglePhotonCounter_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ZSinglePhotonCounter_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ZSinglePhotonCounter_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ZSinglePhotonCounter_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ZSinglePhotonCounter_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="ZSinglePhotonCounter_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ZSinglePhotonCounter_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ZSinglePhotonCounter_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ZSinglePhotonCounter_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ZSinglePhotonCounter_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ZSinglePhotonCounter_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ZSinglePhotonCounter_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ZSinglePhotonCounter_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ZSinglePhotonCounter_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ZSinglePhotonCounter_xst.xrpt"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ZTFT43_Controller_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ZTFT43_Demo_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ZTFT43_Module_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="zsinglephotoncounter.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="zsinglephotoncounter.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="zsinglephotoncounter.drc" xil_pn:subbranch="FPGAConfiguration"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1691731503" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1691731503">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691731503" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7097430186969338935" xil_pn:start_ts="1691731503">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733666" xil_pn:in_ck="2142079104858159112" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4869837175575823743" xil_pn:start_ts="1691733666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/M9K_ZiMo3232.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/M9K_ZiMo3232.v"/>
+      <outfile xil_pn:name="ipcore_dir/ZPulseCounter_Random.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/ZPulseCounter_Random.v"/>
+      <outfile xil_pn:name="ipcore_dir/ZROM_ExtSyncLost.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/ZROM_ExtSyncLost.v"/>
+      <outfile xil_pn:name="ipcore_dir/ZROM_PowerOnSelfTest.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/ZROM_PowerOnSelfTest.v"/>
+      <outfile xil_pn:name="ipcore_dir/ZSIN_ROM_M9K.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/ZSIN_ROM_M9K.v"/>
+      <outfile xil_pn:name="ipcore_dir/ZsyPLL.v"/>
+    </transform>
     <transform xil_pn:end_ts="1691655990" xil_pn:in_ck="-8773580939660819505" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1691655990">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691731504" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5084509970156282059" xil_pn:start_ts="1691731504">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691731504" xil_pn:in_ck="-8773580939660819505" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-1970394750299821092" xil_pn:start_ts="1691731504">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691731504" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3624141649249845641" xil_pn:start_ts="1691731504">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733726" xil_pn:in_ck="2845128861895804287" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6734493633110877458" xil_pn:start_ts="1691733666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.lso"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.ngc"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.ngr"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.prj"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.stx"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.syr"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.xst"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733726" xil_pn:in_ck="-5328022329431426135" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3761553255627932406" xil_pn:start_ts="1691733726">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733733" xil_pn:in_ck="6162192035555215901" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4719068779325387616" xil_pn:start_ts="1691733726">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.bld"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.ngd"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733814" xil_pn:in_ck="-758572675664591909" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-8922089720441800979" xil_pn:start_ts="1691733733">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.pcf"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_map.map"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_map.mrp"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_map.ncd"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_map.ngm"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_map.xrpt"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_summary.xml"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733853" xil_pn:in_ck="8833451111115046292" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-6937897011652631087" xil_pn:start_ts="1691733814">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.ncd"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.pad"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.par"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.ptwx"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.unroutes"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.xpi"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_pad.csv"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_pad.txt"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733874" xil_pn:in_ck="7261269611470310135" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1691733853">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="zsinglephotoncounter.bgn"/>
+      <outfile xil_pn:name="zsinglephotoncounter.bit"/>
+      <outfile xil_pn:name="zsinglephotoncounter.drc"/>
+    </transform>
+    <transform xil_pn:end_ts="1691732327" xil_pn:in_ck="7884608823350801729" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1691732327">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1691733853" xil_pn:in_ck="4965067513286634199" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1691733846">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.twr"/>
+      <outfile xil_pn:name="ZSinglePhotonCounter.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 
