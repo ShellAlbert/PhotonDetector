@@ -1,0 +1,1012 @@
+\t (02:53:29) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (02:53:29)     Journal start - Fri Sep 15 11:16:38 2023
+\t (02:53:29)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=9296 CPUs=12
+\t (02:53:29) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (02:53:29) 
+\t (02:53:29) Starting new design...
+\i (02:53:29) trapsize 91799
+\i (02:53:29) trapsize 93809
+\i (02:53:29) trapsize 91799
+\i (02:53:29) trapsize 142045
+\i (02:53:29) trapsize 142045
+\i (02:53:29) trapsize 162075
+\i (02:53:48) define grid 
+\t (02:53:48) Spacing fields allow simple equations to aid calculations; prefix with =
+\i (02:53:51) setwindow form.grid
+\i (02:53:51) FORM grid non_etch non_etch_x_grids 0.1 
+\i (02:53:52) FORM grid non_etch non_etch_y_grids 0.1 
+\i (02:53:54) FORM grid all_etch all_etch_x_grids 0.1 
+\i (02:53:55) FORM grid all_etch all_etch_y_grids 0.1 
+\i (02:53:55) FORM grid all_etch all_etch_x_offset 0.0000 
+\i (02:53:55) FORM grid all_etch all_etch_y_offset 0.0000 
+\i (02:53:56) FORM grid top subclass_x_grids 0.1000 
+\i (02:53:56) FORM grid top subclass_x_grids 0.1000 
+\i (02:53:56) FORM grid done  
+\i (02:53:58) setwindow pcb
+\i (02:53:58) add pin 
+\i (02:54:00) setwindow form.mini
+\i (02:54:00) FORM mini pad_browse  
+\t (02:54:04) No valid name selected.
+\i (02:54:06) fillin "Smd_Rec_0D3_0D6"
+\t (02:54:06) Using 'SMD_REC_0D3_0D6.pad'.
+\i (02:54:07) setwindow pcb
+\i (02:54:07) zoom in 1 
+\i (02:54:07) setwindow pcb
+\i (02:54:07) zoom in -14.7320 -1.8595
+\i (02:54:07) trapsize 81037
+\i (02:54:07) zoom in 1 
+\i (02:54:07) setwindow pcb
+\i (02:54:07) zoom in -14.7320 3.0027
+\i (02:54:07) trapsize 40519
+\i (02:54:07) zoom in 1 
+\i (02:54:07) setwindow pcb
+\i (02:54:07) zoom in -14.7320 3.0028
+\i (02:54:07) trapsize 20259
+\i (02:54:08) zoom in 1 
+\i (02:54:08) setwindow pcb
+\i (02:54:08) zoom in -8.6542 -1.4543
+\i (02:54:08) trapsize 10130
+\i (02:54:08) zoom in 1 
+\i (02:54:08) setwindow pcb
+\i (02:54:08) zoom in -6.8308 -1.8595
+\i (02:54:08) trapsize 5065
+\i (02:54:08) zoom in 1 
+\i (02:54:08) setwindow pcb
+\i (02:54:08) zoom in -0.7530 -1.2517
+\i (02:54:08) trapsize 2532
+\i (02:54:08) zoom in 1 
+\i (02:54:08) setwindow pcb
+\i (02:54:08) zoom in -0.7530 -1.0998
+\i (02:54:08) trapsize 1266
+\i (02:54:08) zoom in 1 
+\i (02:54:08) setwindow pcb
+\i (02:54:08) zoom in -0.7276 -1.0744
+\i (02:54:08) trapsize 633
+\i (02:54:09) zoom in 1 
+\i (02:54:09) setwindow pcb
+\i (02:54:09) zoom in -0.3857 -0.3147
+\i (02:54:09) trapsize 317
+\i (02:54:09) zoom in 1 
+\i (02:54:09) setwindow pcb
+\i (02:54:09) zoom in -0.1451 -0.0171
+\i (02:54:09) trapsize 158
+\i (02:54:24) setwindow form.mini
+\i (02:54:24) FORM mini offsetx 0.0000 
+\i (02:54:26) FORM mini x_count 2 
+\i (02:54:28) FORM mini x_spacing 0.7500 
+\i (02:54:32) setwindow pcb
+\i (02:54:32) pick 0 0 
+\t (02:54:32) last pick:  0.0000 0.0000
+\t (02:54:32) Using 'SMD_REC_0D3_0D6.pad'.
+\i (02:54:33) done 
+\t (02:54:33) Exiting from Add Pin.
+\i (02:55:30) add line 
+\i (02:55:33) setwindow form.mini
+\i (02:55:33) FORM mini line_width 0.1000 
+\i (02:55:34) setwindow pcb
+\i (02:55:34) pick grid -0.3667 -0.3843
+\t (02:55:34) last pick:  -0.4000 -0.4000
+\i (02:55:37) ipick 1.02 
+\t (02:55:37) last pick:  0.6200 -0.4000
+\i (02:55:39) ipick 0 0.62 
+\t (02:55:39) last pick:  0.6200 0.2200
+\i (02:55:45) ipick -1.02 
+\t (02:55:45) last pick:  -0.4000 0.2200
+\i (02:55:47) ipick 0 -0.62 
+\t (02:55:47) last pick:  -0.4000 -0.4000
+\i (02:55:48) done 
+\i (02:55:50) move 
+\t (02:55:50) Select element(s) to move.
+\i (02:55:50) pick grid -0.3920 -0.1690
+\t (02:55:50) last pick:  -0.4000 -0.2000
+\t (02:55:50) last pick:  -0.4000 -0.2000
+\t (02:55:50) Element has no origin, using pick.
+\t (02:55:50) Pick new location for the element(s).
+\i (02:55:51) zoom in 1 
+\i (02:55:51) setwindow pcb
+\i (02:55:51) zoom in -0.1198 -0.0614
+\i (02:55:51) trapsize 79
+\i (02:55:54) pick grid -0.1499 -0.0883
+\t (02:55:54) last pick:  -0.1000 -0.1000
+\i (02:55:54) zoom out 1 
+\i (02:55:54) setwindow pcb
+\i (02:55:54) zoom out -0.4712 -0.0281
+\i (02:55:54) trapsize 158
+\i (02:55:54) prepopup -0.4902 -0.0091
+\i (02:55:55) done 
+\i (02:55:56) add line 
+\i (02:55:59) setwindow form.mini
+\i (02:55:59) FORM mini subclass SILKSCREEN_TOP 
+\i (02:55:59) setwindow pcb
+\i (02:55:59) updateport CVPane
+\i (02:56:01) zoom in 1 
+\i (02:56:01) setwindow pcb
+\i (02:56:01) zoom in 0.3835 0.3961
+\i (02:56:01) trapsize 79
+\i (02:56:01) pick grid -0.0359 0.4404
+\t (02:56:01) last pick:  0.0000 0.4000
+\i (02:56:02) prepopup 1.0498 0.3422
+\i (02:56:03) oops 
+\i (02:56:04) pick grid -0.1309 0.4451
+\t (02:56:04) last pick:  -0.1000 0.4000
+\i (02:56:05) prepopup 1.1780 0.3644
+\i (02:56:06) oops 
+\i (02:56:06) zoom out 1 
+\i (02:56:06) setwindow pcb
+\i (02:56:06) zoom out 1.0656 0.3850
+\i (02:56:06) trapsize 158
+\i (02:56:06) zoom in 1 
+\i (02:56:06) setwindow pcb
+\i (02:56:06) zoom in 0.3154 0.5781
+\i (02:56:06) trapsize 79
+\i (02:56:07) pick grid -0.1436 0.4863
+\t (02:56:07) last pick:  -0.1000 0.5000
+\i (02:56:08) prepopup 0.6145 0.4531
+\i (02:56:08) oops 
+\i (02:56:09) pick grid -0.1705 0.4642
+\t (02:56:09) last pick:  -0.2000 0.5000
+\i (02:56:11) setwindow form.mini
+\i (02:56:11) FORM mini lock_direction 90 
+\i (02:56:11) setwindow pcb
+\i (02:56:11) zoom out 1 
+\i (02:56:11) setwindow pcb
+\i (02:56:11) zoom out 0.8741 0.4515
+\i (02:56:11) trapsize 158
+\i (02:56:13) pick grid 1.1273 -0.2543
+\t (02:56:13) last pick:  1.1000 -0.3000
+\i (02:56:15) pick grid 0.5037 -0.4506
+\t (02:56:15) last pick:  0.5000 -0.5000
+\i (02:56:17) pick grid -0.3446 0.3724
+\t (02:56:17) last pick:  -0.3000 0.4000
+\i (02:56:17) zoom in 1 
+\i (02:56:17) setwindow pcb
+\i (02:56:17) zoom in -0.1737 0.4927
+\i (02:56:17) trapsize 79
+\i (02:56:18) pick grid -0.1737 0.4927
+\t (02:56:18) last pick:  -0.2000 0.5000
+\i (02:56:18) prepopup -0.1816 0.5006
+\i (02:56:18) done 
+\i (02:56:18) zoom out 1 
+\i (02:56:18) setwindow pcb
+\i (02:56:18) zoom out -0.5614 0.4769
+\i (02:56:18) trapsize 158
+\i (02:56:18) zoom out 1 
+\i (02:56:18) setwindow pcb
+\i (02:56:18) zoom out -0.5773 0.4484
+\i (02:56:18) trapsize 317
+\i (02:56:18) zoom out 1 
+\i (02:56:18) setwindow pcb
+\i (02:56:18) zoom out -0.5774 0.4420
+\i (02:56:18) trapsize 633
+\i (02:56:19) zoom in 1 
+\i (02:56:19) setwindow pcb
+\i (02:56:19) zoom in 0.6128 0.2520
+\i (02:56:19) trapsize 317
+\i (02:56:19) zoom in 1 
+\i (02:56:19) setwindow pcb
+\i (02:56:19) zoom in 0.6128 0.2520
+\i (02:56:19) trapsize 158
+\i (02:56:22) label refdes 
+\t (02:56:22) Pick text location.
+\i (02:56:24) pick grid 0.2393 -0.0360
+\t (02:56:24) last pick:  0.2000 0.0000
+\t (02:56:24) Enter text string.
+\i (02:56:26) setwindow form.mini
+\i (02:56:26) FORM mini subclass SILKSCREEN_TOP 
+\i (02:56:26) setwindow pcb
+\i (02:56:26) updateport CVPane
+\i (02:56:27) zoom out 1 
+\i (02:56:27) setwindow pcb
+\i (02:56:27) zoom out 1.7271 -0.4444
+\i (02:56:27) trapsize 317
+\i (02:56:27) zoom in 1 
+\i (02:56:27) setwindow pcb
+\i (02:56:27) zoom in 0.3912 0.8661
+\i (02:56:27) trapsize 158
+\i (02:56:28) pick grid 0.1760 0.8693
+\t (02:56:28) last pick:  0.2000 0.9000
+\i (02:56:28) setwindow pcb
+\i (02:56:28) pick 0.2000 0.0000
+\t (02:56:28) Enter text string.
+\i (02:56:28) setwindow pcb
+\i (02:56:28) prepopup -0.4381 0.8820
+\i (02:56:29) done 
+\i (02:56:29) setwindow pcb
+\i (02:56:29) pick 0.2000 0.9000
+\i (02:56:29) setwindow pcb
+\i (02:56:29) zoom out 1 
+\i (02:56:29) setwindow pcb
+\i (02:56:29) zoom out -0.4223 0.8820
+\i (02:56:29) trapsize 317
+\i (02:56:29) zoom in 1 
+\i (02:56:29) setwindow pcb
+\i (02:56:29) zoom in -0.2450 0.6287
+\i (02:56:29) trapsize 158
+\i (02:56:30) zoom out 1 
+\i (02:56:30) setwindow pcb
+\i (02:56:30) zoom out -0.6723 0.9105
+\i (02:56:30) trapsize 317
+\i (02:56:30) zoom in 1 
+\i (02:56:30) setwindow pcb
+\i (02:56:30) zoom in -0.4127 0.3154
+\i (02:56:30) trapsize 158
+\i (02:56:40) shape add rect 
+\i (02:56:43) setwindow form.mini
+\i (02:56:43) FORM mini class 'PACKAGE GEOMETRY' 
+\i (02:56:45) setwindow pcb
+\i (02:56:45) pick grid -0.3494 0.5908
+\t (02:56:45) last pick:  -0.3000 0.6000
+\i (02:56:46) prepopup 1.1574 -0.4284
+\i (02:56:47) oops 
+\i (02:56:48) pick grid -0.3431 0.5592
+\t (02:56:48) last pick:  -0.3000 0.6000
+\i (02:56:48) prepopup 0.6889 -0.2702
+\i (02:56:49) oops 
+\i (02:56:50) pick grid -0.4380 0.5560
+\t (02:56:50) last pick:  -0.4000 0.6000
+\i (02:56:51) pick grid 1.2460 -0.5772
+\t (02:56:51) last pick:  1.2000 -0.6000
+\i (02:56:52) prepopup 1.5246 -0.1404
+\i (02:56:52) done 
+\i (02:56:53) save 
+\t (02:56:54) Symbol 'sod-882.psm' created.
+\i (02:57:00) setwindow form.mini
+\i (02:57:00) FORM mini subcolor 0 
+\i (02:57:00) setwindow pcb
+\i (02:57:00) updateport CVPane
+\i (02:57:04) setwindow form.mini
+\i (02:57:04) FORM mini subclass SILKSCREEN_TOP 
+\i (02:57:04) setwindow pcb
+\i (02:57:04) updateport CVPane
+\i (02:57:05) setwindow form.mini
+\i (02:57:05) FORM mini subcolor 0 
+\i (02:57:05) setwindow pcb
+\i (02:57:05) updateport CVPane
+\i (02:57:06) delete 
+\i (02:57:07) zoom in 1 
+\i (02:57:07) setwindow pcb
+\i (02:57:07) zoom in 0.5338 -0.4221
+\i (02:57:07) trapsize 79
+\i (02:57:08) pick grid 0.4278 -0.3049
+\t (02:57:08) last pick:  0.4000 -0.3000
+\t (02:57:08) Line "Package Geometry/Assembly_Top"
+\i (02:57:08) pick grid dbl 0.4278 -0.3049
+\t (02:57:08) last pick:  0.4000 -0.3000
+\i (02:57:08) prepopup 0.4278 -0.3049
+\i (02:57:09) done 
+\i (02:57:11) setwindow form.mini
+\i (02:57:11) FORM mini subcolor 1 
+\i (02:57:11) setwindow pcb
+\i (02:57:11) updateport CVPane
+\i (02:57:11) zoom out 1 
+\i (02:57:11) setwindow pcb
+\i (02:57:11) zoom out -0.0217 -0.3239
+\i (02:57:11) trapsize 158
+\i (02:57:13) add line 
+\i (02:57:17) setwindow form.mini
+\i (02:57:17) FORM mini line_width 0.0500 
+\i (02:57:20) FORM mini subclass BODY_CENTER 
+\i (02:57:20) setwindow pcb
+\i (02:57:20) updateport CVPane
+\i (02:57:21) setwindow form.mini
+\i (02:57:21) FORM mini subclass ASSEMBLY_TOP 
+\i (02:57:21) setwindow pcb
+\i (02:57:21) updateport CVPane
+\i (02:57:22) pick grid 0.0288 -0.7798
+\t (02:57:22) last pick:  0.0000 -0.8000
+\i (02:57:25) ipick 1.02 
+\t (02:57:25) last pick:  1.0200 -0.8000
+\i (02:57:27) ipick 0 0.62 
+\t (02:57:27) last pick:  1.0200 -0.1800
+\i (02:57:28) ipick -1.02 
+\t (02:57:28) last pick:  0.0000 -0.1800
+\i (02:57:30) ipick 0 -0.62 
+\t (02:57:30) last pick:  0.0000 -0.8000
+\i (02:57:31) done 
+\i (02:57:32) move 
+\t (02:57:32) Select element(s) to move.
+\i (02:57:33) pick grid 0.1333 -0.7956
+\t (02:57:33) last pick:  0.1000 -0.8000
+\t (02:57:33) last pick:  0.1000 -0.8000
+\t (02:57:33) Element has no origin, using pick.
+\t (02:57:33) Pick new location for the element(s).
+\i (02:57:37) pick grid -0.0471 -0.2733
+\t (02:57:37) last pick:  0.0000 -0.3000
+\i (02:57:39) define grid 
+\t (02:57:39) Spacing fields allow simple equations to aid calculations; prefix with =
+\i (02:57:41) setwindow form.grid
+\i (02:57:41) FORM grid non_etch non_etch_x_grids 0.01 
+\i (02:57:42) FORM grid non_etch non_etch_y_grids 0.01 
+\i (02:57:43) FORM grid all_etch all_etch_x_grids 0.01 
+\i (02:57:44) FORM grid all_etch all_etch_y_grids 0.01 
+\i (02:57:44) FORM grid all_etch all_etch_x_offset 0.0000 
+\i (02:57:44) FORM grid all_etch all_etch_y_offset 0.0000 
+\i (02:57:44) FORM grid top subclass_x_grids 0.0100 
+\i (02:57:44) FORM grid top subclass_x_grids 0.0100 
+\i (02:57:44) FORM grid done  
+\i (02:57:46) setwindow pcb
+\i (02:57:46) move 
+\t (02:57:46) Select element(s) to move.
+\i (02:57:46) zoom in 1 
+\i (02:57:46) setwindow pcb
+\i (02:57:46) zoom in -0.7119 -0.1625
+\i (02:57:46) trapsize 79
+\i (02:57:47) pick grid 0.3486 -0.3050
+\t (02:57:47) last pick:  0.3500 -0.3000
+\t (02:57:47) last pick:  0.3500 -0.3000
+\t (02:57:47) Element has no origin, using pick.
+\t (02:57:47) Pick new location for the element(s).
+\i (02:57:50) pick grid 0.3074 -0.2986
+\t (02:57:50) last pick:  0.3100 -0.3000
+\i (02:57:50) zoom out 1 
+\i (02:57:50) setwindow pcb
+\i (02:57:50) zoom out 0.0289 -0.2765
+\i (02:57:50) trapsize 158
+\i (02:57:51) pick grid 1.4279 -0.3302
+\t (02:57:51) last pick:  1.4300 -0.3300
+\i (02:57:51) prepopup 1.4279 -0.3302
+\i (02:57:52) done 
+\i (02:58:00) zoom in 1 
+\i (02:58:00) setwindow pcb
+\i (02:58:00) zoom in 0.2915 -0.0833
+\i (02:58:00) trapsize 79
+\i (02:58:01) add line 
+\i (02:58:02) zoom in 1 
+\i (02:58:02) setwindow pcb
+\i (02:58:02) zoom in 0.2440 0.0718
+\i (02:58:02) trapsize 40
+\i (02:58:03) pick grid -0.0559 0.0006
+\t (02:58:03) last pick:  -0.0600 0.0000
+\i (02:58:05) pick grid 0.7742 -0.0026
+\t (02:58:05) last pick:  0.7700 0.0000
+\i (02:58:05) prepopup 0.7710 -0.0026
+\i (02:58:06) next 
+\i (02:58:06) zoom out 1 
+\i (02:58:06) setwindow pcb
+\i (02:58:06) zoom out 0.2036 0.0868
+\i (02:58:06) trapsize 79
+\i (02:58:07) zoom in 1 
+\i (02:58:07) setwindow pcb
+\i (02:58:07) zoom in 0.3667 0.0979
+\i (02:58:07) trapsize 40
+\i (02:58:09) pick grid 0.0075 0.1818
+\t (02:58:09) last pick:  0.0100 0.1800
+\i (02:58:10) zoom out 1 
+\i (02:58:10) setwindow pcb
+\i (02:58:10) zoom out 0.0075 0.0362
+\i (02:58:10) trapsize 79
+\i (02:58:10) zoom in 1 
+\i (02:58:10) setwindow pcb
+\i (02:58:10) zoom in 0.0154 -0.1505
+\i (02:58:10) trapsize 40
+\i (02:58:13) pick grid 0.0067 -0.1758
+\t (02:58:13) last pick:  0.0100 -0.1800
+\i (02:58:13) prepopup 0.0067 -0.1837
+\i (02:58:13) pick grid 0.0067 -0.1837
+\t (02:58:13) last pick:  0.0100 -0.1800
+\t (02:58:13) last pick:  0.0100 -0.1800
+\w (02:58:13) WARNING(SPMHA1-339): Pick equals previous pick ... try again.
+\e (02:58:13) ERROR(SPMHA1-415): Line segments cannot overlap.
+\t (02:58:13) last pick:  0.0100 0.1800
+\i (02:58:14) prepopup 0.0843 -0.1528
+\i (02:58:14) done 
+\i (02:58:15) copy 
+\t (02:58:15) Select the element(s) to copy.
+\i (02:58:16) pick grid 0.0091 0.1376
+\t (02:58:16) last pick:  0.0100 0.1400
+\t (02:58:16) last pick:  0.0100 0.1800
+\t (02:58:16) last pick:  0.0100 0.1400
+\i (02:58:16) paste 
+\i (02:58:18) pick grid 0.2449 0.1313
+\t (02:58:18) last pick:  0.2400 0.1300
+\i (02:58:21) pick grid 0.5148 0.1241
+\t (02:58:21) last pick:  0.5100 0.1200
+\i (02:58:21) zoom out 1 
+\i (02:58:21) setwindow pcb
+\i (02:58:21) zoom out 0.2077 0.0608
+\i (02:58:21) trapsize 79
+\i (02:58:22) zoom in 1 
+\i (02:58:22) setwindow pcb
+\i (02:58:22) zoom in 0.8709 0.1084
+\i (02:58:22) trapsize 40
+\i (02:58:23) zoom out 1 
+\i (02:58:23) setwindow pcb
+\i (02:58:23) zoom out 0.7213 0.1282
+\i (02:58:23) trapsize 79
+\i (02:58:24) zoom in 1 
+\i (02:58:24) setwindow pcb
+\i (02:58:24) zoom in 0.7214 0.1281
+\i (02:58:24) trapsize 40
+\i (02:58:26) pick grid 0.7135 0.1187
+\t (02:58:26) last pick:  0.7100 0.1200
+\i (02:58:26) zoom out 1 
+\i (02:58:26) setwindow pcb
+\i (02:58:26) zoom out 0.7151 0.1202
+\i (02:58:26) trapsize 79
+\i (02:58:27) prepopup 0.3131 0.1013
+\i (02:58:27) done 
+\i (02:58:28) move 
+\t (02:58:29) Select element(s) to move.
+\i (02:58:30) pick grid 0.2387 0.1519
+\t (02:58:30) last pick:  0.2400 0.1500
+\t (02:58:30) last pick:  0.2400 0.1500
+\t (02:58:30) Element has no origin, using pick.
+\t (02:58:30) Pick new location for the element(s).
+\i (02:58:32) pick grid 0.2071 0.1551
+\t (02:58:32) last pick:  0.2100 0.1600
+\i (02:58:33) pick grid 0.7673 -0.0870
+\t (02:58:33) last pick:  0.7700 -0.0900
+\t (02:58:33) last pick:  0.7700 -0.0900
+\t (02:58:33) Element has no origin, using pick.
+\t (02:58:33) Pick new location for the element(s).
+\i (02:58:36) pick grid 0.7230 0.0253
+\t (02:58:36) last pick:  0.7200 0.0300
+\i (02:58:36) zoom in 1 
+\i (02:58:36) setwindow pcb
+\i (02:58:36) zoom in 0.4350 0.1108
+\i (02:58:36) trapsize 40
+\i (02:58:37) pick grid 0.4968 0.0728
+\t (02:58:37) last pick:  0.5000 0.0700
+\t (02:58:37) last pick:  0.5000 0.0700
+\t (02:58:37) Element has no origin, using pick.
+\t (02:58:37) Pick new location for the element(s).
+\i (02:58:42) pick grid 0.4912 0.0736
+\t (02:58:42) last pick:  0.4900 0.0700
+\i (02:58:43) pick grid 0.3828 0.0918
+\t (02:58:43) last pick:  0.3800 0.0900
+\t (02:58:43) last pick:  0.2000 0.0000
+\t (02:58:43) Pick new location for the element(s).
+\i (02:58:43) zoom out 1 
+\i (02:58:43) setwindow pcb
+\i (02:58:43) zoom out 0.3195 0.1140
+\i (02:58:43) trapsize 79
+\i (02:58:44) prepopup 0.2926 0.1487
+\i (02:58:44) done 
+\i (02:58:47) add line 
+\i (02:58:49) setwindow form.mini
+\i (02:58:49) FORM mini lock_direction 45 
+\i (02:58:50) setwindow pcb
+\i (02:58:50) zoom in 1 
+\i (02:58:50) setwindow pcb
+\i (02:58:50) zoom in -0.0524 0.1092
+\i (02:58:50) trapsize 40
+\i (02:58:51) pick grid 0.0046 0.0055
+\t (02:58:51) last pick:  0.0000 0.0100
+\i (02:58:52) prepopup 0.0909 0.1147
+\i (02:58:52) oops 
+\i (02:58:53) pick grid 0.0007 -0.0008
+\t (02:58:53) last pick:  0.0000 0.0000
+\i (02:58:55) pick grid 0.2064 0.1796
+\t (02:58:55) last pick:  0.2100 0.1800
+\t (02:58:55) Merged with existing line. Start next line.
+\i (02:58:55) prepopup 0.2096 0.1796
+\i (02:58:56) next 
+\i (02:58:57) pick grid 0.0125 0.0008
+\t (02:58:57) last pick:  0.0100 0.0000
+\t (02:58:57) last pick:  0.0000 0.0000
+\i (02:58:58) zoom in 1 
+\i (02:58:58) setwindow pcb
+\i (02:58:58) zoom in 0.1953 -0.1852
+\i (02:58:58) trapsize 20
+\i (02:58:58) zoom in 1 
+\i (02:58:58) setwindow pcb
+\i (02:58:58) zoom in 0.1954 -0.1864
+\i (02:58:58) trapsize 10
+\i (02:58:59) pick grid 0.2118 -0.1751
+\t (02:58:59) last pick:  0.2100 -0.1800
+\i (02:58:59) prepopup 0.2118 -0.1805
+\i (02:59:00) next 
+\i (02:59:00) zoom out 1 
+\i (02:59:00) setwindow pcb
+\i (02:59:00) zoom out 0.1721 -0.1567
+\i (02:59:00) trapsize 20
+\i (02:59:00) zoom out 1 
+\i (02:59:00) setwindow pcb
+\i (02:59:00) zoom out 0.1712 -0.1571
+\i (02:59:00) trapsize 40
+\i (02:59:00) zoom out 1 
+\i (02:59:00) setwindow pcb
+\i (02:59:00) zoom out 0.1799 -0.1619
+\i (02:59:00) trapsize 79
+\i (02:59:02) zoom in 1 
+\i (02:59:02) setwindow pcb
+\i (02:59:02) zoom in 0.6039 0.1213
+\i (02:59:02) trapsize 40
+\i (02:59:02) pick grid 0.4955 0.1688
+\t (02:59:02) last pick:  0.5000 0.1700
+\t (02:59:02) last pick:  0.5000 0.1600
+\i (02:59:05) setwindow form.mini
+\i (02:59:05) FORM mini lock_direction Off 
+\i (02:59:05) setwindow pcb
+\i (02:59:05) zoom in 1 
+\i (02:59:05) setwindow pcb
+\i (02:59:05) zoom in 0.7052 -0.0132
+\i (02:59:05) trapsize 20
+\i (02:59:06) pick grid 0.6977 -0.0048
+\t (02:59:06) last pick:  0.7000 0.0000
+\i (02:59:06) zoom out 1 
+\i (02:59:06) setwindow pcb
+\i (02:59:06) zoom out 0.7048 0.0054
+\i (02:59:06) trapsize 40
+\i (02:59:07) zoom in 1 
+\i (02:59:07) setwindow pcb
+\i (02:59:07) zoom in 0.5062 -0.2081
+\i (02:59:07) trapsize 20
+\i (02:59:07) zoom in 1 
+\i (02:59:07) setwindow pcb
+\i (02:59:07) zoom in 0.5058 -0.2085
+\i (02:59:07) trapsize 10
+\i (02:59:07) zoom out 1 
+\i (02:59:07) setwindow pcb
+\i (02:59:07) zoom out 0.5335 -0.1519
+\i (02:59:07) trapsize 20
+\i (02:59:08) pick grid 0.5022 -0.1953
+\t (02:59:08) last pick:  0.5000 -0.2000
+\i (02:59:08) prepopup 0.5046 -0.2032
+\i (02:59:09) done 
+\i (02:59:09) zoom out 1 
+\i (02:59:09) setwindow pcb
+\i (02:59:09) zoom out 0.6894 -0.1938
+\i (02:59:09) trapsize 40
+\i (02:59:09) zoom out 1 
+\i (02:59:09) setwindow pcb
+\i (02:59:09) zoom out 0.7036 -0.1992
+\i (02:59:09) trapsize 79
+\i (02:59:09) zoom out 1 
+\i (02:59:09) setwindow pcb
+\i (02:59:09) zoom out 0.7115 -0.2040
+\i (02:59:09) trapsize 158
+\i (02:59:10) zoom in 1 
+\i (02:59:10) setwindow pcb
+\i (02:59:10) zoom in 0.4044 -0.0901
+\i (02:59:10) trapsize 79
+\i (02:59:10) zoom in 1 
+\i (02:59:10) setwindow pcb
+\i (02:59:10) zoom in 0.2810 -0.0853
+\i (02:59:10) trapsize 40
+\i (02:59:11) copy 
+\t (02:59:11) Select the element(s) to copy.
+\i (02:59:12) delete 
+\i (02:59:13) pick grid 0.2265 -0.1715
+\t (02:59:13) last pick:  0.2300 -0.1700
+\t (02:59:13) Line "Package Geometry/Assembly_Top"
+\i (02:59:14) prepopup 0.2945 -0.0615
+\i (02:59:14) done 
+\i (02:59:15) zoom out 1 
+\i (02:59:15) setwindow pcb
+\i (02:59:15) zoom out 0.1015 -0.0615
+\i (02:59:15) trapsize 79
+\i (02:59:17) copy 
+\t (02:59:17) Select the element(s) to copy.
+\i (02:59:17) zoom in 1 
+\i (02:59:17) setwindow pcb
+\i (02:59:17) zoom in 0.1900 0.0872
+\i (02:59:17) trapsize 40
+\i (02:59:18) pick grid 0.0215 0.1292
+\t (02:59:18) last pick:  0.0200 0.1300
+\t (02:59:18) last pick:  0.0100 0.1800
+\t (02:59:18) last pick:  0.0200 0.1300
+\i (02:59:18) paste 
+\i (02:59:20) pick grid 0.2098 0.1347
+\t (02:59:20) last pick:  0.2100 0.1300
+\i (02:59:20) prepopup 0.2098 0.1284
+\i (02:59:21) done 
+\i (02:59:23) add line 
+\i (02:59:24) pick grid 0.1956 0.1901
+\t (02:59:24) last pick:  0.2000 0.1900
+\t (02:59:24) last pick:  0.2000 0.1800
+\i (02:59:25) pick grid 0.0104 0.0050
+\t (02:59:25) last pick:  0.0100 0.0100
+\i (02:59:26) prepopup 0.0104 0.0050
+\i (02:59:26) done 
+\i (02:59:27) zoom in 1 
+\i (02:59:27) setwindow pcb
+\i (02:59:27) zoom in 0.0112 -0.0077
+\i (02:59:27) trapsize 20
+\i (02:59:27) zoom in 1 
+\i (02:59:27) setwindow pcb
+\i (02:59:27) zoom in 0.0121 -0.0061
+\i (02:59:27) trapsize 10
+\i (02:59:30) add line 
+\i (02:59:30) zoom out 1 
+\i (02:59:30) setwindow pcb
+\i (02:59:30) zoom out 0.0318 0.0168
+\i (02:59:30) trapsize 20
+\i (02:59:31) zoom out 1 
+\i (02:59:31) setwindow pcb
+\i (02:59:31) zoom out 0.0124 0.0157
+\i (02:59:31) trapsize 40
+\i (02:59:32) zoom in 1 
+\i (02:59:32) setwindow pcb
+\i (02:59:32) zoom in 0.0267 0.0070
+\i (02:59:32) trapsize 20
+\i (02:59:33) pick grid 0.0078 0.0003
+\t (02:59:33) last pick:  0.0100 0.0000
+\t (02:59:33) last pick:  0.0100 0.0100
+\i (02:59:33) zoom out 1 
+\i (02:59:33) setwindow pcb
+\i (02:59:33) zoom out 0.0212 -0.0025
+\i (02:59:33) trapsize 40
+\i (02:59:33) zoom in 1 
+\i (02:59:33) setwindow pcb
+\i (02:59:33) zoom in 0.1937 -0.1979
+\i (02:59:33) trapsize 20
+\i (02:59:34) zoom in 1 
+\i (02:59:34) setwindow pcb
+\i (02:59:34) zoom in 0.1938 -0.1983
+\i (02:59:34) trapsize 10
+\i (02:59:34) pick grid 0.1969 -0.1848
+\t (02:59:34) last pick:  0.2000 -0.1800
+\i (02:59:35) prepopup 0.1953 -0.1796
+\i (02:59:35) done 
+\i (02:59:35) zoom out 1 
+\i (02:59:35) setwindow pcb
+\i (02:59:35) zoom out 0.1678 -0.1787
+\i (02:59:35) trapsize 20
+\i (02:59:35) zoom out 1 
+\i (02:59:35) setwindow pcb
+\i (02:59:35) zoom out 0.1670 -0.1782
+\i (02:59:35) trapsize 40
+\i (02:59:35) zoom out 1 
+\i (02:59:35) setwindow pcb
+\i (02:59:35) zoom out 0.1671 -0.1782
+\i (02:59:35) trapsize 79
+\i (02:59:35) zoom out 1 
+\i (02:59:35) setwindow pcb
+\i (02:59:35) zoom out 0.1623 -0.1767
+\i (02:59:35) trapsize 158
+\i (02:59:36) zoom in 1 
+\i (02:59:36) setwindow pcb
+\i (02:59:36) zoom in 0.3523 -0.0595
+\i (02:59:36) trapsize 79
+\i (02:59:42) add line 
+\i (02:59:43) zoom in 1 
+\i (02:59:43) setwindow pcb
+\i (02:59:43) zoom in 0.0595 0.1810
+\i (02:59:43) trapsize 40
+\i (02:59:43) zoom in 1 
+\i (02:59:43) setwindow pcb
+\i (02:59:43) zoom in 0.0587 0.1802
+\i (02:59:43) trapsize 20
+\i (02:59:44) pick grid 0.0061 0.1882
+\t (02:59:44) last pick:  0.0100 0.1900
+\t (02:59:44) last pick:  0.0100 0.1800
+\i (02:59:46) setwindow form.mini
+\i (02:59:46) FORM mini lock_direction 45 
+\i (02:59:47) setwindow pcb
+\i (02:59:47) zoom out 1 
+\i (02:59:47) setwindow pcb
+\i (02:59:47) zoom out 0.0611 0.2226
+\i (02:59:47) trapsize 40
+\i (02:59:47) zoom in 1 
+\i (02:59:47) setwindow pcb
+\i (02:59:47) zoom in 0.0761 0.2693
+\i (02:59:47) trapsize 20
+\i (02:59:48) pick grid 0.0702 0.2448
+\t (02:59:48) last pick:  0.0700 0.2400
+\i (02:59:49) prepopup 0.0702 0.2440
+\i (02:59:49) next 
+\i (02:59:50) zoom out 1 
+\i (02:59:50) setwindow pcb
+\i (02:59:50) zoom out 0.0065 0.2547
+\i (02:59:50) trapsize 40
+\i (02:59:50) zoom out 1 
+\i (02:59:50) setwindow pcb
+\i (02:59:50) zoom out 0.0064 0.2547
+\i (02:59:50) trapsize 79
+\i (02:59:53) zoom in 1 
+\i (02:59:53) setwindow pcb
+\i (02:59:53) zoom in 0.6553 -0.2675
+\i (02:59:53) trapsize 40
+\i (02:59:53) zoom in 1 
+\i (02:59:53) setwindow pcb
+\i (02:59:53) zoom in 0.6554 -0.2691
+\i (02:59:53) trapsize 20
+\i (02:59:54) pick grid 0.6949 -0.2057
+\t (02:59:54) last pick:  0.6900 -0.2100
+\t (02:59:54) last pick:  0.7000 -0.2000
+\i (02:59:56) pick grid 0.6554 -0.2421
+\t (02:59:56) last pick:  0.6600 -0.2400
+\i (02:59:56) prepopup 0.6558 -0.2417
+\i (02:59:56) done 
+\i (02:59:57) zoom out 1 
+\i (02:59:57) setwindow pcb
+\i (02:59:57) zoom out 0.6558 -0.2580
+\i (02:59:57) trapsize 40
+\i (02:59:57) zoom out 1 
+\i (02:59:57) setwindow pcb
+\i (02:59:57) zoom out 0.6558 -0.2603
+\i (02:59:57) trapsize 79
+\i (02:59:57) zoom out 1 
+\i (02:59:57) setwindow pcb
+\i (02:59:57) zoom out 0.6557 -0.2603
+\i (02:59:57) trapsize 158
+\i (02:59:57) zoom in 1 
+\i (02:59:57) setwindow pcb
+\i (02:59:57) zoom in 0.4278 -0.1084
+\i (02:59:57) trapsize 79
+\i (02:59:59) save 
+\i (02:59:59) fillin yes 
+\t (03:00:00) Symbol 'sod-882.psm' created.
+\e (03:00:07) Command not found: xdehilite
+\i (03:00:07) xname_flush 
+\e (03:00:07) No command active
+\i (03:00:07) done 
+\e (03:00:07) No command active
+\e (03:00:07) Command not found: xhilite
+\i (03:00:07) xname_flush 
+\e (03:00:07) No command active
+\i (03:00:07) done 
+\e (03:00:07) No command active
+\e (03:00:07) Command not found: xdehilite
+\i (03:00:07) xname_flush 
+\e (03:00:07) No command active
+\i (03:00:07) done 
+\e (03:00:07) No command active
+\e (03:00:08) Command not found: xdehilite
+\i (03:00:08) xname_flush 
+\e (03:00:08) No command active
+\i (03:00:08) done 
+\e (03:00:08) No command active
+\e (03:00:09) Command not found: xdehilite
+\i (03:00:09) xname_flush 
+\e (03:00:09) No command active
+\i (03:00:09) done 
+\e (03:00:09) No command active
+\e (03:00:10) Command not found: xdehilite
+\i (03:00:10) xname_flush 
+\e (03:00:10) No command active
+\i (03:00:10) done 
+\e (03:00:10) No command active
+\e (03:00:11) Command not found: xhilite
+\i (03:00:11) xname_flush 
+\e (03:00:11) No command active
+\i (03:00:11) done 
+\e (03:00:11) No command active
+\e (03:00:12) Command not found: xdehilite
+\i (03:00:12) xname_flush 
+\e (03:00:12) No command active
+\i (03:00:12) done 
+\e (03:00:12) No command active
+\e (03:00:12) Command not found: xhilite
+\i (03:00:12) xname_flush 
+\e (03:00:12) No command active
+\i (03:00:12) done 
+\e (03:00:12) No command active
+\e (03:00:13) Command not found: xdehilite
+\i (03:00:13) xname_flush 
+\e (03:00:13) No command active
+\i (03:00:13) done 
+\e (03:00:13) No command active
+\e (03:00:13) Command not found: xhilite
+\i (03:00:13) xname_flush 
+\e (03:00:13) No command active
+\i (03:00:13) done 
+\e (03:00:13) No command active
+\e (03:00:14) Command not found: xdehilite
+\i (03:00:14) xname_flush 
+\e (03:00:14) No command active
+\i (03:00:14) done 
+\e (03:00:14) No command active
+\e (03:00:17) Command not found: xhilite
+\i (03:00:17) xname_flush 
+\e (03:00:17) No command active
+\i (03:00:17) done 
+\e (03:00:17) No command active
+\e (03:00:18) Command not found: xdehilite
+\i (03:00:18) xname_flush 
+\e (03:00:18) No command active
+\i (03:00:18) done 
+\e (03:00:18) No command active
+\e (03:00:18) Command not found: xhilite
+\i (03:00:18) xname_flush 
+\e (03:00:18) No command active
+\i (03:00:18) done 
+\e (03:00:18) No command active
+\e (03:00:21) Command not found: xdehilite
+\i (03:00:21) xname_flush 
+\e (03:00:21) No command active
+\i (03:00:21) done 
+\e (03:00:21) No command active
+\e (03:00:21) Command not found: xhilite
+\i (03:00:21) xname_flush 
+\e (03:00:21) No command active
+\i (03:00:21) done 
+\e (03:00:21) No command active
+\e (03:00:22) Command not found: xdehilite
+\i (03:00:22) xname_flush 
+\e (03:00:22) No command active
+\i (03:00:22) done 
+\e (03:00:22) No command active
+\e (03:00:22) Command not found: xhilite
+\i (03:00:22) xname_flush 
+\e (03:00:22) No command active
+\i (03:00:22) done 
+\e (03:00:22) No command active
+\e (03:00:23) Command not found: xdehilite
+\i (03:00:23) xname_flush 
+\e (03:00:23) No command active
+\i (03:00:23) done 
+\e (03:00:23) No command active
+\e (03:00:23) Command not found: xhilite
+\i (03:00:23) xname_flush 
+\e (03:00:23) No command active
+\i (03:00:23) done 
+\e (03:00:23) No command active
+\e (03:00:27) Command not found: xhilite
+\i (03:00:27) xname_flush 
+\e (03:00:27) No command active
+\i (03:00:27) done 
+\e (03:00:27) No command active
+\e (03:00:29) Command not found: xdehilite
+\i (03:00:29) xname_flush 
+\e (03:00:29) No command active
+\i (03:00:29) done 
+\e (03:00:29) No command active
+\e (03:00:31) Command not found: xhilite
+\i (03:00:31) xname_flush 
+\e (03:00:31) No command active
+\i (03:00:31) done 
+\e (03:00:31) No command active
+\e (03:00:32) Command not found: xdehilite
+\i (03:00:32) xname_flush 
+\e (03:00:32) No command active
+\i (03:00:32) done 
+\e (03:00:32) No command active
+\e (03:00:37) Command not found: xhilite
+\i (03:00:37) xname_flush 
+\e (03:00:37) No command active
+\i (03:00:37) done 
+\e (03:00:37) No command active
+\e (03:00:39) Command not found: xdehilite
+\i (03:00:39) xname_flush 
+\e (03:00:39) No command active
+\i (03:00:39) done 
+\e (03:00:39) No command active
+\e (03:00:44) Command not found: xhilite
+\i (03:00:44) xname_flush 
+\e (03:00:44) No command active
+\i (03:00:44) done 
+\e (03:00:44) No command active
+\e (03:00:45) Command not found: xdehilite
+\i (03:00:45) xname_flush 
+\e (03:00:45) No command active
+\i (03:00:45) done 
+\e (03:00:45) No command active
+\e (03:00:57) Command not found: xhilite
+\i (03:00:57) xname_flush 
+\e (03:00:57) No command active
+\i (03:00:57) done 
+\e (03:00:57) No command active
+\e (03:00:57) Command not found: xdehilite
+\i (03:00:57) xname_flush 
+\e (03:00:57) No command active
+\i (03:00:57) done 
+\e (03:00:57) No command active
+\e (03:00:59) Command not found: xhilite
+\i (03:00:59) xname_flush 
+\e (03:00:59) No command active
+\i (03:00:59) done 
+\e (03:00:59) No command active
+\e (03:00:59) Command not found: xdehilite
+\i (03:00:59) xname_flush 
+\e (03:00:59) No command active
+\i (03:00:59) done 
+\e (03:00:59) No command active
+\e (03:01:00) Command not found: xhilite
+\i (03:01:00) xname_flush 
+\e (03:01:00) No command active
+\i (03:01:00) done 
+\e (03:01:00) No command active
+\e (03:01:00) Command not found: xdehilite
+\i (03:01:00) xname_flush 
+\e (03:01:00) No command active
+\i (03:01:00) done 
+\e (03:01:00) No command active
+\e (03:01:02) Command not found: xhilite
+\i (03:01:02) xname_flush 
+\e (03:01:02) No command active
+\i (03:01:02) done 
+\e (03:01:02) No command active
+\e (03:01:02) Command not found: xdehilite
+\i (03:01:02) xname_flush 
+\e (03:01:02) No command active
+\i (03:01:02) done 
+\e (03:01:02) No command active
+\e (03:01:10) Command not found: xhilite
+\i (03:01:10) xname_flush 
+\e (03:01:10) No command active
+\i (03:01:10) done 
+\e (03:01:10) No command active
+\e (03:01:12) Command not found: xdehilite
+\i (03:01:12) xname_flush 
+\e (03:01:12) No command active
+\i (03:01:12) done 
+\e (03:01:12) No command active
+\e (03:01:13) Command not found: xhilite
+\i (03:01:13) xname_flush 
+\e (03:01:13) No command active
+\i (03:01:13) done 
+\e (03:01:13) No command active
+\e (03:01:13) Command not found: xdehilite
+\i (03:01:13) xname_flush 
+\e (03:01:13) No command active
+\i (03:01:13) done 
+\e (03:01:13) No command active
+\e (03:01:15) Command not found: xhilite
+\i (03:01:15) xname_flush 
+\e (03:01:15) No command active
+\i (03:01:15) done 
+\e (03:01:15) No command active
+\e (03:01:15) Command not found: xdehilite
+\i (03:01:15) xname_flush 
+\e (03:01:15) No command active
+\i (03:01:15) done 
+\e (03:01:15) No command active
+\e (03:01:16) Command not found: xhilite
+\i (03:01:16) xname_flush 
+\e (03:01:16) No command active
+\i (03:01:16) done 
+\e (03:01:16) No command active
+\e (03:01:16) Command not found: xdehilite
+\i (03:01:16) xname_flush 
+\e (03:01:16) No command active
+\i (03:01:16) done 
+\e (03:01:16) No command active
+\e (03:01:17) Command not found: xhilite
+\i (03:01:17) xname_flush 
+\e (03:01:17) No command active
+\i (03:01:17) done 
+\e (03:01:17) No command active
+\e (03:01:18) Command not found: xdehilite
+\i (03:01:18) xname_flush 
+\e (03:01:18) No command active
+\i (03:01:18) done 
+\e (03:01:18) No command active
+\e (03:01:37) Command not found: xhilite
+\i (03:01:37) xname_flush 
+\e (03:01:37) No command active
+\i (03:01:37) done 
+\e (03:01:37) No command active
+\e (03:01:37) Command not found: xdehilite
+\i (03:01:37) xname_flush 
+\e (03:01:37) No command active
+\i (03:01:37) done 
+\e (03:01:37) No command active
+\e (03:01:41) Command not found: xhilite
+\i (03:01:41) xname_flush 
+\e (03:01:41) No command active
+\i (03:01:41) done 
+\e (03:01:41) No command active
+\e (03:01:42) Command not found: xdehilite
+\i (03:01:42) xname_flush 
+\e (03:01:42) No command active
+\i (03:01:42) done 
+\e (03:01:42) No command active
+\e (03:01:43) Command not found: xhilite
+\i (03:01:43) xname_flush 
+\e (03:01:43) No command active
+\i (03:01:43) done 
+\e (03:01:43) No command active
+\e (03:01:44) Command not found: xdehilite
+\i (03:01:44) xname_flush 
+\e (03:01:44) No command active
+\i (03:01:44) done 
+\e (03:01:44) No command active
+\e (03:01:46) Command not found: xhilite
+\i (03:01:46) xname_flush 
+\e (03:01:46) No command active
+\i (03:01:46) done 
+\e (03:01:46) No command active
+\e (03:01:47) Command not found: xdehilite
+\i (03:01:47) xname_flush 
+\e (03:01:47) No command active
+\i (03:01:47) done 
+\e (03:01:47) No command active
+\i (03:02:31) opencd F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-5.brd 
+\t (03:02:31) Opening existing design...
+\i (03:02:31) trapsize 632
+\i (03:02:31) trapsize 648
+\i (03:02:31) trapsize 575
+\i (03:02:31) trapsize 575
+\t (03:02:31)     Journal end - Fri Sep 15 11:25:40 2023

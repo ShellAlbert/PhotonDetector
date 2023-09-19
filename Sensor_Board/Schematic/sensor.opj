@@ -1,6 +1,6 @@
 (ExpressProject ""
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[08/30/23]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[09/14/23]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -133,56 +133,18 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\mytemporary\github\photondetector\sensor_board\schematic\sensor.dsn")
-      (Path "Design Resources"
-         "f:\mytemporary\github\photondetector\sensor_board\schematic\sensor.dsn"
-         "SCHEMATIC1")
+      (Path "Design Resources" ".\sensor.dsn")
+      (Path "Design Resources" ".\sensor.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library"
-         "f:\mytemporary\github\photondetector\sensor_board\schematic\library1.olb")
+      (Path "Design Resources" "Library" ".\library1.olb")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources"
-         "f:\mytemporary\github\photondetector\sensor_board\schematic\sensor.dsn"))
+      (Select "Design Resources" ".\sensor.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 539"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1009 24 557")
-        (Scroll "-131 0")
-        (Zoom "43")
-        (Occurrence "/"))
-      (Path
-         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\SENSOR_BOARD\SCHEMATIC\SENSOR.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "1-HVPS"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1009 24 557")
-        (Scroll "-135 -3")
-        (Zoom "60")
-        (Occurrence "/"))
-      (Path
-         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\SENSOR_BOARD\SCHEMATIC\SENSOR.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "3-QUENCH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1009 24 557")
-        (Scroll "-151 -2")
-        (Zoom "69")
-        (Occurrence "/"))
-      (Path
-         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\SENSOR_BOARD\SCHEMATIC\SENSOR.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "2-AUX-PWR")))
+        (Placement "44 0 1 -1 -1 -1 -1 0 280 0 518"))
+      (Tab 0)))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))

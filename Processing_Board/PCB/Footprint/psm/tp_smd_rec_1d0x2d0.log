@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : TP_SMD_REC_1D0X2D0.dra                        )
+(    Software Version : 22.1P001                                      )
+(    Date/Time        : Mon Sep 11 11:16:08 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm
+    Name      = tp_smd_rec_1d0x2d0.psm
+    User      = SNIPER
+    Machine   = DESKTOP-R1EC6M9
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

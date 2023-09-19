@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : BGA-196.dra                                   )
+(    Software Version : 22.1P001                                      )
+(    Date/Time        : Thu Aug 31 15:44:20 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm
+    Name      = bga-196.psm
+    User      = SNIPER
+    Machine   = DESKTOP-R1EC6M9
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

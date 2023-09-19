@@ -1,0 +1,297 @@
+
+*** Running vivado
+    with args -log ZSinglePhotonDector.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZSinglePhotonDector.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ZSinglePhotonDector.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1461.684 ; gain = 160.746
+Command: read_checkpoint -auto_incremental -incremental F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/SinglePhotonDetector.srcs/utils_1/imports/synth_1/ZSinglePhotonDector.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/SinglePhotonDetector.srcs/utils_1/imports/synth_1/ZSinglePhotonDector.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ZSinglePhotonDector -part xc7s25ftgb196-1IL
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1692
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1903.691 ; gain = 407.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ZSinglePhotonDector' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ZSinglePhotonDector' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:1]
+WARNING: [Synth 8-3848] Net oQuench_Voltage_Down in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:9]
+WARNING: [Synth 8-3848] Net oReset_Discharge in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:10]
+WARNING: [Synth 8-3848] Net oSDRAM_Clk in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:15]
+WARNING: [Synth 8-3848] Net oSDRAM_Clk_EN in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:16]
+WARNING: [Synth 8-3848] Net oSDRAM_Addr in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:17]
+WARNING: [Synth 8-3848] Net oSDRAM_DQM in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:19]
+WARNING: [Synth 8-3848] Net oSDRAM_BankAddr in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:20]
+WARNING: [Synth 8-3848] Net oSDRAM_WE in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:21]
+WARNING: [Synth 8-3848] Net oSDRAM_CAS in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:22]
+WARNING: [Synth 8-3848] Net oSDRAM_RAS in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:23]
+WARNING: [Synth 8-3848] Net oSDRAM_CS in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:24]
+WARNING: [Synth 8-3848] Net oRS485_Dir in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:27]
+WARNING: [Synth 8-3848] Net oRS485_Txd in module/entity ZSinglePhotonDector does not have driver. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/Verilog/ZSinglePhotonDetector.v:28]
+WARNING: [Synth 8-7129] Port oQuench_Voltage_Down in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oReset_Discharge in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Clk in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Clk_EN in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[11] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[10] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[9] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[8] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[7] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[6] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[5] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[4] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[3] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[2] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[3] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[2] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_BankAddr[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_BankAddr[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_WE in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_CAS in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_RAS in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_CS in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oRS485_Dir in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oRS485_Txd in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[31] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[30] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[29] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[28] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[27] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[26] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[25] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[24] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[23] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[22] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[21] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[20] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[19] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[18] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[17] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[16] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[15] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[14] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[13] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[12] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[11] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[10] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[9] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[8] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[7] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[6] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[5] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[4] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[3] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[2] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iPulse in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iPulse2 in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iRS485_Rxd in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iKey[3] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iKey[2] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iKey[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iKey[0] in module ZSinglePhotonDector is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1994.188 ; gain = 497.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1994.188 ; gain = 497.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25ftgb196-1IL
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1IL
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1994.188 ; gain = 497.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1994.188 ; gain = 497.750
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port oQuench_Voltage_Down in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oReset_Discharge in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Clk in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Clk_EN in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[11] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[10] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[9] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[8] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[7] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[6] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[5] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[4] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[3] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[2] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_Addr[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[3] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[2] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_DQM[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_BankAddr[1] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_BankAddr[0] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_WE in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_CAS in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_RAS in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oSDRAM_CS in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oRS485_Dir in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oRS485_Txd in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[31] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[30] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[29] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[28] in module ZSinglePhotonDector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ioSDRAM_Data[27] in module ZSinglePhotonDector is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUF  |     2|
+|2     |OBUFT |    28|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    30|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 148 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.625 ; gain = 665.188
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2162.586 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.395 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1d10d42c
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2263.395 ; gain = 777.883
+INFO: [Common 17-1381] The checkpoint 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/firmware/SinglePhotonDetector/SinglePhotonDetector.runs/synth_1/ZSinglePhotonDector.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ZSinglePhotonDector_utilization_synth.rpt -pb ZSinglePhotonDector_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 11 13:44:02 2023...

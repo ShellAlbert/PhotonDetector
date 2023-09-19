@@ -1,0 +1,198 @@
+(ExpressProject "Processing_Board"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[09/19/23]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    ("Allegro Netlist Directory"
+       "F:\MyTemporary\Github\PhotonDetector\Processing_Board\Schematic\Netlist")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\processing_board.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\PROCESSING_BOARD.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}")
+    (BOM_Header "Item\tQuantity\tReference\tPart\tPCBFootprint")
+    (BOM_Include_File
+       "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\PROCESSING_BOARD.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" ".\allegro\processing_board.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "255")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    ("Allegro Backannotation Run Genfeed" "TRUE")
+    ("Allegro Backannotation Board File"
+       "F:\MyTemporary\Github\PhotonDetector\Processing_Board\PCB\PROCESSING-6.brd")
+    ("Allegro Backannotation Netlist Directory"
+       "F:\MyTemporary\Github\PhotonDetector\Processing_Board\Schematic\Netlist")
+    ("Allegro Backannotation Output File" "allegro\PROCESSING_BOARD.swp")
+    ("Allegro Backannotation Update Schematic" "TRUE")
+    ("Allegro Backannotation View Output" "FALSE")
+    ("Allegro Setup Output Warnings" "FALSE")
+    (Backannotation_TAB "0"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\processing_board.bom"
+      (Type "Report"))
+    (File ".\netlist\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\netlist\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\netlist\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\netlist\pinview.dat"
+      (Type "Report")
+      (DisplayName "pinView.dat"))
+    (File ".\netlist\netview.dat"
+      (Type "Report")
+      (DisplayName "netView.dat"))
+    (File ".\netlist\funcview.dat"
+      (Type "Report")
+      (DisplayName "funcView.dat"))
+    (File ".\netlist\compview.dat"
+      (Type "Report")
+      (DisplayName "compView.dat"))
+    (File ".\allegro\processing_board.swp"
+      (Type "Report")
+      (DisplayName "PROCESSING_BOARD.swp")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs"
+    (File ".\netlist\swp.log"
+      (Type "Log File")
+      (LogFile
+         "F:\MyTemporary\Github\PhotonDetector\Processing_Board\Schematic\Netlist\swp.log")))
+  (PartMRUSelector
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (ADS1110A0IDBVR
+      (FullPartName "ADS1110A0IDBVR.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (IS66WVH8M8BLL-100B1LI
+      (FullPartName "IS66WVH8M8BLL-100B1LI.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("T POINT R"
+      (FullPartName "T POINT R.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (CONN-1X10
+      (FullPartName "CONN-1X10.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("T POINT S"
+      (FullPartName "T POINT S.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (LSF0204PW-Q100J
+      (FullPartName "LSF0204PW-Q100J.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CDSOT23-SM712
+      (FullPartName "CDSOT23-SM712.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SN65HVD75DR
+      (FullPartName "SN65HVD75DR.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (VCC_BAR
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IS42S32400F-7BLI
+      (FullPartName "IS42S32400F-7BLI.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("DIODE TVS"
+      (FullPartName "DIODE TVS.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (FUSE
+      (FullPartName "FUSE.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (TLV73318PDBVR
+      (FullPartName "TLV73318PDBVR.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (MP2338GTL
+      (FullPartName "MP2338GTL.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "Logs")
+      (Select "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 541"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 0 0 5 1064 24 559")
+        (Scroll "1996 1564")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\PROCESSING_BOARD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "SNIPER")
+  (ISPCBBASICLICENSE "false"))

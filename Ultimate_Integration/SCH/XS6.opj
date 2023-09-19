@@ -121,22 +121,17 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "d:\mytemporary\photondetector\module_design\2-fpga\sch\xs6.dsn")
-      (Path "Design Resources"
-         "d:\mytemporary\photondetector\module_design\2-fpga\sch\xs6.dsn"
-         "SCHEMATIC1")
+      (Path "Design Resources" ".\xs6.dsn")
+      (Path "Design Resources" ".\xs6.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources"
-         "d:\mytemporary\photondetector\module_design\2-fpga\sch\xs6.dsn"
-         "SCHEMATIC1" "3-QUENCH"))
+      (Select "Design Resources" ".\xs6.dsn" "SCHEMATIC1" "3-QUENCH"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 755"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 381 0 518"))
       (Tab 0)))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory
