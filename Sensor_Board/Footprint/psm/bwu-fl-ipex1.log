@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : BWU-FL-IPEX1.dra                              )
+(    Software Version : 22.1P001                                      )
+(    Date/Time        : Thu Mar  7 14:25:25 2024                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = F:/MyTemporary/Github/PhotonDetector/Sensor_Board/Footprint/psm
+    Name      = bwu-fl-ipex1.psm
+    User      = SNIPER
+    Machine   = DESKTOP-R1EC6M9
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

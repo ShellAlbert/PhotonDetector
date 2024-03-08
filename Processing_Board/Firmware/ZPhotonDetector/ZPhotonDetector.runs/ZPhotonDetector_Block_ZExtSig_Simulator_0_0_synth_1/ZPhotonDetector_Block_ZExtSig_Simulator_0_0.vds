@@ -1,0 +1,225 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Nov 10 14:47:04 2023
+# Process ID: 1480
+# Current directory: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1
+# Command line: vivado.exe -log ZPhotonDetector_Block_ZExtSig_Simulator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZPhotonDetector_Block_ZExtSig_Simulator_0_0.tcl
+# Log file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.vds
+# Journal file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-R1EC6M9, OS: Windows, CPU Frequency: 3096 MHz, CPU Physical cores: 6, Host memory: 8288 MB
+#-----------------------------------------------------------
+source ZPhotonDetector_Block_ZExtSig_Simulator_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1460.781 ; gain = 159.965
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/MySoftware/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtSig_Simulator_0_0
+Command: synth_design -top ZPhotonDetector_Block_ZExtSig_Simulator_0_0 -part xc7s25ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10076
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2266.766 ; gain = 410.434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZExtSig_Simulator_0_0' [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/synth/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ZExtSig_Simulator' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'ZExtSig_Simulator' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZExtSig_Simulator_0_0' (0#1) [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/synth/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.v:53]
+WARNING: [Synth 8-7129] Port iClk in module ZExtSig_Simulator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iRst_N in module ZExtSig_Simulator is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2357.934 ; gain = 501.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2375.855 ; gain = 519.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2375.855 ; gain = 519.523
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2375.855 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2398.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 2398.648 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has an empty top module
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTest_Mode driven by constant 1
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oFixedFreq_Sel[2] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oFixedFreq_Sel[1] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oFixedFreq_Sel[0] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[7] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[6] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[5] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[4] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[3] driven by constant 0
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[2] driven by constant 1
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[1] driven by constant 1
+INFO: [Synth 8-3917] design ZPhotonDetector_Block_ZExtSig_Simulator_0_0 has port oTime_Interval[0] driven by constant 0
+WARNING: [Synth 8-7129] Port iClk in module ZPhotonDetector_Block_ZExtSig_Simulator_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iRst_N in module ZPhotonDetector_Block_ZExtSig_Simulator_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2398.648 ; gain = 519.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2398.648 ; gain = 542.316
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2398.648 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2398.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4a4ac618
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 2398.648 ; gain = 907.250
+INFO: [Common 17-1381] The checkpoint 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ZPhotonDetector_Block_ZExtSig_Simulator_0_0, cache-ID = 805e1420d6f21315
+INFO: [Common 17-1381] The checkpoint 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ZPhotonDetector_Block_ZExtSig_Simulator_0_0_utilization_synth.rpt -pb ZPhotonDetector_Block_ZExtSig_Simulator_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 10 14:48:01 2023...

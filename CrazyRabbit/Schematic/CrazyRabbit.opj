@@ -1,0 +1,212 @@
+(ExpressProject "CrazyRabbit"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[10/08/23]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    ("Allegro Netlist Directory"
+       "F:\MyTemporary\Github\PhotonDetector\CrazyRabbit\Schematic\Netlist")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\crazyrabbit.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Board_sim_option "VHDL_flow")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" ".\allegro\crazyrabbit.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "255")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\netlist\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\netlist\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\netlist\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs")
+  (PartMRUSelector
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (AXK6F00547YG
+      (FullPartName "AXK6F00547YG.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS7A7001DDAR
+      (FullPartName "TPS7A7001DDAR.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (INDUCTOR
+      (FullPartName "INDUCTOR.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (TPS53319DQPT
+      (FullPartName "TPS53319DQPT.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (REF3012AIDBZR
+      (FullPartName "REF3012AIDBZR.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (N25Q128A13ESE40E
+      (FullPartName "N25Q128A13ESE40E.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (VCC_BAR
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (XC7S50-1CSGA324I
+      (FullPartName "XC7S50-1CSGA324IG.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "6"))
+    (MT41K256M16TW-107
+      (FullPartName "MT41K256M16TW-107.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CRYSTAL
+      (FullPartName "CRYSTAL.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("T POINT R"
+      (FullPartName "T POINT R.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (MT9700
+      (FullPartName "MT9700.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (UM805RE
+      (FullPartName "UM805RE.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("DIODE SCHOTTKY"
+      (FullPartName "DIODE SCHOTTKY.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("DIODE TVS"
+      (FullPartName "DIODE TVS.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (MT3420B
+      (FullPartName "MT3420B.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CRYSTAL13
+      (FullPartName "CRYSTAL13.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (CRYSTAL14
+      (FullPartName "CRYSTAL14.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (MCIMX6Y2CVM08AB
+      (FullPartName "MCIMX6Y2CVM08ABE.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "4"))
+    ("CAP NP"
+      (FullPartName "CAP NP.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (FEMDRW008G-88A39
+      (FullPartName "FEMDRW008G-88A39.Normal")
+      (LibraryName
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\LIBRARY1.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\crazyrabbit.dsn")
+      (Path "Design Resources" ".\crazyrabbit.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library" ".\library1.olb")
+      (Path "Outputs")
+      (Select "Design Resources" ".\crazyrabbit.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 283 0 568"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 975 24 586")
+        (Scroll "5371 3548")
+        (Zoom "512")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\CRAZYRABBIT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "ARM"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 975 24 586")
+        (Scroll "22 50")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\CRAZYRABBIT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "CONNECTOR"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 975 24 586")
+        (Scroll "181 629")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\CRAZYRABBIT\SCHEMATIC\CRAZYRABBIT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "FPGA")))
+  (MPSSessionName "SNIPER")
+  (ISPCBBASICLICENSE "false"))

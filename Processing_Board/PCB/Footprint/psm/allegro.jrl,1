@@ -1,63 +1,77 @@
-\t (01:02:56) allegro 22.1 P001 Windows SPB 64-bit Edition
-\t (01:02:56)     Journal start - Fri Sep 15 09:26:05 2023
-\t (01:02:56)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=9296 CPUs=12
-\t (01:02:56) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
-\t (01:02:56) 
-\d (01:02:56) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm/TFBGA-24.dra
-\i (01:02:56) trapsize 273
-\i (01:02:57) zoom out 1 
-\i (01:02:57) setwindow pcb
-\i (01:02:57) zoom out -0.2009 -1.4672
-\i (01:02:57) trapsize 547
-\i (01:02:57) zoom in 1 
-\i (01:02:57) setwindow pcb
-\i (01:02:57) zoom in 0.0942 0.2384
-\i (01:02:57) trapsize 273
-\i (01:02:57) zoom in 1 
-\i (01:02:57) setwindow pcb
-\i (01:02:57) zoom in 0.0943 0.2493
-\i (01:02:57) trapsize 137
-\i (01:02:58) delete 
-\i (01:03:00) setwindow form.find
-\i (01:03:00) FORM find all_off  
-\i (01:03:01) FORM find pins YES 
-\i (01:03:02) setwindow pcb
-\i (01:03:02) pick grid -0.0150 0.0334
-\t (01:03:02) last pick:  0.0000 0.0000
-\t (01:03:02) Pin "Smd_Cir_0D45, A1"
-\i (01:03:02) prepopup 0.2747 0.2740
-\i (01:03:02) done 
-\i (01:03:03) zoom out 1 
-\i (01:03:03) setwindow pcb
-\i (01:03:03) zoom out 0.1708 0.2439
-\i (01:03:03) trapsize 273
-\i (01:03:03) zoom out 1 
-\i (01:03:03) setwindow pcb
-\i (01:03:03) zoom out 0.1654 0.2275
-\i (01:03:03) trapsize 547
-\i (01:03:03) zoom out 1 
-\i (01:03:03) setwindow pcb
-\i (01:03:03) zoom out 0.1653 0.2275
-\i (01:03:03) trapsize 1093
-\i (01:03:03) zoom out 1 
-\i (01:03:03) setwindow pcb
-\i (01:03:03) zoom out 3.2047 1.1241
-\i (01:03:03) trapsize 2187
-\i (01:03:04) zoom in 1 
-\i (01:03:04) setwindow pcb
-\i (01:03:04) zoom in 2.5488 -2.5057
-\i (01:03:04) trapsize 1093
-\i (01:03:04) zoom in 1 
-\i (01:03:04) setwindow pcb
-\i (01:03:04) zoom in 2.7238 -2.4620
-\i (01:03:04) trapsize 547
-\i (01:03:04) save 
-\i (01:03:05) fillin yes 
-\t (01:03:06) Symbol 'tfbga-24.psm' created.
-\i (01:03:09) opencd F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-5.brd 
-\t (01:03:09) Opening existing design...
-\i (01:03:09) trapsize 5059
-\i (01:03:09) trapsize 5181
-\i (01:03:09) trapsize 4601
-\i (01:03:09) trapsize 4601
-\t (01:03:09)     Journal end - Fri Sep 15 09:26:18 2023
+\t (04:40:43) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (04:40:43)     Journal start - Tue Oct 17 13:31:14 2023
+\t (04:40:43)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=11280 CPUs=12
+\t (04:40:43) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (04:40:43) 
+\t (04:40:43) Starting new design...
+\i (04:40:43) trapsize 99800
+\i (04:40:43) trapsize 102180
+\i (04:40:43) trapsize 99800
+\i (04:40:43) trapsize 124792
+\i (04:40:43) trapsize 162075
+\i (04:40:43) trapsize 162075
+\i (04:40:46) add pin 
+\i (04:40:47) setwindow form.mini
+\i (04:40:47) FORM mini pad_browse  
+\t (04:40:49) No valid name selected.
+\i (04:40:52) fillin "Thr_Cir_3D5_Np"
+\t (04:40:52) Using 'THR_CIR_3D5_NP.pad'.
+\i (04:40:58) setwindow pcb
+\i (04:40:58) pick 0 0 
+\t (04:40:58) last pick:  0.0000 0.0000
+\t (04:40:58) Using 'THR_CIR_3D5_NP.pad'.
+\i (04:40:58) done 
+\t (04:40:58) Exiting from Add Pin.
+\i (04:40:59) zoom in 1 
+\i (04:40:59) setwindow pcb
+\i (04:40:59) zoom in 56.5807 -99.1042
+\i (04:40:59) trapsize 81037
+\i (04:40:59) zoom in 1 
+\i (04:40:59) setwindow pcb
+\i (04:40:59) zoom in 37.1318 -102.3457
+\i (04:40:59) trapsize 40519
+\i (04:41:00) zoom in 1 
+\i (04:41:00) setwindow pcb
+\i (04:41:00) zoom in 37.1318 -102.3457
+\i (04:41:00) trapsize 20259
+\i (04:41:00) zoom in 1 
+\i (04:41:00) setwindow pcb
+\i (04:41:00) zoom in -12.3009 -8.3424
+\i (04:41:00) trapsize 10130
+\i (04:41:00) zoom in 1 
+\i (04:41:00) setwindow pcb
+\i (04:41:00) zoom in -12.0983 -7.3294
+\i (04:41:00) trapsize 5065
+\i (04:41:00) zoom in 1 
+\i (04:41:00) setwindow pcb
+\i (04:41:00) zoom in -10.5789 -6.9242
+\i (04:41:00) trapsize 2532
+\i (04:41:01) zoom in 1 
+\i (04:41:01) setwindow pcb
+\i (04:41:01) zoom in -1.3609 -0.4412
+\i (04:41:01) trapsize 1266
+\i (04:41:01) zoom in 1 
+\i (04:41:01) setwindow pcb
+\i (04:41:01) zoom in -1.3609 -0.4412
+\i (04:41:01) trapsize 633
+\i (04:41:01) zoom in 1 
+\i (04:41:01) setwindow pcb
+\i (04:41:01) zoom in -1.3609 -0.4412
+\i (04:41:01) trapsize 317
+\i (04:41:01) zoom out 1 
+\i (04:41:01) setwindow pcb
+\i (04:41:01) zoom out -1.2089 -2.5178
+\i (04:41:01) trapsize 633
+\i (04:41:01) zoom out 1 
+\i (04:41:01) setwindow pcb
+\i (04:41:01) zoom out -1.0443 -3.1382
+\i (04:41:01) trapsize 1266
+\i (04:41:03) save 
+\t (04:41:03) Symbol 'm3_screw.bsm' created.
+\i (04:41:06) opencd C:/Users/SNIPER/Desktop/LED_BOARD_DIMENSION.brd 
+\t (04:41:06) Opening existing design...
+\i (04:41:07) trapsize 2996
+\i (04:41:07) trapsize 3086
+\i (04:41:07) trapsize 2396
+\i (04:41:07) trapsize 2396
+\t (04:41:07)     Journal end - Tue Oct 17 13:31:37 2023

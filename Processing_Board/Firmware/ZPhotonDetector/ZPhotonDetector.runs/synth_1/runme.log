@@ -1,0 +1,390 @@
+
+*** Running vivado
+    with args -log ZPhotonDetector_Block_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZPhotonDetector_Block_wrapper.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ZPhotonDetector_Block_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1461.359 ; gain = 160.609
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/MySoftware/Xilinx/Vivado/2023.1/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1493.336 ; gain = 31.977
+Command: read_checkpoint -auto_incremental -incremental F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ZPhotonDetector_Block_wrapper -part xc7s25ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3052
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2272.340 ; gain = 411.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_wrapper' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZEdge_Detect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZEdge_Detect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'oSig_Falling' of module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' is unconnected for instance 'ZEdge_Detect_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:58]
+WARNING: [Synth 8-7023] instance 'ZEdge_Detect_0' of module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' has 6 connections declared, but only 5 given [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZExtSig_Simulator_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZExtSig_Simulator_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZLed_Indicator_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZLed_Indicator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZLed_Indicator_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZLed_Indicator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZMux2to1_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZMux2to1_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZMux2to1_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZMux2to1_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZPower_EN_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPower_EN_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZPower_EN_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPower_EN_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZPulse_Counter_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPulse_Counter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZPulse_Counter_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPulse_Counter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZTest_Generator_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZTest_Generator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZTest_Generator_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZTest_Generator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'oDone' of module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' is unconnected for instance 'ZUART_Data_Dump_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:99]
+WARNING: [Synth 8-7023] instance 'ZUART_Data_Dump_0' of module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' has 9 connections declared, but only 8 given [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:99]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/.Xil/Vivado-13248-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_clk_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'clk_100M' of module 'ZPhotonDetector_Block_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:108]
+WARNING: [Synth 8-7071] port 'clk_200M' of module 'ZPhotonDetector_Block_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:108]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'ZPhotonDetector_Block_clk_wiz_0_0' has 5 connections declared, but only 3 given [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_wrapper' (0#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2364.230 ; gain = 503.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2382.141 ; gain = 521.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2382.141 ; gain = 521.266
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2382.141 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZPower_EN_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZPower_EN_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZEdge_Detect_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZEdge_Detect_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZMux2to1_0_0/ZPhotonDetector_Block_ZMux2to1_0_0/ZPhotonDetector_Block_ZMux2to1_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZMux2to1_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZMux2to1_0_0/ZPhotonDetector_Block_ZMux2to1_0_0/ZPhotonDetector_Block_ZMux2to1_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZMux2to1_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZUART_Data_Dump_0_0/ZPhotonDetector_Block_ZUART_Data_Dump_0_0/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZUART_Data_Dump_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZUART_Data_Dump_0_0/ZPhotonDetector_Block_ZUART_Data_Dump_0_0/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZUART_Data_Dump_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZTest_Generator_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZTest_Generator_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZLed_Indicator_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZLed_Indicator_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZExtSig_Simulator_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZExtSig_Simulator_0'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZPulse_Counter_0'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0_in_context.xdc] for cell 'ZPhotonDetector_Block_i/ZPulse_Counter_0'
+Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_in1_ZPhotonDetector_Block_clk_wiz_0_0'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:1]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[11]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:26]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[15]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:27]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[17]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:28]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[19]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:29]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[20]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:30]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[22]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:31]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[23]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:32]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[12]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:33]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[16]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:34]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[18]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:35]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[21]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:36]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[25]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:37]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[13]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:38]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal0[14]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:39]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewDataUpdate'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:43]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/iPulse'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/iClk'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:45]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[0]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:46]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[1]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[2]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:48]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[3]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:49]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[6]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:50]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[10]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:51]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[5]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[7]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[8]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[11]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[12]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[4]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:57]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[13]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:58]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[14]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:59]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[9]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/oNewPulseCounter[15]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT_Deadline[12]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:62]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT_Deadline[13]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:63]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT_Deadline[14]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:64]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT_Deadline[16]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:65]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT_Deadline[11]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:66]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT_Deadline[15]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:67]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewDataUpdate'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:68]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/iPulse'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:69]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:70]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[1]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:71]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[2]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:72]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[3]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:73]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[8]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[11]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[0]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[6]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:77]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[10]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[13]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[4]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:80]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[7]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:81]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[9]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:82]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[14]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:83]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[15]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:84]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[5]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:85]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[12]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:86]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[0]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:87]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[1]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:88]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[2]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:89]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[3]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:90]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[4]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:91]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[5]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:92]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[6]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:93]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[7]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[8]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:95]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[9]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:96]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[10]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:97]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[11]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:98]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[12]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:99]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[13]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:100]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[14]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:101]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[15]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:102]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[16]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:103]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[17]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:104]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[18]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:105]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[19]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:106]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[20]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:107]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[21]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:108]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[22]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:109]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[23]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:110]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[24]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:111]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[25]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:112]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[26]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[27]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:114]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[28]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:115]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[29]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:116]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[30]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:117]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[31]'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_100M_ZPhotonDetector_Block_clk_wiz_0_0'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:124]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/iClk'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:125]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:126]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_100M'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:128]
+WARNING: [Vivado 12-507] No nets matched 'ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M_ZPhotonDetector_Block_clk_wiz_0_0'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:129]
+Finished Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2410.027 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for iClk. (constraint file  f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for iClk. (constraint file  f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_in_context.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZPower_EN_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZEdge_Detect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZMux2to1_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZUART_Data_Dump_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZTest_Generator_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZLed_Indicator_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZExtSig_Simulator_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZPhotonDetector_Block_i/ZPulse_Counter_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------------+----------+
+|      |BlackBox name                               |Instances |
++------+--------------------------------------------+----------+
+|1     |ZPhotonDetector_Block_ZEdge_Detect_0_0      |         1|
+|2     |ZPhotonDetector_Block_ZExtSig_Simulator_0_0 |         1|
+|3     |ZPhotonDetector_Block_ZLed_Indicator_0_0    |         1|
+|4     |ZPhotonDetector_Block_ZMux2to1_0_0          |         1|
+|5     |ZPhotonDetector_Block_ZPower_EN_0_0         |         1|
+|6     |ZPhotonDetector_Block_ZPulse_Counter_0_0    |         1|
+|7     |ZPhotonDetector_Block_ZTest_Generator_0_0   |         1|
+|8     |ZPhotonDetector_Block_ZUART_Data_Dump_0_0   |         1|
+|9     |ZPhotonDetector_Block_clk_wiz_0_0           |         1|
++------+--------------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |ZPhotonDetector_Block_ZEdge_Detect_0      |     1|
+|2     |ZPhotonDetector_Block_ZExtSig_Simulator_0 |     1|
+|3     |ZPhotonDetector_Block_ZLed_Indicator_0    |     1|
+|4     |ZPhotonDetector_Block_ZMux2to1_0          |     1|
+|5     |ZPhotonDetector_Block_ZPower_EN_0         |     1|
+|6     |ZPhotonDetector_Block_ZPulse_Counter_0    |     1|
+|7     |ZPhotonDetector_Block_ZTest_Generator_0   |     1|
+|8     |ZPhotonDetector_Block_ZUART_Data_Dump_0   |     1|
+|9     |ZPhotonDetector_Block_clk_wiz_0           |     1|
+|10    |IBUF                                      |     1|
+|11    |OBUF                                      |     7|
++------+------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2410.027 ; gain = 521.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2410.027 ; gain = 549.152
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2410.027 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2410.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 57e0dfda
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2410.027 ; gain = 915.086
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ZPhotonDetector_Block_wrapper_utilization_synth.rpt -pb ZPhotonDetector_Block_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 10 16:32:15 2023...

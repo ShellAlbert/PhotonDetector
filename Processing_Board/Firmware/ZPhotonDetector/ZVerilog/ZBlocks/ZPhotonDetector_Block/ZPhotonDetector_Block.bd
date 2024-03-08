@@ -1,0 +1,696 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1839A61C6FB328C9",
+      "device": "xc7s25ftgb196-1",
+      "name": "ZPhotonDetector_Block",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "ZPower_EN_0": "",
+      "ZEdge_Detect_0": "",
+      "ZMux2to1_0": "",
+      "ZUART_Data_Dump_0": "",
+      "ZTest_Generator_0": "",
+      "ZLed_Indicator_0": "",
+      "ZExtSig_Simulator_0": "",
+      "ZPulse_Counter_0": ""
+    },
+    "ports": {
+      "iClk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ZPhotonDetector_Block_iClk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "oLED": {
+        "type": "data",
+        "direction": "O",
+        "left": "1",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "iPulse": {
+        "type": "intr",
+        "direction": "I",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "default"
+          }
+        }
+      },
+      "oIO_J1": {
+        "direction": "O"
+      },
+      "oRS485_Dir2": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "oRS485_Txd2": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "oRS485_Txd1": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "oRS485_Dir1": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "ZPhotonDetector_Block_clk_wiz_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_clk_wiz_0_0\\ZPhotonDetector_Block_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "114.829"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "200.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "151.636"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "50.000"
+          },
+          "CLKOUT3_USED": {
+            "value": "true"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_100M"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "clk_200M"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "clk_50M"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "10"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "5"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "20"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "3"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "100.000"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "ZPower_EN_0": {
+        "vlnv": "xilinx.com:module_ref:ZPower_EN:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZPower_EN_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZPower_EN_0_0\\ZPhotonDetector_Block_ZPower_EN_0_0.xci",
+        "inst_hier_path": "ZPower_EN_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZPower_EN",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "oEn": {
+            "direction": "O"
+          }
+        }
+      },
+      "ZEdge_Detect_0": {
+        "vlnv": "xilinx.com:module_ref:ZEdge_Detect:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZEdge_Detect_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZEdge_Detect_0_0\\ZPhotonDetector_Block_ZEdge_Detect_0_0.xci",
+        "inst_hier_path": "ZEdge_Detect_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZEdge_Detect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "iEn": {
+            "direction": "I"
+          },
+          "iSig_In": {
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "default_prop"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "oSig_Rising": {
+            "direction": "O"
+          },
+          "oSig_Falling": {
+            "direction": "O"
+          }
+        }
+      },
+      "ZMux2to1_0": {
+        "vlnv": "xilinx.com:module_ref:ZMux2to1:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZMux2to1_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZMux2to1_0_0\\ZPhotonDetector_Block_ZMux2to1_0_0.xci",
+        "inst_hier_path": "ZMux2to1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZMux2to1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iSig1": {
+            "direction": "I"
+          },
+          "iSig2": {
+            "direction": "I"
+          },
+          "oSig": {
+            "direction": "O"
+          },
+          "iSel": {
+            "direction": "I"
+          }
+        }
+      },
+      "ZUART_Data_Dump_0": {
+        "vlnv": "xilinx.com:module_ref:ZUART_Data_Dump:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZUART_Data_Dump_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZUART_Data_Dump_0_0\\ZPhotonDetector_Block_ZUART_Data_Dump_0_0.xci",
+        "inst_hier_path": "ZUART_Data_Dump_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZUART_Data_Dump",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "iEn": {
+            "direction": "I"
+          },
+          "iNewDataUpdate": {
+            "direction": "I"
+          },
+          "iNewData": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "iTime_Interval": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "oTxd_Pin": {
+            "direction": "O"
+          },
+          "oDir_Pin": {
+            "direction": "O"
+          },
+          "oDone": {
+            "direction": "O"
+          }
+        }
+      },
+      "ZTest_Generator_0": {
+        "vlnv": "xilinx.com:module_ref:ZTest_Generator:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZTest_Generator_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZTest_Generator_0_0\\ZPhotonDetector_Block_ZTest_Generator_0_0.xci",
+        "inst_hier_path": "ZTest_Generator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZTest_Generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "iEn": {
+            "direction": "I"
+          },
+          "iSelect": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "oFixedFreq": {
+            "direction": "O"
+          },
+          "oFixedFreq_IO": {
+            "direction": "O"
+          }
+        }
+      },
+      "ZLed_Indicator_0": {
+        "vlnv": "xilinx.com:module_ref:ZLed_Indicator:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZLed_Indicator_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZLed_Indicator_0_0\\ZPhotonDetector_Block_ZLed_Indicator_0_0.xci",
+        "inst_hier_path": "ZLed_Indicator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZLed_Indicator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "iNewDataUpdate": {
+            "direction": "I"
+          },
+          "oLED": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "ZExtSig_Simulator_0": {
+        "vlnv": "xilinx.com:module_ref:ZExtSig_Simulator:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZExtSig_Simulator_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZExtSig_Simulator_0_0\\ZPhotonDetector_Block_ZExtSig_Simulator_0_0.xci",
+        "inst_hier_path": "ZExtSig_Simulator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZExtSig_Simulator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "oTest_Mode": {
+            "direction": "O"
+          },
+          "oFixedFreq_Sel": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "oTime_Interval": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "ZPulse_Counter_0": {
+        "vlnv": "xilinx.com:module_ref:ZPulse_Counter:1.0",
+        "xci_name": "ZPhotonDetector_Block_ZPulse_Counter_0_0",
+        "xci_path": "ip\\ZPhotonDetector_Block_ZPulse_Counter_0_0\\ZPhotonDetector_Block_ZPulse_Counter_0_0.xci",
+        "inst_hier_path": "ZPulse_Counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ZPulse_Counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "iClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "iRst_N": {
+            "direction": "I"
+          },
+          "iEn": {
+            "direction": "I"
+          },
+          "iPulse": {
+            "direction": "I"
+          },
+          "iTimeInterval": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "oNewPulseCounter": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "oNewDataUpdate": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ZEdge_Detect_0_oSig_Rising": {
+        "ports": [
+          "ZEdge_Detect_0/oSig_Rising",
+          "ZMux2to1_0/iSig1"
+        ]
+      },
+      "ZExtSig_Simulator_0_oFixedFreq_Sel": {
+        "ports": [
+          "ZExtSig_Simulator_0/oFixedFreq_Sel",
+          "ZTest_Generator_0/iSelect"
+        ]
+      },
+      "ZExtSig_Simulator_0_oTest_Mode": {
+        "ports": [
+          "ZExtSig_Simulator_0/oTest_Mode",
+          "ZMux2to1_0/iSel",
+          "ZTest_Generator_0/iEn"
+        ]
+      },
+      "ZLed_Indicator_0_oLED": {
+        "ports": [
+          "ZLed_Indicator_0/oLED",
+          "oLED"
+        ]
+      },
+      "ZMux2to1_0_oSig": {
+        "ports": [
+          "ZMux2to1_0/oSig",
+          "ZPulse_Counter_0/iPulse"
+        ]
+      },
+      "ZPulse_Counter_0_oNewDataUpdate": {
+        "ports": [
+          "ZPulse_Counter_0/oNewDataUpdate",
+          "ZUART_Data_Dump_0/iNewDataUpdate",
+          "ZLed_Indicator_0/iNewDataUpdate"
+        ]
+      },
+      "ZPulse_Counter_0_oNewPulseCounter": {
+        "ports": [
+          "ZPulse_Counter_0/oNewPulseCounter",
+          "ZUART_Data_Dump_0/iNewData"
+        ]
+      },
+      "ZTest_Generator_0_oFixedFreq": {
+        "ports": [
+          "ZTest_Generator_0/oFixedFreq",
+          "ZMux2to1_0/iSig2"
+        ]
+      },
+      "ZTest_Generator_0_oFixedFreq_IO": {
+        "ports": [
+          "ZTest_Generator_0/oFixedFreq_IO",
+          "oIO_J1"
+        ]
+      },
+      "ZUART_Data_Dump_0_oDir_Pin": {
+        "ports": [
+          "ZUART_Data_Dump_0/oDir_Pin",
+          "oRS485_Dir2",
+          "oRS485_Dir1"
+        ]
+      },
+      "ZUART_Data_Dump_0_oTxd_Pin": {
+        "ports": [
+          "ZUART_Data_Dump_0/oTxd_Pin",
+          "oRS485_Txd2",
+          "oRS485_Txd1"
+        ]
+      },
+      "clk_wiz_0_clk_50M": {
+        "ports": [
+          "clk_wiz_0/clk_50M",
+          "ZPower_EN_0/iClk",
+          "ZEdge_Detect_0/iClk",
+          "ZUART_Data_Dump_0/iClk",
+          "ZTest_Generator_0/iClk",
+          "ZLed_Indicator_0/iClk",
+          "ZExtSig_Simulator_0/iClk",
+          "ZPulse_Counter_0/iClk"
+        ]
+      },
+      "iClk_1": {
+        "ports": [
+          "iClk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "iEn_1": {
+        "ports": [
+          "ZPower_EN_0/oEn",
+          "ZEdge_Detect_0/iEn",
+          "ZUART_Data_Dump_0/iEn",
+          "ZPulse_Counter_0/iEn"
+        ]
+      },
+      "iPulse_1": {
+        "ports": [
+          "iPulse",
+          "ZEdge_Detect_0/iSig_In"
+        ]
+      },
+      "iRst_N_1": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "ZPower_EN_0/iRst_N",
+          "ZEdge_Detect_0/iRst_N",
+          "ZUART_Data_Dump_0/iRst_N",
+          "ZTest_Generator_0/iRst_N",
+          "ZLed_Indicator_0/iRst_N",
+          "ZExtSig_Simulator_0/iRst_N",
+          "ZPulse_Counter_0/iRst_N"
+        ]
+      },
+      "iTimeInterval_1": {
+        "ports": [
+          "ZExtSig_Simulator_0/oTime_Interval",
+          "ZUART_Data_Dump_0/iTime_Interval",
+          "ZPulse_Counter_0/iTimeInterval"
+        ]
+      }
+    }
+  }
+}

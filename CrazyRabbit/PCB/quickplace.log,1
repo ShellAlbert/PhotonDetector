@@ -1,0 +1,295 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : CrazyRabbit.brd                               )
+(    Software Version : 22.1P001                                      )
+(    Date/Time        : Fri Sep 22 15:46:05 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+         Placed symbol:  U7 / MT9700_SOT-23-5_MT9700 / SOT-23-5 at (13.0132 2.9032)
+         Placed symbol:  Y3 / CRYSTAL_SMD3225-4P_24MHZ / SMD3225-4P at (17.6164 2.9032)
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+         Placed symbol:  C22 / CAP NP_C0402_0.22UF / C0402 at (21.5896 0.8732)
+         Placed symbol:  C23 / CAP NP_C0402_0.22UF / C0402 at (24.1128 0.8732)
+         Placed symbol:  C24 / CAP NP_C0402_0.22UF / C0402 at (26.6360 0.8732)
+         Placed symbol:  C25 / CAP NP_C0402_0.22UF / C0402 at (29.1592 0.8732)
+         Placed symbol:  C26 / CAP NP_C0402_0.22UF / C0402 at (31.6824 0.8732)
+         Placed symbol:  C28 / CAP NP_C0402_0.22UF / C0402 at (34.2056 0.8732)
+         Placed symbol:  C29 / CAP NP_C0402_0.22UF / C0402 at (36.7288 0.8732)
+         Placed symbol:  C3 / CAP NP_C0402_0.22UF / C0402 at (39.2520 0.8732)
+         Placed symbol:  C32 / CAP NP_C0402_0.22UF / C0402 at (41.7752 0.8732)
+         Placed symbol:  C33 / CAP NP_C0402_0.22UF / C0402 at (44.2984 0.8732)
+         Placed symbol:  C4 / CAP NP_C0402_0.22UF / C0402 at (46.8216 0.8732)
+         Placed symbol:  C46 / CAP NP_C0402_0.22UF / C0402 at (49.3448 0.8732)
+         Placed symbol:  C47 / CAP NP_C0402_0.22UF / C0402 at (51.8680 0.8732)
+         Placed symbol:  C49 / CAP NP_C0402_0.22UF / C0402 at (54.3912 0.8732)
+         Placed symbol:  C5 / CAP NP_C0402_0.22UF / C0402 at (56.9144 0.8732)
+         Placed symbol:  C51 / CAP NP_C0402_0.22UF / C0402 at (59.4376 0.8732)
+         Placed symbol:  C53 / CAP NP_C0402_0.22UF / C0402 at (61.9608 0.8732)
+         Placed symbol:  C54 / CAP NP_C0402_0.22UF / C0402 at (64.4840 0.8732)
+         Placed symbol:  C55 / CAP NP_C0402_0.22UF / C0402 at (67.0072 0.8732)
+         Placed symbol:  C57 / CAP NP_C0402_0.22UF / C0402 at (69.5304 0.8732)
+         Placed symbol:  C58 / CAP NP_C0402_0.22UF / C0402 at (72.0536 0.8732)
+         Placed symbol:  C6 / CAP NP_C0402_0.22UF / C0402 at (74.5768 0.8732)
+         Placed symbol:  C61 / CAP NP_C0402_0.22UF / C0402 at (77.1000 0.8732)
+         Placed symbol:  C62 / CAP NP_C0402_0.22UF / C0402 at (0.7732 4.7764)
+         Placed symbol:  C63 / CAP NP_C0402_0.22UF / C0402 at (3.2964 4.7764)
+         Placed symbol:  C64 / CAP NP_C0402_0.22UF / C0402 at (5.8196 4.7764)
+         Placed symbol:  C65 / CAP NP_C0402_0.22UF / C0402 at (8.3428 4.7764)
+         Placed symbol:  C7 / CAP NP_C0402_0.22UF / C0402 at (10.8660 4.7764)
+         Placed symbol:  C78 / CAP NP_C0402_0.22UF / C0402 at (13.3892 4.7764)
+         Placed symbol:  C8 / CAP NP_C0402_0.22UF / C0402 at (15.9124 4.7764)
+         Placed symbol:  C80 / CAP NP_C0402_0.22UF / C0402 at (18.4356 4.7764)
+         Placed symbol:  C9 / CAP NP_C0402_0.22UF / C0402 at (20.9588 4.7764)
+         Placed symbol:  C14 / CAP NP_C0402_0.1UF / C0402 at (23.4820 4.7764)
+         Placed symbol:  C15 / CAP NP_C0402_0.1UF / C0402 at (26.0052 4.7764)
+         Placed symbol:  C40 / CAP NP_C0402_0.1UF / C0402 at (28.5284 4.7764)
+         Placed symbol:  C67 / CAP NP_C0402_0.1UF / C0402 at (31.0516 4.7764)
+         Placed symbol:  C70 / CAP NP_C0402_0.1UF / C0402 at (33.5748 4.7764)
+         Placed symbol:  C72 / CAP NP_C0402_0.1UF / C0402 at (36.0980 4.7764)
+         Placed symbol:  C75 / CAP NP_C0402_0.1UF / C0402 at (38.6212 4.7764)
+         Placed symbol:  C76 / CAP NP_C0402_0.1UF / C0402 at (41.1444 4.7764)
+         Placed symbol:  C79 / CAP NP_C0402_0.1UF / C0402 at (43.6676 4.7764)
+         Placed symbol:  C16 / CAP NP_C0603_4.7UF / C0603 at (46.2508 4.7764)
+         Placed symbol:  C60 / CAP NP_C0603_4.7UF / C0603 at (49.3140 4.7764)
+         Placed symbol:  C17 / CAP NP_C0402_2.2PF / C0402 at (52.3172 4.7764)
+         Placed symbol:  C18 / CAP NP_C0402_2.2PF / C0402 at (54.8404 4.7764)
+         Placed symbol:  C2 / CAP NP_R0603_1UF/10V / R0603 at (57.4236 4.7764)
+         Placed symbol:  C27 / CAP NP_C0603_22UF / C0603 at (60.4868 4.7764)
+         Placed symbol:  C52 / CAP NP_C0603_22UF / C0603 at (63.5500 4.7764)
+         Placed symbol:  C56 / CAP NP_C0603_22UF / C0603 at (66.6132 4.7764)
+         Placed symbol:  C59 / CAP NP_C0603_22UF / C0603 at (69.6764 4.7764)
+         Placed symbol:  C30 / CAP NP_C0402_18PF / C0402 at (72.6796 4.7764)
+         Placed symbol:  C31 / CAP NP_C0402_18PF / C0402 at (75.2028 4.7764)
+         Placed symbol:  C34 / CAP NP_C0402_18PF / C0402 at (77.7260 4.7764)
+         Placed symbol:  C35 / CAP NP_C0402_18PF / C0402 at (0.7732 6.3196)
+         Placed symbol:  C20 / CAP NP_C0402_0.22UF / C0402 at (3.2964 6.3196)
+         Placed symbol:  C37 / CAP NP_C0402_18PF / C0402 at (5.8196 6.3196)
+         Placed symbol:  C19 / CAP NP_C0402_0.22UF / C0402 at (8.3428 6.3196)
+         Placed symbol:  C38 / CAP NP_C0603_1UF / C0603 at (10.9260 6.3196)
+         Placed symbol:  C42 / CAP NP_C0603_1UF / C0603 at (13.9892 6.3196)
+         Placed symbol:  C45 / CAP NP_C0603_1UF / C0603 at (17.0524 6.3196)
+         Placed symbol:  C39 / CAP NP_C0603_10UF / C0603 at (20.1156 6.3196)
+         Placed symbol:  C48 / CAP NP_C0603_10UF / C0603 at (23.1788 6.3196)
+         Placed symbol:  C50 / CAP NP_C0603_10UF / C0603 at (26.2420 6.3196)
+         Placed symbol:  C77 / CAP NP_C0603_10UF / C0603 at (29.3052 6.3196)
+         Placed symbol:  C43 / CAP NP_C0603_2.2UF / C0603 at (32.3684 6.3196)
+         Placed symbol:  C66 / CAP NP_R0603_22UF / R0603 at (35.4316 6.3196)
+         Placed symbol:  C71 / CAP NP_R0603_22UF / R0603 at (38.4948 6.3196)
+         Placed symbol:  C68 / CAP NP_C0402_22PF / C0402 at (41.4980 6.3196)
+         Placed symbol:  C73 / CAP NP_C0402_22PF / C0402 at (44.0212 6.3196)
+         Placed symbol:  C69 / CAP NP_R0603_22UF/4V / R0603 at (46.6044 6.3196)
+         Placed symbol:  C74 / CAP NP_R0603_22UF/4V / R0603 at (49.6676 6.3196)
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+         Placed symbol:  D3 / LED_LED0402_LED / LED0402 at (52.6708 6.3196)
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+         Placed symbol:  R1 / R_R0402_10K / R0402 at (55.1940 6.3196)
+         Placed symbol:  R10 / R_R0402_10K / R0402 at (57.7172 6.3196)
+         Placed symbol:  R14 / R_R0402_10K / R0402 at (60.2404 6.3196)
+         Placed symbol:  R17 / R_R0402_10K / R0402 at (62.7636 6.3196)
+         Placed symbol:  R18 / R_R0402_10K / R0402 at (65.2868 6.3196)
+         Placed symbol:  R27 / R_R0402_10K / R0402 at (67.8100 6.3196)
+         Placed symbol:  R30 / R_R0402_10K / R0402 at (70.3332 6.3196)
+         Placed symbol:  R7 / R_R0402_10K / R0402 at (72.8564 6.3196)
+         Placed symbol:  R9 / R_R0402_10K / R0402 at (75.3796 6.3196)
+         Placed symbol:  R11 / R_R0402_10R / R0402 at (77.9028 6.3196)
+         Placed symbol:  R12 / R_R0402_10R / R0402 at (0.7732 7.8628)
+         Placed symbol:  R13 / R_R0402_10R / R0402 at (3.2964 7.8628)
+         Placed symbol:  R16 / R_R0402_10R / R0402 at (5.8196 7.8628)
+         Placed symbol:  R15 / R_R0402_1M / R0402 at (8.3428 7.8628)
+         Placed symbol:  R32 / R_R0402_1M / R0402 at (10.8660 7.8628)
+         Placed symbol:  R19 / R_R0402_124K / R0402 at (13.3892 7.8628)
+         Placed symbol:  R23 / R_R0402_124K / R0402 at (15.9124 7.8628)
+         Placed symbol:  R2 / R_R0402_240R / R0402 at (18.4356 7.8628)
+         Placed symbol:  R3 / R_R0402_240R / R0402 at (20.9588 7.8628)
+         Placed symbol:  R8 / R_R0402_240R / R0402 at (23.4820 7.8628)
+         Placed symbol:  R20 / R_R0402_100K / R0402 at (26.0052 7.8628)
+         Placed symbol:  R24 / R_R0402_100K / R0402 at (28.5284 7.8628)
+         Placed symbol:  R21 / R_R0402_0R / R0402 at (31.0516 7.8628)
+         Placed symbol:  R22 / R_R0402_0R / R0402 at (33.5748 7.8628)
+         Placed symbol:  R25 / R_R0402_0 / R0402 at (36.0980 7.8628)
+         Placed symbol:  R26 / R_R0402_1K / R0402 at (38.6212 7.8628)
+         Placed symbol:  R29 / R_R0402_1K / R0402 at (41.1444 7.8628)
+         Placed symbol:  R28 / R_R0402_3.4K / R0402 at (43.6676 7.8628)
+         Placed symbol:  R31 / R_R0402_50R / R0402 at (46.1908 7.8628)
+         Placed symbol:  R4 / R_R0402_1.5K / R0402 at (48.7140 7.8628)
+         Placed symbol:  R5 / R_R0402_1.5K / R0402 at (51.2372 7.8628)
+         Placed symbol:  R6 / R_R0402_470R / R0402 at (53.7604 7.8628)
+         Placed symbol:  C12 / CAP NP_C0402_0.22UF / C0402 at (56.2836 7.8628)
+         Placed symbol:  C21 / CAP NP_C0402_0.22UF / C0402 at (58.8068 7.8628)
+         Placed symbol:  C13 / CAP NP_C0402_0.22UF / C0402 at (61.3300 7.8628)
+         Placed symbol:  C11 / CAP NP_C0402_0.22UF / C0402 at (63.8532 7.8628)
+         Placed symbol:  C10 / CAP NP_C0402_0.22UF / C0402 at (66.3764 7.8628)
+         Placed symbol:  C36 / CAP NP_C0402_18PF / C0402 at (68.8996 7.8628)
+         Placed symbol:  C44 / CAP NP_C0402_18PF / C0402 at (71.4228 7.8628)
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+         Placed symbol:  TP3 / T POINT R_TP_SMD_1D2_TP_CIR_SMD_3V3 / TP_SMD_1D2 at (74.3760 8.1928)
+         Placed symbol:  TP2 / T POINT R_TP_SMD_1D2_TP_CIR_SMD_1V35 / TP_SMD_1D2 at (76.5792 8.1928)
+         Placed symbol:  TP1 / T POINT R_TP_SMD_1D2_TP_CIR_SMD_1V35 / TP_SMD_1D2 at (78.7824 8.1928)
+
+
+Placed 116 of 129 applicable (129 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+
+State: Placing on layer TOP
+
+ERROR:   Could not find symbol:  U3 / MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB / MAPBGA-289
+ERROR:   Could not find symbol:  U1 / FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39 / BGA-153
+ERROR:   Could not find symbol:  U2 / MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107 / FBGA-96
+ERROR:   Could not find symbol:  U5 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U4 / MT3420B_SOT-23-6_MT3420B / SOT-23-6
+ERROR:   Could not find symbol:  U6 / UM805RE_SOT-143_UM805RE / SOT-143
+ERROR:   Could not find symbol:  L1 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  D5 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D4 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D2 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  D1 / DIODE SCHOTTKY_SOD-523_RB521S-30 / SOD-523
+ERROR:   Could not find symbol:  L2 / INDUCTOR_IND_SMD_4X4MM_2.2UH/1A / IND_SMD_4X4MM
+ERROR:   Could not find symbol:  Y2 / CRYSTAL13_2_SMD3215-2P_32.768KHZ / SMD3215-2P
+
+
+Placed 0 of 13 applicable (13 total) symbols.
+
+-----------------------------------------------------------------------
+

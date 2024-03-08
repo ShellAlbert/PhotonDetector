@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Nov 10 16:41:53 2023
+| Host         : DESKTOP-R1EC6M9 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ZPhotonDetector_Block_wrapper_control_sets_placed.rpt
+| Design       : ZPhotonDetector_Block_wrapper
+| Device       : xc7s25
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    36 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    16 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |             137 |           38 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              24 |           11 |
+| Yes          | No                    | Yes                    |             122 |           31 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+--------------+
+|                   Clock Signal                  |                                  Enable Signal                                  |                              Set/Reset Signal                              | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M |                                                                                 |                                                                            |                1 |              1 |         1.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u2/p_0_in                     | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                1 |              4 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u2/iEn_0[0]                   | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                1 |              4 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/oDone_i_1_n_0                    | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                1 |              4 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u2/E[0]                       | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                1 |              6 |         6.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u2/rdone_reg_0[0]             |                                                                            |                5 |              8 |         1.60 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/check_sum[7]_i_1_n_0             | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                2 |              8 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewDataUpdate                    | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                5 |             16 |         3.20 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[15]_i_1_n_0      | ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[15]_i_3_n_0 |                4 |             16 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u2/FSM_sequential_i_reg[0][0] |                                                                            |                6 |             16 |         2.67 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M |                                                                                 | ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[15]_i_3_n_0 |                8 |             32 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZLed_Indicator_0/inst/cnt_1S[0]_i_1_n_0                 | ZPhotonDetector_Block_i/ZLed_Indicator_0/inst/oLED_r[1]_i_2_n_0            |                8 |             32 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M | ZPhotonDetector_Block_i/ZLed_Indicator_0/inst/cnt_1mS[0]_i_1_n_0                | ZPhotonDetector_Block_i/ZLed_Indicator_0/inst/oLED_r[1]_i_2_n_0            |                8 |             32 |         4.00 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M |                                                                                 | ZPhotonDetector_Block_i/ZTest_Generator_0/inst/oFixedFreq_IO_i_2_n_0       |                9 |             33 |         3.67 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M |                                                                                 | ZPhotonDetector_Block_i/ZLed_Indicator_0/inst/oLED_r[1]_i_2_n_0            |               12 |             35 |         2.92 |
+|  ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M |                                                                                 | ZPhotonDetector_Block_i/ZUART_Data_Dump_0/inst/u1/u1/iRst_N_0              |                9 |             37 |         4.11 |
++-------------------------------------------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

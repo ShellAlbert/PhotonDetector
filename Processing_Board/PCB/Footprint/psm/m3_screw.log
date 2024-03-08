@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : M3_SCREW.dra                                  )
+(    Software Version : 22.1P001                                      )
+(    Date/Time        : Tue Oct 17 13:31:34 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: MECHANICAL
+    Directory = F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm
+    Name      = m3_screw.bsm
+    User      = SNIPER
+    Machine   = DESKTOP-R1EC6M9
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

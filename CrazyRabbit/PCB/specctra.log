@@ -1,0 +1,71 @@
+# 
+# ===============================================================================
+#                               Allegro PCB Router                               
+# Copyright 1990-2010 Cadence Design Systems, Inc.  All Rights Reserved.
+# ===============================================================================
+# 
+# Software licensed for sale by Cadence Design Systems, Inc.
+# Current time = Sat Oct 07 16:54:16 2023
+# 
+# Allegro PCB Router v22-1-0 made 2022/08/17 at 12:48:59
+# Running on: desktop-r1ec6m9, OS Version: WindowsNT 6.2.9200, Architecture: Intel Pentium II, III, or 4
+# Licensing: The program will not obey any unlicensed rules
+# No graphics will be displayed.
+# Design Name F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB\CrazyRabbit.dsn
+# Batch File Name: pasde.do
+# Did File Name: F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB/specctra.did
+# Current time = Sat Oct 07 16:54:17 2023
+# PCB F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB
+# Master Unit set up as: MM 100000
+# PCB Limits xlo= -4.0000 ylo=-33.6000 xhi= 84.0000 yhi=  1.6000
+# Total 230 Images Consolidated.
+# Via VIA_CIR_0D3_0D15 z=1, 6 xlo= -0.1500 ylo= -0.1500 xhi=  0.1500 yhi=  0.1500
+# Via VIA_CIR_0D4_0D2 z=1, 6 xlo= -0.2000 ylo= -0.2000 xhi=  0.2000 yhi=  0.2000
+# 
+#     VIA          TOP           'GND-2'           'SIG-3'           'VCC-4'           'GND-5'            BOTTOM     
+# 
+#     TOP  ----------------  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15
+# 'GND-2'  VIA_CIR_0D3_0D15  ----------------  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15
+# 'SIG-3'  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  ----------------  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15
+# 'VCC-4'  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  ----------------  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15
+# 'GND-5'  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  ----------------  VIA_CIR_0D3_0D15
+#  BOTTOM  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  VIA_CIR_0D3_0D15  ----------------
+# 
+# <<WARNING:>> Net GND is defined as a signal net and contains 321 pins.
+# This is more pins than most signal nets contain.
+# Please verify whether net GND should be a signal net or a power net.
+# Note that a signal net will be routed as starburst or daisy chain.
+# Wires Processed 395, Vias Processed 387
+# Using colormap in design file.
+# Layers Processed: Signal Layers 6
+# Components Placed 244, Images Processed 267, Padstacks Processed 20
+# Nets Processed 606, Net Terminals 1816
+# PCB Area= 2560.000  EIC=120  Area/EIC= 21.333  SMDs=244
+# Total Pin Count: 1680
+# Signal Connections Created 816
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0001 with offset 0.0000
+# Layer TOP Horz Signal Wire Grid 0.0001 with offset 0.0000, Width= 0.1270, Clearance= 0.1270
+# Layer 'GND-2' Vert Signal Wire Grid 0.0001 with offset 0.0000, Width= 0.1270, Clearance= 0.1270
+# Layer 'SIG-3' Horz Signal Wire Grid 0.0001 with offset 0.0000, Width= 0.1270, Clearance= 0.1270
+# Layer 'VCC-4' Vert Signal Wire Grid 0.0001 with offset 0.0000, Width= 0.1270, Clearance= 0.1270
+# Layer 'GND-5' Horz Signal Wire Grid 0.0001 with offset 0.0000, Width= 0.1270, Clearance= 0.1270
+# Layer BOTTOM Vert Signal Wire Grid 0.0001 with offset 0.0000, Width= 0.1270, Clearance= 0.1270
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# 
+# Wiring Statistics ----------------- F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB\CrazyRabbit.dsn
+# Nets 606 Connections 824 Unroutes 816
+# Signal Layers 6 Power Layers 0
+# Wire Junctions 112, at vias 112 Total Vias 387
+# Percent Connected    0.73
+# Manhattan Length 10332.9666 Horizontal 4279.6962 Vertical 6053.2704
+# Routed Length 304.3334 Horizontal 183.7493 Vertical 222.4555
+# Ratio Actual / Manhattan   0.0295
+# Unconnected Length 10139.6506 Horizontal 4295.4837 Vertical 5844.1669
+# Total Conflicts: 17 (Cross: 0, Clear: 17, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:01
+# Loading Do File pasde.do ...
+# Loading Do File F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB\CrazyRabbit_rules.do ...
+# Colormap Written to File _notify.std
+# Enter command <quit

@@ -1,13 +1,13 @@
 (ExpressProject "Processing_Board"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[09/19/23]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/08/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
       (File ".\library1.olb"
         (Type "Schematic Library")))
     ("Allegro Netlist Directory"
-       "F:\MyTemporary\Github\PhotonDetector\Processing_Board\Schematic\Netlist")
+       "F:\MyTemporary\Github\PhotonDetector\Sensor_Board\Schematic-A3\Netlist")
     (DOCKED "TRUE")
     (DOCKING_POSITION "59420")
     (NoModify)
@@ -81,7 +81,19 @@
       (DisplayName "compView.dat"))
     (File ".\allegro\processing_board.swp"
       (Type "Report")
-      (DisplayName "PROCESSING_BOARD.swp")))
+      (DisplayName "PROCESSING_BOARD.swp"))
+    (File
+       "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\netlist\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File
+       "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\netlist\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File
+       "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\netlist\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles")
@@ -167,32 +179,16 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn")
-      (Path "Design Resources"
-         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn"
-         "SCHEMATIC1")
+      (Path "Design Resources" ".\processing_board.dsn")
+      (Path "Design Resources" ".\processing_board.dsn" "SCHEMATIC1")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources"
-         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn"
-         "SCHEMATIC1" "PAGE1"))
+      (Select "Design Resources" ".\processing_board.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 541"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 0 0 5 1064 24 559")
-        (Scroll "1996 1564")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path
-         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\PROCESSING_BOARD.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1")))
+        (Placement "44 0 1 -1 -1 -1 -1 0 367 0 522"))
+      (Tab 0)))
   (MPSSessionName "SNIPER")
   (ISPCBBASICLICENSE "false"))

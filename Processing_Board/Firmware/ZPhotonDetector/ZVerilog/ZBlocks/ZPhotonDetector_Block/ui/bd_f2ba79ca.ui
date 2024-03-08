@@ -1,0 +1,60 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Color Coded_ScaleFactor":"1.2342",
+   "Color Coded_TopLeft":"-105,-88",
+   "Default View_ScaleFactor":"0.53125",
+   "Default View_TopLeft":"-96,-11",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/iClk_1:false|/iRst_N_1:false|",
+   "Interfaces View_ScaleFactor":"0.8",
+   "Interfaces View_TopLeft":"-913,-394",
+   "No Loops_ScaleFactor":"1.19545",
+   "No Loops_TopLeft":"-105,-48",
+   "PinnedBlocks":"",
+   "Reduced Jogs_Layers":"/iClk_1:true|/iRst_N_1:true|",
+   "Reduced Jogs_ScaleFactor":"1.19545",
+   "Reduced Jogs_TopLeft":"-105,-48",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+#  -string -flagsOSRD
+preplace port port-id_iClk -pg 1 -lvl 0 -x -10 -y 560 -defaultsOSRD
+preplace port port-id_iPulse -pg 1 -lvl 0 -x -10 -y 470 -defaultsOSRD
+preplace port port-id_oIO_J1 -pg 1 -lvl 7 -x 1690 -y 110 -defaultsOSRD
+preplace port port-id_oRS485_Dir2 -pg 1 -lvl 7 -x 1690 -y 450 -defaultsOSRD
+preplace port port-id_oRS485_Txd2 -pg 1 -lvl 7 -x 1690 -y 390 -defaultsOSRD
+preplace port port-id_oRS485_Txd1 -pg 1 -lvl 7 -x 1690 -y 360 -defaultsOSRD
+preplace port port-id_oRS485_Dir1 -pg 1 -lvl 7 -x 1690 -y 420 -defaultsOSRD
+preplace portBus oLED -pg 1 -lvl 7 -x 1690 -y 250 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 560 -defaultsOSRD
+preplace inst ZPower_EN_0 -pg 1 -lvl 2 -x 310 -y 560 -defaultsOSRD
+preplace inst ZEdge_Detect_0 -pg 1 -lvl 3 -x 560 -y 440 -defaultsOSRD
+preplace inst ZMux2to1_0 -pg 1 -lvl 4 -x 830 -y 230 -defaultsOSRD
+preplace inst ZUART_Data_Dump_0 -pg 1 -lvl 6 -x 1520 -y 420 -swap {4 5 0 1 2 3 6 7 8} -defaultsOSRD
+preplace inst ZTest_Generator_0 -pg 1 -lvl 6 -x 1520 -y 100 -defaultsOSRD
+preplace inst ZLed_Indicator_0 -pg 1 -lvl 6 -x 1520 -y 250 -defaultsOSRD
+preplace inst ZExtSig_Simulator_0 -pg 1 -lvl 3 -x 560 -y 290 -defaultsOSRD
+preplace inst ZPulse_Counter_0 -pg 1 -lvl 5 -x 1140 -y 270 -swap {1 2 3 0 4 6 5} -defaultsOSRD
+preplace netloc ZEdge_Detect_0_oSig_Rising 1 3 1 730 210n
+preplace netloc ZExtSig_Simulator_0_oFixedFreq_Sel 1 3 3 710 130 NJ 130 NJ
+preplace netloc ZExtSig_Simulator_0_oTest_Mode 1 3 3 700 110 NJ 110 NJ
+preplace netloc ZLed_Indicator_0_oLED 1 6 1 NJ 250
+preplace netloc ZMux2to1_0_oSig 1 4 1 N 230
+preplace netloc ZPulse_Counter_0_oNewDataUpdate 1 5 1 1380 260n
+preplace netloc ZPulse_Counter_0_oNewPulseCounter 1 5 1 1320 280n
+preplace netloc ZTest_Generator_0_oFixedFreq 1 3 4 740 10 NJ 10 NJ 10 1660
+preplace netloc ZTest_Generator_0_oFixedFreq_IO 1 6 1 NJ 110
+preplace netloc ZUART_Data_Dump_0_oDir_Pin 1 6 1 1670 420n
+preplace netloc ZUART_Data_Dump_0_oTxd_Pin 1 6 1 1670 360n
+preplace netloc clk_wiz_0_clk_50M 1 1 5 210 410 430 210 720J 310 940 150 1360
+preplace netloc iClk_1 1 0 1 NJ 560
+preplace netloc iEn_1 1 2 4 430 530 NJ 530 960 370 NJ
+preplace netloc iPulse_1 1 0 3 NJ 470 NJ 470 NJ
+preplace netloc iRst_N_1 1 1 5 220 430 420 150 NJ 150 930 160 1370
+preplace netloc iTimeInterval_1 1 3 3 690J 320 950 170 1330J
+levelinfo -pg 1 -10 110 310 560 830 1140 1520 1690
+pagesize -pg 1 -db -bbox -sgen -110 0 1830 650
+"
+}
+0

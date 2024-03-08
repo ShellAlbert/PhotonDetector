@@ -1,8 +1,0 @@
-set_property PACKAGE_PIN M2 [get_ports {iKey[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {iKey[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {iKey[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {iKey[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {iKey[3]}]
-set_property PACKAGE_PIN L3 [get_ports {iKey[1]}]
-set_property PACKAGE_PIN K3 [get_ports {iKey[2]}]
-set_property PACKAGE_PIN J3 [get_ports {iKey[3]}]

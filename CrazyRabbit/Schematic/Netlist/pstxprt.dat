@@ -1,0 +1,2895 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 22.1.0 d001Oct-08-2023 at 14:20:41 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='CRAZYRABBIT';
+ POST_TIME='Oct  6 2022 20:42:06';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'CAP NP_C0402_0.1UF/10V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS5149@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins5149@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins5149@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1970,360)',
+ SECTION='';
+
+PART_NAME
+ C10 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13534@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13534@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13534@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,550)',
+ SECTION='';
+
+PART_NAME
+ C100 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS189316@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins189316@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins189316@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1340,210)',
+ SECTION='';
+
+PART_NAME
+ C101 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS189332@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins189332@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins189332@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1360,210)',
+ SECTION='';
+
+PART_NAME
+ C102 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS189368@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins189368@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins189368@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1380,210)',
+ SECTION='';
+
+PART_NAME
+ C103 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS189384@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins189384@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins189384@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1400,210)',
+ SECTION='';
+
+PART_NAME
+ C104 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS196256@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins196256@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins196256@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1380,290)',
+ SECTION='';
+
+PART_NAME
+ C105 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS196272@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins196272@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins196272@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1400,290)',
+ SECTION='';
+
+PART_NAME
+ C106 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS197503@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins197503@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins197503@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1320,380)',
+ SECTION='';
+
+PART_NAME
+ C107 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS197519@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins197519@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins197519@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1340,380)',
+ SECTION='';
+
+PART_NAME
+ C108 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS197535@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins197535@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins197535@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1360,380)',
+ SECTION='';
+
+PART_NAME
+ C109 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS197551@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins197551@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins197551@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1380,380)',
+ SECTION='';
+
+PART_NAME
+ C11 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13560@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13560@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13560@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,570)',
+ SECTION='';
+
+PART_NAME
+ C110 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS197567@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins197567@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins197567@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1400,380)',
+ SECTION='';
+
+PART_NAME
+ C111 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198708@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198708@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198708@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1330,470)',
+ SECTION='';
+
+PART_NAME
+ C112 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198724@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198724@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198724@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1350,470)',
+ SECTION='';
+
+PART_NAME
+ C113 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198740@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198740@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198740@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1370,470)',
+ SECTION='';
+
+PART_NAME
+ C114 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198756@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198756@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198756@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1390,470)',
+ SECTION='';
+
+PART_NAME
+ C115 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198772@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198772@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198772@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,470)',
+ SECTION='';
+
+PART_NAME
+ C116 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198838@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198838@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198838@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1350,540)',
+ SECTION='';
+
+PART_NAME
+ C117 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198854@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198854@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198854@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1370,540)',
+ SECTION='';
+
+PART_NAME
+ C118 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198870@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198870@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198870@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1390,540)',
+ SECTION='';
+
+PART_NAME
+ C119 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198886@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198886@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198886@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,540)',
+ SECTION='';
+
+PART_NAME
+ C12 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13586@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13586@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13586@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,590)',
+ SECTION='';
+
+PART_NAME
+ C120 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS198902@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins198902@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins198902@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1430,540)',
+ SECTION='';
+
+PART_NAME
+ C121 'CAP NP_C0402_1NF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS226015@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins226015@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins226015@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1420,780)',
+ SECTION='';
+
+PART_NAME
+ C122 'CAP NP_C0402_100NF/25V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS243084@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins243084@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins243084@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(10,1060)',
+ SECTION='';
+
+PART_NAME
+ C123 'CAP NP_C0603_1UF/16V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS243100@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins243100@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins243100@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(40,1060)',
+ SECTION='';
+
+PART_NAME
+ C124 'CAP NP_C0402_100NF/25V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS247376@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins247376@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins247376@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(670,1020)',
+ SECTION='';
+
+PART_NAME
+ C125 'CAP NP_C0603_1UF/16V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS247392@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins247392@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins247392@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(670,1040)',
+ SECTION='';
+
+PART_NAME
+ C126 'CAP NP_C0402_100NF/25V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS250896@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins250896@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins250896@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(980,1020)',
+ SECTION='';
+
+PART_NAME
+ C127 'CAP NP_C0402_100NF/25V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS250950@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins250950@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins250950@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(980,990)',
+ SECTION='';
+
+PART_NAME
+ C128 'CAP NP_R0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS257542@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins257542@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins257542@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,680)',
+ SECTION='';
+
+PART_NAME
+ C129 'CAP NP_R0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS257568@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins257568@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins257568@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(20,680)',
+ SECTION='';
+
+PART_NAME
+ C13 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13612@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13612@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13612@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,610)',
+ SECTION='';
+
+PART_NAME
+ C130 'CAP NP_R0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS258530@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins258530@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins258530@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(20,760)',
+ SECTION='';
+
+PART_NAME
+ C131 'CAP NP_R0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS258546@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins258546@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins258546@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,760)',
+ SECTION='';
+
+PART_NAME
+ C132 'CAP NP_R0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS261522@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins261522@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins261522@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,660)',
+ SECTION='';
+
+PART_NAME
+ C133 'CAP NP_R0603_1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS262963@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins262963@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins262963@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(430,780)',
+ SECTION='';
+
+PART_NAME
+ C134 'CAP NP_R0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS264545@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins264545@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins264545@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(380,680)',
+ SECTION='';
+
+PART_NAME
+ C135 'CAP NP_R0603_1NF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS264922@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins264922@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins264922@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,680)',
+ SECTION='';
+
+PART_NAME
+ C136 'CAP NP_R0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS265020@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins265020@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins265020@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(490,640)',
+ SECTION='';
+
+PART_NAME
+ C137 'CAP NP_R0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS270378@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins270378@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins270378@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(560,670)',
+ SECTION='';
+
+PART_NAME
+ C138 'CAP NP_R0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS270394@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins270394@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins270394@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(590,710)',
+ SECTION='';
+
+PART_NAME
+ C139 'CAP NP_R0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS270410@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins270410@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins270410@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(620,750)',
+ SECTION='';
+
+PART_NAME
+ C14 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS15195@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins15195@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins15195@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(360,710)',
+ SECTION='';
+
+PART_NAME
+ C140 'CAP NP_R0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS275103@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins275103@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins275103@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(700,670)',
+ SECTION='';
+
+PART_NAME
+ C141 'CAP NP_R0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS283626@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins283626@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins283626@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(900,660)',
+ SECTION='';
+
+PART_NAME
+ C142 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS315374@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins315374@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins315374@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1040,920)',
+ SECTION='';
+
+PART_NAME
+ C143 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS317730@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins317730@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins317730@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1040,1140)',
+ SECTION='';
+
+PART_NAME
+ C144 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS318537@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins318537@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins318537@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2240,90)',
+ SECTION='';
+
+PART_NAME
+ C145 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS318563@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins318563@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins318563@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2240,120)',
+ SECTION='';
+
+PART_NAME
+ C146 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS321743@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins321743@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins321743@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2240,190)',
+ SECTION='';
+
+PART_NAME
+ C147 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS324333@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins324333@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins324333@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2240,340)',
+ SECTION='';
+
+PART_NAME
+ C148 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS325390@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins325390@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins325390@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2000,440)',
+ SECTION='';
+
+PART_NAME
+ C149 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS326445@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins326445@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins326445@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2220,750)',
+ SECTION='';
+
+PART_NAME
+ C15 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS16301@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins16301@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins16301@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(360,780)',
+ SECTION='';
+
+PART_NAME
+ C150 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS328787@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins328787@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins328787@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2020,680)',
+ SECTION='';
+
+PART_NAME
+ C16 'CAP NP_C0603_4.7UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS16661@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins16661@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins16661@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(290,740)',
+ SECTION='';
+
+PART_NAME
+ C17 'CAP NP_C0402_2.2PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS18856@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins18856@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins18856@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(140,710)',
+ SECTION='';
+
+PART_NAME
+ C18 'CAP NP_C0402_2.2PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS19027@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins19027@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins19027@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(230,710)',
+ SECTION='';
+
+PART_NAME
+ C19 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS26545@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins26545@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins26545@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,530)',
+ SECTION='';
+
+PART_NAME
+ C2 'CAP NP_R0603_1UF/10V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS5175@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins5175@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins5175@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1990,360)',
+ SECTION='';
+
+PART_NAME
+ C20 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS26578@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins26578@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins26578@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(480,530)',
+ SECTION='';
+
+PART_NAME
+ C21 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28507@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28507@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28507@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(600,520)',
+ SECTION='';
+
+PART_NAME
+ C22 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28533@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28533@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28533@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(630,520)',
+ SECTION='';
+
+PART_NAME
+ C23 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28559@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28559@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28559@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(660,520)',
+ SECTION='';
+
+PART_NAME
+ C24 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28585@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28585@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28585@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(690,520)',
+ SECTION='';
+
+PART_NAME
+ C25 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28611@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28611@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28611@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(720,520)',
+ SECTION='';
+
+PART_NAME
+ C26 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28637@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28637@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28637@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(750,520)',
+ SECTION='';
+
+PART_NAME
+ C27 'CAP NP_C0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS28663@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins28663@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins28663@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(560,520)',
+ SECTION='';
+
+PART_NAME
+ C28 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS34319@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins34319@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins34319@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(950,620)',
+ SECTION='';
+
+PART_NAME
+ C29 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS35390@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins35390@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins35390@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1780,590)',
+ SECTION='';
+
+PART_NAME
+ C3 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS9129@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins9129@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins9129@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(320,340)',
+ SECTION='';
+
+PART_NAME
+ C30 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS36525@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins36525@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins36525@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1800,640)',
+ SECTION='';
+
+PART_NAME
+ C31 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS37014@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins37014@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins37014@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1800,730)',
+ SECTION='';
+
+PART_NAME
+ C32 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS37962@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins37962@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins37962@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1750,770)',
+ SECTION='';
+
+PART_NAME
+ C33 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS41537@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins41537@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins41537@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1830,170)',
+ SECTION='';
+
+PART_NAME
+ C34 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS44682@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins44682@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins44682@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(950,330)',
+ SECTION='';
+
+PART_NAME
+ C35 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS44708@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins44708@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins44708@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1010,330)',
+ SECTION='';
+
+PART_NAME
+ C36 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS45914@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins45914@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins45914@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(860,280)',
+ SECTION='';
+
+PART_NAME
+ C37 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS45940@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins45940@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins45940@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(920,280)',
+ SECTION='';
+
+PART_NAME
+ C38 'CAP NP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS48945@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins48945@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins48945@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(870,350)',
+ SECTION='';
+
+PART_NAME
+ C39 'CAP NP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS49567@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins49567@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins49567@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(860,410)',
+ SECTION='';
+
+PART_NAME
+ C4 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS9367@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins9367@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins9367@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(320,420)',
+ SECTION='';
+
+PART_NAME
+ C40 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS49593@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins49593@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins49593@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(890,410)',
+ SECTION='';
+
+PART_NAME
+ C42 'CAP NP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS50909@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins50909@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins50909@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(950,410)',
+ SECTION='';
+
+PART_NAME
+ C43 'CAP NP_C0603_2.2UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS52284@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins52284@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins52284@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(950,430)',
+ SECTION='';
+
+PART_NAME
+ C44 'CAP NP_C0402_18PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS53049@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins53049@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins53049@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(870,480)',
+ SECTION='';
+
+PART_NAME
+ C45 'CAP NP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS54398@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins54398@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins54398@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(890,570)',
+ SECTION='';
+
+PART_NAME
+ C46 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS54414@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins54414@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins54414@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(920,570)',
+ SECTION='';
+
+PART_NAME
+ C47 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS58807@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins58807@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins58807@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2210,1230)',
+ SECTION='';
+
+PART_NAME
+ C48 'CAP NP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS59680@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins59680@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins59680@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2210,1300)',
+ SECTION='';
+
+PART_NAME
+ C49 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS59706@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins59706@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins59706@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2240,1300)',
+ SECTION='';
+
+PART_NAME
+ C5 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13404@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13404@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13404@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,450)',
+ SECTION='';
+
+PART_NAME
+ C50 'CAP NP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS61314@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins61314@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins61314@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2210,1380)',
+ SECTION='';
+
+PART_NAME
+ C51 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS61330@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins61330@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins61330@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2240,1380)',
+ SECTION='';
+
+PART_NAME
+ C52 'CAP NP_C0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS62024@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins62024@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins62024@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2190,1090)',
+ SECTION='';
+
+PART_NAME
+ C53 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS62050@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins62050@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins62050@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2220,1090)',
+ SECTION='';
+
+PART_NAME
+ C54 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS62076@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins62076@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins62076@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2250,1090)',
+ SECTION='';
+
+PART_NAME
+ C55 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS62102@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins62102@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins62102@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2280,1090)',
+ SECTION='';
+
+PART_NAME
+ C56 'CAP NP_C0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS63215@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins63215@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins63215@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2190,1000)',
+ SECTION='';
+
+PART_NAME
+ C57 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS63231@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins63231@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins63231@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2220,1000)',
+ SECTION='';
+
+PART_NAME
+ C58 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS63247@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins63247@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins63247@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2250,1000)',
+ SECTION='';
+
+PART_NAME
+ C59 'CAP NP_C0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS65271@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins65271@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins65271@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1010)',
+ SECTION='';
+
+PART_NAME
+ C6 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13430@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13430@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13430@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,470)',
+ SECTION='';
+
+PART_NAME
+ C60 'CAP NP_C0603_4.7UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS65323@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins65323@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins65323@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1030)',
+ SECTION='';
+
+PART_NAME
+ C61 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS65383@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins65383@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins65383@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1050)',
+ SECTION='';
+
+PART_NAME
+ C62 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS65409@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins65409@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins65409@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1070)',
+ SECTION='';
+
+PART_NAME
+ C63 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS68848@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins68848@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins68848@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1120)',
+ SECTION='';
+
+PART_NAME
+ C64 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS68864@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins68864@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins68864@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1140)',
+ SECTION='';
+
+PART_NAME
+ C65 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS71068@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins71068@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins71068@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1880,1170)',
+ SECTION='';
+
+PART_NAME
+ C66 'CAP NP_R0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS72696@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins72696@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins72696@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(80,1390)',
+ SECTION='';
+
+PART_NAME
+ C67 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS72712@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins72712@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins72712@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(110,1390)',
+ SECTION='';
+
+PART_NAME
+ C68 'CAP NP_C0402_22PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS75971@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins75971@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins75971@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(350,1410)',
+ SECTION='';
+
+PART_NAME
+ C69 'CAP NP_R0603_22UF/4V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS77730@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins77730@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins77730@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(390,1410)',
+ SECTION='';
+
+PART_NAME
+ C7 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13456@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13456@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13456@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,490)',
+ SECTION='';
+
+PART_NAME
+ C70 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS77746@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins77746@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins77746@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(430,1410)',
+ SECTION='';
+
+PART_NAME
+ C71 'CAP NP_R0603_22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84636@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84636@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84636@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(80,1240)',
+ SECTION='';
+
+PART_NAME
+ C72 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84652@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84652@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84652@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(110,1240)',
+ SECTION='';
+
+PART_NAME
+ C73 'CAP NP_C0402_22PF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84696@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84696@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84696@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(350,1260)',
+ SECTION='';
+
+PART_NAME
+ C74 'CAP NP_R0603_22UF/4V':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84712@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84712@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84712@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(390,1260)',
+ SECTION='';
+
+PART_NAME
+ C75 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84728@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84728@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84728@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(430,1260)',
+ SECTION='';
+
+PART_NAME
+ C76 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS92265@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins92265@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins92265@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(190,980)',
+ SECTION='';
+
+PART_NAME
+ C77 'CAP NP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS95496@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins95496@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins95496@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,1030)',
+ SECTION='';
+
+PART_NAME
+ C78 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS97664@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins97664@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins97664@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(70,1050)',
+ SECTION='';
+
+PART_NAME
+ C79 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS99454@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins99454@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins99454@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(350,1110)',
+ SECTION='';
+
+PART_NAME
+ C8 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13482@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13482@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13482@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,510)',
+ SECTION='';
+
+PART_NAME
+ C80 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS99537@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins99537@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins99537@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(350,1150)',
+ SECTION='';
+
+PART_NAME
+ C81 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167002@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167002@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167002@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,440)',
+ SECTION='';
+
+PART_NAME
+ C82 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167022@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167022@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167022@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,460)',
+ SECTION='';
+
+PART_NAME
+ C83 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167042@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167042@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167042@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,480)',
+ SECTION='';
+
+PART_NAME
+ C84 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167062@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167062@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167062@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,500)',
+ SECTION='';
+
+PART_NAME
+ C85 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167082@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167082@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167082@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,520)',
+ SECTION='';
+
+PART_NAME
+ C86 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167102@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167102@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167102@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,540)',
+ SECTION='';
+
+PART_NAME
+ C87 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167122@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167122@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167122@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,560)',
+ SECTION='';
+
+PART_NAME
+ C88 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167142@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167142@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167142@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,580)',
+ SECTION='';
+
+PART_NAME
+ C89 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS167162@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins167162@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins167162@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,600)',
+ SECTION='';
+
+PART_NAME
+ C9 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS13508@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins13508@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins13508@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(330,530)',
+ SECTION='';
+
+PART_NAME
+ C90 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS187061@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins187061@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins187061@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1430,50)',
+ SECTION='';
+
+PART_NAME
+ C91 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS187087@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins187087@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins187087@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,50)',
+ SECTION='';
+
+PART_NAME
+ C92 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS187123@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins187123@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins187123@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1370,50)',
+ SECTION='';
+
+PART_NAME
+ C93 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS187139@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins187139@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins187139@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1390,50)',
+ SECTION='';
+
+PART_NAME
+ C94 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS187175@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins187175@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins187175@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1330,50)',
+ SECTION='';
+
+PART_NAME
+ C95 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS187191@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins187191@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins187191@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1350,50)',
+ SECTION='';
+
+PART_NAME
+ C96 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS188320@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins188320@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins188320@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1390,130)',
+ SECTION='';
+
+PART_NAME
+ C97 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS188336@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins188336@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins188336@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,130)',
+ SECTION='';
+
+PART_NAME
+ C98 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS188352@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins188352@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins188352@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1430,130)',
+ SECTION='';
+
+PART_NAME
+ C99 'CAP NP_C0402_0.22UF':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS189300@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins189300@discrete.\cap np.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins189300@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1320,210)',
+ SECTION='';
+
+PART_NAME
+ D1 'DIODE SCHOTTKY_SOD-523_RB521S-30':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS91039@DISCRETE.DIODE SCHOTTKY.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins91039@discrete.\diode schottky.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins91039@discrete.\diode schottky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1830,1220)',
+ SECTION='';
+
+PART_NAME
+ D2 'DIODE SCHOTTKY_SOD-523_RB521S-30':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS91151@DISCRETE.DIODE SCHOTTKY.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins91151@discrete.\diode schottky.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins91151@discrete.\diode schottky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1830,1260)',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_LED0402_LED':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS96489@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins96489@discrete.\led.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins96489@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(440,1060)',
+ SECTION='';
+
+PART_NAME
+ D4 'DIODE SCHOTTKY_SOD-523_RB521S-30':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS99372@DISCRETE.DIODE SCHOTTKY.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins99372@discrete.\diode schottky.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins99372@discrete.\diode schottky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(250,1090)',
+ SECTION='';
+
+PART_NAME
+ D5 'DIODE SCHOTTKY_SOD-523_RB521S-30':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS99398@DISCRETE.DIODE SCHOTTKY.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins99398@discrete.\diode schottky.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins99398@discrete.\diode schottky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(250,1130)',
+ SECTION='';
+
+PART_NAME
+ D6 'LED_LED0402_GREEN':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS222985@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins222985@discrete.\led.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins222985@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1090,1100)',
+ SECTION='';
+
+PART_NAME
+ D7 'LED_LED0402_GREEN':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS223011@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins223011@discrete.\led.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins223011@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1090,1120)',
+ SECTION='';
+
+PART_NAME
+ D8 'LED_LED0402_GREEN':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS223468@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins223468@discrete.\led.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins223468@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,680)',
+ SECTION='';
+
+PART_NAME
+ FB1 'INDUCTOR_L0402_INDUCTOR':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS234700@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins234700@discrete.\inductor.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins234700@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1400,840)',
+ SECTION='';
+
+PART_NAME
+ J1 'AXK6F00547YG_CONN_SMD_2X50_0D5_AXK6F00547YG':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS313933@LIBRARY1.AXK6F00547YG.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins313933@library1.\axk6f00547yg.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins313933@library1.\axk6f00547yg.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(400,60)',
+ SECTION='';
+
+PART_NAME
+ J2 'AXK6F00547YG_CONN_SMD_2X50_0D5_AXK6F00547YG':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS314145@LIBRARY1.AXK6F00547YG.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins314145@library1.\axk6f00547yg.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins314145@library1.\axk6f00547yg.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(590,60)',
+ SECTION='';
+
+PART_NAME
+ L1 'INDUCTOR_IND_SMD_4X4MM_2.2UH/1A':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS74397@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins74397@discrete.\inductor.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins74397@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(260,1370)',
+ SECTION='';
+
+PART_NAME
+ L2 'INDUCTOR_IND_SMD_4X4MM_2.2UH/1A':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84548@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84548@discrete.\inductor.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84548@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(260,1220)',
+ SECTION='';
+
+PART_NAME
+ L3 'INDUCTOR_IND_SMD_4X4MM_2.2UH':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS264246@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins264246@discrete.\inductor.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins264246@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(420,620)',
+ SECTION='';
+
+PART_NAME
+ R1 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS6699@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins6699@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins6699@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2230,570)',
+ SECTION='';
+
+PART_NAME
+ R10 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS32953@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins32953@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins32953@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(800,410)',
+ SECTION='';
+
+PART_NAME
+ R11 'R_R0402_10R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS34273@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins34273@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins34273@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1040,570)',
+ SECTION='';
+
+PART_NAME
+ R12 'R_R0402_10R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS36312@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins36312@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins36312@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1720,610)',
+ SECTION='';
+
+PART_NAME
+ R13 'R_R0402_10R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS36974@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins36974@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins36974@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1720,700)',
+ SECTION='';
+
+PART_NAME
+ R14 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS38568@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins38568@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins38568@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1860,70)',
+ SECTION='';
+
+PART_NAME
+ R15 'R_R0402_1M':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS45852@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins45852@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins45852@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(940,220)',
+ SECTION='';
+
+PART_NAME
+ R16 'R_R0402_10R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS52997@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins52997@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins52997@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(950,450)',
+ SECTION='';
+
+PART_NAME
+ R17 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS53839@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins53839@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins53839@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(900,490)',
+ SECTION='';
+
+PART_NAME
+ R18 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS53865@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins53865@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins53865@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(920,490)',
+ SECTION='';
+
+PART_NAME
+ R19 'R_R0402_124K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS74931@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins74931@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins74931@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(310,1400)',
+ SECTION='';
+
+PART_NAME
+ R2 'R_R0402_240R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS8925@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins8925@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins8925@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(310,320)',
+ SECTION='';
+
+PART_NAME
+ R20 'R_R0402_100K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS74957@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins74957@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins74957@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(260,1440)',
+ SECTION='';
+
+PART_NAME
+ R21 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS80231@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins80231@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins80231@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,1370)',
+ SECTION='';
+
+PART_NAME
+ R22 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84564@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84564@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84564@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,1220)',
+ SECTION='';
+
+PART_NAME
+ R23 'R_R0402_124K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84672@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84672@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84672@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(310,1250)',
+ SECTION='';
+
+PART_NAME
+ R24 'R_R0402_100K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84780@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84780@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84780@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(260,1290)',
+ SECTION='';
+
+PART_NAME
+ R25 'R_R0402_0':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS85987@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins85987@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins85987@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(190,1540)',
+ SECTION='';
+
+PART_NAME
+ R26 'R_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS91225@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins91225@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins91225@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1840,1300)',
+ SECTION='';
+
+PART_NAME
+ R27 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS92230@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins92230@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins92230@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,1000)',
+ SECTION='';
+
+PART_NAME
+ R28 'R_R0402_3.4K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS93784@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins93784@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins93784@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(360,1030)',
+ SECTION='';
+
+PART_NAME
+ R29 'R_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS96212@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins96212@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins96212@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(500,1010)',
+ SECTION='';
+
+PART_NAME
+ R3 'R_R0402_240R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS9337@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins9337@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins9337@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(310,400)',
+ SECTION='';
+
+PART_NAME
+ R30 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS97358@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins97358@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins97358@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(540,980)',
+ SECTION='';
+
+PART_NAME
+ R31 'R_R0402_50R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS99428@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins99428@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins99428@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(340,1090)',
+ SECTION='';
+
+PART_NAME
+ R32 'R_R0402_1M':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS99507@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins99507@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins99507@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(340,1130)',
+ SECTION='';
+
+PART_NAME
+ R33 'R_R0402_240R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS165685@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins165685@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins165685@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(300,320)',
+ SECTION='';
+
+PART_NAME
+ R34 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS206487@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins206487@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins206487@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(320,40)',
+ SECTION='';
+
+PART_NAME
+ R35 'R_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS206513@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins206513@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins206513@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(320,110)',
+ SECTION='';
+
+PART_NAME
+ R36 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS222934@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins222934@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins222934@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1180,1120)',
+ SECTION='';
+
+PART_NAME
+ R37 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS222960@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins222960@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins222960@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1180,1100)',
+ SECTION='';
+
+PART_NAME
+ R38 'R_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS223484@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins223484@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins223484@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,620)',
+ SECTION='';
+
+PART_NAME
+ R39 'R_R0402_4.7K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS224591@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins224591@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins224591@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1390,670)',
+ SECTION='';
+
+PART_NAME
+ R4 'R_R0402_1.5K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS14541@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins14541@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins14541@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(320,700)',
+ SECTION='';
+
+PART_NAME
+ R40 'R_R0402_4.7K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS224881@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins224881@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins224881@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1370,670)',
+ SECTION='';
+
+PART_NAME
+ R41 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS224984@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins224984@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins224984@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1320,740)',
+ SECTION='';
+
+PART_NAME
+ R42 'R_R0402_100R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS226041@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins226041@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins226041@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1360,760)',
+ SECTION='';
+
+PART_NAME
+ R43 'R_R0402_100R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS226067@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins226067@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins226067@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1360,790)',
+ SECTION='';
+
+PART_NAME
+ R44 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS239351@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins239351@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins239351@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1220,640)',
+ SECTION='';
+
+PART_NAME
+ R45 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS239377@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins239377@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins239377@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1240,640)',
+ SECTION='';
+
+PART_NAME
+ R46 'R_R0402_4.7K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS239403@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins239403@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins239403@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1260,640)',
+ SECTION='';
+
+PART_NAME
+ R47 'R_R0402_100R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS239429@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins239429@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins239429@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1220,730)',
+ SECTION='';
+
+PART_NAME
+ R48 'R_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS239455@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins239455@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins239455@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1240,730)',
+ SECTION='';
+
+PART_NAME
+ R49 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS239481@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins239481@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins239481@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1260,730)',
+ SECTION='';
+
+PART_NAME
+ R5 'R_R0402_1.5K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS14567@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins14567@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins14567@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(320,770)',
+ SECTION='';
+
+PART_NAME
+ R50 'R_R0402_0':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS243040@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins243040@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins243040@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(70,1030)',
+ SECTION='';
+
+PART_NAME
+ R51 'R_R0402_1.8K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS245644@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins245644@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins245644@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(550,1030)',
+ SECTION='';
+
+PART_NAME
+ R52 'R_R0402_4.7K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS245670@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins245670@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins245670@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(530,1030)',
+ SECTION='';
+
+PART_NAME
+ R53 'R_R0402_4.7K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS245696@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins245696@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins245696@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(510,1030)',
+ SECTION='';
+
+PART_NAME
+ R54 'R_R0402_0':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS245763@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins245763@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins245763@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,1080)',
+ SECTION='';
+
+PART_NAME
+ R55 'R_R0402_0':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS245813@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins245813@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins245813@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,1090)',
+ SECTION='';
+
+PART_NAME
+ R56 'R_R0402_1.8K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS246838@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins246838@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins246838@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(740,1030)',
+ SECTION='';
+
+PART_NAME
+ R57 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS252898@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins252898@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins252898@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1080,1030)',
+ SECTION='';
+
+PART_NAME
+ R58 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS255530@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins255530@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins255530@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(160,760)',
+ SECTION='';
+
+PART_NAME
+ R59 'R_R0402_205K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS255556@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins255556@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins255556@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,760)',
+ SECTION='';
+
+PART_NAME
+ R6 'R_R0402_470R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS18755@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins18755@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins18755@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(70,700)',
+ SECTION='';
+
+PART_NAME
+ R60 'R_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS255602@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins255602@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins255602@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,710)',
+ SECTION='';
+
+PART_NAME
+ R61 'R_R0402_86.6K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS255632@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins255632@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins255632@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(90,760)',
+ SECTION='';
+
+PART_NAME
+ R62 'R_R0402_200K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS255665@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins255665@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins255665@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(90,670)',
+ SECTION='';
+
+PART_NAME
+ R63 'R_R0402_100K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS262927@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins262927@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins262927@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(360,760)',
+ SECTION='';
+
+PART_NAME
+ R64 'R_R0402_43.2K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS264455@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins264455@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins264455@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(520,670)',
+ SECTION='';
+
+PART_NAME
+ R65 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS264488@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins264488@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins264488@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(520,750)',
+ SECTION='';
+
+PART_NAME
+ R66 'R_R0402_100K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS264760@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins264760@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins264760@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(420,640)',
+ SECTION='';
+
+PART_NAME
+ R67 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS268101@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins268101@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins268101@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(380,720)',
+ SECTION='';
+
+PART_NAME
+ R68 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS275131@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins275131@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins275131@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(650,620)',
+ SECTION='';
+
+PART_NAME
+ R69 'R_R0402_43.2K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS279468@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins279468@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins279468@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(870,610)',
+ SECTION='';
+
+PART_NAME
+ R7 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS25747@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins25747@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins25747@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(390,430)',
+ SECTION='';
+
+PART_NAME
+ R70 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS279484@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins279484@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins279484@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(870,690)',
+ SECTION='';
+
+PART_NAME
+ R71 'R_R0402_10R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS317205@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins317205@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins317205@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1030,980)',
+ SECTION='';
+
+PART_NAME
+ R72 'R_R0402_10R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS317231@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins317231@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins317231@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1030,990)',
+ SECTION='';
+
+PART_NAME
+ R8 'R_R0402_240R':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS26248@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins26248@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins26248@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,430)',
+ SECTION='';
+
+PART_NAME
+ R9 'R_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS32927@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins32927@discrete.\r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins32927@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(780,410)',
+ SECTION='';
+
+PART_NAME
+ TP1 'T POINT R_TP_SMD_1D2_TP_CIR_SMD_1V35':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS111191@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins111191@discrete.\t point r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins111191@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(390,1210)',
+ SECTION='';
+
+PART_NAME
+ TP2 'T POINT R_TP_SMD_1D2_TP_CIR_SMD_1V35':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS111267@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins111267@discrete.\t point r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins111267@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(390,1360)',
+ SECTION='';
+
+PART_NAME
+ TP3 'T POINT R_TP_SMD_1D2_TP_CIR_SMD_3V3':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS111305@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins111305@discrete.\t point r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins111305@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(500,970)',
+ SECTION='';
+
+PART_NAME
+ TP4 'T POINT R_TP_SMD_1D2_TP_CIR_SMD_3V3':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS235897@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins235897@discrete.\t point r.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins235897@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1390,870)',
+ SECTION='';
+
+PART_NAME
+ U1 'FEMDRW008G-88A39_BGA-153_FEMDRW008G-88A39':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS653@LIBRARY1.FEMDRW008G-88A39.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins653@library1.\femdrw008g-88a39.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins653@library1.\femdrw008g-88a39.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(2070,20)',
+ SECTION='';
+
+PART_NAME
+ U10 'N25Q128A13ESE40E_SOP2-8_N25Q128A13ESE40E':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS244370@LIBRARY1.N25Q128A13ESE40E.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins244370@library1.\n25q128a13ese40e.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins244370@library1.\n25q128a13ese40e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(590,1070)',
+ SECTION='';
+
+PART_NAME
+ U11 'REF3012AIDBZR_SOT-23-3_REF3012AIDBZR':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS250466@LIBRARY1.REF3012AIDBZR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins250466@library1.\ref3012aidbzr.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins250466@library1.\ref3012aidbzr.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(830,1010)',
+ SECTION='';
+
+PART_NAME
+ U12 'TPS53319DQPT_LSON-22_TPS53319DQPT':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS253380@LIBRARY1.TPS53319DQPT.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins253380@library1.\tps53319dqpt.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins253380@library1.\tps53319dqpt.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(210,640)',
+ SECTION='';
+
+PART_NAME
+ U13 'TPS7A7001DDAR_SO-POWERPAD-8_TPS7A7001DDAR':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS274607@LIBRARY1.TPS7A7001DDAR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins274607@library1.\tps7a7001ddar.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins274607@library1.\tps7a7001ddar.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(770,640)',
+ SECTION='';
+
+PART_NAME
+ U2 'MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS7034@LIBRARY1.MT41K256M16TW-107.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins7034@library1.\mt41k256m16tw-107.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins7034@library1.\mt41k256m16tw-107.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,70)',
+ SECTION='';
+
+PART_NAME
+ U3 'MCIMX6Y2CVM08AB_MAPBGA-289_MCIMX6Y2CVM08AB':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS22720@LIBRARY1.MCIMX6Y2CVM08ABA.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins22720@library1.\mcimx6y2cvm08aba.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins22720@library1.\mcimx6y2cvm08aba.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1970,980)',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS23157@LIBRARY1.MCIMX6Y2CVM08ABB.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins23157@library1.\mcimx6y2cvm08abb.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins23157@library1.\mcimx6y2cvm08abb.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1970,980)',
+ SECTION='B';
+
+SECTION_NUMBER 3
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS23491@LIBRARY1.MCIMX6Y2CVM08ABC.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins23491@library1.\mcimx6y2cvm08abc.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins23491@library1.\mcimx6y2cvm08abc.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1970,980)',
+ SECTION='C';
+
+SECTION_NUMBER 4
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS23752@LIBRARY1.MCIMX6Y2CVM08ABD.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins23752@library1.\mcimx6y2cvm08abd.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins23752@library1.\mcimx6y2cvm08abd.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1970,980)',
+ SECTION='D';
+
+SECTION_NUMBER 5
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS23947@LIBRARY1.MCIMX6Y2CVM08ABE.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins23947@library1.\mcimx6y2cvm08abe.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins23947@library1.\mcimx6y2cvm08abe.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1970,980)',
+ SECTION='E';
+
+PART_NAME
+ U4 'MT3420B_SOT-23-6_MT3420B':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS72257@LIBRARY1.MT3420B.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins72257@library1.\mt3420b.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins72257@library1.\mt3420b.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(180,1370)',
+ SECTION='';
+
+PART_NAME
+ U5 'MT3420B_SOT-23-6_MT3420B':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS84524@LIBRARY1.MT3420B.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins84524@library1.\mt3420b.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins84524@library1.\mt3420b.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(180,1220)',
+ SECTION='';
+
+PART_NAME
+ U6 'UM805RE_SOT-143_UM805RE':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS91318@LIBRARY1.UM805RE.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins91318@library1.\um805re.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins91318@library1.\um805re.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,1030)',
+ SECTION='';
+
+PART_NAME
+ U7 'MT9700_SOT-23-5_MT9700':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS91764@LIBRARY1.MT9700.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins91764@library1.\mt9700.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins91764@library1.\mt9700.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(280,980)',
+ SECTION='';
+
+PART_NAME
+ U8 'MT41K256M16TW-107_FBGA-96_MT41K256M16TW-107':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS163391@LIBRARY1.MT41K256M16TW-107.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins163391@library1.\mt41k256m16tw-107.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins163391@library1.\mt41k256m16tw-107.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(110,40)',
+ SECTION='';
+
+PART_NAME
+ U9 'XC7S50-1CSGA324I_CSGA324_XC7S50-1CSGA324I':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS173908@LIBRARY1.XC7S50-1CSGA324IA.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins173908@library1.\xc7s50-1csga324ia.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins173908@library1.\xc7s50-1csga324ia.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS174063@LIBRARY1.XC7S50-1CSGA324IB.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins174063@library1.\xc7s50-1csga324ib.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins174063@library1.\xc7s50-1csga324ib.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='B';
+
+SECTION_NUMBER 3
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS174280@LIBRARY1.XC7S50-1CSGA324IC.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins174280@library1.\xc7s50-1csga324ic.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins174280@library1.\xc7s50-1csga324ic.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='C';
+
+SECTION_NUMBER 4
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS174417@LIBRARY1.XC7S50-1CSGA324ID.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins174417@library1.\xc7s50-1csga324id.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins174417@library1.\xc7s50-1csga324id.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='D';
+
+SECTION_NUMBER 5
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS174554@LIBRARY1.XC7S50-1CSGA324IE.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins174554@library1.\xc7s50-1csga324ie.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins174554@library1.\xc7s50-1csga324ie.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='E';
+
+SECTION_NUMBER 6
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS174771@LIBRARY1.XC7S50-1CSGA324IF.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins174771@library1.\xc7s50-1csga324if.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins174771@library1.\xc7s50-1csga324if.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='F';
+
+SECTION_NUMBER 7
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS175074@LIBRARY1.XC7S50-1CSGA324IG.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins175074@library1.\xc7s50-1csga324ig.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins175074@library1.\xc7s50-1csga324ig.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1530,620)',
+ SECTION='G';
+
+PART_NAME
+ Y1 'OSCILLATOR_SMD3225-4P_SG-8101CE 100.000000MHZ':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS243000@LIBRARY1.OSCILLATOR.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins243000@library1.\oscillator.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins243000@library1.\oscillator.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(140,1010)',
+ SECTION='';
+
+PART_NAME
+ Y2 'CRYSTAL13_2_SMD3215-2P_32.768KHZ':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS44588@CRAZYRABBIT.CRYSTAL13_2.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins44588@crazyrabbit.\crystal13_2.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins44588@crazyrabbit.\crystal13_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(980,300)',
+ SECTION='';
+
+PART_NAME
+ Y3 'CRYSTAL_SMD3225-4P_24MHZ':;
+
+SECTION_NUMBER 1
+ '@CRAZYRABBIT.SCHEMATIC1(SCH_1):INS152973@LIBRARY1.CRYSTAL.NORMAL(CHIPS)':
+ C_PATH='@crazyrabbit.schematic1(sch_1):ins152973@library1.\crystal.normal\(chips)',
+ P_PATH='@crazyrabbit.schematic1(sch_1):page1_ins152973@library1.\crystal.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(890,250)',
+ SECTION='';
+
+END.

@@ -1,0 +1,67 @@
+A!FUNC_LOGICAL_PATH!COMP_DEVICE_TYPE!REFDES!FUNC_PRIM_FILE!COMP_PARENT_PPT!COMP_PARENT_PPT_PART!COMP_PARENT_PART_TYPE!FUNC_SCH_SIZE!FUNC_HAS_FIXED_SIZE!FUNC_DES!FUNC_GROUP!FUNC_ROOM!FUNC_CDS_FSP_UID!FUNC_NO_SWAP_PIN!FUNC_HARD_LOCATION!FUNC_NO_SWAP_GATE_EXT!FUNC_CDS_FSP_MAPPED_CELL!FUNC_CDS_FSP_FPGA_SYMBOL!FUNC_CDS_FSP_TERM_TYPE!FUNC_CDS_FSP_TERM_NAME!FUNC_ROOM!FUNC_GROUP!FUNC_CDS_FSP_TERM_INDEX!FUNC_CDS_FSP_INSTANCE_ID!FUNC_NO_SWAP_GATE!FUNC_NO_XNET_CONNECTION!FUNC_CDS_FSP_IS_FPGA!
+J!F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A3/Sensor_RevA3.brd!Fri Mar  8 16:03:17 2024!-945.0400!-685.8141!2054.9600!1314.1859!0.0001!millimeters!SENSOR!33.896063 mil!2!UP TO DATE!
+S!@sensor.schematic1(sch_1):ins798408@discrete.\diode tvs.normal\(chips)!DIODE TVS_SOD-323_PSD24-N!D2!.\pstchip.dat!!!!!!F46!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins798362@discrete.\fuse.normal\(chips)!FUSE_F1206_24V/0.5A!F1!.\pstchip.dat!!!!!!F42!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins798426@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_T POINT F!TP2!.\pstchip.dat!!!!!!F6!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797817@discrete.\cap np.normal\(chips)!CAP NP_C0402_22NF/25V!C4!.\pstchip.dat!!!!!!F51!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797675@discrete.\cap np.normal\(chips)!CAP NP_C0805_0.1UF/50V!C2!.\pstchip.dat!!!!!!F49!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797691@discrete.\cap np.normal\(chips)!CAP NP_C1210_22UF/25V!C1!.\pstchip.dat!!!!!!F48!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797437@discrete.\cap np.normal\(chips)!CAP NP_C0402_100NF/25V!C3!.\pstchip.dat!!!!!!F50!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797761@discrete.\cap np.normal\(chips)!CAP NP_C0402_300PF/6.3V!C6!.\pstchip.dat!!!!!!F47!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797793@discrete.\c.normal\(chips)!C_C1206_22UF/10V!C5!.\pstchip.dat!!!!!!F54!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797777@discrete.\c.normal\(chips)!C_C1206_22UF/10V!C7!.\pstchip.dat!!!!!!F53!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins801891@library1.\sma.normal\(chips)!SMA_SMA-THR-4P_SMA!J1!.\pstchip.dat!!!!!!F40!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins795129@library1.\sma.normal\(chips)!SMA_SMA-THR-4P_SMA!J2!.\pstchip.dat!!!!!!F41!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797533@discrete.\inductor.normal\(chips)!INDUCTOR_IND_SMD_6D0X6D0_6.8UH/2A!L1!.\pstchip.dat!!!!!!F39!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins801060@discrete.\r.normal\(chips)!R_R0402_0!R1!.\pstchip.dat!!!!!!F33!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797453@discrete.\r.normal\(chips)!R_R0402_0!R8!.\pstchip.dat!!!!!!F34!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797941@discrete.\r.normal\(chips)!R_R0402_100K!R9!.\pstchip.dat!!!!!!F26!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797517@discrete.\r.normal\(chips)!R_R0402_191K!R5!.\pstchip.dat!!!!!!F24!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797861@discrete.\r.normal\(chips)!R_R0402_10K!R7!.\pstchip.dat!!!!!!F28!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797643@discrete.\r.normal\(chips)!R_R0402_10K!R4!.\pstchip.dat!!!!!!F27!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797659@discrete.\r.normal\(chips)!R_R0402_90.9K!R6!.\pstchip.dat!!!!!!F9!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797745@discrete.\r.normal\(chips)!R_R0402_41.9K!R3!.\pstchip.dat!!!!!!F8!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793550@discrete.\r.normal\(chips)!R_R0603_4.7K!R2!.\pstchip.dat!!!!!!F7!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins797409@library1.\mp2338gtl.normal\(chips)!MP2338GTL_SOT583_MP2338GTL!U1!.\pstchip.dat!!!!!!F0!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793044@discrete.\t point f.normal\(chips)!T POINT F_STAMP_HOLE_1D5X3D0_1D4_12V!TP1!.\pstchip.dat!!!!!!F5!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792930@discrete.\c.normal\(chips)!C_MPP472J630V_0.1UF/630V!C18!.\pstchip.dat!!!!!!F52!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793272@discrete.\r.normal\(chips)!R_R0805_100K!R18!.\pstchip.dat!!!!!!F38!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792004@discrete.\r.normal\(chips)!R_R0805_1.3K!R13!.\pstchip.dat!!!!!!F35!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793170@discrete.\r.normal\(chips)!R_R0603_2K!R22!.\pstchip.dat!!!!!!F12!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791884@discrete.\r.normal\(chips)!R_R0603_9.1K!R14!.\pstchip.dat!!!!!!F10!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791924@library1.\h01-p401v-5c.normal\(chips)!H01-P401V-5C_H01-P401V-5C_H01-P401V-5C!U5!.\pstchip.dat!!!!!!F1!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793318@discrete.\led.normal\(chips)!LED_R0603_LED!D1!.\pstchip.dat!!!!!!F45!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792746@discrete.\cap np.normal\(chips)!CAP NP_C0603_10UF/16V!C12!.\pstchip.dat!!!!!!F56!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791580@discrete.\cap np.normal\(chips)!CAP NP_C0603_10UF/16V!C16!.\pstchip.dat!!!!!!F55!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791904@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C13!.\pstchip.dat!!!!!!F60!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793190@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C14!.\pstchip.dat!!!!!!F59!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792706@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C10!.\pstchip.dat!!!!!!F61!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792344@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C15!.\pstchip.dat!!!!!!F58!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791760@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C8!.\pstchip.dat!!!!!!F64!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792384@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C9!.\pstchip.dat!!!!!!F63!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792464@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C17!.\pstchip.dat!!!!!!F57!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792952@discrete.\cap np.normal\(chips)!CAP NP_C0603_0.1UF/16V!C11!.\pstchip.dat!!!!!!F62!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792686@discrete.\diode.normal\(chips)!DIODE_SAPD-THR-2P_SAPD!D3!.\pstchip.dat!!!!!!F44!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792864@discrete.\diode schottky.normal\(chips)!DIODE SCHOTTKY_SOD323-L1D8-W1D3-P2D4-MM_PTVSLC3D3V3B!D4!.\pstchip.dat!!!!!!F43!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792282@discrete.\r.normal\(chips)!R_R0603_0!R19!.\pstchip.dat!!!!!!F18!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791600@discrete.\r.normal\(chips)!R_R0603_0!R12!.\pstchip.dat!!!!!!F17!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793432@discrete.\r.normal\(chips)!R_R0603_0!R26!.\pstchip.dat!!!!!!F19!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793530@discrete.\r.normal\(chips)!R_R0603_10K!R20!.\pstchip.dat!!!!!!F25!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793150@discrete.\r.normal\(chips)!R_R0603_100K!R15!.\pstchip.dat!!!!!!F32!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791864@discrete.\r.normal\(chips)!R_R0603_100K!R21!.\pstchip.dat!!!!!!F31!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792092@discrete.\r.normal\(chips)!R_R0603_100K!R24!.\pstchip.dat!!!!!!F29!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793096@discrete.\r.normal\(chips)!R_R0603_100K!R17!.\pstchip.dat!!!!!!F30!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791502@discrete.\r.normal\(chips)!R_R0603_1K!R27!.\pstchip.dat!!!!!!F13!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792792@discrete.\r.normal\(chips)!R_R0603_1K!R28!.\pstchip.dat!!!!!!F14!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791700@discrete.\r.normal\(chips)!R_R0603_4.99K!R29!.\pstchip.dat!!!!!!F21!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792112@discrete.\r.normal\(chips)!R_R0603_4.99K!R30!.\pstchip.dat!!!!!!F20!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793490@discrete.\r.normal\(chips)!R_R0603_4.99K!R23!.\pstchip.dat!!!!!!F22!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791680@discrete.\r.normal\(chips)!R_R0603_4.99K!R25!.\pstchip.dat!!!!!!F23!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793392@discrete.\r.normal\(chips)!R_R0805_0!R11!.\pstchip.dat!!!!!!F37!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792404@discrete.\r.normal\(chips)!R_R0805_0!R10!.\pstchip.dat!!!!!!F36!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791964@discrete.\r.normal\(chips)!R_R0603_DNP!R31!.\pstchip.dat!!!!!!F15!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins791620@discrete.\r.normal\(chips)!R_R0603_499!R32!.\pstchip.dat!!!!!!F16!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792646@discrete.\r.normal\(chips)!R_R0603_2.4K!R16!.\pstchip.dat!!!!!!F11!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792906@tex_inst.\tl431/ti.normal\(chips)!TL431/TI_SOT-23-3-TL431_TL431!U4!.\pstchip.dat!!!!!!F3!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins792224@library1.\opa357aidbvr.normal\(chips)!OPA357AIDBVR_SOT-23-6-L2D9-W1D6-PD0D95-CD2D8-MM_OPA357AIDBVR!U2!.\pstchip.dat!!!!!!F4!!!!!!!!!!!!!!!!!!
+S!@sensor.schematic1(sch_1):ins793006@library1.\tlv3501aidbvr.normal\(chips)!TLV3501AIDBVR_SOT-23-6-L2D9-W1D6-PD0D95-CD2D8-MM_TLV3501AIDBVR!U3!.\pstchip.dat!!!!!!F2!!!!!!!!!!!!!!!!!!

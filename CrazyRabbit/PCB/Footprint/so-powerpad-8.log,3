@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : SO-POWERPAD-8.dra                             )
+(    Software Version : 22.1P001                                      )
+(    Date/Time        : Sat Oct  7 11:22:56 2023                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB/Footprint
+    Name      = so-powerpad-8.psm
+    User      = SNIPER
+    Machine   = DESKTOP-R1EC6M9
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

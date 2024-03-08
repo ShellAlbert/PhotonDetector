@@ -1,0 +1,34 @@
+\t (00:21:26) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:21:26)     Journal start - Fri Mar  8 15:15:15 2024
+\t (00:21:26)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=8452 CPUs=12
+\t (00:21:26) CmdLine= f:\mysoftware\cadence\tools\bin\allegro.exe F:\MyTemporary\Github\PhotonDetector\Sensor_Board\PCB-A3\Sensor_RevA3.brd
+\t (00:21:26) 
+\d (00:21:26) Design opened: F:/MyTemporary/Github/PhotonDetector/Sensor_Board/Footprint/psm/H01-P401V-5C.dra
+\i (00:21:27) trapsize 2314
+\i (00:21:27) zoom out 1 
+\i (00:21:27) setwindow pcb
+\i (00:21:27) zoom out -25.5010 -9.0853
+\i (00:21:27) trapsize 4629
+\i (00:21:27) zoom out 1 
+\i (00:21:27) setwindow pcb
+\i (00:21:27) zoom out -25.5009 -9.0852
+\i (00:21:27) trapsize 9258
+\i (00:21:27) zoom in 1 
+\i (00:21:27) setwindow pcb
+\i (00:21:27) zoom in 10.2336 13.3183
+\i (00:21:27) trapsize 4629
+\i (00:21:29) move 
+\t (00:21:30) Select element(s) to move.
+\i (00:21:31) delete 
+\i (00:21:33) prepopup 39.1175 10.5410
+\i (00:21:33) done 
+\i (00:21:34) save 
+\i (00:21:36) fillin yes 
+\t (00:21:37) Symbol 'h01-p401v-5c.psm' created.
+\i (00:21:40) opencd F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A3/Sensor_RevA3.brd 
+\t (00:21:40) Opening existing design...
+\i (00:21:41) trapsize 1991
+\i (00:21:41) trapsize 2050
+\i (00:21:41) trapsize 1592
+\i (00:21:41) trapsize 1592
+\t (00:21:41)     Journal end - Fri Mar  8 15:15:30 2024

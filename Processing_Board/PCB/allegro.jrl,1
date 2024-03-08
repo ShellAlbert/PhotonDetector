@@ -1,0 +1,96 @@
+\t (00:00:05) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:05)     Journal start - Thu Dec 28 11:32:29 2023
+\t (00:00:05)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=12172 CPUs=12
+\t (00:00:05) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (00:00:05) 
+   (00:00:05) Loading axlcore.cxt 
+\t (00:00:06) Opening existing design...
+\i (00:00:06) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged "PROCESSING-DBG"
+\d (00:00:06) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-DBG.brd
+\i (00:00:07) trapsize 1930
+\i (00:00:07) trapsize 1984
+\i (00:00:07) trapsize 1663
+\i (00:00:07) trapsize 1713
+\i (00:00:08) placementedit 
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out 10.4053 -3.9060
+\i (00:00:16) trapsize 3425
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out 10.2683 -4.8651
+\i (00:00:16) trapsize 6851
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 0.1295 18.0158
+\i (00:00:17) trapsize 3425
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 0.4720 18.0158
+\i (00:00:17) trapsize 1713
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 0.7118 17.5363
+\i (00:00:17) trapsize 856
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 0.6433 15.8922
+\i (00:00:17) trapsize 428
+\i (00:00:17) zoom out 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom out 0.3693 17.8190
+\i (00:00:17) trapsize 856
+\i (00:00:19) zoom out 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom out 0.9173 16.4488
+\i (00:00:19) trapsize 1713
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in -0.2129 12.7153
+\i (00:00:19) trapsize 856
+\i (00:00:20) zoom out 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom out -0.2986 12.8352
+\i (00:00:20) trapsize 1713
+\i (00:00:21) zoom in 1 
+\i (00:00:21) setwindow pcb
+\i (00:00:21) zoom in -3.5525 15.5412
+\i (00:00:21) trapsize 856
+\i (00:00:21) zoom out 1 
+\i (00:00:21) setwindow pcb
+\i (00:00:21) zoom out 1.0032 16.3804
+\i (00:00:21) trapsize 1713
+\i (00:00:22) zoom in 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom in -11.4306 20.3195
+\i (00:00:22) trapsize 856
+\i (00:00:23) zoom out 1 
+\i (00:00:23) setwindow pcb
+\i (00:00:23) zoom out -13.2974 19.4461
+\i (00:00:23) trapsize 1713
+\i (00:00:23) zoom in 1 
+\i (00:00:23) setwindow pcb
+\i (00:00:23) zoom in -5.3507 18.1445
+\i (00:00:23) trapsize 856
+\i (00:00:30) zoom out 1 
+\i (00:00:30) setwindow pcb
+\i (00:00:30) zoom out -10.0947 16.9799
+\i (00:00:30) trapsize 1713
+\i (00:00:31) zoom out 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom out -10.2659 17.6649
+\i (00:00:31) trapsize 3425
+\i (00:00:31) zoom in 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom in 6.3124 10.1978
+\i (00:00:31) trapsize 1713
+\i (00:00:37) zoom out 1 
+\i (00:00:37) setwindow pcb
+\i (00:00:37) zoom out -0.4354 18.9324
+\i (00:00:37) trapsize 3425
+\i (00:00:38) zoom in 1 
+\i (00:00:38) setwindow pcb
+\i (00:00:38) zoom in 1.5513 18.5213
+\i (00:00:38) trapsize 1713
+\i (04:18:01) exit 
+\t (04:18:12)     Journal end - Thu Dec 28 15:50:35 2023

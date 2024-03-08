@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2,593"></ZoomStartTime>
+      <ZoomEndTime time="3,440"></ZoomEndTime>
+      <Cursor1Time time="2,996"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="537"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M_ZPhotonDetector_Block_clk_wiz_0_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ZPhotonDetector_Block_i/clk_wiz_0/inst/clk_50M_ZPhotonDetector_Block_clk_wiz_0_0</obj_property>
+      <obj_property name="ObjectShortName">clk_50M_ZPhotonDetector_Block_clk_wiz_0_0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/iPulse" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/iPulse</obj_property>
+      <obj_property name="ObjectShortName">iPulse</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewPulseCounter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">oNewPulseCounter[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CNT[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewDataUpdate" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/oNewDataUpdate</obj_property>
+      <obj_property name="ObjectShortName">oNewDataUpdate</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ZPhotonDetector_Block_i/ZPulse_Counter_0/inst/zero_signal</obj_property>
+      <obj_property name="ObjectShortName">zero_signal</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>
