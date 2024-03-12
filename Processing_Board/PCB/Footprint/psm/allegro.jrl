@@ -1,49 +1,148 @@
-\t (02:50:01) allegro 22.1 P001 Windows SPB 64-bit Edition
-\t (02:50:01)     Journal start - Thu Mar  7 16:21:21 2024
-\t (02:50:01)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=4416 CPUs=12
-\t (02:50:01) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
-\t (02:50:01) 
-\d (02:50:01) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm/TP_SMD_1D2.dra
-\i (02:50:01) trapsize 338
-\i (02:50:02) zoom in 1 
-\i (02:50:02) setwindow pcb
-\i (02:50:02) zoom in 0.0988 0.4167
-\i (02:50:02) trapsize 169
-\i (02:50:02) zoom in 1 
-\i (02:50:02) setwindow pcb
-\i (02:50:02) zoom in 0.0988 0.4167
-\i (02:50:02) trapsize 84
-\i (02:50:02) zoom out 1 
-\i (02:50:02) setwindow pcb
-\i (02:50:02) zoom out 0.0227 0.3609
-\i (02:50:02) trapsize 169
-\i (02:50:02) zoom out 1 
-\i (02:50:02) setwindow pcb
-\i (02:50:02) zoom out 0.0633 0.3542
-\i (02:50:02) trapsize 338
-\i (02:50:02) zoom out 1 
-\i (02:50:02) setwindow pcb
-\i (02:50:02) zoom out 0.3471 0.2799
-\i (02:50:02) trapsize 676
-\e (02:50:08) Command not found: xhilite
-\i (02:50:08) xname_flush 
-\e (02:50:08) No command active
-\i (02:50:08) done 
-\e (02:50:08) No command active
-\e (02:50:11) Command not found: xhilite
-\i (02:50:11) xname_flush 
-\e (02:50:11) No command active
-\i (02:50:11) done 
-\e (02:50:11) No command active
-\e (02:50:35) Command not found: xdehilite
-\i (02:50:35) xname_flush 
-\e (02:50:35) No command active
-\i (02:50:35) done 
-\e (02:50:35) No command active
-\i (02:50:51) opencd F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A2/Sensor_RevA2.brd 
-\t (02:50:51) Opening existing design...
-\i (02:50:51) trapsize 1632
-\i (02:50:51) trapsize 1681
-\i (02:50:52) trapsize 1305
-\i (02:50:52) trapsize 1305
-\t (02:50:52)     Journal end - Thu Mar  7 16:22:12 2024
+\t (00:00:33) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:33)     Journal start - Mon Mar 11 15:51:02 2024
+\t (00:00:33)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=9732 CPUs=12
+\t (00:00:33) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (00:00:33) 
+\d (00:00:33) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm/SOT-23-5.dra
+\i (00:00:33) trapsize 1565
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in 1.8656 -0.4833
+\i (00:00:33) trapsize 783
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in 1.8656 -0.4833
+\i (00:00:33) trapsize 391
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in 1.8656 -0.4833
+\i (00:00:33) trapsize 196
+\i (00:00:34) zoom out 1 
+\i (00:00:34) setwindow pcb
+\i (00:00:34) zoom out 1.5839 -0.5850
+\i (00:00:34) trapsize 391
+\i (00:00:41) save_as 
+\i (00:00:49) fillin "F:/MyTemporary/Github/GLPP2024/PCB/psm/SOT-23-5.dra"
+\i (00:00:49) cd "F:/MyTemporary/Github/GLPP2024/PCB/psm"
+\t (00:00:51) Symbol 'sot-23-5.psm' created.
+\i (00:00:56) move 
+\t (00:00:56) Select element(s) to move.
+\i (00:01:18) show measure 
+\i (00:01:20) setwindow form.find
+\i (00:01:20) FORM find all_off  
+\i (00:01:21) FORM find pins YES 
+\i (00:01:22) setwindow pcb
+\i (00:01:22) pick grid 0.0342 0.0490
+\t (00:01:22) last pick:  0.0000 0.0000
+\i (00:01:22) pick grid 2.4291 -0.0058
+\t (00:01:22) last pick:  2.4000 0.0000
+\i (00:02:00) setwindow text
+\i (00:02:00) close
+\i (00:02:14) setwindow pcb
+\i (00:02:14) pick grid 4.7771 0.0725
+\t (00:02:14) last pick:  4.8000 0.1000
+\i (00:02:16) pick grid 0.4098 -0.9763
+\t (00:02:16) last pick:  0.4000 -1.0000
+\i (00:02:16) pick grid 0.1672 0.0412
+\t (00:02:16) last pick:  0.2000 0.0000
+\i (00:02:19) pick grid -0.1302 -1.8842
+\t (00:02:19) last pick:  -0.1000 -1.9000
+\i (00:02:19) pick grid 0.3629 -1.0311
+\t (00:02:19) last pick:  0.4000 -1.0000
+\i (00:02:22) pick grid 2.2413 -1.8607
+\t (00:02:22) last pick:  2.2000 -1.9000
+\i (00:02:22) pick grid -0.0598 -2.0094
+\t (00:02:22) last pick:  -0.1000 -2.0000
+\i (00:02:23) prepopup 4.4718 -0.3971
+\i (00:02:24) done 
+\i (00:02:24) zoom out 1 
+\i (00:02:24) setwindow pcb
+\i (00:02:24) zoom out 1.3255 -1.3363
+\i (00:02:24) trapsize 783
+\i (00:02:24) zoom out 1 
+\i (00:02:24) setwindow pcb
+\i (00:02:24) zoom out 1.3412 -1.5085
+\i (00:02:24) trapsize 1565
+\i (00:02:24) zoom in 1 
+\i (00:02:24) setwindow pcb
+\i (00:02:24) zoom in 2.5934 -1.5085
+\i (00:02:24) trapsize 783
+\i (00:02:25) zoom in 1 
+\i (00:02:25) setwindow pcb
+\i (00:02:25) zoom in 1.1377 -1.3207
+\i (00:02:25) trapsize 391
+\i (00:02:26) save 
+\i (00:02:28) fillin yes 
+\t (00:02:28) Symbol 'sot-23-5.psm' created.
+\i (00:03:11) zoom in 1 
+\i (00:03:11) setwindow pcb
+\i (00:03:11) zoom in 1.0359 -0.8824
+\i (00:03:11) trapsize 196
+\i (00:03:13) zoom out 1 
+\i (00:03:13) setwindow pcb
+\i (00:03:13) zoom out 0.5155 -0.4402
+\i (00:03:13) trapsize 391
+\i (00:03:14) zoom in 1 
+\i (00:03:14) setwindow pcb
+\i (00:03:14) zoom in -0.7524 -1.3168
+\i (00:03:14) trapsize 196
+\e (00:04:05) Command not found: xdehilite
+\i (00:04:05) xname_flush 
+\e (00:04:05) No command active
+\i (00:04:05) done 
+\e (00:04:05) No command active
+\e (00:04:20) Command not found: xhilite
+\i (00:04:20) xname_flush 
+\e (00:04:20) No command active
+\i (00:04:20) done 
+\e (00:04:20) No command active
+\e (00:04:40) Command not found: xdehilite
+\i (00:04:40) xname_flush 
+\e (00:04:40) No command active
+\i (00:04:40) done 
+\e (00:04:40) No command active
+\e (00:06:51) Command not found: xhilite
+\i (00:06:51) xname_flush 
+\e (00:06:51) No command active
+\i (00:06:51) done 
+\e (00:06:51) No command active
+\e (00:07:03) Command not found: xhilite
+\i (00:07:03) xname_flush 
+\e (00:07:03) No command active
+\i (00:07:03) done 
+\e (00:07:03) No command active
+\e (00:07:04) Command not found: xdehilite
+\i (00:07:04) xname_flush 
+\e (00:07:04) No command active
+\i (00:07:04) done 
+\e (00:07:04) No command active
+\e (00:07:23) Command not found: xhilite
+\i (00:07:23) xname_flush 
+\e (00:07:23) No command active
+\i (00:07:23) done 
+\e (00:07:23) No command active
+\e (00:07:32) Command not found: xdehilite
+\i (00:07:32) xname_flush 
+\e (00:07:32) No command active
+\i (00:07:32) done 
+\e (00:07:32) No command active
+\e (00:08:58) Command not found: xhilite
+\i (00:08:58) xname_flush 
+\e (00:08:58) No command active
+\i (00:08:58) done 
+\e (00:08:58) No command active
+\i (00:09:03) open 
+\i (00:09:28) fillin "menu_cancel"
+\i (00:09:28) zoom out 1 
+\i (00:09:28) setwindow pcb
+\i (00:09:28) zoom out 0.9577 -1.1759
+\i (00:09:28) trapsize 391
+\i (00:09:30) open 
+\i (00:09:49) fillin "F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-RevA.brd"
+\i (00:09:49) cd "F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB"
+\t (00:09:49) Opening existing design...
+\i (00:09:49) trapsize 13432
+\i (00:09:49) trapsize 13835
+\i (00:09:49) trapsize 10742
+\i (00:09:50) trapsize 10742
+\t (00:09:50)     Journal end - Mon Mar 11 16:00:19 2024

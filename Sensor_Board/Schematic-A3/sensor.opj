@@ -1,6 +1,6 @@
 (ExpressProject ""
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/08/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/11/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -157,13 +157,15 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\sensor.dsn")
-      (Path "Design Resources" ".\sensor.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\sensor.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\sensor.dsn"
+         "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "Logs")
-      (Select "Design Resources" ".\sensor.dsn"))
+      (Path "Logs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -173,9 +175,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 563")
-        (Scroll "0 0")
-        (Zoom "100")
+        (Placement "44 0 1 -1 -1 5 24 5 1058 24 563")
+        (Scroll "1444 3260")
+        (Zoom "488")
         (Occurrence "/"))
       (Path
          "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\SENSOR_BOARD\SCHEMATIC-A3\SENSOR.DSN")

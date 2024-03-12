@@ -1,77 +1,49 @@
-\t (04:40:43) allegro 22.1 P001 Windows SPB 64-bit Edition
-\t (04:40:43)     Journal start - Tue Oct 17 13:31:14 2023
-\t (04:40:43)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=11280 CPUs=12
-\t (04:40:43) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
-\t (04:40:43) 
-\t (04:40:43) Starting new design...
-\i (04:40:43) trapsize 99800
-\i (04:40:43) trapsize 102180
-\i (04:40:43) trapsize 99800
-\i (04:40:43) trapsize 124792
-\i (04:40:43) trapsize 162075
-\i (04:40:43) trapsize 162075
-\i (04:40:46) add pin 
-\i (04:40:47) setwindow form.mini
-\i (04:40:47) FORM mini pad_browse  
-\t (04:40:49) No valid name selected.
-\i (04:40:52) fillin "Thr_Cir_3D5_Np"
-\t (04:40:52) Using 'THR_CIR_3D5_NP.pad'.
-\i (04:40:58) setwindow pcb
-\i (04:40:58) pick 0 0 
-\t (04:40:58) last pick:  0.0000 0.0000
-\t (04:40:58) Using 'THR_CIR_3D5_NP.pad'.
-\i (04:40:58) done 
-\t (04:40:58) Exiting from Add Pin.
-\i (04:40:59) zoom in 1 
-\i (04:40:59) setwindow pcb
-\i (04:40:59) zoom in 56.5807 -99.1042
-\i (04:40:59) trapsize 81037
-\i (04:40:59) zoom in 1 
-\i (04:40:59) setwindow pcb
-\i (04:40:59) zoom in 37.1318 -102.3457
-\i (04:40:59) trapsize 40519
-\i (04:41:00) zoom in 1 
-\i (04:41:00) setwindow pcb
-\i (04:41:00) zoom in 37.1318 -102.3457
-\i (04:41:00) trapsize 20259
-\i (04:41:00) zoom in 1 
-\i (04:41:00) setwindow pcb
-\i (04:41:00) zoom in -12.3009 -8.3424
-\i (04:41:00) trapsize 10130
-\i (04:41:00) zoom in 1 
-\i (04:41:00) setwindow pcb
-\i (04:41:00) zoom in -12.0983 -7.3294
-\i (04:41:00) trapsize 5065
-\i (04:41:00) zoom in 1 
-\i (04:41:00) setwindow pcb
-\i (04:41:00) zoom in -10.5789 -6.9242
-\i (04:41:00) trapsize 2532
-\i (04:41:01) zoom in 1 
-\i (04:41:01) setwindow pcb
-\i (04:41:01) zoom in -1.3609 -0.4412
-\i (04:41:01) trapsize 1266
-\i (04:41:01) zoom in 1 
-\i (04:41:01) setwindow pcb
-\i (04:41:01) zoom in -1.3609 -0.4412
-\i (04:41:01) trapsize 633
-\i (04:41:01) zoom in 1 
-\i (04:41:01) setwindow pcb
-\i (04:41:01) zoom in -1.3609 -0.4412
-\i (04:41:01) trapsize 317
-\i (04:41:01) zoom out 1 
-\i (04:41:01) setwindow pcb
-\i (04:41:01) zoom out -1.2089 -2.5178
-\i (04:41:01) trapsize 633
-\i (04:41:01) zoom out 1 
-\i (04:41:01) setwindow pcb
-\i (04:41:01) zoom out -1.0443 -3.1382
-\i (04:41:01) trapsize 1266
-\i (04:41:03) save 
-\t (04:41:03) Symbol 'm3_screw.bsm' created.
-\i (04:41:06) opencd C:/Users/SNIPER/Desktop/LED_BOARD_DIMENSION.brd 
-\t (04:41:06) Opening existing design...
-\i (04:41:07) trapsize 2996
-\i (04:41:07) trapsize 3086
-\i (04:41:07) trapsize 2396
-\i (04:41:07) trapsize 2396
-\t (04:41:07)     Journal end - Tue Oct 17 13:31:37 2023
+\t (02:50:01) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (02:50:01)     Journal start - Thu Mar  7 16:21:21 2024
+\t (02:50:01)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=4416 CPUs=12
+\t (02:50:01) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (02:50:01) 
+\d (02:50:01) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/Footprint/psm/TP_SMD_1D2.dra
+\i (02:50:01) trapsize 338
+\i (02:50:02) zoom in 1 
+\i (02:50:02) setwindow pcb
+\i (02:50:02) zoom in 0.0988 0.4167
+\i (02:50:02) trapsize 169
+\i (02:50:02) zoom in 1 
+\i (02:50:02) setwindow pcb
+\i (02:50:02) zoom in 0.0988 0.4167
+\i (02:50:02) trapsize 84
+\i (02:50:02) zoom out 1 
+\i (02:50:02) setwindow pcb
+\i (02:50:02) zoom out 0.0227 0.3609
+\i (02:50:02) trapsize 169
+\i (02:50:02) zoom out 1 
+\i (02:50:02) setwindow pcb
+\i (02:50:02) zoom out 0.0633 0.3542
+\i (02:50:02) trapsize 338
+\i (02:50:02) zoom out 1 
+\i (02:50:02) setwindow pcb
+\i (02:50:02) zoom out 0.3471 0.2799
+\i (02:50:02) trapsize 676
+\e (02:50:08) Command not found: xhilite
+\i (02:50:08) xname_flush 
+\e (02:50:08) No command active
+\i (02:50:08) done 
+\e (02:50:08) No command active
+\e (02:50:11) Command not found: xhilite
+\i (02:50:11) xname_flush 
+\e (02:50:11) No command active
+\i (02:50:11) done 
+\e (02:50:11) No command active
+\e (02:50:35) Command not found: xdehilite
+\i (02:50:35) xname_flush 
+\e (02:50:35) No command active
+\i (02:50:35) done 
+\e (02:50:35) No command active
+\i (02:50:51) opencd F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A2/Sensor_RevA2.brd 
+\t (02:50:51) Opening existing design...
+\i (02:50:51) trapsize 1632
+\i (02:50:51) trapsize 1681
+\i (02:50:52) trapsize 1305
+\i (02:50:52) trapsize 1305
+\t (02:50:52)     Journal end - Thu Mar  7 16:22:12 2024
