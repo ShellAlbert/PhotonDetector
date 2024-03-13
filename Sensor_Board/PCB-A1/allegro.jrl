@@ -1,0 +1,34 @@
+\t (00:01:22) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:01:22)     Journal start - Tue Mar 12 15:48:23 2024
+\t (00:01:22)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=11332 CPUs=12
+\t (00:01:22) CmdLine= f:\mysoftware\cadence\tools\bin\allegro.exe F:\MyTemporary\Github\PhotonDetector\Processing_Board\PB_PRE\PBPRE.brd
+\t (00:01:22) 
+\d (00:01:22) Design opened: F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A1/Sensor_RevA-DBG.brd
+\i (00:01:22) placementedit 
+\i (00:01:22) zoom out 1 
+\i (00:01:22) setwindow pcb
+\i (00:01:22) zoom out -21.5845 -6.4356
+\i (00:01:22) trapsize 3688
+\i (00:01:22) zoom out 1 
+\i (00:01:23) setwindow pcb
+\i (00:01:23) zoom out -21.8059 -6.2881
+\i (00:01:23) trapsize 7376
+\i (00:01:23) zoom in 1 
+\i (00:01:23) setwindow pcb
+\i (00:01:23) zoom in 1.5029 -0.6821
+\i (00:01:23) trapsize 3688
+\i (00:01:24) zoom in 1 
+\i (00:01:24) setwindow pcb
+\i (00:01:24) zoom in 1.5029 -0.6821
+\i (00:01:24) trapsize 1844
+\i (00:01:30) dlib 
+\i (00:01:31) setwindow form.dlib
+\i (00:01:31) FORM dlib browse_export  
+\i (00:01:42) fillin "F:/LIBS_EXPORT"
+\i (00:01:44) FORM dlib execute  
+\t (00:01:44) Starting Cadence export libraries...
+\i (00:01:58) FORM dlib cancel  
+\i (00:01:58) setwindow pcb
+\i (00:01:58) placementedit 
+\i (00:01:58) exit 
+\t (00:01:59)     Journal end - Tue Mar 12 15:48:59 2024

@@ -1,19 +1,20 @@
 (ExpressProject ""
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/08/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/13/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
       (File ".\movedfiles\library1.olb"
         (Type "Schematic Library")
-        (DisplayName ".\MovedFiles\library1.olb"))
+        (DisplayName ".\movedfiles\library1.olb"))
       (File ".\library1.olb"
-        (Type "Schematic Library")))
+        (Type "Schematic Library")
+        (DisplayName ".\library1.olb")))
     ("Allegro Netlist Directory"
-       "F:\MyTemporary\Github\PhotonDetector\Sensor_Board\Schematic-A2\Netlist")
-    (File ".\sensor.dsn"
+       "F:\MyTemporary\Github\PhotonDetector\Processing_Board\PB_PRE\Schematic\netlist")
+    (File ".\pbpre.dsn"
       (Type "Schematic Design")
-      (DisplayName ".\sensor.DSN"))
+      (DisplayName ".\pbpre.DSN"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
     (DOCKED "TRUE")
@@ -85,12 +86,12 @@
       (LogFile
          "F:\MyTemporary\Github\PhotonDetector\Sensor_Board\Schematic\Netlist\swp.log")))
   (PartMRUSelector
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (OFFPAGELEFT-R
       (LibraryName
          "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (GND
-      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (AMS-1117-3.3V
       (FullPartName "AMS-1117-3.3V.Normal")
@@ -152,18 +153,45 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\sensor.dsn")
-      (Path "Design Resources" ".\sensor.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\pb_pre\schematic\pbpre.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\pb_pre\schematic\pbpre.dsn"
+         "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library" ".\library1.olb")
+      (Path "Design Resources" "Library"
+         "f:\mytemporary\github\photondetector\processing_board\pb_pre\schematic\library1.olb")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\sensor.dsn" "SCHEMATIC1" "3-QUENCH"))
+      (Select "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\pb_pre\schematic\pbpre.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 303 0 522"))
-      (Tab 0)))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 488"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 506")
+        (Scroll "1128 1636")
+        (Zoom "400")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\PB_PRE\SCHEMATIC\PBPRE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "2-AUX-PWR"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 1058 24 506")
+        (Scroll "1974 1912")
+        (Zoom "432")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\PB_PRE\SCHEMATIC\PBPRE.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "3-QUENCH")))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))

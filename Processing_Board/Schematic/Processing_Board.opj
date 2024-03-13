@@ -183,12 +183,12 @@
       (Path "Design Resources" ".\processing_board.dsn" "SCHEMATIC1")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\processing_board.dsn" "SCHEMATIC1" "PAGE1"))
+      (Select "Design Resources" ".\processing_board.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 367 0 522"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 303 0 522"))
       (Tab 0)))
   (MPSSessionName "SNIPER")
   (ISPCBBASICLICENSE "false"))

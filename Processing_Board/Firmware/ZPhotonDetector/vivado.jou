@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Mar 12 13:50:43 2024
+# Process ID: 11052
+# Current directory: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3808 F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZPhotonDetector.xpr
+# Log file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/vivado.log
+# Journal file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector\vivado.jou
+# Running On: DESKTOP-R1EC6M9, OS: Windows, CPU Frequency: 3096 MHz, CPU Physical cores: 6, Host memory: 8288 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.xpr
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+update_compile_order -fileset sources_1
+write_bd_layout -format pdf -orientation portrait F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector_Block.pdf

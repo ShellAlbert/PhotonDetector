@@ -157,31 +157,18 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\sensor.dsn")
-      (Path "Design Resources"
-         "f:\mytemporary\github\photondetector\sensor_board\schematic-a3\sensor.dsn"
-         "SCHEMATIC1")
+      (Path "Design Resources" ".\sensor.dsn")
+      (Path "Design Resources" ".\sensor.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "Logs"))
+      (Path "Logs")
+      (Select "Design Resources" ".\sensor.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 545"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 1058 24 563")
-        (Scroll "1444 3260")
-        (Zoom "488")
-        (Occurrence "/"))
-      (Path
-         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\SENSOR_BOARD\SCHEMATIC-A3\SENSOR.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "3-QUENCH")))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 574"))
+      (Tab 0)))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))
