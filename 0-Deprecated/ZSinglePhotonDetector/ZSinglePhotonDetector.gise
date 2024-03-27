@@ -45,13 +45,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1681204490" xil_pn:in_ck="569182140229563609" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4085362777842633401" xil_pn:start_ts="1681204490">
+    <transform xil_pn:end_ts="1710387061" xil_pn:in_ck="569182140229563609" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4085362777842633401" xil_pn:start_ts="1710387061">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="code/ZPulse_Counter/ZPulseCounter_FIFO.ngc"/>
       <outfile xil_pn:name="code/ZPulse_Counter/ZPulseCounter_FIFO.v"/>
     </transform>
@@ -66,20 +62,15 @@
     <transform xil_pn:end_ts="1681204253" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-1970394750299821092" xil_pn:start_ts="1681204253">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1681204253" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-129101443495540733" xil_pn:start_ts="1681204253">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1681204494" xil_pn:in_ck="3744710502556330458" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2695238141338318616" xil_pn:start_ts="1681204490">
+    <transform xil_pn:end_ts="1710387105" xil_pn:in_ck="3744710502556330458" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2695238141338318616" xil_pn:start_ts="1710387100">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ZSinglePhotonDetector.lso"/>
       <outfile xil_pn:name="ZSinglePhotonDetector.prj"/>
       <outfile xil_pn:name="ZSinglePhotonDetector.syr"/>
@@ -92,7 +83,6 @@
     <transform xil_pn:end_ts="1681204258" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4995951050591731888" xil_pn:start_ts="1681204258">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

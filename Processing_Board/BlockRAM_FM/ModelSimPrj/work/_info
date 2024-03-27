@@ -1,0 +1,436 @@
+m255
+K4
+z2
+!s11f vlog 2023.1 2023.01, Jan 24 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/MySoftware/MicroChip/ModelSimPro/win32acoem
+vZBlockRAMSchedule
+Z0 2F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v
+Z1 !s110 1711092817
+!i10b 1
+!s100 `47o4hD_U?FJaZ_b?hDcH1
+IiF:abBZXJd2fhj=@1M2KF3
+Z2 dF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ModelSimPrj
+w1711074666
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
+!i122 17
+L0 1 111
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OW;L;2023.1;77
+r1
+!s85 0
+31
+Z5 !s108 1711092817.000000
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v|
+!s101 -O0
+!i113 1
+Z6 o-work work -O0
+Z7 tCvgOpt 0
+n@z@block@r@a@m@schedule
+vZEdge_Detect
+Z8 2F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v
+Z9 !s110 1711092816
+!i10b 1
+!s100 P:;a14zIF[aZKC<S@P5zi0
+IPIS<b;4PA_l;GCXDB^kM;3
+R2
+w1698116160
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZEdge_Detect.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZEdge_Detect.v
+!i122 6
+L0 21 30
+R3
+R4
+r1
+!s85 0
+31
+!s108 1711092815.000000
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZEdge_Detect.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZEdge_Detect.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@edge_@detect
+vZExtRAMModule
+R0
+R1
+!i10b 1
+!s100 iZo8XGM[U4gHcTB>OHC0D2
+I=L=2jz9DAo:TDnil7VG]^1
+R2
+w1711079329
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v
+!i122 18
+L0 1 227
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@ext@r@a@m@module
+vZExtRAMSchedule
+R0
+R1
+!i10b 1
+!s100 BAh>B:A_GNTDFJ;`JQ2]82
+I5HeLFNP<Mj]IE_Doh:DdO0
+R2
+w1710923599
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v
+!i122 19
+L0 1 156
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@ext@r@a@m@schedule
+vZExtRAMTiming
+R0
+R1
+!i10b 1
+!s100 ;YPmCGj@:^fA:j]TLkBY90
+I:?A_AO84C?`PMCeoD@LYI1
+R2
+w1711088250
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v
+!i122 20
+L0 20 478
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@ext@r@a@m@timing
+vZExtSig_Simulator
+R8
+R9
+!i10b 1
+!s100 KaFP;Og89dLKITM<SNhD=3
+ICach>a^n=jBn8m=kiibJ`2
+R2
+w1699598807
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v
+!i122 7
+L0 42 31
+R3
+R4
+r1
+!s85 0
+31
+Z10 !s108 1711092816.000000
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@ext@sig_@simulator
+vZLed_Indicator
+R0
+R1
+!i10b 1
+!s100 nP7H:`>DKHab?1XYMl]hd3
+I^`;<1KC`MREKoZPd41;CO2
+R2
+w1711075978
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v
+!i122 22
+L0 5 105
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@led_@indicator
+vZPower_EN
+R0
+R1
+!i10b 1
+!s100 zN?@[9nHDG^D8=c8LU0kF1
+IUNzQ`R7DelDnG_8J2_=^z2
+R2
+w1698115605
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPower/ZPower_EN.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPower/ZPower_EN.v
+!i122 21
+L0 23 7
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPower/ZPower_EN.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPower/ZPower_EN.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@power_@e@n
+vZPulse_Counter
+R8
+R9
+!i10b 1
+!s100 Q7e7ZlI`b=aK5m=MecKZA1
+IjkSc;2QXYdikoj6N0>FUh0
+R2
+w1711090589
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v
+!i122 8
+L0 1 82
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@pulse_@counter
+vZPulseCounter_Adapter
+R8
+R9
+!i10b 1
+!s100 zAf[:AfLRThEMXYjDfQ<G3
+Ii30mR5aaonRW]][MBLeF03
+R2
+w1711092334
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulseCounter_Adapter.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulseCounter_Adapter.v
+!i122 9
+L0 1 87
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulseCounter_Adapter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulseCounter_Adapter.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@pulse@counter_@adapter
+vZTest_Generator
+R8
+R9
+!i10b 1
+!s100 Cg9V`TjDeAV]3lXS>zjUc3
+I;hSIR=kUjV1mH?3]HQF110
+R2
+w1711085068
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v
+!i122 10
+L0 8 56
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@test_@generator
+vZTick_Trigger
+R8
+R9
+!i10b 1
+!s100 Ec5NoAcT^9oiSfCS;hoUW3
+IaKj=LWJk4QB?Pkmhm3ng92
+R2
+w1711004432
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v
+!i122 11
+L0 4 60
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@tick_@trigger
+vZUART_Data_Dump
+R8
+R9
+!i10b 1
+!s100 Mk`nC6ZLXNKB_S^4hIHl70
+IaIZl`alj=ED2S2V]Pl3<71
+R2
+w1711005071
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v
+!i122 12
+L0 21 240
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@u@a@r@t_@data_@dump
+vZUART_Module
+R8
+R9
+!i10b 1
+!s100 ^Yh>RnSUQWGMPDDE_U6CP2
+IQAOX>8E:9MlaCzi02GJ943
+R2
+Z11 w1691550505
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module.v
+!i122 13
+L0 21 46
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@u@a@r@t_@module
+vZUART_Module_BPS_Generator
+R8
+R9
+!i10b 1
+!s100 Ab6fEKgoB^Glb9Ge?9BZj3
+Ij146[9b4FHiTG]>XKUb`i2
+R2
+w1711012579
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v
+!i122 14
+L0 21 36
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@u@a@r@t_@module_@b@p@s_@generator
+vZUART_Module_TX
+R0
+R1
+!i10b 1
+!s100 b>F5nCCAVdFZZNPckW2X_2
+ID1<T@OkQ3bg^=C=BR2RCV1
+R2
+R11
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v
+!i122 15
+L0 21 65
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@u@a@r@t_@module_@t@x
+vZUARTUploadRAM
+R0
+R1
+!i10b 1
+!s100 O6Ta3;<z;z_1FH@1bBV4k3
+I;=bNE^f7UGQJnfRDk=YcZ1
+R2
+w1711073624
+8F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v
+FF:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v
+!i122 16
+L0 2 186
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@z@u@a@r@t@upload@r@a@m

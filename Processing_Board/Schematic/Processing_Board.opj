@@ -1,6 +1,6 @@
 (ExpressProject "Processing_Board"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/08/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/14/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -179,16 +179,32 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\processing_board.dsn")
-      (Path "Design Resources" ".\processing_board.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn"
+         "SCHEMATIC1")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\processing_board.dsn"))
+      (Select "Design Resources"
+         "f:\mytemporary\github\photondetector\processing_board\schematic\processing_board.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 303 0 522"))
-      (Tab 0)))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 488"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 506")
+        (Scroll "3572 3096")
+        (Zoom "304")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\PROCESSING_BOARD\SCHEMATIC\PROCESSING_BOARD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
   (MPSSessionName "SNIPER")
   (ISPCBBASICLICENSE "false"))

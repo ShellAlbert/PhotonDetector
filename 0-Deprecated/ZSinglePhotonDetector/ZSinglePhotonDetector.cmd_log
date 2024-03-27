@@ -1,2 +1,4 @@
 xst -intstyle ise -ifn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.xst" -ofn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.syr" 
 xst -intstyle ise -ifn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.xst" -ofn "D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/ZSinglePhotonDetector.syr" 
+xst -intstyle ise -ifn "F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/ZSinglePhotonDetector.xst" -ofn "F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/ZSinglePhotonDetector.syr" 
+xst -intstyle ise -ifn "F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/ZSinglePhotonDetector.xst" -ofn "F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/ZSinglePhotonDetector.syr" 

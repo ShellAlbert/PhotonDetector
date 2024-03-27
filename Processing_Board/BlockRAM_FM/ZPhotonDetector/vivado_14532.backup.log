@@ -1,0 +1,995 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Mar 21 10:34:34 2024
+# Process ID: 14532
+# Current directory: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1104 F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZPhotonDetector.xpr
+# Log file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/vivado.log
+# Journal file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector\vivado.jou
+# Running On: DESKTOP-R1EC6M9, OS: Windows, CPU Frequency: 3096 MHz, CPU Physical cores: 6, Host memory: 8288 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector'
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector' since last save.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/MySoftware/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'ZPhotonDetector_Block_ZExtRAMModule_0_0' generated file not found 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZPhotonDetector_Block_ZExtRAMModule_0_0' generated file not found 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZPhotonDetector_Block_ZExtRAMModule_0_0' generated file not found 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZPhotonDetector_Block_ZExtRAMModule_0_0' generated file not found 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZPhotonDetector_Block_ZExtRAMModule_0_0' generated file not found 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 2528.055 ; gain = 454.180
+update_compile_order -fileset sources_1
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+Reading block design file <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd>...
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:ZPower_EN:1.0 - ZPower_EN_0
+Adding component instance block -- xilinx.com:module_ref:ZEdge_Detect:1.0 - ZEdge_Detect_0
+Adding component instance block -- xilinx.com:module_ref:ZMux2to1:1.0 - ZMux2to1_0
+Adding component instance block -- xilinx.com:module_ref:ZUART_Data_Dump:1.0 - ZUART_Data_Dump_0
+Adding component instance block -- xilinx.com:module_ref:ZTest_Generator:1.0 - ZTest_Generator_0
+Adding component instance block -- xilinx.com:module_ref:ZExtSig_Simulator:1.0 - ZExtSig_Simulator_0
+Adding component instance block -- xilinx.com:module_ref:ZPulse_Counter:1.0 - ZPulse_Counter_0
+Adding component instance block -- xilinx.com:module_ref:ZLed_Indicator:1.0 - ZLed_Indicator_0
+Adding component instance block -- xilinx.com:module_ref:ZExtRAMSchedule:1.0 - ZExtRAMSchedule_0
+Adding component instance block -- xilinx.com:module_ref:ZExtRAMModule:1.0 - ZExtRAMModule_0
+Successfully read diagram <ZPhotonDetector_Block> from block design file <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd>
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2701.520 ; gain = 0.000
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0
+set_property -dict [list \
+  CONFIG.Enable_A {Always_Enabled} \
+  CONFIG.Interface_Type {Native} \
+  CONFIG.Memory_Type {Single_Port_RAM} \
+  CONFIG.Use_Byte_Write_Enable {false} \
+  CONFIG.Use_RSTA_Pin {true} \
+  CONFIG.Write_Depth_A {3000} \
+  CONFIG.Write_Width_A {16} \
+] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+generate_target all [get_files  f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blk_mem_gen_0
+export_ip_user_files -of_objects [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_runs blk_mem_gen_0_synth_1 -jobs 9
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blk_mem_gen_0
+[Thu Mar 21 10:41:30 2024] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.ip_user_files/sim_scripts -ip_user_files_dir F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.ip_user_files -ipstatic_source_dir F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/modelsim} {questa=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/questa} {riviera=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/riviera} {activehdl=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_gen_0 f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/blk_mem_gen_0_synth_1
+
+INFO: [Project 1-386] Moving file 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' from fileset 'blk_mem_gen_0' to fileset 'sources_1'.
+file delete -force f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0
+file delete -force f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.gen/sources_1/ip/blk_mem_gen_0
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list \
+  CONFIG.Enable_A {Always_Enabled} \
+  CONFIG.Use_RSTA_Pin {true} \
+  CONFIG.Write_Depth_A {3000} \
+  CONFIG.Write_Width_A {16} \
+  CONFIG.use_bram_block {Stand_Alone} \
+] [get_bd_cells blk_mem_gen_0]
+set_property location {3 700 980} [get_bd_cells blk_mem_gen_0]
+set_property location {3 680 803} [get_bd_cells blk_mem_gen_0]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ZBlockRAMSchedule ZBlockRAMSchedule_0
+set_property location {1 403 1033} [get_bd_cells ZBlockRAMSchedule_0]
+set_property location {1 216 856} [get_bd_cells ZBlockRAMSchedule_0]
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oBlockRAM_Addr] [get_bd_pins blk_mem_gen_0/addra]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/addra> is being overridden by the user with net <ZBlockRAMSchedule_0_oBlockRAM_Addr>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oBlockRAM_Data] [get_bd_pins blk_mem_gen_0/dina]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/dina> is being overridden by the user with net <ZBlockRAMSchedule_0_oBlockRAM_Data>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins blk_mem_gen_0/douta] [get_bd_pins ZBlockRAMSchedule_0/iBlockRAM_Data]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/douta> is being overridden by the user with net <blk_mem_gen_0_douta>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oBlockRAM_WrEn] [get_bd_pins blk_mem_gen_0/wea]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/wea> is being overridden by the user with net <ZBlockRAMSchedule_0_oBlockRAM_WrEn>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins blk_mem_gen_0/rsta_busy] [get_bd_pins ZBlockRAMSchedule_0/iBlockRAM_RstABusy]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZBlockRAMSchedule_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins blk_mem_gen_0/clka]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/clka> is being overridden by the user with net </clk_wiz_0_clk_80M>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZBlockRAMSchedule_0/iRst_N]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins blk_mem_gen_0/rsta]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/rsta> is being overridden by the user with net </iRst_N_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_module_reference ZPhotonDetector_Block_ZBlockRAMSchedule_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZBlockRAMSchedule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulseCounter_Adapter.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ZPulseCounter_Adapter ZPulseCounter_Adapter_0
+set_property location {2 703 220} [get_bd_cells ZPulseCounter_Adapter_0]
+set_property location {4 1019 139} [get_bd_cells ZPulseCounter_Adapter_0]
+connect_bd_net [get_bd_pins ZPulseCounter_Adapter_0/oWrReq] [get_bd_pins ZBlockRAMSchedule_0/iWrReq]
+connect_bd_net [get_bd_pins ZPulseCounter_Adapter_0/oWrReq_Addr] [get_bd_pins ZBlockRAMSchedule_0/iWrReq_Addr]
+connect_bd_net [get_bd_pins ZPulseCounter_Adapter_0/oWrReq_Data] [get_bd_pins ZBlockRAMSchedule_0/iWrReq_PulseCounter]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZPulseCounter_Adapter_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZPulseCounter_Adapter_0/iRst_N]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oWrDone] [get_bd_pins ZPulseCounter_Adapter_0/iWrDone]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+connect_bd_net [get_bd_pins ZPulse_Counter_0/oNewDataUpdate] [get_bd_pins ZPulseCounter_Adapter_0/iNewDataUpdate]
+connect_bd_net [get_bd_pins ZPulse_Counter_0/oNewPulseCounter] [get_bd_pins ZPulseCounter_Adapter_0/iNewPulseCounter]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ZTick_Trigger ZTick_Trigger_0
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZTick_Trigger_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZTick_Trigger_0/iRst_N]
+connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZTick_Trigger_0/iSync50Hz]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets ZEdge_Detect_0_oSig_Rising]
+connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZMux2to1_0/iSig1]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+create_bd_cell -type module -reference ZEdge_Detect ZEdge_Detect_1
+create_bd_port -dir I iSync50Hz
+connect_bd_net [get_bd_ports iSync50Hz] [get_bd_pins ZEdge_Detect_1/iSig_In]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZEdge_Detect_1/iClk]
+connect_bd_net [get_bd_pins ZEdge_Detect_1/iRst_N] [get_bd_pins clk_wiz_0/locked]
+connect_bd_net [get_bd_pins ZEdge_Detect_1/oSig_Rising] [get_bd_pins ZTick_Trigger_0/iSync50Hz]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+connect_bd_net [get_bd_pins ZEdge_Detect_1/iEn] [get_bd_pins ZPower_EN_0/oEn]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '[' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:21]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:25]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:28]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:25]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:28]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:25]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:28]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'endcase' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:36]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'endcase' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:36]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:38]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:38]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '<=' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v:38]
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZPulse_Counter_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'iTimeInterval'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'iTick1S'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'iTick20mS'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ZPhotonDetector_Block_ZPulse_Counter_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'iTimeInterval' is not found on the upgraded version of the cell '/ZPulse_Counter_0'. Its connection to the net 'iTimeInterval_1' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ZPhotonDetector_Block_ZPulse_Counter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick20mS] [get_bd_pins ZPulse_Counter_0/iTick20mS]
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZPulse_Counter_0/iTick1S]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets ZExtRAMSchedule_0_oRAMAddr] [get_bd_nets ZExtRAMSchedule_0_oWrData] [get_bd_nets ZExtRAMModule_0_oPulseCounter] [get_bd_nets ZExtRAMSchedule_0_oRequest] [get_bd_nets ZExtRAMModule_0_oDone] [get_bd_nets ZExtRAMSchedule_0_oLED] [get_bd_cells ZExtRAMSchedule_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_BankAddr] [get_bd_nets ZExtRAMModule_0_oRAM_WE] [get_bd_nets ZExtRAMModule_0_oRAM_RAS] [get_bd_nets clk_wiz_0_clk_80M_210Degree] [get_bd_nets ZExtRAMModule_0_oRAM_Addr] [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB] [get_bd_nets ZExtRAMModule_0_oRAM_DQM] [get_bd_nets Net] [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB2] [get_bd_nets ZExtRAMModule_0_oRAM_CS] [get_bd_nets ZExtRAMModule_0_oRAM_CAS] [get_bd_nets ZExtRAMModule_0_oRAM_CKE] [get_bd_cells ZExtRAMModule_0]
+update_compile_order -fileset sources_1
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_BankAddr] [get_bd_nets ZExtRAMModule_0_oRAM_WE] [get_bd_nets ZExtRAMModule_0_oRAM_RAS] [get_bd_nets clk_wiz_0_clk_80M_210Degree] [get_bd_nets ZExtRAMModule_0_oRAM_Addr] [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB] [get_bd_nets ZExtRAMModule_0_oRAM_DQM] [get_bd_nets Net] [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB2] [get_bd_nets ZExtRAMModule_0_oRAM_CS] [get_bd_nets ZExtRAMModule_0_oRAM_CAS] [get_bd_nets ZExtRAMModule_0_oRAM_CKE] [get_bd_cells ZExtRAMModule_0]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets ZExtRAMSchedule_0_oRAMAddr] [get_bd_nets ZExtRAMSchedule_0_oWrData] [get_bd_nets ZExtRAMModule_0_oPulseCounter] [get_bd_nets ZExtRAMSchedule_0_oRequest] [get_bd_nets ZExtRAMModule_0_oDone] [get_bd_nets ZExtRAMSchedule_0_oLED] [get_bd_cells ZExtRAMSchedule_0]'
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout'
+update_compile_order -fileset sources_1
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZPulse_Counter_0/iTick1S]'
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZPulse_Counter_0/iTick1S]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 9
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v:10]
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ZBlockRAMSchedule_0/iRdReq
+/ZBlockRAMSchedule_0/iRdReq_Addr
+
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZPulse_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZBlockRAMSchedule_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZPulseCounter_Adapter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZTick_Trigger_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZEdge_Detect_1 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZBlockRAMSchedule_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZEdge_Detect_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPulse_Counter_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZTick_Trigger_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_blk_mem_gen_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZBlockRAMSchedule_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZEdge_Detect_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry e7b9a283208f5efe to dir: f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/ip/2023.1/e/7/e7b9a283208f5efe/ZPhotonDetector_Block_ZEdge_Detect_0_0.dcp to f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/ip/2023.1/e/7/e7b9a283208f5efe/ZPhotonDetector_Block_ZEdge_Detect_0_0_sim_netlist.v to f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/ip/2023.1/e/7/e7b9a283208f5efe/ZPhotonDetector_Block_ZEdge_Detect_0_0_sim_netlist.vhdl to f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/ip/2023.1/e/7/e7b9a283208f5efe/ZPhotonDetector_Block_ZEdge_Detect_0_0_stub.v to f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/ip/2023.1/e/7/e7b9a283208f5efe/ZPhotonDetector_Block_ZEdge_Detect_0_0_stub.vhdl to f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ZPhotonDetector_Block_ZEdge_Detect_1_0, cache-ID = e7b9a283208f5efe; cache size = 183.058 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPulse_Counter_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZTick_Trigger_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_blk_mem_gen_0_0
+[Thu Mar 21 14:46:09 2024] Launched ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1, ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1, ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1, ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1, ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1, ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1/runme.log
+ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1/runme.log
+[Thu Mar 21 14:46:09 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2986.250 ; gain = 228.602
+create_bd_cell -type module -reference ZUARTUploadRAM ZUARTUploadRAM_0
+connect_bd_net [get_bd_pins ZUARTUploadRAM_0/oBlockRAM_RdReq] [get_bd_pins ZBlockRAMSchedule_0/iRdReq]
+connect_bd_net [get_bd_pins ZUARTUploadRAM_0/oBlockRAM_RdReq_Addr] [get_bd_pins ZBlockRAMSchedule_0/iRdReq_Addr]
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oPulseCounter] [get_bd_pins ZUARTUploadRAM_0/iBlockRAM_RdData]
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oRdDone] [get_bd_pins ZUARTUploadRAM_0/iBlockRAM_RdDone]
+connect_bd_net [get_bd_pins ZPower_EN_0/oEn] [get_bd_pins ZUARTUploadRAM_0/iEn]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZUARTUploadRAM_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZUARTUploadRAM_0/iRst_N]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZUARTUploadRAM_0/iTick1S]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+delete_bd_objs [get_bd_nets ZUART_Data_Dump_0_oTxd_Pin]
+delete_bd_objs [get_bd_nets ZUART_Data_Dump_0_oDir_Pin]
+connect_bd_net [get_bd_ports oRS485_Txd2] [get_bd_pins ZUART_Data_Dump_0/oTxd_Pin]
+connect_bd_net [get_bd_ports oRS485_Dir2] [get_bd_pins ZUART_Data_Dump_0/oDir_Pin]
+connect_bd_net [get_bd_ports oRS485_Txd1] [get_bd_pins ZUARTUploadRAM_0/oUART_Txd]
+set_property location {2428 1113} [get_bd_ports oRS485_Dir1]
+connect_bd_net [get_bd_ports oRS485_Dir1] [get_bd_pins ZUARTUploadRAM_0/oUART_Dir]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT3_USED {false} \
+  CONFIG.CLK_OUT1_PORT {clk_100M} \
+  CONFIG.CLK_OUT2_PORT {clk_100M_PhaseShift} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+  CONFIG.NUM_OUT_CLKS {2} \
+] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_80M_210Degree]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_100M] [get_bd_pins ZPower_EN_0/iClk]
+connect_bd_net [get_bd_pins ZEdge_Detect_1/iClk] [get_bd_pins clk_wiz_0/clk_100M]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/clka> is being overridden by the user with net </clk_wiz_0_clk_50M>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZPulse_Counter_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+reset_run synth_1
+reset_run ZPhotonDetector_Block_clk_wiz_0_0_synth_1
+launch_runs ZPhotonDetector_Block_clk_wiz_0_0_synth_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_clk_wiz_0_0
+[Thu Mar 21 14:56:26 2024] Launched ZPhotonDetector_Block_clk_wiz_0_0_synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/runme.log
+wait_on_run ZPhotonDetector_Block_clk_wiz_0_0_synth_1
+[Thu Mar 21 14:56:26 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:56:31 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:56:36 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:56:42 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:56:52 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:02 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:12 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:22 2024] Waiting for ZPhotonDetector_Block_clk_wiz_0_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log ZPhotonDetector_Block_clk_wiz_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZPhotonDetector_Block_clk_wiz_0_0.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ZPhotonDetector_Block_clk_wiz_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1461.289 ; gain = 160.660
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_clk_wiz_0_0
+Command: synth_design -top ZPhotonDetector_Block_clk_wiz_0_0 -part xc7s25ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7360
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2268.648 ; gain = 410.316
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0' [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.v:69]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0_clk_wiz' [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [F:/MySoftware/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71768]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [F:/MySoftware/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71768]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [F:/MySoftware/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:109413]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 9 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 9 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 9 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 120.000000 - type: double 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (0#1) [F:/MySoftware/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:109413]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [F:/MySoftware/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [F:/MySoftware/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0_clk_wiz' (0#1) [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0' (0#1) [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.v:69]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2362.891 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_board.xdc] for cell 'inst'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ZPhotonDetector_Block_clk_wiz_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ZPhotonDetector_Block_clk_wiz_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2362.891 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2362.891 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     3|
+|2     |PLLE2_ADV |     1|
+|3     |IBUF      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2362.891 ; gain = 504.559
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2362.891 ; gain = 504.559
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2362.891 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 77f86b4b
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2370.578 ; gain = 875.855
+INFO: [Common 17-1381] The checkpoint 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/ZPhotonDetector_Block_clk_wiz_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ZPhotonDetector_Block_clk_wiz_0_0, cache-ID = 92015ce8b2693d3d
+INFO: [Common 17-1381] The checkpoint 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/ZPhotonDetector_Block_clk_wiz_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ZPhotonDetector_Block_clk_wiz_0_0_utilization_synth.rpt -pb ZPhotonDetector_Block_clk_wiz_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 14:57:24 2024...
+[Thu Mar 21 14:57:27 2024] ZPhotonDetector_Block_clk_wiz_0_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:01:00 . Memory (MB): peak = 3204.363 ; gain = 17.113
+reset_run ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1
+launch_runs ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZTick_Trigger_0_0
+[Thu Mar 21 14:57:27 2024] Launched ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1/runme.log
+wait_on_run ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1
+[Thu Mar 21 14:57:28 2024] Waiting for ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:33 2024] Waiting for ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:38 2024] Waiting for ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:43 2024] Waiting for ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1 to finish...
+[Thu Mar 21 14:57:53 2024] Waiting for ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log ZPhotonDetector_Block_ZTick_Trigger_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZPhotonDetector_Block_ZTick_Trigger_0_0.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ZPhotonDetector_Block_ZTick_Trigger_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1460.973 ; gain = 160.016
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/MySoftware/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZTick_Trigger_0_0
+Command: synth_design -top ZPhotonDetector_Block_ZTick_Trigger_0_0 -part xc7s25ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10644
+INFO: [Synth 8-11241] undeclared symbol 'oTick20mS', assumed default net type 'wire' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v:64]
+ERROR: [Synth 8-2577] procedural assignment to a non-register oTick20mS is not permitted, left-hand side should be reg/integer/time/genvar [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v:33]
+ERROR: [Synth 8-2577] procedural assignment to a non-register oTick1S is not permitted, left-hand side should be reg/integer/time/genvar [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v:34]
+INFO: [Synth 8-10285] module 'ZTick_Trigger' is ignored due to previous errors [F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v:66]
+INFO: [Synth 8-9084] Verilog file 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v' ignored due to errors
+Failed to read verilog 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 1 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 14:57:49 2024...
+[Thu Mar 21 14:57:53 2024] ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1 finished
+ERROR: [Vivado 12-13638] Failed runs(s) : 'ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1'
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 3204.363 ; gain = 0.000
+ERROR: [Common 17-39] 'wait_on_runs' failed due to earlier errors.
+ERROR: [Vivado 12-4146] Open Elaborated Design failed due to the following error:
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'wait_on_runs' failed due to earlier errors.
+
+
+update_module_reference ZPhotonDetector_Block_ZTick_Trigger_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZTick_Trigger_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'oTick20mS'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'oTick333uS'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ZPhotonDetector_Block_ZTick_Trigger_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'oTick20mS' is not found on the upgraded version of the cell '/ZTick_Trigger_0'. Its connection to the net 'ZTick_Trigger_0_oTick20mS' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ZPhotonDetector_Block_ZTick_Trigger_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZPulse_Counter_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'iTick20mS'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'iTick333uS'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ZPhotonDetector_Block_ZPulse_Counter_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'iTick20mS' is not found on the upgraded version of the cell '/ZPulse_Counter_0'. Its connection to the net 'ZTick_Trigger_0_oTick20mS' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ZPhotonDetector_Block_ZPulse_Counter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB]
+connect_bd_net [get_bd_ports oRAM_ACLKB] [get_bd_pins clk_wiz_0/clk_100M_PhaseShift]
+save_bd_design
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick333uS] [get_bd_pins ZPulse_Counter_0/iTick333uS]
+save_bd_design
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZPulse_Counter_0_0 to use current project options
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_module_reference ZPhotonDetector_Block_ZUART_Data_Dump_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZUART_Data_Dump_0_0 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'iRxd_Pin'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+create_bd_port -dir I iRS485_Rxd2
+connect_bd_net [get_bd_ports iRS485_Rxd2] [get_bd_pins ZUART_Data_Dump_0/iRxd_Pin]
+save_bd_design
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+create_bd_port -dir I iRS485_Rxd1
+connect_bd_net [get_bd_ports iRS485_Rxd1] [get_bd_pins ZUARTUploadRAM_0/oUART_Rxd]
+regenerate_bd_layout
+save_bd_design
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs synth_1 -jobs 9
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ZExtRAMModule_0/iSDRAMClk
+
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+WARNING: [BD 41-166] Source port for the net:ZTick_Trigger_0_oTick20mS is NULL! Connection will be grounded!
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+WARNING: [BD 41-166] Source port for the net:ZTick_Trigger_0_oTick20mS is NULL! Connection will be grounded!
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZUART_Data_Dump_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZPulse_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZTick_Trigger_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZUARTUploadRAM_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPulse_Counter_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZTick_Trigger_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZUARTUploadRAM_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZUART_Data_Dump_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPulse_Counter_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZTick_Trigger_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZUARTUploadRAM_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZUART_Data_Dump_0_0
+[Thu Mar 21 15:13:06 2024] Launched ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1, ZPhotonDetector_Block_ZUART_Data_Dump_0_0_synth_1, ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1, ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZUART_Data_Dump_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1/runme.log
+[Thu Mar 21 15:13:07 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 3219.762 ; gain = 11.059
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZPulse_Counter_0_0 to use current project options
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+upgrade_ip: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3221.930 ; gain = 2.168
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 3221.930 ; gain = 2.168
+reset_project
+reset_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 3221.930 ; gain = 0.000
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZPulse_Counter_0_0 to use current project options
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs impl_1 -jobs 9
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.gen/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ila_0
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ZExtRAMModule_0/iSDRAMClk
+
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+WARNING: [BD 41-166] Source port for the net:ZTick_Trigger_0_oTick20mS is NULL! Connection will be grounded!
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+WARNING: [BD 41-166] Source port for the net:ZTick_Trigger_0_oTick20mS is NULL! Connection will be grounded!
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZPower_EN_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZEdge_Detect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZMux2to1_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZUART_Data_Dump_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZTest_Generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtSig_Simulator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZPulse_Counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZLed_Indicator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMSchedule_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZBlockRAMSchedule_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZPulseCounter_Adapter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZTick_Trigger_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZEdge_Detect_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZUARTUploadRAM_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZBlockRAMSchedule_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZEdge_Detect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZEdge_Detect_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtSig_Simulator_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZLed_Indicator_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZMux2to1_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPower_EN_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPulse_Counter_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZTest_Generator_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZTick_Trigger_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZUARTUploadRAM_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZUART_Data_Dump_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_blk_mem_gen_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_clk_wiz_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZBlockRAMSchedule_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZEdge_Detect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZTest_Generator_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZUARTUploadRAM_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_blk_mem_gen_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZTick_Trigger_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZUART_Data_Dump_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_clk_wiz_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZEdge_Detect_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtSig_Simulator_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZLed_Indicator_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZMux2to1_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPower_EN_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPulse_Counter_0_0
+[Thu Mar 21 15:15:34 2024] Launched ZPhotonDetector_Block_ZPower_EN_0_0_synth_1, ZPhotonDetector_Block_ZEdge_Detect_0_0_synth_1, ZPhotonDetector_Block_ZMux2to1_0_0_synth_1, ZPhotonDetector_Block_ZTest_Generator_0_0_synth_1, ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1, ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1, ila_0_synth_1, ZPhotonDetector_Block_clk_wiz_0_0_synth_1, ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1, ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1, ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1, ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1, ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1, ZPhotonDetector_Block_ZUART_Data_Dump_0_0_synth_1, ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1, ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1, ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1, ZPhotonDetector_Block_ZEdge_Detect_1_0_synth_1, synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZPower_EN_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPower_EN_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZEdge_Detect_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZEdge_Detect_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZMux2to1_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZMux2to1_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZTest_Generator_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZTest_Generator_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1/runme.log
+ila_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ila_0_synth_1/runme.log
+ZPhotonDetector_Block_clk_wiz_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_clk_wiz_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZUART_Data_Dump_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPulse_Counter_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZEdge_Detect_1_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZEdge_Detect_1_0_synth_1/runme.log
+synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Thu Mar 21 15:15:34 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 3247.887 ; gain = 10.559
+delete_bd_objs [get_bd_nets iTimeInterval_1]
+save_bd_design
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+reset_run ZPhotonDetector_Block_ZPower_EN_0_0_synth_1
+reset_run ZPhotonDetector_Block_ZMux2to1_0_0_synth_1
+reset_run ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1
+reset_run ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 9
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ZExtRAMModule_0/iSDRAMClk
+/ZUART_Data_Dump_0/iTime_Interval
+
+WARNING: [BD 41-597] NET <ZTick_Trigger_0_oTick20mS> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+WARNING: [BD 41-166] Source port for the net:ZTick_Trigger_0_oTick20mS is NULL! Connection will be grounded!
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+WARNING: [BD 41-166] Source port for the net:ZTick_Trigger_0_oTick20mS is NULL! Connection will be grounded!
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtSig_Simulator_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZMux2to1_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZPower_EN_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_blk_mem_gen_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtSig_Simulator_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZMux2to1_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZPower_EN_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_blk_mem_gen_0_0
+[Thu Mar 21 15:25:08 2024] Launched ZPhotonDetector_Block_ZPower_EN_0_0_synth_1, ZPhotonDetector_Block_ZMux2to1_0_0_synth_1, ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1, ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1, synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZPower_EN_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZPower_EN_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZMux2to1_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZMux2to1_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1/runme.log
+ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1/runme.log
+synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Thu Mar 21 15:25:08 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs impl_1 -jobs 9
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Mar 21 15:34:35 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Thu Mar 21 15:34:35 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs impl_1 -jobs 9
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Mar 21 15:39:58 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Thu Mar 21 15:39:58 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 9
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Mar 21 15:43:47 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+write_bd_layout -format pdf -orientation portrait C:/Users/SNIPER/Desktop/ZPhotonDetector_Block.pdf
+C:/Users/SNIPER/Desktop/ZPhotonDetector_Block.pdf
+delete_bd_objs [get_bd_nets ZTest_Generator_0_oFixedFreq] [get_bd_nets ZMux2to1_0_oSig] [get_bd_nets ZEdge_Detect_0_oSig_Rising] [get_bd_cells ZMux2to1_0]
+connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZPulse_Counter_0/iPulse]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets ZExtSig_Simulator_0_oTest_Mode] [get_bd_nets ZExtSig_Simulator_0_oFixedFreq_Sel] [get_bd_nets ZTest_Generator_0_oFixedFreq_IO] [get_bd_cells ZTest_Generator_0]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets ZExtSig_Simulator_0_oTest_Mode] [get_bd_nets ZExtSig_Simulator_0_oFixedFreq_Sel] [get_bd_nets ZTest_Generator_0_oFixedFreq_IO] [get_bd_cells ZTest_Generator_0]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZPulse_Counter_0/iPulse]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets ZTest_Generator_0_oFixedFreq] [get_bd_nets ZMux2to1_0_oSig] [get_bd_nets ZEdge_Detect_0_oSig_Rising] [get_bd_cells ZMux2to1_0]'
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 21 15:47:41 2024...

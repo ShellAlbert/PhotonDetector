@@ -1,0 +1,64 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "ZPhotonDetector_Block_ZExtRAMModule_0_0",
+    "cell_name": "ZExtRAMModule_0",
+    "component_reference": "xilinx.com:module_ref:ZExtRAMModule:1.0",
+    "ip_revision": "1",
+    "gen_directory": ".",
+    "parameters": {
+      "component_parameters": {
+        "TREF": [ { "value": "1000", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "ZPhotonDetector_Block_ZExtRAMModule_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "TREF": [ { "value": "1000", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "spartan7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7s25" } ],
+        "PACKAGE": [ { "value": "ftgb196" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "iClk": [ { "direction": "in" } ],
+        "iRst_N": [ { "direction": "in" } ],
+        "iRAMAddr": [ { "direction": "in", "size_left": "21", "size_right": "0" } ],
+        "iPulseCounter": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "oPulseCounter": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "iRequest": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "oDone": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "oRAM_Addr": [ { "direction": "out", "size_left": "11", "size_right": "0" } ],
+        "oRAM_BankAddr": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "oRAM_CS": [ { "direction": "out" } ],
+        "oRAM_WE": [ { "direction": "out" } ],
+        "oRAM_CAS": [ { "direction": "out" } ],
+        "oRAM_RAS": [ { "direction": "out" } ],
+        "oRAM_ACLKB": [ { "direction": "out" } ],
+        "oRAM_ACLKB2": [ { "direction": "out" } ],
+        "oRAM_CKE": [ { "direction": "out" } ],
+        "oRAM_DQM": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "ioRAM_DQ": [ { "direction": "inout", "size_left": "31", "size_right": "0" } ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+\t (00:00:01) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Mon Mar 25 08:33:57 2024
+\t (00:00:01)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=13036 CPUs=12
+\t (00:00:01) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (00:00:01) 
+   (00:00:01) Loading axlcore.cxt 
+\t (00:00:02) Starting new design...
+\i (00:00:02) trapsize 116667
+\i (00:00:02) placementedit 
+\i (00:00:06) open 
+\i (00:00:18) fillin "F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A3/Sensor_RevA3.brd"
+\i (00:00:18) cd "F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A3"
+\i (00:00:18) trapsize 699
+\i (00:00:18) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged unnamed
+\t (00:00:18) Opening existing design...
+\i (00:00:19) trapsize 4885
+\t (00:00:19)     Journal end - Mon Mar 25 08:34:14 2024

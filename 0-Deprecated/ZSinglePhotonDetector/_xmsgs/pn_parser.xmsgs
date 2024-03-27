@@ -8,146 +8,88 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ColorTable/ZRGB565_ColorTable.v&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ColorTable/ZRGB565_ColorTable.v&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">205</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Black&gt; is not defined.</arg>
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">205</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Black&gt; is not defined.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">205</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">205</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">214</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Yellow&gt; is not defined.</arg>
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">214</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Yellow&gt; is not defined.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">214</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">214</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">223</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">223</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">232</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">232</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">241</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">241</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">251</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">251</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">261</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">261</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">317</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Green&gt; is not defined.</arg>
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">317</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Green&gt; is not defined.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">317</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">317</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">354</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">354</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">391</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">391</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">428</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">428</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">473</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Pink&gt; is not defined.</arg>
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">473</arg>. <arg fmt="%s" index="3">Macro &lt;Color_Pink&gt; is not defined.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">473</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">473</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">510</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">510</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">547</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">547</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">584</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">584</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">606</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">606</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">627</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">627</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">669</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">669</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">731</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">731</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">795</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">795</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">858</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">858</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">884</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_CfgData.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Controller.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Controller.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/../ColorTable/ZRGB565_ColorTable.v&apos; in file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Controller.v&quot; line 21
-</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Module.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Timing.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/RTC/ZRTC_Counter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/RTC/ZRTC_Mux8to1.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZEdge_Detect/ZEdgeDetect.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZExternal_Sync/ZExSignalSync.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZPulse_Counter/ZPulseCounter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZPulse_Counter/ZPulseCounter_Adapter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZPulse_Counter/ZPulseCounter_Mux10to1.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZSinglePhotonDetector.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZTest_Signal/ZTestSignal.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZUART/ZUART_Controller.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZUART/ZUART_Module.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZUART/ZUART_Module_BPS_Generator.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZUART/ZUART_Module_RX.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Work/GitHub/PhotonDetector/ZSinglePhotonDetector/code/ZUART/ZUART_Module_TX.v&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">F:/MyTemporary/Github/PhotonDetector/0-Deprecated/ZSinglePhotonDetector/code/NT35510_LCD/ZTFT43_Adapter.v</arg>&quot; Line <arg fmt="%d" index="2">884</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
 </msg>
 
 </messages>

@@ -1,0 +1,124 @@
+F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZExtSig_Simulator.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZExtSig_Simulator
+
+Top level modules:
+	ZExtSig_Simulator
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUARTUploadRAM
+
+Top level modules:
+	ZUARTUploadRAM
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZTick_Trigger
+
+Top level modules:
+	ZTick_Trigger
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUART_Module_BPS_Generator
+
+Top level modules:
+	ZUART_Module_BPS_Generator
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZExtRAMModule
+
+Top level modules:
+	ZExtRAMModule
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZExtRAMTiming
+
+Top level modules:
+	ZExtRAMTiming
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPower/ZPower_EN.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPower/ZPower_EN.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZPower_EN
+
+Top level modules:
+	ZPower_EN
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUART_Module
+
+Top level modules:
+	ZUART_Module
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZLed/ZLed_Indicator.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZLed_Indicator
+
+Top level modules:
+	ZLed_Indicator
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZEdge_Detect.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZEdge_Detect.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZEdge_Detect
+
+Top level modules:
+	ZEdge_Detect
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUART_Data_Dump
+
+Top level modules:
+	ZUART_Data_Dump
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v {0 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUART_Module_RX
+** Error (suppressible): F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v(30): (vlog-2388) 'rx_data' already declared in this scope (ZUART_Module_RX) at F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v(26).
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZExtRAMSchedule
+
+Top level modules:
+	ZExtRAMSchedule
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZTest_Generator
+
+Top level modules:
+	ZTest_Generator
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUART_Module_TX
+
+Top level modules:
+	ZUART_Module_TX
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZBlockRAMSchedule
+
+Top level modules:
+	ZBlockRAMSchedule
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZPulse_Counter
+
+Top level modules:
+	ZPulse_Counter
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v {0 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZUART_Controller
+** Error: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v(106): (vlog-2730) Undefined variable: 'cnt_1Hz'.
+** Error (suppressible): F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v(112): (vlog-2388) 'cnt_1Hz' already declared in this scope (ZUART_Controller) at F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v(106).
+
+} {4.0 5.0} {}}

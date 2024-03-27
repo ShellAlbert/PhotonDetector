@@ -1,0 +1,665 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Mar 15 09:59:07 2024
+# Process ID: 14260
+# Current directory: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6884 F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZPhotonDetector.xpr
+# Log file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/vivado.log
+# Journal file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector\vivado.jou
+# Running On: DESKTOP-R1EC6M9, OS: Windows, CPU Frequency: 3096 MHz, CPU Physical cores: 6, Host memory: 8288 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at F:/MySoftware/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/MySoftware/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 2506.527 ; gain = 443.535
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Mar 15 10:39:28 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Fri Mar 15 10:39:28 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2023.1
+  **** Build date : May  7 2023 at 15:26:57
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2023.1.0
+  ****** Build date   : Apr 10 2023-23:59:24
+    **** Build number : 2023.1.1681142364
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 3147.215 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/13724327082d01
+set_property PROGRAM.FILE {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.bit} [get_hw_devices xc7s25_0]
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+INFO: [Labtools 27-1434] Device xc7s25 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Common 17-48] File not found: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.ltx
+boot_hw_device  [lindex [get_hw_devices xc7s25_0] 0]
+INFO: [Labtoolstcl 44-664] Will wait up to 180 seconds for booting to complete.
+INFO: [Labtools 27-32] Done pin status: HIGH
+boot_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3147.215 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+INFO: [Labtools 27-1434] Device xc7s25 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Common 17-48] File not found: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.ltx
+set_property PROBES.FILE {} [get_hw_devices xc7s25_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s25_0]
+set_property PROGRAM.FILE {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.bit} [get_hw_devices xc7s25_0]
+program_hw_devices -disable_eos_check [get_hw_devices xc7s25_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+INFO: [Labtools 27-1434] Device xc7s25 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7s25_0] -mem_dev [lindex [get_cfgmem_parts {n25q64-3.3v-spi-x1_x2_x4}] 0]
+close_hw_manager
+add_files -norecurse {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMTiming.v F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMModule.v}
+update_compile_order -fileset sources_1
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+Reading block design file <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd>...
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:ZPower_EN:1.0 - ZPower_EN_0
+Adding component instance block -- xilinx.com:module_ref:ZEdge_Detect:1.0 - ZEdge_Detect_0
+Adding component instance block -- xilinx.com:module_ref:ZMux2to1:1.0 - ZMux2to1_0
+Adding component instance block -- xilinx.com:module_ref:ZUART_Data_Dump:1.0 - ZUART_Data_Dump_0
+Adding component instance block -- xilinx.com:module_ref:ZTest_Generator:1.0 - ZTest_Generator_0
+Adding component instance block -- xilinx.com:module_ref:ZLed_Indicator:1.0 - ZLed_Indicator_0
+Adding component instance block -- xilinx.com:module_ref:ZExtSig_Simulator:1.0 - ZExtSig_Simulator_0
+Adding component instance block -- xilinx.com:module_ref:ZPulse_Counter:1.0 - ZPulse_Counter_0
+Successfully read diagram <ZPhotonDetector_Block> from block design file <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd>
+open_bd_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 3147.215 ; gain = 0.000
+create_bd_cell -type module -reference ZExtRAMModule ZExtRAMModule_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+set_property location {5 1166 828} [get_bd_cells ZExtRAMModule_0]
+delete_bd_objs [get_bd_cells ZExtRAMModule_0]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [Coretcl 2-176] No IPs found
+ERROR: [Common 17-69] Command failed: No IP specified.  Please specify IP with 'objects'
+generate_target all [get_files F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd]
+synth_design -top ZPhotonDetector_Block_wrapper -part xc7s25ftgb196-1 -lint 
+Command: synth_design -top ZPhotonDetector_Block_wrapper -part xc7s25ftgb196-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25ftgb196-1
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'rx_data' is not allowed [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v:30]
+INFO: [Synth 8-11241] undeclared symbol 'rx_pin', assumed default net type 'wire' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZUART/ZUART_Data_Dump.v:57]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3442.031 ; gain = 294.816
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_wrapper' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZEdge_Detect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' (1#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZEdge_Detect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'oSig_Falling' of module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' is unconnected for instance 'ZEdge_Detect_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:58]
+WARNING: [Synth 8-7023] instance 'ZEdge_Detect_0' of module 'ZPhotonDetector_Block_ZEdge_Detect_0_0' has 6 connections declared, but only 5 given [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZExtSig_Simulator_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZExtSig_Simulator_0_0' (2#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZExtSig_Simulator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZLed_Indicator_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZLed_Indicator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZLed_Indicator_0_0' (3#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZLed_Indicator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZMux2to1_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZMux2to1_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZMux2to1_0_0' (4#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZMux2to1_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZPower_EN_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPower_EN_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZPower_EN_0_0' (5#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPower_EN_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZPulse_Counter_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPulse_Counter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZPulse_Counter_0_0' (6#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZPulse_Counter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZTest_Generator_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZTest_Generator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZTest_Generator_0_0' (7#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZTest_Generator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' (8#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_ZUART_Data_Dump_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'oDone' of module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' is unconnected for instance 'ZUART_Data_Dump_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:99]
+WARNING: [Synth 8-7023] instance 'ZUART_Data_Dump_0' of module 'ZPhotonDetector_Block_ZUART_Data_Dump_0_0' has 9 connections declared, but only 8 given [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:99]
+INFO: [Synth 8-6157] synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_clk_wiz_0_0' (9#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/.Xil/Vivado-14260-DESKTOP-R1EC6M9/realtime/ZPhotonDetector_Block_clk_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'clk_100M' of module 'ZPhotonDetector_Block_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:108]
+WARNING: [Synth 8-7071] port 'clk_200M' of module 'ZPhotonDetector_Block_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:108]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'ZPhotonDetector_Block_clk_wiz_0_0' has 5 connections declared, but only 3 given [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block' (10#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ZPhotonDetector_Block_wrapper' (11#1) [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3530.316 ; gain = 383.102
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Mar 15 10:57:46 2024
+| Host         : DESKTOP-R1EC6M9 running 64-bit major release  (build 9200)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++---------+--------------+----------+
+| Rule ID | # Violations | # Waived |
++---------+--------------+----------+
+
+
+INFO: [Synth 37-85] Total of 0 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZEdge_Detect_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZExtSig_Simulator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZLed_Indicator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZMux2to1_0_0/ZPhotonDetector_Block_ZMux2to1_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZMux2to1_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZPower_EN_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZPulse_Counter_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZTest_Generator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZUART_Data_Dump_0_0/ZPhotonDetector_Block_ZUART_Data_Dump_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZUART_Data_Dump_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.dcp' for cell 'ZPhotonDetector_Block_i/clk_wiz_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3569.711 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 7 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_board.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_board.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]
+Finished Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ZPhotonDetector_Block_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3670.441 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 3670.441 ; gain = 523.227
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs impl_1 -jobs 6
+[Fri Mar 15 11:19:13 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Fri Mar 15 11:19:13 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+create_bd_cell -type module -reference ZExtRAMSchedule ZExtRAMSchedule_0
+create_bd_cell -type module -reference ZExtRAMModule ZExtRAMModule_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+connect_bd_net [get_bd_pins clk_wiz_0/clk_100M] [get_bd_pins ZExtRAMSchedule_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_100M] [get_bd_pins ZExtRAMModule_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZExtRAMSchedule_0/iRst_N]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZExtRAMModule_0/iRst_N]
+connect_bd_net [get_bd_pins ZExtRAMSchedule_0/oRAMAddr] [get_bd_pins ZExtRAMModule_0/iRAMAddr]
+connect_bd_net [get_bd_pins ZExtRAMSchedule_0/oWrData] [get_bd_pins ZExtRAMModule_0/iPulseCounter]
+connect_bd_net [get_bd_pins ZExtRAMSchedule_0/oRequest] [get_bd_pins ZExtRAMModule_0/iRequest]
+connect_bd_net [get_bd_pins ZExtRAMModule_0/oPulseCounter] [get_bd_pins ZExtRAMSchedule_0/iRdData]
+connect_bd_net [get_bd_pins ZExtRAMModule_0/oDone] [get_bd_pins ZExtRAMSchedule_0/iDone]
+validate_bd_design
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_compile_order -fileset sources_1
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_Addr]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_BankAddr]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_CS]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_WE]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_CAS]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_RAS]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_CKE]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_DQM]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/ioRAM_DQ]
+endgroup
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMSchedule_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+[Fri Mar 15 11:32:38 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1, ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1/runme.log
+[Fri Mar 15 11:32:38 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+reset_run ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1
+reset_run ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1
+reset_run synth_1
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_module_reference ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMSchedule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMSchedule_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMSchedule_0_0
+[Fri Mar 15 11:35:28 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1, ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMSchedule_0_0_synth_1/runme.log
+[Fri Mar 15 11:35:28 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3670.441 ; gain = 0.000
+reset_run ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1
+reset_run synth_1
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+[Fri Mar 15 11:37:13 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+[Fri Mar 15 11:37:13 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+reset_run ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1
+reset_run synth_1
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+[Fri Mar 15 11:38:29 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+[Fri Mar 15 11:38:29 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+reset_run synth_1
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+[Fri Mar 15 11:39:21 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+[Fri Mar 15 11:39:21 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+startgroup
+make_bd_pins_external  [get_bd_pins ZExtRAMModule_0/oRAM_CLK]
+endgroup
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+regenerate_bd_layout
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+[Fri Mar 15 11:41:48 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+          open_hw_manager
+close_hw_manager
+launch_runs impl_1 -jobs 6
+[Fri Mar 15 13:15:59 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'oRAM_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'oRAM_CLK' does not have any bus interfaces associated with it.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'oRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs impl_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+[Fri Mar 15 13:28:32 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1, synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Fri Mar 15 13:28:32 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+update_module_reference ZPhotonDetector_Block_ZExtRAMModule_0_0
+Upgrading 'F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd'
+INFO: [IP_Flow 19-3420] Updated ZPhotonDetector_Block_ZExtRAMModule_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'oRAM_CLK'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'oRAM_ACLKB'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ZPhotonDetector_Block_ZExtRAMModule_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'oRAM_CLK' is not found on the upgraded version of the cell '/ZExtRAMModule_0'. Its connection to the net 'ZExtRAMModule_0_oRAM_CLK' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ZPhotonDetector_Block_ZExtRAMModule_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+WARNING: [BD 41-597] NET <ZExtRAMModule_0_oRAM_CLK> has no source
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+connect_bd_net [get_bd_ports oRAM_CLK_0] [get_bd_pins ZExtRAMModule_0/oRAM_ACLKB]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs impl_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ZExtRAMModule_0 .
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ZPhotonDetector_Block_ZExtRAMModule_0_0
+[Fri Mar 15 13:34:05 2024] Launched ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1, synth_1...
+Run output will be captured here:
+ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/ZPhotonDetector_Block_ZExtRAMModule_0_0_synth_1/runme.log
+synth_1: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+[Fri Mar 15 13:34:05 2024] Launched impl_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/impl_1/runme.log
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7s25ftgb196-1
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZEdge_Detect_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZExtRAMModule_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtRAMSchedule_0_0/ZPhotonDetector_Block_ZExtRAMSchedule_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZExtRAMSchedule_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZExtSig_Simulator_0_0/ZPhotonDetector_Block_ZExtSig_Simulator_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZExtSig_Simulator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZLed_Indicator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZMux2to1_0_0/ZPhotonDetector_Block_ZMux2to1_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZMux2to1_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZPower_EN_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZPulse_Counter_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZTest_Generator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_ZUART_Data_Dump_0_0/ZPhotonDetector_Block_ZUART_Data_Dump_0_0.dcp' for cell 'ZPhotonDetector_Block_i/ZUART_Data_Dump_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.dcp' for cell 'ZPhotonDetector_Block_i/clk_wiz_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3670.441 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 106 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 32 OBUFs to IO ports without IO buffers.
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_board.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0_board.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [f:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xdc] for cell 'ZPhotonDetector_Block_i/clk_wiz_0/inst'
+Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]
+WARNING: [Vivado 12-507] No nets matched 'u_ila_0_clk_50M'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:120]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:120]
+WARNING: [Vivado 12-507] No nets matched 'u_ila_0_clk_50M'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:121]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'dbg_hub' was not found. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:121]
+WARNING: [Vivado 12-507] No nets matched 'u_ila_1_clkfbout_buf_ZPhotonDetector_Block_clk_wiz_0_0'. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:130]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'dbg_hub' was not found. [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc:130]
+Finished Parsing XDC File [F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZConstraint_IO.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4098.125 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4098.125 ; gain = 427.684
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+set_property IOSTANDARD LVCMOS33 [get_ports [list {oRAM_DQM_0[3]} {oRAM_DQM_0[2]} {oRAM_DQM_0[1]} {oRAM_DQM_0[0]}]]
+set_property package_pin "" [get_ports [list  {oRAM_DQM_0[3]}]]
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+create_bd_port -dir O -from 11 -to 0 -type data oRAM_Addr
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_Addr] [get_bd_ports oRAM_Addr_0]
+connect_bd_net [get_bd_ports oRAM_Addr] [get_bd_pins ZExtRAMModule_0/oRAM_Addr]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_BankAddr] [get_bd_ports oRAM_BankAddr_0]
+create_bd_port -dir O -from 2 -to 0 -type data oRAM_BankAddr
+connect_bd_net [get_bd_ports oRAM_BankAddr] [get_bd_pins ZExtRAMModule_0/oRAM_BankAddr]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_CS] [get_bd_ports oRAM_CS_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_WE] [get_bd_ports oRAM_WE_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_CAS] [get_bd_ports oRAM_CAS_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_RAS] [get_bd_ports oRAM_RAS_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_CLK] [get_bd_ports oRAM_CLK_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_CKE] [get_bd_ports oRAM_CKE_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_DQM] [get_bd_ports oRAM_DQM_0]
+delete_bd_objs [get_bd_nets Net] [get_bd_ports ioRAM_DQ_0]
+create_bd_port -dir O oRAM_CS
+connect_bd_net [get_bd_ports oRAM_CS] [get_bd_pins ZExtRAMModule_0/oRAM_CS]
+create_bd_port -dir O oRAM_WE
+connect_bd_net [get_bd_ports oRAM_WE] [get_bd_pins ZExtRAMModule_0/oRAM_WE]
+create_bd_port -dir O oRAM_CAS
+connect_bd_net [get_bd_ports oRAM_CAS] [get_bd_pins ZExtRAMModule_0/oRAM_CAS]
+create_bd_port -dir O oRAM_RAS
+connect_bd_net [get_bd_ports oRAM_RAS] [get_bd_pins ZExtRAMModule_0/oRAM_RAS]
+create_bd_port -dir O -type clk oRAM_ACLKB
+connect_bd_net [get_bd_ports oRAM_ACLKB] [get_bd_pins ZExtRAMModule_0/oRAM_ACLKB]
+create_bd_port -dir O -type ce oRAM_CKE
+connect_bd_net [get_bd_ports oRAM_CKE] [get_bd_pins ZExtRAMModule_0/oRAM_CKE]
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+create_bd_port -dir O -from 3 -to 0 oRAM_DQM
+connect_bd_net [get_bd_ports oRAM_DQM] [get_bd_pins ZExtRAMModule_0/oRAM_DQM]
+create_bd_port -dir O -from 31 -to 0 -type data oRAM_DQ
+delete_bd_objs [get_bd_ports oRAM_DQ]
+create_bd_port -dir IO -from 31 -to 0 -type data oRAM_DQ
+connect_bd_net [get_bd_ports oRAM_DQ] [get_bd_pins ZExtRAMModule_0/ioRAM_DQ]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+save_constraints
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.srcs/utils_1/imports/synth_1/ZPhotonDector.dcp with file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/ZPhotonDetector_Block_wrapper.dcp
+launch_runs synth_1 -jobs 6
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <F:\MyTemporary\Github\PhotonDetector\Processing_Board\Firmware\ZPhotonDetector\ZVerilog\ZBlocks\ZPhotonDetector_Block\ZPhotonDetector_Block.bd> 
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/sim/ZPhotonDetector_Block.v
+Verilog Output written to : F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v
+Exporting to file F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/hw_handoff/ZPhotonDetector_Block.hwh
+Generated Hardware Definition File F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/synth/ZPhotonDetector_Block.hwdef
+[Fri Mar 15 13:46:54 2024] Launched synth_1...
+Run output will be captured here: F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZPhotonDetector.runs/synth_1/runme.log
+close_bd_design [get_bd_designs ZPhotonDetector_Block]
+Wrote  : <F:/MyTemporary/Github/PhotonDetector/Processing_Board/Firmware/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ui/bd_f2ba79ca.ui> 

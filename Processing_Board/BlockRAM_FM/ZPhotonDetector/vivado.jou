@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Mar 22 16:11:40 2024
+# Process ID: 14076
+# Current directory: F:/BlockRAM_FM/ZPhotonDetector
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6076 F:\BlockRAM_FM\ZPhotonDetector\ZPhotonDetector.xpr
+# Log file: F:/BlockRAM_FM/ZPhotonDetector/vivado.log
+# Journal file: F:/BlockRAM_FM/ZPhotonDetector\vivado.jou
+# Running On: DESKTOP-R1EC6M9, OS: Windows, CPU Frequency: 3096 MHz, CPU Physical cores: 6, Host memory: 8288 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.xpr
+reset_run synth_1
+reset_run ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 9
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 9
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.bit} [get_hw_devices xc7s25_0]
+set_property PROBES.FILE {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.ltx} [get_hw_devices xc7s25_0]
+set_property FULL_PROBES.FILE {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.ltx} [get_hw_devices xc7s25_0]
+current_hw_device [get_hw_devices xc7s25_0]
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]]
+open_bd_design {F:/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+update_module_reference ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 9
+wait_on_run impl_1
+set_property PROBES.FILE {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.ltx} [get_hw_devices xc7s25_0]
+set_property FULL_PROBES.FILE {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.ltx} [get_hw_devices xc7s25_0]
+set_property PROGRAM.FILE {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.runs/impl_1/ZPhotonDetector_Block_wrapper.bit} [get_hw_devices xc7s25_0]
+program_hw_devices [get_hw_devices xc7s25_0]
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s25_0] -filter {CELL_NAME=~"ZPhotonDetector_Block_i/ZPulseCounter_Adapter_0/inst/my_ila"}]]
+save_wave_config {F:/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}

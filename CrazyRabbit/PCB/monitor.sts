@@ -1,8 +1,0 @@
-#Allegro PCB Router v22-1-0 made 2022/08/17 at 12:48:59
-#Host 
-#ROUTING STATUS <<< F:/MyTemporary/Github/PhotonDetector/CrazyRabbit/PCB\CrazyRabbit.dsn >>>
-Start  Time: Report Time: Sat Oct 07 16:54:18 2023
-
-Nets         =      606   Connections         =      824
-Current Wire =        0   Reroute wires       =      395
-Completion   =    0.73%   Unconnections       =      816

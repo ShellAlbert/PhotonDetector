@@ -1,0 +1,138 @@
+\t (00:00:01) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Tue Mar 26 09:20:03 2024
+\t (00:00:01)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=12788 CPUs=12
+\t (00:00:01) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (00:00:01) 
+   (00:00:01) Loading axlcore.cxt 
+\t (00:00:01) Starting new design...
+\i (00:00:02) trapsize 116667
+\i (00:00:02) placementedit 
+\i (00:00:07) xname_flush 
+\i (00:00:11) trapsize 699
+\i (00:00:11) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged unnamed
+\i (00:00:11) opencd F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A3/Sensor_RevA3.brd 
+\t (00:00:11) Opening existing design...
+\i (00:00:11) trapsize 4885
+\d (00:00:11) Design opened: F:/MyTemporary/Github/PhotonDetector/Sensor_Board/PCB-A3/Sensor_RevA3.brd
+\i (00:00:11) placementedit 
+\i (00:00:13) color192 
+\i (00:00:13) placementedit 
+\i (00:00:14) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Pin 0
+\i (00:00:14) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 0
+\i (00:00:14) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:15) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Via 0
+\i (00:00:15) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 1
+\i (00:00:15) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:15) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Etch 0
+\i (00:00:15) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 2
+\i (00:00:15) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:16) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Via 1
+\i (00:00:16) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 1
+\i (00:00:16) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:16) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Pin 1
+\i (00:00:16) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 0
+\i (00:00:17) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:17) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Bottom Via 0
+\i (00:00:17) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 1 1
+\i (00:00:17) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:18) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Bottom Etch 0
+\i (00:00:18) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 1 2
+\i (00:00:18) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:19) QtSignal ColorVisibilityDialog CVDOkButton clicked
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in 13.0384 -11.6296
+\i (00:00:19) trapsize 2443
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in 12.6964 -11.6296
+\i (00:00:19) trapsize 1221
+\i (00:00:19) zoom in 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom in 11.9392 -12.6555
+\i (00:00:20) trapsize 611
+\i (00:00:20) zoom in 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom in 11.9392 -12.6555
+\i (00:00:20) trapsize 305
+\i (00:00:20) zoom out 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom out 11.4568 -10.2799
+\i (00:00:20) trapsize 611
+\i (00:00:20) zoom out 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom out 11.4935 -10.2799
+\i (00:00:20) trapsize 1221
+\i (00:00:21) zoom in 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom in 7.5119 -14.4815
+\i (00:00:22) trapsize 611
+\i (00:00:22) zoom in 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom in 7.5119 -14.4815
+\i (00:00:22) trapsize 305
+\i (00:00:22) zoom in 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom in 7.5119 -14.4815
+\i (00:00:22) trapsize 153
+\i (00:00:22) zoom out 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom out 8.0249 -14.2525
+\i (00:00:22) trapsize 305
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out 7.1882 -14.8510
+\i (00:00:26) trapsize 611
+\i (00:00:26) zoom in 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom in 8.8005 -16.3654
+\i (00:00:26) trapsize 305
+\i (00:00:34) color192 
+\i (00:00:35) placementedit 
+\i (00:00:36) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Etch 1
+\i (00:00:36) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 2
+\i (00:00:36) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:00:38) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox Top Etch 0
+\i (00:00:38) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 0 2
+\i (00:00:38) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
+\i (00:01:05) zoom out 1 
+\i (00:01:05) setwindow pcb
+\i (00:01:05) zoom out 9.1364 -15.7791
+\i (00:01:05) trapsize 611
+\i (00:01:05) zoom in 1 
+\i (00:01:05) setwindow pcb
+\i (00:01:05) zoom in 8.5380 -18.2219
+\i (00:01:05) trapsize 305
+\i (00:01:05) zoom in 1 
+\i (00:01:05) setwindow pcb
+\i (00:01:05) zoom in 8.5380 -18.2219
+\i (00:01:05) trapsize 153
+\i (00:01:06) zoom out 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom out 8.2724 -17.7181
+\i (00:01:06) trapsize 305
+\i (00:01:06) zoom out 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom out 8.3274 -17.4066
+\i (00:01:06) trapsize 611
+\i (00:01:07) zoom in 1 
+\i (00:01:07) setwindow pcb
+\i (00:01:07) zoom in 8.8891 -18.2250
+\i (00:01:07) trapsize 305
+\i (00:01:15) zoom out 1 
+\i (00:01:15) setwindow pcb
+\i (00:01:15) zoom out 10.2388 -17.3700
+\i (00:01:15) trapsize 611
+\i (00:01:16) zoom in 1 
+\i (00:01:16) setwindow pcb
+\i (00:01:16) zoom in 8.3579 -16.9792
+\i (00:01:16) trapsize 305
+\i (00:08:18) xrefdes '!' R26 
+\i (00:08:18) xname_flush '!' 
+\i (00:11:10) xrefdes R29 
+\i (00:11:10) xname_flush 
+\i (00:11:10) trapsize 936
+\i (01:13:49) exit 
+\e (01:13:49) Do you want to save the changes you made to Sensor_RevA3.brd?
+\i (01:13:50) fillin no 
+\t (01:13:50)     Journal end - Tue Mar 26 10:33:53 2024

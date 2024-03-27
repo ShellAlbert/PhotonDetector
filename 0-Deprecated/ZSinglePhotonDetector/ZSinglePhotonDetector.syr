@@ -108,46 +108,46 @@ Cores Search Directories           : {"code/ZPulse_Counter"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_CfgData.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_CfgData.v" into library work
 Parsing module <ZTFT43_CfgData>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_TX.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Module_TX.v" into library work
 Parsing module <ZUART_Module_TX>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" into library work
 Parsing module <ZUART_Module_RX>.
-WARNING:HDLCompiler:751 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" Line 30: Redeclaration of ansi port rx_data is not allowed
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module_BPS_Generator.v" into library work
+WARNING:HDLCompiler:751 - "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Module_RX.v" Line 30: Redeclaration of ansi port rx_data is not allowed
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Module_BPS_Generator.v" into library work
 Parsing module <ZUART_Module_BPS_Generator>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Module.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Module.v" into library work
 Parsing module <ZTFT43_Module>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Module.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Module.v" into library work
 Parsing module <ZUART_Module>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_Mux10to1.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_Mux10to1.v" into library work
 Parsing module <ZPulseCounter_Mux10to1>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter.v" into library work
 Parsing module <ZPulseCounter>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZEdge_Detect\ZEdgeDetect.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZEdge_Detect\ZEdgeDetect.v" into library work
 Parsing module <ZEdgeDetect>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\RTC\ZRTC_Mux8to1.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\RTC\ZRTC_Mux8to1.v" into library work
 Parsing module <ZRTC_Mux8to1>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\RTC\ZRTC_Counter.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\RTC\ZRTC_Counter.v" into library work
 Parsing module <ZRTC_Counter>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Controller.v" into library work
-Parsing verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZEdge_Detect\/../ColorTable/ZRGB565_ColorTable.v" included at line 21.
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Controller.v" into library work
+Parsing verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZEdge_Detect\/../ColorTable/ZRGB565_ColorTable.v" included at line 21.
 Parsing module <ZTFT43_Controller>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" into library work
 Parsing module <ZUART_Controller>.
-WARNING:HDLCompiler:568 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 106: Constant value is truncated to fit in <25> bits.
-WARNING:HDLCompiler:568 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 116: Constant value is truncated to fit in <25> bits.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZTest_Signal\ZTestSignal.v" into library work
+WARNING:HDLCompiler:568 - "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 106: Constant value is truncated to fit in <25> bits.
+WARNING:HDLCompiler:568 - "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZUART\ZUART_Controller.v" Line 116: Constant value is truncated to fit in <25> bits.
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZTest_Signal\ZTestSignal.v" into library work
 Parsing module <ZTestSignal>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_FIFO.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_FIFO.v" into library work
 Parsing module <ZPulseCounter_FIFO>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_Adapter.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZPulse_Counter\ZPulseCounter_Adapter.v" into library work
 Parsing module <ZPulseCounter_Adapter>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Adapter.v" into library work
-Parsing verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\/ColorTable/ZRGB565_ColorTable.v" included at line 21.
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\NT35510_LCD\ZTFT43_Adapter.v" into library work
+Parsing verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\/ColorTable/ZRGB565_ColorTable.v" included at line 21.
 Parsing module <ZTFT43_Adapter>.
-Analyzing Verilog file "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" into library work
+Analyzing Verilog file "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" into library work
 Parsing module <ZSinglePhotonDetector>.
 
 =========================================================================
@@ -155,12 +155,12 @@ Parsing module <ZSinglePhotonDetector>.
 =========================================================================
 
 Elaborating module <ZSinglePhotonDetector>.
-ERROR:HDLCompiler:1654 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 48: Instantiating <ic_PLL> from unknown module <ZsyPLL>
+ERROR:HDLCompiler:1654 - "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 48: Instantiating <ic_PLL> from unknown module <ZsyPLL>
 Module ZSinglePhotonDetector remains a blackbox, due to errors in its contents
-WARNING:HDLCompiler:1499 - "D:\Work\GitHub\PhotonDetector\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 21: Empty module <ZSinglePhotonDetector> remains a black box.
+WARNING:HDLCompiler:1499 - "F:\MyTemporary\Github\PhotonDetector\0-Deprecated\ZSinglePhotonDetector\code\ZSinglePhotonDetector.v" Line 21: Empty module <ZSinglePhotonDetector> remains a black box.
 --> 
 
-Total memory usage is 4449400 kilobytes
+Total memory usage is 4450376 kilobytes
 
 Number of errors   :    1 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

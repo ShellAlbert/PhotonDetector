@@ -1,0 +1,230 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Mar 21 10:34:34 2024
+# Process ID: 14532
+# Current directory: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1104 F:\MyTemporary\Github\PhotonDetector\Processing_Board\BlockRAM_FM\ZPhotonDetector\ZPhotonDetector.xpr
+# Log file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/vivado.log
+# Journal file: F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector\vivado.jou
+# Running On: DESKTOP-R1EC6M9, OS: Windows, CPU Frequency: 3096 MHz, CPU Physical cores: 6, Host memory: 8288 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0
+set_property -dict [list \
+  CONFIG.Enable_A {Always_Enabled} \
+  CONFIG.Interface_Type {Native} \
+  CONFIG.Memory_Type {Single_Port_RAM} \
+  CONFIG.Use_Byte_Write_Enable {false} \
+  CONFIG.Use_RSTA_Pin {true} \
+  CONFIG.Write_Depth_A {3000} \
+  CONFIG.Write_Width_A {16} \
+] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+generate_target all [get_files  f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_runs blk_mem_gen_0_synth_1 -jobs 9
+wait_on_run blk_mem_gen_0_synth_1
+export_simulation -of_objects [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.ip_user_files/sim_scripts -ip_user_files_dir F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.ip_user_files -ipstatic_source_dir F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/modelsim} {questa=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/questa} {riviera=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/riviera} {activehdl=F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_gen_0 f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+file delete -force f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.srcs/sources_1/ip/blk_mem_gen_0
+file delete -force f:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZPhotonDetector.gen/sources_1/ip/blk_mem_gen_0
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+set_property -dict [list \
+  CONFIG.Enable_A {Always_Enabled} \
+  CONFIG.Use_RSTA_Pin {true} \
+  CONFIG.Write_Depth_A {3000} \
+  CONFIG.Write_Width_A {16} \
+  CONFIG.use_bram_block {Stand_Alone} \
+] [get_bd_cells blk_mem_gen_0]
+set_property location {3 700 980} [get_bd_cells blk_mem_gen_0]
+set_property location {3 680 803} [get_bd_cells blk_mem_gen_0]
+save_bd_design
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ZBlockRAMSchedule ZBlockRAMSchedule_0
+set_property location {1 403 1033} [get_bd_cells ZBlockRAMSchedule_0]
+set_property location {1 216 856} [get_bd_cells ZBlockRAMSchedule_0]
+open_bd_design {F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZBlocks/ZPhotonDetector_Block/ZPhotonDetector_Block.bd}
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oBlockRAM_Addr] [get_bd_pins blk_mem_gen_0/addra]
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oBlockRAM_Data] [get_bd_pins blk_mem_gen_0/dina]
+connect_bd_net [get_bd_pins blk_mem_gen_0/douta] [get_bd_pins ZBlockRAMSchedule_0/iBlockRAM_Data]
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oBlockRAM_WrEn] [get_bd_pins blk_mem_gen_0/wea]
+connect_bd_net [get_bd_pins blk_mem_gen_0/rsta_busy] [get_bd_pins ZBlockRAMSchedule_0/iBlockRAM_RstABusy]
+save_bd_design
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZBlockRAMSchedule_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins blk_mem_gen_0/clka]
+save_bd_design
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZBlockRAMSchedule_0/iRst_N]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins blk_mem_gen_0/rsta]
+regenerate_bd_layout
+save_bd_design
+update_module_reference ZPhotonDetector_Block_ZBlockRAMSchedule_0_0
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulseCounter_Adapter.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ZPulseCounter_Adapter ZPulseCounter_Adapter_0
+set_property location {2 703 220} [get_bd_cells ZPulseCounter_Adapter_0]
+set_property location {4 1019 139} [get_bd_cells ZPulseCounter_Adapter_0]
+connect_bd_net [get_bd_pins ZPulseCounter_Adapter_0/oWrReq] [get_bd_pins ZBlockRAMSchedule_0/iWrReq]
+connect_bd_net [get_bd_pins ZPulseCounter_Adapter_0/oWrReq_Addr] [get_bd_pins ZBlockRAMSchedule_0/iWrReq_Addr]
+connect_bd_net [get_bd_pins ZPulseCounter_Adapter_0/oWrReq_Data] [get_bd_pins ZBlockRAMSchedule_0/iWrReq_PulseCounter]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZPulseCounter_Adapter_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZPulseCounter_Adapter_0/iRst_N]
+regenerate_bd_layout
+save_bd_design
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oWrDone] [get_bd_pins ZPulseCounter_Adapter_0/iWrDone]
+save_bd_design
+connect_bd_net [get_bd_pins ZPulse_Counter_0/oNewDataUpdate] [get_bd_pins ZPulseCounter_Adapter_0/iNewDataUpdate]
+connect_bd_net [get_bd_pins ZPulse_Counter_0/oNewPulseCounter] [get_bd_pins ZPulseCounter_Adapter_0/iNewPulseCounter]
+regenerate_bd_layout
+save_bd_design
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTick_Trigger.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ZTick_Trigger ZTick_Trigger_0
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZTick_Trigger_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZTick_Trigger_0/iRst_N]
+connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZTick_Trigger_0/iSync50Hz]
+save_bd_design
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets ZEdge_Detect_0_oSig_Rising]
+connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZMux2to1_0/iSig1]
+save_bd_design
+create_bd_cell -type module -reference ZEdge_Detect ZEdge_Detect_1
+create_bd_port -dir I iSync50Hz
+connect_bd_net [get_bd_ports iSync50Hz] [get_bd_pins ZEdge_Detect_1/iSig_In]
+save_bd_design
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZEdge_Detect_1/iClk]
+connect_bd_net [get_bd_pins ZEdge_Detect_1/iRst_N] [get_bd_pins clk_wiz_0/locked]
+connect_bd_net [get_bd_pins ZEdge_Detect_1/oSig_Rising] [get_bd_pins ZTick_Trigger_0/iSync50Hz]
+regenerate_bd_layout
+save_bd_design
+connect_bd_net [get_bd_pins ZEdge_Detect_1/iEn] [get_bd_pins ZPower_EN_0/oEn]
+save_bd_design
+regenerate_bd_layout
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick20mS] [get_bd_pins ZPulse_Counter_0/iTick20mS]
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZPulse_Counter_0/iTick1S]
+save_bd_design
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets ZExtRAMSchedule_0_oRAMAddr] [get_bd_nets ZExtRAMSchedule_0_oWrData] [get_bd_nets ZExtRAMModule_0_oPulseCounter] [get_bd_nets ZExtRAMSchedule_0_oRequest] [get_bd_nets ZExtRAMModule_0_oDone] [get_bd_nets ZExtRAMSchedule_0_oLED] [get_bd_cells ZExtRAMSchedule_0]
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_BankAddr] [get_bd_nets ZExtRAMModule_0_oRAM_WE] [get_bd_nets ZExtRAMModule_0_oRAM_RAS] [get_bd_nets clk_wiz_0_clk_80M_210Degree] [get_bd_nets ZExtRAMModule_0_oRAM_Addr] [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB] [get_bd_nets ZExtRAMModule_0_oRAM_DQM] [get_bd_nets Net] [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB2] [get_bd_nets ZExtRAMModule_0_oRAM_CS] [get_bd_nets ZExtRAMModule_0_oRAM_CAS] [get_bd_nets ZExtRAMModule_0_oRAM_CKE] [get_bd_cells ZExtRAMModule_0]
+update_compile_order -fileset sources_1
+undo
+undo
+undo
+update_compile_order -fileset sources_1
+undo
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZPulse_Counter_0/iTick1S]
+regenerate_bd_layout
+save_bd_design
+add_files -norecurse F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUARTUploadRAM.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 9
+wait_on_run synth_1
+create_bd_cell -type module -reference ZUARTUploadRAM ZUARTUploadRAM_0
+connect_bd_net [get_bd_pins ZUARTUploadRAM_0/oBlockRAM_RdReq] [get_bd_pins ZBlockRAMSchedule_0/iRdReq]
+connect_bd_net [get_bd_pins ZUARTUploadRAM_0/oBlockRAM_RdReq_Addr] [get_bd_pins ZBlockRAMSchedule_0/iRdReq_Addr]
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oPulseCounter] [get_bd_pins ZUARTUploadRAM_0/iBlockRAM_RdData]
+connect_bd_net [get_bd_pins ZBlockRAMSchedule_0/oRdDone] [get_bd_pins ZUARTUploadRAM_0/iBlockRAM_RdDone]
+connect_bd_net [get_bd_pins ZPower_EN_0/oEn] [get_bd_pins ZUARTUploadRAM_0/iEn]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_80M] [get_bd_pins ZUARTUploadRAM_0/iClk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins ZUARTUploadRAM_0/iRst_N]
+regenerate_bd_layout
+save_bd_design
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick1S] [get_bd_pins ZUARTUploadRAM_0/iTick1S]
+save_bd_design
+delete_bd_objs [get_bd_nets ZUART_Data_Dump_0_oTxd_Pin]
+delete_bd_objs [get_bd_nets ZUART_Data_Dump_0_oDir_Pin]
+connect_bd_net [get_bd_ports oRS485_Txd2] [get_bd_pins ZUART_Data_Dump_0/oTxd_Pin]
+connect_bd_net [get_bd_ports oRS485_Dir2] [get_bd_pins ZUART_Data_Dump_0/oDir_Pin]
+connect_bd_net [get_bd_ports oRS485_Txd1] [get_bd_pins ZUARTUploadRAM_0/oUART_Txd]
+set_property location {2428 1113} [get_bd_ports oRS485_Dir1]
+connect_bd_net [get_bd_ports oRS485_Dir1] [get_bd_pins ZUARTUploadRAM_0/oUART_Dir]
+regenerate_bd_layout
+save_bd_design
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT3_USED {false} \
+  CONFIG.CLK_OUT1_PORT {clk_100M} \
+  CONFIG.CLK_OUT2_PORT {clk_100M_PhaseShift} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+  CONFIG.NUM_OUT_CLKS {2} \
+] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_80M_210Degree]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_100M] [get_bd_pins ZPower_EN_0/iClk]
+connect_bd_net [get_bd_pins ZEdge_Detect_1/iClk] [get_bd_pins clk_wiz_0/clk_100M]
+save_bd_design
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+reset_run synth_1
+reset_run ZPhotonDetector_Block_clk_wiz_0_0_synth_1
+launch_runs ZPhotonDetector_Block_clk_wiz_0_0_synth_1
+wait_on_run ZPhotonDetector_Block_clk_wiz_0_0_synth_1
+reset_run ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1
+launch_runs ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1
+wait_on_run ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1
+update_module_reference ZPhotonDetector_Block_ZTick_Trigger_0_0
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+delete_bd_objs [get_bd_nets ZExtRAMModule_0_oRAM_ACLKB]
+connect_bd_net [get_bd_ports oRAM_ACLKB] [get_bd_pins clk_wiz_0/clk_100M_PhaseShift]
+save_bd_design
+regenerate_bd_layout
+connect_bd_net [get_bd_pins ZTick_Trigger_0/oTick333uS] [get_bd_pins ZPulse_Counter_0/iTick333uS]
+save_bd_design
+regenerate_bd_layout
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+update_module_reference ZPhotonDetector_Block_ZUART_Data_Dump_0_0
+create_bd_port -dir I iRS485_Rxd2
+connect_bd_net [get_bd_ports iRS485_Rxd2] [get_bd_pins ZUART_Data_Dump_0/iRxd_Pin]
+save_bd_design
+regenerate_bd_layout
+create_bd_port -dir I iRS485_Rxd1
+connect_bd_net [get_bd_ports iRS485_Rxd1] [get_bd_pins ZUARTUploadRAM_0/oUART_Rxd]
+regenerate_bd_layout
+save_bd_design
+launch_runs synth_1 -jobs 9
+wait_on_run synth_1
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+reset_project
+update_module_reference ZPhotonDetector_Block_ZPulse_Counter_0_0
+launch_runs impl_1 -jobs 9
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets iTimeInterval_1]
+save_bd_design
+reset_run ZPhotonDetector_Block_ZPower_EN_0_0_synth_1
+reset_run ZPhotonDetector_Block_ZMux2to1_0_0_synth_1
+reset_run ZPhotonDetector_Block_ZExtSig_Simulator_0_0_synth_1
+reset_run ZPhotonDetector_Block_blk_mem_gen_0_0_synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 9
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 9
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 9
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 9
+wait_on_run impl_1
+write_bd_layout -format pdf -orientation portrait C:/Users/SNIPER/Desktop/ZPhotonDetector_Block.pdf
+delete_bd_objs [get_bd_nets ZTest_Generator_0_oFixedFreq] [get_bd_nets ZMux2to1_0_oSig] [get_bd_nets ZEdge_Detect_0_oSig_Rising] [get_bd_cells ZMux2to1_0]
+connect_bd_net [get_bd_pins ZEdge_Detect_0/oSig_Rising] [get_bd_pins ZPulse_Counter_0/iPulse]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets ZExtSig_Simulator_0_oTest_Mode] [get_bd_nets ZExtSig_Simulator_0_oFixedFreq_Sel] [get_bd_nets ZTest_Generator_0_oFixedFreq_IO] [get_bd_cells ZTest_Generator_0]
+undo
+undo
+undo
+update_compile_order -fileset sources_1

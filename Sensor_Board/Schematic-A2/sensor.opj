@@ -157,13 +157,12 @@
       (Path "Design Resources" "Library")
       (Path "Design Resources" "Library" ".\library1.olb")
       (Path "Outputs")
-      (Path "Logs")
-      (Select "Design Resources" ".\sensor.dsn" "SCHEMATIC1" "3-QUENCH"))
+      (Path "Logs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 303 0 522"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 534"))
       (Tab 0)))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))

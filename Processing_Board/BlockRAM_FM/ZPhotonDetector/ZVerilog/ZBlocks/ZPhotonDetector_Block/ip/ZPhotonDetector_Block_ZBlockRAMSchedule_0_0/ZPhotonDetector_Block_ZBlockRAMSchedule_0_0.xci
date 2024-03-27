@@ -1,0 +1,56 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "ZPhotonDetector_Block_ZBlockRAMSchedule_0_0",
+    "cell_name": "ZBlockRAMSchedule_0",
+    "component_reference": "xilinx.com:module_ref:ZBlockRAMSchedule:1.0",
+    "ip_revision": "1",
+    "gen_directory": ".",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "ZPhotonDetector_Block_ZBlockRAMSchedule_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "spartan7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7s25" } ],
+        "PACKAGE": [ { "value": "ftgb196" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "iClk": [ { "direction": "in" } ],
+        "iRst_N": [ { "direction": "in" } ],
+        "iWrReq": [ { "direction": "in" } ],
+        "iWrReq_Addr": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
+        "iWrReq_PulseCounter": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "oWrDone": [ { "direction": "out" } ],
+        "iRdReq": [ { "direction": "in" } ],
+        "iRdReq_Addr": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
+        "oRdReq_PulseCounter": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "oRdDone": [ { "direction": "out" } ],
+        "oBlockRAM_Addr": [ { "direction": "out", "size_left": "11", "size_right": "0" } ],
+        "oBlockRAM_Data": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "iBlockRAM_Data": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "oBlockRAM_WrEn": [ { "direction": "out" } ]
+      }
+    }
+  }
+}
