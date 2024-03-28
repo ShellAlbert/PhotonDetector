@@ -13,12 +13,15 @@ output reg [15:0] oWrReq_Data,
 input iWrDone,
 
 //Start A New Sample.
-input iTickSample,
+input iTickReSample,
 
 //indicate already written 3000 numbers of PulseCounter.
 input iUploadBusy, //iUploadBusy,1:Busy,0:Idle.
 output reg oUploadEn,
-input iUploadDone
+input iUploadDone,
+
+//Connect this port to a physical pin to measure how many clocks a series of actions take.
+output reg oClkUsed
 );
 reg [15:0] iTestData;
 
@@ -30,21 +33,25 @@ if(!iRst_N) begin
 	oWrReq_Addr<=0;
 	oWrReq<=0;
 	iTestData<=0;
+	oClkUsed<=1'b0;
 end
 else begin
 	case(step_i)
 	0: //Start A New Sample when not in process of uploading.
 		begin
-			if(iTickSample && !iUploadBusy) begin
+			if(iTickReSample && !iUploadBusy) begin
 				oWrReq_Addr<=0;
 				iTestData<=0;
 				step_i<=step_i+1;
+
+				oClkUsed<=1'b1; //Test at physical pin.
 			end
 		end
 	1: //Waiting New Pulse Counter.
 		begin
 			if(iNewDataUpdate) begin
-				oWrReq_Data<=iTestData; //iNewPulseCounter; //Latch Data In.
+				//oWrReq_Data<=iTestData; //Latch Data In.
+				oWrReq_Data<=iNewPulseCounter; //Latch Data In.
 				step_i<=step_i+1;
 			end
 		end
@@ -77,6 +84,7 @@ else begin
 		end
 	5: 
 		begin
+			oClkUsed<=1'b0; //Test at physical pin.
 			step_i<=0;
 		end
 	default:
@@ -85,7 +93,7 @@ else begin
 		end
 	endcase
 end
-
+/*
 //Integrated Logic Analyzer
 ila_0 my_ila (
 	.clk(iClk), // input wire clk
@@ -100,5 +108,5 @@ ila_0 my_ila (
         6'd0
     }) // input wire [31:0]  probe2
 );
-
+*/
 endmodule

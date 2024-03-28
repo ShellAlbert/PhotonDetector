@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Mar 27 15:56:19 2024
+//Date        : Thu Mar 28 14:07:53 2024
 //Host        : DESKTOP-R1EC6M9 running 64-bit major release  (build 9200)
 //Command     : generate_target ZPhotonDetector_Block_wrapper.bd
 //Design      : ZPhotonDetector_Block_wrapper
@@ -18,6 +18,7 @@ module ZPhotonDetector_Block_wrapper
     iRS485_Rxd1,
     iRS485_Rxd2,
     iSync50Hz,
+    oClkUsed,
     oLED1,
     oLED2,
     oLED_Fault,
@@ -25,7 +26,6 @@ module ZPhotonDetector_Block_wrapper
     oLED_Run,
     oLED_Sync,
     oRAM_ACLKB,
-    oRAM_ACLKB2,
     oRAM_Addr,
     oRAM_BankAddr,
     oRAM_CAS,
@@ -46,6 +46,7 @@ module ZPhotonDetector_Block_wrapper
   input iRS485_Rxd1;
   input iRS485_Rxd2;
   input iSync50Hz;
+  output oClkUsed;
   output oLED1;
   output oLED2;
   output oLED_Fault;
@@ -53,7 +54,6 @@ module ZPhotonDetector_Block_wrapper
   output oLED_Run;
   output oLED_Sync;
   output oRAM_ACLKB;
-  output oRAM_ACLKB2;
   output [11:0]oRAM_Addr;
   output [1:0]oRAM_BankAddr;
   output oRAM_CAS;
@@ -75,6 +75,7 @@ module ZPhotonDetector_Block_wrapper
   wire iRS485_Rxd1;
   wire iRS485_Rxd2;
   wire iSync50Hz;
+  wire oClkUsed;
   wire oLED1;
   wire oLED2;
   wire oLED_Fault;
@@ -82,7 +83,6 @@ module ZPhotonDetector_Block_wrapper
   wire oLED_Run;
   wire oLED_Sync;
   wire oRAM_ACLKB;
-  wire oRAM_ACLKB2;
   wire [11:0]oRAM_Addr;
   wire [1:0]oRAM_BankAddr;
   wire oRAM_CAS;
@@ -105,6 +105,7 @@ module ZPhotonDetector_Block_wrapper
         .iRS485_Rxd1(iRS485_Rxd1),
         .iRS485_Rxd2(iRS485_Rxd2),
         .iSync50Hz(iSync50Hz),
+        .oClkUsed(oClkUsed),
         .oLED1(oLED1),
         .oLED2(oLED2),
         .oLED_Fault(oLED_Fault),
@@ -112,7 +113,6 @@ module ZPhotonDetector_Block_wrapper
         .oLED_Run(oLED_Run),
         .oLED_Sync(oLED_Sync),
         .oRAM_ACLKB(oRAM_ACLKB),
-        .oRAM_ACLKB2(oRAM_ACLKB2),
         .oRAM_Addr(oRAM_Addr),
         .oRAM_BankAddr(oRAM_BankAddr),
         .oRAM_CAS(oRAM_CAS),

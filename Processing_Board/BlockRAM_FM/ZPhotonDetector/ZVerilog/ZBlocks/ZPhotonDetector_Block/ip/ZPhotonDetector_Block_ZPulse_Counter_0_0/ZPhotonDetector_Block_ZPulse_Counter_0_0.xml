@@ -55,7 +55,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>iTick333uS</spirit:name>
+        <spirit:name>iTickGap</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>

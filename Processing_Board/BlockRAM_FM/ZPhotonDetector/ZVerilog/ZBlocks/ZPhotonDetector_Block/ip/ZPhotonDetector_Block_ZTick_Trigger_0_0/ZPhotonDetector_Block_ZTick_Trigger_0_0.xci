@@ -45,9 +45,9 @@
         "iClk": [ { "direction": "in" } ],
         "iRst_N": [ { "direction": "in" } ],
         "iSync50Hz": [ { "direction": "in" } ],
-        "oTick333uS": [ { "direction": "out" } ],
-        "oTick1S": [ { "direction": "out" } ],
-        "oTickSample": [ { "direction": "out" } ]
+        "oTickGap": [ { "direction": "out" } ],
+        "oTickReSample": [ { "direction": "out" } ],
+        "oClkUsed": [ { "direction": "out" } ]
       }
     }
   }

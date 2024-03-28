@@ -38,7 +38,21 @@ output oLED_Fault,
 output reg oLED_Sync
 );
 assign oLED_Run=iUARTUploading;
-assign oLED_Fault=1'b1;
+assign oLED_Fault=1'b0;
+
+//Sync Signal is 50Hz,
+//if we count less than 50 within 1 second, it means error.
+reg [7:0] CNT_Sync50Hz;
+always @(posedge iClk or negedge iRst_N)
+if(!iRst_N) begin
+    CNT_Sync50Hz<=0;
+end
+else begin
+    if(iSync50Hz) begin
+        CNT_Sync50Hz<=CNT_Sync50Hz+1;
+    end
+end
+
 
 //Using oLED_Sync as iSync50Hz Indicator.
 always @(posedge iClk or negedge iRst_N)
@@ -53,7 +67,8 @@ end
 //iNewDataUpdate Indicator.
 //iNewDataUpdate will be issued by every 333uS(20mS/60=333uS).
 //In order to adapt to human eyes, so flash it every 1s.
-reg [7:0] C1_LED_Pwr;
+//1s/333uS=1000ms/333us=1000_000us/333us=3003.
+reg [11:0] C1_LED_Pwr;
 always @(posedge iClk or negedge iRst_N)
 if(!iRst_N) begin
     oLED_Pwr<=1'b0;
@@ -61,7 +76,7 @@ if(!iRst_N) begin
 end
 else begin
     if(iNewDataUpdate) begin
-        if(C1_LED_Pwr==60-1) begin
+        if(C1_LED_Pwr==3003-1) begin
             C1_LED_Pwr<=0;
             oLED_Pwr<=~oLED_Pwr;
         end

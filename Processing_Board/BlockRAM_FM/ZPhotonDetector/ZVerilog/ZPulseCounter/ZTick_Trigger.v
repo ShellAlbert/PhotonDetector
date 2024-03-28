@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
 
-
 module ZTick_Trigger(
     input iClk,  //100MHz System Clock.
     input iRst_N,
 
     input iSync50Hz, //External 50Hz Sync.
 
-    output oTick333uS, //333uS Tick.
-    output oTick1S,//1S Tick.
+    output oTickGap, //333uS Tick.
+    output oTickReSample, //Start A New Sample.
 
-    output oTickSample //Start A New Sample.
+    //Connect this port to a physical pin to measure how many clocks a series of actions take.
+    output reg oClkUsed
     );
 
 //The Main Clock is 100MHz,
@@ -25,90 +25,67 @@ parameter CNT_1S=3003;
 reg [23:0] CNT1;
 reg [7:0] CNT2;
 
-//driven by step i.
-reg [7:0] step_i;
+////////////////////////////////////////
 always @(posedge iClk or negedge iRst_N)
 if(!iRst_N) begin
-    step_i<=0;
     CNT1<=0;
 end
 else begin
-    case(step_i)
-    0: //Waiting 50Hz Sync.
-        begin
-            if(iSync50Hz) begin
-                CNT1<=0;
-                step_i<=step_i+1;
-            end
-        end
-    1: //Do Counting.
-        begin
+    if(iSync50Hz) begin
+        CNT1<=0;
+        //oClkUsed<=1'b0;
+    end
+    else begin
             if(CNT1==CNT_333uS-1) begin
                 CNT1<=0;
+                //oClkUsed<=~oClkUsed;
             end
             else begin
                 CNT1<=CNT1+1;
             end
-            if(CNT2==60-1) begin
-                step_i<=0;
-            end
-        end
-    default:
-        begin
-            step_i<=0;
-        end
-    endcase
+    end
 end
-assign oTick333uS=(CNT1==CNT_333uS-1)?1'b1:1'b0;
-
-reg [7:0] step_i2;
+assign oTickGap=(CNT1==CNT_333uS-1)?1'b1:1'b0;
+/////////////////////////////////////////////
 always @(posedge iClk or negedge iRst_N)
 if(!iRst_N) begin
-    step_i2<=0;
     CNT2<=0;
 end
 else begin
-    case(step_i2)
-    0: //Waiting 50Hz Sync.
-        begin
-            if(iSync50Hz) begin
-                CNT2<=0;
-                step_i2<=step_i2+1;
-            end
+    if(iSync50Hz) begin
+        CNT2<=0;
+        //oClkUsed<=1'b0;
+    end
+    else begin
+        if(CNT2==60-1) begin
+            CNT2<=0; //60*333uS=20ms
+            //oClkUsed<=~oClkUsed;
         end
-    1: //20mS/60 numbers=333uS.
-        begin
-            if(CNT2==60-1) begin
-                CNT2<=0;                
-                step_i2<=0;
-            end
-            else if(CNT1==CNT_333uS-1) begin
-                CNT2<=CNT2+1;
-            end
+        else if(CNT1==CNT_333uS-1) begin
+            CNT2<=CNT2+1; //CNT2 increase every 333uS.
         end
-    default:
-        begin
-            step_i2<=0;
-        end
-    endcase
+    end
 end
-assign oTick1S=(CNT2==60-1)?1'b1:1'b0;
+wire tick20mS_i;
+assign tick20mS_i=(CNT2==60-1)?1'b1:1'b0;
 
 
-//for debugging, we use 10seconds here.
-//10s/1s=10.
-reg [7:0] CNT_Sample;
+//for debugging, we use 5seconds here.
+//5s/20ms=5000ms/20ms=250
+reg [7:0] CNT_ReSample;
 always @(posedge iClk or negedge iRst_N)
 if(!iRst_N) begin
-    CNT_Sample<=0;
+    CNT_ReSample<=0;
+    oClkUsed<=1'b0;
 end
 else begin
-    if(CNT_Sample==10-1) begin
-        CNT_Sample<=0;
+    if(CNT_ReSample==250-1) begin
+        CNT_ReSample<=0;
+        oClkUsed<=~oClkUsed;
     end
-    else if(CNT2==60-1) begin
-        CNT_Sample<=CNT_Sample+1;
+    else if(tick20mS_i) begin
+        CNT_ReSample<=CNT_ReSample+1;
     end
 end
-assign oTickSample=(CNT_Sample==10-1)?(1'b1):(1'b0);
+assign oTickReSample=(CNT_ReSample==250-1)?(1'b1):(1'b0);
 endmodule

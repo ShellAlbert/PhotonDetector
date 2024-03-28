@@ -131,21 +131,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/ZVerilog/ZLed/ZLed_Indicator.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ZVerilog/ZPulseCounter/ZTick_Trigger.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ZVerilog/ZPulseCounter/ZPulse_Counter.v">
+      <File Path="$PPRDIR/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -153,13 +139,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/ZVerilog/ZUART/ZUART_Module.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ZVerilog/ZUART/ZUART_Module_BPS_Generator.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -187,7 +166,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v">
+      <File Path="$PPRDIR/ZVerilog/ZPulseCounter/ZPulse_Counter.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ZVerilog/ZPulseCounter/ZTick_Trigger.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ZVerilog/ZLed/ZLed_Indicator.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -207,41 +200,32 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZPower_EN_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_blk_mem_gen_0_0/ZPhotonDetector_Block_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZTick_Trigger_0_0/ZPhotonDetector_Block_ZTick_Trigger_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZTick_Trigger_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZExtRAMSchedule_0_0/ZPhotonDetector_Block_ZExtRAMSchedule_0_0.xci">
           <Proxy FileSetName="ZPhotonDetector_Block_ZExtRAMSchedule_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZEdge_Detect_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZExtRAMModule_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZLed_Indicator_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZTest_Generator_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZPower_EN_0_0/ZPhotonDetector_Block_ZPower_EN_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZPower_EN_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZEdge_Detect_1_0/ZPhotonDetector_Block_ZEdge_Detect_1_0.xci">
           <Proxy FileSetName="ZPhotonDetector_Block_ZEdge_Detect_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZPulse_Counter_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZTest_Generator_0_0/ZPhotonDetector_Block_ZTest_Generator_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZTest_Generator_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_util_vector_logic_0_0/ZPhotonDetector_Block_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_util_vector_logic_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_blk_mem_gen_0_0/ZPhotonDetector_Block_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZEdge_Detect_0_0/ZPhotonDetector_Block_ZEdge_Detect_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZEdge_Detect_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_clk_wiz_0_0/ZPhotonDetector_Block_clk_wiz_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZTick_Trigger_0_0/ZPhotonDetector_Block_ZTick_Trigger_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZTick_Trigger_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0.xci">
           <Proxy FileSetName="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0"/>
@@ -249,20 +233,21 @@
         <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZUARTUploadRAM_0_0/ZPhotonDetector_Block_ZUARTUploadRAM_0_0.xci">
           <Proxy FileSetName="ZPhotonDetector_Block_ZUARTUploadRAM_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZExtRAMModule_0_0/ZPhotonDetector_Block_ZExtRAMModule_0_0.xci">
-          <Proxy FileSetName="ZPhotonDetector_Block_ZExtRAMModule_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZLed_Indicator_0_0/ZPhotonDetector_Block_ZLed_Indicator_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZLed_Indicator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_util_vector_logic_0_0/ZPhotonDetector_Block_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZPhotonDetector_Block.bd" FileRelPathName="ip/ZPhotonDetector_Block_ZPulse_Counter_0_0/ZPhotonDetector_Block_ZPulse_Counter_0_0.xci">
+          <Proxy FileSetName="ZPhotonDetector_Block_ZPulse_Counter_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/ZVerilog/ZBlocks/ZPhotonDetector_Block/hdl/ZPhotonDetector_Block_wrapper.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ZVerilog/ZUART/ZUART_Data_Dump.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -293,14 +278,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/ZVerilog/ZPhotonDetector.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ZVerilog/ZUART/ZUART_Controller.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -372,6 +349,7 @@
     <FileSet Name="ila_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_0" RelGenDir="$PGENDIR/ila_0">
       <File Path="$PSRCDIR/sources_1/ip/ila_0/ila_0.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -418,21 +396,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZPhotonDetector_Block_ZLed_Indicator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZLed_Indicator_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZLed_Indicator_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZLed_Indicator_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="ZPhotonDetector_Block_util_vector_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_util_vector_logic_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_util_vector_logic_0_0">
       <Config>
         <Option Name="TopModule" Val="ZPhotonDetector_Block_util_vector_logic_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZPhotonDetector_Block_ZPulse_Counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZPulse_Counter_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZPulse_Counter_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZPulse_Counter_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -442,21 +408,33 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZUARTUploadRAM_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZUARTUploadRAM_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZUARTUploadRAM_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZPhotonDetector_Block_ZPulse_Counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZPulse_Counter_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZPulse_Counter_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZPulse_Counter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="ZPhotonDetector_Block_ZTick_Trigger_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZTick_Trigger_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZTick_Trigger_0_0">
       <Config>
         <Option Name="TopModule" Val="ZPhotonDetector_Block_ZTick_Trigger_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0">
+    <FileSet Name="ZPhotonDetector_Block_ZLed_Indicator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZLed_Indicator_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZLed_Indicator_0_0">
       <Config>
-        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0"/>
+        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZLed_Indicator_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZUARTUploadRAM_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZUARTUploadRAM_0_0">
+    <FileSet Name="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" RelGenDir="$PGENDIR/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0">
       <Config>
-        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZUARTUploadRAM_0_0"/>
+        <Option Name="TopModule" Val="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -570,7 +548,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZLed_Indicator_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZLed_Indicator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1">
+    <Run Id="ZPhotonDetector_Block_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_util_vector_logic_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
@@ -579,7 +557,16 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_util_vector_logic_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_synth_1">
+    <Run Id="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
@@ -597,22 +584,18 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1">
+    <Run Id="ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZTick_Trigger_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZTick_Trigger_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZTick_Trigger_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZTick_Trigger_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1">
+    <Run Id="ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZLed_Indicator_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZLed_Indicator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
@@ -620,17 +603,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -813,7 +785,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_ZLed_Indicator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZLed_Indicator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_impl_1">
+    <Run Id="ZPhotonDetector_Block_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_util_vector_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -830,7 +802,24 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_util_vector_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_util_vector_logic_0_0_impl_1">
+    <Run Id="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="ZPhotonDetector_Block_ZUARTUploadRAM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -864,11 +853,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZBlockRAMSchedule_0_0_impl_1">
+    <Run Id="ZPhotonDetector_Block_ZTick_Trigger_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZTick_Trigger_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -883,11 +870,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="ZPhotonDetector_Block_ZTick_Trigger_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZTick_Trigger_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZTick_Trigger_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZTick_Trigger_0_0_impl_1">
+    <Run Id="ZPhotonDetector_Block_ZLed_Indicator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZLed_Indicator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZLed_Indicator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZLed_Indicator_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -903,25 +888,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZPulseCounter_Adapter_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="ZPhotonDetector_Block_ZUARTUploadRAM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s25ftgb196-1" ConstrsSet="ZPhotonDetector_Block_ZUARTUploadRAM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ZPhotonDetector_Block_ZUARTUploadRAM_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ZPhotonDetector_Block_ZUARTUploadRAM_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

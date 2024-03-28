@@ -4,7 +4,7 @@ input iRst_N,
 input iEn,
 
 input iPulse, //Pulse Input.
-input iTick333uS,
+input iTickGap,
 
 //output for uploading data via Network.
 //new data output at rising edge of oNewDataUpdate.
@@ -19,7 +19,7 @@ if(!iRst_N) begin
 	PulseCounter_i<=0;
 end
 else begin
-	if(iTick333uS) begin
+	if(iTickGap) begin
 		PulseCounter_i<=0;
 	end
 	else if(iPulse) begin
@@ -37,8 +37,8 @@ if(!iRst_N) begin
 end
 else begin
 	case(step_i)
-	0: //Tick arrived.
-		if(iTick333uS) begin
+	0: //TickGap arrived.
+		if(iTickGap) begin
 			oNewPulseCounter<=PulseCounter_i; //Latch data in.
 			step_i<=step_i+1;
 		end
