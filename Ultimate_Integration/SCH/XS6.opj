@@ -126,18 +126,18 @@
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\xs6.dsn" "SCHEMATIC1" "3-QUENCH"))
+      (Select "Design Resources" ".\xs6.dsn" "SCHEMATIC1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 298 0 568"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 534"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-206 -2")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "-139 0")
         (Zoom "45")
         (Occurrence "/"))
       (Path
@@ -147,8 +147,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-206 -2")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "-139 0")
         (Zoom "45")
         (Occurrence "/"))
       (Path
@@ -158,9 +158,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-204 -1")
-        (Zoom "32")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "3215 2225")
+        (Zoom "256")
         (Occurrence "/"))
       (Path
          "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\ULTIMATE_INTEGRATION\SCH\XS6.DSN")
@@ -169,8 +169,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-209 -5")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "-142 0")
         (Zoom "63")
         (Occurrence "/"))
       (Path
@@ -180,8 +180,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-206 -2")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "-139 0")
         (Zoom "45")
         (Occurrence "/"))
       (Path
@@ -191,8 +191,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-223 -2")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "-156 0")
         (Zoom "73")
         (Occurrence "/"))
       (Path
@@ -202,7 +202,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
         (Scroll "885 596")
         (Zoom "292")
         (Occurrence "/"))
@@ -213,8 +213,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "-209 -5")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "-142 0")
         (Zoom "63")
         (Occurrence "/"))
       (Path
@@ -224,7 +224,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
         (Scroll "0 820")
         (Zoom "252")
         (Occurrence "/"))
@@ -235,14 +235,25 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 586")
-        (Scroll "1782 611")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "1668 0")
         (Zoom "252")
         (Occurrence "/"))
       (Path
          "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\ULTIMATE_INTEGRATION\SCH\XS6.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "3-QUENCH")))
+      (Page "3-QUENCH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1058 24 575")
+        (Scroll "706 636")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\ULTIMATE_INTEGRATION\SCH\XS6.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "1-HVPS")))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory
      "C:\Cadence\Cadence_SPB_17.4-2019\tools\capture\library"))

@@ -1,128 +1,194 @@
-\t (00:00:41) allegro 22.1 P001 Windows SPB 64-bit Edition
-\t (00:00:41)     Journal start - Fri Mar 29 15:57:21 2024
-\t (00:00:41)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=3504 CPUs=12
-\t (00:00:41) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
-\t (00:00:41) 
-\d (00:00:41) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-DBG.brd
-\i (00:00:41) placementedit 
-\i (00:00:43) zoom out 1 
-\i (00:00:43) setwindow pcb
-\i (00:00:43) zoom out 16.5412 -4.6970
-\i (00:00:43) trapsize 3833
-\i (00:00:44) zoom in 1 
-\i (00:00:44) setwindow pcb
-\i (00:00:44) zoom in -2.1659 22.1370
-\i (00:00:44) trapsize 1917
-\i (00:00:44) zoom in 1 
-\i (00:00:44) setwindow pcb
-\i (00:00:44) zoom in -2.1658 22.3287
-\i (00:00:44) trapsize 958
-\i (00:00:45) zoom out 1 
-\i (00:00:45) setwindow pcb
-\i (00:00:45) zoom out -0.2682 19.3769
-\i (00:00:45) trapsize 1917
-\i (00:00:45) zoom in 1 
-\i (00:00:45) setwindow pcb
-\i (00:00:45) zoom in -3.8333 24.2454
-\i (00:00:45) trapsize 958
-\i (00:00:45) zoom in 1 
-\i (00:00:45) setwindow pcb
-\i (00:00:45) zoom in -3.5649 23.4788
-\i (00:00:45) trapsize 479
-\i (00:00:45) zoom in 1 
-\i (00:00:45) setwindow pcb
-\i (00:00:45) zoom in -3.3637 23.1913
-\i (00:00:45) trapsize 240
-\i (00:00:46) zoom in 1 
-\i (00:00:46) setwindow pcb
-\i (00:00:46) zoom in -3.5362 22.7457
-\i (00:00:46) trapsize 120
-\i (00:00:47) zoom out 1 
-\i (00:00:47) setwindow pcb
-\i (00:00:47) zoom out -3.4356 22.9470
-\i (00:00:47) trapsize 240
-\i (00:00:47) zoom out 1 
-\i (00:00:47) setwindow pcb
-\i (00:00:47) zoom out -3.4116 22.9565
-\i (00:00:47) trapsize 479
-\i (00:00:48) zoom out 1 
-\i (00:00:48) setwindow pcb
-\i (00:00:48) zoom out -3.5553 23.0236
-\i (00:00:48) trapsize 958
-\i (00:00:49) zoom in 1 
-\i (00:00:49) setwindow pcb
-\i (00:00:49) zoom in 5.9135 22.8704
-\i (00:00:49) trapsize 479
-\i (00:00:51) zoom out 1 
-\i (00:00:51) setwindow pcb
-\i (00:00:51) zoom out 3.3738 23.2441
-\i (00:00:51) trapsize 958
-\i (00:00:52) zoom in 1 
-\i (00:00:52) setwindow pcb
-\i (00:00:52) zoom in -5.2325 17.8581
-\i (00:00:52) trapsize 479
-\i (00:00:53) zoom in 1 
-\i (00:00:53) setwindow pcb
-\i (00:00:53) zoom in -4.9642 18.8644
-\i (00:00:53) trapsize 240
-\i (00:00:53) zoom out 1 
-\i (00:00:53) setwindow pcb
-\i (00:00:53) zoom out -4.9881 19.3053
-\i (00:00:53) trapsize 479
-\i (00:00:53) zoom out 1 
-\i (00:00:53) setwindow pcb
-\i (00:00:53) zoom out -4.9882 19.3053
-\i (00:00:53) trapsize 958
-\i (00:00:53) zoom out 1 
-\i (00:00:53) setwindow pcb
-\i (00:00:53) zoom out -4.9691 19.3628
-\i (00:00:53) trapsize 1917
-\i (00:00:54) zoom in 1 
-\i (00:00:54) setwindow pcb
-\i (00:00:54) zoom in -4.5473 19.4012
-\i (00:00:54) trapsize 958
-\i (00:00:54) zoom in 1 
-\i (00:00:54) setwindow pcb
-\i (00:00:54) zoom in -4.5473 19.4012
-\i (00:00:54) trapsize 479
-\i (00:00:56) color192 
-\i (00:00:56) placementedit 
-\i (00:00:58) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox "Vcc-3" Pin 1
-\i (00:00:58) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 2 0
-\i (00:00:58) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
-\i (00:00:59) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox "Vcc-3" Via 1
-\i (00:00:59) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 2 1
-\i (00:00:59) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
-\i (00:01:00) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox "Vcc-3" Etch 1
-\i (00:01:00) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 2 2
-\i (00:01:00) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
-\i (00:01:02) zoom out 1 
-\i (00:01:02) setwindow pcb
-\i (00:01:02) zoom out -3.9147 19.2766
-\i (00:01:02) trapsize 958
-\i (00:01:02) zoom out 1 
-\i (00:01:02) setwindow pcb
-\i (00:01:02) zoom out -3.9149 19.0659
-\i (00:01:02) trapsize 1917
-\i (00:01:03) zoom in 1 
-\i (00:01:03) setwindow pcb
-\i (00:01:03) zoom in 4.6723 21.8260
-\i (00:01:03) trapsize 958
-\i (00:01:06) QtSignal CVDLayerTable CVDLayerTableDelegate clickedBox "Vcc-3" Etch 0
-\i (00:01:06) QtSignal CVDLayerSplitter CVDLayerTable dataChanged 2 2
-\i (00:01:06) QtSignal CVDLayerSplitter CVDLayerTable selectionChanged
-\i (00:01:07) QtSignal ColorVisibilityDialog CVDCancelButton clicked
-\i (00:01:08) zoom in 1 
-\i (00:01:08) setwindow pcb
-\i (00:01:08) zoom in 2.8130 22.5927
-\i (00:01:08) trapsize 479
-\i (00:01:08) zoom in 1 
-\i (00:01:08) setwindow pcb
-\i (00:01:08) zoom in 3.1293 22.4681
-\i (00:01:08) trapsize 240
-\i (00:01:09) zoom out 1 
-\i (00:01:09) setwindow pcb
-\i (00:01:09) zoom out 4.4231 21.8788
-\i (00:01:09) trapsize 479
-\i (00:01:10) exit 
-\t (00:01:10)     Journal end - Fri Mar 29 15:57:50 2024
+\t (00:00:02) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:02)     Journal start - Fri Mar 29 16:02:49 2024
+\t (00:00:02)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=8360 CPUs=12
+\t (00:00:02) CmdLine= F:\MySoftware\Cadence\tools\bin\allegro.exe
+\t (00:00:02) 
+   (00:00:02) Loading axlcore.cxt 
+\t (00:00:05) Starting new design...
+\i (00:00:06) trapsize 116667
+\i (00:00:06) placementedit 
+\i (00:00:12) trapsize 699
+\i (00:00:12) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged unnamed
+\i (00:00:12) opencd F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-DBG.brd 
+\t (00:00:12) Opening existing design...
+\i (00:00:13) trapsize 1917
+\d (00:00:13) Design opened: F:/MyTemporary/Github/PhotonDetector/Processing_Board/PCB/PROCESSING-DBG.brd
+\i (00:00:13) placementedit 
+\i (00:00:13) zoom out 1 
+\i (00:00:13) setwindow pcb
+\i (00:00:13) zoom out 10.1777 -7.8404
+\i (00:00:13) trapsize 3833
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 11.0978 0.8998
+\i (00:00:14) trapsize 1917
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 11.0978 0.8998
+\i (00:00:14) trapsize 958
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 11.0979 0.8998
+\i (00:00:14) trapsize 479
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 11.0979 0.8998
+\i (00:00:14) trapsize 240
+\i (00:00:15) zoom out 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom out 10.8631 1.2592
+\i (00:00:15) trapsize 479
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out 10.9590 0.8185
+\i (00:00:16) trapsize 958
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out 11.2081 0.0709
+\i (00:00:16) trapsize 1917
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out 11.4765 -1.1941
+\i (00:00:16) trapsize 3833
+\i (00:00:16) zoom in 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom in 10.3264 7.8528
+\i (00:00:16) trapsize 1917
+\i (00:00:16) zoom in 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom in 10.5948 7.0095
+\i (00:00:16) trapsize 958
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 10.6140 6.9712
+\i (00:00:17) trapsize 479
+\i (00:00:17) zoom out 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom out 11.1220 5.7924
+\i (00:00:17) trapsize 958
+\i (00:00:18) zoom out 1 
+\i (00:00:18) setwindow pcb
+\i (00:00:18) zoom out 12.2912 8.5717
+\i (00:00:18) trapsize 1917
+\i (00:00:18) zoom out 1 
+\i (00:00:18) setwindow pcb
+\i (00:00:18) zoom out 12.2145 7.8050
+\i (00:00:18) trapsize 3833
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in 12.9812 17.0819
+\i (00:00:19) trapsize 1917
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in 13.7096 14.5902
+\i (00:00:19) trapsize 958
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in 13.8246 13.9194
+\i (00:00:19) trapsize 479
+\i (00:00:20) zoom out 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom out 13.6042 13.2390
+\i (00:00:20) trapsize 958
+\i (00:00:20) zoom out 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom out 13.7576 13.1240
+\i (00:00:20) trapsize 1917
+\i (00:00:20) zoom in 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom in 12.3775 14.9257
+\i (00:00:20) trapsize 958
+\i (00:00:20) zoom in 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom in 12.4734 14.9449
+\i (00:00:20) trapsize 479
+\i (00:00:21) zoom out 1 
+\i (00:00:21) setwindow pcb
+\i (00:00:21) zoom out 13.3072 14.7341
+\i (00:00:21) trapsize 958
+\i (00:00:21) zoom out 1 
+\i (00:00:21) setwindow pcb
+\i (00:00:21) zoom out 13.8247 15.6157
+\i (00:00:21) trapsize 1917
+\i (00:00:21) zoom out 1 
+\i (00:00:21) setwindow pcb
+\i (00:00:21) zoom out 13.9013 15.9608
+\i (00:00:21) trapsize 3833
+\i (00:00:22) zoom in 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom in -0.8958 26.0810
+\i (00:00:22) trapsize 1917
+\i (00:00:23) zoom in 1 
+\i (00:00:23) setwindow pcb
+\i (00:00:23) zoom in -0.8574 26.0043
+\i (00:00:23) trapsize 958
+\i (00:00:24) zoom in 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom in 10.2979 25.3718
+\i (00:00:24) trapsize 479
+\i (00:00:24) zoom in 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom in 10.2596 25.3719
+\i (00:00:24) trapsize 240
+\i (00:00:24) zoom out 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom out 7.7008 24.4711
+\i (00:00:24) trapsize 479
+\i (00:00:24) zoom out 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom out 7.3653 24.1931
+\i (00:00:24) trapsize 958
+\i (00:00:24) zoom in 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom in 7.7870 27.9883
+\i (00:00:24) trapsize 479
+\i (00:00:25) zoom out 1 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) zoom out 9.2437 27.7966
+\i (00:00:25) trapsize 958
+\i (00:00:25) zoom out 1 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) zoom out 9.2438 27.7966
+\i (00:00:25) trapsize 1917
+\i (00:00:25) zoom in 1 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) zoom in 10.5088 26.6466
+\i (00:00:25) trapsize 958
+\i (00:00:26) zoom out 1 
+\i (00:00:26) setwindow pcb
+\i (00:00:26) zoom out 9.7421 28.9658
+\i (00:00:26) trapsize 1917
+\i (00:00:27) zoom in 1 
+\i (00:00:27) setwindow pcb
+\i (00:00:27) zoom in 6.7137 21.1074
+\i (00:00:27) trapsize 958
+\i (00:00:28) zoom in 1 
+\i (00:00:28) setwindow pcb
+\i (00:00:28) zoom in 3.1295 23.3691
+\i (00:00:28) trapsize 479
+\i (00:00:29) zoom out 1 
+\i (00:00:29) setwindow pcb
+\i (00:00:29) zoom out 4.8354 24.0975
+\i (00:00:29) trapsize 958
+\i (00:00:31) zoom in 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom in 5.9279 22.4683
+\i (00:00:31) trapsize 479
+\i (00:00:31) zoom in 1 
+\i (00:00:31) setwindow pcb
+\i (00:00:31) zoom in 5.9280 22.4683
+\i (00:00:31) trapsize 240
+\i (00:00:32) zoom out 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom out 5.4296 22.3197
+\i (00:00:32) trapsize 479
+\i (00:00:32) zoom out 1 
+\i (00:00:32) setwindow pcb
+\i (00:00:32) zoom out 5.4104 22.1569
+\i (00:00:32) trapsize 958
+\i (00:00:33) zoom in 1 
+\i (00:00:33) setwindow pcb
+\i (00:00:33) zoom in 4.4137 21.7544
+\i (00:00:33) trapsize 479
+\i (00:04:13) exit 
+\t (00:04:13)     Journal end - Fri Mar 29 16:07:00 2024

@@ -80,19 +80,19 @@ Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
 -- Compiling module ZUART_Module_RX
 ** Error (suppressible): F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v(30): (vlog-2388) 'rx_data' already declared in this scope (ZUART_Module_RX) at F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_RX.v(26).
 
-} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v
-Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
--- Compiling module ZExtRAMSchedule
-
-Top level modules:
-	ZExtRAMSchedule
-
 } {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZTest_Generator.v
 Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
 -- Compiling module ZTest_Generator
 
 Top level modules:
 	ZTest_Generator
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZExtRAMSchedule.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZExtRAMSchedule
+
+Top level modules:
+	ZExtRAMSchedule
 
 } {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Module_TX.v
 Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
@@ -101,19 +101,19 @@ Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
 Top level modules:
 	ZUART_Module_TX
 
-} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
-Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
--- Compiling module ZBlockRAMSchedule
-
-Top level modules:
-	ZBlockRAMSchedule
-
 } {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZPulseCounter/ZPulse_Counter.v
 Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
 -- Compiling module ZPulse_Counter
 
 Top level modules:
 	ZPulse_Counter
+
+} {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZExtRAM/ZBlockRAMSchedule.v
+Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023
+-- Compiling module ZBlockRAMSchedule
+
+Top level modules:
+	ZBlockRAMSchedule
 
 } {} {}} F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v {0 {vlog -work work -stats=none F:/MyTemporary/Github/PhotonDetector/Processing_Board/BlockRAM_FM/ZPhotonDetector/ZVerilog/ZUART/ZUART_Controller.v
 Model Technology ModelSim Microsemi Pro vlog 2023.1 Compiler 2023.01 Jan 24 2023

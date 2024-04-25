@@ -159,6 +159,7 @@ else if(iEn) begin
 			if(CNT2==50-1) begin CNT2<=0; step_i<=step_i+1'b1; end
 			else begin
 				CNT2<=CNT2+1;
+				checkSum_i<=0;
 				step_i<=1; //repeat.
 			end
 		end

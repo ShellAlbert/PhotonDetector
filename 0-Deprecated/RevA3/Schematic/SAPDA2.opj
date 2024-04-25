@@ -1,6 +1,6 @@
 (ExpressProject "SAPDA2"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S017 (3936576)  [4/19/2021]-[06/01/23]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[06/01/23]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -204,58 +204,66 @@
       (LibraryName
          "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0")))
-  (MPSSessionName "Administrator")
+  (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory
      "C:\Cadence\Cadence_SPB_17.4-2019\tools\capture\library")
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "d:\work\github\photondetector\reva3\schematic\sapda2.dsn")
-      (Path "Design Resources"
-         "d:\work\github\photondetector\reva3\schematic\sapda2.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\sapda2.dsn")
+      (Path "Design Resources" ".\sapda2.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library"
-         "d:\work\github\photondetector\reva3\schematic\library1.olb")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources"
-         "d:\work\github\photondetector\reva3\schematic\sapda2.dsn" "SCHEMATIC1"
-         "PAGE2"))
+      (Select "Design Resources" ".\sapda2.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 313 0 827"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 557"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1327 26 870")
-        (Scroll "-106 -6")
-        (Zoom "111")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 24 575")
+        (Scroll "0 1016")
+        (Zoom "176")
         (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\SAPDA2.DSN")
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\0-DEPRECATED\REVA3\SCHEMATIC\SAPDA2.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 24 575")
+        (Scroll "0 0")
+        (Zoom "176")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\0-DEPRECATED\REVA3\SCHEMATIC\SAPDA2.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE2"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 24 575")
+        (Scroll "115 237")
+        (Zoom "142")
+        (Occurrence "/"))
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\0-DEPRECATED\REVA3\SCHEMATIC\SAPDA2.DSN")
       (Schematic "SCHEMATIC1")
       (Page "Passive_Debug"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1327 26 870")
-        (Scroll "-106 -6")
-        (Zoom "111")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 24 575")
+        (Scroll "-282 -4")
+        (Zoom "71")
         (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\SAPDA2.DSN")
+      (Path
+         "F:\MYTEMPORARY\GITHUB\PHOTONDETECTOR\0-DEPRECATED\REVA3\SCHEMATIC\SAPDA2.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "QUENCH_RESET"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1327 26 870")
-        (Scroll "0 0")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path "D:\WORK\GITHUB\PHOTONDETECTOR\REVA3\SCHEMATIC\SAPDA2.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE2")))
+      (Page "QUENCH_RESET")))
   (ISPCBBASICLICENSE "false"))

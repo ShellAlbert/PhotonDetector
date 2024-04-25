@@ -158,12 +158,12 @@
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\pbpre.dsn"))
+      (Select "Design Resources" ".\pbpre.dsn" "SCHEMATIC1" "3-QUENCH"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 534"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 557"))
       (Tab 0)))
   (MPSSessionName "SNIPER")
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))
